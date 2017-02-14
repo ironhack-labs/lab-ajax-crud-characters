@@ -38,4 +38,14 @@ $(document).ready( () => {
     charactersAPI.createOneRegister(characterInfo);
     console.log(characterInfo);
   });
+/////////////////////ITERATION 2
+  $('#getEmAll').on('click', (e) => {
+    charactersAPI.getFullListAndPrint();
+  });
+
+  $('#get-one').on('click', (e) => {
+    var id= $("input[name=char-id]").val();
+    charactersAPI.getOneAndPrint(id);
+  });
+
 });
