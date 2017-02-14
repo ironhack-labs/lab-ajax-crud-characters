@@ -27,12 +27,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="fetch-one-input">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="deleteChar">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -41,50 +41,50 @@
   <section class="container">
     <section class="form-container">
       <h2>New Character</h2>
-      <form id="new-character-form" class="character-form">
+      <form id="new-character-form" class="character-form" method="POST">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="newCharName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="newCharOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="newCharWeapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" id="newCharDebt">
         </div>
         <button id="send-data">Create</button>
       </form>
     </section>
     <section class="form-container">
       <h2>Edit Character</h2>
-      <form id="edit-character-form" class="character-form">
+      <form id="edit-character-form" class="character-form" method="PUT">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" id="editCharId">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="editCharName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="editCharOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="editCharWeapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" id="editCharDebt">
         </div>
-        <button id="send-data">Update</button>
+        <button id="send-data1">Update</button>
       </form>
     </section>
   </section>
