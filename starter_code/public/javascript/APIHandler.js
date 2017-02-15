@@ -3,23 +3,81 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
 
+// ---------------------------------------------GET FULL LIST------------------------------------
+getFullList () {
+$.ajax({
+      url: this.BASE_URL+"/characters",
+      method: "GET",
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (err) {
+        console.log(err);
+      },
+
+    });
   }
 
-  getOneRegister () {
+// -----------------------------------------------GET ONE-------------------------------------------
+  getOneRegister (id) {
+  $.ajax({
+      url: this.BASE_URL+"/characters/"+id,
+      method: "GET",
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (err) {
+        console.log(err);
+      },
 
+    });
   }
 
-  createOneRegister () {
+// ----------------------------------------------CREATE ONE----------------------------------------
+  createOneRegister(object) {
+  $.ajax({
+      type: "POST",
+      url: this.BASE_URL+"/characters",
+      data: object,
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (err) {
+        console.log(err);
+      },
 
+    });
   }
 
-  updateOneRegister () {
+// --------------------------------------------------UPDATE---------------------------------------------
+  updateOneRegister (id, object) {
+  $.ajax({
+      type: "PATCH",
+      url: this.BASE_URL+"/characters/"+id,
+      data: object,
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (err) {
+        console.log(err);
+      },
 
+    });
   }
 
-  deleteOneRegister () {
+// --------------------------------------------------DELETE---------------------------------------------
+  deleteOneRegister (id) {
+  $.ajax({
+      url: this.BASE_URL+"/characters/"+id,
+      method: "DELETE",
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (err) {
+        console.log(err);
+      },
 
+    });
   }
 }
