@@ -5,15 +5,15 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList (callback) {
-    this.ajaxCall('/characters', 'get', null, callback);
+  getFullList (callbackSuccess, callbackError) {
+    this.ajaxCall('/characters', 'get', null, callbackSuccess, callbackError);
   }
 
-  getOneRegister (id, callback) {
-    this.ajaxCall('/characters/' + id, 'get', null, callback);
+  getOneRegister (id, callbackSuccess, callbackError) {
+    this.ajaxCall('/characters/' + id, 'get', null, callbackSuccess, callbackError);
   }
 
-  createOneRegister (characterObj, callback) {
+  createOneRegister (characterObj, callbackSuccess, callbackError) {
     // verify that characterObj has all required fields.
     let wrongFields = [];
     if (!characterObj){
@@ -29,27 +29,25 @@ class APIHandler {
     if (!characterObj.weapon || typeof(characterObj.weapon) !== 'string')
       wrongFields.push('weapon');
     if (wrongFields.length !== 0) return wrongFields;
-    this.ajaxCall('/characters', 'post', characterObj, callback);
+    this.ajaxCall('/characters', 'post', characterObj, callbackSuccess, callbackError);
     return wrongFields;
   }
 
-  updateOneRegister (id, characterInfo, callback) {
-    this.ajaxCall("/characters/" + id, "PUT", characterInfo, callback);
+  updateOneRegister (id, characterInfo, callbackSuccess, callbackError) {
+    this.ajaxCall("/characters/" + id, "PUT", characterInfo, callbackSuccess, callbackError);
   }
 
-  deleteOneRegister (id, callback) {
-    this.ajaxCall("/characters/" + id, "DELETE", null, callback);
+  deleteOneRegister (id, callbackSuccess, callbackError) {
+    this.ajaxCall("/characters/" + id, "DELETE", null, callbackSuccess, callbackError);
   }
 
-  ajaxCall(url, method, data, callback){
+  ajaxCall(url, method, data, callbackSuccess, callbackError){
     $.ajax({
         url: this.BASE_URL + url,
         method,
         data: "In case we need to send data**",
-        success: callback,
-        error: function (err){
-          console.log(err);
-        }
+        success: callbackSuccess,
+        error: callbackError
     });
   }
 }
