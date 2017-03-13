@@ -10,14 +10,21 @@ $(document).ready( () => {
   });
 
   $('#delete-one').on('click', (e) => {
-    deleteOneRegister();
+    charactersAPI.deleteOneRegister();
   });
 
   $('#edit-character-form').on('submit', (e) => {
-    updateOneRegister();
+    charactersAPI.updateOneRegister();
   });
 
   $('#new-character-form').on('submit', (e) => {
-    createOneRegister();
+    e.preventDefault();
+    const charInfo = {
+      name: $('#create-name').val(),
+      occupation: $('#create-occupation').val(),
+      debt: $('#create-debt').is(":checked"),
+      weapon: $('#create-weapon').val(),
+    };
+    charactersAPI.createOneRegister(charInfo);
   });
 });

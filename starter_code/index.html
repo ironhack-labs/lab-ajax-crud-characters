@@ -30,6 +30,7 @@
         <input type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
+      <p id='delete-message'></p>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
         <input type="text" name="character-id-delete">
@@ -43,20 +44,20 @@
       <h2>New Character</h2>
       <form id="new-character-form" class="character-form">
         <div class="field">
-          <label for="name">Name: </label>
-          <input type="text" name="name">
+          <label for="create-name">Name: </label>
+          <input id="create-name"type="text" name="name">
         </div>
         <div class="field">
-          <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <label for="create-occupation">Occupation: </label>
+          <input id="create-occupation" type="text" name="occupation">
         </div>
         <div class="field">
-          <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <label for="create-weapon">Weapon: </label>
+          <input id="create-weapon" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input id="create-debt" name="debt" type="checkbox">
         </div>
         <button id="send-data">Create</button>
       </form>

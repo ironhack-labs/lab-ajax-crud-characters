@@ -53,8 +53,23 @@ class APIHandler {
     $('#update-form').trigger('reset');
   }
 
-  createOneRegister () {
-
+  createOneRegister (charInfo) {
+    console.log(charInfo);
+    $.ajax({
+      url: `https://ih-api.herokuapp.com/characters`,
+      method: 'POST',
+      data:charInfo,
+      success: (data)=>{
+        console.log(`${data.name} created successfully!`);
+        console.log(data);
+      },
+      error: (err) => {
+        console.log('POST error');
+        console.log(err);
+        console.log(err.responseText);
+      }
+    });
+    $('#new-character-form').trigger('reset');
   }
 
   updateOneRegister () {
@@ -62,6 +77,21 @@ class APIHandler {
   }
 
   deleteOneRegister () {
-
+    const id = $('input[name="character-id-delete"]').val();
+    $.ajax({
+      url: `https://ih-api.herokuapp.com/characters/${id}`,
+      method: 'DELETE',
+      success: (data)=>{
+        console.log(`Delete ${data.name} success`);
+        console.log(data);
+        $('#delete-message').html('Character has been successfully deleted.');
+      },
+      error: (err) => {
+        console.log('PUT error');
+        $('#delete-message').html('Character not found.');
+        console.log(err);
+      }
+    });
+    $('#update-form').trigger('reset');
   }
 }
