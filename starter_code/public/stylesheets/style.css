@@ -105,3 +105,11 @@ button {
 #send-data {
   margin: 10px 0 0 120px;
 }
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background: red;
+}
