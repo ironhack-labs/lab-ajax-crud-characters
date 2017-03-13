@@ -53,11 +53,9 @@ class APIHandler {
     $.ajax({
       url : this.BASE_URL + 'characters',
       method : 'POST',
-      data : null,
+      data : charInfo,
       error : (error) => console.log('createOneRegister error'),
-      success : (data) => {
-
-      }
+      success : (char) => console.log('createOneRegister success')
     });
   }
 
@@ -67,7 +65,7 @@ class APIHandler {
       method : 'PUT',
       data : null,
       error : (error) => console.log('updateOneRegister error'),
-      success : (data) => {
+      success : (char) => {
 
       }
     });
@@ -79,7 +77,7 @@ class APIHandler {
       method : 'DELETE',
       data : null,
       error : (error) => console.log('deleteOneRegister error'),
-      success : (data) => {
+      success : (char) => {
 
       }
     });

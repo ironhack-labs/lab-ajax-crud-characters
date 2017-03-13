@@ -15,11 +15,23 @@ $(document).ready( () => {
 
   });
 
-  $('#edit-character-form').on('submit', (e) => {
+  const editForm = $('#edit-character-form');
+  editForm.on('submit', (e) => {
+    e.preventDefault();
 
   });
 
-  $('#new-character-form').on('submit', (e) => {
+  const newForm = $('#new-character-form');
+  newForm.on('submit', (e) => {
+    e.preventDefault();
+    console.log(newForm);
 
+    api.createOneRegister({
+      name       : newForm.find('input[name="name"]').val(),
+      occupation : newForm.find('input[name="occupation"]').val(),
+      weapon     : newForm.find('input[name="weapon"]').val()
+    });
+
+    newForm.trigger('reset');
   });
 });
