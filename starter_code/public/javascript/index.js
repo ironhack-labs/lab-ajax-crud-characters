@@ -9,13 +9,19 @@ $(document).ready( () => {
   });
 
   //Fetch one
+  const fetchInput = $('#character-search-input');
   $('#fetch-one').on('click', (e) => {
-    api.getOneRegister($('#character-search-input').val());
+    api.getOneRegister(fetchInput.val());
+
+    fetchInput.trigger('reset');
   });
 
   //Delete one
+  const deleteInput = $('#character-delete-input');
   $('#delete-one').on('click', (e) => {
+    api.deleteOneRegister(deleteInput.val());
 
+    deleteInput.trigger('reset');
   });
 
   //Edit one

@@ -75,9 +75,7 @@ class APIHandler {
       method : 'DELETE',
       data : null,
       error : (error) => console.log('deleteOneRegister error'),
-      success : (char) => {
-
-      }
+      success : (char) => console.log('deleteOneRegister success')
     });
   }
 }
