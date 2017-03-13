@@ -5,19 +5,32 @@ class APIHandler {
 
   getFullList () {
     $.ajax({
-      url : 'https://ih-api.herokuapp.com/characters',
+      url : this.BASE_URL + 'characters',
       method : 'GET',
       data : null,
       error : (error) => console.log('getFullList error'),
       success : (data) => {
 
+        const charContainer = $('.characters-container');
+        data.forEach((char) => {
+          let charDiv =`
+          <div class="character-info">
+          <div class="name">${char.name}</div>
+          <div class="occupation">${char.occupation}</div>
+          <div class="debt">${char.debt}</div>
+          <div class="weapon">${char.weapon}</div>
+          </div>
+          `;
+
+          charContainer.append(charDiv);
+        });
       }
     });
   }
 
-  getOneRegister () {
+  getOneRegister (id) {
     $.ajax({
-      url : 'https://ih-api.herokuapp.com/characters',
+      url : this.BASE_URL + 'characters' + id,
       method : 'GET',
       data : null,
       error : (error) => console.log('getOneRegister error'),
@@ -27,9 +40,9 @@ class APIHandler {
     });
   }
 
-  createOneRegister () {
+  createOneRegister (charInfo) {
     $.ajax({
-      url : 'https://ih-api.herokuapp.com/characters',
+      url : this.BASE_URL + 'characters',
       method : 'POST',
       data : null,
       error : (error) => console.log('createOneRegister error'),
@@ -39,9 +52,9 @@ class APIHandler {
     });
   }
 
-  updateOneRegister () {
+  updateOneRegister (id, newInfo) {
     $.ajax({
-      url : 'https://ih-api.herokuapp.com/characters',
+      url : this.BASE_URL + 'characters' + id,
       method : 'PUT',
       data : null,
       error : (error) => console.log('updateOneRegister error'),
@@ -51,9 +64,9 @@ class APIHandler {
     });
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {
     $.ajax({
-      url : 'https://ih-api.herokuapp.com/characters',
+      url : this.BASE_URL + 'characters' + id,
       method : 'DELETE',
       data : null,
       error : (error) => console.log('deleteOneRegister error'),

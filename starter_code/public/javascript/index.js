@@ -1,8 +1,10 @@
-const charactersAPI = new APIHandler("http://ih-api.herokuapp.com");
+const api = new APIHandler("https://ih-api.herokuapp.com/");
+
+console.log(api.getFullList);
 
 $(document).ready( () => {
   $('#fetch-all').on('click', (e) => {
-
+    api.getFullList();
   });
 
   $('#fetch-one').on('click', (e) => {
