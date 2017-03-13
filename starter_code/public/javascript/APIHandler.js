@@ -1,6 +1,7 @@
 class APIHandler {
   constructor (baseUrl) {
     this.BASE_URL = baseUrl;
+    this.charContainer = $('.characters-container');
   }
 
   getFullList () {
@@ -9,20 +10,19 @@ class APIHandler {
       method : 'GET',
       data : null,
       error : (error) => console.log('getFullList error'),
-      success : (data) => {
+      success : (chars) => {
 
-        const charContainer = $('.characters-container');
-        data.forEach((char) => {
+        chars.forEach((char) => {
           let charDiv =`
           <div class="character-info">
-          <div class="name">${char.name}</div>
-          <div class="occupation">${char.occupation}</div>
-          <div class="debt">${char.debt}</div>
-          <div class="weapon">${char.weapon}</div>
+          <div class="name"><b>Id: ${char.id}</b></div>
+          <div class="name">Name: ${char.name}</div>
+          <div class="occupation">Occupation: ${char.occupation}</div>
+          <div class="weapon">Weapon: ${char.weapon}</div>
           </div>
           `;
 
-          charContainer.append(charDiv);
+          this.charContainer.append(charDiv);
         });
       }
     });
@@ -30,12 +30,21 @@ class APIHandler {
 
   getOneRegister (id) {
     $.ajax({
-      url : this.BASE_URL + 'characters' + id,
+      url : this.BASE_URL + 'characters/' + id,
       method : 'GET',
       data : null,
       error : (error) => console.log('getOneRegister error'),
-      success : (data) => {
+      success : (char) => {
+        let charDiv =`
+        <div class="character-info">
+        <div class="name"><b>Id: ${char.id}</b></div>
+        <div class="name">Name: ${char.name}</div>
+        <div class="occupation">Occupation: ${char.occupation}</div>
+        <div class="weapon">Weapon: ${char.weapon}</div>
+        </div>
+        `;
 
+        this.charContainer.html(charDiv);
       }
     });
   }

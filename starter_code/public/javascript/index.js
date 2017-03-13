@@ -8,7 +8,7 @@ $(document).ready( () => {
   });
 
   $('#fetch-one').on('click', (e) => {
-
+    api.getOneRegister($('#character-search-input').val());
   });
 
   $('#delete-one').on('click', (e) => {

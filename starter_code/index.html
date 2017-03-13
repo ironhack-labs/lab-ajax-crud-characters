@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./public/stylesheets/style.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
+  <link rel="stylesheet" href="./public/stylesheets/style.css" defer>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+  <script type="text/javascript" src="./public/javascript/APIHandler.js" defer></script>
+  <script type="text/javascript" src="./public/javascript/index.js" defer></script>
   <title>IH Characters</title>
 </head>
 <body>
@@ -21,12 +21,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input id='character-search-input' type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input id='character-delete-input' type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
