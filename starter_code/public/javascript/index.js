@@ -14,7 +14,16 @@ $(document).ready( () => {
   });
 
   $('#edit-character-form').on('submit', (e) => {
-    charactersAPI.updateOneRegister();
+    e.preventDefault();
+    const ID = $('#edit-id').val();
+    const charInfo = {
+      name: $('#edit-name').val(),
+      occupation: $('#edit-occupation').val(),
+      debt: $('#edit-debt').is(":checked"),
+      weapon: $('#edit-weapon').val(),
+    };
+
+    charactersAPI.updateOneRegister(ID, charInfo);
   });
 
   $('#new-character-form').on('submit', (e) => {

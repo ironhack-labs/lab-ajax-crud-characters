@@ -54,7 +54,7 @@ class APIHandler {
   }
 
   createOneRegister (charInfo) {
-    console.log(charInfo);
+
     $.ajax({
       url: `https://ih-api.herokuapp.com/characters`,
       method: 'POST',
@@ -62,18 +62,36 @@ class APIHandler {
       success: (data)=>{
         console.log(`${data.name} created successfully!`);
         console.log(data);
+        $('#create-data').css('background-color', 'green');
       },
       error: (err) => {
         console.log('POST error');
         console.log(err);
         console.log(err.responseText);
+        $('#create-data').css('background-color', 'red');
       }
     });
     $('#new-character-form').trigger('reset');
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, charInfo) {
+    $.ajax({
+      url: `https://ih-api.herokuapp.com/characters/${id}`,
+      method: 'PUT',
+      data:charInfo,
+      success: (data)=>{
+        console.log(`${data.name} created successfully!`);
+        console.log(data);
+        $('#send-data').css('background-color', 'green');
+      },
+      error: (err) => {
+        console.log('POST error');
+        console.log(err);
+        console.log(err.responseText);
+        $('#send-data').css('background-color', 'red');
+      }
+    });
+    $('#edit-character-form').trigger('reset');
   }
 
   deleteOneRegister () {
@@ -85,11 +103,13 @@ class APIHandler {
         console.log(`Delete ${data.name} success`);
         console.log(data);
         $('#delete-message').html('Character has been successfully deleted.');
+        $('#delete-one').css('background-color', 'green');
       },
       error: (err) => {
         console.log('PUT error');
         $('#delete-message').html('Character not found.');
         console.log(err);
+        $('#delete-one').css('background-color', 'red');
       }
     });
     $('#update-form').trigger('reset');
