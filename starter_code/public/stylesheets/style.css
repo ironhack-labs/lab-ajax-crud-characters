@@ -40,6 +40,17 @@ button {
   background-color: rgba(88, 98, 123, 0.95);
   text-align: center;
 }
+.creation {
+  color: #fff;
+  background-color: green;
+}
+.error {
+  background-color: red;
+  color: #fff;
+}
+.id {
+  margin-bottom: 20px;
+}
 
 .characters-container {
   width: 80%;
@@ -65,14 +76,29 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 90%;
   margin: 10px;
-  padding: 10px;
+  padding: 5px 10px 5px 14px;
   text-align: left;
-  border: solid white 2px;
-  border-radius: 20px;
+  border: solid white 1px;
+  overflow: scroll;
+  height: 20vh
 }
 
+.character-info-container{
+  color: #cdaa68;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 100;
+  float: left;
+  margin-right: 5px;
+  width: 49%;
+  line-height: 22px;
+}
+b {
+  color: #fff;
+}
 .character-info div span {
   color: #d8b362;
   position: absolute;
