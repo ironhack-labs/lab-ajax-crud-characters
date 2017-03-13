@@ -10,7 +10,7 @@ After this learning unit, you will be able to:
 
 ## Introduction
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_0fae32a6f15d4494a6780a09a958d140.png)
+![](images/app.png)
 
 In this lesson, we will use all what we have learnt about APIs and how to connect an application to them through AJAX.
 
@@ -19,21 +19,21 @@ We will create an application to Create, Read, Update, and Delete characters fro
 - **Verb:** GET, **Route:** "/characters"
   - It receives NO parameters
   - It returns the full characters list
-  - It returns a JSON
+  - It returns JSON
 - **Verb:** GET, **Route:** "/characters/:id"
   - It receives the character ID as a parameter (route)
   - It returns the character with the indicated id
-  - It returns a JSON
+  - It returns JSON
 - **Verb:** POST, **Route:** "/characters"
   - It receives an object as a parameter, with the following format:
-    `{ name: string, occupacy: string, debt: boolean, weapon: string }`
+    `{ name: string, occupation: string, debt: boolean, weapon: string }`
   - It returns the created character if there are no errors
   - It returns the wrong fields if there is some error
   - It returns JSON
 - **Verb:** PATCH/PUT, **Route:** "/characters/:id"
   - It receives the character id as a parameter (route)
   - It receives an object as a parameter, with the following format:
-    `{ name: string, occupacy: string, debt: boolean, weapon: string }`
+    `{ name: string, occupation: string, debt: boolean, weapon: string }`
   - All the fields are optionals
   - It returns the updated character if there are no errors
   - It returns "Character not found" if there is no character with the indicated id
@@ -70,9 +70,9 @@ In your starter code folder you will find every file you need to finish the game
 
 ### Iteration 1: The `APIHandler.js` file
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ec9874eab2a7ba6fb0d0d75699ca328a.png)
+![](images/thedata.png)
 
-We will construct a class `APIHandler` to deal with the AJAX calls. The only responsability of this class is to return the JSON result that comes from the API, or give the needed information to the API if we want to change it.
+We will construct a class `APIHandler` to deal with the AJAX calls. The only responsability of this class is to display the JSON result that comes from the API, or give the needed information to the API via a function argument.
 
 The funcionalities of the `APIHandler` class are:
 
@@ -82,13 +82,13 @@ The funcionalities of the `APIHandler` class are:
 - Delete a single character through his id in *[ih-api.herokuapp.com/characters/:id](http://ih-api.herokuapp.com/characters/:id)*
 - Edit a single character through his id in *[ih-api.herokuapp.com/characters/:id](http://ih-api.herokuapp.com/characters/:id)*
 
-You have to create an AJAX call for each of this actions. You can create as many functions as you need inside the class, but remember this class should only manage the API and return the resultant value.
+You have to create an AJAX call for each of these actions. You can create as many functions as you need inside the class, but remember this class should only manage the API request and display the resulting value.
 
-:::success
+<!-- :::success -->
 **Micro-advice**
 
 To make sure everything is working, use [POSTMAN](https://www.getpostman.com/). Remember the routes available and the parameters needed, both in the route and through params.
-:::
+<!-- ::: -->
 
 In this iteration, it's enough to show results in the console.
 
@@ -98,9 +98,9 @@ Once we have the results served by the API in the application, we will create th
 
 #### Fetch all characters
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_497edb039e18a135241f5dfaf54ebe19.png)
+![](images/characters.png)
 
-We will bring to the application all the available characters in the API. In order to do that, we need to: 
+Retrieve all the available characters in the API and show them in the application. In order to do that, we need to: 
 
 - Create a button (*Fetch all* in the image above) that calls a function in the `APIHandler`.
 - The function will return a JSON object with all the characters.
@@ -108,9 +108,9 @@ We will bring to the application all the available characters in the API. In ord
 
 #### Fetch one character
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ebdfb7aa999d2078ba61a38df24367ca.png)
+![](images/fetchone.png)
 
-Following the same idea as with fetching all, to retreive a single characters data we need to:
+Following the same idea as with fetching all, retreive a single character's data we need to:
 
 - Create a button (*Fetch one* in the image above) to, through an input field, get the id of an existing character.
 - Search that character in the API with *[ih-api.herokuapp.com/characters/:id](http://ih-api.herokuapp.com/characters/:id)*
@@ -118,43 +118,43 @@ Following the same idea as with fetching all, to retreive a single characters da
 
 #### Delete one character
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_8bbdd220db9a5adb1f7adf5abb545702.png)
+![](images/delete.png)
 
 To be able to delete a character from the API database, we need to:
 
 - Create a button (*Delete* one in the image above) to get the id of the character we want to delete.
-- Search that character in the API with *[ih-api.herokuapp.com/characters/:id](http://ih-api.herokuapp.com/characters/:id)*
-   :::danger
+- Delete that character in the API with *[ih-api.herokuapp.com/characters/:id](http://ih-api.herokuapp.com/characters/:id)*
+   <!-- :::danger -->
    **Remember which HTTP verb you need in the request!!**
-   :::
+   <!-- ::: -->
 - If the character is succesfully removed, change the background color of the button to green.
 - If something went wrong, change the background color of the button to red.
 
 #### Create new character
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_851324eeeca02a7c5b9b487e1a5b3f30.png)
+![](images/newcharacter.png)
 
-We will create a form with 4 inputs, one for each character field: name(text), occupation(text), weapon(text) and debt (boolean).
+We will create a form with 4 inputs, one for each character field: name(text), occupation(text), weapon(text) and debt(checkbox).
 
 - Create a button (*Create* in the image above) to get all the data from the form.
 - Send the data to the `APIHandler` function to save the new character through *[ih-api.herokuapp.com/characters](http://ih-api.herokuapp.com/characters)*
-   :::danger
+   <!-- :::danger -->
    **Remember which HTTP verb you need in the request!!**
-   :::
+   <!-- ::: -->
 - If the character was succesfully created, set the background color of the button to green.
 - If something went wrong, change the background color of the button to red.
 
 #### Edit a character
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_27c264db58a8bbaa3ecb83d6ffdc0cda.png)
+![](images/edit.png)
 
-We will create a form with 4 inputs, one for each field of the characters: name(text), occupation(text), weapon(text) and debt (boolean). Also, we will create a new input to indicate the `id` of the character we want to edit.
+We will create a form with 4 inputs, one for each field of the characters: name(text), occupation(text), weapon(text) and debt(checkbox). Also, we will create a new input to indicate the `id` of the character we want to edit.
 
 - Create a button (*Update* in the image above) to get all the data from the form.
 - Send the data to the `APIHandler` function to save the new character through *[ih-api.herokuapp.com/characters/:id](http://ih-api.herokuapp.com/characters/:id)*
-   :::danger
+   <!-- :::danger -->
    **Remember which HTTP verb you need in the request!!**
-   :::
+   <!-- ::: -->
 - If the character was succesfully updated, set the background color of the button to green.
 - If something went wrong, change the background color of the button to red.
 
