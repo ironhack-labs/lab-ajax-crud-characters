@@ -1,10 +1,12 @@
 class APIHandler {
   constructor (baseUrl) {
+                          //IH-API URL
     this.BASE_URL       = 'https://ih-api.herokuapp.com/characters/';
   }
 
+//LOOKUP First 99 Characters in IH-API
   getFullList () {
-    for (let i = 1; i < 11; i ++) {
+    for (let i = 1; i < 99; i ++) {
       $.ajax({
         url:            `${charactersAPI.BASE_URL}${i}`,
         method:         `GET`,
@@ -27,6 +29,7 @@ class APIHandler {
     }
   }
 
+//LOOKUP 1 Character in IH-API
   getOneRegister (id) {
     const charId      = id;
     console.log(`charId ${id}`);
@@ -44,16 +47,14 @@ class APIHandler {
             <div class="weapon">Weapon: ${data.weapon}</div>
           </div>
           `);
-
       },
       error:          (err) => {
         console.log(`Error: ${err}`);
       }
-
     });
-
   }
 
+//CREATE New Character in IH-API
   createOneRegister (info) {
     $('#characters-container').empty();
     const charInfo    = info;
@@ -73,6 +74,7 @@ class APIHandler {
     });
   }
 
+//UPDATE 1 entry in IH-API
   updateOneRegister (id, info) {
     const charId        = id;
     const charInfo      = info;
@@ -93,6 +95,7 @@ class APIHandler {
     });
   }
 
+//DELETE 1 Entry in IH-API 
   deleteOneRegister (id) {
     const charId        = id;
     $.ajax({
