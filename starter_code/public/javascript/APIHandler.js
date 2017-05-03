@@ -11,6 +11,7 @@ class APIHandler {
       //data: //if sending information
       success: function (response) {
         console.log(response);
+        getFullListJquery(response);
       },
       error: function (err) {
         console.log(err);
@@ -102,4 +103,28 @@ class APIHandler {
     },
   });
   }
+}
+
+function getFullListJquery(characters){
+
+  deleteInfoCharacter();
+
+  if(characters.length)
+  {
+    characters.forEach((character)=>{
+      generateInfoCharacter(character.id,character.name,character.occupation,character.debt,character.weapon);
+    });
+  }
+  else {
+    generateInfoCharacter();
+  }
+}
+
+function deleteInfoCharacter(){
+  console.log("hi");
+  $('.character-info').remove();
+}
+
+function generateInfoCharacter(id="",name="",occupation="",debt="",weapon=""){
+  $('.characters-container').append($('<div>').addClass('character-info').append($('<div>').addClass('id').append($('<p>').html("Id: " + id))).append($('<div>').addClass('name').append($('<p>').html("Character Name: " + name))).append($('<div>').addClass('occupation').append($('<p>').html("Character Occupation: " + occupation))).append($('<div>').addClass('debt').append($('<p>').html("Character Debt: " + debt))).append($('<div>').addClass('weapon').append($('<p>').html("Character Weapon: " + weapon))));
 }

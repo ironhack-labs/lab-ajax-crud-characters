@@ -22,7 +22,3 @@ $(document).ready( () => {
     charactersAPI.createOneRegister();
   });
 });
-
-function generateInfo(){
-  $('.characters-container').append($('<div>').addClass('character-info').append($('<div>').addClass('name').html("Character Name")).append($('<div>').addClass('occupation').html("Character Occupation")).append($('<div>').addClass('debt').html("Character Debt")).append($('<div>').addClass('weapon').html("Character Weapon")));
-}
