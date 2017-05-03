@@ -3,23 +3,38 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  getFullList (cb) {
+    this._callAjax("/characters", "GET", cb);
   }
 
-  getOneRegister () {
-
+  getOneRegister (id, cb) {
+    this._callAjax("/characters/"+id, "GET", cb);
   }
 
-  createOneRegister () {
-
+  createOneRegister (newCharacter, cb) {
+    this._callAjax("/characters", "POST", cb, newCharacter);
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, updateCharacter, cb) {
+    this._callAjax("/characters/"+id, "PUT", cb,  updateCharacter);
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id, cb) {
+     this._callAjax("/characters/"+id, "DELETE", cb);
+  }
 
+
+  _callAjax(url, method, cb, data) {
+    $.ajax({
+      url: this.BASE_URL+url,
+      method: method,
+      data: data ,
+      success: function (response) {
+        cb(response);
+      },
+      error: function (err) {
+        cb({error:err});
+      },
+    })
   }
 }
