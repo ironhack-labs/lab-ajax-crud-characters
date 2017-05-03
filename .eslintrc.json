@@ -1,8 +1,5 @@
 {
-    "extends": [
-        "airbnb-base",
-        "jquery"
-    ],
+    "extends": ["jquery","airbnb-base"],
     "plugins": [
         "import"
     ]
