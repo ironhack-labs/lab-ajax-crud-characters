@@ -8,98 +8,141 @@ class APIHandler {
     $.ajax({
       url: this.BASE_URL+"/characters",
       method: "GET",
-      //data: //if sending information
       success: function (response) {
         console.log(response);
+        turnDelete("");
+        turnCreate("");
+        turnEdit("");
+        turnFetchOne("");
         getFullListJquery(response);
       },
       error: function (err) {
         console.log(err);
+        turnDelete("");
+        turnCreate("");
+        turnEdit("");
+        turnFetchOne("");
       },
     });
   }
 
   getOneRegister () {
-      // const characterId: $('#the-name-input').val(),
-      const characterId = 2;
+      const characterId = $('.operation input').val();
+      console.log("characterId",characterId);
     $.ajax({
       url: this.BASE_URL+"/characters/"+characterId,
       method: "GET",
-      //data: //if sending information
       success: function (response) {
         console.log(response);
+        turnDelete("");
+        turnCreate("");
+        turnEdit("");
+        turnFetchOne('green');
+        getOneRegisterJquery(response);
       },
       error: function (err) {
         console.log(err);
+        turnDelete("");
+        turnCreate("");
+        turnEdit("");
+        turnFetchOne('red');
       },
     });
   }
 
   createOneRegister () {
+
+    var name ='#new-character-form [name=name]';
+    var occupation ='#new-character-form [name=occupation]';
+    var debt ='#new-character-form [name=debt]';
+    var weapon ='#new-character-form [name=weapon]';
     const characterInfo = {
-      // name: $('#the-name-input').val(),
-      // occupation: $('#the-occupation-input').val(),
-      // debt:  $('#the-weapon-input').val(),
-      // weapon: $('#the-weapon-input').val()
-      name: 'test1',
-      occupation: 'test1',
-      debt:  true,
-      weapon: 'test1'
+      name: $(name).val(),
+      occupation: $(occupation).val(),
+      debt:  $(debt).val(),
+      weapon: $(weapon).val()
     };
 
-  $.ajax({
+    console.log("characterInfo",characterInfo);
+
+    $.ajax({
       method: 'POST',
       url: this.BASE_URL+"/characters",
       data: characterInfo,
       success: function (response) {
         console.log(response);
+        turnDelete("");
+        turnEdit("");
+        turnFetchOne("");
+        turnCreate('green');
       },
       error: function (err) {
         console.log(err);
+        turnDelete("");
+        turnEdit("");
+        turnFetchOne("");
+        turnCreate('red');
       },
     });
-
   }
 
   updateOneRegister () {
-    // const characterId: $('#the-name-input').val(),
-    const characterId = 3;
+
+    var id ='#edit-character-form [name=chr-id]';
+    var name ='#edit-character-form [name=name]';
+    var occupation ='#edit-character-form[name=occupation]';
+    var debt ='#edit-character-form [name=debt]';
+    var weapon ='#edit-character-form [name=weapon]';
     const characterInfo = {
-      // name: $('#the-name-input').val(),
-      // occupation: $('#the-occupation-input').val(),
-      // debt:  $('#the-weapon-input').val(),
-      // weapon: $('#the-weapon-input').val()
-      name: 'test0',
-      occupation: 'test0',
-      debt:  true,
-      weapon: 'test0'
+      id: $(id).val(),
+      name: $(name).val(),
+      occupation: $(occupation).val(),
+      debt:  $(debt).val(),
+      weapon: $(weapon).val()
     };
+
+    console.log("characterInfo",characterInfo);
 
   $.ajax({
       method: 'PATCH',
-      url: this.BASE_URL+"/characters/"+characterId,
+      url: this.BASE_URL+"/characters/"+characterInfo.id,
       data: characterInfo,
       success: function (response) {
         console.log(response);
+        turnDelete("");
+        turnCreate("");
+        turnFetchOne("");
+        turnEdit('green');
       },
       error: function (err) {
         console.log(err);
+        turnDelete("");
+        turnCreate("");
+        turnFetchOne("");
+        turnEdit('red');
       },
     });
   }
 
   deleteOneRegister () {
-    // const characterId: $('#the-name-input').val(),
-    const characterId = 3;
+    const characterId = $('.delete input').val();
+    console.log("characterId",characterId);
   $.ajax({
-    url: this.BASE_URL+"/characters/"+characterId,
     method: "DELETE",
-    //data: //if sending information
+    url: this.BASE_URL+"/characters/"+characterId,
     success: function (response) {
       console.log(response);
+      turnCreate("");
+      turnEdit("");
+      turnFetchOne("");
+      turnDelete('green');
     },
     error: function (err) {
-      console.log(err);
+      console.log("err",err);
+      turnCreate("");
+      turnEdit("");
+      turnFetchOne("");
+      turnDelete('red');
     },
   });
   }
@@ -118,6 +161,36 @@ function getFullListJquery(characters){
   else {
     generateInfoCharacter();
   }
+}
+
+function getOneRegisterJquery(character){
+
+  deleteInfoCharacter();
+
+  if(typeof(character)!=='undefined')
+  {
+    generateInfoCharacter(character.id,character.name,character.occupation,character.debt,character.weapon);
+  }
+  else {
+    generateInfoCharacter();
+  }
+}
+
+
+function turnDelete(color){
+  $('#delete-one').css('backgroundColor',color);
+}
+
+function turnCreate(color){
+  $('#send-data').css('backgroundColor',color);
+}
+
+function turnEdit(color){
+  $('#update-data').css('backgroundColor',color);
+}
+
+function turnFetchOne(color){
+  $('#fetch-one').css('backgroundColor',color);
 }
 
 function deleteInfoCharacter(){
