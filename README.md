@@ -10,7 +10,7 @@ After this learning unit, you will be able to:
 
 ## Introduction
 
-![](images/app.png)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_268cb08540318365df8717153cacce98.png)
 
 In this lesson, we will use all what we have learnt about APIs and how to connect an application to them through AJAX.
 
@@ -70,7 +70,7 @@ In your starter code folder you will find every file you need to finish the game
 
 ### Iteration 1: The `APIHandler.js` file
 
-![](images/thedata.png)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_99257e2c4240770e6b4bdd406d943ac8.png)
 
 We will construct a class `APIHandler` to deal with the AJAX calls. The only responsability of this class is to display the JSON result that comes from the API, or give the needed information to the API via a function argument.
 
@@ -98,7 +98,7 @@ Once we have the results served by the API in the application, we will create th
 
 #### Fetch all characters
 
-![](images/characters.png)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_52efceece943970abb7482ca8165392c.png)
 
 Retrieve all the available characters in the API and show them in the application. In order to do that, we need to: 
 
@@ -108,7 +108,7 @@ Retrieve all the available characters in the API and show them in the applicatio
 
 #### Fetch one character
 
-![](images/fetchone.png)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_18418549c37049ae48b7a9ef21805042.png)
 
 Following the same idea as with fetching all, retreive a single character's data we need to:
 
@@ -118,7 +118,7 @@ Following the same idea as with fetching all, retreive a single character's data
 
 #### Delete one character
 
-![](images/delete.png)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_3d893f20f95e5b13369375cdfd7900a5.png)
 
 To be able to delete a character from the API database, we need to:
 
@@ -132,7 +132,7 @@ To be able to delete a character from the API database, we need to:
 
 #### Create new character
 
-![](images/newcharacter.png)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ef2b19fb59819e903a4978d9fa616a6f.png)
 
 We will create a form with 4 inputs, one for each character field: name(text), occupation(text), weapon(text) and debt(checkbox).
 
@@ -146,7 +146,7 @@ We will create a form with 4 inputs, one for each character field: name(text), o
 
 #### Edit a character
 
-![](images/edit.png)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_04664fce88ae40d1f0045a8c9cb4956e.png)
 
 We will create a form with 4 inputs, one for each field of the characters: name(text), occupation(text), weapon(text) and debt(checkbox). Also, we will create a new input to indicate the `id` of the character we want to edit.
 
