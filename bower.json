@@ -1,0 +1,20 @@
+{
+  "name": "lab-ajax-crud-characters",
+  "description": "## Learning Goals",
+  "main": "index.js",
+  "authors": [
+    "Isak La Fleur <isak.engdahl@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/isaklafleur/lab-ajax-crud-characters",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
