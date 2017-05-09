@@ -15,10 +15,10 @@
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
       <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="debt">Character Debt</div>
-        <div class="weapon">Character Weapon</div>
+        <div id="display-name" class="name">Character Name</div>
+        <div id="display-occupation" class="occupation">Character Occupation</div>
+        <div id="display-debt" class="debt">Character Debt</div>
+        <div id="display-weapon" class="weapon">Character Weapon</div>
       </div>
     </div>
     <section class="operations">
@@ -27,12 +27,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input id="fetch-one-input" type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" id="character-id-delete" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -44,21 +44,21 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input id="new-name-input" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input id="new-occupation-input" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input id="new-weapon-input" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input id="debt-input" name="debt" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button type="submit" id="send-data">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -66,23 +66,23 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" id="character-id-input" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" id="update-name-input" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" id="update-occupation-input" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" id="update-weapon-input" name="weapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" id="update-debt-input" type="checkbox">
         </div>
         <button id="send-data">Update</button>
       </form>
