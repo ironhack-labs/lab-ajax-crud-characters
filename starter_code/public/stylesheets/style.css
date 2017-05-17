@@ -78,6 +78,16 @@ button {
   position: absolute;
   left: 50%;
 }
+.userList div span {
+  color: #d8b362;
+  position: absolute;
+  left: 50%;
+}
+.character-chart div span {
+  color: #d8b362;
+  position: absolute;
+  left: 50%;
+}
 
 .form-container {
   display: inline-block;
