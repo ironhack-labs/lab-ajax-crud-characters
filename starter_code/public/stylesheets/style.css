@@ -43,10 +43,12 @@ button {
 
 .characters-container {
   width: 80%;
+  height: 20vh;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: scroll;
   flex-flow: row wrap;
 }
 
