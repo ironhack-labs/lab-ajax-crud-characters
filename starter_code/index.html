@@ -4,22 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./public/stylesheets/style.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
+  <link rel="stylesheet" href="./public/stylesheets/style.css" defer>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+  <script type="text/javascript" src="./public/javascript/APIHandler.js" defer></script>
+  <script type="text/javascript" src="./public/javascript/index.js" defer></script>
   <title>IH Characters</title>
 </head>
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="debt">Character Debt</div>
-        <div class="weapon">Character Weapon</div>
-      </div>
     </div>
     <section class="operations">
       <div class="operation">
@@ -27,12 +21,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input id="character-search-input" type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input id="character-delete-input" type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -53,10 +47,6 @@
         <div class="field">
           <label for="weapon">Weapon: </label>
           <input type="text" name="weapon">
-        </div>
-        <div class="field">
-          <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -79,10 +69,6 @@
         <div class="field">
           <label for="weapon">Weapon: </label>
           <input type="text" name="weapon">
-        </div>
-        <div class="field">
-          <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
         </div>
         <button id="send-data">Update</button>
       </form>
