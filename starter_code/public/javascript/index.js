@@ -1,13 +1,10 @@
-const charactersAPI = new APIHandler("http://ih-api.herokuapp.com")
+const charactersAPI = new APIHandler("http://ih-api.herokuapp.com");
 
 $(document).ready( () => {
   $('#fetch-all').on('click', (e) => {
-    const charactersFetched = {
-      name: '',
-      occupation: '',
-      weapon: ''
-    };
-  });s
+
+
+  });
 
   $('#fetch-one').on('click', (e) => {
 
