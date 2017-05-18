@@ -63,7 +63,7 @@ button {
   margin: 20px 0 0;
 }
 
-.character-info {
+.characters-container div {
   position: relative;
   width: 40%;
   margin: 10px;
