@@ -16,8 +16,8 @@ class APIHandler {
   }
 
 
-  createOneRegister () {
-    this._ajax();
+  createOneRegister (id, postedData) {
+    this._ajax(`/characters/${id}`, "POST", null, postedData);
   }
 
   updateOneRegister () {
