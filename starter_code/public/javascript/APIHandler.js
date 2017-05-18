@@ -34,6 +34,7 @@ class APIHandler {
   getOneRegister (id) {
     $.ajax({
       method: "GET",
+      dataType: 'json',
       url: "http://ih-api.herokuapp.com/characters/" + id,
       success: function (response) {
         console.log(response);
@@ -60,26 +61,48 @@ class APIHandler {
       method: 'POST',
       url: this.BASE_URL + "/characters",
       data: characterInfo,
-      success: function (character) {
+      success: function (response) {
         $("div.character-info").remove();
-        var tempDiv =
+        var fetchAll =
           `<div class="character-info">` +
-          `<div class="name"> <strong>Name:</strong> ` + character.name + `</div>`+
-          `<div class="occupation"> <strong>Occupation:</strong> `+character.occupation+`</div>`+
-          `<div class="debt"> <strong>Debt:</strong> `+character.debt+`</div>`+
-          `<div class="weapon"> <strong>Weapon:</strong> `+character.weapon+`</div>`+
+          `<div class="name"> <strong>Name:</strong> ` + response.name + `</div>`+
+          `<div class="occupation"> <strong>Occupation:</strong> `+response.occupation+`</div>`+
+          `<div class="debt"> <strong>Debt:</strong> `+response.debt+`</div>`+
+          `<div class="weapon"> <strong>Weapon:</strong> `+response.weapon+`</div>`+
           `</div>`;
-        $(tempDiv).appendTo('.characters-container');
+        $(fetchAll).appendTo('.characters-container');
         console.log("saved");
         console.log(this.url);
       },
       error: function (response) {
-        console.log("error dude");
+        console.log("%cERROR", "color: red; font-size: small");
       }
     });
   }
 
-  updateOneRegister () {
+  updateOneRegister (characterInfo, id) {
+    $.ajax({
+      dataType: 'json',
+      method: 'PATCH',
+      url: this.BASE_URL + "/characters/" + id,
+      data: characterInfo,
+      success: function (response) {
+        $("div.character-info").remove();
+        var fetchAll =
+          `<div class="character-info">` +
+          `<div class="name"> <strong>Name:</strong> ` + response.name + `</div>`+
+          `<div class="occupation"> <strong>Occupation:</strong> `+response.occupation+`</div>`+
+          `<div class="debt"> <strong>Debt:</strong> `+response.debt+`</div>`+
+          `<div class="weapon"> <strong>Weapon:</strong> `+response.weapon+`</div>`+
+          `</div>`;
+        $(fetchAll).appendTo('.characters-container');
+        console.log("saved");
+        console.log(this.url);
+      },
+      error: function (response) {
+        console.log("%cERROR", "color: red; font-size: small");
+      }
+    });
 
   }
 
