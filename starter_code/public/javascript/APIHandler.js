@@ -1,28 +1,33 @@
+let objectReturned;
 class APIHandler {
   constructor (baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
+  getFullList (callback) {
+    this._ajax("/characters", "GET", callback);
+    //not going to lie the use of "this" was inspired from elsewhere.
 
   }
 
-  getOneRegister () {
+  getOneRegister (id, callback) {
+    this._ajax(`/characters/${id}`, "GET", callback);
 
   }
+
 
   createOneRegister () {
-
+    this._ajax();
   }
 
   updateOneRegister () {
-
+    this._ajax();
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id, callback) {
+    this._ajax(`/characters/${id}`, "GET", callback);
   }
-}
+
 
 
 //method to handle ajax request and be called in APIHandler
@@ -42,25 +47,50 @@ _ajax(addToBaseURL, callMethod, callback, postedData) {
 
 } //end of the _ajax private method
 
+} //end of APIHandler
 
 //on success of ajax request we need to get the data, in this case the characters
-function loadCharacters(charList) { //"charList" is actually the callback/response of the request
-  charList.forEach((character) => { //each object pulled from callback/response would be "character"
-    //newCharacter creates the HTML to display the characters/objects gathered from request
-    //we were already given the file structure so I am going to append the results to the 'characters-container'
-    const newCharacter =
-      $('.characters-container').append(`
-      <li>
-        <span class ="charID">          ${character.id} </span>
-        <span class ="charName">        ${character.name} </span>
-        <span class ="charOccupation">  ${character.occupation} </span>
-        <span class ="charWeapon">      ${character.weapon} </span>
-      </li>
-      `);
+function loadCharacters(postResponse) { //"charList" is actually the callback/response of the request
+  // before loading we should clear the list using jquery
+  // this is pretty much innerhtml for jquery
+  $('.characters-container').html('');
+  console.log('The Request Worked here is the response...');
+  console.log(postResponse);
 
-  });
-  // in the event that there is an error
-  function errorHandler() {
+  if (postResponse.length > 1) {
+    postResponse.forEach((character) => { //each object pulled from callback/response would be "character"
+      //newCharacter creates the HTML to display the characters/objects gathered from request
+      //we were already given the file structure so I am going to append the results to the 'characters-container'
+      const newCharacter =
+        $('.characters-container').append(`
+          <div class="character-info">
+          <div class ="charID">          ${character.id} </div>
+          <div class ="charName">        ${character.name} </div>
+          <div class ="charOccupation">  ${character.occupation} </div>
+          <div class ="charWeapon">      ${character.weapon} </div>
+          </div>
+        `);
+
+    }); //close forEach
+  } else {
+    $('.characters-container').append(`
+      <div class="character-info">
+      <div class ="charID">          ${postResponse.id} </div>
+      <div class ="charName">        ${postResponse.name} </div>
+      <div class ="charOccupation">  ${postResponse.occupation} </div>
+      <div class ="charWeapon">      ${postResponse.weapon} </div>
+      </div>
+    `);
 
   }
+
 } //end of loadCharacters
+
+// in the event that there is an error
+// it just receives whatever error the ajax request comes back width
+// so basically all you have to do is print it out to the console so that you know what is going on
+function errorHandler(err) {
+  console.log("Things have gone array...get it? Array?");
+  console.log(err);
+
+}
