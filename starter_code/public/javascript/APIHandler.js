@@ -33,15 +33,17 @@ class APIHandler {
     }
 
     createOneRegister(nam,occu,deb,weap) {
+      
+      const char = {
+          name: nam,
+          occupation: occu,
+          debt: deb,
+          weapon: weap
+      };
         $.ajax({
             method: 'POST',
             url: 'http://ih-api.herokuapp.com/characters',
-            data: {
-                name: nam,
-                occupation: occu,
-                debt: deb,
-                weapon: weap
-            },
+            data: char,
             success: showFeedback,
             error: handleError
         });
