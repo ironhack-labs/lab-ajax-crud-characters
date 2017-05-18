@@ -10,8 +10,8 @@ $(document).ready( () => {
 
 //ONE
   $('#fetch-one').on('click', (e) => {
+    $('.characters-container').children().remove();
     let id = $('input[name="character-id"]').val();
-      console.log(id);
       charactersAPI.getOneRegister(id);
   });
 
@@ -58,8 +58,9 @@ $(document).ready( () => {
 
 //DELETE
   $('#delete-one').on('click', (e) => {
-    charactersAPI.deleteOneRegister();
-
+    $('.characters-container').children().remove();
+    let id = $('input[name="character-id-delete"]').val();
+    charactersAPI.deleteOneRegister(id);
   });
 
 
