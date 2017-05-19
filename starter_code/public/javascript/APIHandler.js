@@ -59,6 +59,12 @@ function loadCharacters(postResponse) { //"charList" is actually the callback/re
   console.log('The Request Worked here is the response...');
   console.log(postResponse);
 
+  $('.characters-container').append(`
+    <div class="success-info">
+      <p> Request Succesful</p>
+    </div>
+    `);
+
   if (postResponse.length > 1) {
     postResponse.forEach((character) => { //each object pulled from callback/response would be "character"
       //newCharacter creates the HTML to display the characters/objects gathered from request

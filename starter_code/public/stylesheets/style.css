@@ -109,6 +109,9 @@ button {
 .error-info {
   background: red;
   width: 100%;
-  
+}
 
+.success-info {
+  background: darkgreen;
+  width: 100%;
 }
