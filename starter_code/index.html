@@ -14,12 +14,25 @@
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="debt">Character Debt</div>
-        <div class="weapon">Character Weapon</div>
+    <!-- 
+     <div class="character-info">
+      <div class="block">
+        <label id="id-0">Id:</label>
       </div>
+      <div class="block">
+        <label id="name-0">Name:</label>
+      </div>
+      <div class="block">
+        <label id="occupation-0">Occupation:</label>
+      </div>
+      <div class="block">
+        <label id="debt-0">Debt:</label>
+      </div>
+      <div class="block">
+        <label id="weapon-0">Weapon:</label>
+      </div>
+     </div>
+    -->
     </div>
     <section class="operations">
       <div class="operation">
@@ -35,7 +48,6 @@
         <input id="delete-one-character" type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
-
     </section>
   </section>
   <section class="container">
@@ -58,7 +70,7 @@
           <label for="debt">Has debt: </label>
           <input id="new-debt" name="debt" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button id="create-one">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -84,7 +96,7 @@
           <label for="debt">Has debt: </label>
           <input id="edit-debt" name="debt" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="update-one">Update</button>
       </form>
     </section>
   </section>
