@@ -15,23 +15,22 @@ class APIHandler {
 
   }
 
-
-  createOneRegister (id, postedData) {
-    this._ajax(`/characters/${id}`, "POST", null, postedData);
+  createOneRegister (newCharacter, callback) {
+    this._ajax(`/characters/`, "POST", newCharacter, callback);
   }
 
-  updateOneRegister () {
-    this._ajax();
+  updateOneRegister (id, editedChar, callback) {
+    this._ajax(`/characters/${id}`, "PUT", editedChar, callback);
   }
 
   deleteOneRegister (id, callback) {
-    this._ajax(`/characters/${id}`, "GET", callback);
+    this._ajax(`/characters/${id}`, "DELETE", callback);
   }
 
 
 
 //method to handle ajax request and be called in APIHandler
-_ajax(addToBaseURL, callMethod, callback, postedData) {
+_ajax(addToBaseURL, callMethod, postedData) {
 // addToBaseURL   = append this text to base URL
 // callMethod     = GET, POST, DELETE, PUT, etc....
 // callback       = whatever response we get from the request
@@ -46,6 +45,10 @@ _ajax(addToBaseURL, callMethod, callback, postedData) {
   });
 
 } //end of the _ajax private method
+
+
+
+
 
 } //end of APIHandler
 
