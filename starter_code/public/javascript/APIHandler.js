@@ -1,4 +1,3 @@
-let objectReturned;
 class APIHandler {
   constructor (baseUrl) {
     this.BASE_URL = baseUrl;
@@ -30,7 +29,7 @@ class APIHandler {
 
 
 //method to handle ajax request and be called in APIHandler
-_ajax(addToBaseURL, callMethod, postedData) {
+_ajax(addToBaseURL, callMethod, postedData, callback) {
 // addToBaseURL   = append this text to base URL
 // callMethod     = GET, POST, DELETE, PUT, etc....
 // callback       = whatever response we get from the request
@@ -95,5 +94,13 @@ function loadCharacters(postResponse) { //"charList" is actually the callback/re
 function errorHandler(err) {
   console.log("Things have gone array...get it? Array?");
   console.log(err);
+  let errorMessage = err.responseJSON.error;
+  $('.characters-container').html('');
+  $('.characters-container').append(`
+    <div class="error-info">
+      <p> ${errorMessage} </p>
+    </div>
+  `);
+
 
 }
