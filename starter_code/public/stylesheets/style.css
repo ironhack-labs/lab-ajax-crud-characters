@@ -14,6 +14,41 @@ h1, h2 {
   color: #d8b362;
 }
 
+.block > label {
+  font-size: 20px;
+  display: inline-block;
+}
+
+.id {
+  margin-left: 100px;
+  font-size: 20px;
+  color: #d8b362;
+}
+
+.name {
+  margin-left: 65px;
+  font-size: 20px;
+  color: #d8b362;
+}
+
+.occupation {
+  margin-left: 15px;
+  font-size: 20px;
+  color: #d8b362;
+}
+
+.debt {
+  margin-left: 75px;
+  font-size: 20px;
+  color: #d8b362;
+}
+
+.weapon {
+  margin-left: 42px;
+  font-size: 20px;
+  color: #d8b362;
+}
+
 button {
   font-family: inherit;
   font-size: 11px;
