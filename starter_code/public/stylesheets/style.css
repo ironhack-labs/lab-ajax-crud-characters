@@ -105,3 +105,12 @@ button {
 #send-data {
   margin: 10px 0 0 120px;
 }
+
+.error-message{
+  background-color: red;
+}
+
+.success-message{
+  background-color: #277433;
+
+}

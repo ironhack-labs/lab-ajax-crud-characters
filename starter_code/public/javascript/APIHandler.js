@@ -50,7 +50,7 @@ function loadCharacters(postResponse) {
   console.log(postResponse);
 
   $('.characters-container').append(`
-    <div class="success-info">
+    <div class="success-message">
       <p> Request Succesful</p>
     </div>
     `);
@@ -88,7 +88,7 @@ function errorHandler(err) {
   let errorMessage = err.responseJSON.error;
   $('.characters-container').html('');
   $('.characters-container').append(`
-    <div class="error-info">
+    <div class="error-message">
       <p> ${errorMessage} </p>
     </div>`
   );
