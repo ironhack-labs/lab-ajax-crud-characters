@@ -10,7 +10,7 @@ body {
   background: url("../images/minions.jpg")
 }
 
-h1, h2 {
+h1, h2, #info {
   color: #d8b362;
 }
 
@@ -63,7 +63,7 @@ button {
   margin: 20px 0 0;
 }
 
-.character-info {
+.character-info, .character-box {
   position: relative;
   width: 40%;
   margin: 10px;
@@ -102,6 +102,19 @@ button {
   margin: 5px 0;
 }
 
-#send-data {
+#edit-data, #send-data {
   margin: 10px 0 0 120px;
+}
+
+
+.error-info {
+  border-radius: 50px;
+  border: 2px solid #fff;
+  background-color: red;
+}
+
+.success-info {
+  border-radius: 50px;
+  border: 2px solid #fff;
+  background-color: green;
 }
