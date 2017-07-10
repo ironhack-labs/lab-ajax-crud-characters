@@ -76,7 +76,17 @@ class APIHandler {
     });
   }
 
-  deleteOneRegister() {
-
+  deleteOneRegister(id) {
+    $.ajax({
+      url: 'https://ih-api.herokuapp.com/characters/' + id,
+      method: 'DELETE',
+      success: (responseFromApi) => {
+        alert('Success deleting the character.');
+      },
+      error: (errorFromApi) => {
+        alert('Sorry, there was an error.');
+        console.log(errorFromApi);
+      }
+    });
   }
 }

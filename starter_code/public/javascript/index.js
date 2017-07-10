@@ -15,7 +15,9 @@ $(document).ready( () => {
   });
 
   $('#delete-one').on('click', (e) => {
-
+    const deleteById = $('#character-id-delete').val();
+    console.log(deleteById);
+    charactersAPI.deleteOneRegister(deleteById);
   });
 
   $('#edit-character-form').on('submit', (e) => {
