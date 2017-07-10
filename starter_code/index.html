@@ -13,6 +13,8 @@
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
+    <ul class="char">
+      <li>
     <div class="characters-container">
       <div class="character-info">
         <div class="name">Character Name</div>
@@ -20,19 +22,21 @@
         <div class="debt">Character Debt</div>
         <div class="weapon">Character Weapon</div>
       </div>
+    </li>
     </div>
+  </ul>
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" id="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" id="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -44,21 +48,21 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" id="newName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" id="newOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" id="newWeapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input id="newDebt" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button>Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -66,25 +70,25 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" id="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" id="updateddName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" id="updatedOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" id="updatedWeapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input id="updatedDebt" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button>Update</button>
       </form>
     </section>
   </section>

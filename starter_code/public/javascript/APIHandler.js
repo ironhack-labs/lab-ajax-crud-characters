@@ -4,22 +4,73 @@ class APIHandler {
   }
 
   getFullList () {
-
+    let object;
+    $.ajax({
+      url: this.BASE_URL,
+      method: "GET",
+      success: data => {
+       getAllCharacters(data);
+     },
+      error: error => {
+        console.log(error);
+      }
+    });
+    return object;
   }
 
-  getOneRegister () {
-
+  getOneRegister (characterId) {
+    $.ajax({
+      url: this.BASE_URL+'/'+characterId,
+      method: "GET",
+      success: data => {
+        getOneCharacter(data);
+        // console.log(data);
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
   }
 
-  createOneRegister () {
-
+  createOneRegister (characterInfo) {
+    $.ajax({
+      url: this.BASE_URL,
+      method: "POST",
+      data: characterInfo,
+      success: data => {
+        console.log("CREATED: " + data);
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (updateInfo, characterId) {
+    $.ajax({
+      url: this.BASE_URL+'/'+characterId,
+      method: "PATCH",
+      data: updateInfo,
+      success: data => {
+        console.log("UPDATED: " + data);
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (characterId) {
+    $.ajax({
+      url: this.BASE_URL+'/'+characterId,
+      method: "DELETE",
+      success: data => {
+        console.log(data);
 
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
   }
 }
