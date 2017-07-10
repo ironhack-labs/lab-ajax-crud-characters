@@ -6,7 +6,8 @@ $(document).ready( () => {
   });
 
   $('#fetch-one').on('click', (e) => {
-    charactersAPI.getOneRegister();
+    const charId = $('#fetch-input').val();
+    charactersAPI.getOneRegister(charId);
   });
 
   $('#delete-one').on('click', (e) => {
@@ -18,6 +19,6 @@ $(document).ready( () => {
   });
 
   $('#new-character-form').on('submit', (e) => {
-
+    
   });
 });

@@ -8,29 +8,39 @@ class APIHandler {
       url: this.BASE_URL + '/characters/',
       method: 'GET',
       success: (responseFromServer) => {
-        console.log("Grabbing list successful!");
+        console.log(responseFromServer);
       },
       error: (errorFromServer) => {
-        console.log("Unable to grab full list");
+        console.log(errorFromServer);
       }
     });
   }
 
-  getOneRegister () {
+  getOneRegister (charId) {
     $.ajax({
-      url: this.BASE_URL + '/characters/:id/',
+      url: this.BASE_URL + '/characters/' + charId,
       method: 'GET',
       success: (responseFromServer) => {
-        console.log("Found Id!");
+        console.log(responseFromServer);
       },
       error: (errorFromServer) => {
-        console.log("Could not find Id!");
+        console.log(errorFromServer);
       }
     });
   }
 
-  createOneRegister () {
-
+  createOneRegister (newCharacter) {
+    $.ajax({
+      url: this.BASE_URL + '/characters/',
+      method: 'POST',
+      data: newCharacter,
+      success: (responseFromServer) => {
+        console.log(responseFromServer);
+      },
+      error: (errorFromServer) => {
+        console.log(errorFromServer);
+      }
+    });
   }
 
   updateOneRegister () {
