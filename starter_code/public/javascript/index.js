@@ -6,8 +6,12 @@ $(document).ready( () => {
   });
 
   $('#fetch-one').on('click', (e) => {
+    e.preventDefault();
 
-  })
+    const characterId = $('#characterId').val();
+
+    charactersAPI.getOneRegister(characterId);
+  });
 
   $('#delete-one').on('click', (e) => {
 
@@ -18,6 +22,15 @@ $(document).ready( () => {
   })
 
   $('#new-character-form').on('submit', (e) => {
+    e.preventDefault();
 
-  })
-})
+    const characterInfo = {
+      name: $('#newCharacterName').val(),
+      weapon: $('#newCharacterOccupation').val(),
+      occupation: $('#newCharacterWeapon').val(),
+      debt: $('#newCharacterDebt').val()
+    };
+
+    charactersAPI.createOneRegister(characterInfo);
+  });
+});
