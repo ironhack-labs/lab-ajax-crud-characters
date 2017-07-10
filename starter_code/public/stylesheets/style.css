@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 * {
   box-sizing: border-box;
 }
@@ -10,7 +9,8 @@ body {
   background: url("../images/minions.jpg")
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d8b362;
 }
 
@@ -104,4 +104,14 @@ button {
 
 #send-data {
   margin: 10px 0 0 120px;
+}
+
+.success {
+  color: #42f471;
+  border-color: #42f471;
+}
+
+.error {
+  color: red;
+  border-color: red;
 }
