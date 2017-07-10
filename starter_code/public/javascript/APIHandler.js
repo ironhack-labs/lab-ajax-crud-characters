@@ -51,7 +51,7 @@ class APIHandler {
     //we can use this because newCharacter is an object
     //that already contains the data we want to post to the API
     success: (responseFromApi) => {
-      console.log('success saving a new character.');
+      alert('A new character has been saved!');
       console.log(responseFromApi);
     },
     error: (errorFromApi) => {
@@ -61,8 +61,19 @@ class APIHandler {
   });
   }
 
-  updateOneRegister() {
-
+  updateOneRegister(id, newInfo) {
+    $.ajax({
+    url: 'https://ih-api.herokuapp.com/characters/' + id,
+    method: 'PATCH',
+    data: newInfo,
+    success: (responseFromApi) => {
+      alert('The character\'s information has been updated.');
+      console.log(responseFromApi);
+    },
+    error: (errorFromApi) => {
+      console.log(errorFromApi);
+    }
+    });
   }
 
   deleteOneRegister() {
