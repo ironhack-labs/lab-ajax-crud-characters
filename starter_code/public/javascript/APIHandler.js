@@ -16,9 +16,13 @@ class APIHandler {
     });
   }
 
-  createOneRegister() {
-
-  }
+  createOneRegister(e) {
+    return $.ajax({
+          method: 'POST',
+          url: `${this.BASE_URL}/characters`,
+          data: e
+  });
+}
 
   updateOneRegister() {
 
