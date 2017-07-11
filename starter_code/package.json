@@ -1,0 +1,11 @@
+{
+  "name": "starter_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start": "http-server -p 3000 --cors"
+  },
+  "author": "",
+  "license": "ISC"
+}
