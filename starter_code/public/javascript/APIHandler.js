@@ -16,15 +16,31 @@ class APIHandler {
 
   }
 
-  createOneRegister() {
+  createOneRegister(e) {
+    return $.ajax({
+      method: 'POST',
+      dataType: 'json',
+      url: `${this.BASE_URL}/characters`,
+      data: e
+    });
 
   }
 
-  updateOneRegister() {
 
+  updateOneRegister(id, e) {
+    return $.ajax({
+      method: 'PATCH',
+      dataType: 'json',
+      url: `${this.BASE_URL}/characters/${id}`,
+      data: e
+    });
   }
 
-  deleteOneRegister() {
+  deleteOneRegister(id) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`,
+      method: 'DELETE'
+  });
+}
 
-  }
 }
