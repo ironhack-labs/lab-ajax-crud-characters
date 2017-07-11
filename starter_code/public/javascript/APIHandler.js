@@ -16,7 +16,7 @@ class APIHandler {
   }
 
   createOneRegister (character) {
-    $.ajax({
+    return $.ajax({
       method: 'POST',
       url: `${this.BASE_URL}/characters`,
       data: character
@@ -24,7 +24,7 @@ class APIHandler {
   }
 
   updateOneRegister (charId, character) {
-    $.ajax({
+    return $.ajax({
       method: 'PATCH',
       url: `${this.BASE_URL}/characters/${charId}`,
       data: character
