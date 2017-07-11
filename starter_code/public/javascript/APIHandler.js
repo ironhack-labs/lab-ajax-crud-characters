@@ -11,19 +11,38 @@ class APIHandler {
     });
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return $.ajax({
+      method: 'GET',
+      dataType: 'json',
+      url: `${this.BASE_URL}/characters/${id}`
+    });
   }
 
-  createOneRegister () {
+    createOneRegister(e) {
+      return $.ajax({
+        method: 'POST',
+        dataType: 'json',
+        url: `${this.BASE_URL}/characters`,
+        data: evento
+      });
+    }
+
+    updateOneRegister(id, e) {
+      return $.ajax({
+        method: 'PATCH',
+        dataType: 'json',
+        url: `${this.BASE_URL}/characters/${id}`,
+        data: evento
+      });
+    }
+
+    deleteOneRegister(id) {
+      return $.ajax({
+        method: 'DELETE',
+        dataType: 'json',
+        url: `${this.BASE_URL}/characters/${id}`
+      });
+    }
 
   }
-
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
-  }
-}
