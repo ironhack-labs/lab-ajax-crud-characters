@@ -4,11 +4,15 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return $.ajax({
+      url: `${this.BASE_URL}/characters`
+    });
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`
+    });
   }
 
   createOneRegister () {
@@ -19,7 +23,10 @@ class APIHandler {
 
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return $.ajax({
+      method: 'DELETE',
+      url: `${this.BASE_URL}/characters/${id}`
+    });
   }
 }
