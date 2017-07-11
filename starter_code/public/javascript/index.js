@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 const charactersAPI = new APIHandler("http://ih-api.herokuapp.com");
 
 $(document).ready(() => {
@@ -33,7 +31,9 @@ $(document).ready( () => {
   });
 
   $('#delete-one').on('click', (e) => {
-
+    const charIdDelete = $('#character-id-delete').val();
+    charactersAPI.deleteOneRegister(charIdDelete).then(deleteHeroe =>
+      console.log('Se elimino'));
   });
 
   $('#edit-character-form').on('submit', (e) => {
@@ -42,18 +42,19 @@ $(document).ready( () => {
 
   $('#new-character-form').on('submit', (e) => {
     e.preventDefault();
-      let name = $('#name').val();
-      let occupation = $('#occupation').val();
-      let  weapon  = $('#weapon').val();
-      let debt =  $('#debt').val();
+    $charContain.empty();
+      let name = $('#create-name').val();
+      let occupation = $('#create-occupation').val();
+      let  weapon  = $('#create-weapon').val();
+      let debt =  $('#create-debt').val();
 
-      const heroe = {
-        name: $('#name').val(),
-        occupation: $('#occupation').val(),
-        weapon: $('#weapon').val(),
-        debt: $('#debt').val()
+      const newHeroe = {
+        name: name,
+        occupation: occupation,
+        weapon: weapon,
+        debt: debt
     };
-    charactersAPI.createOneRegister(heroe).then(result =>
+    charactersAPI.createOneRegister(newHeroe).then(result =>
       console.log(result));
   });
 });

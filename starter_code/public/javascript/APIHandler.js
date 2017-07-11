@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 class APIHandler {
   constructor (baseUrl) {
     this.BASE_URL = baseUrl;
@@ -20,16 +18,19 @@ class APIHandler {
   createOneRegister (e) {
     return $.ajax({
       url: `${this.BASE_URL}/characters`,
-      method: "GET",
+      method: "POST",
       data: e
     });
   }
 
-  updateOneRegister (charId, e) {
+  updateOneRegister () {
 
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (charId) {
+    return $.ajax({
+     url: `${this.BASE_URL}/characters/${charId}`,
+     method: "DELETE"
+   });
   }
 }
