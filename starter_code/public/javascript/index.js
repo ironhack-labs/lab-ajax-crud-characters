@@ -1,36 +1,43 @@
 const charactersAPI = new APIHandler("http://ih-api.herokuapp.com");
 
-$(document).ready( () => {
+$(document).ready(() => {
+
   $('#fetch-all').on('click', (e) => {
-    charactersAPI.getFullList().then( heroes => {
+    charactersAPI.getFullList().then(heroes => {
       console.log(heroes);
-      heroes.forEach( heroe => {
+      heroes.forEach(heroe => {
         const $container = $('.characters-container');
         const $heroe = $('<div>').addClass('character-info');
-        const $name = $('<div>').addClass('name').text(heroe.name);
-        const $occupation = $('<div>').addClass('occupation').text(heroe.occupation);
-        const $debt = $('<div>').addClass('debt').text(heroe.debt);
-        const $weapon = $('<div>').addClass('weapon').text(heroe.weapon);
+        const $name = $('<div>').addClass('name').text(heroe.name).append("<span>Name</span>");
+        const $occupation = $('<div>').addClass('occupation').text(heroe.occupation).append("<span>Occupation</span>");
+        const $debt = $('<div>').addClass('debt').text(heroe.debt).append("<span>Debt</span>");
+        const $weapon = $('<div>').addClass('weapon').text(heroe.weapon).append("<span>Weapon</span>");
         $heroe.append($name).append($occupation).append($debt).append($weapon);
         $container.append($heroe);
       });
-        }, (err) => {
-          console.log(err);
-        });
-      });
+    }, (err) => {
+      console.log(err);
+    });
+  });
 
   $('#fetch-one').on('click', (e) => {
-    charactersAPI.getOneRegister($('#character-id').val()).then( hero => {
+    charactersAPI.getOneRegister($('#character-id').val()).then(hero => {
       $(".name").text(hero.name);
       $(".occupation").text(hero.occupation);
       $(".debt").text(hero.debt);
       $(".weapon").text(hero.weapon);
+    }, (err) => {
+      console.log(err);
     });
   });
 
   $('#delete-one').on('click', (e) => {
-    charactersAPI.deleteOneRegister($('#character-id-delete').val()).then( hero => {
-      console.log(`Deleted ${$('#character-id-delete').val()}`);
+    charactersAPI.deleteOneRegister($('#character-id-delete').val()).then(hero => {
+      console.log(`Deleted character ID:${$('#character-id-delete').val()}`);
+      $("#delete-one").css("background-color", "green");
+    }, (err) => {
+      console.log(err);
+      $("#delete-one").css("background-color", "red");
     });
   });
 
@@ -48,7 +55,12 @@ $(document).ready( () => {
       weapon: weapon,
       debt: debt
     };
-    charactersAPI.updateOneRegister(id,updatedCharacter);
+    charactersAPI.updateOneRegister(id, updatedCharacter).then(hero => {
+      $("#send-data").css("background-color", "green");
+    }, (err) => {
+      console.log(err);
+      $("#send-data").css("background-color", "red");
+    });
   });
 
   $('#new-character-form').on('submit', (e) => {
@@ -63,6 +75,12 @@ $(document).ready( () => {
       weapon: weapon,
       debt: debt
     };
-    charactersAPI.createOneRegister(newCharacter);
+    charactersAPI.createOneRegister(newCharacter).then(hero => {
+      $("#send-data-create").css("background-color", "green");
+    }, (err) => {
+      console.log(err);
+      $("#send-data-create").css("background-color", "red");
+    });
   });
+
 });
