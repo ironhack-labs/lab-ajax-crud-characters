@@ -1,9 +1,21 @@
 const charactersAPI = new APIHandler("http://ih-api.herokuapp.com");
 
-$(document).ready( () => {
+$(document).ready(() => {
+  const $container = $(".characters-container");
+  const addCharacter = (e) => {
+    const $name = $(`<div><p>Name: ${e.name}</p></div>`).addClass('name');
+    const $occupation = $(`<div><p>Occupation: ${e.occupation}</p></div>`).addClass('occupation');
+    const $debt = $(`<div><p>Debt: ${e.debt}</p></div>`).addClass('debt');
+    const $weapon = $(`<div><p>Weapon: ${e.weapon}</p></div>`).addClass('weapon');
+    const completedCharacter = $('<div>').addClass('character-info').append($name).append($occupation).append($debt).append($weapon);
+    $container.append(completedCharacter);
+  };
+
   $('#fetch-all').on('click', (e) => {
     charactersAPI.getFullList().then(characterList => {
       console.log(characterList);
+      characterList.forEach(e => e ? addCharacter(e) : console.log("Error"));
+
     });
   });
 
