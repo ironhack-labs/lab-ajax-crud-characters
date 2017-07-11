@@ -7,11 +7,12 @@ $(document).ready( () => {
     characterList.forEach( character => {
       const $container = $('.characters-container');
       const $character = $('<div>').addClass('character-info');
+      const $id = $('<div>').text(character.id);
       const $name = $('<div>').addClass('name').text(character.name);
       const $occupation = $('<div>').addClass('occupation').text(character.occupation);
       const $debt = $('<div>').addClass('debt').text(character.debt);
       const $weapon = $('<div>').addClass('weapon').text(character.weapon);
-      $character.append($name).append($occupation).append($debt).append($weapon);
+      $character.append($id).append($name).append($occupation).append($debt).append($weapon);
       $container.append($character);
     });
       }, (err) => {
