@@ -16,12 +16,12 @@ class APIHandler {
     });
   }
 
-  getOneRegister() {
+  getOneRegister(id) {
     return new Promise((resolve, reject) => {
       $.ajax({
         method: 'GET',
         dataType: 'json',
-        url: `${this.BASE_URL}/characters/:id`,
+        url: `${this.BASE_URL}/characters/` + id,
         success: (data) => {
           resolve(data);
         }
@@ -29,19 +29,12 @@ class APIHandler {
     });
   }
 
-  createOneRegister() {
-    const characterInfo = {
-      name: $('create-name').val(),
-      occupation: $('create-occupation').val(),
-      weapon: $('create-weapon').val(),
-      debt: $('create-debt').val()
-    };
-
+  createOneRegister(char) {
     return new Promise((resolve, reject) => {
       $.ajax({
         method: 'POST',
         url: `${this.BASE_URL}/characters`,
-        data: characterInfo,
+        data: char,
         success: (data) => {
           resolve(data);
         }
@@ -69,7 +62,16 @@ class APIHandler {
     });
   }
 
-  deleteOneRegister() {
-
+  deleteOneRegister(id) {
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        method: 'DELETE',
+        dataType: 'json',
+        url: `${this.BASE_URL}/characters/` + id,
+        success: (data) => {
+          resolve(data);
+        }
+      });
+    });
   }
 }
