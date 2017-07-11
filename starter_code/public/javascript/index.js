@@ -29,16 +29,40 @@ $(document).ready( () => {
   });
 
   $('#delete-one').on('click', (e) => {
-    charactersAPI.deleteOneRegister($('#character-id-delete').val()).then( heroes => {
+    charactersAPI.deleteOneRegister($('#character-id-delete').val()).then( hero => {
       console.log(`Deleted ${$('#character-id-delete').val()}`);
     });
   });
 
   $('#edit-character-form').on('submit', (e) => {
-
+    e.preventDefault();
+    let id = $('#update-chr-id').val();
+    let name = $('#update-name').val();
+    let occupation = $('#update-occupation').val();
+    let weapon = $('#update-weapon').val();
+    let debt = $('#update-checkbox').val() === "on" ? true : false;
+    const updatedCharacter = {
+      id: id,
+      name: name,
+      occupation: occupation,
+      weapon: weapon,
+      debt: debt
+    };
+    charactersAPI.updateOneRegister(id,updatedCharacter);
   });
 
   $('#new-character-form').on('submit', (e) => {
-
+    e.preventDefault();
+    let name = $('#create-name').val();
+    let occupation = $('#create-occupation').val();
+    let weapon = $('#create-weapon').val();
+    let debt = $('#create-debt').val() === "on" ? true : false;
+    const newCharacter = {
+      name: name,
+      occupation: occupation,
+      weapon: weapon,
+      debt: debt
+    };
+    charactersAPI.createOneRegister(newCharacter);
   });
 });
