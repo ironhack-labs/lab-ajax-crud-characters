@@ -32,20 +32,35 @@ $(document).ready( () => {
 
   $('#delete-one').on('click', (e) => {
     const charIdDelete = $('#character-id-delete').val();
-    charactersAPI.deleteOneRegister(charIdDelete).then(deleteHeroe =>
-      console.log('Se elimino'));
+    charactersAPI.deleteOneRegister(charIdDelete).then(deleteHeroe => {
+      console.log(`Deleted ${$('#character-id-delete').val()}`);
   });
+});
 
   $('#edit-character-form').on('submit', (e) => {
+      e.preventDefault();
+      let editId = $('#edit-id').val();
+      let editname = $('#edit-name').val();
+      let editoccupation = $('#edit-occupation').val();
+      let editweapon = $('#edit-weapon').val();
+      let editdebt = $('#edit-debt').val() === "on" ? true : false;
 
-  });
+      const editHeroe = {
+        name: editname,
+        occupation: editoccupation,
+        weapon: editweapon,
+        debt: editdebt
+      };
+      charactersAPI.updateOneRegister(editId, editHeroe);
+      console.log("Personaje editado!");
+    });
 
   $('#new-character-form').on('submit', (e) => {
     e.preventDefault();
     $charContain.empty();
       let name = $('#create-name').val();
       let occupation = $('#create-occupation').val();
-      let  weapon  = $('#create-weapon').val();
+      let weapon  = $('#create-weapon').val();
       let debt =  $('#create-debt').val();
 
       const newHeroe = {
@@ -57,5 +72,5 @@ $(document).ready( () => {
     charactersAPI.createOneRegister(newHeroe).then(result =>
       console.log(result));
   });
-});
+ });
 });

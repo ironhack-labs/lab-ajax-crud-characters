@@ -23,8 +23,12 @@ class APIHandler {
     });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (charId, e) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${charId}`,
+      method: "PATCH",
+      data: e
+    });
   }
 
   deleteOneRegister (charId) {
