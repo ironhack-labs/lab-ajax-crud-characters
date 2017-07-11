@@ -1,25 +1,43 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
+  getFullList() {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters`,
+    });
 
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`,
+    });
   }
 
-  createOneRegister () {
+  createOneRegister(e) {
+    return $.ajax({
+          method: 'POST',
+          url: `${this.BASE_URL}/characters`,
+          data: e
+  });
+}
 
+  updateOneRegister(id,e) {
+    return $.ajax({
+      method: 'PATH',
+      url: `${this.BASE_URL}/characters/${id}`,
+      data: e
+    });
   }
 
-  updateOneRegister () {
 
-  }
-
-  deleteOneRegister () {
+  deleteOneRegister(id) {
+    return $.ajax({
+      method: 'DELETE',
+      url: `${this.BASE_URL}/characters/${id}`,
+    });
 
   }
 }
