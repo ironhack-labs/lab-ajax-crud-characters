@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,22 @@
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
+  <script type="text/javascript" src="./public/javascript/formsData.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
+
   <title>IH Characters</title>
 </head>
+
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
-      <div class="character-info">
+      <!-- <div class="character-info">
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
         <div class="debt">Character Debt</div>
         <div class="weapon">Character Weapon</div>
-      </div>
+      </div> -->
     </div>
     <section class="operations">
       <div class="operation">
@@ -32,7 +36,7 @@
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" id="id-delete"name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -61,12 +65,13 @@
         <button id="send-data">Create</button>
       </form>
     </section>
+
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id" id="chrId">
+          <input type="text" name="chr-id" id="chrId" readonly>
         </div>
         <div class="field">
           <label for="name">Name: </label>
@@ -90,4 +95,5 @@
   </section>
 
 </body>
+
 </html>

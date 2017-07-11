@@ -20,25 +20,29 @@ class APIHandler {
     });
   }
 
-  createOneRegister(obj, err) {
-    if (err){
-      console.log('err',err);
-      return 'Error. Cannot create new char';
-    }
-    else
-      return $.ajax({
-        url: `${this.BASE_URL}/characters/`,
-        method: 'POST',
-        dataType: 'json',
-        data: obj
-      });
+  createOneRegister(data) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/`,
+      method: 'POST',
+      dataType: 'json',
+      data: data,
+    });
   }
 
-  updateOneRegister() {
-
+  updateOneRegister(id, data) {
+    return $.ajax({
+      url: ` ${this.BASE_URL}/characters/${id}`,
+      method: 'PUT',
+      dataType: 'json',
+      data: data,
+    });
   }
 
-  deleteOneRegister() {
-
+  deleteOneRegister(id) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`,
+      method: 'DELETE',
+      dataType: 'json',
+    });
   }
 }
