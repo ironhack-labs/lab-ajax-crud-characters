@@ -4,22 +4,55 @@ class APIHandler {
   }
 
   getFullList () {
-
+  return  $.ajax({
+      method: 'GET',
+      dataType: 'json',
+      url:  `${this.BASE_URL}/characters`,
+    });
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return  $.ajax({
+        method: 'GET',
+        dataType: 'json',
+        url:  `${this.BASE_URL}/characters/${id}`,
+      });
   }
 
-  createOneRegister () {
-
+  createOneRegister (name,occupation,weapon,hasdeb) {
+    const data = {
+      name,
+      occupation,
+      weapon,
+      hasdeb};
+    return  $.ajax({
+        method: 'POST',
+        dataType: 'json',
+        url:  `${this.BASE_URL}/characters`,
+        data: data
+      });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id,name,occupation,weapon,hasdeb) {
+    const data = {
+      name,
+      occupation,
+      weapon,
+      hasdeb
+    };
+    return  $.ajax({
+        method: 'PUT',
+        dataType: 'json',
+        url:  `${this.BASE_URL}/characters/${id}`,
+        data: data
+      });
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return  $.ajax({
+        method: 'DELETE',
+        dataType: 'json',
+        url:  `${this.BASE_URL}/characters/${id}`,
+      });
   }
 }
