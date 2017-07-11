@@ -24,9 +24,14 @@ class APIHandler {
   });
 }
 
-  updateOneRegister() {
-
+  updateOneRegister(id,e) {
+    return $.ajax({
+      method: 'PATH',
+      url: `${this.BASE_URL}/characters/${id}`,
+      data: e
+    });
   }
+
 
   deleteOneRegister(id) {
     return $.ajax({

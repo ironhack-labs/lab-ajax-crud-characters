@@ -23,7 +23,6 @@ $(document).ready(() => {
     }, (err) => {
       console.log(err);
     });
-  });
 
   $('#fetch-one').on('click', (e) => {
     const id = $('#characterID').val();
@@ -43,19 +42,20 @@ $(document).ready(() => {
   });
 
   $('#edit-character-form').on('submit', (e) => {
-  //   e.preventDefault();
-  //   let name = $('#update-name').val();
-  //   let occupation = $('#update-occupation').val();
-  //   let debt = $('#new-debt').val() === "on" ? true : false;
-  //   let weapon = $('#update-weapon').val();
-  //   const updatedCharacter = {
-  //     name: name,
-  //     occupation: occupation,
-  //     debt: debt,
-  //     weapon: weapon
-  //   };
-  //   console.log(characterID);
-  //   charactersAPI.updateOneRegister(characterID, updatedCharacter);
+    e.preventDefault();
+    let idCharacter = $('update-id').val();
+    let name = $('#update-name').val();
+    let occupation = $('#update-occupation').val();
+    let debt = $('#new-debt').val() === "on" ? true : false;
+    let weapon = $('#update-weapon').val();
+    const updatedCharacter = {
+      name: name,
+      occupation: occupation,
+      debt: debt,
+      weapon: weapon
+    };
+    console.log(idCharacter);
+    charactersAPI.updateOneRegister(idCharacter, updatedCharacter);
    });
 });
 
@@ -71,7 +71,8 @@ $('#new-character-form').on('submit', (e) => {
     debt: debt,
     weapon: weapon
   };
-  charactersAPI.createOneRegister(newCharacter);
+  charactersAPI.createOneRegister(newCharacter).then(data=> console.log(data));
   console.log("he creado a dani");
 
 });
+  });
