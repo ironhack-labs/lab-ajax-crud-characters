@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
+  <script type="text/javascript" src="./public/javascript/DOMHandler.js"></script>
+  <script type="text/javascript" src="./public/javascript/actionsHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
   <title>IH Characters</title>
 </head>
@@ -27,12 +29,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input id="fetch-one-input" type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input id="delete-one-input" type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
