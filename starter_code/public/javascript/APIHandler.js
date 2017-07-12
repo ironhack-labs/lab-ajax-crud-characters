@@ -1,25 +1,46 @@
+//Peticiones API
+
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
+  getFullList() {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters`
+    });
+  }
+
+  getOneRegister(charOne) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${charOne}`
+    });
 
   }
 
-  getOneRegister () {
+  createOneRegister(c) {
+    return $.ajax({
+      method: 'POST',
+      dataType: 'json',
+      url: `${this.BASE_URL}/characters`,
+      data: c
+    });
 
   }
 
-  createOneRegister () {
-
+  updateOneRegister(id, c) {
+    return $.ajax({
+      method: 'PATCH',
+      dataType: 'json',
+      url: `${this.BASE_URL}/characters/${id}`,
+      data: c
+    });
   }
 
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`,
+      method: 'DELETE'
+    });
   }
 }
