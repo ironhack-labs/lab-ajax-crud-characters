@@ -17,15 +17,20 @@ class APIHandler {
     })
   }
 
-  createOneRegister (data) {
+  createOneRegister (newCharInfo) {
     return $.ajax({
       method: "POST",
-      url: `${this.BASE_URL}/characters/`,
-      data: data
+      url: `${this.BASE_URL}/characters`,
+      data: newCharInfo
     })
   }
 
-  updateOneRegister () {
+  updateOneRegister (editCharInfo) {
+    return $.ajax({
+      method: "PATCH",
+      data: editCharInfo,
+      url: `${this.BASE_URL}/characters/${editCharInfo.id}`
+    })
 
   }
 

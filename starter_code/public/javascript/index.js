@@ -23,7 +23,7 @@ $(document).ready(() => {
     })
   })
 
-  $('#fetch-one').on('click', (e) => {
+  $('#fetch-one').on('click', (event) => {
     event.preventDefault()
     const idForSearch = $("input[name='character-id']").val()
     console.log(idForSearch)
@@ -45,7 +45,7 @@ $(document).ready(() => {
       })
   })
 
-  $('#delete-one').on('click', (e) => {
+  $('#delete-one').on('click', (event) => {
     event.preventDefault()
     const idForDelete = $("input[name='character-id-delete']").val()
     console.log(idForDelete)
@@ -54,13 +54,43 @@ $(document).ready(() => {
     })
   })
 
-  $('#edit-character-form').on('submit', (e) => {
-
+  $('#edit-character-form').on('submit', (event) => {
+    event.preventDefault()
+    const editCharacterId = $("input[id='edit-character-id']").val()
+    const editCharacterName = $("input[id='edit-character-name']").val()
+    const editCharacterOccupation = $("input[id='edit-character-occupation']").val()
+    const editCharacterWeapon = $("input[id='edit-character-weapon']").val()
+    const editCharacterDebt = $("input[id='edit-character-debt']").val()
+    const editCharInfo = {
+      id: editCharacterId,
+      name: editCharacterName,
+      occupation: editCharacterOccupation,
+      debt: editCharacterDebt,
+      weapon: editCharacterWeapon
+    }
+    charactersAPI.updateOneRegister(editCharInfo).then(response => {
+      console.log("Personaje editado");
+    })
   })
 
-  $('#new-character-form').on('submit', (e) => {
+  $('#new-character-form').on('submit', (event) => {
     event.preventDefault()
-    const newCharacterName = $("input[name='character-id-delete']").val()
-
+    const newCharacterName = $("input[id='new-character-name']").val()
+    const newCharacterOccupation = $("input[id='new-character-occupation']").val()
+    const newCharacterWeapon = $("input[id='new-character-weapon']").val()
+    const newCharacterDebt = $("input[id='new-character-debt']").val()
+    const newCharInfo = {
+      name: newCharacterName,
+      occupation: newCharacterOccupation,
+      debt: newCharacterDebt,
+      weapon: newCharacterWeapon
+    }
+    charactersAPI.createOneRegister(newCharInfo).then(response => {
+      console.log(` New Character Created:
+        Name: ${newCharacterName}
+        Occupation: ${newCharacterOccupation}
+        Weapon: ${newCharacterWeapon}
+        Debt: ${newCharacterDebt}`);
+    })
   })
 })
