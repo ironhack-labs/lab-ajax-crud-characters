@@ -25,10 +25,10 @@ $(document).ready(() => {
     const id = $("#characterID").val();
     charactersAPI.getOneRegister(id).then(characterList => {
       console.log(characterList);
-      $('.name').text(characterList.name);
-      $('.occupation').text(characterList.occupation);
-      $('.debt').text(characterList.debt);
-      $('.weapon').text(characterList.weapon);
+      $('.name').text('Name: '+characterList.name);
+      $('.occupation').text('Occupation: '+characterList.occupation);
+      $('.debt').text('Debt: '+characterList.debt);
+      $('.weapon').text('Weapon: '+characterList.weapon);
     });
   });
 
@@ -41,6 +41,7 @@ $(document).ready(() => {
   });
 
   $('#edit-character-form').on('submit', (e) => {
+
     e.preventDefault();
     let idCharacter = $('#update-chr-id').val();
     let name = $('#update-name').val();
@@ -61,6 +62,7 @@ $(document).ready(() => {
 
   $('#new-character-form').on('submit', (e) => {
       e.preventDefault();
+      $container.empty();
       let name = $('#create-name').val();
       let occupation = $('#create-occupation').val();
       let debt = $('#create-debt').val() === "on" ? true : false;
