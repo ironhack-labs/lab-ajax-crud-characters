@@ -11,7 +11,6 @@ $(document).ready( () => {
   });
 
   $('#delete-one').on('click', (e) => {
-
   });
 
   $('#edit-character-form').on('submit', (e) => {
@@ -19,6 +18,15 @@ $(document).ready( () => {
   });
 
   $('#new-character-form').on('submit', (e) => {
-    
+
+
+    const newCharacter = {
+      name: $('#createName').val(),
+      occupation: $('#createOccupation').val(),
+      debt: $('#createDebt').val(),
+      weapon: $('#createWeapon').val()
+    };
+
+    charactersAPI.createOneRegister(newCharacter);
   });
 });
