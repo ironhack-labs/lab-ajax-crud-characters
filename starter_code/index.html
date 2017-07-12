@@ -11,6 +11,7 @@
   <title>IH Characters</title>
 </head>
 <body>
+
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
@@ -27,36 +28,37 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="cow">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id='deletion'>
         <button id="delete-one">Delete one</button>
       </div>
 
     </section>
   </section>
+
   <section class="container">
     <section class="form-container">
       <h2>New Character</h2>
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" id="newName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" id="newOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" id="newWeapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input id="newDebt" type="checkbox">
         </div>
         <button id="send-data">Create</button>
       </form>
