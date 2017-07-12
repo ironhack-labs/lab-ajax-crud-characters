@@ -21,6 +21,10 @@ function createTextComponent( className, contentText ){
   return element
 }
 
+function createId ( idText ){
+  return createTextComponent( 'id', idText )
+}
+
 function createName ( nameText ){
   return createTextComponent( 'name', nameText )
 }
@@ -40,9 +44,15 @@ function createWeapon ( weapon ){
 function createCard ( character){
   let characterInfo = createCharacterInfo ()
 
+  characterInfo.appendChild ( createTextComponent ( 'label', 'Id:') )
+  characterInfo.appendChild ( createId ( character.id) )
+  characterInfo.appendChild ( createTextComponent ( 'label', 'Name:') )
   characterInfo.appendChild ( createName ( character.name) )
+  characterInfo.appendChild ( createTextComponent ( 'label', 'Occupation:') )
   characterInfo.appendChild ( createOccupation ( character.occupation) )
+  characterInfo.appendChild ( createTextComponent ( 'label', 'Debt:') )
   characterInfo.appendChild ( createDebt ( character.debt) )
+  characterInfo.appendChild ( createTextComponent ( 'label', 'Weapon:') )
   characterInfo.appendChild ( createWeapon ( character.weapon ) )
 
   return characterInfo
