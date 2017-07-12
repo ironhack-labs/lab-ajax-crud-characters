@@ -8,7 +8,14 @@ class APIHandler {
       url: 'https://ih-api.herokuapp.com/characters',
       method: 'GET',
       success: (responseFromApi) => {
-        console.log(responseFromApi);
+        responseFromApi.forEach((character) => {
+          $(".characters-container").append(
+            $(".name").append()
+            $(".occupation").append()
+            $(".debt").append()
+            $(".weapon").append()
+          );
+        });
       },
       error: (errorFromApi) => {
         console.log(errorFromApi);
