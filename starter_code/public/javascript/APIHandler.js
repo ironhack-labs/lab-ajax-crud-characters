@@ -1,6 +1,6 @@
 class APIHandler {
   constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+    this.BASE_URL = baseUrl
   }
 
   getFullList () {
@@ -8,7 +8,7 @@ class APIHandler {
       url: `${this.BASE_URL}/characters`,
       dataType: 'JSON',
       method: 'GET'
-    });
+    })
   }
 
   getOneRegister ( id ) {
@@ -34,15 +34,14 @@ class APIHandler {
       dataType: 'JSON',
       data: character,
       method: 'PUT'
-    });
+    })
   }
 
   deleteOneRegister ( id ) {
     return $.ajax({
       url: `${this.BASE_URL}/characters/${id}`,
-      dataType: 'JSON',
-      method: 'DELETE',
-      success: true
+      dataType: 'text',
+      method: 'DELETE'
     })
   }
 }

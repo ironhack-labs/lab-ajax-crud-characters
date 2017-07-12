@@ -5,6 +5,14 @@ function fetchAll(){
   })
 }
 
+function fetchOne ( id ){
+  charactersAPI.getOneRegister( id ).then( data => {
+    console.log ( data )
+    showCharacter ( data )
+    fetchOneInput.value = ''
+  })
+}
+
 function createOne ( data ){
   let character = {
     name: '',
@@ -12,29 +20,28 @@ function createOne ( data ){
     weapon: '',
     debt: false
   }
-
   serializedArrayToObject ( data, character )
-
   charactersAPI.createOneRegister( character ).then( result => {
     console.log( result )
     fetchAll ()
-  });
+  })
 }
 
 function modifyOne ( data ){
-  let character = {
-    
-  }
-
+  let character = {}
   serializedArrayToObject ( data, character)
-
-  console.log( data , character);
 
   charactersAPI.updateOneRegister ( character).then( result => {
     console.log (result)
     fetchAll ()
   })
+}
 
+function deleteOne ( id ){
+  charactersAPI.deleteOneRegister( id ).then( result => {
+    console.log( result )
+    fetchAll ()
+  })
 }
 
 function serializedArrayToObject ( array, object){
