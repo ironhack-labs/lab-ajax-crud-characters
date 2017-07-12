@@ -22,7 +22,7 @@ class APIHandler {
     $.ajax({
       method: 'POST',
       url: this.BASE_URL + "/characters",
-      data: character,
+      data: newCharacter,
     });
   }
 
