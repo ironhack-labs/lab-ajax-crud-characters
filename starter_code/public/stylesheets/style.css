@@ -65,7 +65,7 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 60%;
   margin: 10px;
   padding: 10px;
   text-align: left;
@@ -102,6 +102,6 @@ button {
   margin: 5px 0;
 }
 
-#send-data {
-  margin: 10px 0 0 120px;
+#send-new-data, #send-edit-data {
+  margin: 15px 0px 30px 0px;
 }

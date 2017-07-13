@@ -14,77 +14,82 @@
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="debt">Character Debt</div>
-        <div class="weapon">Character Weapon</div>
-      </div>
+
     </div>
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
       </div>
       <div class="operation">
-        <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
-        <button id="fetch-one">Fetch one</button>
-      </div>
-      <div class="operation delete">
-        <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
-        <button id="delete-one">Delete one</button>
+        <form>
+          <label for="character-id">Search by ID: </label>
+          <input type="text" name="character-id" id="character-id">
+
+          <button id="fetch-one">Fetch one</button>
+        </form>
       </div>
 
+      <form>
+        <div class="operation delete">
+          <form>
+            <label for="character-id-delete">Delete by ID: </label>
+            <input type="text" name="character-id-delete" id="character-id-delete">
+
+            <button id="delete-one">Delete one</button>
+          </form>
+        </div>
+      </form>
     </section>
   </section>
+
   <section class="container">
     <section class="form-container">
       <h2>New Character</h2>
       <form id="new-character-form" class="character-form">
         <div class="field">
-          <label for="name">Name: </label>
-          <input type="text" name="name">
+          <label for="new-name">Name: </label>
+          <input type="text" name="name" id="new-name">
         </div>
         <div class="field">
-          <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <label for="new-occupation">Occupation: </label>
+          <input type="text" name="occupation" id="new-occupation">
         </div>
         <div class="field">
-          <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <label for="new-weapon">Weapon: </label>
+          <input type="text" name="weapon" id="new-weapon">
         </div>
         <div class="field">
-          <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <label for="new-debt">Has debt: </label>
+          <input name="debt" type="checkbox" id="new-debt">
         </div>
-        <button id="send-data">Create</button>
+        <button id="send-new-data">Create</button>
       </form>
     </section>
+
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
-          <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <label for="edit-id">ID: </label>
+          <input type="text" name="chr-id" id="edit-id">
         </div>
         <div class="field">
-          <label for="name">Name: </label>
-          <input type="text" name="name">
+          <label for="edit-name">Name: </label>
+          <input type="text" name="name" id="edit-name">
         </div>
         <div class="field">
-          <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <label for="edit-occupation">Occupation: </label>
+          <input type="text" name="occupation" id="edit-occupation">
         </div>
         <div class="field">
-          <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <label for="edit-weapon">Weapon: </label>
+          <input type="text" name="weapon" id="edit-weapon">
         </div>
         <div class="field">
-          <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <label for="edit-debt">Has debt: </label>
+          <input name="debt" type="checkbox" id="edit-debt">
         </div>
-        <button id="send-data">Update</button>
+        <button id="send-edit-data">Update</button>
       </form>
     </section>
   </section>
