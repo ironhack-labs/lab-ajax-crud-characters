@@ -34,6 +34,14 @@ class APIHandler {
       url: `http://ih-api.herokuapp.com/characters/${characterId}`,
       success: function (response) {
         console.log(response);
+         $('.characters-container').empty();
+          $('.characters-container').append(`
+          <div class="character-info">
+          <div class="name">Name <span class="value">${response.name}</span></div>
+          <div class="occupation">Occupation <span class="value">${response.occupation}</span></div>
+          <div class="debt">Debt <span class="value">${response.debt}</span></div>
+          <div class="weapon">Weapon <span class="value">${response.weapon}</span></div>
+          </div>`);
       }, 
       error: function (err) {
         console.log(err);
@@ -64,10 +72,12 @@ class APIHandler {
       data: newCharacter,
       url: `http://ih-api.herokuapp.com/characters`,
       success: function (response) {
+        $('#send-data').css({"background-color":"green"})
         console.log(newCharacter);
         console.log("A new character has arrived!!");
       }, 
       error: function (err) {
+        $('#send-data').css({"background-color":"red"})
         console.log(err);
       }
     });
@@ -94,12 +104,11 @@ class APIHandler {
       data: updatedCharacter,
       url: `http://ih-api.herokuapp.com/characters/${updatedCharacter.id}`,
       success: function (response) {
-        console.log(response);
-        console.log(updatedCharacter);
-        console.log(updatedCharacter.id);
+        $('#up-send-data').css({"background-color":"green"})
         console.log("A new character has been updated");
       }, 
       error: function (err) {
+        $('#up-send-data').css({"background-color":"red"})
         console.log(err);
       }
     });
@@ -112,10 +121,13 @@ class APIHandler {
       method: "DELETE",
       url: `http://ih-api.herokuapp.com/characters/${characterId}`,
       success: function (response) {
+        $('#delete-one').css({"background-color":"green"})
         console.log("Se borro");
       }, 
       error: function (err) {
+        $('#delete-one').css({"background-color":"red"})
         console.log(err);
+        
       }
     });
   }
