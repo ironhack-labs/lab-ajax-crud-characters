@@ -9,6 +9,16 @@ class APIHandler {
       url: "http://ih-api.herokuapp.com/characters",
       success: function (response) {
         console.log(response);
+        $('.characters-container').empty();
+        response.forEach( (item) => {
+          $('.characters-container').append(`
+          <div class="character-info">
+          <div class="name">Name <span class="value">${item.name}</span></div>
+          <div class="occupation">Occupation <span class="value">${item.occupation}</span></div>
+          <div class="debt">Debt <span class="value">${item.debt}</span></div>
+          <div class="weapon">Weapon <span class="value">${item.weapon}</span></div>
+          </div>`);
+        });
       }, 
       error: function (err) {
         console.log(err);
