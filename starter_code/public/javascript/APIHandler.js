@@ -10,19 +10,19 @@ class APIHandler {
       success: function(response) {
         for (let i = 1; i < response.length; i++) {
           $('.characters-container').append($('.character-info').eq(0).clone());
-        }
-        $('.character-name').each(function(i) {
-          $(this).text(response[i].name);
-        });
-        $('.character-occupation').each(function(i) {
-          $(this).text(response[i].occupation);
-        });
-        $('.character-debt').each(function(i) {
-          $(this).text(response[i].debt);
-        });
-        $('.character-weapon').each(function(i) {
-          $(this).text(response[i].weapon);
-        });
+          }
+          $('.character-name').each(function(i) {
+            $(this).text(response[i].name);
+          });
+          $('.character-occupation').each(function(i) {
+            $(this).text(response[i].occupation);
+          });
+          $('.character-debt').each(function(i) {
+            $(this).text(response[i].debt);
+          });
+          $('.character-weapon').each(function(i) {
+            $(this).text(response[i].weapon);
+          });
       },
       error: function(err) {
         console.log(err);
@@ -31,20 +31,22 @@ class APIHandler {
   }
 
     getOneRegister() {
+      var id = $('#character-id').val();
       $.ajax({
-        url: 'http://ih-api.herokuapp.com/characters/:id',
+        url: 'http://ih-api.herokuapp.com/characters/' + id,
         method: 'GET',
         success: function(response) {
+          $('.character-info').not(':first').remove();
+          $('.character-name').text(response.name);
+          $('.character-occupation').text(response.occupation);
+          $('.character-debt').text(response.debt);
+          $('.character-weapon').text(response.weapon);
         },
         error: function(err) {
           console.log(err);
         }
       });
-      // Verb: GET, Route: "/characters/:id"
-      // It receives the character ID as a parameter (route)
-      // It returns the character with the indicated id
-      // It returns JSON
-    }
+  }
 
     createOneRegister() {
       // Verb: POST, Route: "/characters"
