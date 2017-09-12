@@ -4,15 +4,15 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return $.get(`${this.BASE_URL}/characters`)
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return $.get(`${this.BASE_URL}/id` + id)
   }
 
-  createOneRegister () {
-
+  createOneRegister (character) {
+    return $.post(`${this.BASE_URL}/characters`)
   }
 
   updateOneRegister () {
