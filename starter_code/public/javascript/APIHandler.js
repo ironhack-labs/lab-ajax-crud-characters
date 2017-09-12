@@ -31,7 +31,12 @@ class APIHandler {
   }
 
   createOneRegister() {
-    const characterInfo = { name: string, occupation: string, debt: boolean, weapon: string };
+    const characterInfo = {
+      name: $("#new-name").val(),
+      occupation: $("#new-occupation").val(),
+      debt: $("#new-debt").val(),
+      weapon: $("#new-weapon").val()
+    };
     $.ajax({
       url: "http://ih-api.herokuapp.com/characters",
       method: "POST",
@@ -48,7 +53,7 @@ class APIHandler {
   updateOneRegister() {
     $.ajax({
       url: "http://ih-api.herokuapp.com/characters/:id",
-      method: "GET",
+      method: "PUT",
       success: function(response) {
         console.log(response);
       },
@@ -59,9 +64,10 @@ class APIHandler {
   }
 
   deleteOneRegister() {
+    const characterId = $('#delete-one').prev('input').val();
     $.ajax({
-      url: "http://ih-api.herokuapp.com/characters/:id",
-      method: "GET",
+      url: `http://ih-api.herokuapp.com/characters/${characterId}`,
+      method: "DELETE",
       success: function(response) {
         console.log(response);
       },
@@ -70,4 +76,5 @@ class APIHandler {
       },
     });
   }
- }
+
+}
