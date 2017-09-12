@@ -16,6 +16,7 @@ $(document).ready( () => {
   });
 
   $('#edit-character-form').on('submit', (e) => {
+    event.preventDefault();
     apiHandler.updateOneRegister();
   });
 

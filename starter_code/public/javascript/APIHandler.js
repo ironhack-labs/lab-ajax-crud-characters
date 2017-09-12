@@ -51,18 +51,20 @@ class APIHandler {
   }
 
   updateOneRegister() {
+    const characterId = $("#edit-id").val();
+
     const characterInfo = {
-      name: $("#new-name").val(),
-      occupation: $("#new-occupation").val(),
-      debt: $("#new-debt").val(),
-      weapon: $("#new-weapon").val()
+      name: $("#edit-name").val(),
+      occupation: $("#edit-occupation").val(),
+      weapon: $("#edit-weapon").val()
     };
     $.ajax({
-      url: "http://ih-api.herokuapp.com/characters",
+      url: `http://ih-api.herokuapp.com/characters/${characterId}`,
       method: "PUT",
       data: characterInfo,
-      success: function(response) {
-        console.log(response);
+      success: (patchResponse) => {
+      console.log('Update SUCCESS!');
+      console.log(patchResponse);
       },
       error: function(err) {
         console.log(err);
