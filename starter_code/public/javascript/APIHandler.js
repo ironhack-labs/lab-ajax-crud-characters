@@ -40,6 +40,7 @@ class APIHandler {
         method: 'GET',
         success: function(response) {
           $('.character-info').not(':first').remove();
+          $('.character-id').text(response.id);
           $('.character-name').text(response.name);
           $('.character-occupation').text(response.occupation);
           $('.character-debt').text(response.debt);
@@ -107,11 +108,6 @@ class APIHandler {
     }
 
     deleteOneRegister() {
-      // Verb: DELETE, Route: "/characters/:id"
-      // It receives the character id as a parameter (route)
-      // It returns "Character has been successfully deleted" if there are no errors
-      // It returns "Character not found" if there is no character with the indicated id
-      // It returns text
         var id = $('#character-id-delete').val();
         $.ajax({
           url: 'http://ih-api.herokuapp.com/characters/' + id,

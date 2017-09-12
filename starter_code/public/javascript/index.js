@@ -2,14 +2,17 @@ const charactersAPI = new APIHandler("http://ih-api.herokuapp.com");
 
 $(document).ready( () => {
   $('#fetch-all').on('click', (e) => {
+    e.preventDefault();
     charactersAPI.getFullList();
   })
 
   $('#fetch-one').on('click', (e) => {
+    e.preventDefault();
     charactersAPI.getOneRegister()
   })
 
   $('#delete-one').on('click', (e) => {
+    e.preventDefault();
     charactersAPI.deleteOneRegister()
   })
 
