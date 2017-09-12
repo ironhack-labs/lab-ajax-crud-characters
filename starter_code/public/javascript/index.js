@@ -46,3 +46,10 @@ function getCharacter(response) {
 
     $('.characters-container').append(newHtml);
 }
+
+function getCharacters(response) {
+    $(".character-info").remove();
+    response.map((elem) => {
+      getCharacter(elem);
+    })
+}

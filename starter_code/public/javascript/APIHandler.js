@@ -8,9 +8,7 @@ class APIHandler {
       url: this.BASE_URL + "/characters",
       method: "GET",
       success: function (response) {
-        response.map((elem) => {
-          getCharacter(elem);
-        })
+        getCharacters(response);
         
       },
       error: function (err) {
@@ -80,7 +78,7 @@ class APIHandler {
   deleteOneRegister (id) {
     
     $.ajax({
-      url: this.BASE_URL +  "/characters" + id,
+      url: this.BASE_URL +  "/characters/" + id,
       method: "DELETE",
       success: function (response) {
         console.log(response);
@@ -88,7 +86,7 @@ class APIHandler {
       },
       error: function (err) {
         console.log(err);
-        $("#send-data-update").css("border-color", "red");
+        $("#delete-one").css("border-color", "red");
       },
     });
   }
