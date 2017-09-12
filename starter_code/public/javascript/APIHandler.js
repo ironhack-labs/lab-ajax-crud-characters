@@ -4,34 +4,33 @@ class APIHandler {
   }
 
   getFullList () {
-    $.ajax({
+    return $.ajax({
       url: this.BASE_URL + '/characters',
-      method: "GET",
-      success: (response) => console.log(response)
+      method: "GET"
     });
   }
 
   getOneRegister (id) {
-    $.ajax({
-      url: this.BASE_URL + '/characters/'+ id,
-      method: "GET",
-      success: (response) => console.log(response)
+    console.log(id);
+    return $.ajax({
+      url: this.BASE_URL + '/characters/' + id,
+      method: "GET"
     });
   }
 
-  createOneRegister () {
+  createOneRegister (user) {
     $.ajax({
       url: this.BASE_URL + '/characters',
-      method: "PUSH",
+      method: "POST",
+      data : user,
       success: (response) => console.log(response)
     });
   }
-
 
   updateOneRegister () {
     $.ajax({
       url: this.BASE_URL + '/characters/'+ id,
-      method: "PUSH",
+      method: "PATCH/PUT",
       success: (response) => console.log(response)
     });
   }
