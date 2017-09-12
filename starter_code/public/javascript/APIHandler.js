@@ -26,13 +26,22 @@ class APIHandler {
       error: function(error) {
         console.log("Character not found")
       }
-
-    //return $.put(`${this.BASE_URL}/characters`, character)
-
     });
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (characterId, character) {
+    $.ajax({
+      url: `${this.BASE_URL}/characters/${characterId}`,
+      method: 'PUT',
+      success: function(response) {
+         $('#delete-one').css('background','green');
+         console.log(response)
+      },
+      error: function(error) {
+        $('#delete-one').css('background','red');
+        console.log(error)
+      }
+    })
 
   }
 }

@@ -10,7 +10,27 @@ $(document).ready(() => {
     charactersAPI.getOneRegister(characterId).then(character => console.log(character))
   })
 
-  $('#delete-one').on('click', (e) => {})
+  $('#delete-one').on('click', (e) => {
+    const characterId = $("input[name='character-id-delete']").val()
+
+    charactersAPI.deleteOneRegister(characterId, function() {
+      $("#character-id-delete").empty(`${characterId}`)
+    })
+
+
+    console.log(characterId)
+
+
+    // function handleDeleteCharacter() {
+    //   const characterId = $(this).data('id');
+    //
+    //   deleteCharacterById(characterId, function (error, success) {
+    //     $(`[data-character-id="${characterId}"]`).remove();
+    //   })
+    //   delete charactersDict[characterId];
+    // }
+
+  })
 
   $('#edit-character-form').on('submit', (e) => {
     e.preventDefault()
@@ -26,8 +46,6 @@ $(document).ready(() => {
       weapon: $parent.children("input[name='weapon']").val(),
       debt: $parent.children("input[name='debt']").is(':checked')
     }
-    // const charId = $("#hola").val()
-    // console.log(charId)
 
     charactersAPI.updateOneRegister(character)
   });
