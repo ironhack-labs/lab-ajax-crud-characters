@@ -1,25 +1,71 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  getFullList() {
+    $.ajax({
+      url: "http://ih-api.herokuapp.com/characters",
+      method: "GET",
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(err) {
+        console.log(err);
+      },
+    });
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    const itemId = $('#fetch-one').prev('input').val();
+    $.ajax({
+      url: `http://ih-api.herokuapp.com/characters/${itemId}`,
+      method: "GET",
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(err) {
+        console.log(err);
+      },
+    });
   }
 
-  createOneRegister () {
-
+  createOneRegister() {
+    $.ajax({
+      url: "http://ih-api.herokuapp.com/characters",
+      method: "GET",
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(err) {
+        console.log(err);
+      },
+    });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister() {
+    $.ajax({
+      url: "http://ih-api.herokuapp.com/characters/:id",
+      method: "GET",
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(err) {
+        console.log(err);
+      },
+    });
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister() {
+    $.ajax({
+      url: "http://ih-api.herokuapp.com/characters/:id",
+      method: "GET",
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(err) {
+        console.log(err);
+      },
+    });
   }
 }
