@@ -1,5 +1,12 @@
 const charactersAPI = new APIHandler("http://ih-api.herokuapp.com")
 
+function showValues( p ){
+  $('.character-info .name').text(p.name)
+  $('.character-info .occupation').text(p.occupation)
+  $('.character-info .debt').text(p.debt)
+  $('.character-info .weapon').text(p.weapon)
+}
+
 $(document).ready( () => {
   $('#fetch-all').on('click', (e) => {
     charactersAPI.getFullList().then( p => { console.log(p) })
@@ -7,7 +14,11 @@ $(document).ready( () => {
 
   $('#fetch-one').on('click', (e) => {
     let characterId = $('#input-fetch-one').val()
-    charactersAPI.getOneRegister ( characterId ).then( p => { console.log(p) })
+    charactersAPI.getOneRegister ( characterId ).then( p => {
+      showValues(p)
+      console.log(p)
+    })
+
   })
 
   $('#delete-one').on('click', (e) => {
