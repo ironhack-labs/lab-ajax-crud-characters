@@ -13,6 +13,9 @@ class APIHandler {
       for (let i = 1; i < response.length; i++){
         $('.characters-container').append($('.character-info').eq(0).clone());
       }
+      $('.c-id').each(function(index){
+        $(this).text(response[index].id);
+      });
       $('.c-name').each(function(index){
         $(this).text(response[index].name);
       });
@@ -37,11 +40,21 @@ class APIHandler {
   }
 
   getOneRegister () {
+    var id = $('#char-id').val();
     $.ajax({
-    url: 'https://ih-api.herokuapp.com/characters',
+    url: 'https://ih-api.herokuapp.com/characters/' + id,
     method: "get",
     success: function(response) {
+
+      $('.character-info').not(':first').remove();
+
+      $('.c-id').text(response.id);
+      $('.c-name').text(response.name);
+      $('.c-occupation').text(response.occupation);
+      $('.c-debt').text(response.debt);
+      $('.c-weapon').text(response.weapon);
       console.log(response);
+
     },
     error: function (err) {
       console.log(err);
