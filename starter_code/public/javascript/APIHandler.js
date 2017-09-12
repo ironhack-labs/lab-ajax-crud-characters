@@ -7,8 +7,8 @@ class APIHandler {
     return $.get(`${this.BASE_URL}/characters`)
   }
 
-  getOneRegister (id) {
-    return $.get(`${this.BASE_URL}/id` + id)
+  getOneRegister (characterId) {
+    return $.get(`${this.BASE_URL}/characters/${characterId}`)
   }
 
   createOneRegister (character) {

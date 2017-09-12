@@ -6,7 +6,8 @@ $(document).ready( () => {
   })
 
   $('#fetch-one').on('click', (e) => {
-
+    const characterId = $("input[name='character-id']").val()
+    charactersAPI.getOneRegister(characterId).then(character => console.log(character))
   })
 
   $('#delete-one').on('click', (e) => {
