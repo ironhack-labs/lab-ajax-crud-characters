@@ -19,11 +19,10 @@ class APIHandler {
   }
 
   createOneRegister (user) {
-    $.ajax({
+    return $.ajax({
       url: this.BASE_URL + '/characters',
       method: "POST",
-      data : user,
-      success: (response) => console.log(response)
+      data : user
     });
   }
 

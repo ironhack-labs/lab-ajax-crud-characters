@@ -52,11 +52,26 @@ $(document).ready( () => {
       });
   });
 
-  $('#edit-character-form').on('submit', (e) => {
-
-  })
+  // $('#edit-character-form').on('submit', (e) => {
+  //
+  // })
 
   $('#new-character-form').on('submit', (e) => {
-
-  })
-})
+    const newName = $("#new-character-name").val();
+    const newOccupation = $("#new-character-occupation").val();
+    const newWeapon = $("#new-character-weapon").val();
+    const newDebt = $("#new-character-debt").val();
+    console.log(newName);
+    const user = {
+      name: newName,
+      occupation: newOccupation,
+      weapon: newWeapon,
+      debt: newDebt,
+    };
+    console.log(user);
+    charactersAPI.createOneRegister(user)
+      .then(user => {
+        console.log("añadido");
+      });
+  });
+});
