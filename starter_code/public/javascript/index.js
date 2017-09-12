@@ -11,7 +11,8 @@ $(document).ready(() => {
   });
 
   $('#delete-one').on('click', (e) => {
-
+    let posi = $('input:text[name = character-id-delete]').val();
+    charactersAPI.deleteOneRegister(posi);
   });
 
   $('#edit-character-form').on('submit', (e) => {
