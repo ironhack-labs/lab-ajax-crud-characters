@@ -10,7 +10,7 @@ $(document).ready( () => {
   })
 
   $('#delete-one').on('click', (e) => {
-    charactersAPI.createOneRegister()
+    charactersAPI.deleteOneRegister()
   })
 
   $('#edit-character-form').on('submit', (e) => {
@@ -18,6 +18,8 @@ $(document).ready( () => {
   })
 
   $('#new-character-form').on('submit', (e) => {
-    charactersAPI.deleteOneRegister()
+    e.preventDefault();
+    console.log("submitted");
+    charactersAPI.createOneRegister()
   })
 })

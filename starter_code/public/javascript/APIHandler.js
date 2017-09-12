@@ -49,12 +49,43 @@ class APIHandler {
   }
 
     createOneRegister() {
-      // Verb: POST, Route: "/characters"
-      // It receives an object as a parameter, with the following format: { name: string, occupation: string, debt: boolean, weapon: string }
-      // It returns the created character if there are no errors
-      // It returns the wrong fields if there is some error
-      // It returns JSON
-    }
+      const characterInfo = {
+        name:       $('#create-name').val(),
+        occupation: $('#create-occupation').val(),
+        weapon:     $('#create-weapon').val()
+      };
+        if ( $('#create-debt').is(':checked') ) {
+          characterInfo.debt = true;
+        }
+
+      $.ajax({
+        method:  'POST',
+        url:     'https://ih-api.herokuapp.com/characters',
+        data:    characterInfo,
+        success: function(response) {
+          console.log(response);
+          $('#send-data').addClass('success-button');
+        },
+        // error:   handleError
+      });
+  }
+
+
+  // showFeedback (postResponse) {
+  //     console.log(characterInfo);
+  //     const newCharacterHtml = `
+  //       <li>
+  //         <h3> ${postResponse.name} </h3>
+  //         <p> Id: ${postResponse.idation} </p>
+  //         <p> Occupation: ${postResponse.occupation} </p>
+  //         <p> Weapon: ${postResponse.weapon} </p>
+  //       </li>
+  //     `;
+  //
+  //     $('#characters-list').append(newCharacterHtml);
+  // }
+
+
 
     updateOneRegister() {
       // Verb: PATCH/PUT, Route: "/characters/:id"

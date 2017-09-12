@@ -32,6 +32,24 @@ button {
   overflow: hidden;
 }
 
+.success-button {
+  font-family: inherit;
+  font-size: 11px;
+  background: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 3px 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: non
+  e;
+  position: relative;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  color: green;
+  overflow: hidden;
+}
 .container {
   width: 70%;
   margin: 50px auto 0;
