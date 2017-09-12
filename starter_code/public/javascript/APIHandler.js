@@ -24,8 +24,7 @@ class APIHandler {
       url: `${this.BASE_URL}/characters`,
       dataType: 'JSON',
       method: 'POST',
-      success: showRegisterSuccess,
-      error: showRegisterError
+
     });
   }
 
@@ -34,8 +33,6 @@ class APIHandler {
       url: `${this.BASE_URL}/characters/:id`,
       dataType: 'JSON',
       method: 'PATCH',
-      success: showUpdateSuccess,
-      error: showUpdateError
     });
   }
 
@@ -44,8 +41,6 @@ class APIHandler {
       url: `${this.BASE_URL}/characters/:id`,
       dataType: text,
       method: 'DELETE',
-      success: showDeleteSuccess,
-      error: showDeleteError
     });
   }
 }
