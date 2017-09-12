@@ -25,7 +25,9 @@ class APIHandler {
 
   }
 
-  deleteOneRegister () {
-
-  }
+  deleteOneRegister (id) {
+      return $.ajax({
+      method: 'DELETE',
+      url: (`${this.BASE_URL}/characters/${id}`)
+  })}
 }

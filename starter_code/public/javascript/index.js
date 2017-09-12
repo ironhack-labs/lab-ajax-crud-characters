@@ -11,6 +11,8 @@ $(document).ready( () => {
   })
 
   $('#delete-one').on('click', (e) => {
+    let deletPosi = $('input:text[name = character-id-delete]').val()
+      charactersAPI.deleteOneRegister(deletPosi)
 
   })
 
@@ -26,6 +28,5 @@ $(document).ready( () => {
     weapon: $('input:text[name = weapon]').val()
   }
     charactersAPI.createOneRegister(nuevo)
-    // .then(p => {console.log(p);})
   })
 })
