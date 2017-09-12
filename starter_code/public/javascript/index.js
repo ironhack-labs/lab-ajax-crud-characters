@@ -19,6 +19,13 @@ $(document).ready( () => {
   })
 
   $('#new-character-form').on('submit', (e) => {
-
+    event.preventDefault()
+    let nuevo ={
+    name: $('input:text[name = name]').val(),
+    occupation: $('input:text[name = occupation]').val(),
+    weapon: $('input:text[name = weapon]').val()
+  }
+    charactersAPI.createOneRegister(nuevo)
+    // .then(p => {console.log(p);})
   })
 })
