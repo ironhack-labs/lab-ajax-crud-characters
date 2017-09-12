@@ -22,27 +22,25 @@ $(document).ready( () => {
 
   $('#new-character-form').on('submit', (e) => {
     e.preventDefault()
-    const $parent = $("#new-character-form").children("div")
     const character = {
-      name:       $parent.children("input[name='name']").val(),
-      occupation: $parent.children("input[name='occupation']").val(),
-      weapon:     $parent.children("input[name='weapon']").val(),
-      debt:       $parent.children("input[name='debt']").is(':checked')
+      name:       $("#new-character-form input[name='name']").val(),
+      occupation: $("#new-character-form input[name='occupation']").val(),
+      weapon:     $("#new-character-form input[name='weapon']").val(),
+      debt:       $("#new-character-form input[name='debt']").is(':checked')
     }
     charactersAPI.createOneRegister(character)
-      .then(() => console.log('¡Character created!'))
+      .then(() => {fetchAll(); console.log('¡Character created!')})
       .catch(err => console.log(err))
   })
 
   $('#edit-character-form').on('submit', (e) => {
     e.preventDefault()
-    const $parent = $("#edit-character-form").children("div")
     const character = {
-      id :        $parent.children("input[name='chr-id']").val(),
-      name:       $parent.children("input[name='name']").val(),
-      occupation: $parent.children("input[name='occupation']").val(),
-      weapon:     $parent.children("input[name='weapon']").val(),
-      debt:       $parent.children("input[name='debt']").is(':checked')
+      id :        $("#edit-character-form input[name='chr-id']").val(),
+      name:       $("#edit-character-form input[name='name']").val(),
+      occupation: $("#edit-character-form input[name='occupation']").val(),
+      weapon:     $("#edit-character-form input[name='weapon']").val(),
+      debt:       $("#edit-character-form input[name='debt']").is(':checked')
     }
     charactersAPI.updateOneRegister(character)
       .then(() => console.log('¡Character edited!'))
