@@ -12,7 +12,13 @@ class APIHandler {
     return $.get(`${this.BASE_URL}/characters/`, + id);
   }
 
-  createOneRegister () {
+  createOneRegister (nuevo) {
+    return $.post(`${this.BASE_URL}/characters`, {
+      name: nuevo.name,
+      occupation: nuevo.occupation,
+      debt: nuevo.debt,
+      weapon: nuevo.weapon
+    });
 
   }
 

@@ -1,6 +1,6 @@
 const charactersAPI = new APIHandler("http://ih-api.herokuapp.com");
 
-$(document).ready( () => {
+$(document).ready(() => {
   $('#fetch-all').on('click', (e) => {
     charactersAPI.getFullList().then(p => console.log(p));
   });
@@ -19,6 +19,12 @@ $(document).ready( () => {
   });
 
   $('#new-character-form').on('submit', (e) => {
-
+    event.preventDefault();
+    let nuevo = {
+      name: $('input:text[name = name]').val(),
+      occupation: $('input:text[name = occupation]').val(),
+      weapon: $('input:text[name = weapon]').val(),
+    };
+    charactersAPI.createOneRegister(nuevo);
   });
 });
