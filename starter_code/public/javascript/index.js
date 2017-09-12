@@ -44,8 +44,13 @@ $(document).ready( () => {
   });
 
   $('#delete-one').on('click', (e) => {
-
-  })
+    const deleteId = $("input[name='character-id-delete']").val();
+    console.log(deleteId);
+    charactersAPI.deleteOneRegister(deleteId)
+      .then(user =>{
+        console.log("borrado");
+      });
+  });
 
   $('#edit-character-form').on('submit', (e) => {
 

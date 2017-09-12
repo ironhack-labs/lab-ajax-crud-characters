@@ -35,11 +35,11 @@ class APIHandler {
     });
   }
 
-  deleteOneRegister () {
-    $.ajax({
+  deleteOneRegister (id) {
+    console.log(id);
+    return $.ajax({
       url: this.BASE_URL + '/characters/'+ id,
       method: "DELETE",
-      success: (response) => console.log(response)
     });
   }
 }
