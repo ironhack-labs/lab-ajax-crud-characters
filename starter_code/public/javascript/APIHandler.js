@@ -3,12 +3,13 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
+
   getFullList () {
+    return $.get(`${this.BASE_URL}/characters`);
+}
 
-  }
-
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return $.get(`${this.BASE_URL}/characters/`, + id);
   }
 
   createOneRegister () {
