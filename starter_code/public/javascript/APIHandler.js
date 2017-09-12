@@ -16,10 +16,10 @@ class APIHandler {
     });
   }
 
-  getOneRegister(id) {
-    const itemId = $('#fetch-one').prev('input').val();
+  getOneRegister() {
+    const characterId = $('#fetch-one').prev('input').val();
     $.ajax({
-      url: `http://ih-api.herokuapp.com/characters/${itemId}`,
+      url: `http://ih-api.herokuapp.com/characters/${characterId}`,
       method: "GET",
       success: function(response) {
         console.log(response);
@@ -31,9 +31,11 @@ class APIHandler {
   }
 
   createOneRegister() {
+    const characterInfo = { name: string, occupation: string, debt: boolean, weapon: string };
     $.ajax({
       url: "http://ih-api.herokuapp.com/characters",
-      method: "GET",
+      method: "POST",
+      data: characterInfo,
       success: function(response) {
         console.log(response);
       },
@@ -68,4 +70,4 @@ class APIHandler {
       },
     });
   }
-}
+ }
