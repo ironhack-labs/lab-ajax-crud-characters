@@ -19,8 +19,16 @@ $(document).ready( () => {
   })
 
   $('#new-character-form').on('submit', (e) => {
+    event.preventDefault();
+
+    const $parent = $("#new-character-form").children("div")
+
     let character = {
-      name: $('.name')
+      name: $parent.children("input[name='name']").val(),
+      occupation: $parent.children("input[name='occupation']").val(),
+      weapon: $parent.children("input[name='weapon']").val(),
+      debt: $parent.children("input[name='debt']").is(':checked')
     }
+    charactersAPI.createOneRegister(character).then(character => console.log(character))
   })
 })

@@ -9,10 +9,10 @@ class APIHandler {
 
   getOneRegister (characterId) {
     return $.get(`${this.BASE_URL}/characters/${characterId}`)
-  }
+   }
 
   createOneRegister (character) {
-    return $.post(`${this.BASE_URL}/characters`)
+    return $.post(`${this.BASE_URL}/characters`, character)
   }
 
   updateOneRegister () {
