@@ -11,6 +11,9 @@ class APIHandler {
         for (let i = 1; i < response.length; i++) {
           $('.characters-container').append($('.character-info').eq(0).clone());
           }
+          $('.character-id').each(function(i) {
+            $(this).text(response[i].id);
+          });
           $('.character-name').each(function(i) {
             $(this).text(response[i].name);
           });
@@ -94,9 +97,11 @@ class APIHandler {
           success: (patchResponse) => {
             console.log('Update SUCCESS!');
             console.log(patchResponse);
+            $('#update-data').addClass('success-button');
           },
           error: function(err) {
             console.log(err);
+            $('#update-data').addClass('fail-button');
         }
       })
     }
