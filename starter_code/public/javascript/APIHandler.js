@@ -4,22 +4,34 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return $.get(`${this.BASE_URL}/characters`)
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return $.get(`${this.BASE_URL}/characters/${id}`)
   }
 
-  createOneRegister () {
-
+  createOneRegister ( character ) {
+    return $.post(`${this.BASE_URL}/characters`,{
+      name: character.name,
+      occupation: character.occupation,
+      debt: character.debt,
+      weapon: character.weapon
+    })
   }
 
-  updateOneRegister () {
-
+  updateOneRegister ( character, id) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`,
+      method: 'PUT',
+      data: character,
+    });
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`,
+      method: 'DELETE',
+    })
   }
 }
