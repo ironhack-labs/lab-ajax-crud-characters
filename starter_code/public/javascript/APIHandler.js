@@ -63,6 +63,30 @@ class APIHandler {
   }
 
   createOneRegister () {
+    const characterInfo = {
+    name: $('#the-name-input').val(),
+    occupation: $('#the-occupation-input').val(),
+    weapon: $('#the-weapon-input').val(),
+
+    };
+    if ( $('#the-debt-input').is(':checked') ) {
+      characterInfo.debt = true;
+    }
+
+
+    $.ajax({
+      url: 'https://ih-api.herokuapp.com/characters/',
+      method: "post",
+      data: characterInfo,
+      success: function(response) {
+        console.log(response);
+
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    });
+
 
   }
 
