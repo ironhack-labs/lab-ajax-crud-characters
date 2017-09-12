@@ -66,35 +66,39 @@ class APIHandler {
           console.log(response);
           $('#send-data').addClass('success-button');
         },
-        // error:   handleError
+        error: function(err) {
+          console.log(err);
+          $('#send-data').addClass('fail-button');
+        }
       });
   }
 
 
-  // showFeedback (postResponse) {
-  //     console.log(characterInfo);
-  //     const newCharacterHtml = `
-  //       <li>
-  //         <h3> ${postResponse.name} </h3>
-  //         <p> Id: ${postResponse.idation} </p>
-  //         <p> Occupation: ${postResponse.occupation} </p>
-  //         <p> Weapon: ${postResponse.weapon} </p>
-  //       </li>
-  //     `;
-  //
-  //     $('#characters-list').append(newCharacterHtml);
-  // }
-
-
-
     updateOneRegister() {
-      // Verb: PATCH/PUT, Route: "/characters/:id"
-      // It receives the character id as a parameter (route)
-      // It receives an object as a parameter, with the following format: { name: string, occupation: string, debt: boolean, weapon: string }
-      // All the fields are optionals
-      // It returns the updated character if there are no errors
-      // It returns "Character not found" if there is no character with the indicated id
-      // It returns JSON / text
+        const updateInfo = {
+          name: $('#update-name-input').val(),
+          occupation: $('#update-occupation-input').val(),
+          weapon: $('#update-weapon-input').val()
+        };
+        if ( $('#update-debt-input').is(':checked') ) {
+          updateInfo.debt = true;
+        }
+
+        // The character ID that we will plug into the API's URL
+        const charId = $('#character-id-input').val();
+
+        $.ajax({
+          method: 'PUT',
+          url: `https://ih-api.herokuapp.com/characters/${charId}`,
+          data: updateInfo,
+          success: (patchResponse) => {
+            console.log('Update SUCCESS!');
+            console.log(patchResponse);
+          },
+          error: function(err) {
+            console.log(err);
+        }
+      })
     }
 
     deleteOneRegister() {
@@ -103,5 +107,18 @@ class APIHandler {
       // It returns "Character has been successfully deleted" if there are no errors
       // It returns "Character not found" if there is no character with the indicated id
       // It returns text
+        var id = $('#character-id-delete').val();
+        $.ajax({
+          url: 'http://ih-api.herokuapp.com/characters/' + id,
+          method: 'DELETE',
+          success: function(response) {
+            $('.character-info').remove();
+            console.log("Character has been successfully deleted")
+          },
+          error: function(err) {
+            console.log("Character not found" + id);
+          }
+        });
+
     }
   }
