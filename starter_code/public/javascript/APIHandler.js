@@ -4,7 +4,18 @@ class APIHandler {
   }
 
   getFullList () {
-
+    $.ajax({
+    url: "ih-api.herokuapp.com/characters",
+    method: "GET",
+    success: function (response) {
+    console.log(response);
+    var obj = jQuery.parseJSON( response );
+    console.log(obj);
+    },
+    error: function (err) {
+      console.log(err);
+    },
+    });
   }
 
   getOneRegister () {
