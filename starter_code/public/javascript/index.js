@@ -2,7 +2,7 @@ const charactersAPI = new APIHandler("http://ih-api.herokuapp.com")
 
 $(document).ready( () => {
   $('#fetch-all').on('click', (e) => {
-
+    
   })
 
   $('#fetch-one').on('click', (e) => {
