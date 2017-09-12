@@ -1,13 +1,13 @@
 class APIHandler {
   constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+    this.BASE_URL = baseUrl
   }
 
   getFullList () {
-
+    return $.get(`${this.BASE_URL}/characters`)
   }
 
-  getOneRegister () {
+  getOneRegister (id) {
 
   }
 
@@ -15,11 +15,11 @@ class APIHandler {
 
   }
 
-  updateOneRegister () {
+  updateOneRegister (id) {
 
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {
 
   }
 }
