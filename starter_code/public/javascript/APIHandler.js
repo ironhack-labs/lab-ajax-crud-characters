@@ -15,8 +15,21 @@ class APIHandler {
     return $.post(`${this.BASE_URL}/characters`, character)
   }
 
-  updateOneRegister () {
+  updateOneRegister (character) {
+    $.ajax({
+      url: `${this.BASE_URL}/characters/${character.id}`,
+      type: 'PUT',
+      data: character,
+      success: function(result) {
+          return character
+      },
+      error: function(error) {
+        console.log("Character not found")
+      }
 
+    //return $.put(`${this.BASE_URL}/characters`, character)
+
+    });
   }
 
   deleteOneRegister () {
