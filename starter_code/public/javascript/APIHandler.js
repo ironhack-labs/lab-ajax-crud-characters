@@ -67,10 +67,12 @@ class APIHandler {
       success: function (response) {
         console.log(response);
         $("#send-data-update").css("border-color", "green");
+        setTimeout(()=> {$("#send-data-update").css("border-color", "white");}, 1000);
       },
       error: function (err) {
         console.log(err);
         $("#send-data-update").css("border-color", "red");
+        setTimeout(()=> {$("#send-data-update").css("border-color", "white");}, 1000);
       },
     });
   }
@@ -83,10 +85,12 @@ class APIHandler {
       success: function (response) {
         console.log(response);
         $("#delete-one").css("border-color", "green");
+        setTimeout(()=> {$("#delete-one").css("border-color", "white");}, 1000);
       },
       error: function (err) {
         console.log(err);
         $("#delete-one").css("border-color", "red");
+        setTimeout(()=> {$("#delete-one").css("border-color", "white");}, 1000);
       },
     });
   }
