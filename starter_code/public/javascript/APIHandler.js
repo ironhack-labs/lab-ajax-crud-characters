@@ -11,7 +11,6 @@ class APIHandler {
   }
 
   getOneRegister (id) {
-    console.log(id);
     return $.ajax({
       url: this.BASE_URL + '/characters/' + id,
       method: "GET"
@@ -27,7 +26,6 @@ class APIHandler {
   }
 
   updateOneRegister (user) {
-    console.log(user.id);
     return $.ajax({
       url: this.BASE_URL + '/characters/'+ user.id,
       method: "PUT",
@@ -38,7 +36,6 @@ class APIHandler {
   }
 
   deleteOneRegister (id) {
-    console.log(id);
     return $.ajax({
       url: this.BASE_URL + '/characters/'+ id,
       method: "DELETE",
