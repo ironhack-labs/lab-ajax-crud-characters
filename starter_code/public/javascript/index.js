@@ -11,7 +11,8 @@ $(document).ready( () => {
   $('#fetch-one').on('click', (e) => {
     $('.characters-container').empty()
     charactersAPI.getOneRegister(characterId)
-      .then((character) => $('section.operations').prepend(displayCharacter(character)))
+      .then((character) => $('section.operations')
+        .prepend(displayCharacter(character)))
       .catch((err) => console.log(err))
   })
 
