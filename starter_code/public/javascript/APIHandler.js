@@ -80,19 +80,46 @@ class APIHandler {
       data: characterInfo,
       success: function(response) {
         console.log(response);
-
+        $('#send-data').toggleClass('button-yes');
       },
       error: function (err) {
         console.log(err);
       },
     });
 
+    $('#send-data').toggleClass('button-yes');
 
   }
 
   updateOneRegister () {
 
+    const updateInfo = {
+      name: $('#update-name-input').val(),
+      occupation: $('#update-occupation-input').val(),
+      weapon: $('#update-weapon-input').val()
+    };
+    if ( $('#the-debt-input').is(':checked') ) {
+      updateInfo.debt = true;
+    }
+
+    const charId = $('#character-id-input').val();
+
+    $.ajax({
+      method: 'PATCH',
+      url: `https://ih-api.herokuapp.com/characters/${charId}`,
+      data: updateInfo,
+      success: (patchResponse) => {
+        console.log('Update SUCCESS!');
+        console.log(patchResponse);
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    });
+
   }
+
+
 
   deleteOneRegister () {
 
