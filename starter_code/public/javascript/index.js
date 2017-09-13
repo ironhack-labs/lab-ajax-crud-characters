@@ -52,23 +52,42 @@ $(document).ready( () => {
       });
   });
 
-  // $('#edit-character-form').on('submit', (e) => {
-  //
-  // })
+  $('#edit-character-form').on('submit', (e) => {
+    event.preventDefault();
+    const idEdit = $("#idEdit").val();
+    const nameEdit = $("#nameEdit").val();
+    const occupationEdit = $("#occupationEdit").val();
+    const weaponEdit = $("#weaponEdit").val();
+    const debtEdit = $("#debtEdit").val();
+    const user = {
+      id: idEdit,
+      name: nameEdit,
+      occupation: occupationEdit,
+      weapon: weaponEdit,
+      debt:debtEdit,
+    };
+    console.log(user);
+    charactersAPI.updateOneRegister(user)
+      .then(user => {
+        console.log("cambiado");
+      })
+      .catch(user =>{
+        console.log("error");
+      });
+  });
 
   $('#new-character-form').on('submit', (e) => {
+    event.preventDefault();
     const newName = $("#new-character-name").val();
     const newOccupation = $("#new-character-occupation").val();
     const newWeapon = $("#new-character-weapon").val();
     const newDebt = $("#new-character-debt").val();
-    console.log(newName);
     const user = {
       name: newName,
       occupation: newOccupation,
       weapon: newWeapon,
       debt: newDebt,
     };
-    console.log(user);
     charactersAPI.createOneRegister(user)
       .then(user => {
         console.log("añadido");

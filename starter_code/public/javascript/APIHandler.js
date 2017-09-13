@@ -26,11 +26,14 @@ class APIHandler {
     });
   }
 
-  updateOneRegister () {
-    $.ajax({
-      url: this.BASE_URL + '/characters/'+ id,
-      method: "PATCH/PUT",
-      success: (response) => console.log(response)
+  updateOneRegister (user) {
+    console.log(user.id);
+    return $.ajax({
+      url: this.BASE_URL + '/characters/'+ user.id,
+      method: "PUT",
+      data : user,
+      success: console.log("bien"),
+      error: console.log("mal")
     });
   }
 
