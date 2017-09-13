@@ -15,11 +15,11 @@
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
       <div class="character-info">
-        <div class="id">Character Id<span class='c-id'></span></div>
-        <div class="name">Character Name<span class='c-name'></span></div>
-        <div class="occupation">Character Occupation<span class='c-occupation'></span></div>
+        <div class="id">Character Id<span class='c-id' class="thedata"></span></div>
+        <div class="name">Character Name<span class='c-name' class="thedata"></span></div>
+        <div class="occupation">Character Occupation<span class='c-occupation' class="thedata"></span></div>
         <div class="debt">Character Debt<span class='c-dept'></span></div>
-        <div class="weapon">Character Weapon<span class='c-weapon'></span></div>
+        <div class="weapon">Character Weapon<span class='c-weapon' class="thedata"></span></div>
       </div>
     </div>
     <section class="operations">
@@ -33,7 +33,7 @@
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -85,7 +85,7 @@
           <label for="debt">Has debt: </label>
           <input name="debt" type="checkbox" id="update-id-input">
         </div>
-        <button id="send-data">Update</button>
+        <button id="update-one">Update</button>
       </form>
     </section>
   </section>

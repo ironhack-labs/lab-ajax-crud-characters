@@ -87,8 +87,6 @@ class APIHandler {
       },
     });
 
-    $('#send-data').toggleClass('button-yes');
-
   }
 
   updateOneRegister () {
@@ -105,15 +103,17 @@ class APIHandler {
     const charId = $('#character-id-input').val();
 
     $.ajax({
-      method: 'PATCH',
+      method: 'patch',
       url: `https://ih-api.herokuapp.com/characters/${charId}`,
       data: updateInfo,
       success: (patchResponse) => {
         console.log('Update SUCCESS!');
         console.log(patchResponse);
+        $('#update-one').toggleClass('button-yes');
       },
       error: function (err) {
         console.log(err);
+        $('#update-one').toggleClass('button-no');
       },
     });
 
@@ -122,6 +122,21 @@ class APIHandler {
 
 
   deleteOneRegister () {
+    var id = $('#character-id-delete').val();
 
+    $.ajax({
+      method: 'delete',
+      url: 'https://ih-api.herokuapp.com/characters/' + id,
+      success: (response) => {
+        $('.character-info').remove();
+        console.log('Deleted!');
+        console.log(response);
+        $('#delete-one').toggleClass('button-yes');
+      },
+      error: function (err) {
+        console.log(err);
+        $('#delete-one').toggleClass('button-no');
+      },
+    });
   }
 }
