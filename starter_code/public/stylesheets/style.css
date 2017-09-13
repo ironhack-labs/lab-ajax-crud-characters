@@ -32,6 +32,14 @@ button {
   overflow: hidden;
 }
 
+.button-yes {
+  background-color: green;
+}
+
+.button-no {
+  background-color: red;
+}
+
 .container {
   width: 70%;
   margin: 50px auto 0;
@@ -78,6 +86,7 @@ button {
   position: absolute;
   left: 50%;
 }
+
 
 .form-container {
   display: inline-block;
