@@ -4,22 +4,45 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return $.ajax({
+      url: `${this.BASE_URL}/characters`,
+      dataType: 'JSON',
+      method: 'GET'
+    })
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`,
+      dataType: 'JSON',
+      data: id,
+      method: 'GET'
+    })
   }
 
-  createOneRegister () {
-
+  createOneRegister (character) {
+    return $.ajax({
+      url: `${this.BASE_URL}/characters`,
+      data: character,
+      method: 'POST'
+    })
   }
 
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
-  }
+  // updateOneRegister (character) {
+  //   return $.ajax({
+  //     url: `${this.BASE_URL}/characters/${id}`,
+  //     dataType: 'JSON',
+  //     data: character,
+  //     method: 'PATCH'
+  //   })
+  //
+  // }
+  //
+  // deleteOneRegister () {
+  //   return $.ajax({
+  //     url: `${this.BASE_URL}/characters/${id}`,
+  //     dataType: 'text',
+  //     method: 'DELETE'
+  //   })
+  // }
 }
