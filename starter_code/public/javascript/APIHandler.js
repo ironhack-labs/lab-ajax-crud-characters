@@ -21,8 +21,12 @@ class APIHandler {
       })
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (data) {
+    return $.ajax({
+    method: 'PATCH',
+    url: `${this.BASE_URL}/characters/${data.id}`,
+    data: data
+  })
   }
 
   deleteOneRegister (id) {
