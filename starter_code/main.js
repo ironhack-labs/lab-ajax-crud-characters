@@ -88,15 +88,26 @@ $("#new-character-form").submit((event)=>{
 
 
 
-$("#update-character-form").submit((event)=>{
+$("#edit-character-form").submit((event)=>{
   event.preventDefault();
-  const updateCharacter = {
-
-
-
-  }
-
-
+  const characterToUpdate = $("#edit-character-form input[name='chr-id']").val();
+  const editCharacter = {
+    name: $("#edit-character-form input[name='name']").val(),
+    occupation: $("#edit-character-form input[name='occupation']").val(),
+    weapon: $("#edit-character-form input[name='weapon']").val(),
+    debt: $("#edit-character-form input[name='debt']").val()
+  };
+    $.ajax({
+      url: `https://ih-api.herokuapp.com/characters/${characterToUpdate}`,
+      method: "PATCH",
+      data: editCharacter,
+      success: (res) => {
+        console.log("update response ",res);
+      },
+      error: (err) => {
+        console.log(err, "character not found");
+      }
+    })
 })
   //
   // Verb: POST, Route: "/characters"
