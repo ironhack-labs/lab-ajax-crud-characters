@@ -14,12 +14,6 @@
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="debt">Character Debt</div>
-        <div class="weapon">Character Weapon</div>
-      </div>
     </div>
     <section class="operations">
       <div class="operation">
@@ -44,19 +38,19 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="newName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="newOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="newWeapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="newDebt" type="checkbox">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -84,7 +78,7 @@
           <label for="debt">Has debt: </label>
           <input name="debt" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="edit-data">Update</button>
       </form>
     </section>
   </section>
