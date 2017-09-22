@@ -102,6 +102,6 @@ button {
   margin: 5px 0;
 }
 
-#send-data {
+.submit-button {
   margin: 10px 0 0 120px;
 }
