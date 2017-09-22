@@ -27,6 +27,8 @@ console.log("ready");
 
   $("#fetch-one").click(() => {
     console.log("featch one");
+
+
     const searchedId = $("#character-id").val();
 
     $.ajax({
@@ -34,10 +36,12 @@ console.log("ready");
       method: "GET",
       success: (res) => {
         console.log(res);
-        $(".character-info .name").append(res.name);
-        $(".character-info .occupation").append(res.occupation);
-        $(".character-info .weapon").append(res.weapon);
-        $(".character-info .debt").append(res.debt);
+        const traitArray = ["name", "occupation", "weapon", "debt"];
+        const resArray = [res.name, res.occupation, res.weapon, res.debt];
+        for (let i = 0; i < traitArray.length; i++) {
+              $(`.character-info .${traitArray[i]}`).empty();
+              $(`.character-info .${traitArray[i]}`).append(`${traitArray[i].toUpperCase()}: ${resArray[i]}`);
+        }
       },
       error: (err) => {
         console.log(err);
@@ -109,50 +113,5 @@ $("#edit-character-form").submit((event)=>{
       }
     })
 })
-  //
-  // Verb: POST, Route: "/characters"
-  // It receives an object as a parameter, with the following format: { name: string, occupation: string, debt: boolean, weapon: string }
-  // It returns the created character if there are no errors
-  // It returns the wrong fields if there is some error
-  // It returns JSON
-  //
-  //
-  //
-  //
-  //
-  // Verb: PATCH/PUT, Route: "/characters/:id"
-  // It receives the character id as a parameter (route)
-  // It receives an object as a parameter, with the following format: { name: string, occupation: string, debt: boolean, weapon: string }
-  // All the fields are optionals
-  // It returns the updated character if there are no errors
-  // It returns "Character not found" if there is no character with the indicated id
-  // It returns JSON / text
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}); //end document ready
-// <
-// div class = "characters-container" >
-//   <
-//   div class = "character-info" >
-//   <
-//   div class = "name" > Character Name < /div> <
-//   div class = "occupation" > Character Occupation < /div> <
-//   div class = "debt" > Character Debt < /div> <
-//   div class = "weapon" > Character Weapon < /div> <
-//   /div>
+});
