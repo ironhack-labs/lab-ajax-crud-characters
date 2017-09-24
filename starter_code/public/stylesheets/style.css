@@ -53,6 +53,9 @@ button {
 .active {
   background-color: #42f471;
 }
+.failed{
+  background-color: red;
+}
 
 .operations {
   margin: 0 auto;
@@ -102,6 +105,6 @@ button {
   margin: 5px 0;
 }
 
-.submit-button {
+#send-data {
   margin: 10px 0 0 120px;
 }

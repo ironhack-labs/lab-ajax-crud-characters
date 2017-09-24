@@ -1,23 +1,41 @@
-const charactersAPI = new APIHandler("http://ih-api.herokuapp.com")
+const charactersAPI = new api("http://ih-api.herokuapp.com");
 
-$(document).ready( () => {
-  $('#fetch-all').on('click', (e) => {
+$(document).ready(() => {
+  $("#fetch-all").on("click", e => {
+    charactersAPI.getFullList();
+  });
 
-  })
+  $("#fetch-one").on("click", e => {
+    charactersAPI.getOne();
+  });
 
-  $('#fetch-one').on('click', (e) => {
+  $("#delete-one").on("click", e => {
+    charactersAPI.deleteOne();
+  });
 
-  })
+  $("#edit-character-form").on("submit", e => {
+    e.preventDefault();
 
-  $('#delete-one').on('click', (e) => {
+    const updateCharacterInfo = {
+      name: $("input[name=name]").val(),
+      occupation: $("input[name=occupation]").val(),
+      weapon: $("input[name=weapon]").val(),
+      debt: $("input[name=debt]").is(":checked")
+    };
 
-  })
+    charactersAPI.updateOne(updateCharacterInfo);
+  });
 
-  $('#edit-character-form').on('submit', (e) => {
+  $("#new-character-form").on("submit", e => {
+    e.preventDefault();
 
-  })
+    const newCharacterInfo = {
+      name: $("input[name=newName]").val(),
+      occupation: $("input[name=newOccupation]").val(),
+      weapon: $("input[name=newWeapon]").val(),
+      debt: $("input[name=newDebt]").is(":checked")
+    };
 
-  $('#new-character-form').on('submit', (e) => {
-
-  })
-})
+    charactersAPI.createOne(newCharacterInfo);
+  });
+});
