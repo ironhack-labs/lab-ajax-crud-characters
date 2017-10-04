@@ -25,10 +25,10 @@ $(document).ready( () => {
 		e.preventDefault();
 		const id = $('#chr-id').val();
 		const data = {
-			name: $('#name-new').val(),
-			occupation: $('#occupation-new').val(),
-			debt: $("#debt-new").is(":checked"),
-			weapon: $("#weapon-new").val(),
+			name: $('#name-edit').val(),
+			occupation: $('#occupation-edit').val(),
+			debt: $("#debt-edit").is(":checked"),
+			weapon: $("#weapon-edit").val(),
 		}
 		charactersAPI.updateOneRegister(id, data, appendCharacter);
 
