@@ -56,8 +56,8 @@ $(document).ready(() => {
 
     charactersAPI
       .updateOneRegister(id, name, occupation, debt, weapon)
-      .then(() => $(".submit-button").css("color", "green"))
-      .catch(() => $(".submit-button").css("color", "red"));
+      .then(() => $(".submit-button-update").css("color", "green"))
+      .catch(() => $(".submit-button-update").css("color", "red"));
   });
 
   $("#new-character-form").on("submit", e => {
@@ -67,6 +67,9 @@ $(document).ready(() => {
     const debt = $("#character-debt").val();
     const weapon = $("#character-weapon").val();
     console.log({ name, occupation, debt, weapon });
-    charactersAPI.createOneRegister(name, occupation, debt, weapon);
+    charactersAPI
+      .createOneRegister(name, occupation, debt, weapon)
+      .then(() => $(".submit-button-creation").css("background-color", "green"))
+      .catch(() => $(".submit-button-creation").css("background-color", "red"));
   });
 });
