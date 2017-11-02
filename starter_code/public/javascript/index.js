@@ -13,11 +13,11 @@ $(document).ready( () => {
         
   }
   
-  document.getElementById('edit-character-form').onclick = function(){
+  document.getElementById('edit-character-form').onsubmit = function(){
             
   }
   
-  document.getElementById('new-character-form').onclick = function(){
+  document.getElementById('new-character-form').onsubmit = function(){
                 
   }
 })
