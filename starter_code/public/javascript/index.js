@@ -1,23 +1,23 @@
 const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com")
 
 $(document).ready( () => {
-  $('#fetch-all').on('click', (e) => {
+  document.getElementById('fetch-all').onclick = function(){
 
-  })
-
-  $('#fetch-one').on('click', (e) => {
-
-  })
-
-  $('#delete-one').on('click', (e) => {
-
-  })
-
-  $('#edit-character-form').on('submit', (e) => {
-
-  })
-
-  $('#new-character-form').on('submit', (e) => {
-
-  })
+  }
+  
+  document.getElementById('fetch-one').onclick = function(){
+    
+  }
+  
+  document.getElementById('delete-one').onclick = function(){
+        
+  }
+  
+  document.getElementById('edit-character-form').onclick = function(){
+            
+  }
+  
+  document.getElementById('new-character-form').onclick = function(){
+                
+  }
 })

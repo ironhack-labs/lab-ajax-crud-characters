@@ -1,4 +1,4 @@
-# DE | jQuery AJAX CRUD Exercise
+# DE | Axios CRUD Exercise
 
 ## Learning Goals
 
@@ -6,13 +6,13 @@ After this learning unit, you will be able to:
 
 - Create a complete [SPA (Single Page Application)](https://en.wikipedia.org/wiki/Single-page_application)
 - Create, Read, Update, and Delete data from a API
-- Use AJAX to connect with an external API
+- Use Axios to connect with an external API
 
 ## Introduction
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_268cb08540318365df8717153cacce98.png)
 
-In this lesson, we will use all what we have learnt about APIs and how to connect an application to them through AJAX.
+In this lesson, we will use all what we have learnt about APIs and how to connect an application to them through **Axios**.
 
 We will create an application to Create, Read, Update, and Delete characters from the following [Ironhack API](http://ih-crud-api.herokuapp.com/). The routes available in this API are the following:
 
@@ -72,7 +72,7 @@ In your starter code folder you will find every file you need to finish the game
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_99257e2c4240770e6b4bdd406d943ac8.png)
 
-We will construct a class `APIHandler` to deal with the AJAX calls. The only responsability of this class is to display the JSON result that comes from the API, or give the needed information to the API via a function argument.
+We will construct a class `APIHandler` to deal with the Axios calls. The only responsability of this class is to display the JSON result that comes from the API, or give the needed information to the API via a function argument.
 
 The funcionalities of the `APIHandler` class are:
 
@@ -82,7 +82,7 @@ The funcionalities of the `APIHandler` class are:
 - Delete a single character through his id in *[http://ih-crud-api.herokuapp.com/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
 - Edit a single character through his id in *[http://ih-crud-api.herokuapp.com/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
 
-You have to create an AJAX call for each of these actions. You can create as many functions as you need inside the class, but remember this class should only manage the API request and display the resulting value.
+You have to create an Axios call for each of these actions. You can create as many functions as you need inside the class, but remember this class should only manage the API request and display the resulting value.
 
 <!-- :::success -->
 **Micro-advice**
@@ -104,7 +104,7 @@ Retrieve all the available characters in the API and show them in the applicatio
 
 - Create a button (*Fetch all* in the image above) that calls a function in the `APIHandler`.
 - The function will return a JSON object with all the characters.
-- Get the data and show the characters. Finally, with javascript or jQuery, we will create a structure similar to a card (image above) to show every detail of each character.
+- Get the data and show the characters. Finally, with javascript, we will create a structure similar to a card (image above) to show every detail of each character.
 
 #### Fetch one character
 
