@@ -1,4 +1,4 @@
-const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com")
+const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
