@@ -95,7 +95,7 @@ In the `api` folder, you need to create a `db.json` file. Inside our `db.json` w
 }
 ```
 
-Then run the following code on the terminal to make our API start working:
+Then run the following code on the terminal to start our API:
 
 ```bash
 $ json-server --watch db.json --port 8000
@@ -145,7 +145,6 @@ Following the same idea as with fetching all, retreive a single character's data
 
 - Create a button (*Fetch one* in the image above) to, through an input field, get the id of an existing character.
 - Search that character in the API with *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
-- Get the data and show the character info as a card.
 
 #### Delete one character
 
