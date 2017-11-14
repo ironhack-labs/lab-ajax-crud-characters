@@ -27,7 +27,11 @@ class APIHandler {
 
   }
 
-  updateOneRegister () {
+  updateOneRegister (charID, updateCharacter) {
+    axios
+    .patch(`${this.BASE_URL}/characters/${charID}`, updateCharacter)
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
 
   }
 

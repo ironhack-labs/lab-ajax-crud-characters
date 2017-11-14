@@ -18,11 +18,23 @@ $(document).ready( () => {
   })
 
   $('#edit-character-form').on('submit', (e) => {
+    e.preventDefault();
+    const formEdit = document.getElementById('edit-character-form');
+    const updateCharacter = {
+      name: formEdit[1].value,
+      occupation: formEdit[2].value,
+      weapon: formEdit[3].value,
+      debt: formEdit[4].checked
+    }
+
+    const charID = formEdit[0].value;
+    
+    charactersAPI.updateOneRegister(charID, updateCharacter)
 
   })
 
   $('#new-character-form').on('submit', (e) => {
-
+    e.preventDefault();
     const form = document.getElementById('new-character-form');
     const newCharacter = {
       name: form[0].value,
@@ -33,4 +45,7 @@ $(document).ready( () => {
     
     charactersAPI.createOneRegister(newCharacter)
   })
+
+
+
 })
