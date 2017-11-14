@@ -7,7 +7,6 @@ $(document).ready( () => {
   });
 
   $('#fetch-one').on('click', (e) => {
-    //let inputSearchVal = $('#character-id').val();
     charactersAPI.getOneRegister($('#character-id').val());
   });
 
