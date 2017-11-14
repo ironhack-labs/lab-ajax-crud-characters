@@ -62,7 +62,7 @@ class APIHandler {
       url: `http://ih-crud-api.herokuapp.com/characters/${deleteOne}`,
       method: "DELETE",
       success: function(success){
-          $('#delete-one').css('background-color','green');
+          $('#delete-one').css('background-color','silver');
           console.log('Deleted!');
           $('#deleteOne').val('');
         },
