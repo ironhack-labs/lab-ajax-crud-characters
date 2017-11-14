@@ -19,23 +19,38 @@ class APIHandler {
             .catch(error => console.log(error));
     }
 
-    createOneRegister(characterInfo) {
+    createOneRegister(characterInfo, submit_button) {
         axios
             .post(this.BASE_URL, characterInfo)
-            .then(response => console.log(response.data))
-            .catch(error => console.log(error));
+            .then(response => console.log(response.data),
+                this.changeButtonColor(submit_button, 'green')
+            )
+            .catch(error => console.log(error),
+                this.changeButtonColor(submit_button, 'red')
+            );
     }
 
-    updateOneRegister(registerId, updateInfo) {
+    updateOneRegister(registerId, updateInfo, submit_button) {
         axios
             .patch(`${this.BASE_URL}/${registerId}`, updateInfo)
-            .then(response => console.log(response.data))
-            .catch(error => console.log(error));
+            .then(response => console.log(response.data),
+                this.changeButtonColor(submit_button, 'green')
+            )
+            .catch(error => console.log(error),
+                this.changeButtonColor(submit_button, 'red')
+            );
     }
 
-    deleteOneRegister(registerId) {
+    deleteOneRegister(registerId, submit_button) {
         axios
             .delete(`${this.BASE_URL}/${registerId}`)
-            .catch(error => console.log(error));
+            .then(this.changeButtonColor(submit_button, 'green'))
+            .catch(error => console.log(error),
+                this.changeButtonColor(submit_button, 'red')
+            );
+    }
+
+    changeButtonColor(btn, color) {
+        btn.style.backgroundColor = color;
     }
 }
