@@ -14,7 +14,7 @@ class APIHandler {
     const id = characterId;
     axios
       .get(`${this.BASE_URL}/characters/${id}`)
-      .then(response => console.log(response.data))
+      .then(response => showCharacter(response.data))
       .catch(error => console.log(error.data));
   }
 
@@ -40,4 +40,16 @@ class APIHandler {
       .then(response => console.log("Character deleted"))
       .catch(error => console.log(error));
   }
+}
+
+function showCharacter(response) {
+  console.log(response);
+  document.getElementById(
+    "name"
+  ).innerHTML = `Character Name: ${response.name}`;
+  document.getElementById(
+    "occupation"
+  ).innerHTML = `Character Occupation: ${response.occupation}`;
+  document.getElementById("debt").innerHTML = `Debt: ${response.debt}`;
+  document.getElementById("weapon").innerHTML = `Weapon: ${response.weapon}`;
 }
