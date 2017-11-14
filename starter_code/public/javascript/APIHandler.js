@@ -74,10 +74,52 @@ class APIHandler {
   }
 
   updateOneRegister () {
+    let nameData = $('#updatedName').val();
+    let occupationData = $('#updatedOccupation').val();
+    let weaponData = $('#updatedWeapon').val();
+    let debtData = $('#updatedDebt').prop("checked");
 
+    const updateInfo = {
+      name: nameData,
+      occupation: occupationData,
+      weapon: weaponData,
+      debt: debtData
+    };
+
+    let charId = $('#editInput').val();
+
+    $.ajax({
+      method: 'PATCH',
+      url: `https://ih-crud-api.herokuapp.com/characters/${charId}`,
+      data: updateInfo,
+      success: function(updated){
+        console.log(updated);
+        let nameData = $('#updatedName').val('');
+        let occupationData = $('#updatedOccupation').val('');
+        let weaponData = $('#updatedWeapon').val('');
+        $('#updatebtn').css('background-color','green');
+      },
+      error: function(error){
+        console.error(error);
+        $('#updatebtn').css('background-color','red');
+      }
+    });
   }
 
   deleteOneRegister () {
-
+    let deleteId = $('#deleteInput').val();
+    $.ajax({
+      method: 'DELETE',
+      url: `http://ih-crud-api.herokuapp.com/characters/${deleteId}`,
+      success: function(success){
+        $('#delete-one').css('background-color','green');
+        console.log('Deleted!');
+        $('#deleteInput').val('');
+      },
+      error: function(error){
+        console.error('Error');
+        $('#delete-one').css('background-color','red');
+      }
+    })
   }
 }

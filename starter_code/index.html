@@ -30,7 +30,7 @@
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="deleteInput">
         <button id="delete-one">Delete one</button>
       </div>
     </section>
@@ -65,25 +65,25 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" id="editInput">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="updatedName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="updatedOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="updatedWeapon">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" id="updatedCheckbox">
         </div>
-        <button class="submit-button">Update</button>
+        <button class="submit-button" id="updatebtn">Update</button>
       </form>
     </section>
   </section>

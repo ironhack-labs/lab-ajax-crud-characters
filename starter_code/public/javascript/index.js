@@ -10,11 +10,12 @@ $(document).ready( () => {
   })
 
   $('#delete-one').on('click', (e) => {
-
+    charactersAPI.deleteOneRegister();
   })
 
   $('#edit-character-form').on('submit', (e) => {
-
+    e.preventDefault();
+    charactersAPI.updateOneRegister();
   })
 
   $('#new-character-form').on('submit', (e) => {
