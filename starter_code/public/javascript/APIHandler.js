@@ -6,7 +6,7 @@ class APIHandler {
   getFullList() {
     axios
       .get(`${this.BASE_URL}/characters`)
-      .then(response => console.log(response.data))
+      .then(response => response.data)
       .catch(error => console.log(error));
   }
 
@@ -14,7 +14,8 @@ class APIHandler {
     const id = characterId;
     axios
       .get(`${this.BASE_URL}/characters/${id}`)
-      .then(response => console.log(response.data))
+      // .then(response => console.log(response.data))
+      .then(response => showOneCharacter(response.data))
       .catch(error => console.log(error));
   }
 
@@ -41,11 +42,16 @@ class APIHandler {
   }
 }
 
-// function getCoinDeskInfo(startDate, endDate, currency) {
-//   axios
-//     .get(
-//       `http://api.coindesk.com/v1/bpi/historical/close.json?start=${startDate}&end=${endDate}&currency=${currency}`
-//     )
-//     .then(response => console.log(response))
-//     .catch(error => console.log(error));
-// }
+function showOneCharacter(res) {
+  const characterInfo = res;
+  document.getElementById(
+    "name"
+  ).innerHTML = `Character Name: ${characterInfo.name}`;
+  document.getElementById(
+    "occupation"
+  ).innerHTML = `Occupation: ${characterInfo.occupation}`;
+  document.getElementById("debt").innerHTML = `Debt: ${characterInfo.debt}`;
+  document.getElementById(
+    "weapon"
+  ).innerHTML = `Weapon: ${characterInfo.weapon}`;
+}
