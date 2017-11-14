@@ -10,7 +10,7 @@ charactersAPI.getOneRegister ($("#fetchOne").val());
   })
 
   $('#delete-one').on('click', (e) => {
-charactersAPI.deleteOneRegister ($("#deleteOne").val())
+charactersAPI.deleteOneRegister ();
   })
 
   $('#edit-character-form').on('submit', (e) => {

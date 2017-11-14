@@ -55,18 +55,19 @@ class APIHandler {
 
   }
 
-  deleteOneRegister (id) {
-    $.ajax({
-      url: "http://ih-crud-api.herokuapp.com/characters/"+id,
-      method: "DELETE",
-      success: function (response) {
-        id.val("");
-        console.log("DEBERIA BORRAR");
-        console.log(response);
-      },
-      error: function (err) {
-      console.log(err)
-      },
-    })
-  }
-}
+  deleteOneRegister () {
+      let deleteO = $('#delete').val();
+      $.ajax({
+        url: `http://ih-crud-api.herokuapp.com/characters/${deleteO}`,
+        method: "DELETE",
+        success: function(success){
+            $('#delete-one').css('background-color','green');
+            $('#delete').val('');
+          },
+          error: function(error){
+            console.error('Error');
+            $('#delete-one').css('background-color','red');
+          }
+        })
+      }
+    }
