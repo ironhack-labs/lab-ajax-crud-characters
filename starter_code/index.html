@@ -5,29 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
+
   <title>IH Characters</title>
 </head>
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="debt">Character Debt</div>
-        <div class="weapon">Character Weapon</div>
-      </div>
+      <!-- to be filled by fetch all-->
     </div>
+
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
@@ -35,8 +33,8 @@
         <input type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
-
     </section>
+
   </section>
   <section class="container">
     <section class="form-container">
@@ -61,6 +59,7 @@
         <button class="submit-button">Create</button>
       </form>
     </section>
+
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
