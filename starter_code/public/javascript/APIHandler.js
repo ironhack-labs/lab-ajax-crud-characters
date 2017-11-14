@@ -56,17 +56,20 @@ class APIHandler {
 
   }
 
-  deleteOneRegister (id) {
+  deleteOneRegister () {
+    let deleteOne = $('#deleteOne').val();
     $.ajax({
-      url: "http://ih-crud-api.herokuapp.com/characters/"+id,
+      url: `http://ih-crud-api.herokuapp.com/characters/${deleteOne}`,
       method: "DELETE",
-      success: function (response) {
-        $("response.id").val("")
-
-      },
-      error: function (err) {
-      console.log(err)
-      },
-    })
-
-};}
+      success: function(success){
+          $('#delete-one').css('background-color','green');
+          console.log('Deleted!');
+          $('#deleteOne').val('');
+        },
+        error: function(error){
+          console.error('Error');
+          $('#delete-one').css('background-color','red');
+        }
+      })
+    }
+}
