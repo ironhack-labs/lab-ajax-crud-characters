@@ -4,22 +4,39 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return $.ajax({
+      url: 'http://ih-crud-api.herokuapp.com/characters',
+      method:'GET'
+    });
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return $.ajax({
+      url: `http://ih-crud-api.herokuapp.com/characters/${id}` ,
+      method:'GET'
+    });
   }
 
-  createOneRegister () {
-
+  createOneRegister (character) {
+    return $.ajax({
+      url: ' http://ih-crud-api.herokuapp.com/characters',
+      method:'POST',
+      data: character
+    });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, character) {
+    return $.ajax({
+      url: `http://ih-crud-api.herokuapp.com/characters/${id}` ,
+      method:'PUT',
+      data: character
+    });
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return $.ajax({
+      url: `http://ih-crud-api.herokuapp.com/characters/${id}` ,
+      method:'DELETE'
+    });
   }
 }
