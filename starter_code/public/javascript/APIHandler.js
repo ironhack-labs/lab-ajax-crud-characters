@@ -25,7 +25,7 @@ class APIHandler {
   getOneRegister () {
     var id = $('#character-id').val();
     if(id === "") {
-      alert('Please enter an id')
+      return
     } else {
       $.ajax({
         url: "http://ih-crud-api.herokuapp.com/characters/"+ id,
@@ -39,13 +39,38 @@ class APIHandler {
                 "<div class='weapon'>Weapon: " + result.weapon + "</div>" +
             "</div>"
           );
+          $('#character-id').val('');
         }
       });
     }
   }
 
   createOneRegister () {
+    let nameData = $('#name').val();
+    let occupationData = $('#occupation').val();
+    let weaponData = $('#weapon').val();
+    let debtData = $('#debt').prop("checked");
 
+    const characterInfo = {
+      name: nameData,
+      occupation: occupationData,
+      weapon: weaponData,
+      debt: debtData
+    };
+
+    $.ajax({
+      method: 'POST',
+      url: 'https://ih-crud-api.herokuapp.com/characters',
+      data: characterInfo,
+      success: function(result){
+        console.log(characterInfo)
+        $('#createChar').css('background-color','green');
+      },
+      error: function(error){
+        console.error(error)
+        $('#createChar').css('background-color','red');
+      }
+    });
   }
 
   updateOneRegister () {
