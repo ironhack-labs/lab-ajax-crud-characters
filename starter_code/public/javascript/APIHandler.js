@@ -8,6 +8,7 @@ class APIHandler {
       url: "http://ih-crud-api.herokuapp.com/characters",
       method: "GET",
       success: function (response) {
+        console.log(response)
       $('.character-info').remove();
       for(let i = 0; i < response.length; i++){
         $(".characters-container").append(
@@ -54,7 +55,18 @@ class APIHandler {
 
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    $.ajax({
+      url: "http://ih-crud-api.herokuapp.com/characters/"+id,
+      method: "DELETE",
+      success: function (response) {
+        id.val("");
+        console.log("DEBERIA BORRAR");
+        console.log(response);
+      },
+      error: function (err) {
+      console.log(err)
+      },
+    })
   }
 }
