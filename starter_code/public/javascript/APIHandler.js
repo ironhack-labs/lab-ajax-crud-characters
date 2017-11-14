@@ -17,17 +17,19 @@ class APIHandler {
     });
   }
 
-  createOneRegister () {
+  createOneRegister (character) {
     return $.ajax({
       url: ' http://ih-crud-api.herokuapp.com/characters',
-      method:'POST'
+      method:'POST',
+      data: character
     });
   }
 
-  updateOneRegister (id) {
+  updateOneRegister (id, character) {
     return $.ajax({
       url: `http://ih-crud-api.herokuapp.com/characters/${id}` ,
-      method:'PUT'
+      method:'PUT',
+      data: character
     });
   }
 
