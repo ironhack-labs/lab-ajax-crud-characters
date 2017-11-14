@@ -4,15 +4,31 @@ class APIHandler {
   }
 
   getFullList () {
-
+    $.ajax({
+      url: `${this.BASE_URL}/characters`,
+      method: 'GET',
+      success: response => console.log(response),
+      error: err => console.log(err)
+    });
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    $.ajax({
+      url: `${this.BASE_URL}/characters/${id}`,
+      method: 'GET',
+      success: response => console.log(response),
+      error: err => console.log(err.responseText)
+    });
   }
 
-  createOneRegister () {
-
+  createOneRegister (characterInfo) {
+    $.ajax({
+      url: `${this.BASE_URL}/characters/`,
+      data: characterInfo,
+      method: 'POST',
+      success: response => console.log(response),
+      error: err => console.log(err)
+    });
   }
 
   updateOneRegister () {
