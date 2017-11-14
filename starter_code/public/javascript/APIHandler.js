@@ -9,25 +9,53 @@ class APIHandler {
     };
   }
 
-  getFullList () {
-      $.ajax({
-        method: 'GET',
-        url:this.BASE_URL+"/characters",
-        dataType: 'json',
-        success: (response)=>{console.log(response);},
-        error: this.handleError
-      });
-  }
+// ITERATION 2. Need promise to return the values
 
-  getOneRegister (id) {
-    $.ajax({
+getFullList () {
+    return $.ajax({
       method: 'GET',
-      url:this.BASE_URL+"/characters/"+id,
+      url:this.BASE_URL+"/characters",
       dataType: 'json',
-      success: (response)=>{console.log(response);},
       error: this.handleError
-    });
-  }
+    }).then(data=>{
+      let dataArray=data;
+      return dataArray;
+    }).catch(err=> console.log(err.responseText));
+
+}
+
+getOneRegister (id) {
+ return $.ajax({
+    method: 'GET',
+    url:this.BASE_URL+"/characters/"+id,
+    dataType: 'json',
+  }).then(data =>{
+    this.fillItem(data);
+    return this.item;
+  }).catch(err=>{console.log(err.responseText);});
+}
+
+// ITERATION 1
+  // getFullList () {
+  //     return $.ajax({
+  //       method: 'GET',
+  //       url:this.BASE_URL+"/characters",
+  //       dataType: 'json',
+  //       success: (response)=>{console.log(response);},
+  //       error: this.handleError
+  //     });
+  //
+  // }
+
+  // getOneRegister (id) {
+  //   $.ajax({
+  //     method: 'GET',
+  //     url:this.BASE_URL+"/characters/"+id,
+  //     dataType: 'json',
+  //     success: (response)=>{console.log(response);},
+  //     error: this.handleError
+  //   });
+  // }
 
   createOneRegister (item) {
     this.fillItem(item);
