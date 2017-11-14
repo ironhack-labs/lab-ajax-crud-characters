@@ -32,9 +32,12 @@ class APIHandler {
       method: "POST",
       data: $('#new-character-form').serialize(),
       success: function(response) {
-        console.log("Success");
+      $('#create-button').css('background-color','green');
+      console.log("Success");
       },
       error: function(err) {
+        $('#create-button').css('background-color','red');
+
         console.log("Error");
       },
     })
@@ -55,6 +58,7 @@ $.ajax({
     console.log("Success");
   },
   error: function(err) {
+    $('#delete-one').css('background-color','red');
     console.log("Error");
   },
 });
