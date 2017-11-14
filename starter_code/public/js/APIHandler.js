@@ -9,6 +9,7 @@ class APIHandler {
       method: "GET",
       success: function (response) {
         console.log(response);
+        paintingCharacters(response);
       },
       error: function (err) {
         console.log(err);
@@ -22,6 +23,7 @@ class APIHandler {
       method: "GET",
       success: function (response) {
         console.log(response);
+        paintingCharacters(response);
       },
       error: function (err) {
         console.log(err);
@@ -37,11 +39,11 @@ class APIHandler {
       data: info,
       succes:function (response) {
         console.log("Inserted");
-        $('.submit-button').css("background-color","green");
+        $(".submit-button").css({"background-color":"green"});
       },
       error: function (err) {
         console.log("FAIL");
-        $('.submit-button').css("background-color","red");
+        $(".submit-button").css({"background-color":"red"});
       },
     });
   }
@@ -73,4 +75,41 @@ class APIHandler {
     });
   }
 
+}
+
+function paintingCharacters (response){
+  let container = $(".character-info");
+  $('.character-info').remove();
+  let name, occupation, debt, weapon;
+  let html = '';
+  if (response.length > 1) {
+    for (let i=0; i < response.length; i++){
+
+      name = response[i].name;
+      occupation = response[i].occupation;
+      debt = response[i].debt;
+      weapon = response[i].weapon;
+      html += '<div class= "character-info">';
+      html += '<div class= "name">' + name + '</div>';
+      html += '<div class= "occupation">' + occupation + '</div>';
+      html += '<div class= "debt">' + debt + '</div>';
+      html += '<div class= "weapon">' + weapon + '</div>';
+      html += '</div>';
+      document.querySelector('.characters-container').innerHTML =html;
+    }
+  }
+  else {
+    let html = '';
+    name = response.name;
+    occupation = response.occupation;
+    debt = response.debt;
+    weapon = response.weapon;
+    html += '<div class= "character-info">';
+    html += '<div class= "name">' + name + '</div>';
+    html += '<div class= "occupation">' + occupation + '</div>';
+    html += '<div class= "debt">' + debt + '</div>';
+    html += '<div class= "weapon">' + weapon + '</div>';
+    html += '</div>';
+    document.querySelector('.characters-container').innerHTML =html;
+  }
 }
