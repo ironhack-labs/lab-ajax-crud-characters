@@ -8,14 +8,14 @@ class APIHandler {
     getFullList() {
         axios
             .get(this.BASE_URL)
-            .then(response => console.log(response.data))
+            .then(response => this.renderCharactersCards(response.data))
             .catch(error => console.log(error));
     }
 
     getOneRegister(registerId) {
         axios
             .get(`${this.BASE_URL}/${registerId}`)
-            .then(response => console.log(response.data))
+            .then(response => this.renderCharactersCards(response.data))
             .catch(error => console.log(error));
     }
 
@@ -48,6 +48,20 @@ class APIHandler {
             .catch(error => console.log(error),
                 this.changeButtonColor(submit_button, 'red')
             );
+    }
+
+    renderCharactersCards(data) {
+        if (data.length !== undefined) {
+            data.forEach(character => {
+                console.log(character);
+            });
+        } else {
+            let name = document.getElementsByClassName('name')[0].innerHTML;
+            document.getElementsByClassName('name')[0].innerHTML = name + data.name;
+            // document.getElementsByClassName('name')[0].innerHTML = `${name}: ${data.name}`;
+        }
+
+        console.log(data);
     }
 
     changeButtonColor(btn, color) {
