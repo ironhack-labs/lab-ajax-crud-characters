@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
   <title>IH Characters</title>
 </head>
+
 <body>
+  <script type="text/html" id="template">
+    <div class="character-info">
+      <div class="name"></div>
+      <div class="occupation"></div>
+      <div class="debt"></div>
+      <div class="weapon"></div>
+    </div>
+    </div>
+  </script>
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
@@ -27,13 +39,14 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="id-delete">
         <button id="delete-one">Delete one</button>
+        <span id="is-deleted"></span>
       </div>
 
     </section>
@@ -44,21 +57,21 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" class="new-character">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" class="new-character">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" class="new-character">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" id="new-debt">
         </div>
-        <button class="submit-button">Create</button>
+        <button class="submit-button" id="btn-create">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -66,28 +79,28 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" id="edit-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" class="edit-character">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" class="edit-character">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" class="edit-character">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" id="check-edit">
         </div>
-        <button class="submit-button">Update</button>
+        <button class="submit-button" id="btn-update">Update</button>
       </form>
     </section>
   </section>
-
 </body>
+
 </html>
