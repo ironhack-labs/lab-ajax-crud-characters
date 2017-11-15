@@ -60,9 +60,23 @@ class APIHandler {
   }
 
   deleteOneRegister () {
-
+    let deleteOne = $('#deleteOne').val();
+    $.ajax({
+      url: `http://ih-crud-api.herokuapp.com/characters/${deleteOne}`,
+      method: "DELETE",
+      success: function(success){
+          $('#delete-one').css('background-color','green');
+          console.log('Deleted!');
+          $('#deleteOne').val('');
+        },
+        error: function(error){
+          console.error('Error');
+          $('#delete-one').css('background-color','red');
+        }
+      })
+    }
   }
-}
+
 
 // function removeAndDrawDivs (response){
 //   let div = document.querySelector('.character-info');
