@@ -1,6 +1,6 @@
 const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com");
 
-$(document).ready( () => {
+$(document).ready(() => {
 
   $('#fetch-all').on('click', (e) => {
     charactersAPI.getFullList();
@@ -8,31 +8,26 @@ $(document).ready( () => {
   });
 
 
-   $('#fetch-one').on('click', (response) => {
-  charactersAPI.getOneRegister($('#fetchOne').val());
+  $('#fetch-one').on('click', (response) => {
+    charactersAPI.getOneRegister($('#fetchOne').val());
     console.log(response.name);
-    // $('.name').text(response.name);
-    // $('.occupation').text(response.occupation);
-    // $('.debt').text(response.debt);
-    // $('.weapon').text(response.weapon);
 
-});
+  });
 
   $('#delete-one').on('click', (response) => {
     charactersAPI.deleteOneRegister($('#deleteOne').val());
 
-      console.log("borradito");
-      console.log(response.name);
+    console.log("borradito");
+    console.log(response.name);
   });
 
-
-
   $('#edit-character-form').on('submit', (e) => {
-
+    e.preventDefault();
+   charactersAPI.updateOneRegister();
+ });
   });
 
   $('#new-character-form').on('submit', (e) => {
-    charactersAPI.createOneRegister
-
-  });
-});
+      e.preventDefault();
+     charactersAPI.createOneRegister();
+   });
