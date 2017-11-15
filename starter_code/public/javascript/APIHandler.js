@@ -7,6 +7,7 @@ class APIHandler {
     $.ajax({
       method: 'GET',
       url: this.BASE_URL + '/characters',
+      dataType: 'json',
       success: allCharactersList => {
         console.log(allCharactersList);
         allCharactersList.forEach((character, index) => {
@@ -33,6 +34,7 @@ class APIHandler {
     $.ajax({
       method: 'GET',
       url: this.BASE_URL + '/characters/' + characterId,
+      dataType: 'json',
       success: character => {
         console.log(character);
         $('.character-info').prepend('<div class="id">Id: ' + character.id + '</div>');
@@ -52,17 +54,12 @@ class APIHandler {
       method: 'POST',
       url: this.BASE_URL + '/characters',
       data: singleCharacter,
+      dataType: 'json',
       success: character => {
         console.log(character);
-        $('#new-character-form .submit-button')
-          .css('background-color', '#6B8E23')
-          .animate({backgroundColor: 'rgba(88, 98, 123, 0.95)'}, 3000);
       },
       error: err => {
         console.error(err);
-        $('#new-character-form .submit-button')
-          .css('background-color', '#FF4500')
-          .animate({backgroundColor: 'rgba(88, 98, 123, 0.95)'}, 3000);
       }
     });
   }
@@ -72,17 +69,13 @@ class APIHandler {
       method: 'PATCH',
       url: this.BASE_URL + '/characters/' + characterId,
       data: characterInfo,
+      dataType: 'json text',
       success: character => {
         console.log(character);
-        $('#edit-character-form .submit-button')
-          .css('background-color', '#6B8E23')
-          .animate({backgroundColor: 'rgba(88, 98, 123, 0.95)'}, 3000);
       },
       error: err => {
+        console.log('Character not found');
         console.error(err);
-        $('#edit-character-form .submit-button')
-          .css('background-color', '#FF4500')
-          .animate({backgroundColor: 'rgba(88, 98, 123, 0.95)'}, 3000);
       }
     });
   }
@@ -91,17 +84,12 @@ class APIHandler {
     $.ajax({
       method: 'DELETE',
       url: this.BASE_URL + '/characters/' + characterId,
-      success: character => {
-        console.log(character);
-        $('#delete-one')
-          .css('background-color', '#6B8E23')
-          .animate({backgroundColor: 'rgba(88, 98, 123, 0.95)'}, 3000);
+      success: () => {
+        console.log('Character has been successfully deleted');
       },
       error: err => {
+        console.log('Character not found');
         console.error(err);
-        $('#delete-one')
-          .css('background-color', '#FF4500')
-          .animate({backgroundColor: 'rgba(88, 98, 123, 0.95)'}, 3000);
       }
     });
   }
