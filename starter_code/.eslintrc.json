@@ -1,0 +1,19 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node" : true
+    },
+    "parserOptions": { 
+      "ecmaVersion": 6
+    },
+    "rules": {
+      "quotes": ["error", "double"],
+      "semi": [2, "always"],
+      "comma-dangle": ["error", "never"],
+      "no-multiple-empty-lines": "off",
+      "no-const-assign": "error",
+      "prefer-const": "error",
+      "no-unused-vars": "off"
+    }
+}
