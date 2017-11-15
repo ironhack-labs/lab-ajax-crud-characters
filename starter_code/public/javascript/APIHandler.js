@@ -16,12 +16,9 @@ getFullList () {
       method: 'GET',
       url:this.BASE_URL+"/characters",
       dataType: 'json',
-      error: this.handleError
     }).then(data=>{
-      let dataArray=data;
-      return dataArray;
+      return data;
     }).catch(err=> console.log(err.responseText));
-
 }
 
 getOneRegister (id) {
@@ -32,6 +29,26 @@ getOneRegister (id) {
   }).then(data =>{
     this.fillItem(data);
     return this.item;
+  }).catch(err=>{console.log(err.responseText);});
+}
+
+deleteOneRegister (id) {
+    $.ajax({
+    method: 'DELETE',
+    url:this.BASE_URL+"/characters/"+id,
+    dataType: 'text',
+  }).then(data=>{
+    return data;
+  }).catch(err=>{console.log(err.responseText);});
+}
+
+createOneRegister (item) {
+  this.fillItem(item);
+  $.ajax({
+    method: 'POST',
+    url:this.BASE_URL+"/characters",
+  }).then(data =>{
+    return data;
   }).catch(err=>{console.log(err.responseText);});
 }
 
@@ -57,39 +74,39 @@ getOneRegister (id) {
   //   });
   // }
 
-  createOneRegister (item) {
-    this.fillItem(item);
-    $.ajax({
-      method: 'POST',
-      url:this.BASE_URL+"/characters",
-      dataType: 'json',
-      data: this.item,
-      success: (response)=>{console.log(response);},
-      error: this.handleError
-    });
-  }
+  // createOneRegister (item) {
+  //   this.fillItem(item);
+  //   $.ajax({
+  //     method: 'POST',
+  //     url:this.BASE_URL+"/characters",
+  //     dataType: 'json',
+  //     data: this.item,
+  //     success: (response)=>{console.log(response);},
+  //     error: this.handleError
+  //   });
+  // }
 
-  updateOneRegister (id,item) {
-    this.fillItem(item);
-    $.ajax({
-      method: 'PUT',
-      url:this.BASE_URL+"/characters/"+id,
-      dataType: 'json',
-      data: this.item,
-      success: (response)=>{console.log(response);},
-      error: this.handleError
-    });
-  }
+  // updateOneRegister (id,item) {
+  //   this.fillItem(item);
+  //   $.ajax({
+  //     method: 'PUT',
+  //     url:this.BASE_URL+"/characters/"+id,
+  //     dataType: 'json',
+  //     data: this.item,
+  //     success: (response)=>{console.log(response);},
+  //     error: this.handleError
+  //   });
+  // }
 
-  deleteOneRegister (id) {
-      $.ajax({
-      method: 'DELETE',
-      url:this.BASE_URL+"/characters/"+id,
-      dataType: 'text',
-      success: (response)=>{console.log(response);},
-      error: this.handleError
-    });
-  }
+  // deleteOneRegister (id) {
+  //     $.ajax({
+  //     method: 'DELETE',
+  //     url:this.BASE_URL+"/characters/"+id,
+  //     dataType: 'text',
+  //     success: (response)=>{console.log(response);},
+  //     error: this.handleError
+  //   });
+  // }
 
 
 fillItem(item){
