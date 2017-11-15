@@ -7,47 +7,45 @@ class APIHandler {
 
     getFullList() {
         axios
-            .get(`${this.BASE_URL}/characters`);
+            .get(`${this.BASE_URL}/characters/`)
+            .then(response => console.log(response.data))
+            .catch(error => console.log(error));
     }
 
-    getOneRegister() {
-
-        const charId = 3;
+    getOneRegister(charId) {
         axios
-            .get(`${this.BASE_URL}/characters/${charId}`);
+            .get(`${this.BASE_URL}/characters/${charId}`)
+            .then(response => console.log(response.data))
+            .catch(error => console.log(error));
+
     }
 
-    createOneRegister() {
-        const characterInfo = {
-            name: 'eloithegoodboy',
-            occupation: 'peacefully smashing screens right now',
-            weapon: 'kame hame'
-        };
+    createOneRegister(characterInfo) {
 
-        const charId = 2;
 
         axios
-            .post(`${this.BASE_URL}/characters/${charId}`, characterInfo);
+            .post(`http://ih-crud-api.herokuapp.com/characters/`, characterInfo)
+            .then(response => console.log(response.data + 'created'))
+            .catch(error => console.log(error.data));
+
     }
 
-    updateOneRegister() {
-        const updateInfo = {
-            name: document.getElementById('update-name-input').value,
-            occupation: document.getElementById('update-occupation-input').value,
-            weapon: document.getElementById('update-weapon-input').value
-        };
-
-        const charId = 3;
-
+    updateOneRegister(charId, updateInfo) {
+        console.log(charId);
         axios
-            .patch(`${this.BASE_URL}/characters/${charId}`, updateInfo);
+            .patch(`http://ih-crud-api.herokuapp.com/characters/${charId}`, updateInfo)
+            .then(response => console.log(response.data + 'updated'))
+            .catch(error => console.log(error.data));
+
 
 
     }
 
-    deleteOneRegister() {
-        const charId = 3;
+    deleteOneRegister(charId) {
+
         axios
-            .delete(`${this.BASE_URL}/characters/${charId}`);
+            .delete(`${this.BASE_URL}/characters/${charId}`)
+            .then(response => console.log('deleted'));
+
     }
 }

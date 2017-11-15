@@ -14,6 +14,8 @@
     "global":true,
     "users":true,
     "axios":true,
-    "document":true
+    "document":true,
+    "APIHandler": true,
+    "$": true
   }
 }
