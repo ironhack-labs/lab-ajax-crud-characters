@@ -29,9 +29,9 @@ getOneRegister (id) {
   });
 }
 
-  createOneRegister () {
+  createOneRegister (newChar) {
     $.ajax({
-      url:  "http://ih-crud-api.herokuapp.com/characters/"+id,
+      url:  "http://ih-crud-api.herokuapp.com/characters",
       method: 'POST',
       data: newChar,
       success: function (response) {
@@ -44,8 +44,19 @@ getOneRegister (id) {
     });
   }
 
-  updateOneRegister (id) {
-
+  updateOneRegister (id, newChar) {
+    $.ajax({
+      url: "http://ih-crud-api.herokuapp.com/characters/"+id,
+      method: 'PUT',
+      data: newChar,
+      success: function (response) {
+        console.log("Your user have been updated");
+        $('#btn-update').css("background-color", "green");
+        },
+      error: function (err) {
+        console.log("Hubo un error!");
+      },
+    });
   }
 
   deleteOneRegister (id) {
@@ -71,6 +82,7 @@ const createDom = (response) => {
   let template = $('#template').html();
   const holder = $('.characters-container');
   $('.character-info').remove();
+
   if(response.length > 1) {
     response.forEach(e => {
       let nodo = $(template);

@@ -15,6 +15,34 @@ $(document).ready( () => {
   });
 
   $('#edit-character-form').on('submit', (e) => {
+    let id = $( "#edit-id" ).val();
+
+    var values = [];
+      $('.edit-character').each(function() {
+          values.push($(this).val());
+      });
+
+      function check() {
+        if($('#check-edit').is(":checked")) {
+          return "true";
+        } else {
+          return "false";
+        }
+      }
+
+      let newChar = {
+        name: values[0],
+        occupation: values[1],
+        weapon: values[2],
+        debt: check(),
+      };
+
+      console.log(newChar);
+
+      charactersAPI.updateOneRegister (id, newChar);
+  });
+
+  $('#new-character-form').on('submit', (e) => {
     e.preventDefault();
     var values = [];
       $('.new-character').each(function() {
@@ -22,7 +50,7 @@ $(document).ready( () => {
       });
 
       function check() {
-        if($('new-debt').is(":checked")) {
+        if($('#new-debt').is(":checked")) {
           return "true";
         } else {
           return "false";
@@ -37,9 +65,5 @@ $(document).ready( () => {
       };
 
       charactersAPI.createOneRegister(newChar);
-  });
-
-  $('#new-character-form').on('submit', (e) => {
-
   });
 });
