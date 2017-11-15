@@ -22,7 +22,7 @@ class APIHandler {
     console.log(newCharacter);
     axios
       .post(`${this.BASE_URL}/characters/`, newCharacter)
-      .then(response => console.log("New character created"))
+      .then(response => addCharacter(newCharacter))
       .catch(error => console.log(error));
   }
 
@@ -40,6 +40,18 @@ class APIHandler {
       .then(response => console.log("Character deleted"))
       .catch(error => console.log(error));
   }
+}
+
+function addCharacter(response) {
+  document.getElementsByClassName("characters-container")[0].innerHTML += `
+    <div class="character-info">
+    <div id="name">Character added</div>
+    <div id="name">Name: ${response.name}</div>
+    <div id="occupation">Occupation: ${response.occupation}</div>
+    <div id="debt">Debt: ${response.debt}</div>
+    <div id="weapon">Weapon: ${response.weapon}</div>
+  </div>
+    `;
 }
 
 function showCharacter(response) {
