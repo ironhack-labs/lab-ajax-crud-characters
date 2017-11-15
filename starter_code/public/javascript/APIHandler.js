@@ -3,78 +3,61 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList(restUrl) {
+doMyPromise (url, method, data){
+  return new Promise( (resolve,reject) => {
     $.ajax({
-      url: this.BASE_URL+restUrl,
-      method: 'GET',
-      success: function (response) {
-        removeAndDrawDivs(response);
-      },
-      error: function (err) {
-        console.log("Hubo un error!");
-      },
-    })
+    url: url,
+    method: method,
+    data: data,
+    success:
+      (successData) => { resolve(successData); },
+    error:
+      (error) => { reject(error); },
+    });
+  });
+}
+
+  getFullList() {
+    this.doMyPromise(this.BASE_URL+'/characters/', 'GET' )
+    .then( myData => removeAndDrawDivs(myData))
+    .catch( error => console.log('error listing'));
   }
 
   getOneRegister (id) {
-    $.ajax({
-        url: this.BASE_URL+"/characters/"+id,
-        success: function (response) {
-          removeAndDrawDivs(response);
-      },
-      error: function (err) {
-
-      },
-    })
+    this.doMyPromise(this.BASE_URL+'/characters/'+id, 'GET')
+    .then( myData => removeAndDrawDivs(myData))
+    .catch( error => console.log('error listing'));
   }
 // name, occupation, weapon, debt(checkbox)
   createOneRegister (newChar) {
     document.getElementById("new-character-form").reset();
-    $.ajax({
-        url: this.BASE_URL+"/characters/",
-        method: "POST",
-        data: newChar,
-        success: function (response) {
-          console.log("Inserted");
-          $('.submit-button').css("background-color","green");
-      },
-      error: function (err) {
-        console.log("FAIL");
-        $('.submit-button').css("background-color","red");
-      },
-    })
-  }
+    this.doMyPromise(this.BASE_URL+'/characters/', 'POST', newChar)
+      .then(myData => console.log("New character added!"))
+      .then(myData => $('.submit-button').css("background-color","green"))
+      .catch(error => console.log("FAIL"))
+      .catch(error => $('.submit-button').css("background-color","red"))
+  };
 
   updateOneRegister (editObj,id) {
-      $.ajax({
-          url: this.BASE_URL+"/characters/"+id,
-          method: 'PATCH',
-          data: editObj,
-          success: function (response) {
-            console.log("Edited!");
-        },
-        error: function (err) {
-          console.log('error');
-        },
-      })
+    document.getElementById("edit-character-form").reset();
+    this.doMyPromise(this.BASE_URL+"/characters/"+id, 'PATCH', editObj)
+    .then(myData => console.log('Edited!'))
+    .then(myData => $('.submit-button2').css("background-color","green"))
+    .catch(error => console.log('Error'))
+    .catch(error => $('.submit-button2').css("background-color","red"))
   }
 
   deleteOneRegister (id) {
-    $.ajax({
-      url: this.BASE_URL+"/characters/"+id,
-      method: 'DELETE',
-      success: function (response) {
-        console.log(response);
-        if (response == "Character has been successfully deleted"){
-          $('isRemoved').innerHTML = "ID Removed!";
-        } else if (response == "Character not found"){
-          $('isRemoved').innerHTML = "ERROR Removing";
-        }
-      },
-      error: function (err) {
-        console.log("There was an error!");
-      },
+    this.doMyPromise(this.BASE_URL+"/characters/"+id, 'DELETE')
+    .then((response) => {
+      if (response == "Character has been successfully deleted"){
+        $('isRemoved').innerHTML = "ID Removed!";
+      } else if (response == "Character not found"){
+        $('isRemoved').innerHTML = "ERROR Removing";
+      }
     })
+    .then(myData => console.log('Deleted!'))
+    .catch(error => console.log("There was an error"))
   }
 }
 function removeAndDrawDivs(response){
@@ -82,23 +65,19 @@ function removeAndDrawDivs(response){
   $('.character-info').remove();
    // true means clone all childNodes and all event handlers
   if (response.length > 1){
-    response.forEach(e =>{
-      let clone = div.cloneNode(true);
-      clone.querySelector('.id').innerHTML = e.id;
-      clone.querySelector('.name').innerHTML = e.name;
-      clone.querySelector('.occupation').innerHTML = e.occupation;
-      clone.querySelector('.weapon').innerHTML = e.weapon;
-      clone.querySelector('.debt').innerHTML = e.debt;
-      document.querySelector('.characters-container').appendChild(clone);
-      });
-    } else {
-      let clone = div.cloneNode(true);
-      clone.querySelector('.id').innerHTML = response.id;
-      clone.querySelector('.name').innerHTML = response.name;
-      clone.querySelector('.occupation').innerHTML = response.occupation;
-      clone.querySelector('.weapon').innerHTML = response.weapon;
-      clone.querySelector('.debt').innerHTML = response.debt;
-      document.querySelector('.characters-container').appendChild(clone);
-    }
+    response.forEach(e =>{ drawDiv(div, e); });
+  } else {
+    drawDiv(div,response);
+  }
 
+}
+
+function drawDiv(div,e){
+  let clone = div.cloneNode(true);
+  clone.querySelector('.id').innerHTML = e.id;
+  clone.querySelector('.name').innerHTML = e.name;
+  clone.querySelector('.occupation').innerHTML = e.occupation;
+  clone.querySelector('.weapon').innerHTML = e.weapon;
+  clone.querySelector('.debt').innerHTML = e.debt;
+  document.querySelector('.characters-container').appendChild(clone);
 }

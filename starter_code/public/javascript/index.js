@@ -2,7 +2,7 @@ const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com")
 
 $(document).ready( () => {
   $('#fetch-all').on('click', (e) => {
-    charactersAPI.getFullList('/characters/');
+    charactersAPI.getFullList();
   })
 
   $('#fetch-one').on('click', (e) => {
@@ -16,7 +16,6 @@ $(document).ready( () => {
   $('#edit-character-form').on('submit', (e) => {
     e.preventDefault();
     let inputs = $('#edit-character-form').serializeArray();
-    let checkbox;
     /* Because serializeArray() ignores unset checkboxes and radio buttons: */
     let editChar = {};
     let id;
