@@ -1,3 +1,5 @@
+"use strict";
+
 const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com");
 
 $(document).ready(() => {
@@ -6,11 +8,13 @@ $(document).ready(() => {
   });
 
   $("#fetch-one").on("click", e => {
-    charactersAPI.getOneRegister();
+    const charId = document.getElementById("character-id").value;
+    charactersAPI.getOneRegister(charId);
   });
 
   $("#delete-one").on("click", e => {
-    charactersAPI.deleteOneRegister();
+    const charIdDel = document.getElementById("character-id-delete").value;
+    charactersAPI.deleteOneRegister(charIdDel);
   });
 
   $("#edit-character-form").on("submit", e => {
