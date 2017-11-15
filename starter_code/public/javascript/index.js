@@ -18,6 +18,6 @@ $(document).ready( () => {
   });
 
   $('#new-character-form').on('submit', (e) => {
-    charactersAPI.createOneRegister (data);
+    charactersAPI.createOneRegister ();
   });
 });

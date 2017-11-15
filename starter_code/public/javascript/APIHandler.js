@@ -17,36 +17,40 @@ class APIHandler {
   };
 
   getOneRegister (id) {
-    $.ajax({
-      url: "http://pokeapi.co/api/v2/pokemon/" + id,
-      method: "GET",
-      success: function (response) {
+    let characterId = $('#character-id').val();
+    console.log(characterId);
+    if (characterId>0) {
+      $.ajax({
+        url: ("http://ih-crud-api.herokuapp.com/characters/"+characterId),
+        method: "GET",
+        success: function (response) {
         console.log(response);
-      },
-      error: function (err) {
-        console.log(err);
-      },
-    });
+        },
+        error: function (err) {
+          console.log(err);
+        },
+      });
+    } else {
+      console.log("Invalid Id");
+    }
   };
 
-  createOneRegister (data) {
-    let name = $('#name').val();
-    let occupation = $('#occupation').val();
-    let weapon = $('#weapon').val();
-    let debt = $('#debt').val();
+  createOneRegister () {
+    let name = $('#new-name').val();
+    let occupation = $('#new-occupation').val();
+    let weapon = $('#new-weapon').val();
+    let debt = $('#new-debt').val();
+    console.log(name, occupation, weapon, debt);
 
-    let characterData = {name, occupation, weapon, debt};
+    const characterInfo = {name, occupation, weapon, debt};
+    console.log(characterData);
 
     $.ajax({
-      url: "http://ih-crud-api.herokuapp.com/characters",
-      method: "POST",
-      data: data,
-      success: function (response) {
-        console.log(response);
-      },
-      error: function (err) {
-        console.log("Ops! Something went wrong.");
-      },
+      method: 'POST',
+      url: 'https://ih-crud-api.herokuapp.com/characters',
+      data: characterInfo,
+      success: showFeedback,
+      error: handleError
     });
   };
 
