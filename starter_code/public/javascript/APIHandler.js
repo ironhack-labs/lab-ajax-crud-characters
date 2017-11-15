@@ -4,10 +4,15 @@ class APIHandler {
   }
 
   getFullList() {
-    axios
-      .get(`${this.BASE_URL}/characters`)
-      .then(response => response.data)
-      .catch(error => console.log(error));
+    // axios
+    //   .get(`${this.BASE_URL}/characters`)
+    //   .then(response => response.data)
+    //   .catch(error => console.log(error));
+    return axios.get(`${this.BASE_URL}/characters`);
+    // .then(response => {
+    //   return response.data;
+    // })
+    // .catch(error => console.log(error));
   }
 
   getOneRegister(characterId) {
@@ -54,4 +59,15 @@ function showOneCharacter(res) {
   document.getElementById(
     "weapon"
   ).innerHTML = `Weapon: ${characterInfo.weapon}`;
+}
+
+function addCharacter(char) {
+  document.getElementsByClassName("characters-container")[0].innerHTML += `
+    <div class="character-info">
+      <div class="name">Name : ${char.name}</div>
+      <div class="occupation">Occupation: ${char.occupation}</div>
+      <div class="debt">Debt: ${char.debt}</div>
+      <div class="weapon">Weapon: ${char.weapon}</div>
+    </div>
+  `;
 }

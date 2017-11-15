@@ -2,7 +2,11 @@ const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com");
 
 $(document).ready(() => {
   document.getElementById("fetch-all").addEventListener("click", e => {
-    charactersAPI.getFullList();
+    charactersAPI.getFullList().then(response => {
+      document.getElementsByClassName("characters-container")[0].innerHTML =
+        " ";
+      response.data.forEach(character => addCharacter(character));
+    });
   });
 
   document.getElementById("fetch-one").addEventListener("click", e => {
