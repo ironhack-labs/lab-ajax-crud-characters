@@ -13,7 +13,7 @@
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
+    <div class="characters-container" id="characters-container">
       <div class="character-info">
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
@@ -27,7 +27,7 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="fetchOne">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
