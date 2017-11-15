@@ -1,6 +1,6 @@
 const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com")
 
-$(document).ready( () => {
+$(document).ready(() => {
   $('#fetch-all').on('click', (e) => {
 
   })
