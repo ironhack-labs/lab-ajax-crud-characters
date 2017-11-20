@@ -32,23 +32,50 @@ class APIHandler {
      })
   ;}
 
-  createOneRegister () {
+  createOneRegister (newCharacter) {
     $.ajax({
     url: this.BASE_URL+ "/characters/",
     method: "POST",
+    data: newCharacter,
+    dataType: "json",
     success: function (response) {
-    console.log("todo bien!");
-       }
-     })
-  ;
+      console.log(response);
+    alert("Character added successfully!");
+    },
+    error: function (err) {
+      console.log("There was an error!");
+    },
+  });
+}
+
+  updateOneRegister (newEdit, param) {
+    $.ajax({
+    url: this.BASE_URL+ "/characters/"+ param,
+    method: "PATCH",
+    data: newEdit,
+    dataType: "json",
+    success: function (response) {
+      console.log(response);
+    alert("Character edited successfully!");
+    },
+    error: function (err) {
+      console.log("There was an error!");
+    },
+  });
 
   }
-  
-  updateOneRegister () {
 
-  }
-
-  deleteOneRegister () {
-
-  }
+  deleteOneRegister(param) {
+    $.ajax({
+      url: this.BASE_URL+"/characters/"+param,
+      method: 'DELETE',
+      success: function (response) {
+        console.log(response);
+      alert("Character deleted successfully!");
+      },
+      error: function (err) {
+        console.log("There was an error!");
+      },
+    });
+ }
 }
