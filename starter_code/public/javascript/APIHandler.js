@@ -15,12 +15,14 @@ class APIHandler {
 
       apiResults.forEach( oneChar => {
         const charDom = $(`
-          <h2 class="name">       ${oneChar.name}       </h2>
-          <p  class="occupation"> ${oneChar.occupation} </p>
-          <p  class="debt">       ${oneChar.debt}       </p>
-          <p  class="weapon">     ${oneChar.weapon}     </p>
+          <div class="character-info">
+            <h2 class="name">       ${oneChar.name}       </h2>
+            <p  class="occupation"> ${oneChar.occupation} </p>
+            <p  class="debt">       ${oneChar.debt}       </p>
+            <p  class="weapon">     ${oneChar.weapon}     </p>
+          </div>
         `);
-            $('.character-info').html(charDom);
+            $('.characters-container').append(charDom);
       });
 
     })
@@ -31,7 +33,18 @@ class APIHandler {
   }
 
   getOneRegister () {
-
+    $.ajax({
+      url: `http://ih-crud-api.herokuapp.com/characters/:id`,
+      method: "GET"
+    })
+    .then( apiResults => {
+      console.log( "SUCESS!" );
+      console.log( apiResults );
+    })
+    .catch( err => {
+      console.log( err );
+      console.log( "ERROR!");
+    });
   }
 
   createOneRegister () {

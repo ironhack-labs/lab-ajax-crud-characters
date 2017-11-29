@@ -6,7 +6,7 @@ $(document).ready( () => {
 });
 
   $('#fetch-one').on('click', (e) => {
-
+    charactersAPI.getOneRegister();
   })
 
   $('#delete-one').on('click', (e) => {
