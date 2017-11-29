@@ -12,7 +12,6 @@ class APIHandler {
               characterList.forEach((oneCharacter) => {
               $('.characters-container').append(`
                   <div class="character-info">
-                      <div class="id"> ID: ${oneCharacter.id} </div>
                       <div class="name">Name: ${oneCharacter.name} </div>
                       <div class="occupation">Occupation: ${oneCharacter.occupation}</div>
                       <div class="debt">Debt: ${oneCharacter.debt}</div>
@@ -33,10 +32,51 @@ class APIHandler {
 
   getOneRegister () {
 
+    const characterId = $('input[name=character-id]').val();
+
+    $.ajax(
+      {
+        url: 'https://ih-crud-api.herokuapp.com/characters/' + characterId,
+        method: 'GET',
+
+        success: (oneCharacter) => {
+          $('.characters-container').append(`
+              <div class="character-info">
+                  <div class="id"> ID: ${oneCharacter.id} </div>
+                  <div class="name">Name: ${oneCharacter.name} </div>
+                  <div class="occupation">Occupation: ${oneCharacter.occupation}</div>
+                  <div class="debt">Debt: ${oneCharacter.debt}</div>
+                  <div class="weapon">Weapon: ${oneCharacter.weapon}</div>
+              </div>
+                `);
+            },
+
+        error: (errorInfo) => {
+          console.log(errorInfo);
+        }
+
+    });
   }
 
-  createOneRegister () {
+  createOneRegister (characterSubmission) {
 
+    $.ajax({
+      url: 'https://ih-crud-api.herokuapp.com/characters/',
+      method: 'POST',
+
+      data: characterSubmission,
+
+      success: (postResult) => {
+
+        $('#send-data').removeClass('failed');
+        $('#send-data').addClass('active');
+      },
+
+      error: (errorInfo) => {
+        $('#send-data').removeClass('active');
+        $('#send-data').addClass('failed');
+      }
+    });
   }
 
   updateOneRegister () {
