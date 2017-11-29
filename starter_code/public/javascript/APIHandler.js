@@ -5,43 +5,58 @@ class APIHandler {
 
   getFullList () {
 
+    $.ajax({
+        method: "GET",
+        url: `${this.BASE_URL}/characters`
+    })
+        .then( (charResults) => {
+            const charArray = [];
+            charResults.forEach( (oneChar) => {
+                charArray.push({
+                    name: oneChar.name,
+                    occupation: oneChar.occupation,
+                    debt: oneChar.debt,
+                    weapon: oneChar.weapon
+                });
+            });
+
+            console.log(charArray);
+
+            $(".characters-container").empty();
+
+            charArray.forEach((oneCharacter) => {
+                const charHtml = $(`
+                    <div class="character-info">
+                      <div class="name">${oneCharacter.name}</div>
+                      <div class="occupation">${oneCharacter.occupation}</div>
+                      <div class="debt">${oneCharacter.debt}</div>
+                      <div class="weapon">${oneCharacter.weapon}</div>
+                    </div>
+                `);
+
+                $(".characters-container").append(charHtml);
+            });
+
+        })
+
+        .catch( (err) => {
+            console.log("ERROR!");
+            console.log(err);
+        });
+}
+
+  getOneRegister (id) {
+
       $.ajax({
           method: "GET",
-          url: "http://ih-crud-api.herokuapp.com/characters"
-      })
-
-          .then( (charResults) => {
-              console.log("SUCCESS!");
-
-              const charHtml = $(`
-                <div class="character-info">
-                  <div class="name">${charResults.name}</div>
-                  <div class="occupation">${charResults.occupation}</div>
-                  <div class="debt">${charResults.debt}</div>
-                  <div class="weapon">${charResults.weapon}</div>
-                </div>
-              `);
-
-              charResults.forEach((oneCharacter) => {
-                  $(".characters-container").html(charHtml);
-              });
-          })
-
-          .catch( (err) => {
-              console.log("ERROR!");
-              console.log(err);
-          });
-  }
-
-  getOneRegister (charId) {
-
-      $.ajax({
-          method: "GET",
-          url: `http://ih-crud-api.herokuapp.com/characters/${charId}`
+          url: `${this.BASE_URL}/characters/${id}`
       })
 
           .then( (charResults) => {
               console.log("You successfully obtained one character!");
+              console.log(charResults);
+
+              $(".characters-container").empty();
 
               const singleCharacter = $(`
                 <div class="character-info">
@@ -52,7 +67,7 @@ class APIHandler {
                 </div>
               `);
 
-              $(".characters-container").html(singleCharacter);
+              $(".characters-container").append(singleCharacter);
           })
 
           .catch( (err) => {
@@ -61,14 +76,14 @@ class APIHandler {
           });
   }
 
-  createOneRegister (charName, charJob, charDebt, charWeapon) {
+  createOneRegister (charName, charOccupation, charDebt, charWeapon) {
 
       $.ajax({
           method: "POST",
-          url: "http://ih-crud-api.herokuapp.com/characters",
+          url: `${this.BASE_URL}/characters`,
           data: {
             name: charName,
-            occupation: charJob,
+            occupation: charOccupation,
             debt: charDebt,
             weapon: charWeapon
           }
@@ -76,6 +91,17 @@ class APIHandler {
 
           .then( (charResults) => {
               console.log("You've successfully added a character! Good for you.");
+              console.log(charResults);
+
+              const updateHtml = $(`
+                    <br />
+                    <p>
+                      You've added <b>${charResults.name}</b>
+                      (id: ${charResults.id})
+                    </p>
+                `);
+
+                $(".feedback1").append(updateHtml);
           })
 
           .catch( (err) => {
@@ -88,7 +114,7 @@ class APIHandler {
 
       $.ajax({
           method: "PATCH",
-          url: `http://ih-crud-api.herokuapp.com/characters/${myId}`,
+          url: `${this.BASE_URL}/characters/${myId}`,
           data: {
             name: myName,
             occupation: myJob,
@@ -99,7 +125,18 @@ class APIHandler {
 
           .then( (charResults) => {
               console.log("You've successfully updated a character!");
-          })
+              console.log(charResults);
+
+              const updateHtml = $(`
+                    <br />
+                    <p>
+                      You've updated <b>${charResults.name}</b>
+                      (id: ${charResults.id})
+                    </p>
+                `);
+
+                $(".feedback2").append(updateHtml);
+            })
 
           .catch( (err) => {
               console.log("ERROR!");
@@ -112,16 +149,25 @@ class APIHandler {
 
       $.ajax({
           method: "DELETE",
-          url: `http://ih-crud-api.herokuapp.com/characters/${charId}`,
+          url: `${this.BASE_URL}/characters/${charId}`,
       })
 
           .then( () => {
               console.log("You've successfully deleted a character!");
-          })
+
+              const updateHtml = $(`
+                    <br />
+                    <p>
+                      You've deleted the entry successfully!
+                    </p>
+                `);
+
+                $(".feedback3").append(updateHtml);
+            })
 
           .catch( (err) => {
-            console.log("ERROR!");
-            console.log(err);
+              console.log("ERROR!");
+              console.log(err);
           });
 
   }
