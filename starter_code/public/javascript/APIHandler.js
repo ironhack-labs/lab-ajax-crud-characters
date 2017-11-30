@@ -102,11 +102,15 @@ class APIHandler {
                 `);
 
                 $(".feedback1").append(updateHtml);
+
+                const createBtn = $('.submit-button1');
+                createBtn.addClass('active');
           })
 
           .catch( (err) => {
             console.log("ERROR!");
             console.log(err);
+            createBtn.addClass('failed');
           });
   }
 
@@ -136,11 +140,15 @@ class APIHandler {
                 `);
 
                 $(".feedback2").append(updateHtml);
+
+                const updateBtn = $('.submit-button2');
+                updateBtn.addClass('active');
             })
 
           .catch( (err) => {
               console.log("ERROR!");
               console.log(err);
+              updateBtn.addClass('failed');
           });
 
   }
@@ -160,14 +168,18 @@ class APIHandler {
                     <p>
                       You've deleted the entry successfully!
                     </p>
-                `);
+              `);
 
-                $(".feedback3").append(updateHtml);
+              $(".feedback3").append(updateHtml);
+
+              const deleteBtn = $('#delete-one');
+              deleteBtn.addClass('active');
             })
 
           .catch( (err) => {
               console.log("ERROR!");
               console.log(err);
+              deleteBtn.addClass('failed');
           });
 
   }

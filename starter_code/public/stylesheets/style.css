@@ -54,6 +54,10 @@ button {
   background-color: #42f471;
 }
 
+.failed (
+  background-color: red;
+  )
+
 .operations {
   margin: 0 auto;
   padding: 5px;
