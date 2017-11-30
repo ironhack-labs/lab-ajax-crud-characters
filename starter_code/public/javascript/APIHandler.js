@@ -12,6 +12,7 @@ class APIHandler {
               characterList.forEach((oneCharacter) => {
               $('.characters-container').append(`
                   <div class="character-info">
+                    <div class="id"> ID: ${oneCharacter.id} </div>
                       <div class="name">Name: ${oneCharacter.name} </div>
                       <div class="occupation">Occupation: ${oneCharacter.occupation}</div>
                       <div class="debt">Debt: ${oneCharacter.debt}</div>
@@ -79,11 +80,46 @@ class APIHandler {
     });
   }
 
-  updateOneRegister () {
+  updateOneRegister (updateSubmission) {
 
+    const characterId = $('input[name=chr-id]').val();
+    $.ajax({
+      url: 'https://ih-crud-api.herokuapp.com/characters/' + characterId,
+      method: 'PATCH',
+
+      data: updateSubmission,
+
+      success: (postResult) => {
+
+        $('#edit-data').removeClass('failed');
+        $('#edit-data').addClass('active');
+      },
+
+      error: (errorInfo) => {
+        $('#edit-data').removeClass('active');
+        $('#edit-data').addClass('failed');
+      }
+    });
   }
 
   deleteOneRegister () {
+    const characterId = $('input[name=character-id-delete]').val();
 
+       $.ajax(
+         {
+           url: 'https://ih-crud-api.herokuapp.com/characters/' + characterId,
+           method: 'DELETE',
+
+           success: () => {
+             $('#delete-one').removeClass('failed');
+             $('#delete-one').addClass('active');
+               },
+
+           error: (errorInfo) => {
+             $('#delete-one').removeClass('active');
+             $('#delete-one').addClass('failed');
+           }
+
+       });
   }
 }

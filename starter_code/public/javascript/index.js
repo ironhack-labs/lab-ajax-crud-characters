@@ -10,14 +10,15 @@ $(document).ready( () => {
   });
 
   $('#delete-one').on('click', (e) => {
-    charactersAPI.createOneRegister();
+    charactersAPI.deleteOneRegister();
   });
 
   $('#edit-character-form').on('submit', (e) => {
+    charactersAPI.updateOneRegister();
 
   });
 
   $('#new-character-form').on('submit', (e) => {
-
+  charactersAPI.createOneRegister();
   });
 });
