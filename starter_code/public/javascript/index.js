@@ -48,11 +48,11 @@ $(document).ready( () => {
   $('#edit-character-form').on('submit', (e) => {
     e.preventDefault();
     const charObj = {
-      id: $('#edit-character-form > name=["chr-id"]').val(),
-      name: $('#edit-character-form > name=["name"]').val(),
-      occupation: $('#edit-character-form > name=["occupation"]').val(),
-      weapon: $('#edit-character-form > name=["weapon"]').val(),
-      debt: $('#edit-character-form > name=["debt"]').val()
+      id: $('#edit-character-form > [name="chr-id"]').val(),
+      name: $('#edit-character-form > [name="name"]').val(),
+      occupation: $('#edit-character-form > [name="occupation"]').val(),
+      weapon: $('#edit-character-form > [name="weapon"]').val(),
+      debt: $('#edit-character-form > [name="debt"]').val()
     };
     const newChar = charactersAPI.updateOneRegister(charObj);
     if (newChar.hasOwnProperty('name')){
@@ -66,10 +66,10 @@ $(document).ready( () => {
   $('#new-character-form').on('submit', (e) => {
     e.preventDefault();
     const charObj = {
-      name: $('#new-character-form > name=["name"]').val(),
-      occupation: $('#new-character-form > name=["occupation"]').val(),
-      weapon: $('#new-character-form > name=["weapon"]').val(),
-      debt: $('#new-character-form > name=["debt"]').val()
+      name: $('#new-character-form > [name="name"]').val(),
+      occupation: $('#new-character-form > [name="occupation"]').val(),
+      weapon: $('#new-character-form > [name="weapon"]').val(),
+      debt: $('#new-character-form > [name="debt"]').val()
     };
     const newChar = charactersAPI.createOneRegister(charObj);
     if (newChar.hasOwnProperty('name')){

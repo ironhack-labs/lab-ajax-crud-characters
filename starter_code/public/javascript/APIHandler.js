@@ -6,7 +6,7 @@ class APIHandler {
   getFullList () {
     $.ajax({
       method: 'GET',
-      url: `${BASE_URL}`
+      url: `${this.BASE_URL}`
     }).then(allCharacters => {
       return allCharacters;
     }).catch(error => {
@@ -17,7 +17,7 @@ class APIHandler {
   getOneRegister (charId) {
     $.ajax({
       method: 'GET',
-      url: `${BASE_URL}/${charId}`,
+      url: `${this.BASE_URL}/${charId}`,
       data: {
         id: charId
       }
@@ -31,7 +31,7 @@ class APIHandler {
   createOneRegister (charObj) {
     $.ajax({
       method: 'POST',
-      url: `${BASE_URL}`,
+      url: `${this.BASE_URL}`,
       data: {
         name: charObj.name,
         occupation: charObj.occupation,
@@ -48,7 +48,7 @@ class APIHandler {
   updateOneRegister (charId, charObj) {
     $.ajax({
       method: 'PUT',
-      url: `${BASE_URL}/${charId}`,
+      url: `${this.BASE_URL}/${charId}`,
       data: {
         id: charId,
         name: charObj.name,
@@ -66,7 +66,7 @@ class APIHandler {
   deleteOneRegister (charId) {
     $.ajax({
       method: 'DELETE',
-      url: `${BASE_URL}/${charId}`,
+      url: `${this.BASE_URL}/${charId}`,
       data: {
         id: charId
       }
