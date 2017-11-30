@@ -82,8 +82,29 @@ class APIHandler {
     });
   }
 
-  updateOneRegister () {
+  updateOneRegister ( charId, updateName, updateWeapon, updateOccupation ) {
+    $.ajax({
+      method: "PATCH",
+      url: `${this.BASE_URL}/characters/${charId}/`,
+      data: {
+        name: updateName,
+        weapon: updateWeapon,
+        occupation: updateOccupation
+      }
+    })
+    .then( apiResults => {
+      console.log( "PATCH Success!" );
+      console.log( apiResults );
 
+      $('#edit-character-form').data( name, apiResults.name);
+
+     // FILL IN: append html val()?
+
+    })
+    .catch( err => {
+      console.log( "ERROR!" );
+      console.log( err );
+    });
   }
 
   deleteOneRegister () {
