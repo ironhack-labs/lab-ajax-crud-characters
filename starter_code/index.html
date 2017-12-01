@@ -54,14 +54,15 @@
       <div class="operation">
         <label for="character-id">Search by ID: </label>
 
-        <input type="text" name="character-id">
+        <input id="rememberFetchSubmit" type="text" name="character-id" placeholder="Type a Number" />
         <button id="fetch-one">Fetch one</button>
         
       </div>
 
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+
+        <input id="rememberDeleteSubmit" type="text" name="character-id-delete" placeholder="Type a Number" />
 
 
         <button id="delete-one">Delete one</button>
@@ -101,25 +102,25 @@
 
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" id="name">
         </div>
 
 
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" id="occupation">
         </div>
 
 
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" id="weapon">
         </div>
 
 
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input id="debt" type="checkbox">
         </div>
 
 
@@ -148,32 +149,32 @@
 
       <form id="edit-character-form" class="character-form">
         <div class="field">
-          <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <label for="id">Edit ID: </label>
+          <input type="text" id="chr-id">
         </div>
 
 
         <div class="field">
-          <label for="name">Name: </label>
-          <input type="text" name="name">
+          <label for="name">Edit Name: </label>
+          <input type="text" id="name">
         </div>
 
 
         <div class="field">
-          <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <label for="occupation">Edit Occupation: </label>
+          <input type="text" id="occupation">
         </div>
 
 
         <div class="field">
-          <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <label for="weapon">Edit Weapon: </label>
+          <input type="text" id="weapon">
         </div>
 
 
         <div class="field">
-          <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <label for="debt">Edit Has debt: </label>
+          <input id="debt" type="checkbox">
         </div>
 
 

@@ -18,7 +18,10 @@ $(document).ready( () => {
 
   $('#fetch-one').on('click', (e) => {
 
-    please.getOneRegister(3);
+    
+    const storedID = $("#rememberFetchSubmit").val();
+      console.log(storedID);
+    please.getOneRegister( storedID );
 
   }); //Event - #fetch-one
 
@@ -27,6 +30,10 @@ $(document).ready( () => {
 
   $('#delete-one').on('click', (e) => {
 
+    const storedID = $("#rememberDeleteSubmit").val();
+      console.log(storedID);
+    please.deleteOneRegister( storedID );
+
   }); //Event - #delete-one
 
 
@@ -34,12 +41,31 @@ $(document).ready( () => {
 
   $('#edit-character-form').on('submit', (e) => {
 
+    e.preventDefault(); 
+    const storedID = $("#chr-id").val();
+      console.log(storedID);
+    please.updateOneRegister( storedID );
+
   }); //Event - #edit-character-form
 
 
 
 
   $('#new-character-form').on('submit', (e) => {
+    e.preventDefault(); 
+
+    const  newName            = $("#name").val();        
+    const  newOccupation      = $("#occupation").val();  
+    const  newDebt            = $("#debt").val();        
+    const  newWeapon          = $("#weapon").val();  
+
+      
+    please.createOneRegister( newName, newOccupation, newDebt, newWeapon );
+
+
+
+      // This Empties the Form Again
+      $('#new-character-form').trigger("reset");
 
   }); //Event - #new-character-form
 
