@@ -140,6 +140,25 @@ getFullList () {
         console.log("Character has been successfully deleted!");
         console.log(apiResults);
 
+        const editCharHtml =(`
+          <div class="character-info">
+              <div class="name">
+                  Name:   <span>  ${apiResults.name}       </span>
+              </div>
+              <div class="occupation">
+                  Job:    <span>  ${apiResults.occupation} </span>
+              </div>
+              <div class="debt">
+                  Debt:   <span>  ${apiResults.debt}       </span>
+              </div>
+              <div class="weapon">
+                  Weapon: <span>  ${apiResults.weapon}     </span>
+              </div>
+          </div>
+        `);
+
+        $(".characters-container").append(editCharHtml);
+
       })
       .catch((err) => {
         console.log("Character not found");
@@ -148,8 +167,23 @@ getFullList () {
   } // deleteOneRegister()
 
 
-  updateOneRegister () {
-
+  updateOneRegister (charId) {
+    $.ajax({
+        method: "PATCH",
+        url: `${this.BASE_URL}/characters/${charId}`,
+        data: {
+            name: $("#update-name").val(),
+            occupation: $("#update-job").val(),
+            weapon: $("#update-weapon").val(),
+          }
+        })
+        .then ((apiResults) => {
+          console.log("UPDATE SUCCESS!");
+          console.log(apiResults);
+        })
+        .catch((err) => {
+          console.log("UPDATE ERROR");
+          console.log(err);
+        });
+      }
   }
-
-}

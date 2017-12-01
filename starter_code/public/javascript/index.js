@@ -6,13 +6,13 @@ $(document).ready( () => {
   });
 
   $('#fetch-one').on('click', (e) => {
-        event.preventDefault();
+        e.preventDefault();
         const oneId = $('#character-id').val();
         charactersAPI.getOneRegister(oneId);
     });
 
     $('#new-character-form').on('submit', (e) => {
-        event.preventDefault();
+        e.preventDefault();
 
         const charName   =  $("#name-new").val();
         const charWeapon =  $("#weapon-new").val();
@@ -25,12 +25,20 @@ $(document).ready( () => {
     });
 
   $('#delete-one').on('click', (e) => {
-      event.preventDefault();
+      e.preventDefault();
       const oneId = $('#character-id-delete').val();
       charactersAPI.deleteOneRegister(oneId);
   });
 
   $('#edit-character-form').on('submit', (e) => {
+      e.preventDefault();
+
+      // The character ID that we will plug into the API's URL
+      const charId = $("#update-id").val();
+
+      charactersAPI.updateOneRegister (charId);
+
+      $("#edit-character-form").trigger("reset");
 
   });
 
