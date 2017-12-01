@@ -69,13 +69,13 @@ class APIHandler {
 
       success: (postResult) => {
 
-        $('#send-data').removeClass('failed');
-        $('#send-data').addClass('active');
+        $('.submit-button').removeClass('failed');
+        $('.submit-button').addClass('active');
       },
 
       error: (errorInfo) => {
-        $('#send-data').removeClass('active');
-        $('#send-data').addClass('failed');
+        $('.submit-button').removeClass('active');
+        $('.submit-button').addClass('failed');
       }
     });
   }
@@ -91,13 +91,13 @@ class APIHandler {
 
       success: (postResult) => {
 
-        $('#edit-data').removeClass('failed');
-        $('#edit-data').addClass('active');
+        $('.submit-button').removeClass('failed');
+        $('.submit-button').addClass('active');
       },
 
       error: (errorInfo) => {
-        $('#edit-data').removeClass('active');
-        $('#edit-data').addClass('failed');
+        $('.submit-button').removeClass('active');
+        $('.submit-button').addClass('failed');
       }
     });
   }
