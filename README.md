@@ -1,4 +1,4 @@
-# DE | jQuery AJAX CRUD Exercise
+# DE | Axios CRUD Exercise
 
 ## Learning Goals
 
@@ -6,15 +6,15 @@ After this learning unit, you will be able to:
 
 - Create a complete [SPA (Single Page Application)](https://en.wikipedia.org/wiki/Single-page_application)
 - Create, Read, Update, and Delete data from a API
-- Use AJAX to connect with an external API
+- Use Axios to connect with an external API
 
 ## Introduction
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_268cb08540318365df8717153cacce98.png)
 
-In this lesson, we will use all what we have learnt about APIs and how to connect an application to them through AJAX.
+In this lesson, we will use all what we have learnt about APIs and how to connect an application to them through **Axios**.
 
-We will create an application to Create, Read, Update, and Delete characters from the following [Ironhack API](http://ih-crud-api.herokuapp.com/). The routes available in this API are the following:
+We will first create a fake API using **JSON-Server** to then do an  application to Create, Read, Update, and Delete characters from it. The routes available in this API are the following:
 
 - **Verb:** GET, **Route:** "/characters"
   - It receives NO parameters
@@ -68,21 +68,52 @@ In your starter code folder you will find every file you need to finish the game
 
 ## Exercise
 
-### Iteration 1: The `APIHandler.js` file
+### Iteration 1: The Fake API
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_99257e2c4240770e6b4bdd406d943ac8.png)
 
-We will construct a class `APIHandler` to deal with the AJAX calls. The only responsability of this class is to display the JSON result that comes from the API, or give the needed information to the API via a function argument.
+In the `api` folder, you need to create a `db.json` file. Inside our `db.json` we will specify the first 2 characters of our API, so we can start working with some data. Copy/paste the following characters in the file:
+
+```javascript
+{
+  "characters" : [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Blaster Pistol",
+      "id": 1
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": false,
+      "weapon": "Lightsaber",
+      "id": 2
+    }
+  ]
+}
+```
+
+Then run the following code on the terminal to start our API:
+
+```bash
+$ json-server --watch db.json --port 8000
+```
+
+### Iteration 2: The `APIHandler.js` file
+
+We have our API running, so now we will construct a class `APIHandler` to deal with the Axios calls. The only responsability of this class is to display the JSON result that comes from the API, or give the needed information to the API via a function argument.
 
 The funcionalities of the `APIHandler` class are:
 
-- Get all the characters info from *[http://ih-crud-api.herokuapp.com/characters](http://ih-crud-api.herokuapp.com/characters)*
-- Get a single character info from *[http://ih-crud-api.herokuapp.com/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
-- Create a single character posting the data to *[http://ih-crud-api.herokuapp.com/characters](http://ih-crud-api.herokuapp.com/characters)*
-- Delete a single character through his id in *[http://ih-crud-api.herokuapp.com/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
-- Edit a single character through his id in *[http://ih-crud-api.herokuapp.com/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Get all the characters info from *[http://localhost:8000/characters](http://localhost:8000/characters)*
+- Get a single character info from *[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)*
+- Create a single character posting the data to *[http://localhost:8000/characters](http://localhost:8000/characters)*
+- Delete a single character through his id in *[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)*
+- Edit a single character through his id in *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
 
-You have to create an AJAX call for each of these actions. You can create as many functions as you need inside the class, but remember this class should only manage the API request and display the resulting value.
+You have to create an Axios call for each of these actions. You can create as many functions as you need inside the class, but remember this class should only manage the API request and display the resulting value.
 
 <!-- :::success -->
 **Micro-advice**
@@ -92,7 +123,7 @@ To make sure everything is working, use [POSTMAN](https://www.getpostman.com/). 
 
 In this iteration, it's enough to show results in the console.
 
-### Iteration 2: The `index.js` file
+### Iteration 3: The `index.js` file
 
 Once we have the results served by the API in the application, we will create the events that will handle with the CRUD operations.
 
@@ -104,7 +135,7 @@ Retrieve all the available characters in the API and show them in the applicatio
 
 - Create a button (*Fetch all* in the image above) that calls a function in the `APIHandler`.
 - The function will return a JSON object with all the characters.
-- Get the data and show the characters. Finally, with javascript or jQuery, we will create a structure similar to a card (image above) to show every detail of each character.
+- Get the data and show the characters. Finally, with javascript, we will create a structure similar to a card (image above) to show every detail of each character.
 
 #### Fetch one character
 
@@ -113,8 +144,7 @@ Retrieve all the available characters in the API and show them in the applicatio
 Following the same idea as with fetching all, retreive a single character's data we need to:
 
 - Create a button (*Fetch one* in the image above) to, through an input field, get the id of an existing character.
-- Search that character in the API with *[http://ih-crud-api.herokuapp.com/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
-- Get the data and show the character info as a card.
+- Search that character in the API with *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
 
 #### Delete one character
 
@@ -123,7 +153,7 @@ Following the same idea as with fetching all, retreive a single character's data
 To be able to delete a character from the API database, we need to:
 
 - Create a button (*Delete* one in the image above) to get the id of the character we want to delete.
-- Delete that character in the API with *[http://ih-crud-api.herokuapp.com/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Delete that character in the API with *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
    <!-- :::danger -->
    **Remember which HTTP verb you need in the request!!**
    <!-- ::: -->
@@ -137,7 +167,7 @@ To be able to delete a character from the API database, we need to:
 We will create a form with 4 inputs, one for each character field: name(text), occupation(text), weapon(text) and debt(checkbox).
 
 - Create a button (*Create* in the image above) to get all the data from the form.
-- Send the data to the `APIHandler` function to save the new character through *[http://ih-crud-api.herokuapp.com/characters](http://ih-crud-api.herokuapp.com/characters)*
+- Send the data to the `APIHandler` function to save the new character through *[http://localhost:8000/characters](http://ih-crud-api.herokuapp.com/characters)*
    <!-- :::danger -->
    **Remember which HTTP verb you need in the request!!**
    <!-- ::: -->
@@ -151,7 +181,7 @@ We will create a form with 4 inputs, one for each character field: name(text), o
 We will create a form with 4 inputs, one for each field of the characters: name(text), occupation(text), weapon(text) and debt(checkbox). Also, we will create a new input to indicate the `id` of the character we want to edit.
 
 - Create a button (*Update* in the image above) to get all the data from the form.
-- Send the data to the `APIHandler` function to save the new character through *[http://ih-crud-api.herokuapp.com/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Send the data to the `APIHandler` function to save the new character through *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
    <!-- :::danger -->
    **Remember which HTTP verb you need in the request!!**
    <!-- ::: -->
