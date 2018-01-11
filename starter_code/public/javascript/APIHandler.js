@@ -4,22 +4,51 @@ class APIHandler {
   }
 
   getFullList () {
-
+    //console.log("getFullList");
+    return axios.get(this.BASE_URL)
+    .then(r=>{
+      //console.log(r);
+      //console.log(r.data);
+      return r.data;
+    });
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    //console.log("getOneRegister");
+    return axios.get(this.BASE_URL+id)
+    .then(r=>{
+      //console.log(r);
+      //console.log(r.data);
+      return r.data;
+    });
   }
 
-  createOneRegister () {
-
+  createOneRegister (newChar) {
+    //console.log("createOneRegister");
+    return axios.post(this.BASE_URL, newChar)
+    .then(r=>{
+      //console.log(r);
+      //console.log(r.data);
+      //console.log(r.statusText);
+      return r.data;
+    });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (oneChar) {
+    return axios.put(this.BASE_URL+oneChar.id, oneChar)
+    .then(r=>{
+     // console.log(r);
+      //console.log(r.statusText);
+      return r.data;
+    });
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return axios.delete(this.BASE_URL+id)
+    .then(r=>{
+      //console.log(r);
+      //console.log(r.statusText);
+      return r.data;
+    });
   }
 }
