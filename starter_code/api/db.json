@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Blaster Pistol",
+      "id": 1
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": false,
+      "weapon": "Lightsaber",
+      "id": 2
+    },
+    {
+      "name": "bliss",
+      "occupation": "hacker",
+      "weapon": "mac",
+      "debt": false,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "BlisS",
+      "occupation": "mijo",
+      "weapon": "perro",
+      "debt": false
+    },
+    {
+      "name": "chancleta",
+      "occupation": "singer",
+      "weapon": "mic",
+      "debt": false,
+      "id": 5
+    },
+    {
+      "name": "pobre",
+      "occupation": "feto",
+      "weapon": "trabaja",
+      "debt": false,
+      "id": 6
+    }
+  ]
+}
