@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
+
   <title>IH Characters</title>
 </head>
 <body>
@@ -58,7 +58,7 @@
           <label for="debt">Has debt: </label>
           <input name="debt" type="checkbox">
         </div>
-        <button class="submit-button">Create</button>
+        <button id="send-data">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -84,10 +84,13 @@
           <label for="debt">Has debt: </label>
           <input name="debt" type="checkbox">
         </div>
-        <button class="submit-button">Update</button>
+        <button id="send-data">Update</button>
       </form>
     </section>
   </section>
 
+  <!-- Must Link Script Files in Order to Use Methods -->
+  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
+  <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
 </html>
