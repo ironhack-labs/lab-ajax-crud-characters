@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Man Solo",
+      "occupation": "Old Smuggler",
+      "weapon": "Old Blaster Pistol",
+      "debt": true
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": false,
+      "weapon": "Lightsaber",
+      "id": 2
+    }
+  ]
+}
