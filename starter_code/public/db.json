@@ -1,0 +1,17 @@
+{
+  "characters": [
+    {
+      "id": 1
+    },
+    {
+      "name": "B",
+      "occupation": "B",
+      "debt": "on",
+      "weapon": "B",
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ]
+}
