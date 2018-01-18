@@ -1,0 +1,17 @@
+{
+  "characters": [
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": false,
+      "weapon": "Lightsaber",
+      "id": 2
+    },
+    {
+      "name": "Padme",
+      "occupation": "Queen",
+      "weapon": "BRAIN",
+      "id": 3
+    }
+  ]
+}
