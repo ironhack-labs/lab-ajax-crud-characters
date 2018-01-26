@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 
+
+const autoIncrement = require('mongoose-auto-increment');
+autoIncrement.initialize(mongoose.createConnection('mongodb://localhost/lab-character'));
+
 const characterSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -19,6 +23,8 @@ const characterSchema = new mongoose.Schema({
         required: [true, 'Weapon is required']
     }
 }, { timestamps: true });
+
+characterSchema.plugin(autoIncrement.plugin, 'Book');
 
 const Character = mongoose.model('Character', characterSchema);
 module.exports = Character;

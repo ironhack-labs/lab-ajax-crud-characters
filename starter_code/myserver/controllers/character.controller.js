@@ -2,17 +2,22 @@ const mongoose = require('mongoose');
 const Character = require('../models/character.model');
 
 module.exports.show = (req, res, next) => {
-  console.log("MUESTRA");
-  res.json({
-    Suerte: "LLEGO"
-  });
-  // res.render('user/profile', {
-  //     session: req.user
-  // });
+  Character.find()
+  .sort({ createdAt: -1 })
+  .then((characters) => {
+    res.json({
+      characters:characters
+    });
+  }).catch(error => next(error));
 
 };
 module.exports.create = (req, res, next) => {
-  const {name, occupation, debt, weapon} = req.body;
+  const {
+    name,
+    occupation,
+    debt,
+    weapon
+  } = req.body;
   if (!name || !occupation || !debt || !weapon) {
     res.json({
       error: {
@@ -22,40 +27,40 @@ module.exports.create = (req, res, next) => {
         weapon: weapon ? '' : 'weapon is required'
       }
     });
-  }else{
-    console.log(name+'AAAAAAAAAAAAAAAAAAA');
-    
+  } else {
     Character.findOne({
-      name: name
-    })
-    .then(character => {
-      console.log(name+'AAAAAAAAAAAAAAAAAAA');
-      if (character != null) {
-        res.json({
-          error: {
-            name: 'name already exists'
-          }
-        });
-      } else {
-        console.log("AAAAAAAA");
-        character = new Character(req.body);
-        character.save()
-          .then(() => {
-            res.json({
-              Suerte: "CREACION DE PERSONAJE CORRECTA"
-            });
-          }).catch(error => {
-            if (error instanceof mongoose.Error.ValidationError) {
-              res.json({
-                character: character,
-                error: error.errors
-              });
-            } else {
-              next(error);
+        name: name
+      })
+      .then(character => {
+        if (character != null) {
+          res.json({
+            error: {
+              name: 'name already exists'
             }
           });
-      }
-    }).catch(error => next(error));
+        } else {
+          character = new Character(req.body);
+          character.save()
+            .then(() => {
+              Character.find().then((characters) => {
+                res.json({
+                  characters:characters,
+                  message:'Character save succesfully!!'
+                });
+              }).catch(error => next(error));
+            })
+            .catch(error => {
+              if (error instanceof mongoose.Error.ValidationError) {
+                res.json({
+                  character: character,
+                  error: error.errors
+                });
+              } else {
+                next(error);
+              }
+            });
+        }
+      }).catch(error => next(error));
   }
 
 };
