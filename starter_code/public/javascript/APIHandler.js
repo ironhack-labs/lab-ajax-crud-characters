@@ -28,11 +28,12 @@ class APIHandler {
   }
 
   createOneRegister(values) {
-    
+    let debt;
+    (values.debt === "on") ? debt = true: debt = false;
     axios.post(this.BASE_URL + '/characters', {
       name: values.name,
       occupation: values.occupation,
-      debt: values.debt,
+      debt: debt,
       weapon: values.weapon,
     })
     .then(function (response) {
