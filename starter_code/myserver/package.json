@@ -1,0 +1,23 @@
+{
+  "name": "myserver",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "DEBUG=ex-passport-auth:* nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.9",
+    "ejs": "~2.5.7",
+    "eslint": "^4.16.0",
+    "express": "^4.15.5",
+    "favicon": "0.0.2",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {
+    "json-server": "^0.12.1"
+  }
+}
