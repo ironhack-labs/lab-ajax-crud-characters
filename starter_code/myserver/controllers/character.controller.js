@@ -3,13 +3,20 @@ const Character = require('../models/character.model');
 
 module.exports.show = (req, res, next) => {
   Character.find()
-  .sort({ createdAt: -1 })
-  .then((characters) => {
-    res.json({
-      characters:characters
-    });
-  }).catch(error => next(error));
+    .then((characters) => {
+      res.json({
+        characters
+      });
+    }).catch(error => next(error));
 
+};
+module.exports.showById = (req, res, next) => {
+  Character.findById(req.params.id)
+    .then((characters) => {
+      res.json({
+        characters
+      });
+    }).catch(error => next(error));
 };
 module.exports.create = (req, res, next) => {
   const {
@@ -42,12 +49,16 @@ module.exports.create = (req, res, next) => {
           character = new Character(req.body);
           character.save()
             .then(() => {
-              Character.find().then((characters) => {
-                res.json({
-                  characters:characters,
-                  message:'Character save succesfully!!'
-                });
-              }).catch(error => next(error));
+              Character.find()
+                .sort({
+                  createdAt: -1
+                })
+                .then((characters) => {
+                  res.json({
+                    characters: characters,
+                    message: 'Character save succesfully!!'
+                  });
+                }).catch(error => next(error));
             })
             .catch(error => {
               if (error instanceof mongoose.Error.ValidationError) {
@@ -63,4 +74,41 @@ module.exports.create = (req, res, next) => {
       }).catch(error => next(error));
   }
 
+};
+module.exports.updateById = (req, res, next) => {
+  console.log("HOLAAAAAAAAAAAAAAAAAAA");
+  
+  res.json({hola:"muy bien"});
+
+
+  // const {
+  //   id,
+  //   name,
+  //   occupation,
+  //   debt,
+  //   weapon
+  // } = req.body;
+  // if (!name || !occupation || !debt || !weapon) {
+  //   res.json({
+  //     error: {
+  //       id: id ? '' : 'id is required',
+  //       name: name ? '' : 'name is required',
+  //       occupation: occupation ? '' : 'occupation is required',
+  //       debt: debt ? '' : 'debt is required',
+  //       weapon: weapon ? '' : 'weapon is required'
+  //     }
+  //   });
+  // } else {
+  //   const character = new Character(req.body);
+  //   User.findByIdAndUpdate(character._id, character)
+  //     .then(currentCharac => {
+  //       Character.find()
+  //         .then((characters) => {
+  //           res.json({
+  //             characters
+  //           });
+  //         }).catch(error => next(error));
+  //     })
+  //     .catch(error => next(error));
+  // }
 };
