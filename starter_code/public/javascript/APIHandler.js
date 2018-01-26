@@ -4,13 +4,12 @@ class APIHandler {
   }
 
   getFullList() {
-    $("#ulResult ul").remove();
+    $("#olResult").empty();
     axios.get(this.BASE_URL + '/characters')
       .then(function (response) {
         let i = 1;
         response.data.characters.forEach(charac => {
-          // $("#olResult").append($("<h5><strong>" + (i++) + "</strong></h5>"))
-          $("#olResult").append($("<ol><li>name: " + charac.name + "</li><li>occupation: " +
+          $("#olResult").append($("<ol><li>Id: " + charac._id + "</li><li>name: " + charac.name + "</li><li>occupation: " +
             charac.occupation + "</li><li>debt: " + charac.debt + "</li><li>weapon: " +
             charac.weapon + "</li></ol>"));
         });
@@ -35,7 +34,7 @@ class APIHandler {
   }
 
   createOneRegister(values) {
-    $("#ulResult").remove();
+    $("#olResult").empty();
     let debt;
     (values.debt === "on") ? debt = true: debt = false;
     axios.post(this.BASE_URL + '/characters', {
@@ -46,14 +45,11 @@ class APIHandler {
       })
       .then(function (response) {
         console.log(response);
+        let i = 1;
         response.data.characters.forEach(charac => {
-          console.log(charac);
-          $("#ulResult").append($("<ul>"));
-          $("#ulResult").append($("<li>name: " + charac.name + "</li>"));
-          $("#ulResult").append($("<li>occupation: " + charac.occupation + "</li>"));
-          $("#ulResult").append($("<li>debt: " + charac.debt + "</li>"));
-          $("#ulResult").append($("<li>weapon: " + charac.weapon + "</li>"));
-          $("#ulResult").append($("</ul>"));
+          $("#olResult").append($("<ol><li>Id: " + charac._id + "</li><li>name: " + charac.name + "</li><li>occupation: " +
+            charac.occupation + "</li><li>debt: " + charac.debt + "</li><li>weapon: " +
+            charac.weapon + "</li></ol>"));
         });
       })
       .catch(function (error) {
