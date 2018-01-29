@@ -1,9 +1,17 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready(() => {
-  document.getElementById('fetch-all').onclick = function () {
 
-  }
+  $('#new-character-form').on('submit', (event) => {
+    event.preventDefault();
+    var $inputs = $('#new-character-form :input');
+    var values = {};
+    $inputs.each(function () {
+      values[this.name] = $(this).val();
+    });
+    charactersAPI.createOneRegister(values);
+  });
+
   $("#fetch-all").click(function () {
     charactersAPI.getFullList();
   });
@@ -11,10 +19,6 @@ $(document).ready(() => {
   $("#fetch-one").click(function () {
     charactersAPI.getOneRegister($( "#character-id" ).val());
   });
-
-  document.getElementById('delete-one').onclick = function () {
-
-  }
 
   $('#edit-character-form').on('submit', (event) => {
     event.preventDefault();
@@ -26,14 +30,11 @@ $(document).ready(() => {
     charactersAPI.updateOneRegister(values);
   });
 
-  $('#new-character-form').on('submit', (event) => {
-    event.preventDefault();
+  document.getElementById('delete-one').onclick = function () {
 
-    var $inputs = $('#new-character-form :input');
-    var values = {};
-    $inputs.each(function () {
-      values[this.name] = $(this).val();
-    });
-    charactersAPI.createOneRegister(values);
-  });
+  }
+
+
+
+
 })

@@ -76,39 +76,39 @@ module.exports.create = (req, res, next) => {
 
 };
 module.exports.updateById = (req, res, next) => {
-  console.log("HOLAAAAAAAAAAAAAAAAAAA");
-  
-  res.json({hola:"muy bien"});
-
-
-  // const {
-  //   id,
-  //   name,
-  //   occupation,
-  //   debt,
-  //   weapon
-  // } = req.body;
-  // if (!name || !occupation || !debt || !weapon) {
-  //   res.json({
-  //     error: {
-  //       id: id ? '' : 'id is required',
-  //       name: name ? '' : 'name is required',
-  //       occupation: occupation ? '' : 'occupation is required',
-  //       debt: debt ? '' : 'debt is required',
-  //       weapon: weapon ? '' : 'weapon is required'
-  //     }
-  //   });
-  // } else {
-  //   const character = new Character(req.body);
-  //   User.findByIdAndUpdate(character._id, character)
-  //     .then(currentCharac => {
-  //       Character.find()
-  //         .then((characters) => {
-  //           res.json({
-  //             characters
-  //           });
-  //         }).catch(error => next(error));
-  //     })
-  //     .catch(error => next(error));
-  // }
+  const {
+    id,
+    name,
+    occupation,
+    debt,
+    weapon
+  } = req.body;
+  if (!name || !occupation || !debt || !weapon) {
+    res.json({
+      error: {
+        id: id ? '' : 'id is required',
+        name: name ? '' : 'name is required',
+        occupation: occupation ? '' : 'occupation is required',
+        debt: debt ? '' : 'debt is required',
+        weapon: weapon ? '' : 'weapon is required'
+      }
+    });
+  } else {
+    const character = new Character(req.body);
+    
+    Character.findByIdAndUpdate(character._id, character)
+      .then(currentCharac => {
+        Character.find()
+          .sort({
+            createdAt: -1
+          })
+          .then((characters) => {
+            res.json({
+              characters: characters,
+              message: 'Character update succesfully!!'
+            });
+          }).catch(error => next(error));
+      })
+      .catch(error => next(error));
+  }
 };
