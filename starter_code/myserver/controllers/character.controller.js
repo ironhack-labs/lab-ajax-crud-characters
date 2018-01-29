@@ -11,12 +11,29 @@ module.exports.show = (req, res, next) => {
 
 };
 module.exports.showById = (req, res, next) => {
-  Character.findById(req.params.id)
-    .then((characters) => {
-      res.json({
-        characters
-      });
-    }).catch(error => next(error));
+  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  console.log("AAAAAAAAAAAAAAAAAAASSSSSSSSSAAA");
+  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  console.log("req.params.id = "+req.params.id);
+  
+  const _id=req.params.id;
+  if (!_id) {
+    res.json({
+      error: {
+        id: _id ? '' : 'id is required'
+      }
+    });
+  } else {
+    console.log("ZZZZZZaaaaaaaaaZZZZZZZZ");
+    Character.findById(req.params.id)
+      .then((characters) => {
+        
+        res.json({
+          characters
+        });
+      }).catch(error => next(error));
+  }
 };
 module.exports.create = (req, res, next) => {
   const {
@@ -95,7 +112,6 @@ module.exports.updateById = (req, res, next) => {
     });
   } else {
     const character = new Character(req.body);
-    
     Character.findByIdAndUpdate(character._id, character)
       .then(currentCharac => {
         Character.find()
