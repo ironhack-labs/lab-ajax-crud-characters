@@ -87,21 +87,39 @@ class APIHandler {
       .catch(function (error) {
         console.log(error);
       });
+    }      
 
+  deleteOneRegister(id) {
+    $("#olResult").empty();
+    if(id){
+      axios.post(this.BASE_URL + '/characters/delete/' + id)
+        .then(function (response) {
+          console.log(response);
+          paintText(response);
+          response.data.characters.forEach(charac => {
+            $("#olResult").append($("<ol><li>Id: " + charac._id + "</li><li>name: " + charac.name + "</li><li>occupation: " +
+              charac.occupation + "</li><li>debt: " + charac.debt + "</li><li>weapon: " +
+              charac.weapon + "</li></ol>"));
+          });
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }else{
+      $("#olResult").append($(`<h4>You need an ID</h4>`));
     }
-      
-
-  deleteOneRegister() {
-
   }
 }
 function paintText(response){  
   if(response.data.message){
-    $("#olResult").append($(`<h4>${response.data.message}</h4>`));
+    $("#olResult").append($(`<div><h4>${response.data.message}</h4></div>`));
   }
   if(response.data.error){
     $("#olResult").append($("<ol><li>Id: " + response.data.error.id + "</li><li>name: " + response.data.error.name + "</li><li>occupation: " +
         response.data.error.occupation + "</li><li>debt: " + response.data.error.debt + "</li><li>weapon: " +
         response.data.error.weapon + "</li></ol>"));
+  }
+  if(response.data.characters===null){
+    $("#olResult").append($(`<h4>No Characters found</h4>`));
   }
 }

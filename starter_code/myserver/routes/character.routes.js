@@ -7,6 +7,6 @@ router.get('/', characterController.show);
 router.get('/:id', characterController.showById);
 router.post('/', characterController.create);
 router.post('/update/:id', characterController.updateById);
-// router.post('/delete/:id', characterController.deleteById);
+router.post('/delete/:id', characterController.deleteById);
 
 module.exports = router;

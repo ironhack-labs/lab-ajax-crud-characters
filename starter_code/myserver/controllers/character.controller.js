@@ -11,13 +11,7 @@ module.exports.show = (req, res, next) => {
 
 };
 module.exports.showById = (req, res, next) => {
-  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-  console.log("AAAAAAAAAAAAAAAAAAASSSSSSSSSAAA");
-  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-  console.log("req.params.id = "+req.params.id);
-  
-  const _id=req.params.id;
+  const _id = req.params.id;
   if (!_id) {
     res.json({
       error: {
@@ -25,10 +19,9 @@ module.exports.showById = (req, res, next) => {
       }
     });
   } else {
-    console.log("ZZZZZZaaaaaaaaaZZZZZZZZ");
     Character.findById(req.params.id)
       .then((characters) => {
-        
+
         res.json({
           characters
         });
@@ -100,7 +93,7 @@ module.exports.updateById = (req, res, next) => {
     debt,
     weapon
   } = req.body;
-  if (!name || !occupation || !debt || !weapon) {
+  if (!id || !name || !occupation || !debt || !weapon) {
     res.json({
       error: {
         id: id ? '' : 'id is required',
@@ -126,5 +119,30 @@ module.exports.updateById = (req, res, next) => {
           }).catch(error => next(error));
       })
       .catch(error => next(error));
+  }
+};
+
+module.exports.deleteById = (req, res, next) => {
+  const _id = req.params.id;
+  if (!_id) {
+    res.json({
+      error: {
+        id: _id ? '' : 'id is required'
+      }
+    });
+  } else {
+    Character.findByIdAndRemove(req.params.id)
+      .then((characters) => {
+        Character.find()
+          .sort({
+            createdAt: -1
+          })
+          .then((characters) => {
+            res.json({
+              characters: characters,
+              message: 'Character Deleted succesfully!!'
+            });
+          }).catch(error => next(error));
+      }).catch(error => next(error));
   }
 };

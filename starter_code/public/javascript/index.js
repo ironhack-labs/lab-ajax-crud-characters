@@ -30,9 +30,10 @@ $(document).ready(() => {
     charactersAPI.updateOneRegister(values);
   });
 
-  document.getElementById('delete-one').onclick = function () {
+  $("#delete-one").click(function () {
+    charactersAPI.deleteOneRegister($( "#character-id-delete" ).val());
+  });
 
-  }
 
 
 
