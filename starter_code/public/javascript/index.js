@@ -57,15 +57,6 @@ var charactersAPI = new APIHandler("http://ih-api.herokuapp.com")
       event.preventDefault();
     });
   }
-  
-  //document.getElementById('edit-character-form').onsubmit = function(){
-            
-  //}
-  
-  //document.getElementById('new-character-form').onsubmit = function(){
-                
-  //}
-
 
 
 
