@@ -11,9 +11,8 @@ function showFeedback(postResponse) {
 }
 
 $('#create-button').on('click', (event) => {
-  function createCharacter(character) {
-    $('.character-form').on('submit', (event) => {
-      event.preventDefault();
+  event.preventDefault();
+  console.log('form submit');
 
       const characterInfo = {
         name: $('#name').val(),
@@ -29,10 +28,9 @@ $('#create-button').on('click', (event) => {
         success: showFeedback,
         error: handleError
       })
-    });
-  }
 });
   $('#update-button').on('click', (event) => {
+    event.preventDefault();
     function updateCharacter(character) {
       $('#edit-character-form').on('submit', (event) => {
         event.preventDefault();
