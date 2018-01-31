@@ -1,4 +1,4 @@
-const charactersAPI = new APIHandler("http://ih-api.herokuapp.com")
+var charactersAPI = new APIHandler("http://ih-api.herokuapp.com")
 
   function handleError (err) {
     console.log('Oh noooo! Error:');
