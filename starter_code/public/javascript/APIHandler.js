@@ -9,12 +9,18 @@ class APIHandler {
     .catch(err => {
       console.log('Error')
     })
-  };
+  }
 
 
 
   getOneRegister(id) {
-    $.get(`${this.BASE_URL}characters/` + id)
+
+    return $.get(`${this.BASE_URL}characters/` + id)
+    
+    .catch(err => {
+      console.log('Error')
+    })
+
   }
 
 

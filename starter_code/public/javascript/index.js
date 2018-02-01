@@ -82,17 +82,28 @@ $("#edit-character-form").on("submit", event => {
 
 });
 
-$("#delete-one").on("click", event => {
-  event.preventDefault();
-  $(".characters-container").empty();
-});
 
-
-  
 
 $('#fetch-all').on('click', (event) => {
   event.preventDefault()
   charactersAPI.getFullList().then(updateInfo => {
   console.log(updateInfo)
   });
+})
+
+
+$('#fetch-one').on('click', (event) => {
+  event.preventDefault()
+  const charId = $("section.operations input[name='character-id'").val()
+  console.log(charId)
+  charactersAPI.getOneRegister(charId)
+    console.log(charId)
+});
+
+
+
+$('#delete-one').on('click', (e) => {
+
+  charactersAPI.deleteOneRegister(charId)
+  .then(updateCharacters(charId))
 })
