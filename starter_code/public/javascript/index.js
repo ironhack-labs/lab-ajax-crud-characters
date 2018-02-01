@@ -98,4 +98,5 @@ $("#delete-one").on("click", e => {
   charactersAPI.deleteOneRegister(charId).then(updateInfo => {
     console.log(updateInfo);
   });
+  
 });
