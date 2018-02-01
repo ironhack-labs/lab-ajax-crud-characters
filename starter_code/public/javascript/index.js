@@ -7,7 +7,7 @@ function showFeedback(postResponse) {
         <p> Id: ${postResponse.id} </p>
       </li>
     `;
-  $("#new-character-form").append(newCharacterHtml);
+  $("#characters-list").append(newCharacterHtml);
 }
 
 function handleError(err) {
@@ -15,27 +15,20 @@ function handleError(err) {
   console.log(err);
 }
 
-$('#create-button').on('submit', (event) => {
+$('#new-character-form').on('submit', (event) => {
   event.preventDefault();
-
+  console.log("hello its me");
   const characterInfo = {
     name: $("#name").val(),
     occupation: $("#occupation").val(),
     weapon: $("#weapon").val(),
     debt: $("#debt").val(),
   };
-
-  $.ajax({
-    method: "POST",
-    url: "https://ih-crud-api.herokuapp.com/characters",
-    data: characterInfo,
-    success: showFeedback,
-    error: handleError
-  });
 });
 
 $("#edit-character-form").on("submit", event => {
   event.preventDefault();
+  console.log("Hi");
   const updateInfo = {
     id: $("#id").val(),
     name: $("#name").val(),
@@ -44,17 +37,6 @@ $("#edit-character-form").on("submit", event => {
     debt: $("#debt").val()
   };
   const charId = $("#id").val();
-
-  $.ajax({
-    method: "PATCH",
-    url: `https://ih-crud-api.herokuapp.com/characters/${charId}`,
-    data: updateInfo,
-    success: patchResponse => {
-      console.log("Oh lalaaaa SUCCESS!");
-      console.log(patchResponse);
-    },
-    error: handleError
-  });
 });
 
 $("#delete-one").on("click", event => {

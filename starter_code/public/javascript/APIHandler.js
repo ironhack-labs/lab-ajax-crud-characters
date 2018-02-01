@@ -14,7 +14,7 @@ class APIHandler {
 
 
 
-  getOneRegister(id) {
+  getOneRegister(charId) {
     return $.ajax({
       url: $.get(`${this.BASE_URL}characters/` + id)
     })
@@ -32,7 +32,7 @@ class APIHandler {
 
 
 
-  updateOneRegister(data, id) {
+  updateOneRegister(data, charId) {
     return $.ajax({
       url: `${this.BASE_URL}/characters/` + id,
       method: "PATCH",
