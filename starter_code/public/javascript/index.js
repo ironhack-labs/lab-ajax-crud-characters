@@ -15,33 +15,66 @@ function handleError(err) {
   console.log(err);
 }
 
-$('#new-character-form').on('submit', (event) => {
+
+
+function catchData() {
+  return {
+    name: $("#new-character-form input[name='name']").val(),
+    occupation: $("#new-character-form input[name='occupation']").val(),
+    weapon: $("#new-character-form input[name='weapon']").val(),
+    debt: $("#new-character-form input[type='checkbox']").is(":checked"),
+  };
+}
+
+function catchUpdates() {
+  return {
+    id: $("#edit-character-form input[name='chr-id']").val(),
+    name: $("#edit-character-form input[name='name']").val(),
+    occupation: $("#edit-character-form input[name='occupation']").val(),
+    weapon: $("#edit-character-form input[name='weapon']").val(),
+    debt: $("#edit-character-form input[type='checkbox']").is(":checked")
+  };
+}
+
+$("#new-character-form").on("submit", event => {
   event.preventDefault();
   console.log("hello its me");
+  const data = catchData();
+  charactersAPI.createOneRegister(data)
+
+
   const characterInfo = {
-    name: $("#name").val(),
-    occupation: $("#occupation").val(),
-    weapon: $("#weapon").val(),
-    debt: $("#debt").val(),
+    name: $("#new-character-name").val(),
+    occupation: $("#new-character-occupation").val(),
+    weapon: $("#new-character-weapon").val(),
+    debt: $("#new-character-debt").val()
   };
+
+  console.log(characterInfo);
 });
 
 $("#edit-character-form").on("submit", event => {
   event.preventDefault();
+
   console.log("Hi");
+  const updates = catchUpdates();
+  const charId = updates.id;
+
+  charactersAPI.updateOneRegister(updates, charId)
+  console.log("hello")
+
   const updateInfo = {
-    id: $("#id").val(),
-    name: $("#name").val(),
-    occupation: $("#occupation").val(),
-    weapon: $("#weapon").val(),
-    debt: $("#debt").val()
+    id: $("#updated-id").val(),
+    name: $("#updated-name").val(),
+    occupation: $("#updated-occupation").val(),
+    weapon: $("#updated-weapon").val(),
+    debt: $("#updated-debt").val()
   };
-  const charId = $("#id").val();
+  console.log("hello");
+  console.log(updateInfo);
 });
 
 $("#delete-one").on("click", event => {
   event.preventDefault();
   $(".characters-container").empty();
 });
-
-

@@ -14,10 +14,8 @@ class APIHandler {
 
 
 
-  getOneRegister(charId) {
-    return $.ajax({
-      url: $.get(`${this.BASE_URL}characters/` + id)
-    })
+  getOneRegister(id) {
+    $.get(`${this.BASE_URL}characters/` + id)
   }
 
 
@@ -32,19 +30,21 @@ class APIHandler {
 
 
 
-  updateOneRegister(data, charId) {
+  updateOneRegister(data, id) {
     return $.ajax({
-      url: `${this.BASE_URL}/characters/` + id,
+      url: `${this.BASE_URL}characters/` + id,
       method: "PATCH",
       data: data,
+      
     })
+    charactersAPI.getFullList()
   }
 
 
 
   deleteOneRegister(id) {
     return $.ajax({
-      url: `${this.BASE_URL}/characters/` + id,
+      url: `${this.BASE_URL}characters/` + id,
       method: "DELETE"
     })
   }
