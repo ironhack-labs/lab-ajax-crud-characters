@@ -92,11 +92,12 @@ $("#fetch-one").on("click", event => {
   });
 });
 
-$("#delete-one").on("click", e => {
-  const charId = $("section.operations input[name='character-id'").val();
+$("#delete-one").on("click", event => {
+  event.preventDefault();
+  const charId = $("input[name='character-id-delete']").val()
   console.log(charId);
   charactersAPI.deleteOneRegister(charId).then(updateInfo => {
     console.log(updateInfo);
   });
-  
+
 });
