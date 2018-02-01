@@ -96,10 +96,10 @@ $('#fetch-one').on('click', (event) => {
   event.preventDefault()
   const charId = $("section.operations input[name='character-id'").val()
   console.log(charId)
-  charactersAPI.getOneRegister(charId)
-    console.log(charId)
+  charactersAPI.getOneRegister(charId).then(updateInfo => {
+    console.log(updateInfo)
 });
-
+})
 
 
 $('#delete-one').on('click', (e) => {
