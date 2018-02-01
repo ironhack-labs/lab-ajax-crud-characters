@@ -6,7 +6,7 @@ class APIHandler {
 
   getFullList() {
     return $.ajax({
-      url: $.get(`${this.BASE_URL}/characters`)
+      url: $.get(`${this.BASE_URL}characters`)
     }).catch(err => {
       console.log('Error')
     })
@@ -16,7 +16,7 @@ class APIHandler {
 
   getOneRegister(id) {
     return $.ajax({
-      url: $.get(`${this.BASE_URL}/characters/` + id)
+      url: $.get(`${this.BASE_URL}characters/` + id)
     })
   }
 
@@ -24,8 +24,8 @@ class APIHandler {
 
   createOneRegister(data) {
     return $.ajax({
+      url: `${this.BASE_URL}characters`,
       method: "POST",
-      url: `${this.BASE_URL}/characters`,
       data: data
     })
   }
@@ -34,21 +34,19 @@ class APIHandler {
 
   updateOneRegister(data, id) {
     return $.ajax({
+      url: `${this.BASE_URL}/characters/` + id,
       method: "PATCH",
       data: data,
-      url: `${this.BASE_URL}/characters/` + id
     })
-
   }
 
 
 
   deleteOneRegister(id) {
     return $.ajax({
-      method: "DELETE",
-      url: `${this.BASE_URL}/characters/` + id
+      url: `${this.BASE_URL}/characters/` + id,
+      method: "DELETE"
     })
-
   }
 
 }
