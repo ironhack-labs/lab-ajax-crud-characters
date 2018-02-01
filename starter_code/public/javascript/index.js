@@ -12,6 +12,7 @@ function showFeedback(postResponse) {
   console.log(postResponse.id)
 }
 
+
 function handleError(err) {
   console.log("Oh noooo! Error");
   console.log(err);
@@ -52,10 +53,8 @@ $("#new-character-form").on("submit", event => {
     debt: $("#new-character-debt").val()
   };
   $.ajax({
-    // Notice that we are using POST
     method: "POST",
     url: "https://ih-crud-api.herokuapp.com/characters",
-    // The data key is for sending data in a POST, PUT or PATCH!
     data: characterInfo,
     success: showFeedback,
     error: handleError
@@ -66,13 +65,9 @@ $("#new-character-form").on("submit", event => {
 
 $("#edit-character-form").on("submit", event => {
   event.preventDefault();
-
   console.log("Hi");
   const updates = catchUpdates();
-
-
   console.log("hello")
-
   const updateInfo = {
     id: $("#updated-id").val(),
     name: $("#updated-name").val(),
@@ -91,3 +86,13 @@ $("#delete-one").on("click", event => {
   event.preventDefault();
   $(".characters-container").empty();
 });
+
+
+  
+
+$('#fetch-all').on('click', (event) => {
+  event.preventDefault()
+  charactersAPI.getFullList().then(updateInfo => {
+  console.log(updateInfo)
+  });
+})

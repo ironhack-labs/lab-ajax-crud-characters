@@ -5,9 +5,8 @@ class APIHandler {
 
 
   getFullList() {
-    return $.ajax({
-      url: $.get(`${this.BASE_URL}characters`)
-    }).catch(err => {
+    return $.get(`${this.BASE_URL}characters`)
+    .catch(err => {
       console.log('Error')
     })
   };
