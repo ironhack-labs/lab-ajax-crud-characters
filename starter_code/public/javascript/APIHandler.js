@@ -1,25 +1,42 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  getFullList() {
+    return $.get(`${this.BASE_URL}characters`).catch(err => {
+      console.log("Error");
+    });
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return $.get(`${this.BASE_URL}characters/` + id)
+    .catch(err => {
+      console.log("Error");
+    });
   }
 
-  createOneRegister () {
-
+  createOneRegister(data) {
+    return $.ajax({
+      url: `${this.BASE_URL}characters`,
+      method: "POST",
+      data: data
+    });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(data, id) {
+    return $.ajax({
+      url: `${this.BASE_URL}characters/` + id,
+      method: "PATCH",
+      data: data
+    });
+    charactersAPI.getFullList();
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    return $.ajax({
+      url: `${this.BASE_URL}characters/` + id,
+      method: "DELETE"
+    });
   }
 }
