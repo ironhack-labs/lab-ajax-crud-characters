@@ -1,0 +1,21 @@
+{
+  "characters": [
+    {
+      "id": 1
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": false,
+      "weapon": "Lightsaber",
+      "id": 2
+    },
+    {
+      "name": "Chewbacca",
+      "occupation": "Animal",
+      "debt": "false",
+      "weapon": "Fists",
+      "id": 3
+    }
+  ]
+}
