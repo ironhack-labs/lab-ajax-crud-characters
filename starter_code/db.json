@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Hann Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Blaster Pistol",
+      "id": 1
+    },
+    {
+      "name": "AAA",
+      "occupation": "AAA",
+      "debt": false,
+      "weapon": "AAA",
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "debt": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "debt": false,
+      "id": 11
+    }
+  ]
+}
