@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <script type="text/javascript" src="./public/javascript/index.js"></script>
   <title>IH Characters</title>
 </head>
+
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
@@ -65,29 +67,30 @@
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
-          <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <label for="character-id-input">ID: </label>
+          <input type="text" name="character-id-input">
         </div>
         <div class="field">
-          <label for="name">Name: </label>
-          <input type="text" name="name">
+          <label for="update-name-input">Name: </label>
+          <input type="text" name="update-name-input">
         </div>
         <div class="field">
-          <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <label for="update-occupation-input">Occupation: </label>
+          <input type="text" name="update-occupation-input">
         </div>
         <div class="field">
-          <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <label for="update-weapon-input">Weapon: </label>
+          <input type="text" name="update-weapon-input">
         </div>
         <div class="field">
-          <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <label for="update-debt-check">Has debt: </label>
+          <input name="update-debt-check" type="checkbox">
         </div>
-        <button class="submit-button">Update</button>
+        <button id="Edit-button" class="submit-button">Update</button>
       </form>
     </section>
   </section>
 
 </body>
+
 </html>
