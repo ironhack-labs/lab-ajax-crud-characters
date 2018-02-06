@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "abc",
+      "occupation": "a",
+      "weapon": "d",
+      "debt": true,
+      "id": 1
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": false,
+      "weapon": "Lightsaber",
+      "id": 2
+    },
+    {
+      "name": "A",
+      "occupation": "S",
+      "weapon": "d",
+      "debt": "on",
+      "id": 3
+    }
+  ]
+}
