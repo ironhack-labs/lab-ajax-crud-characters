@@ -1,0 +1,59 @@
+{
+  "characters": [
+    {
+      "name": "The Bourbon Kid",
+      "id": 3,
+      "occupation": "Zombie smasher",
+      "catchPhrase": "Pour me some Bourbon",
+      "weapon": "Desert Eagle",
+      "debt": true
+    },
+    {
+      "name": "Toto",
+      "occupation": "Ballbreaker",
+      "catchPhrase": "Zero plus Zero c la tete a toto",
+      "weapon": "Fart",
+      "id": 4,
+      "debt": true
+    },
+    {
+      "name": "Godefroy de Montmirail ",
+      "occupation": " Count of Montmirail, d'Apremont et de Papincourt,",
+      "catchPhrase": "Que trépasse si je fayblis",
+      "weapon": "Sword",
+      "id": 6,
+      "debt": true
+    },
+    {
+      "name": "Old Lodge Skins",
+      "occupation": "Indian Chief",
+      "catchPhrase": "Avance et viens te battre! C'est un bon jour pour mourir!",
+      "weapon": "Bow",
+      "id": 5,
+      "debt": false
+    },
+    {
+      "name": "Red Mohawk",
+      "occupation": "Serial Killer",
+      "catchPhrase": "Watch and Scream",
+      "weapon": "Meat Cleaver",
+      "id": 1,
+      "debt": true
+    },
+    {
+      "name": "Blackbeard",
+      "occupation": "Pirate",
+      "catchPhrase": "Aaaaar!",
+      "weapon": "Saber",
+      "id": 7
+    },
+    {
+      "name": "Captain Archibald Haddock",
+      "occupation": "seafaring pipe-smoking Merchant Marine Captain",
+      "catchPhrase": "bashi-bazouk visigoths kleptomaniac\",",
+      "weapon": "Sabre",
+      "debt": true,
+      "id": 8
+    }
+  ]
+}

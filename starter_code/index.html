@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
   <title>IH Characters</title>
 </head>
+
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="debt">Character Debt</div>
-        <div class="weapon">Character Weapon</div>
-      </div>
+    <div id="characters-container" class="characters-container">
     </div>
     <section class="operations">
       <div class="operation">
@@ -27,12 +21,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="selectOneId">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="deleteOneId">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -44,21 +38,25 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="creat-name-input">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="creat-occupation-input">
+        </div>
+        <div class="field">
+          <label for="catchPhrase">Catch Phrase: </label>
+          <input type="text" name="catchPhrase" id="creat-catchPhrase-input">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="creat-weapon-input">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" id="creat-debt-input">
         </div>
-        <button class="submit-button">Create</button>
+        <button class="submit-button" id="create-one">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -66,28 +64,38 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" id="modifyOneId">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="update-name-input">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="update-occupation-input">
+        </div>
+        <div class="field">
+          <label for="catchPhrase">Catch Phrase: </label>
+          <input type="text" name="catchPhrase" id="update-catchPhrase-input">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="update-weapon-input">
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" id="update-debt-input">
         </div>
-        <button class="submit-button">Update</button>
+        <button class="submit-button" id="edit-one">Update</button>
       </form>
     </section>
   </section>
 
+
+  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
+  <script type="text/javascript" src="./public/javascript/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </body>
+
 </html>
