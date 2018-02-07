@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   color: white;
-  background: url("../images/minions.jpg")
+  background: url("../images/minions.jpg");
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d8b362;
 }
 
@@ -29,6 +30,24 @@ button {
   border-radius: 50px;
   border: 2px solid #fff;
   color: #fff;
+  overflow: hidden;
+}
+
+#delete-one.on {
+  font-family: inherit;
+  font-size: 11px;
+  background: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 3px 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  background-color: rgb(11, 160, 18);
   overflow: hidden;
 }
 
