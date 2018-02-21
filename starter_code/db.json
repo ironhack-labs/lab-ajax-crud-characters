@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Blaster Pistol",
+      "id": 1
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": true,
+      "weapon": "Lightsaber",
+      "id": 2
+    },
+    {
+      "name": "Leia Storm",
+      "occupation": "",
+      "debt": false,
+      "weapon": "",
+      "id": 3
+    }
+  ]
+}
