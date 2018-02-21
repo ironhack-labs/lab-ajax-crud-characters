@@ -13,13 +13,6 @@
       "debt": false,
       "weapon": "Lightsaber",
       "id": 2
-    },
-    {
-      "name": "err",
-      "occupation": "errr",
-      "weapon": "errr",
-      "debt": "on",
-      "id": 3
     }
   ]
 }
