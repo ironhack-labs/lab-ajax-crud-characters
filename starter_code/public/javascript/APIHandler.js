@@ -54,9 +54,11 @@ class APIHandler {
   createOneRegister (characterInfo) {
       axios.post(this.BASE_URL + '/characters/', characterInfo)
       .then(response => {
+        document.getElementById("submit-button").attr("style", "background:green");
     
       })
       .catch(error => {
+        document.getElementById("submit-button").attr("style", "background:red");
           console.log(error)
       })
 }
@@ -64,9 +66,10 @@ class APIHandler {
   updateOneRegister (charId, characterInfo) {
     axios.patch(this.BASE_URL + '/characters/' + charId, characterInfo)
     .then(response => {
-     
+      document.getElementById("submit-button").attr("style", "background:green");
     })
     .catch(error => {
+      document.getElementById("submit-button").attr("style", "background:red");
         console.log('Oh No! Error!');  
         console.log(error);
     })
@@ -75,9 +78,10 @@ class APIHandler {
   deleteOneRegister (id) {
     axios.delete(this.BASE_URL + '/characters/' + id)
      .then(response => {
-      
+      document.getElementById("#delete-one").attr("style", "background:green");
      })
      .catch(error => {
+      document.getElementById("#delete-one").attr("style", "background:red");
          console.log('Oh No! Error!');  
          console.log(error);
      })
