@@ -8,8 +8,12 @@ class APIHandler {
   getFullList () {
     axios.get(this.BASE_URL+"characters")
     .then(response => {
+      
+
       var arrChar = response.data;
       var content = ''
+      $('.characters-container').append(content);
+      
       arrChar.forEach(char => { 
       content += `
       <div class="character-info">
