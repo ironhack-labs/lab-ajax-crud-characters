@@ -1,5 +1,5 @@
 {
-  "characters" : [
+  "characters": [
     {
       "name": "Han Solo",
       "occupation": "Smuggler",
@@ -13,6 +13,14 @@
       "debt": false,
       "weapon": "Lightsaber",
       "id": 2
+    },
+    {
+      "id": 10,
+      "name": "MARILYNAAAAA"
+    },
+    {
+      "name": "MARILYNAAAAA",
+      "id": 11
     }
   ]
 }

@@ -2,11 +2,12 @@ const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
-    
+    charactersAPI.getFullList();
 
   }
   
-  document.getElementById('fetch-one').onclick = function(){
+  document.getElementById('fetch-one').onclick = function(id){
+    charactersAPI.getOneRegister();
     
   }
   
