@@ -9,9 +9,9 @@
     },
     {
       "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "debt": false,
-      "weapon": "Lightsaber",
+      "occupation": "Jedi",
+      "debt": "true",
+      "weapon": "Light Saber",
       "id": 2
     },
     {
@@ -22,11 +22,25 @@
       "id": 6
     },
     {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "debt": "true",
-      "id": 7
+      "name": "Darth Vader",
+      "occupation": "Bad Guy",
+      "weapon": "Light Saber",
+      "debt": true,
+      "id": 9
+    },
+    {
+      "name": "Yoda",
+      "occupation": "Jedi Master",
+      "debt": false,
+      "weapon": "The Force",
+      "id": 10
+    },
+    {
+      "name": "Indiana Jones",
+      "occupation": "Archaeologist",
+      "debt": true,
+      "weapon": "Whip",
+      "id": 11
     }
   ]
 }

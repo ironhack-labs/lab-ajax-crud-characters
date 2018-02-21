@@ -6,18 +6,22 @@ class APIHandler {
   getFullList () {
       axios.get(this.BASE_URL + "/characters")
       .then(response => {
-        document.getElementsByClassName('character-info')[0].innerHTML = ""
+        document.getElementsByClassName('characters-container')[0].innerHTML = ""
         response.data.forEach(character => {
             var Char = 
             `
-            <div class="name">${character.name}</div>
-            <div class="occupation">${character.occupation}</div>
-            <div class="debt">${character.debt}</div>
-            <div class="weapon">${character.weapon}</div>
+            <div class="character-info">
+            <div class="id">Id:${character.id}</div>
+            <div class="name">Name:${character.name}</div>
+            <div class="occupation">Occupation: ${character.occupation}</div>
+            <div class="debt">Debt: ${character.debt}</div>
+            <div class="weapon">Weapon:${character.weapon}</div>
+            </div>
             <br>
             `;
-            document.getElementsByClassName('character-info')[0].innerHTML += Char
-        });
+            document.getElementsByClassName('characters-container')[0].innerHTML += Char
+          })
+          ;
      
       })
       .catch(err => {
@@ -30,27 +34,49 @@ class APIHandler {
       axios.get(this.BASE_URL + "/characters/" + id)
       .then(response => {
          console.log(response.data)
-         document.getElementsByClassName('character-info')[0].innerHTML = ""
+         if(id !== ""){
+         document.getElementsByClassName('characters-container')[0].innerHTML = ""
          var Char = 
          `
-         <div class="name">${response.data.name}</div>
-         <div class="occupation">${response.data.occupation}</div>
-         <div class="debt">${response.data.debt}</div>
-         <div class="weapon">${response.data.weapon}</div>
+         <div class="character-info">
+         <div class="id">Id:${response.data.id}</div>
+         <div class="name">Name: ${response.data.name}</div>
+         <div class="occupation">Occupation: ${response.data.occupation}</div>
+         <div class="debt">Debt: ${response.data.debt}</div>
+         <div class="weapon">Weapon: ${response.data.weapon}</div>
+         </div>
          `;
-         document.getElementsByClassName('character-info')[0].innerHTML += Char
-        })
+        return document.getElementsByClassName('characters-container')[0].innerHTML += Char  
+      }
+      })
       .catch(err => {
         console.error(err)
       })
   }
 
   createOneRegister () {
-    const characterInfo = {
+    var name = document.getElementsByName('name')[0].value
+    var occupation= document.getElementsByName('occupation')[0].value
+    var debt = document.getElementsByName('debt')[0].checked
+    var weapon = document.getElementsByName('weapon')[0].value
+    
+    if(name === "" ){
+      document.getElementsByClassName('submit-button')[0].style.backgroundColor = "red";
+          console.error("Indicate A Name")
+    }
+    else if(occupation === ""){ 
+      document.getElementsByClassName('submit-button')[0].style.backgroundColor = "red";
+      console.error("Indicate An Occupation")}
+    else if(weapon===""){
+      document.getElementsByClassName('submit-button')[0].style.backgroundColor = "red";
+      console.error("Indicate A Weapon")}
+    else{
+    
+      const characterInfo = {
       name: document.getElementsByName('name')[0].value,
       occupation: document.getElementsByName('occupation')[0].value,
+      debt: document.getElementsByName('debt')[0].checked,
       weapon: document.getElementsByName('weapon')[0].value,
-      debt: document.getElementsByName('debt')[0].value,
     }
 
     console.log(characterInfo)
@@ -63,14 +89,22 @@ class APIHandler {
         document.getElementsByClassName('submit-button')[0].style.backgroundColor = "red";
         console.log(error)
       })
+    }
   }
 
   updateOneRegister () {
-      var updates = {
-        name: document.getElementsByName('name')[1].value,
-        occupation: document.getElementsByName('occupation')[1].value,
-        weapon: document.getElementsByName('weapon')[1].value,
-        debt: document.getElementsByName('debt')[1].value,
+      var updates = {}  
+      if(document.getElementsByName('name')[1].value !== ""){
+        updates.name = document.getElementsByName('name')[1].value
+      }
+      if(document.getElementsByName('occupation')[1].value !==""){
+          updates.occupation = document.getElementsByName('occupation')[1].value
+      }
+      if(document.getElementsByName('weapon')[1].value !==""){
+        updates.weapon =  document.getElementsByName('weapon')[1].value
+      }
+      if(document.getElementsByName('debt')[1].checked === "true"){
+        updates.debt = document.getElementsByName('debt')[1].checked
       }
 
       var id = document.getElementsByName('chr-id')[0].value
@@ -81,7 +115,7 @@ class APIHandler {
      })
      .catch(error => {
       document.getElementsByClassName('submit-button')[1].style.backgroundColor = "red";
-       console.error(error)
+       console.error("Character Id Not Found")
      }
      ) 
   }
@@ -92,10 +126,11 @@ class APIHandler {
     axios.delete(this.BASE_URL + "/characters/" + id)
     .then( response => {
       document.getElementById('delete-one').style.backgroundColor = "green"
+      console.log("Character has been successfully deleted")
     })
     .catch(error =>{
       document.getElementById('delete-one').style.backgroundColor = "red"
-      console.error(error)
+      console.error("Character Not Found")
     });
   }
 }
