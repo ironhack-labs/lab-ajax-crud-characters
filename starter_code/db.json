@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Diego",
+      "occupation": "huevear",
+      "weapon": "tequilazos",
+      "debt": "on",
+      "id": 5
+    },
+    {
+      "name": "hodfas",
+      "occupation": "hasdfha",
+      "weapon": "dfhas",
+      "debt": "on",
+      "id": 7
+    },
+    {
+      "name": "Darth Vader",
+      "occupation": "fight the force",
+      "weapon": "mask",
+      "debt": true,
+      "id": 8
+    }
+  ]
+}
