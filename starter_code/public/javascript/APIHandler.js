@@ -5,8 +5,8 @@ class APIHandler {
 
   getFullList () { 
     axios.get(this.BASE_URL + "/characters")
-    .then(marilyn => {
-      console.log(marilyn.data)
+    .then(result => {
+      console.log(result.data)
     })
     .catch(error => {
       console.log(error)
@@ -14,15 +14,16 @@ class APIHandler {
   }
 
   getOneRegister () {
-    axios.get(this.BASE_URL + "characters/:id")
-    .then(response => {
-      console.log("Update SUCCESS!")
-    })
+    const charId = document.getElementById("char-id").value;
+    axios.get(this.BASE_URL + `/characters/${charId}`)
+    .then(resulte => {
+       console.log(resulte.data)
+      })
     .catch(error => {
-      console.log(error)
-    })
-
-  }
+     console.log(error);
+  })
+ 
+ }
 
   createOneRegister () {
 

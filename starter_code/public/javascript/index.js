@@ -6,8 +6,9 @@ $(document).ready( () => {
 
   }
   
-  document.getElementById('fetch-one').onclick = function(id){
+  document.getElementById('fetch-one').onclick = function(){
     charactersAPI.getOneRegister();
+ 
     
   }
   
