@@ -13,6 +13,7 @@ $(document).ready( () => {
   }
   
   document.getElementById('delete-one').onclick = function(){
+    charactersAPI.deleteOneRegister();
         
   }
   

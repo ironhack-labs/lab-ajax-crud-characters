@@ -16,8 +16,8 @@ class APIHandler {
   getOneRegister () {
     const charId = document.getElementById("char-id").value;
     axios.get(this.BASE_URL + `/characters/${charId}`)
-    .then(resulte => {
-       console.log(resulte.data)
+    .then(result => {
+       console.log(result.data)
       })
     .catch(error => {
      console.log(error);
@@ -34,6 +34,13 @@ class APIHandler {
   }
 
   deleteOneRegister () {
-
+    const charId = document.getElementById("chAr-id").value;
+    axios.delete(this.BASE_URL + `/characters/${charId}`)
+    .then(result => {
+       console.log(result.data)
+      })
+    .catch(error => {
+     console.log(error);
+  })
   }
 }
