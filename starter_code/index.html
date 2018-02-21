@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
   <title>IH Characters</title>
@@ -56,7 +60,7 @@
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" value=true>
         </div>
         <button class="submit-button">Create</button>
       </form>
@@ -82,7 +86,7 @@
         </div>
         <div class="field">
           <label for="debt">Has debt: </label>
-          <input name="debt" type="checkbox">
+          <input name="debt" type="checkbox" value=true>
         </div>
         <button class="submit-button">Update</button>
       </form>
