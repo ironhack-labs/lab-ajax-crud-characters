@@ -1,0 +1,31 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Blaster Pistol",
+      "id": 1
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": false,
+      "weapon": "Lightsaber",
+      "id": 2
+    },
+    {
+      "name": "Gabo",
+      "occupation": "Hacker al 52%",
+      "debt": "on",
+      "id": 3
+    },
+    {
+      "name": "modificado",
+      "occupation": "modificado",
+      "debt": "on",
+      "id": 4,
+      "weapon": "modificado"
+    }
+  ]
+}
