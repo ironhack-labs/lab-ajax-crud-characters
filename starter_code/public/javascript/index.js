@@ -19,11 +19,13 @@ $(document).ready( () => {
     charactersAPI.deleteOneRegister(id)
   }
   
-  document.getElementById('edit-character-form').onsubmit = function(){
+  document.getElementById('edit-character-form').onsubmit = function(e){
+    e.preventDefault();
     charactersAPI.updateOneRegister();      
   }
   
-  document.getElementById('new-character-form').onsubmit = function(){
+  document.getElementById('new-character-form').onsubmit = function(e){
+    e.preventDefault();
     charactersAPI.createOneRegister();
   }
 })
