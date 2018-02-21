@@ -13,6 +13,13 @@
       "debt": false,
       "weapon": "Lightsaber",
       "id": 2
+    },
+    {
+      "name": "Betsy Mendoza",
+      "occupation": "Estudiante",
+      "weapon": "Sable blanco",
+      "debt": "on",
+      "id": 3
     }
   ]
 }

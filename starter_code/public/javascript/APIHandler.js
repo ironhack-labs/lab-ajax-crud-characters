@@ -14,11 +14,11 @@ class APIHandler {
         console.log(char)
       content += `
       <div class="character-info">
-        <div class="name">Name: ${char.name}</div>
-        <div class="occupation">Occupation: ${char.occupation}</div>
-        <div class="debt">Debt: ${char.debt}</div>
-        <div class="weapon">Weapon: ${char.weapon}</div>
-        <div class="id">Id: ${char.id}</div>
+        <div class="name">Name:  <b>${char.name}</b></div>
+        <div class="occupation">Occupation: <b>${char.occupation}</b></div>
+        <div class="debt">Debt: <b>${ (char.id== "on") ?true : false}</b></div>
+        <div class="weapon">Weapon:  <b>${char.weapon}</b></div>
+        <div class="id">Id: <b>${char.id}</b></div>
       </div>`
       });
       
@@ -37,11 +37,11 @@ class APIHandler {
       var idChar = response.data
       var content = `
       <div class="character-info">
-        <div class="name">Name: ${idChar.name}</div>
-        <div class="occupation">Occupation: ${idChar.occupation}</div>
-        <div class="debt">Debt: ${idChar.debt}</div>
-        <div class="weapon">Weapon: ${idChar.weapon}</div>
-        <div class="id">Id: ${idChar.id}</div>
+        <div class="name">Name: <b>${idChar.name}</b></div>
+        <div class="occupation">Occupation: <b>${idChar.occupation}</b></div>
+        <div class="debt">Debt: <b>${ (idChar.id=== "on") ?true : false}</b></div>
+        <div class="weapon">Weapon: <b>${idChar.weapon}</b></div>
+        <div class="id">Id: <b>${idChar.id}</b></div>
       </div>`
       $('.characters-container').append(content);
   })
