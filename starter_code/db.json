@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Hans Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Laser",
+      "id": 1
+    },
+    {
+      "name": "Darthael",
+      "occupation": "Warrior",
+      "debt": true,
+      "weapon": "Sword",
+      "id": 2
+    },
+    {
+      "name": "Iflash",
+      "occupation": "Priest",
+      "debt": false,
+      "weapon": "Staff",
+      "id": 3
+    }
+  ]
+}
