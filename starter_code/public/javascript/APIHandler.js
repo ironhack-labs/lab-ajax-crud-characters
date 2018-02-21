@@ -7,7 +7,22 @@ class APIHandler {
     axios
       .get(this.BASE_URL + "/characters")
       .then(response => {
-        console.log(response.data);
+        document.getElementById(`characters-container`).innerHTML = "";
+        response.data.forEach(character => {
+          const newCharacterHTML = `
+          <div class="character-info">
+            <div id="nameCard" class="name">${character.name}</div>
+            <div id="occupationCard" class="occupation">${
+              character.occupation
+            }</div>
+            <div id="debtCard" class="debt">${character.debt}</div>
+            <div id="weaponCard" class="weapon">${character.weapon}</div>
+          </div>
+          `;
+          document.getElementById(
+            `characters-container`
+          ).innerHTML += newCharacterHTML;
+        });
       })
       .catch(err => {
         console.error(err);
@@ -18,10 +33,23 @@ class APIHandler {
     axios
       .get(this.BASE_URL + "/characters/" + id)
       .then(response => {
-        console.log(response.data);
+        document.getElementById(`characters-container`).innerHTML = "";
+        const newCharacterHTML = `
+          <div class="character-info">
+          <div id="nameCard" class="name">${response.data.name}</div>
+          <div id="occupationCard" class="occupation">${
+            response.data.occupation
+          }</div>
+          <div id="debtCard" class="debt">${response.data.debt}</div>
+          <div id="weaponCard" class="weapon">${response.data.weapon}</div>
+        </div>
+        `;
+        document.getElementById(
+          `characters-container`
+        ).innerHTML += newCharacterHTML;
       })
       .catch(err => {
-        console.error(err);
+        this.redButton(`fetch-one`);
       });
   }
 
@@ -29,10 +57,10 @@ class APIHandler {
     axios
       .post(this.BASE_URL + "/characters/", characterInfo)
       .then(response => {
-        console.log(response.data);
+        this.greenButton(`create-button`);
       })
       .catch(err => {
-        console.error(err);
+        this.redButton(`create-button`);
       });
   }
 
@@ -40,10 +68,10 @@ class APIHandler {
     axios
       .patch(this.BASE_URL + "/characters/" + id, characterInfo)
       .then(response => {
-        console.log(response.data);
+        this.greenButton(`edit-button`);
       })
       .catch(err => {
-        console.error(err);
+        this.redButton(`edit-button`);
       });
   }
 
@@ -51,10 +79,24 @@ class APIHandler {
     axios
       .delete(this.BASE_URL + "/characters/" + id)
       .then(response => {
-        console.log(response.data);
+        this.greenButton(`delete-one`);
       })
       .catch(err => {
-        console.error(err);
+        this.redButton(`delete-one`);
       });
+  }
+
+  greenButton(classString) {
+    document.getElementById(classString).classList.toggle(`active`);
+    setTimeout(function() {
+      document.getElementById(classString).classList.toggle(`active`);
+    }, 1000);
+  }
+
+  redButton(classString) {
+    document.getElementById(classString).classList.toggle(`warning`);
+    setTimeout(function() {
+      document.getElementById(classString).classList.toggle(`warning`);
+    }, 1000);
   }
 }

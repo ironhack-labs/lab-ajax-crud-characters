@@ -1,25 +1,18 @@
 {
   "characters": [
     {
-      "name": "Me",
-      "occupation": "Programmer",
-      "debt": false,
-      "weapon": "A computer",
-      "id": 1
-    },
-    {
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "debt": false,
-      "weapon": "Lightsaber",
+      "name": "Lake Skywalker",
+      "occupation": "Skier",
+      "debt": true,
+      "weapon": "Skis",
       "id": 2
     },
     {
-      "name": "test",
-      "occupation": "test",
-      "weapon": "test",
+      "name": "slfslkfd",
+      "occupation": "lsdflksdf",
+      "weapon": "lksdflksdf",
       "debt": true,
-      "id": 4
+      "id": 3
     }
   ]
 }
