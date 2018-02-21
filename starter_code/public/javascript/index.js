@@ -1,8 +1,8 @@
-const charactersAPI = new APIHandler("http://localhost:8000")
+const charactersAPI = new APIHandler("http://localhost:8000/characters")
 
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
-
+    
   }
   
   document.getElementById('fetch-one').onclick = function(){
