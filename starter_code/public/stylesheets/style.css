@@ -71,6 +71,11 @@ button {
   text-align: left;
   border: solid white 2px;
   border-radius: 20px;
+  
+}
+
+.character-info span{
+  text-align: right;
 }
 
 .character-info div span {
@@ -105,3 +110,4 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
