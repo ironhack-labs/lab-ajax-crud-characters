@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
   <title>IH Characters</title>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
-      <div class="character-info">
+      <div class="character-info" id="info-card">
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
         <div class="debt">Character Debt</div>
@@ -27,12 +28,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -58,7 +59,7 @@
           <label for="debt">Has debt: </label>
           <input name="debt" type="checkbox">
         </div>
-        <button class="submit-button">Create</button>
+        <button class="submit-button" id="add-char-button">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -66,7 +67,7 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chrId">
         </div>
         <div class="field">
           <label for="name">Name: </label>
@@ -84,10 +85,21 @@
           <label for="debt">Has debt: </label>
           <input name="debt" type="checkbox">
         </div>
-        <button class="submit-button">Update</button>
+        <button class="submit-button" id="edit-button">Update</button>
       </form>
     </section>
   </section>
 
+
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
+  <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
 </html>
