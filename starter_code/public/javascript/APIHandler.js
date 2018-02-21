@@ -4,9 +4,10 @@ class APIHandler {
   }
 
   getFullList () {
-    axios.get(this.BASE_URL + "/characters")
+    return axios.get(this.BASE_URL + "/characters")
   .then(response => {
     console.log(response.data)
+    return response.data;
   })
   .catch(err => {
     console.error(err)
