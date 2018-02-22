@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Blaster Pistol",
+      "id": 1
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi",
+      "debt": "true",
+      "weapon": "Light Saber",
+      "id": 2
+    },
+    {
+      "name": "Obi-Wan Kenobi",
+      "occupation": "Jedi",
+      "weapon": "The Force",
+      "debt": "true",
+      "id": 6
+    },
+    {
+      "name": "Darth Vader",
+      "occupation": "Bad Guy",
+      "weapon": "Light Saber",
+      "debt": true,
+      "id": 9
+    },
+    {
+      "name": "Yoda",
+      "occupation": "Jedi Master",
+      "debt": false,
+      "weapon": "The Force",
+      "id": 10
+    },
+    {
+      "name": "Indiana Jones",
+      "occupation": "Archaeologist",
+      "debt": true,
+      "weapon": "Whip",
+      "id": 11
+    }
+  ]
+}
