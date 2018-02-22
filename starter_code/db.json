@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Blaster Pistol",
+      "id": 1
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "debt": false,
+      "weapon": "Lightsaber",
+      "id": 2
+    },
+    {
+      "name": "testing2",
+      "occupation": "runner",
+      "debt": false,
+      "weapon": "sword",
+      "id": 3
+    },
+    {
+      "name": "sandra",
+      "occupation": "sandra",
+      "debt": true,
+      "weapon": "sandra",
+      "id": 4
+    },
+    {
+      "name": "san",
+      "occupation": "san",
+      "debt": false,
+      "weapon": "san",
+      "id": 5
+    }
+  ]
+}
