@@ -4,55 +4,64 @@ class APIHandler {
   }
 
   getFullList () {
-    axios({
-      method: "GET",
-      url:`${this.BASE_URL}/characters`
+    axios.get(`${this.BASE_URL}/characters`)
+    .then((response) => {
+      console.log("response: ", response)
+
+      $(".characters-container").empty();
+
+      response.data.forEach(oneChar => {
+        const myHtml = $(`
+        <div class="character-info">
+        <div class="name">Name: ${oneChar.name}</div>
+        <div class="occupation">Occupation: ${oneChar.occupation}</div>
+        <div class="debt">Debt: ${oneChar.debt}</div>
+        <div class="weapon">Weapon: ${oneChar.weapon}</div>
+      </div>
+      `)
+      $(".characters-container").append(myHtml);
+      });
     })
-    .then(response => {
-      // console.log("response is", response.data);
-      // const charArray = [];
-      // response.data.forEach((oneChar) =>{
-      //   charArray.push({
-      //     name: oneChar.name,
-      //     occupation: oneChar.occupation,
-      //     debt: oneChar.debt,
-      //     weapon: oneChar.weapon 
-      //   })
-      // })
-      // console.log("charArray: ", charArray);
-     
-      response.data.forEach(oneCharacter => {
-        const charHtml = $(`
-                 <div class="character-info">
-                   <div class="name">${oneCharacter.name}</div>
-                   <div class="occupation">${oneCharacter.occupation}</div>
-                   <div class="debt">${oneCharacter.debt}</div>
-                   <div class="weapon">${oneCharacter.weapon}</div>
-                 </div>
-             `);
+    .catch();
 
-        $(".characters-container").append(charHtml);
-      }); 
- 
-    })
-    .catch(err => {
-      console.error(err)
-    })
-  }
+    }
 
-  getOneRegister () {
+  getOneRegister (id) {
+axios.get(this.BASE_URL + "/characters/"+ id )
+.then((response) => {
+  console.log("response", response);
+  $(".characters-container").empty();
+  const singleChar = $(`
+  <div class="character-info">
+        <div class="name">Name: ${response.data.name}</div>
+        <div class="occupation">Occupation: ${response.data.occupation} </div>
+        <div class="debt">Debt: ${response.data.debt} </div>
+        <div class="weapon">Weapon: ${response.data.weapon} </div>
+      </div>
+  `);
+  $(".characters-container").append(singleChar);
+})
+.catch();
 
   }
 
-  createOneRegister () {
+  createOneRegister (data) {
+    axios.post(this.BASE_URL + "/characters", data)
+.then()
+.catch()
 
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, data) {
+    axios.patch(this.BASE_URL + "/characters" + id, data)
+    .then()
+    .catch()
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {
+    axios.delete(this.BASE_URL + "/characters/" + id)
+    .then()
+    .catch()
 
   }
 }
