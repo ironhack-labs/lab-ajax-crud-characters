@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "name": "Lake Skywalker",
+      "occupation": "Skier",
+      "debt": true,
+      "weapon": "Skis",
+      "id": 2
+    },
+    {
+      "name": "slfslkfd",
+      "occupation": "lsdflksdf",
+      "weapon": "lksdflksdf",
+      "debt": true,
+      "id": 3
+    }
+  ]
+}
