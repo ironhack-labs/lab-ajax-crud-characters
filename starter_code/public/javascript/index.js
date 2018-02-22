@@ -19,6 +19,7 @@ $(document).ready( () => {
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
+    event.preventDefault();
     const updatedCharacter = {
       name: document.getElementsByName("name")[1].value,
       occupation: document.getElementsByName("occupation")[1].value,
@@ -29,6 +30,7 @@ $(document).ready( () => {
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
+    event.preventDefault();
     const character = {
       name: document.getElementsByName("name")[0].value,
       occupation: document.getElementsByName("occupation")[0].value,
