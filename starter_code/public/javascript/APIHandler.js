@@ -11,11 +11,11 @@ class APIHandler {
             var Char = 
             `
             <div class="character-info">
-            <div class="id">Id:${character.id}</div>
-            <div class="name">Name:${character.name}</div>
-            <div class="occupation">Occupation: ${character.occupation}</div>
-            <div class="debt">Debt: ${character.debt}</div>
-            <div class="weapon">Weapon:${character.weapon}</div>
+            <div class="id">Id:<span>${character.id}</span></div>
+            <div class="name">Name:<span>${character.name}</span></div>
+            <div class="occupation">Occupation: <span>${character.occupation}</span></div>
+            <div class="debt">Debt:<span> ${character.debt}</span></div>
+            <div class="weapon">Weapon:<span>${character.weapon}</span></div>
             </div>
             <br>
             `;
@@ -39,11 +39,11 @@ class APIHandler {
          var Char = 
          `
          <div class="character-info">
-         <div class="id">Id:${response.data.id}</div>
-         <div class="name">Name: ${response.data.name}</div>
-         <div class="occupation">Occupation: ${response.data.occupation}</div>
-         <div class="debt">Debt: ${response.data.debt}</div>
-         <div class="weapon">Weapon: ${response.data.weapon}</div>
+         <div class="id">Id:<span>${response.data.id}</span></div>
+         <div class="name">Name:<span> ${response.data.name}</span></div>
+         <div class="occupation">Occupation: <span>${response.data.occupation}</span></div>
+         <div class="debt">Debt: <span>${response.data.debt}</span></div>
+         <div class="weapon">Weapon:<span> ${response.data.weapon}</span></div>
          </div>
          `;
         return document.getElementsByClassName('characters-container')[0].innerHTML += Char  
