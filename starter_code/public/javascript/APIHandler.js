@@ -8,6 +8,11 @@ class APIHandler {
     .get(`${this.BASE_URL}/characters`)
     .then(response => {
       console.log(response.data)
+
+      // Follow along
+      $(".characters-container").empty();
+      // ------------
+
       response.data.forEach(oneCharacter => {
         const charHtml = $(`
         <div class="character-info">
@@ -43,6 +48,11 @@ class APIHandler {
     .get(`${this.BASE_URL}/characters/${id}`)
     .then(response => {
       console.log(response.data)
+
+      // Follow along
+      $(".characters-container").empty();
+      // ------------
+
       const newCharHtml = $(`
         <div class="character-info">
 
@@ -70,10 +80,12 @@ class APIHandler {
     })
   }
 
-  createOneRegister (id) {
-    this.id;
+
+  
+  createOneRegister (info) {
+    this.info;
     axios
-    .post(`${this.BASE_URL}/characters/`)
+    .post(`${this.BASE_URL}/characters/`, info)
     .then(response => {
       console.log(response.data)
     })
@@ -82,10 +94,10 @@ class APIHandler {
     });
   }
 
-  updateOneRegister (id) {
+  updateOneRegister (id, data) {
     this.id;
     axios
-    .patch(`${this.BASE_URL}/characters/${id}`)
+    .patch(`${this.BASE_URL}/characters/${id}`, data)
     .then(response => {
       console.log(response.data)
     })
