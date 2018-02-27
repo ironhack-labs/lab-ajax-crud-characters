@@ -10,7 +10,7 @@ After this learning unit, you will be able to:
 
 ## Introduction
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_268cb08540318365df8717153cacce98.png)
+![image](https://user-images.githubusercontent.com/23629340/36733655-8c9903fa-1bd1-11e8-82f7-d425ab140c09.png)
 
 In this lesson, we will use all what we have learnt about APIs and how to connect an application to them through **Axios**.
 
@@ -26,14 +26,14 @@ We will first create a fake API using **JSON-Server** to then do an  application
   - It returns JSON
 - **Verb:** POST, **Route:** "/characters"
   - It receives an object as a parameter, with the following format:
-    `{ name: string, occupation: string, debt: boolean, weapon: string }`
+    `{ name: string, occupation: string, cartoon: boolean, weapon: string }`
   - It returns the created character if there are no errors
   - It returns the wrong fields if there is some error
   - It returns JSON
 - **Verb:** PATCH/PUT, **Route:** "/characters/:id"
   - It receives the character id as a parameter (route)
   - It receives an object as a parameter, with the following format:
-    `{ name: string, occupation: string, debt: boolean, weapon: string }`
+    `{ name: string, occupation: string, cartoon: boolean, weapon: string }`
   - All the fields are optionals
   - It returns the updated character if there are no errors
   - It returns "Character not found" if there is no character with the indicated id
@@ -76,26 +76,33 @@ In the `api` folder, you need to create a `db.json` file. Inside our `db.json` w
 
 ```javascript
 {
-  "characters" : [
+  "characters": [
     {
+      "id": 1,
       "name": "Han Solo",
       "occupation": "Smuggler",
-      "debt": true,
       "weapon": "Blaster Pistol",
-      "id": 1
+      "cartoon": true
     },
     {
+      "id": 2,
       "name": "Luke Skywalker",
       "occupation": "Jedi Knight",
-      "debt": false,
       "weapon": "Lightsaber",
-      "id": 2
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
     }
   ]
 }
 ```
 
-Then run the following code on the terminal to start our API:
+Then run the following code on the terminal to make our API start working:
 
 ```bash
 $ json-server --watch db.json --port 8000
@@ -129,7 +136,7 @@ Once we have the results served by the API in the application, we will create th
 
 #### Fetch all characters
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_52efceece943970abb7482ca8165392c.png)
+![image](https://user-images.githubusercontent.com/23629340/36733634-7b6b6dca-1bd1-11e8-9803-5282681159ba.png)
 
 Retrieve all the available characters in the API and show them in the application. In order to do that, we need to:
 
@@ -139,12 +146,14 @@ Retrieve all the available characters in the API and show them in the applicatio
 
 #### Fetch one character
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_18418549c37049ae48b7a9ef21805042.png)
+![image](https://user-images.githubusercontent.com/23629340/36733678-97ecd42a-1bd1-11e8-8e60-6aab38d632a0.png)
+
 
 Following the same idea as with fetching all, retreive a single character's data we need to:
 
 - Create a button (*Fetch one* in the image above) to, through an input field, get the id of an existing character.
 - Search that character in the API with *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Get the data and show the character info as a card.
 
 #### Delete one character
 
@@ -162,9 +171,9 @@ To be able to delete a character from the API database, we need to:
 
 #### Create new character
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ef2b19fb59819e903a4978d9fa616a6f.png)
+![image](https://user-images.githubusercontent.com/23629340/36733698-a7c64f8e-1bd1-11e8-9b7d-b37c7a800a27.png)
 
-We will create a form with 4 inputs, one for each character field: name(text), occupation(text), weapon(text) and debt(checkbox).
+We will create a form with 4 inputs, one for each character field: name(text), occupation(text), weapon(text) and cartoon(checkbox).
 
 - Create a button (*Create* in the image above) to get all the data from the form.
 - Send the data to the `APIHandler` function to save the new character through *[http://localhost:8000/characters](http://ih-crud-api.herokuapp.com/characters)*
@@ -176,9 +185,9 @@ We will create a form with 4 inputs, one for each character field: name(text), o
 
 #### Edit a character
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_04664fce88ae40d1f0045a8c9cb4956e.png)
+![image](https://user-images.githubusercontent.com/23629340/36733714-b6257b36-1bd1-11e8-8518-c3f7e2ba034c.png)
 
-We will create a form with 4 inputs, one for each field of the characters: name(text), occupation(text), weapon(text) and debt(checkbox). Also, we will create a new input to indicate the `id` of the character we want to edit.
+We will create a form with 4 inputs, one for each field of the characters: name(text), occupation(text), weapon(text) and cartoon(checkbox). Also, we will create a new input to indicate the `id` of the character we want to edit.
 
 - Create a button (*Update* in the image above) to get all the data from the form.
 - Send the data to the `APIHandler` function to save the new character through *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
@@ -191,3 +200,4 @@ We will create a form with 4 inputs, one for each field of the characters: name(
 That's all what we need to do!
 
 /Happy coding
+
