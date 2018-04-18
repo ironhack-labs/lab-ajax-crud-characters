@@ -8,18 +8,18 @@
       "cartoon": true
     },
     {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
+      "name": "Pepe",
+      "occupation": "Pensionista",
+      "weapon": "Bastón",
+      "cartoon": false,
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "SpongeBob",
-      "occupation": "Live under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "dfdf",
+      "occupation": "dfdf",
+      "weapon": "dfdf",
+      "cartoon": false,
+      "id": 3
     }
   ]
 }

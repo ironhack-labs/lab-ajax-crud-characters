@@ -17,7 +17,6 @@ $(document).ready( () => {
 };
 
   document.getElementById('fetch-all').onclick = function(){
-
     charactersAPI.getFullList()
     .then((data)=> {
     document.getElementById("character-container").innerHTML = '';
@@ -25,26 +24,45 @@ $(document).ready( () => {
         showCharacter(e);
       })
     })
-   
-
   }
-
-
-  
   
   document.getElementById('fetch-one').onclick = function(){
-    
+    let id = document.getElementById("list-id").value;
+    charactersAPI.getOneRegister(id)
+    .then((data)=> {
+    document.getElementById("character-container").innerHTML = '';
+    showCharacter(data);
+      
+    })
   }
   
   document.getElementById('delete-one').onclick = function(){
-        
+    let id = document.getElementById("delete-id").value;
+    charactersAPI.deleteOneRegister(id);
+  
   }
   
+
+
+
   document.getElementById('edit-character-form').onsubmit = function(){
-            
+    let id = document.getElementById("edit-id").value;
+    let name = document.getElementById("edit-name").value;
+    let occupation = document.getElementById("edit-occupation").value;
+    let weapon = document.getElementById("edit-weapon").value;
+    let cartoon = document.getElementById("edit-cartoon").checked;
+    let updateCharacter = {name, occupation, weapon, cartoon}
+    charactersAPI.updateOneRegister(id, updateCharacter)
+
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
+    let name = document.getElementById("new-name").value;
+    let occupation = document.getElementById("new-occupation").value;
+    let weapon = document.getElementById("new-weapon").value;
+    let cartoon = document.getElementById("new-cartoon").checked;
+    let createCharacter = {name, occupation, weapon, cartoon}
+    charactersAPI.createOneRegister(createCharacter);
                 
   }
 })
