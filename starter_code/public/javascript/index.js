@@ -12,7 +12,7 @@ $(document).ready( () => {
   }
   
   document.getElementById('delete-one').onclick = function(){
-        
+    charactersAPI.deleteOneRegister ();
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){

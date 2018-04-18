@@ -57,6 +57,14 @@ class APIHandler {
   }
 
   deleteOneRegister () {
+    const id = document.getElementById("inputdelete-id").value
+
+    axios.delete(`${this.BASE_URL}/characters/${id}`)
+    .then(()=> console.log("deleted"))
+      
+    
+
+   
 
   }
 }
