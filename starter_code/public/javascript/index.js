@@ -12,7 +12,7 @@ $(document).ready(() => {
   }
 
   document.getElementById('delete-one').onclick = function () {
-
+    
   }
 
   document.getElementById('edit-character-form').onsubmit = function () {
@@ -20,6 +20,20 @@ $(document).ready(() => {
   }
 
   document.getElementById('new-character-form').onsubmit = function () {
+    let name = document.getElementById("name-id").value
+    let occupation = document.getElementById("occupation-id").value
+    let weapon = document.getElementById("weapon-id").value
+    let cartoon = document.getElementById("cartoon-id").value
+
+    let newCharacter = {
+      name: name,
+      occupation: occupation,
+      weapon: weapon,
+      cartoon: cartoon
+    }
+    
+    charactersAPI.createOneRegister(newCharacter)
+
 
   }
 })
