@@ -15,7 +15,7 @@ class APIHandler {
       return axios.get(`http://localhost:8000/characters/${id}`)
       .then(res => {
           console.log("RECIBIDO")
-          console.log(res.data)
+          return res.data
       })
   } 
   
@@ -26,7 +26,7 @@ class APIHandler {
     console.log(newdata)
     .then(res => {
       console.log("Añadido")
-      console.log(res.data)
+      return res.data
   })
 
   }
@@ -35,7 +35,7 @@ class APIHandler {
     return axios.patch (`http://localhost:8000/characters/${id}`, newdata)
     .then(res => {
       console.log("Modificado")
-      console.log(res.data)
+      return res.data
   })
   }
 

@@ -18,7 +18,24 @@ $(document).ready(() => {
     });
   };
 
-  document.getElementById("fetch-one").onclick = function() {};
+  document.getElementById("fetch-one").onclick = function() {
+    let id = $("#select-id").val();
+
+    charactersAPI.getOneRegister(id)
+    .then(data => {
+      let container = $("<div class='character-info'>");
+      let name = `<div class="name">Character Name: ${data.name}</div>`;
+      let occupation = `<div class="occupation">Character Occupation: ${data.occupation}</div>`;
+      let cartoon = `<div class="cartoon">Is a Cartoon? ${data.cartoon}</div>`;
+      let weapon = `<div class="weapon">Character Weapon: ${data.weapon}</div>`;
+      container.append(name);
+      container.append(occupation);
+      container.append(cartoon);
+      container.append(weapon);
+      $(".characters-container").append(container);
+    });
+
+  };
 
   document.getElementById("delete-one").onclick = function() {};
 
