@@ -1,0 +1,32 @@
+{
+    "characters": [
+      {
+        "id": 1,
+        "name": "Mr. Spock",
+        "occupation": "Star Fleet First Officer",
+        "weapon": "Phaser Gun",
+        "cartoon": false
+      },
+      {
+        "id": 2,
+        "name": "Master Kenobi",
+        "occupation": "Jedi Knight",
+        "weapon": "Lightsaber",
+        "cartoon": false
+      },
+      {
+        "id": 3,
+        "name": "Ironhack's Pink Pig",
+        "occupation": "Make Ironhack students happy",
+        "weapon": "Being cute",
+        "cartoon": false
+      },
+      {
+        "id": 4,
+        "name": "Goku",
+        "occupation": "Save the universe",
+        "weapon": "Genki Dama",
+        "cartoon": true
+      }
+    ]
+  }
