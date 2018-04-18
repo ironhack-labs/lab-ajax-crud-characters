@@ -3,7 +3,7 @@ const charactersAPI = new APIHandler("http://localhost:8000");
 $(document).ready(() => {
   document.getElementById("fetch-all").onclick = function() {
     charactersAPI.getFullList().then(data => {
-      document.getElementById("characters-container").innerHTML = "";
+      $("#characters-container").empty();
       data.forEach(e => {
         const newCharacterHtml = `
           <div class="character-info">
@@ -13,17 +13,16 @@ $(document).ready(() => {
             <div class="weapon">Character Weapon: ${e.weapon}</div>
           </div>
         </div>`;
-        document.getElementById(
-          "characters-container"
-        ).innerHTML += newCharacterHtml;
+        $("#characters-container").append(newCharacterHtml);
       });
     });
   };
 
   document.getElementById("fetch-one").onclick = function() {
-    let id = document.getElementById("character-id").value;
+    let id = $("#character-id").val();
     console.log(id);
     charactersAPI.getOneRegister(id).then(data => {
+      $("#characters-container").empty();
       const newCharacterHtml = `
       <div class="character-info">
         <div class="+name">Character Name: ${data.name} </div>
@@ -32,9 +31,7 @@ $(document).ready(() => {
         <div class="weapon">Character Weapon: ${data.weapon}</div>
       </div>
     </div>`;
-      document.getElementById(
-        "characters-container"
-      ).innerHTML += newCharacterHtml;
+      $("#characters-container").append(newCharacterHtml);
     });
   };
 
