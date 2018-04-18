@@ -1,0 +1,11 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    }
+  ]
+}
