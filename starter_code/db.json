@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Abdallah",
+      "occupation": "Singer",
+      "weapon": "Stick",
+      "cartoon": "on"
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "James Bond",
+      "occupation": "spy",
+      "weapon": "gun",
+      "newCartoon": "on",
+      "id": 4
+    }
+  ]
+}
