@@ -25,7 +25,7 @@
       "name": "James Bond",
       "occupation": "spy",
       "weapon": "gun",
-      "newCartoon": "on",
+      "cartoon": "on",
       "id": 4
     }
   ]

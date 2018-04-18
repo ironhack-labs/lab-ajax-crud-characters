@@ -7,7 +7,7 @@ $(document).ready( () => {
   
   document.getElementById('fetch-one').onclick = function(){
     if ($("#character-id").val() != '' ) {
-      let id = $("#character-id").val();
+      var id = $("#character-id").val();
       charactersAPI.getOneRegister(id);
     }
    }
@@ -41,5 +41,15 @@ $(document).ready( () => {
   }
 
   // - - - - - - - -  UPDATES DISPLAY  - - - - - - - -
-  
+
+  function updateDisplay(data){
+    const html = `
+    <div class="character-info">
+    <div class="name">${data.name}</div>
+    <div class="occupation">${data.occupation}</div>
+    <div class="cartoon">${data.cartoon}</div>
+    <div class="weapon">${data.weapon}</div>`
+
+    $(".characters-container").append(html);
+  }
 })

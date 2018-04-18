@@ -8,9 +8,9 @@ class APIHandler {
     axios.get(`${this.BASE_URL}/characters`)
       .then(response => {
         console.log(response.data)
+        fillContent(response.data);
         return response.data
       })
-
       .catch(err => {
         console.error(err)
       })
@@ -25,6 +25,7 @@ class APIHandler {
 
       .then(response => {
         console.log(response.data);
+        fillContent(response.data);
         return response.data;
       })
 
@@ -66,4 +67,18 @@ class APIHandler {
       })
 
   }
+
+  
+}
+
+function fillContent(data) {
+  let response = data;
+  let myHTML = `<div class="character-info">
+      <div class="name">${data.name}</div>
+      <div class="occupation">${data.occupation}</div>
+      <div class="cartoon">${data.cartoon}</div>
+      <div class="weapon">${data.weapon}</div>`;
+
+  $(".characters-container").empty();
+  $(".characters-container").append(myHTML);
 }
