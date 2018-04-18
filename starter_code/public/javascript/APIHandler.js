@@ -16,7 +16,7 @@ class APIHandler {
   }
 
   createOneRegister(character) {
-    axios
+    return axios
       .post(`${this.BASE_URL}/characters`, character)
       .then(function(response) {
         console.log(response);
@@ -27,7 +27,7 @@ class APIHandler {
   }
 
   updateOneRegister(character) {
-    axios
+    return axios
       .patch(`${this.BASE_URL}/characters/${character.id}`, character)
       .then(function(response) {
         console.log(response);
@@ -38,7 +38,7 @@ class APIHandler {
   }
 
   deleteOneRegister(id) {
-    axios
+    return axios
       .delete(`${this.BASE_URL}/characters/${id}`)
       .then(function(response) {
         console.log(response);

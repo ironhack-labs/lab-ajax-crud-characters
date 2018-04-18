@@ -13,13 +13,8 @@
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="cartoon">Is a Cartoon?</div>
-        <div class="weapon">Character Weapon</div>
-      </div>
+    <div id="characters" class="characters-container">
+      
     </div>
     <section class="operations">
       <div class="operation">
@@ -58,7 +53,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input id="newCharCartoon" name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button id="new-one">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -84,7 +79,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input id="editCharCartoon" name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="edit-one">Update</button>
       </form>
     </section>
   </section>
