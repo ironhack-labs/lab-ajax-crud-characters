@@ -25,6 +25,7 @@ class APIHandler {
   updateOneRegister(id, character) {
     axios
       .patch(`${this.BASE_URL}/characters/${character.id}`, character)
+      console.log(`${this.BASE_URL}/characters/${character.id}`, character)
       .then(function(response) {
         console.log(response);
       })
