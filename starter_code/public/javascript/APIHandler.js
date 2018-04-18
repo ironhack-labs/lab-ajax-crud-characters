@@ -47,8 +47,8 @@ class APIHandler {
       });
   }
 
-  deleteOneRegister() {
-    axios.delete(`${this.BASE_URL}/characters/${id}`)
+  deleteOneRegister(id) {
+    return axios.delete(`${this.BASE_URL}/characters/${id}`)
     .then(() => console.log("Character successfully deleted"))
     .catch(err => console.log(err, "character not found"))
   }

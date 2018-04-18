@@ -35,7 +35,13 @@ $(document).ready(() => {
     });
   };
 
-  document.getElementById("delete-one").onclick = function() {};
+  document.getElementById("delete-one").onclick = function() {
+    let id = $("#character-id-delete").val();
+    charactersAPI.deleteOneRegister(id).then( () => {
+      charactersAPI.getFullList()
+    })
+
+  };
 
   document.getElementById("edit-character-form").onsubmit = function() {};
 
