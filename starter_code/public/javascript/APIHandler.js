@@ -4,14 +4,14 @@ class APIHandler {
   }
 
   getFullList() {
-    axios
+    return axios
       .get(`${this.BASE_URL}/characters`)
-      .then(res => console.log(res.data))
+      .then(res => res.data)
       .catch(err => console.log(err));
   }
 
   getOneRegister() {
-    axios
+    return axios
       .get(`${this.BASE_URL}/characters/:${id}`)
       .then(res => console.log(res.data))
       .catch(err => console.log(err));
@@ -26,7 +26,7 @@ class APIHandler {
     };
     axios
       .post(`${this.BASE_URL}/characters`, newChar)
-      .then(res => console.log(res.data))
+      .then(res => res.data)
       .catch(err => console.log(err));
   }
 
@@ -38,7 +38,7 @@ class APIHandler {
       weapon: String
     };
     axios
-      .patch(`${this.BASE_URL}/characters/${id}`, updateInfo)
+      .patch(`${this.BASE_URL}/characters/${id}`, updChar)
       .then(response => {
         console.log("Update SUCCESS!");
       })
