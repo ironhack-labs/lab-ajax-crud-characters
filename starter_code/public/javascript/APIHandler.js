@@ -29,7 +29,17 @@ getFullList() {
 }
 
   getOneRegister() {
+    const id = document.getElementById("input-id").value
 
+    axios.get(`${this.BASE_URL}/characters/${id}`)
+    .then(res => res.data)
+    .then(data => {
+      console.log(data);
+      // document.getElementById("character-box").innerHTML = '';
+      // data.forEach(e => {
+      //   this.showCharacter(e);
+      // })
+    })
   }
 
   createOneRegister() {
