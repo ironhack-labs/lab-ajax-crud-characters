@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke HellWalker",
+      "occupation": "Dark Sith",
+      "weapon": "Lightsaber",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Le Marc",
+      "occupation": "Lead Ninja",
+      "weapon": "Clean Code",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Will",
+      "occupation": "Smith",
+      "weapon": "Bottle",
+      "cartoon": false,
+      "id": 5
+    }
+  ]
+}
