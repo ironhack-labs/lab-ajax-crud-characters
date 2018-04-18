@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster pistol",
+      "cartoon": false,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Leia Morgana",
+      "occupation": "Princess",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": "Yoda",
+      "occupation": "Jedi Master",
+      "weapon": "Force",
+      "cartoon": false,
+      "id": 4
+    }
+  ]
+}
