@@ -7,11 +7,11 @@ class APIHandler {
       const newCharacterHtml = `
       <div class= "character-info>
 
-        <div class="id">id:${character.id}</div>
-        <div class="name">${character.name}</div>
-        <div class="occupation">${character.occupation}</div>
-        <div class="cartoon">${character.cartoon}</div>
-        <div class="weapon">${character.weapon}</div>
+        <div class="id">id: ${character.id}</div>
+        <div class="name">Character Name: ${character.name}</div>
+        <div class="occupation">Occupation: ${character.occupation}</div>
+        <div class="cartoon">Cartoon: ${character.cartoon}</div>
+        <div class="weapon">Weapon: ${character.weapon}</div>
         
       </div>
       `;
@@ -30,12 +30,25 @@ class APIHandler {
     })
   }
   
-
   getOneRegister () {
+    document.getElementById("character-box").innerHTML = "";
+    const id = document.getElementById("input-id").value
 
-  }
+    axios.get(`${this.BASE_URL}/characters/${id}`)
+    .then(res => res.data)
+    .then(data => {
+        console.log(data);
+    document.getElementById("character-box").innerHTML += '';
+    this.showCharacter(data);
 
-  createOneRegister () {
+  })
+}
+
+  createOneRegister (newCharacter) {
+    axios.post(`${this.BASE_URL}/characters/`, newCharacter)
+    
+    .then(console.log(newCharacter))
+  
 
   }
 
