@@ -37,17 +37,19 @@ $(document).ready( () => {
   }
   
   document.getElementById('delete-one').onclick = function(){
-    // $("#delete-one").css("background", transparent);
+    document.getElementById("delete-one").className = "" ;
+
     let id = document.getElementById("delete-id").value;
     charactersAPI.deleteOneRegister(id)
-    .then( () => {
-      reset();
-      $("#delete-one").css("background", "green");
-    })
-    .catch( () => {
+    .then( (a) => {
+      if (a){
+      document.getElementById("delete-one").className = "green" ;}
+      else {
+        document.getElementById("delete-one").className = "red" ;
 
-      $("#delete-one").css("background", "red");
+      }
     })
+    
   
   }
   
@@ -62,6 +64,7 @@ $(document).ready( () => {
     let cartoon = document.getElementById("edit-cartoon").checked;
     let updateCharacter = {name, occupation, weapon, cartoon}
     charactersAPI.updateOneRegister(id, updateCharacter)
+    
 
   }
   

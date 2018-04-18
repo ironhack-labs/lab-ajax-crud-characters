@@ -6,6 +6,20 @@
       "weapon": "sdfdf",
       "cartoon": true,
       "id": 1
+    },
+    {
+      "name": "x",
+      "occupation": "x",
+      "weapon": "x",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "name": "d",
+      "occupation": "d",
+      "weapon": "d",
+      "cartoon": false,
+      "id": 4
     }
   ]
 }

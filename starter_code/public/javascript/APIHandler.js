@@ -21,24 +21,37 @@ class APIHandler {
 
   createOneRegister(newCharacter) {
     return axios.post(`${this.BASE_URL}/characters`, newCharacter)
-        .then(res => res.data)
-        .catch(e => console.log(e))
+        .then(res => {
+          res.data;
+
+        })
+        .catch(e => {
+          console.log(e);
+        })
 
   }
 
   updateOneRegister (id, updateCharacter) {
     return axios.patch(`${this.BASE_URL}/characters/${id}`, updateCharacter)
-    .then(res => res.data)
+    .then(res =>{ 
+      res.data
+    })
     .catch(e => {
       console.log("Character not found");
+
     })
   }
 
   deleteOneRegister (id) {
+    let a = false;
     return axios.delete(`${this.BASE_URL}/characters/${id}`)
-    .then(() => console.log("Character has been successfully deleted"))
+    .then(() => {
+      console.log("Character has been successfully deleted");
+      return   a = true;
+    })
     .catch(e => {
       console.log("Character not found");
+      return a = false;
     })
   }
 }
