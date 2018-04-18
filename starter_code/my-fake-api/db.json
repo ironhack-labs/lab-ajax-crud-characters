@@ -1,25 +1,11 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
-      "name": "Pepe",
-      "occupation": "Pensionista",
-      "weapon": "Bastón",
-      "cartoon": false,
-      "id": 2
-    },
-    {
-      "name": "dfdf",
+      "name": "paco",
       "occupation": "dfdf",
-      "weapon": "dfdf",
-      "cartoon": false,
-      "id": 3
+      "weapon": "sdfdf",
+      "cartoon": true,
+      "id": 1
     }
   ]
 }

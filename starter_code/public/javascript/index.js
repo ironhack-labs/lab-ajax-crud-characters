@@ -37,8 +37,17 @@ $(document).ready( () => {
   }
   
   document.getElementById('delete-one').onclick = function(){
+    // $("#delete-one").css("background", transparent);
     let id = document.getElementById("delete-id").value;
-    charactersAPI.deleteOneRegister(id);
+    charactersAPI.deleteOneRegister(id)
+    .then( () => {
+      reset();
+      $("#delete-one").css("background", "green");
+    })
+    .catch( () => {
+
+      $("#delete-one").css("background", "red");
+    })
   
   }
   
