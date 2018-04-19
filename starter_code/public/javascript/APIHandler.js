@@ -21,9 +21,7 @@ class APIHandler {
 
   createOneRegister(newCharacter) {
     return axios.post(`${this.BASE_URL}/characters`, newCharacter)
-        .then(res => {
-          res.data;
-
+        .then(() => {
         })
         .catch(e => {
           console.log(e);
@@ -33,12 +31,11 @@ class APIHandler {
 
   updateOneRegister (id, updateCharacter) {
     return axios.patch(`${this.BASE_URL}/characters/${id}`, updateCharacter)
-    .then(res =>{ 
-      res.data
+    .then(() =>{ 
+      console.log("hola");
     })
     .catch(e => {
       console.log("Character not found");
-
     })
   }
 
