@@ -20,6 +20,24 @@
       "occupation": "El rey del back",
       "weapon": "Cuaderno",
       "cartoon": false
+    },
+    {
+      "Batman": "",
+      "id": 5
+    },
+    {
+      "name": "Batman",
+      "occupation": "Ser rico",
+      "weapon": "Batmovil",
+      "cartoon": "on",
+      "id": 6
+    },
+    {
+      "name": "spiderman",
+      "occupation": "araña",
+      "weapon": "tela de araña",
+      "cartoon": true,
+      "id": 7
     }
   ]
 }

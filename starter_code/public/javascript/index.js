@@ -50,5 +50,17 @@ $(document).ready(() => {
 
   document.getElementById("edit-character-form").onsubmit = function() {};
 
-  document.getElementById("new-character-form").onsubmit = function() {};
+  document.getElementById("new-character-form").onsubmit = function() {
+    let name = $("#nom").val();
+    let occupation = $("#occup").val();
+    let weapon = $("#weap").val();
+    let cartoon = document.getElementById("cart").checked;
+    charactersAPI.createOneRegister({name, occupation, weapon, cartoon})
+    .then( () =>
+       $("#send-data").css("background", "green")
+     )
+     .catch( () =>
+      $("#send-data").css("background", "red")
+     )
+  };
 });
