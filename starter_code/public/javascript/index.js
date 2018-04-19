@@ -65,7 +65,8 @@ $(document).ready(() => {
       });
   };
 
-  document.getElementById("edit-character-form").onsubmit = function() {
+  document.getElementById("edit-character-form").onsubmit = function(e) {
+    e.preventDefault();
     let id = document.getElementById("update-id").value;
     let name = document.getElementById("update-name").value;
     let occupation = document.getElementById("update-occupation").value;
@@ -97,7 +98,8 @@ $(document).ready(() => {
     }
   };
 
-  document.getElementById("new-character-form").onsubmit = function() {
+  document.getElementById("new-character-form").onsubmit = function(e) {
+    e.preventDefault();
     let name = document.getElementById("create-name").value;
     let occupation = document.getElementById("create-occupation").value;
     let weapon = document.getElementById("create-weapon").value;
@@ -112,8 +114,7 @@ $(document).ready(() => {
       };
       console.log(data);
       
-      charactersAPI.createOneRegister(data)
-        .then(response => {
+      charactersAPI.createOneRegister(data).then(response => {
           let buttonCreate = document.getElementById("send-data-create");
           console.log(buttonCreate)
           console.log("post success");
