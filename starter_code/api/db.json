@@ -20,6 +20,48 @@
       "occupation": "Live under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "f",
+      "occupation": "k",
+      "weapon": "n",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "d",
+      "occupation": "3",
+      "weapon": "v",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "l",
+      "occupation": "9",
+      "weapon": "b",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "ñ",
+      "occupation": "o",
+      "weapon": "m",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "3",
+      "occupation": "b",
+      "weapon": "m",
+      "cartoon": true,
+      "id": 11
+    },
+    {
+      "name": "67",
+      "occupation": "fhk",
+      "weapon": "dtg",
+      "cartoon": false,
+      "id": 12
     }
   ]
 }
