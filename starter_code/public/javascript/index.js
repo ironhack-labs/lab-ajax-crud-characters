@@ -2,9 +2,11 @@ const charactersAPI = new APIHandler("http://localhost:8000")
 console.log(charactersAPI)
 $(document).ready( () => {
 
+  let char_cont = document.getElementById ("char-cont");
+
   document.getElementById('fetch-all').onclick = function(){
     charactersAPI.getFullList().then(data =>{
-      reset();
+      char_cont.innerHTML="";
       data.forEach(element => {
         
       });
