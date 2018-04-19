@@ -22,7 +22,7 @@ class APIHandler {
   }
 
   updateOneRegister(id, newData) {
-    axios.patch(`${this.BASE_URL}/characters/${id}`, { newData });
+    axios.patch(`${this.BASE_URL}/characters/${id}`, newData);
   }
 
   deleteOneRegister(id) {

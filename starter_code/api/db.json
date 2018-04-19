@@ -1,20 +1,6 @@
 {
   "characters": [
     {
-      "id": 102,
-      "name": "Master Kenobi",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
-    },
-    {
-      "id": 103,
-      "name": "Ironhack's Pink Pig",
-      "occupation": "Make Ironhack students happy",
-      "weapon": "Being cute",
-      "cartoon": false
-    },
-    {
       "id": 104,
       "name": "Goku",
       "occupation": "Save the universe",
