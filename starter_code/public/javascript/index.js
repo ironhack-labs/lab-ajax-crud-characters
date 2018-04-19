@@ -37,7 +37,16 @@ $(document).ready(() => {
 
   };
 
-  document.getElementById("delete-one").onclick = function() {};
+  document.getElementById("delete-one").onclick = function() {
+    let idDelete = $("#delete-id").val();
+     charactersAPI.deleteOneRegister(idDelete)
+     .then( () =>
+       $("#delete-one").css("background", "green")
+     )
+     .catch( () =>
+      $("#delete-one").css("background", "red")
+     )
+  };
 
   document.getElementById("edit-character-form").onsubmit = function() {};
 
