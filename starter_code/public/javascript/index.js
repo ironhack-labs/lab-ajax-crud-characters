@@ -12,11 +12,11 @@ $(document).ready(() => {
   }
 
   document.getElementById('delete-one').onclick = function () {
-    
+    charactersAPI.deleteOneRegister()
   }
 
   document.getElementById('edit-character-form').onsubmit = function () {
-
+    charactersAPI.updateOneRegister()
   }
 
   document.getElementById('new-character-form').onsubmit = function () {
