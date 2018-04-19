@@ -36,5 +36,14 @@ $(document).ready(() => {
 
   document.getElementById("edit-character-form").onsubmit = function() {};
 
-  document.getElementById("new-character-form").onsubmit = function() {};
+  document.getElementById("new-character-form").onsubmit = function() {
+    let name = document.getElementById("newCharacterName").value;
+    let occupation = document.getElementById("newCharacterOccupation").value;
+    let weapon = document.getElementById("newCharacterWeapon").value;
+    let cartoon = document.querySelector("#newIsCartoon").checked;
+    let character = { name, occupation, weapon, cartoon };
+    debugger;
+    charactersAPI.createOneRegister(character);
+  };
 });
+ 
