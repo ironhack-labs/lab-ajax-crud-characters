@@ -2,7 +2,7 @@ const charactersAPI = new APIHandler("http://localhost:8000");
 
 $(document).ready(() => {
   const reset = () => {
-    $(".character-info").empty();
+    $(".character-info").remove();
   }
 
   document.getElementById("fetch-all").onclick = function() {
@@ -61,8 +61,29 @@ $(document).ready(() => {
   };
 
   document.getElementById("edit-character-form").onsubmit = function() {
-    
+    let createButton = $("#edit-data");
+
+    let id = $("#edit-id").val();
+    let name = $("#edit-name").val();
+    let occupation = $("#edit-occupation").val();
+    let weapon = $("#edit-weapon").val();
+    let cartoon = document.getElementById("edit-cartoon").checked;
+
+    charactersAPI.updateOneRegister(id, {name,occupation,weapon,cartoon})
+    .then( () => createButton.css("background", "green") )
+    .catch( () => createButton.css("background", "red") );
   };
 
-  document.getElementById("new-character-form").onsubmit = function() {};
+  document.getElementById("new-character-form").onsubmit = function() {
+    let createButton = $("#create-data");
+
+    let name = $("input[name='name']").val();
+    let occupation = $("input[name='occupation']").val();
+    let weapon = $("input[name='weapon']").val();
+    let cartoon = document.getElementById("new-cartoon").checked;
+
+    charactersAPI.createOneRegister({name,occupation,weapon,cartoon})
+    .then( () => createButton.css("background", "green") )
+    .catch( () => createButton.css("background", "red") );
+  };
 });

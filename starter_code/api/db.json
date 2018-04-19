@@ -20,6 +20,48 @@
       "occupation": "Live under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "prueba",
+      "occupation": "prueba",
+      "weapon": "prueba",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "prueba",
+      "occupation": "prueba",
+      "weapon": "prueba",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "prueba1",
+      "occupation": "prueba1",
+      "weapon": "prueba1",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "prueba3",
+      "occupation": "prueba3",
+      "weapon": "prueba3",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "prueba5",
+      "occupation": "prueba5",
+      "weapon": "prueba5",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "prueba",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 10
     }
   ]
 }
