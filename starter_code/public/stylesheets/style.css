@@ -65,17 +65,21 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 30%;
   margin: 10px;
   padding: 10px;
   text-align: left;
   border: solid white 2px;
   border-radius: 20px;
+  display:flex;
+  flex-direction: column;
 }
-
+.character-info > *{
+  display:flex;
+  justify-content: space-between
+}
 .character-info div span {
   color: #d8b362;
-  position: absolute;
   left: 50%;
 }
 
