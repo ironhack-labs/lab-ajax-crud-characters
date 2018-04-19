@@ -1,0 +1,11 @@
+{
+  "characters": [
+    {
+      "id": 104,
+      "name": "Goku",
+      "occupation": "Save the universe",
+      "weapon": "Genki Dama",
+      "cartoon": true
+    }
+  ]
+}
