@@ -3,30 +3,19 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-    axios.get(`${APIHandler}/characters`)
+  getFullList() {
+    return axios.get(`${this.BASE_URL}/characters`)
     .then(response => {
-      console.log(response.data)
+      console.log(res.data)
     })
     .catch(err => {
       console.log(err)
     })
   }
 
-  getOneRegister (id) {
-    axios.get(`${APIHandler}/characters/${id}`)
+  getOneRegister(id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
     .then(response => {
-      console.log(response.data)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }
-
-  createOneRegister () {
-    axios.post(`${APIHandler}/characters`,data)
-    .then(response => {
-      console.log("post success");
       console.log(response)
     })
     .catch(err => {
@@ -34,18 +23,28 @@ class APIHandler {
     })
   }
 
-  updateOneRegister (id,newdata) {
-    axios.patch(`${APIHandler}/characters/${id}`,newdata)
+  createOneRegister(newData) {
+    return axios.post(`${this.BASE_URL}/characters`, {newData})
     .then(response => {
-      console.log(response.data)
+      console.log(response)
     })
-    .catc(err => {
+    .catch(err => {
       console.log(err)
     })
   }
 
-  deleteOneRegister (id) {
-    axios.put(`${APIHandler}/characters/${id}`)
+  updateOneRegister (id, data) {
+    return axios.patch(`${this.BASE_URL}/characters/${id}`, {data})
+      .then( character => {
+        console.log(response)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
+  deleteOneRegister(id) {
+   return axios.delete(`${this.BASE_URL}/characters/${id}`)
     .then(response => {
       console.log(response)
     })
