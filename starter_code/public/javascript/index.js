@@ -1,7 +1,7 @@
 $(document).ready(() => {
   const charactersAPI = new APIHandler("http://localhost:8000");
   document.getElementById("fetch-all").onclick = function() {
-    let container = document.getElementById("characters");
+    let container = document.getElementById("character");
     container.innerHTML = "";
     charactersAPI.getFullList().then(data => {
       data.forEach(e => {
@@ -13,5 +13,20 @@ $(document).ready(() => {
       </div>`;
       });
     });
+    document.getElementById('fetch-one').onclick = function(){
+    
+    }
+    
+    document.getElementById('delete-one').onclick = function(){
+          
+    }
+    
+    document.getElementById('edit-character-form').onsubmit = function(){
+              
+    }
+    
+    document.getElementById('new-character-form').onsubmit = function(){
+                  
+    }
   };
 });
