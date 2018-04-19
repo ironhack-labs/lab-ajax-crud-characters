@@ -8,7 +8,13 @@ $(document).ready( () => {
     charactersAPI.getFullList().then(data =>{
       char_cont.innerHTML="";
       data.forEach(element => {
-        
+        containerCharacter.innerHTML += `<div class="character-info">
+        <div class="id">Character Id: ${e.id}</div>
+        <div class="name">Name: ${e.name}</div>
+        <div class="occupation">Occupation: ${e.occupation}</div>
+        <div class="cartoon">Cartoon: ${e.cartoon}</div>
+        <div class="weapon">Weapon: ${e.weapon}</div>
+      </div>`;
       });
     })
     console.log("fetch all")
