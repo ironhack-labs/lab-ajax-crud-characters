@@ -1,0 +1,43 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Juan",
+      "occupation": "El rey del back",
+      "weapon": "Cuaderno",
+      "cartoon": false
+    },
+    {
+      "Batman": "",
+      "id": 5
+    },
+    {
+      "name": "Batman",
+      "occupation": "Ser rico",
+      "weapon": "Batmovil",
+      "cartoon": "on",
+      "id": 6
+    },
+    {
+      "name": "spiderman",
+      "occupation": "araña",
+      "weapon": "tela de araña",
+      "cartoon": true,
+      "id": 7
+    }
+  ]
+}
