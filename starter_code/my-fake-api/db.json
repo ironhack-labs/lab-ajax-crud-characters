@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "paco",
+      "occupation": "dfdf",
+      "weapon": "sdfdf",
+      "cartoon": true,
+      "id": 1
+    },
+    {
+      "name": "z",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "name": "bbbbbbbbbb",
+      "occupation": "b",
+      "weapon": "b",
+      "cartoon": false,
+      "id": 3
+    }
+  ]
+}
