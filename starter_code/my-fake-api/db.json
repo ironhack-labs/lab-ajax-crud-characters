@@ -1,0 +1,47 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "debt": true,
+      "weapon": "Blaster Pistol",
+      "id": 1
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "name": {},
+      "occupation": null,
+      "debt": null,
+      "id": 5
+    },
+    {
+      "name": "s",
+      "id": 6
+    },
+    {
+      "name": "ana",
+      "occupation": "ana",
+      "debt": "ana",
+      "id": 7
+    },
+    {
+      "name": "sandra",
+      "occupation": "sandra",
+      "debt": true,
+      "weapon": "sandra",
+      "id": 8
+    },
+    {
+      "name": "lalla",
+      "occupation": "lalla",
+      "debt": false,
+      "weapon": "lalla",
+      "id": 9
+    }
+  ]
+}
