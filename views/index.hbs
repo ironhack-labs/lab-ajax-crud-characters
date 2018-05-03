@@ -1,2 +1,101 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  
+
+  <title>IH Characters</title>
+</head>
+<body>
+  <section class="container">
+    <h1>Ironhack Characters API</h1>
+    <div class="characters-container">
+      <div class="character-info">
+        <div class="name">Character Name</div>
+        <div class="occupation">Character Occupation</div>
+        <div class="cartoon">Is a Cartoon?</div>
+        <div class="weapon">Character Weapon</div>
+      </div>
+    </div>
+    <section class="operations">
+      <div class="operation">
+        <button id="fetch-all">Fetch all</button>
+      </div>
+      <div class="operation">
+        <label for="character-id">Search by ID: </label>
+        <input type="text" name="character-id">
+        <button id="fetch-one">Fetch one</button>
+      </div>
+      <div class="operation delete">
+        <form action="/characters/delete/" method="POST">
+          <label for="character-id-delete">Delete by ID: </label>
+          <input type="text" name="deleteMe">
+          <button id="delete-one">Delete one</button>
+        </form>
+      </div>
+
+    </section>
+  </section>
+  <section class="container">
+    <section class="form-container">
+      <h2>New Character</h2>
+      <form id="new-character-form" class="character-form" method="POST" action="/characters/create">
+        <div class="field">
+          <label for="name">Name: </label>
+          <input type="text" name="name" class="nameField">
+        </div>
+        <div class="field">
+          <label for="occupation">Occupation: </label>
+          <input type="text" name="occupation" class="occField">
+        </div>
+        <div class="field">
+          <label for="weapon">Weapon: </label>
+          <input type="text" name="weapon" class="weaponField">
+        </div>
+        <div class="field">
+          <label for="cartoon">Is a Cartoon: </label>
+          <input name="cartoon" type="checkbox" class="cartoonField">
+        </div>
+        <button id="send-data">Create</button>
+      </form>
+    </section>
+    <section class="form-container">
+      <h2>Edit Character</h2>
+      <form id="edit-character-form" class="character-form">
+        <div class="field">
+          <label for="id">ID: </label>
+          <input type="text" name="chr-id" class="chr-id">
+        </div>
+        <div class="field">
+          <label for="name">Name: </label>
+          <input type="text" name="name" class="editname">
+        </div>
+        <div class="field">
+          <label for="occupation">Occupation: </label>
+          <input type="text" name="occupation" class="editocc">
+        </div>
+        <div class="field">
+          <label for="weapon">Weapon: </label>
+          <input type="text" name="weapon" class="editweap">
+        </div>
+        <div class="field">
+          <label for="cartoon">Is a Cartoon: </label>
+          <input name="cartoon" type="checkbox" class="editcartoon">
+        </div>
+        <button class = "update-button" id="send-data">Update</button>
+      </form>
+    </section>
+  </section>
+  <script type="text/javascript" src="/javascript/index.js"></script>
+  
+</body>
+</html>
