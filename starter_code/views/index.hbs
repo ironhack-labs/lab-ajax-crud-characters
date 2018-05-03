@@ -1,0 +1,70 @@
+<section class="container">
+    <h1>Ironhack Characters API</h1>
+    <div class="characters-container">
+    </div>
+    <section class="operations">
+      <div class="operation">
+        <button id="fetch-all">Fetch all</button>
+      </div>
+      <div class="operation">
+        <label for="character-id">Search by ID: </label>
+        <input type="text" id="fetch-one-input" name="character-id">
+        <button id="fetch-one">Fetch one</button>
+      </div>
+      <div class="operation delete">
+        <label for="character-id-delete">Delete by ID: </label>
+        <input type="text" id="character-id-delete" name="character-id-delete">
+        <button id="delete-one">Delete one</button>
+      </div>
+    </section>
+  </section>
+  <section class="container">
+    <section class="form-container">
+      <h2>New Character</h2>
+      <div id="new-character-form" class="character-form">
+        <div class="field">
+          <label for="name">Name: </label>
+          <input type="text" class="create-name" name="name">
+        </div>
+        <div class="field">
+          <label for="occupation">Occupation: </label>
+          <input type="text" class="create-occupation" name="occupation">
+        </div>
+        <div class="field">
+          <label for="weapon">Weapon: </label>
+          <input type="text" class="create-weapon" name="weapon">
+        </div>
+        <div class="field">
+          <label for="cartoon">Is a Cartoon: </label>
+          <input name="cartoon" class="create-cartoon" type="checkbox">
+        </div>
+        <button class="new-character-button">Create</button>
+      </div>
+    </section>
+    <section class="form-container">
+      <h2>Edit Character</h2>
+      <div id="edit-character-form" class="character-form">
+        <div class="field">
+          <label for="id">ID: </label>
+          <input type="text" class="edit-id" name="chr-id">
+        </div>
+        <div class="field">
+          <label for="name">Name: </label>
+          <input type="text" class="edit-name" name="name">
+        </div>
+        <div class="field">
+          <label for="occupation">Occupation: </label>
+          <input type="text" class="edit-occupation" name="occupation">
+        </div>
+        <div class="field">
+          <label for="weapon">Weapon: </label>
+          <input type="text" class="edit-weapon" name="weapon">
+        </div>
+        <div class="field">
+          <label for="cartoon">Is a Cartoon: </label>
+          <input name="cartoon" class="edit-cartoon" type="checkbox">
+        </div>
+        <button id="edit-character-button">Update</button>
+      </div>
+    </section>
+  </section>
