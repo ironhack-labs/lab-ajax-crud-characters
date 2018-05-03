@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="/starter_code/public/javascript/index.js"></script>
 
   <title>IH Characters</title>
 </head>
@@ -31,9 +36,11 @@
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
-        <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
-        <button id="delete-one">Delete one</button>
+        <form action="/characters/delete/" method="POST">
+          <label for="character-id-delete">Delete by ID: </label>
+          <input type="text" name="deleteMe">
+          <button id="delete-one">Delete one</button>
+        </form>
       </div>
 
     </section>
@@ -41,22 +48,22 @@
   <section class="container">
     <section class="form-container">
       <h2>New Character</h2>
-      <form id="new-character-form" class="character-form">
+      <form id="new-character-form" class="character-form" method="POST" action="/characters/create">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" class="nameField">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" class="occField">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" class="weaponField">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" class="cartoonField">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -89,6 +96,6 @@
     </section>
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
+  
 </body>
 </html>
