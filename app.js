@@ -109,6 +109,19 @@ app.post('/characters/create', (req, res, next) => {
     })
     res.redirect('/')
   })
+
+  app.post('/characters/edit', (req, res, next) => {
+    var id = req.body.id
+
+    Character.findOneAndUpdate({id: id}, req.body)
+     .then(res => {
+       console.log("function passed")
+     })
+    .catch(err => {
+      console.log(err)
+    })
+    res.redirect('/')
+   })
     
       
 const index = require('./routes/index');
