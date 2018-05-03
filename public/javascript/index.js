@@ -60,6 +60,8 @@ $(document).ready( () => {
     axios.post(`/characters/edit`, charInfo)
     .then(response => {
         console.log("success",charInfo)
+        const myId = $("input[name=character-id]").val(charId)
+        $('#fetch-one').click();
     })
     .catch(err => {
         console.log(err);
