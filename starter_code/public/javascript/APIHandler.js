@@ -3,23 +3,75 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
+  getFullList  () {
+    fetch("http://localhost:8000/characters")
+    .then(res=>{
+      if(!res.ok) return console.log(res)
+      return res.json();
+    })
+    .then(data=>{
+      console.log(data)
+    })
+  }
+
+  getOneRegister (justOne) {
+    fetch("http://localhost:8000/characters/")
+    .then(res=>{
+      if(!res.ok) return console.log(res)
+      return res.json();
+    })
+    .then(data=>{
+      console.log(data[justOne-1].id)
+    })
 
   }
 
-  getOneRegister () {
-
+  createOneRegister (data) {
+    fetch("http://localhost:8000/characters/",{
+      method:"POST",
+      body:JSON.stringify(data),
+      headers:{
+        "Content-Type":"application/json"
+      }
+    })
+    .then(res=>{
+      if(!res.ok) return console.log(res);
+      return res.json();
+      })
+    .then(data=>{
+    })
   }
 
-  createOneRegister () {
-
+  updateOneRegister (justOne,object) {
+    fetch(`http://localhost:8000/characters/${justOne}`,{
+      method:"PATCH",
+      body:object,
+      headers:{
+        'Content-Type':'application/json'
+      }
+    })
+    .then(res=>{
+      if(!res.ok) return console.log(res)
+      return res.json()
+    })
+    .then(data=>{
+    })
   }
 
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
+  deleteOneRegister (justOne) {
+    fetch(`http://localhost:8000/characters/${justOne}`,{
+    method:"DELETE",
+    body:FormData,
+    headers:{
+      "Content-Type":"application/json"
+    }
+  })
+    .then(res=>{
+      if(!res.ok) return console.log(res)
+      return res.json();
+    })
+    .then(data=>{
+      console.log(data)
+    })
   }
 }
