@@ -1,0 +1,81 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 9
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 10
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 11
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 12
+    },
+    {
+      "name": "Freja",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 13
+    }
+  ]
+}

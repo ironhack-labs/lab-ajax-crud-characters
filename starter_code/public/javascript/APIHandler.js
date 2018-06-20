@@ -1,25 +1,40 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
+    this.query = axios.create({ baseURL: this.BASE_URL });
   }
 
-  getFullList () {
-
+  getFullList() {
+    return this.query.get("/characters").then(response => response.data);
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return this.query
+      .get(`/characters/${id}`)
+      .then(response => {
+        console.log("GET ONE REGISTER RESPONSE", response.data);
+      })
+      .catch(err => console.log(`id ${id} not found!`));
   }
 
-  createOneRegister () {
-
+  createOneRegister(character) {
+    this.query.post("/characters", character).then(response => {
+      console.log("CREATE ONE REGISTER RESPONSE", response);
+    });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id, newCharacterInfos) {
+    this.query.patch(`/characters/${id}`, newCharacterInfos).then(response => {
+      console.log("UPDATE ONE REGISTER RESPONSE", response.data);
+    });
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    this.query
+      .delete(`/characters/${id}`)
+      .then(response => {
+        console.log("DELETE ONE REGISTER RESPONSE", response.data);
+      })
+      .catch(err => console.log(`id ${id} not found!`));
   }
 }
