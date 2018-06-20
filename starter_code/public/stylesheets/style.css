@@ -50,6 +50,7 @@ button {
   flex-flow: row wrap;
 }
 
+
 .active {
   background-color: #42f471;
 }
@@ -65,14 +66,32 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 45%;
   margin: 10px;
-  padding: 10px;
+  /* padding: 10px; */
   text-align: left;
   border: solid white 2px;
   border-radius: 20px;
 }
 
+.character-info h4 {
+  width: 100%;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: #fff;
+  color: rgb(88, 98, 123);
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px; 
+}
+.character-info div.container {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+}
 .character-info div span {
   color: #d8b362;
   position: absolute;

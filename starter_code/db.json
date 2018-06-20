@@ -1,0 +1,102 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "new",
+      "occupation": "new occ",
+      "weapon": "new weapon",
+      "cartoon": "true",
+      "id": 4
+    },
+    {
+      "name": "batman",
+      "occupation": "millionaire",
+      "cartoon": "on",
+      "weapon": "batmobile",
+      "id": 5
+    },
+    {
+      "name": "freja",
+      "occupation": "javascript",
+      "cartoon": "on",
+      "weapon": "mabook",
+      "id": 6
+    },
+    {
+      "name": "superman",
+      "occupation": "journalist",
+      "cartoon": "on",
+      "weapon": "slip",
+      "id": 7
+    },
+    {
+      "name": "ironman",
+      "occupation": "mill",
+      "cartoon": "on",
+      "weapon": "missiles",
+      "id": 8
+    },
+    {
+      "name": "ironman",
+      "occupation": "mill",
+      "cartoon": "on",
+      "weapon": "missiles",
+      "id": 9
+    },
+    {
+      "name": "new one",
+      "occupation": "new occupation",
+      "cartoon": "on",
+      "weapon": "new weapon",
+      "id": 13
+    },
+    {
+      "name": "new one",
+      "occupation": "new occupation",
+      "cartoon": "on",
+      "weapon": "new weapon",
+      "id": 14
+    },
+    {
+      "name": "ginevra",
+      "occupation": "monella",
+      "cartoon": "on",
+      "weapon": "simpatia",
+      "id": 15
+    },
+    {
+      "name": "new one",
+      "occupation": "new occupation",
+      "cartoon": "on",
+      "weapon": "new weapon",
+      "id": 16
+    },
+    {
+      "name": "new one",
+      "occupation": "new occupation",
+      "cartoon": "on",
+      "weapon": "new weapon",
+      "id": 17
+    },
+    {
+      "name": "new one",
+      "occupation": "new occupation",
+      "cartoon": "on",
+      "weapon": "huasky",
+      "id": 18
+    }
+  ]
+}
