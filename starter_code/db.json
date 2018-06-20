@@ -1,0 +1,60 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Lamewalker",
+      "occupation": "Smelli",
+      "weapon": "dorksaber",
+      "cartoon": true
+    },
+    {
+      "name": "Cameron",
+      "cartoon": true,
+      "occupation": "Student",
+      "weapon": "Apple",
+      "id": 3
+    },
+    {
+      "name": "robert",
+      "cartoon": true,
+      "occupation": "student",
+      "weapon": "apple",
+      "id": 5
+    },
+    {
+      "name": "silvio",
+      "cartoon": true,
+      "occupation": "student",
+      "weapon": "apple",
+      "id": 6
+    },
+    {
+      "name": "cameron",
+      "cartoon": true,
+      "occupation": "happy",
+      "weapon": "happy",
+      "id": 7
+    },
+    {
+      "name": "Ting",
+      "cartoon": true,
+      "occupation": "Student",
+      "weapon": "Apple",
+      "id": 8
+    },
+    {
+      "name": "New",
+      "cartoon": true,
+      "occupation": "Quick",
+      "weapon": "Apple",
+      "id": 9
+    }
+  ]
+}
