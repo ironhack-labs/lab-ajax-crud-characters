@@ -1,8 +1,15 @@
 {
   "characters": [
     {
+      "id": 1,
+      "name": "Alex",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
       "id": 2,
-      "name": "Luke Skywalker",
+      "name": "Freja",
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false
@@ -15,67 +22,18 @@
       "cartoon": true
     },
     {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true,
+      "name": "Alex",
+      "occupation": "Koch",
+      "weapon": "Kochloeffel",
+      "cartoon": false,
       "id": 4
     },
     {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true,
-      "id": 5
-    },
-    {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
+      "name": "Minion",
+      "occupation": "minion",
+      "weapon": "zunge",
       "cartoon": true,
       "id": 6
-    },
-    {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true,
-      "id": 8
-    },
-    {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true,
-      "id": 9
-    },
-    {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true,
-      "id": 10
-    },
-    {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true,
-      "id": 11
-    },
-    {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true,
-      "id": 12
-    },
-    {
-      "name": "Freja",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true,
-      "id": 13
     }
   ]
 }

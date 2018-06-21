@@ -11,9 +11,7 @@ class APIHandler {
   getOneRegister(id) {
     return this.query
       .get(`/characters/${id}`)
-      .then(response => {
-        console.log("GET ONE REGISTER RESPONSE", response.data);
-      })
+      .then(response => response.data)
       .catch(err => console.log(`id ${id} not found!`));
   }
 
