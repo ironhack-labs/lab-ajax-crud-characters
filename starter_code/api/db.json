@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Alex",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Freja",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Alex",
+      "occupation": "Koch",
+      "weapon": "Kochloeffel",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Minion",
+      "occupation": "minion",
+      "weapon": "zunge",
+      "cartoon": true,
+      "id": 6
+    }
+  ]
+}

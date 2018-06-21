@@ -1,17 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   color: white;
-  background: url("../images/minions.jpg")
+  background: url("../images/minions.jpg");
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d8b362;
+}
+
+.value {
+  /* color: forestgreen; */
 }
 
 button {
@@ -41,13 +46,14 @@ button {
   text-align: center;
 }
 
-.characters-container {
+#characters-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .active {
@@ -65,7 +71,7 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 35%;
   margin: 10px;
   padding: 10px;
   text-align: left;
@@ -75,8 +81,9 @@ button {
 
 .character-info div span {
   color: #d8b362;
-  position: absolute;
-  left: 50%;
+  font-weight: bold;
+  /* position: absolute; */
+  /* left: 50%; */
 }
 
 .form-container {
