@@ -1,0 +1,60 @@
+{
+  "characters": [
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 15
+    },
+    {
+      "name": "hallo",
+      "occupation": "test",
+      "weapon": "hallo",
+      "cartoon": false,
+      "id": 16
+    },
+    {
+      "name": "a",
+      "occupation": "b",
+      "weapon": "c",
+      "cartoon": false,
+      "id": 17
+    },
+    {
+      "name": "e",
+      "occupation": "d",
+      "weapon": "e",
+      "cartoon": false,
+      "id": 18
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 19
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 20
+    },
+    {
+      "name": "test",
+      "occupation": "test-occupation",
+      "weapon": "test-weapon",
+      "cartoon": false,
+      "id": 21
+    },
+    {
+      "name": "Meg",
+      "occupation": "dog",
+      "weapon": "none",
+      "cartoon": false,
+      "id": 22
+    }
+  ]
+}
