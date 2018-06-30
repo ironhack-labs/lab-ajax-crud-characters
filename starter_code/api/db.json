@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "He Man",
+      "occupation": "Spectaculation",
+      "weapon": "HEYEYEYEY",
+      "cartoon": false
+    },
+    {
+      "id": 2,
+      "name": "Daffy Duck",
+      "occupation": "Time Manipulator",
+      "weapon": "Overconfident Incompetence",
+      "cartoon": true
+    },
+    {
+      "name": "Yeeter",
+      "occupation": "Yahtzer",
+      "weapon": "Legs",
+      "cartoon": true,
+      "id": 3
+    }
+  ]
+}
