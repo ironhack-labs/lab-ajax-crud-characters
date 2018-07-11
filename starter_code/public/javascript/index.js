@@ -25,27 +25,25 @@ $(document).ready( () => {
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
+    event.preventDefault();
     let id = document.querySelector("input[name='chr-id']").value;
     let name = document.querySelector("input[name='name']").value;
     let occupation = document.querySelector("input[name='occupation']").value;
     let weapon = document.querySelector("input[name='weapon']").value;
     let cartoon = document.querySelector("input[name='cartoon']").value;
-    charactersAPI.updateOneRegister(id)
-    .then( el => {
-      el.name = name;
-      el.occupation = occupation;
-      el.weapon = weapon;
-      el.debt = cartoon;
-    })
-
+    let object = {name, occupation, weapon, cartoon};
+    console.log(object)
+    charactersAPI.updateOneRegister(object, id)
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
+    event.preventDefault();
     let name = document.querySelector("input[name='name']").value;
     let occupation = document.querySelector("input[name='occupation']").value;
     let weapon = document.querySelector("input[name='weapon']").value;
     let cartoon = document.querySelector("input[name='cartoon']").value;
     let object = {name, occupation, weapon, cartoon};
+    console.log(object)
     charactersAPI.createOneRegister(object);
   }
 })

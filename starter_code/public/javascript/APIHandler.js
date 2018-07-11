@@ -12,12 +12,12 @@ class APIHandler {
     return axios.get(`${this.BASE_URL}/${id}`)
   }
 
-  createOneRegister () {
-    return axios.post(`${this.BASE_URL}`)
+  createOneRegister (object) {
+    return axios.post(this.BASE_URL, object)
   }
 
-  updateOneRegister (id) {
-    return axios.put(`${this.BASE_URL}/${id}`)
+  updateOneRegister (object, id) {
+    return axios.put(`${this.BASE_URL}/${id}`, object)
   }
 
   deleteOneRegister (id) {
