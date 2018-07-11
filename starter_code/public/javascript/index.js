@@ -34,8 +34,11 @@ $(document).ready(() => {
       .deleteOneRegister(charId)
       .then(res => {
         document.getElementsByName("character-id-delete")[0].value = "";
+
         $("#delete-one").css("backgroundColor", "#4caf50");
         resetButton($("#delete-one"));
+
+        $("#fetch-all").trigger("click");
       })
       .catch(err => {
         $("#delete-one").css("backgroundColor", "#f44336");
@@ -68,7 +71,10 @@ $(document).ready(() => {
         .then(res => {
           $("#update-data").css("backgroundColor", "#4caf50");
           resetButton($("#update-data"));
+
           form.reset();
+
+          $("#fetch-all").trigger("click");
         })
         .catch(err => {
           $("#update-data").css("backgroundColor", "#f44336");
@@ -93,7 +99,10 @@ $(document).ready(() => {
       .then(res => {
         $("#send-data").css("backgroundColor", "#4caf50");
         resetButton($("#send-data"));
+        
         form.reset();
+
+        $("#fetch-all").trigger("click");
       })
       .catch(err => {
         $("#send-data").css("backgroundColor", "#f44336");
