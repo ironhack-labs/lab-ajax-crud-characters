@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Leiva",
+      "occupation": "singer",
+      "weapon": "Pepperoni",
+      "cartoon": "true"
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Giorgio",
+      "occupation": "ta",
+      "weapon": "Pepperoni",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "Nicolas Cage",
+      "occupation": "actor",
+      "weapon": "D",
+      "cartoon": "true",
+      "id": 5
+    }
+  ]
+}
