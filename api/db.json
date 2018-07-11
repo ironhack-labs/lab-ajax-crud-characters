@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": "on"
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "rihanna",
+      "occupation": "singer",
+      "weapon": "katana",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "300",
+      "occupation": "clown",
+      "weapon": "katana",
+      "cartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "rihanna",
+      "occupation": "singer",
+      "weapon": "katana",
+      "cartoon": "on",
+      "id": 6
+    }
+  ]
+}
