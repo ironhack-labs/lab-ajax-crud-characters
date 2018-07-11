@@ -18,14 +18,14 @@ class APIHandler {
   createOneRegister(newData) {
     return axios
       .post(`${this.BASE_URL}/characters`, newData)
-      .then(character => character.data)
+      .then(characters => characters.data)
       .catch(error => console.log(error));
   }
 
   updateOneRegister(id, newData) {
     return axios
       .patch(`${this.BASE_URL}/characters/${id}`, newData)
-      .then(character => character.data)
+      .then(characters => characters.data)
       .catch(error => console.log("Character not found"));
   }
 
