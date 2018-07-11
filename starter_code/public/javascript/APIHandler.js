@@ -6,15 +6,15 @@ class APIHandler {
 
   getFullList () {
     return this.axios.get('')
-    //.then (re => console.log(re))
+    
   }
 
   getOneRegister (id) {
     return this.axios.get(`/${id}`);
   }
 
-  createOneRegister () {
-
+  createOneRegister (newObj) {
+    return this.axios.post(newObj);
   }
 
   updateOneRegister () {

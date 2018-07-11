@@ -37,9 +37,22 @@ $(document).ready( () => {
             
   }
   
-  document.getElementById('new-character-form').onsubmit = function(){
+  document.getElementById('new-character-form').onsubmit = function(e){
+    e.preventDefault();
     let newName = document.querySelector("input[name='name']").value; 
     let newOccupation = document.querySelector("input[name='occupation']").value; 
-    let newWeapon = document.querySelector("input[name='weapon']").value;   
+    let newWeapon = document.querySelector("input[name='weapon']").value;  
+    let isCartoon = document.querySelector("input[name='cartoon']").checked;  
+    let newObject = {
+      name: newName,
+      occupation: newOccupation,
+      weapon: newWeapon
+    };
+    console.log(newObject);
+    charactersAPI.createOneRegister(newObject)
+    .then (()=> console.log(`Insertado elemento  ${newObject} OK`))
+    .catch(err => {
+      console.log(err);
+      });
   }
 })
