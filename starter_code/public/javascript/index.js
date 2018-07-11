@@ -74,4 +74,3 @@ const display = (characters) => {
 		container.append(charCont);
 	});
 };
-
