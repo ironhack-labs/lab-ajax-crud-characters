@@ -4,22 +4,51 @@ class APIHandler {
   }
 
   getFullList () {
+    return axios
+    .get(
+      this.BASE_URL
+    )
+    .then(function(data) {
+      console.log(data)
+  
+      return data
+    });
+};
+  
 
-  }
+  getOneRegister (id) {
+    return axios
+    .get (
+      this.BASE_URL
+    )
+    .then(function(data) {
+      console.log(data)
+      return data
+    });
+};
 
-  getOneRegister () {
+  
+ 
+  
+  
+  
 
-  }
+// createOneRegister () {
+// return this.axios.post('', characterInfo)
+// //   }
 
-  createOneRegister () {
+//   updateOneRegister () {
 
-  }
+//   }
 
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
-  }
+deleteOneRegister (id) {
+    return axios
+    .delete (
+      `${this.BASE_URL}/${id}`
+    )
+    .then(function(data) {
+      console.log(data)
+      return data
+    });
+  };
 }
