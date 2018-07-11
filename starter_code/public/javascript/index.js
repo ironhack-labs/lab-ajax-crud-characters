@@ -13,7 +13,7 @@ $(document).ready(() => {
 	};
 
 	document.getElementById('fetch-one').onclick = function() {
-		const charId = document.getElementsByName('character-id')[0].value;
+		const charId = document.getElementsByName("character-id")[0].value;
 		if (charId) {
 			charactersAPI.getOneRegister(charId)
 				.then((res) => {
@@ -32,12 +32,31 @@ $(document).ready(() => {
       .deleteOneRegister(charId)
       .then(res => {
         document.getElementsByName("character-id-delete")[0].value = "";
-  });
+      })
+      .catch((error) => {
+      console.log(error.message);
+        
+      });
 }
 
 	document.getElementById('edit-character-form').onsubmit = function() {};
 
 	document.getElementById('new-character-form').onsubmit = function() {};
+  const formElements = document.getElementById("new-character-form");
+  const name = formElements.elements["name"].value;
+  // console.log(name)
+  const occupation = formElements.elements["occupation"].value
+  const weapon = formElements.elements["weapon"].value;
+  const carto = formElements.elements["cartoon"].checked;
+ 
+  charactersAPI.createOneRegister({name,occupation,weapon,carto})
+  .then(res=>{
+    form.reset();
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
+
 });
 
 const display = (characters) => {
@@ -55,3 +74,4 @@ const display = (characters) => {
 		container.append(charCont);
 	});
 };
+
