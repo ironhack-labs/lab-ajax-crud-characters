@@ -4,22 +4,37 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(`${this.BASE_URL}`)
+    .then(res => {
+      return res.data;
+    })
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return axios.get(`${this.BASE_URL}/${id}`)
+    .then(res => {
+      return res.data;
+    })  
   }
 
   createOneRegister () {
-
+    return axios.post(`${this.BASE_URL}/${id}`)
+    .then(res => {
+      return res.data;
+    }) 
   }
 
   updateOneRegister () {
-
+    return axios.put(`${this.BASE_URL}/${id}`)
+    .then(res => {
+      return res.data;
+    })   
   }
 
   deleteOneRegister () {
-
+    return axios.delete(`${this.BASE_URL}/${id}`)
+    .then(res => {
+      return res.data;
+    }) 
   }
 }
