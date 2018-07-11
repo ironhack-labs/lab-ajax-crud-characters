@@ -17,11 +17,11 @@ class APIHandler {
     })  
   }
 
-  createOneRegister () {
-    return axios.post(`${this.BASE_URL}/${id}`)
-    .then(res => {
-      return res.data;
-    }) 
+  createOneRegister (newChar) {
+    return axios.post(`${this.BASE_URL}`, newChar)
+    //.then(res => {
+    //  return res.data.push(newChar);
+    //}) 
   }
 
   updateOneRegister () {
