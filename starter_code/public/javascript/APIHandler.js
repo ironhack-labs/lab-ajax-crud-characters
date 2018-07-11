@@ -1,25 +1,43 @@
+/////////////////////////////////////////////
+//
+//  API Configuration for ih crud api
+//
+/////////////////////////////////////////////
+const initAxios = function (url) {
+  axios({
+    method: 'get',
+    url: url,
+    params: ''
+  })
+  return ihApi = axios.create({
+    baseURL: url
+  })
+}
+//////////////////////////////////////////////
+
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
+    this.api = initAxios(this.BASE_URL);
   }
 
-  getFullList () {
-
+  getFullList() {
+    return this.api.get('');
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return this.api.get(id)
   }
 
-  createOneRegister () {
-
+  createOneRegister(newCharacter) {
+    return this.api.post('',newCharacter)
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id, newCharacter) {
+    return this.api.put(id, newCharacter)
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    return this.api.delete(id)
   }
 }
