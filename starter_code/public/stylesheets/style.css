@@ -41,7 +41,7 @@ button {
   text-align: center;
 }
 
-.characters-container {
+#characters-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
