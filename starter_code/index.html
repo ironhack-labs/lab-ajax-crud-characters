@@ -13,13 +13,13 @@
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
-      <div class="character-info">
+    <div id="characters-container">
+      <!-- <div class="character-info">
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
         <div class="cartoon">Is a Cartoon?</div>
         <div class="weapon">Character Weapon</div>
-      </div>
+      </div> -->
     </div>
     <section class="operations">
       <div class="operation">
@@ -61,6 +61,7 @@
         <button id="send-data">Create</button>
       </form>
     </section>
+    
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
@@ -88,6 +89,8 @@
       </form>
     </section>
   </section>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
