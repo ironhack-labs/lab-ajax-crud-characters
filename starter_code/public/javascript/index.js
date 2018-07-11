@@ -5,7 +5,7 @@ $(document).ready(() => {
     charactersAPI
       .getFullList()
       .then(res => {
-        console.log(res.data);
+        displayCharacters(res.data);
       })
       .catch(err => {
         console.log(err.message);
@@ -19,7 +19,7 @@ $(document).ready(() => {
       charactersAPI
         .getOneRegister(charId)
         .then(res => {
-          console.log(res.data);
+          displayCharacters([res.data]);
         })
         .catch(err => {
           console.log(err.message);
@@ -33,10 +33,13 @@ $(document).ready(() => {
     charactersAPI
       .deleteOneRegister(charId)
       .then(res => {
-        console.log(res.data);
+        document.getElementsByName("character-id-delete")[0].value = "";
+        $("#delete-one").css("backgroundColor", "#4caf50");
+        resetButton($("#delete-one"));
       })
       .catch(err => {
-        console.log(err.message);
+        $("#delete-one").css("backgroundColor", "#f44336");
+        resetButton($("#delete-one"));
       });
   };
 
@@ -63,11 +66,17 @@ $(document).ready(() => {
     if (charId) {
       charactersAPI.updateOneRegister(charId, character)
         .then(res => {
-          console.log(res.data);
+          $("#update-data").css("backgroundColor", "#4caf50");
+          resetButton($("#update-data"));
+          form.reset();
         })
         .catch(err => {
-          console.log(err.message);
+          $("#update-data").css("backgroundColor", "#f44336");
+          resetButton($("#update-data"));
         });
+    } else {
+      $("#update-data").css("backgroundColor", "#f44336");
+      resetButton($("#update-data"));
     }
 
     return false;
@@ -82,12 +91,38 @@ $(document).ready(() => {
 
     charactersAPI.createOneRegister({name, occupation, weapon, debt})
       .then(res => {
-        console.log(res.data);
+        $("#send-data").css("backgroundColor", "#4caf50");
+        resetButton($("#send-data"));
+        form.reset();
       })
       .catch(err => {
-        console.log(err.message);
+        $("#send-data").css("backgroundColor", "#f44336");
+        resetButton($("#send-data"));
       });
 
     return false;
   };
 });
+
+const displayCharacters = characters => {
+  const container = $(".characters-container");
+  container.html("");
+
+  characters.forEach((char) => {
+    const charWrp = $("<div></div>").addClass("character-info");
+    const id = $("<div></div>").addClass("id").html(`Id: <span>${char.id}</span>`);
+    const name = $("<div></div>").addClass("name").html(`Name: <span>${char.name}</span>`);
+    const occupation = $("<div></div>").addClass("occupation").html(`Occupation: <span>${char.occupation}</span>`);
+    const cartoon = $("<div></div>").addClass("cartoon").html(`Is a Cartoon?: <span>${char.debt}</span>`);
+    const weapon = $("<div></div>").addClass("weapon").html(`Weapon: <span>${char.weapon}</span>`);
+    
+    charWrp.append(id, name, occupation, cartoon, weapon);
+    container.append(charWrp);
+  });
+}
+
+const resetButton = elem => {
+  setTimeout(() => {
+    elem.css("backgroundColor", "");
+  }, 2000);
+}
