@@ -30,6 +30,7 @@ button {
   border: 2px solid #fff;
   color: #fff;
   overflow: hidden;
+  transition: background-color 200ms;
 }
 
 .container {
