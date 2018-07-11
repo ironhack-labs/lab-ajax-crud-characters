@@ -1,7 +1,7 @@
 class APIHandler {
   constructor (baseUrl) {
     this.axios = axios.create({baseURL:baseUrl})
-    
+    this.baseUrl = baseUrl;
   }
 
   getFullList () {
@@ -14,7 +14,7 @@ class APIHandler {
   }
 
   createOneRegister (newObj) {
-    return this.axios.post(newObj);
+    return this.axios.post(this.baseUrl, newObj);
   }
 
   updateOneRegister () {

@@ -14,7 +14,7 @@ $(document).ready( () => {
         let elementOcupation = document.getElementsByClassName('occupation');
         elementOcupation[0].innerHTML = data.data.occupation ;        
         let elementCartoon = document.getElementsByClassName('cartoon');
-        elementCartoon[0].innerHTML = data.data.cartoon;
+        elementCartoon[0].innerHTML = data.data.debt;
         let elementWeapon = document.getElementsByClassName('weapon');
         elementWeapon[0].innerHTML = data.data.weapon;        
       })
@@ -46,13 +46,14 @@ $(document).ready( () => {
     let newObject = {
       name: newName,
       occupation: newOccupation,
+      debt: isCartoon,
       weapon: newWeapon
     };
     console.log(newObject);
     charactersAPI.createOneRegister(newObject)
-    .then (()=> console.log(`Insertado elemento  ${newObject} OK`))
+    .then ((objeto)=> console.log(`Insertado elemento  ${newObject}  id: ${objeto}`))
     .catch(err => {
-      console.log(err);
+      console.log(`Ha ocurrido un error: ${err}`);
       });
   }
 })
