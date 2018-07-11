@@ -4,22 +4,37 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(`${this.BASE_URL}/characters`)
+    .then(results => {
+      return results.data;
+    });
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
+    .then(results=>{
+      return results.data;
+    })
   }
 
-  createOneRegister () {
-
+  createOneRegister (object) {
+    return axios.post(`${this.BASE_URL}/characters`,object)
+    .then(results=>{
+      return results.data;
+    })
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (info) {
+    return axios.patch(`${this.BASE_URL}/characters/${info.id}`,info)
+    .then(results=>{
+      console.log(results);
+    })
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return axios.delete(`${this.BASE_URL}/characters/${id}`)
+    .then(
+      console.log('sucessfully deleted')
+    )
   }
 }

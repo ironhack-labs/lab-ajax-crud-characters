@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "wow",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": false
+    },
+    {
+      "id": 2,
+      "name": "Rap",
+      "occupation": "TA",
+      "weapon": "wow",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "wow",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": false
+    },
+    {
+      "name": "Rap",
+      "occupation": "TA",
+      "weapon": "wow",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "Rap",
+      "occupation": "Student",
+      "weapon": "wow",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
