@@ -27,10 +27,10 @@ $(document).ready( () => {
   document.getElementById('edit-character-form').onsubmit = function(){
     event.preventDefault();
     let id = document.querySelector("input[name='chr-id']").value;
-    let name = document.querySelector("input[name='name']").value;
-    let occupation = document.querySelector("input[name='occupation']").value;
-    let weapon = document.querySelector("input[name='weapon']").value;
-    let cartoon = document.querySelector("input[name='cartoon']").value;
+    let name = document.querySelector("input[name='name1']").value;
+    let occupation = document.querySelector("input[name='occupation1']").value;
+    let weapon = document.querySelector("input[name='weapon1']").value;
+    let cartoon = document.querySelector("input[name='cartoon1']").value;
     let object = {name, occupation, weapon, cartoon};
     console.log(object)
     charactersAPI.updateOneRegister(object, id)
