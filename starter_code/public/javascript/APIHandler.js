@@ -19,9 +19,9 @@ class APIHandler {
 
   createOneRegister (newChar) {
     return axios.post(`${this.BASE_URL}`, newChar)
-    //.then(res => {
-    //  return res.data.push(newChar);
-    //}) 
+    .then(res => {
+     return res.data;
+    }) 
   }
 
   updateOneRegister () {
@@ -31,10 +31,10 @@ class APIHandler {
     })   
   }
 
-  deleteOneRegister () {
-    return axios.delete(`${this.BASE_URL}/${id}`)
-    .then(res => {
-      return res.data;
-    }) 
+  deleteOneRegister (deleteChar) {
+    return axios.delete(`${this.BASE_URL}/${deleteChar}`)
+    // .then(res => {
+    //   return res.data;
+    // }) 
   }
 }

@@ -23,15 +23,22 @@
     },
     {
       "name": "Paquita",
-      "occupation": "sefqwefw",
+      "occupation": "Management",
       "weapon": "Torreznos",
       "id": 4
     },
     {
-      "name": "Paquita",
-      "occupation": "sefqwefw",
-      "weapon": "Torreznos",
+      "name": "Vero",
+      "occupation": "Pro",
+      "weapon": "Gatitos",
       "id": 5
+    },
+    {
+      "name": "Nicolas Cage",
+      "occupation": "actor y filántropo",
+      "weapon": "Su cara",
+      "cartoon": "on",
+      "id": 7
     }
   ]
 }
