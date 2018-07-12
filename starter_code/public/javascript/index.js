@@ -30,8 +30,8 @@ $(document).ready( () => {
     let name = document.querySelector("input[name='name1']").value;
     let occupation = document.querySelector("input[name='occupation1']").value;
     let weapon = document.querySelector("input[name='weapon1']").value;
-    let cartoon = document.querySelector("input[name='cartoon1']").checked;
-    let object = {name, occupation, weapon, cartoon};
+    let debt = document.querySelector("input[name='cartoon1']").checked;
+    let object = {name, occupation, weapon, debt};
     console.log(object)
     charactersAPI.updateOneRegister(object, id)
   }
