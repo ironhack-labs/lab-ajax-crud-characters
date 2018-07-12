@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Juan",
+      "occupation": "Jugon",
+      "weapon": "3",
+      "debt": true,
+      "id": 6
+    },
+    {
+      "name": "Juan",
+      "occupation": "3",
+      "weapon": "3",
+      "debt": true,
+      "id": 7
+    },
+    {
+      "name": "Juan",
+      "occupation": "3",
+      "weapon": "Comer",
+      "debt": true,
+      "id": 8
+    }
+  ]
+}
