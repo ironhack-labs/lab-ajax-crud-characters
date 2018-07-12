@@ -1,8 +1,7 @@
-
+//esto era para otra opcion
 //const charactersAPI = new APIHandler("http://localhost:8000")
-const baseUrl = 'https://ih-crud-api.herokuapp.com/characters';
 
-const api = new APIHandler(baseUrl);
+const api = new APIHandler();
 
 const addCard = (ch) => {
   let container = $('.characters-container');
@@ -41,18 +40,18 @@ const drawChars=(chars)=>{
 $(document).ready(() => {
   document.getElementById('fetch-all').onclick = function () {
     api.getFullList()
-    .then(data => {
+    .then(res => {
       $('.characters-container').empty();
-      drawChars(data.data);
+      drawChars(res.data);
     })
     .catch(err => console.error(err))
   }
 
   document.getElementById('fetch-one').onclick = function () {
     api.getOneRegister($('#fetch-one').prev('input').val())
-    .then(data => {
+    .then(res => {
       $('.characters-container').empty();
-      addCard(data.data);
+      addCard(res.data);
     })
     .catch(err => console.error(err))
   }
@@ -63,9 +62,9 @@ $(document).ready(() => {
     .then(()=>{
       //drawing the list of chars
       api.getFullList()
-      .then(data => {
+      .then(res => {
         $('.characters-container').empty();
-        drawChars(data.data);
+        drawChars(res.data);
       })
       .catch(err => console.error(err))
     })

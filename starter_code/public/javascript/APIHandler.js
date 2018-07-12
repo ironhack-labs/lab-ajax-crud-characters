@@ -3,22 +3,23 @@
 //  API Configuration for ih crud api
 //
 /////////////////////////////////////////////
-const initAxios = function (url) {
+
+const initAxios = function () {
+  const baseUrl = 'https://ih-crud-api.herokuapp.com/characters';
   axios({
     method: 'get',
-    url: url,
+    url: baseUrl,
     params: ''
   })
   return ihApi = axios.create({
-    baseURL: url
+    baseURL: baseUrl
   })
 }
 //////////////////////////////////////////////
 
 class APIHandler {
-  constructor(baseUrl) {
-    this.BASE_URL = baseUrl;
-    this.api = initAxios(this.BASE_URL);
+  constructor() {
+    this.api = initAxios();
   }
 
   getFullList() {
