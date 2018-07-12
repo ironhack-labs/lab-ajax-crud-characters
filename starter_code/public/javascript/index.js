@@ -11,8 +11,7 @@ $(document).ready( () => {
   document.getElementById('fetch-one').onclick = function(){
     let id = document.getElementById("character-id").value;
     charactersAPI.getOneRegister(id);
-    id.value = "hola";
-    console.log(id.value);
+    document.getElementById("character-id").value = ""
   }
   
   document.getElementById('delete-one').onclick = function(){

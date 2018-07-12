@@ -11,7 +11,6 @@ class APIHandler {
         return res.json()
     })
     .then(data=>{
-        console.log(data);
         clearOutput();
         showAllObjects(data)
         
@@ -21,7 +20,6 @@ class APIHandler {
 
   getOneRegister (id) {
     let url = this.BASE_URL + `/characters/${id}`
-    console.log(url);
     fetch(url)
     .then(res=>{
         if(!res.ok) return Promise.reject(res.statusText);
@@ -30,7 +28,7 @@ class APIHandler {
     .then(data=>{
         clearOutput();
         createJunioDiv(data);
-        console.log(data);
+
     })
     .catch(err=>console.log(err))
   }
@@ -60,7 +58,6 @@ class APIHandler {
   }
 
   updateOneRegister (id, newItem) {
-    console.log(id, newItem)
     let url = this.BASE_URL + `/characters/${id}`
 
     fetch(url,{
@@ -77,7 +74,6 @@ class APIHandler {
     })
 
     .then(data=>{
-        console.log(data);
         window.location.reload()
   
     })
