@@ -4,22 +4,36 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(`${this.BASE_URL}/characters`)
+    .then(res=>{return res.data})
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
+    .then(res=>{return res.data})
   }
 
-  createOneRegister () {
-
+  createOneRegister (nick,occup,weapon,cartoon) {
+    axios.post(`${this.BASE_URL}/characters`,{ 
+      name: nick, occupation: occup, weapon: weapon, cartoon: cartoon
+     })
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id,nick,occup,weapon,cartoon) {
+    let obj={
+      name:nick,
+      occupation:occup,
+      weapon:weapon,
+      cartoon: cartoon
+    }
+    /*{ Probe pasandole un objeto y metiendole el objeto directamente
+       y no funciona en ningun caso
+      name: nick, occupation: occup, weapon: weapon, cartoon: cartoon
+    }*/
+    return axios.patch(`${this.BASE_URL}/characters/${id}`,obj).then (res=>{return res})
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    axios.delete(`${this.BASE_URL}/characters/${id}`)
   }
 }
