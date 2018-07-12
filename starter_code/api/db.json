@@ -1,0 +1,45 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Rick Sánchez",
+      "occupation": "Crazy Scientist",
+      "weapon": "Portal gun",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "Xavier Ramírez",
+      "occupation": "Crazy man",
+      "weapon": "Handsomeness",
+      "cartoon": true
+    },
+    {
+      "name": "ttt",
+      "occupation": "ttttt",
+      "weapon": "rrrrr",
+      "id": 6
+    }
+  ]
+}
