@@ -30,7 +30,7 @@ $(document).ready( () => {
     let name = document.querySelector("input[name='name1']").value;
     let occupation = document.querySelector("input[name='occupation1']").value;
     let weapon = document.querySelector("input[name='weapon1']").value;
-    let cartoon = document.querySelector("input[name='cartoon1']").value;
+    let cartoon = document.querySelector("input[name='cartoon1']").checked;
     let object = {name, occupation, weapon, cartoon};
     console.log(object)
     charactersAPI.updateOneRegister(object, id)
@@ -41,7 +41,7 @@ $(document).ready( () => {
     let name = document.querySelector("input[name='name']").value;
     let occupation = document.querySelector("input[name='occupation']").value;
     let weapon = document.querySelector("input[name='weapon']").value;
-    let cartoon = document.querySelector("input[name='cartoon']").value;
+    let cartoon = document.querySelector("input[name='cartoon']").checked;
     let object = {name, occupation, weapon, cartoon};
     console.log(object)
     charactersAPI.createOneRegister(object);
