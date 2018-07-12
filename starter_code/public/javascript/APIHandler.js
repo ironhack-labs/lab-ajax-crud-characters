@@ -30,7 +30,7 @@ class APIHandler {
   }
 
   updateOneRegister (obj, id) {
-    return axios.patch$(`${this.BASE_URL}/characters/${id}`, obj)
+    return axios.patch(`${this.BASE_URL}/characters/${id}`, obj)
           .then(char=>{
             console.log(`Character ${id} updated`);
             return char;

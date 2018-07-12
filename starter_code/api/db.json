@@ -8,7 +8,7 @@
       "cartoon": false
     },
     {
-      "name": "HOLA",
+      "name": "JordiENP",
       "occupation": "okokoko",
       "weapon": "okokokoko",
       "cartoon": false,
@@ -54,6 +54,13 @@
       "weapon": "",
       "cartoon": false,
       "id": 15
+    },
+    {
+      "name": "JORDI ENP",
+      "occupation": "asdasd",
+      "weapon": "asdasdas",
+      "cartoon": true,
+      "id": 16
     }
   ]
 }

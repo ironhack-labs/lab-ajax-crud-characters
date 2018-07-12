@@ -1,4 +1,4 @@
-const charactersAPI = new APIHandler("http://localhost:8000")
+const charactersAPI = new APIHandler("https://ih-crud-api.herokuapp.com") //https://ih-crud-api.herokuapp.com http://localhost:8000
 
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
@@ -47,7 +47,8 @@ $(document).ready( () => {
     charactersAPI.deleteOneRegister($('input[name="character-id-delete"]').val());
   }
   
-  document.getElementById('edit-character-form').onsubmit = function(){
+  document.getElementById('edit-character-form').onsubmit = function(e){
+    e.preventDefault();
     let formValues = $('#edit-character-form').serializeArray();
     let id= formValues[0].value;
     const obj = {
@@ -65,11 +66,13 @@ $(document).ready( () => {
     // NO LOGRO HACERLO CON LODASH obj = _.pickBy(obj, _.isEmpty());
     
     charactersAPI.updateOneRegister(obj,id)
-      .then(char=>console.log(`Char ${char} updated`));
+      .then(char=>console.log(`Char ${char} updated`))
+      .catch(e=>console.log(e.message));
   }   
   
   
-  document.getElementById('new-character-form').onsubmit = function(){
+  document.getElementById('new-character-form').onsubmit = function(e){
+    e.preventDefault();
     let formValues = $('#new-character-form').serializeArray();
     const obj = {
       name: formValues[0].value,
@@ -79,6 +82,8 @@ $(document).ready( () => {
     }
 
     charactersAPI.createOneRegister(obj)
-      .then(char=>console.log(`New Char ${char} Created`));
+      .then(char=>console.log(`New Char ${char} Created`))
+      .catch(e=>console.log(e.message));
   }
+
 })
