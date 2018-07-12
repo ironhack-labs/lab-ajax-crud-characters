@@ -1,0 +1,66 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "JordiENP",
+      "occupation": "okokoko",
+      "weapon": "okokokoko",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "l",
+      "occupation": "l",
+      "weapon": "l",
+      "cartoon": "on",
+      "id": 10
+    },
+    {
+      "name": "q",
+      "occupation": "q",
+      "weapon": "q",
+      "id": 11
+    },
+    {
+      "name": "3",
+      "occupation": "3",
+      "weapon": "3",
+      "cartoon": "on",
+      "id": 12
+    },
+    {
+      "name": "2",
+      "occupation": "2",
+      "weapon": "2",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "2",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 14
+    },
+    {
+      "name": "asdasd",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 15
+    },
+    {
+      "name": "JORDI ENP",
+      "occupation": "asdasd",
+      "weapon": "asdasdas",
+      "cartoon": true,
+      "id": 16
+    }
+  ]
+}
