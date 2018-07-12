@@ -1,19 +1,19 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
 
-const displayCharacters = (characters) => {
-  const container = $('.characters-container');
-  container.html = ('');
+const displayCharacters = characters => {
+  const container = $(".characters-container");
+  container.html("");
 
-  characters.forEach((element) => {
-    const newChar = $('div').addClass("character-info");
-    const id = $('div').addClass('id').html(`ID: ${element.id}`);
-    const name = $('div').addclass('name').html(`Name: ${element.name}`);
-    const occupation = $('div').addclass('occupation').html(`Ocuppation: ${element.occupation}`);
-    const cartoon = $('div').addclass('cartoon').html(`Is a cartoon?: ${element.debt}`);
-    const weapon = $('div').addclass('weapon').html(`Weapon: ${element.weapon}`);
-
-    newChar.append(id, name, occupation, cartoon, weapon);
-    container.append(newCHar);
+  characters.forEach((char) => {
+    const charWrp = $("<div></div>").addClass("character-info");
+    const id = $("<div></div>").addClass("id").html(`Id: <span>${char.id}</span>`);
+    const name = $("<div></div>").addClass("name").html(`Name: <span>${char.name}</span>`);
+    const occupation = $("<div></div>").addClass("occupation").html(`Occupation: <span>${char.occupation}</span>`);
+    const cartoon = $("<div></div>").addClass("cartoon").html(`Is a Cartoon?: <span>${char.debt}</span>`);
+    const weapon = $("<div></div>").addClass("weapon").html(`Weapon: <span>${char.weapon}</span>`);
+    
+    charWrp.append(id, name, occupation, cartoon, weapon);
+    container.append(charWrp);
   });
 }
 
@@ -21,27 +21,27 @@ $(document).ready(() => {
   document.getElementById('fetch-all').onclick = function () {
     charactersAPI.getFullList()
       .then(res => {
-        displayCharacters(res.data);
+        displayCharacters(res);
       })
       .catch(err => {
         console.log(err.message);
       });
   }
 
-  document.getElementById('fetch-one').onclick = function () {
-    const charID = document.getElementsByName('character-id')[0].value;
+  document.getElementById("fetch-one").onclick = function() {
+    const charId = document.getElementsByName("character-id")[0].value;
 
-    if (charID) {
-      charactersApi.getOneRegister(charID)
-        .then((res) => {
+    if (charId) {
+      charactersAPI
+        .getOneRegister(charId)
+        .then(res => {
           displayCharacters([res.data]);
         })
-        .catch((err) => {
-          console.log(err.message)
+        .catch(err => {
+          console.log(err.message);
         });
     }
-
-  }
+  };
 
   document.getElementById('delete-one').onclick = function () {
     const charID = document.getElementsByName('character-id-delete')[0].value;
