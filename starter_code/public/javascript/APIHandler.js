@@ -17,20 +17,7 @@ class APIHandler {
       event.preventDefault();
       console.log(char);
 
-      //   axios.post('http://localhost:8000/characters', char)
-      //     .then(response => {
-      //         const newCharacterHtml = `
-      //         <li>
-      //           <h3> ${response.data.name} </h3>
-      //           <p> Id: ${response.data.id} </p>
-      //         </li>
-      //         `;
-      //         document.getElementById("characters-list").innerHTML += newCharacterHtml;
-      //     })
-      //     .catch(error => {
-      //         console.log(error)
-      //     })
-      // };
+    
   
       axios.post("http://localhost:8000/characters", char)
         .then(response => {

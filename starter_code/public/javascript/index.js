@@ -13,9 +13,17 @@ $(document).ready(() => {
 
   document.getElementById('fetch-one').onclick = function () {
     const id = document.getElementById("id-one-input").value
-    charactersAPI.getOneRegister(id).then(char =>
-      console.log(char.data[0])
-    )
+    charactersAPI.getOneRegister(id).then(char =>{
+      console.log(char)
+      let name1 =document.getElementsByClassName("fetch-all-name");
+      name1[0].innerHTML = char.data[0].name;
+      let occu1 =document.getElementsByClassName("fetch-all-occupation");
+      occu1[0].innerHTML = char.data[0].occupation;
+      let cartoon1 =document.getElementsByClassName("fetch-all-cartoon");
+      cartoon1[0].innerHTML = char.data[0].cartoon;
+      let weapon1 =document.getElementsByClassName("fetch-all-weapon");
+      weapon1[0].innerHTML = char.data[0].weapon;
+    })
   }
 
   document.getElementById('delete-one').onclick = function () {
