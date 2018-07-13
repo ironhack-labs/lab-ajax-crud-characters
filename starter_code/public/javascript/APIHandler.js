@@ -5,14 +5,10 @@ class APIHandler {
 
   getFullList () {
     let url = this.BASE_URL + '/characters';
-    fetch(url)
+    return fetch(url)
     .then(result=>{
         if(!result.ok) return Promise.reject(result.statusText);
         return result.json()
-    })
-        .then(data=>{
-          console.log(data)
-        data.send();
     })
     .catch(e=>console.log(e))
   }
@@ -20,21 +16,17 @@ class APIHandler {
 
   getOneRegister (id) {
     let url = this.BASE_URL + `/characters/${id}`;
-    fetch(url)
+    return fetch(url)
     .then(result=>{
         if(!result.ok) return Promise.reject(result.statusText);
         return result.json()
-    })
-        .then(data=>{
-          console.log(data)
-        data.send();
     })
     .catch(e=>console.log(e))
   }
 
   createOneRegister (newChar) {
     let url = this.BASE_URL + '/characters';
-    fetch(url,{
+    return fetch(url,{
       method: 'POST',
       headers: {
           "Content-Type" : "application/json"
@@ -45,17 +37,14 @@ class APIHandler {
         if(!result.ok) return Promise.reject(result.statusText);
         return result.json()
     })
-        .then(data=>{
-        data.send();
-    })
     .catch(e=>console.log(e))
 
   }
 
   updateOneRegister (id,updatedChar) {
     let url = this.BASE_URL + `/characters/${id}`;
-    fetch(url,{
-      method: 'PATCH',
+    return fetch(url,{
+      method: 'PUT',
       headers: {
           "Content-Type" : "application/json"
       },
@@ -68,21 +57,26 @@ class APIHandler {
         .then(data=>{
         data.send();
     })
-    .catch(e=>{
-      console.log("Character not found")
-    })
+    .catch(e=>(e))
   }
 
   deleteOneRegister (id) {
-    let url = this.BASE_URL + `/characters/${id}`;
-    fetch(url,{
-      method: 'DELETE'
-  })
-    .then(result=>{
-      console.log("Character has been successfully deleted");
-    })
-    .catch(e=>{
-      console.log("Character not found")
+    return new Promise((resolve,reject)=>{
+      let url = this.BASE_URL + `/characters/${id}`;
+      fetch(url,{
+        method: 'DELETE'
+      })
+      .then(result=>{
+        console.log("Character has been successfully deleted");
+        if(!result.ok) return Promise.reject(result.statusText);
+        return result.json()
+      })
+      .then(data=>{
+        resolve(data);
+      })
+      .catch(e=>{
+        console.log("Character not found")
+      })
     })
   }
 }

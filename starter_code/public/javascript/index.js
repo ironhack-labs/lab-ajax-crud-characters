@@ -2,20 +2,49 @@ const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
-    charactersAPI.getFullList();
+    charactersAPI.getFullList()
+    .then(characters=>{
+      $('.characters-container').empty();
+      for(char of characters){
+        $('.characters-container').append(`<div class="character-info">
+          <div class="id">ID: ${char.id}</div>
+          <div class="name">Name: ${char.name}</div>
+          <div class="occupation">Occupation: ${char.occupation}</div>
+          <div class="cartoon">Is a Cartoon? ${char.cartoon}</div>
+          <div class="weapon">Weapon: ${char.weapon}</div>
+          </div>`)
+      }
+    })
   }
   
-  //needs to replace inner html on divs in character-info
   document.getElementById('fetch-one').onclick = function(){
     let id = document.getElementById('character-id').value;
-    charactersAPI.getOneRegister(id);
+    charactersAPI.getOneRegister(id)
+    .then(char =>{
+      $('.characters-container').empty();
+      $('.characters-container').append(`<div class="character-info">
+          <div class="id">ID: ${char.id}</div>
+          <div class="name">Name: ${char.name}</div>
+          <div class="occupation">Occupation: ${char.occupation}</div>
+          <div class="cartoon">Is a Cartoon? ${char.cartoon}</div>
+          <div class="weapon">Weapon: ${char.weapon}</div>
+          </div>`)
+    })
+    
   }
   
-  document.getElementById('delete-one').onclick = function(e){
-    e.preventDefault();
+  document.getElementById('delete-one').onclick = function(){
     let id = document.getElementById('delete-char').value;
-    charactersAPI.deleteOneRegister(id);
-    document.getElementById('delete-one').reset();
+    charactersAPI.deleteOneRegister(id)
+      .then(char=>{
+        $('.characters-container').empty();
+        $('.characters-container').append(`<div class="character-info">
+         Character deleted
+          </div>`)
+    })
+    .catch(e=>{
+      
+    })
   }
   
   document.getElementById('edit-character-form').onsubmit = function(e){
@@ -30,8 +59,21 @@ $(document).ready( () => {
       "weapon" : weapon,
       "cartoon" : cartoon
     }  
-    charactersAPI.updateOneRegister(id,updatedChar);
-    document.getElementById("edit-character-form").reset();
+    charactersAPI.updateOneRegister(id,updatedChar)
+    .then(r=>{
+      $('.characters-container').empty();
+      $('.characters-container').append(`<div class="character-info">
+          <div class="id">EDITED</div>
+          <div class="name">Name: ${updatedChar.name}</div>
+          <div class="occupation">Occupation: ${updatedChar.occupation}</div>
+          <div class="cartoon">Is a Cartoon? ${updatedChar.cartoon}</div>
+          <div class="weapon">Weapon: ${updatedChar.weapon}</div>
+          </div>`)
+        $('#delete-one').attr('style','background:green')
+      })
+      .catch(r=>{
+        $('#delete-one').attr('style','background:red')
+      })
   }
   
   document.getElementById('new-character-form').onsubmit = function(e){
@@ -48,6 +90,17 @@ $(document).ready( () => {
     }
     charactersAPI.createOneRegister(newChar);
     document.getElementById("new-character-form").reset();
+    $('.characters-container').empty();
+      $('.characters-container').append(`<div class="character-info">
+          <div class="id">CREATED</div>
+          <div class="name">Name: ${newChar.name}</div>
+          <div class="occupation">Occupation: ${newChar.occupation}</div>
+          <div class="cartoon">Is a Cartoon? ${newChar.cartoon}</div>
+          <div class="weapon">Weapon: ${newChar.weapon}</div>
+          </div>`)
   }
+  
 })
+
+
 

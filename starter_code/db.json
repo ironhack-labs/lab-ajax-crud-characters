@@ -15,17 +15,17 @@
       "cartoon": false
     },
     {
+      "id": 3,
       "name": "SpongeBob",
-      "occupation": "Lives under the sea",
+      "occupation": "Live under the sea",
       "weapon": "Crabby Patty",
-      "cartoon": true,
-      "id": 3
+      "cartoon": true
     },
     {
-      "name": "test",
+      "name": "newtest",
       "occupation": "test",
-      "weapon": "",
-      "cartoon": false,
+      "weapon": "bliss",
+      "cartoon": true,
       "id": 4
     }
   ]
