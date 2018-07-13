@@ -41,9 +41,10 @@ $(document).ready( () => {
         $('.characters-container').append(`<div class="character-info">
          Character deleted
           </div>`)
+        $('#delete-one').attr('style','background:green')
     })
     .catch(e=>{
-      
+      $('#delete-one').attr('style','background:red')
     })
   }
   
@@ -69,10 +70,10 @@ $(document).ready( () => {
           <div class="cartoon">Is a Cartoon? ${updatedChar.cartoon}</div>
           <div class="weapon">Weapon: ${updatedChar.weapon}</div>
           </div>`)
-        $('#delete-one').attr('style','background:green')
+        $('#send-data').attr('style','background:green')
       })
       .catch(r=>{
-        $('#delete-one').attr('style','background:red')
+        $('#send-data').attr('style','background:red')
       })
   }
   
