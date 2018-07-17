@@ -1,20 +1,31 @@
+
+ const characterInfo = axios.create();
 class APIHandler {
   constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+    this.BASE_URL = baseUrl; 
   }
+ 
 
   getFullList () {
-    let monitos = axios.create({
-      baseUrl:"http://localhost:8000/characters"
-    });
-      monitos.get()
-      .then((response) =>{
-        res.json(response.data)
-      })
-      .catch((error) => {
-        console.log('Oh nooo hay un error!');
-        console.log(error);
-      })
+    //let url = this.BASE_URL + "/characters"
+      return characterInfo.get(this.BASE_URL + "/characters")
+      // .then((response) => {
+      //   console.log(response.data)
+      //   if(!response.ok)return Promise.reject(response.statusText)
+      //   return response.json();
+      // })
+  //     fetch(url)
+  //     .then(response =>{
+  //      if(!response.ok)return Promise.reject(response.statusText);
+  //       return response.json();
+  //     })
+  //      .then(data =>{
+  //       muestraTodo(data);
+  //     })
+  //     .catch((error) => {
+  //       console.log('Oh nooo hay un error!');
+  //       console.log(error);
+  //     })
   }
 
   getOneRegister () {
@@ -32,4 +43,5 @@ class APIHandler {
   deleteOneRegister () {
 
   }
-}
+
+}//fin de la clase

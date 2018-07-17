@@ -2,17 +2,22 @@ const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
-    charactersAPI.getFullList();
+    charactersAPI.getFullList()
   //  axios
   //  .get("http://localhost:8000/characters")
-  //  .then(response => {
-  //    console.log('search succes');
-  //   console.log(response.data);//solo consola
-  //  })
-  //  .catch(error => {
-  //    console.log('Oh nooo hay un error!');
-  //    console.log(error);
-  //  })
+   .then(response => {
+    console.log('search succes');
+    console.log(response.data);//solo consola
+    if(!response.ok)return Promise.reject(response.statusText)
+    return response.json();
+   })
+   .then(data =>{
+      muestraTodo(data);
+      })
+   .catch(error => {
+     console.log('Oh nooo hay un error!');
+     console.log(error);
+   })
 
   }//final de busca todos
   
@@ -90,3 +95,35 @@ $(document).ready( () => {
     console.log("form submit");
   }//final de crea uno 
 })
+
+
+//funciones extras para el dom
+function creaunNuevoDiv(objeto){
+  let arrayllaves = Object.keys(objeto);
+  let arrayvalores = Object.values(objeto);
+
+  let cajaDivs = document.getElementsByClassName('characters-container')[0];
+  let nuevacajaDiv = document.createElement("div");
+  nuevacajaDiv.className="character-info";
+
+  let divefi;
+
+  for(let i=0; i < arrayllaves.length; i++){
+    divefi= creadivKey(arrayllaves[i], arrayvalores[i]);
+    nuevacajaDiv.appendChild(divefi);
+  }
+  cajaDivs.appendChild(nuevacajaDiv);
+}
+
+function creadivKey (llave, valor){
+  let div = document.createElement("div");
+  div.className=llave;
+  div.innerHTML= " " + llave + " : " + valor;
+  return div;
+}
+
+function muestraTodo(arreglObjetos){
+  arreglObjetos.forEach((elemento) => {
+    creaunNuevoDiv(elemento);
+  });
+}
