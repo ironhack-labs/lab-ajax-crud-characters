@@ -11,16 +11,15 @@ $(document).ready(() => {
   };
 
   document.getElementById("fetch-one").onclick = function() {
-    //TODO: validate
     const id = $("#fetch-one")
       .prev()
       .val();
 
     $(".all-characters").text("");
 
-    charactersAPI.getOneRegister(id).then(response => {
-      console.log(response);
+    if (!id) return;
 
+    charactersAPI.getOneRegister(id).then(response => {
       $(".all-characters").append(getCard(response.data));
     });
   };
@@ -30,6 +29,8 @@ $(document).ready(() => {
       .prev()
       .val();
 
+    if (!id) return;
+
     $(".all-characters").text("");
     charactersAPI.deleteOneRegister(id);
   };
@@ -37,13 +38,12 @@ $(document).ready(() => {
   document.getElementById("new-character-form").onsubmit = function(e) {
     e.preventDefault();
 
-    const inputs = $("#new-character-form :input");
     let values = {};
     $.each($("#new-character-form").serializeArray(), function(i, field) {
       values[field.name] = field.value;
     });
 
-    //TODO: validate form data
+    if (!values.cartoon) values.cartoon = false;
 
     charactersAPI.createOneRegister(values);
   };
@@ -51,11 +51,12 @@ $(document).ready(() => {
   document.getElementById("edit-character-form").onsubmit = function(e) {
     e.preventDefault();
 
-    const inputs = $("#edit-character-form :input");
     let values = {};
     $.each($("#edit-character-form").serializeArray(), function(i, field) {
       values[field.name] = field.value;
     });
+
+    if (!values.cartoon) values.cartoon = false;
 
     charactersAPI.updateOneRegister(values);
   };

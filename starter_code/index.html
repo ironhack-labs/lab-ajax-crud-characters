@@ -29,12 +29,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="number" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="number" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
       <div class="all-characters">
@@ -49,15 +49,15 @@
       <form id="new-character-form" class="character-form" method="POST">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" required>
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" required>
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" required>
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
@@ -71,19 +71,19 @@
       <form id="edit-character-form" class="character-form" method="PATCH">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="number" name="chr-id" required>
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" required>
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" required>
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" required>
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
