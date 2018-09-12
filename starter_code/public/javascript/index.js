@@ -57,6 +57,7 @@ $(document).ready( () => {
 
           $delBtn.css({ background: "green"});
           $("#character-id-delete").val("");
+          document.getElementById('fetch-all').click();
 
       } catch(ex) {
           $delBtn.css("background", "red");
@@ -72,7 +73,7 @@ $(document).ready( () => {
       const name = $("#name-up").val();
       const occupation = $("#occupation-up").val();
       const weapon = $("#weapon-up").val();
-      const cartoon = ($("#cartoon-up").val() === 'on') ? 'false' : 'true';
+      const cartoon = ($("#cartoon-up").val() === 'on') ? 'true' : 'false';
       const $addBtn = $("#send-data-up");
 
       try {
@@ -93,6 +94,7 @@ $(document).ready( () => {
           $("#occupation-up").val("");
           $("#weapon-up").val("");
           $("#cartoon-up").val("");
+          document.getElementById('fetch-all').click();
 
       } catch(ex) {
           $addBtn.css({ background: "red"});
@@ -100,7 +102,6 @@ $(document).ready( () => {
           $("#name-up").val("");
           $("#occupation-up").val("");
           $("#weapon-up").val("");
-          $("#cartoon-up").val("");
       }
   };
   
@@ -109,8 +110,7 @@ $(document).ready( () => {
       const name = $("#name").val();
       const occupation = $("#occupation").val();
       const weapon = $("#weapon").val();
-      const cartoon = ($("#cartoon").val() !== 'on') ? 'true' : 'false';
-      console.log(cartoon);
+      const cartoon = ($("#cartoon").val() === 'on') ? 'false' : 'true';
       const $addBtn = $("#send-data");
 
       try {
@@ -128,7 +128,7 @@ $(document).ready( () => {
           $("#name").val("");
           $("#occupation").val("");
           $("#weapon").val("");
-          $("#cartoon").val(false);
+          document.getElementById('fetch-all').click();
 
       } catch(ex) {
           $addBtn.css({ background: "red"});
