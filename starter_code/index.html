@@ -66,29 +66,31 @@
     </section>
     <section class="form-container">
       <h2>Edit Character</h2>
-      <form id="edit-character-form" class="character-form">
+      <div class="character-form">
+      <!-- <form id="edit-character-form" class="character-form"> -->
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" id="editId">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="editName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="editOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="editWeapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
-      </form>
+        <button id="update-data">Update</button>
+      <!-- </form> -->
+      </div>
     </section>
   </section>
  

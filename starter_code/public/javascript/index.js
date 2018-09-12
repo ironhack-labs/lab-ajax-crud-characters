@@ -49,30 +49,28 @@ $(document).ready( () => {
     myApiHandler.deleteOneRegister(inputID)
   }
   
-  document.getElementById('edit-character-form').onsubmit = function(){
-            
+  document.getElementById('update-data').onclick = function(){
+    let theId=$('#editId')[0].value;
+    let theName=$('#editName')[0].value;
+    let theOccupation =$('#editOccupation')[0].value;
+    let theWeapon =$('#editWeapon')[0].value
+    let charObject = {
+          name: theName,
+          occupation: theOccupation,
+          weapon:theWeapon,
+        }
+    myApiHandler.updateOneRegister(theId, charObject)
   }
   
   document.getElementById('send-data').onclick = function(){
     let theName=$('#newName')[0].value;
     let theOccupation =$('#newOccupation')[0].value;
     let theWeapon =$('#newWeapon')[0].value
-    // let charObject = {
-    //   name: theName,
-    //   occupation: theOccupation,
-    //   weapon:theWeapon,
-    // }
-    axios.post('https://ih-crud-api.herokuapp.com/characters', {
-      name: theName, occupation: theOccupation, weapon:theWeapon,})
-    .then((response)=>{
-      console.log("got one registered....", response)
-      // this.getFullList ();
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
-    // charObject=req.body;
-    // console.log(charObject)
-    // myApiHandler.createOneRegister(charObject);
+    let charObject = {
+      name: theName,
+      occupation: theOccupation,
+      weapon:theWeapon,
+    }
+    myApiHandler.createOneRegister(charObject);
   }
 })

@@ -29,15 +29,20 @@ class APIHandler {
     axios.post(this.BASE_URL, newChar)
     .then((response)=>{
       console.log("got one registered....", response)
-      // this.getFullList ();
+      this.getFullList ();
     })
     .catch((err)=>{
         console.log(err);
     })
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, char) {
+    axios.put(this.BASE_URL+'/'+id, char)
+    .then((response)=>{
+      fetchOne(response.data) })
+    .catch((err)=>{
+        console.log(err);
+    })
   }
 
   deleteOneRegister (id) {
