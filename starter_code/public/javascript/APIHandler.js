@@ -17,9 +17,8 @@ class APIHandler {
 
     async getCharacterInfo(id) {
         try {
-            let character = await axios.get(thi.baseURL + `/characters/${id}`);
-            character = character.data;
-            console.log(character);
+            let character = await axios.get(this.baseAPI + `/characters/${id}`);
+            return character;
 
         } catch(ex) {
             console.log(ex);

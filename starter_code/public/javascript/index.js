@@ -24,14 +24,27 @@ $(document).ready( () => {
       const $charSection = $(".characters");
       $charSection.html(div);
 
-
-
-
-  }
+  };
   
-  document.getElementById('fetch-one').onclick = function(){
-    
-  }
+  document.getElementById('fetch-one').onclick = async function(){
+
+      const $id = $("#character-id").val();
+
+      let result = await charactersAPI.getCharacterInfo($id);
+      ch = result.data;
+
+      let character = `
+                <div class="char-info">
+                <div class="id"><span>ID:</span> <span>${ch.id}</span></div>
+                <div class="name"><span>NAME:</span> <span>${ch.name}</span></div>
+                <div class="occupation"><span>OCCUPATION:</span> <span>${ch.occupation}</span></div>
+                <div class="cartoon"><span>CARTOON:</span> <span>${ch.cartoon}</span></div>
+                <div class="weapon"><span>WEAPON:</span> <span>${ch.weapon}</span></div>
+                </div>`;
+
+      const $charSection = $(".characters");
+      $charSection.html(character);
+  };
   
   document.getElementById('delete-one').onclick = function(){
         

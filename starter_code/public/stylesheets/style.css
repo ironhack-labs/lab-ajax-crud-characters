@@ -75,7 +75,7 @@ button {
 
 .char-info {
   width: 30%;
-  padding: 10px;
+  padding: 5px;
   padding-left: 20px;
   text-align: left;
   border: solid white 2px;
@@ -120,6 +120,11 @@ button {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.characters {
+  display: flex;
   justify-content: center;
 }
 
