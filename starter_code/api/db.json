@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 2,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Van Damm",
+      "occupation": "Actor",
+      "weapon": "Everything",
+      "cartoon": "on",
+      "id": 3
+    },
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": "true",
+      "id": 4
+    }
+  ]
+}

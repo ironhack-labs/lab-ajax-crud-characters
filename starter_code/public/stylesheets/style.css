@@ -73,6 +73,16 @@ button {
   border-radius: 20px;
 }
 
+.char-info {
+  width: 30%;
+  padding: 5px;
+  padding-left: 20px;
+  text-align: left;
+  border: solid white 2px;
+  border-radius: 20px;
+  margin: 5px
+}
+
 .character-info div span {
   color: #d8b362;
   position: absolute;
@@ -104,4 +114,29 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+}
+
+.char-info div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.char-info span:first-child {
+  color: #d8b362;
+}
+
+.char-info span {
+  width: 50%;
 }
