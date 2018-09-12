@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa1b69b1-d8ae-4e00-af32-31f77909ced1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/starter_code/api/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter_code/api/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/api/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starter_code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starter_code/public/javascript/APIHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/public/javascript/APIHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starter_code/public/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/public/javascript/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/public/stylesheets/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="APIHandler.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starter_code/public/javascript/APIHandler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="289">
+              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -33,17 +32,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starter_code/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+            <state relative-caret-position="232">
+              <caret line="55" column="55" lean-forward="true" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/starter_code/public/javascript/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="45">
+              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -52,16 +51,16 @@
         <entry file="file://$PROJECT_DIR$/starter_code/api/db.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/starter_code/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+            <state relative-caret-position="399">
+              <caret line="88" column="12" lean-forward="true" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -86,11 +85,11 @@
         <option value="$PROJECT_DIR$/starter_code/package.json" />
         <option value="$PROJECT_DIR$/starter_code/api/APIHandler.js" />
         <option value="$PROJECT_DIR$/starter_code/index.js" />
-        <option value="$PROJECT_DIR$/starter_code/index.html" />
-        <option value="$PROJECT_DIR$/starter_code/api/db.json" />
-        <option value="$PROJECT_DIR$/starter_code/public/javascript/index.js" />
-        <option value="$PROJECT_DIR$/starter_code/public/javascript/APIHandler.js" />
         <option value="$PROJECT_DIR$/starter_code/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/starter_code/api/db.json" />
+        <option value="$PROJECT_DIR$/starter_code/public/javascript/APIHandler.js" />
+        <option value="$PROJECT_DIR$/starter_code/index.html" />
+        <option value="$PROJECT_DIR$/starter_code/public/javascript/index.js" />
       </list>
     </option>
   </component>
@@ -187,12 +186,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536758831036</updated>
-      <workItem from="1536758833331" duration="6096000" />
+      <workItem from="1536758833331" duration="7366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6096000" />
+    <option name="totallyTimeSpent" value="7366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="197" y="43" width="1343" height="921" extended-state="0" />
@@ -267,38 +266,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter_code/index.html">
+    <entry file="file://$PROJECT_DIR$/starter_code/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+        <state relative-caret-position="399">
+          <caret line="88" column="12" lean-forward="true" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/starter_code/api/db.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/starter_code/public/javascript/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/starter_code/public/javascript/APIHandler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+        <state relative-caret-position="289">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/starter_code/public/stylesheets/style.css">
+    <entry file="file://$PROJECT_DIR$/starter_code/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+        <state relative-caret-position="232">
+          <caret line="55" column="55" lean-forward="true" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/starter_code/public/javascript/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
         </state>
       </provider>
     </entry>

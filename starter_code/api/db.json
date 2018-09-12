@@ -20,6 +20,20 @@
       "occupation": "Live under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Van Damm",
+      "occupation": "Actor",
+      "weapon": "Gun",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "Kiryl Bartashevich",
+      "occupation": "Actor",
+      "weapon": "Everything",
+      "cartoon": "on",
+      "id": 5
     }
   ]
 }

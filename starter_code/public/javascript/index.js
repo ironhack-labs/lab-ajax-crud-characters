@@ -44,17 +44,64 @@ $(document).ready( () => {
 
       const $charSection = $(".characters");
       $charSection.html(character);
+      $("#character-id").val("");
   };
   
-  document.getElementById('delete-one').onclick = function(){
-        
-  }
+  document.getElementById('delete-one').onclick = async function(){
+      const $id = $("#character-id-delete").val();
+      const $delBtn = $("#delete-one");
+
+      try {
+
+          await charactersAPI.delCharacter($id);
+
+          $delBtn.css({ background: "green"});
+          $("#character-id-delete").val("");
+
+      } catch(ex) {
+          $delBtn.css("background", "red");
+          $("#character-id-delete").val("");
+
+      }
+
+  };
   
-  document.getElementById('edit-character-form').onsubmit = function(){
-            
-  }
+  document.getElementById('edit-character-form').onsubmit = async function(){
+
+
+
+  };
   
-  document.getElementById('new-character-form').onsubmit = function(){
-                
+  document.getElementById('new-character-form').onsubmit = async function(){
+      const name = $("#name").val();
+      const occupation = $("#occupation").val();
+      const weapon = $("#weapon").val();
+      const cartoon = $("#cartoon").val();
+      const $addBtn = $("#send-data");
+
+      try {
+
+          const newChar = {
+              name,
+              occupation,
+              weapon,
+              cartoon
+          };
+
+          const result = await charactersAPI.createCharacter(newChar);
+
+          $addBtn.css({ background: "green"});
+          $("#name").val("");
+          $("#occupation").val("");
+          $("#weapon").val("");
+          $("#cartoon").val(false);
+
+      } catch(ex) {
+          $addBtn.css({ background: "red"});
+          $("#name").val("");
+          $("#occupation").val("");
+          $("#weapon").val("");
+          $("#cartoon").val(false);
+      }
   }
 })

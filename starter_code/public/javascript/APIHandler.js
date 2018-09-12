@@ -29,7 +29,7 @@ class APIHandler {
         try {
             let character = await axios.post(this.baseAPI + `/characters`, opt);
             character = character.data;
-            console.log(character);
+            return character;
 
         } catch(ex) {
             console.log(ex);
@@ -39,8 +39,7 @@ class APIHandler {
     async delCharacter(id) {
         try {
             let character = await axios.delete(this.baseAPI + `/characters/${id}`);
-            console.log("The character was deleted!");
-
+            return character;
         } catch(ex) {
             console.log(ex);
         }
