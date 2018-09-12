@@ -49,7 +49,7 @@ class APIHandler {
         try {
             let character = await axios.put(this.baseAPI + `/characters/${id}`, opt);
             character = character.data;
-            console.log(character);
+            return character;
 
         } catch(ex) {
             console.log(ex);

@@ -2,20 +2,13 @@
   "characters": [
     {
       "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
-      "id": 2,
       "name": "Luke Skywalker",
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "SpongeBob",
       "occupation": "Live under the sea",
       "weapon": "Crabby Patty",
@@ -24,16 +17,30 @@
     {
       "name": "Van Damm",
       "occupation": "Actor",
-      "weapon": "Gun",
-      "cartoon": "on",
-      "id": 4
-    },
-    {
-      "name": "Kiryl Bartashevich",
-      "occupation": "Actor",
       "weapon": "Everything",
       "cartoon": "on",
-      "id": 5
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Vin Diesel",
+      "occupation": "Actor",
+      "weapon": "Gun",
+      "cartoon": "false",
+      "id": 6
     }
   ]
 }

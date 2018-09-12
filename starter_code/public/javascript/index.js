@@ -66,17 +66,51 @@ $(document).ready( () => {
 
   };
   
-  document.getElementById('edit-character-form').onsubmit = async function(){
+  document.getElementById('edit-character-form').onsubmit = async function(event){
+      event.preventDefault();
+      const id = $("#chr-id").val();
+      const name = $("#name-up").val();
+      const occupation = $("#occupation-up").val();
+      const weapon = $("#weapon-up").val();
+      const cartoon = ($("#cartoon-up").val() === 'on') ? 'false' : 'true';
+      const $addBtn = $("#send-data-up");
 
+      try {
 
+          const newChar = {
+              id,
+              name,
+              occupation,
+              weapon,
+              cartoon
+          };
 
+          const result = await charactersAPI.editCharacter(newChar);
+
+          $addBtn.css({ background: "green"});
+          $("#chr-id").val("");
+          $("#name-up").val("");
+          $("#occupation-up").val("");
+          $("#weapon-up").val("");
+          $("#cartoon-up").val("");
+
+      } catch(ex) {
+          $addBtn.css({ background: "red"});
+          $("#chr-id").val("");
+          $("#name-up").val("");
+          $("#occupation-up").val("");
+          $("#weapon-up").val("");
+          $("#cartoon-up").val("");
+      }
   };
   
-  document.getElementById('new-character-form').onsubmit = async function(){
+  document.getElementById('new-character-form').onsubmit = async function(event){
+      event.preventDefault();
       const name = $("#name").val();
       const occupation = $("#occupation").val();
       const weapon = $("#weapon").val();
-      const cartoon = $("#cartoon").val();
+      const cartoon = ($("#cartoon").val() !== 'on') ? 'true' : 'false';
+      console.log(cartoon);
       const $addBtn = $("#send-data");
 
       try {
@@ -104,4 +138,4 @@ $(document).ready( () => {
           $("#cartoon").val(false);
       }
   }
-})
+});
