@@ -4,22 +4,50 @@ class APIHandler {
   }
 
   getFullList () {
-
+    axios.get(this.BASE_URL)
+    .then((response)=>{
+      // console.log(response.data);
+      fetchAll(response.data) })
+    .catch((err)=>{
+        console.log(err)
+    })
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    // console.log("the full URL===" , this.BASE_URL+id)
+    axios.get(this.BASE_URL+'/'+id)
+    .then((response)=>{
+      // console.log(response.data);
+      fetchOne(response.data) })
+    .catch((err)=>{
+        console.log(err)
+        printError();
+    })
   }
 
-  createOneRegister () {
-
+  createOneRegister(newChar) {
+    axios.post(this.BASE_URL, newChar)
+    .then((response)=>{
+      console.log("got one registered....", response)
+      // this.getFullList ();
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
   }
 
   updateOneRegister () {
 
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    axios.delete(this.BASE_URL+'/'+id)
+    .then((response)=>{
+      console.log(response);
+      this.getFullList (); })
+    .catch((err)=>{
+        console.log(err)
+        printError();
+    })
   }
 }
