@@ -6,6 +6,9 @@ class APIHandler {
   getFullList() {
       axios.get(`${this.BASE_URL}/characters`)
       .then(response => {
+        response.data.forEach(e => {
+          allData(e.name, e.occupation, e.weapon, e.cartoon);
+        });
         console.log(response.data);
       });
   }
