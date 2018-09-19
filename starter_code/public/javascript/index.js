@@ -54,7 +54,9 @@ $(document).ready( () => {
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-    let editId = $('#edit-id')
+    event.preventDefault();
+    let editId = $('#edit-id').val()
+    console.log(editId)
     let editName = $('#edit-name').val();
     let editOccupation = $('#edit-occupation').val();
     let editWeapon = $('#edit-weapon').val();
@@ -65,7 +67,7 @@ $(document).ready( () => {
       weapon: editWeapon,
       cartoon: editCartoon
     }
-    let data = charactersAPI.updateOneRegister(parseInt(editId), editCharacter)
+    let data = charactersAPI.updateOneRegister(editId, editCharacter)
     data.then(() => {
       $('#send-edit-data').css('background-color', 'green')
     })
@@ -73,6 +75,7 @@ $(document).ready( () => {
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
+    event.preventDefault();
     let createName = $('#create-name').val();
     let createOccupation = $('#create-occupation').val();
     let createWeapon = $('#create-weapon').val();

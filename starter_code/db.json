@@ -22,11 +22,53 @@
       "cartoon": true
     },
     {
-      "name": "ADWAA",
-      "occupation": "WADADA",
-      "weapon": "DA",
+      "name": "",
+      "occupation": "scaawxawxaw",
+      "weapon": "",
       "cartoon": false,
       "id": 4
+    },
+    {
+      "name": "scasc",
+      "occupation": "cacwac",
+      "weapon": "awcacawcawc",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "scasc",
+      "occupation": "cacwac",
+      "weapon": "awcacawcawc",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "scasc",
+      "occupation": "cacwac",
+      "weapon": "awcacawcawc",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "scasc",
+      "occupation": "cacwac",
+      "weapon": "awcacawcawc",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "scasc",
+      "occupation": "cacwac",
+      "weapon": "awcacawcawc",
+      "cartoon": true,
+      "id": 9
+    },
+    {
+      "name": "wca",
+      "occupation": "acwc",
+      "weapon": "ac",
+      "cartoon": false,
+      "id": 10
     }
   ]
 }
