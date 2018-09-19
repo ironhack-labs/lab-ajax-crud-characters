@@ -20,6 +20,13 @@
       "weapon": "ears",
       "cartoon": "on",
       "id": 4
+    },
+    {
+      "name": "Popers",
+      "occupation": "Cameraman",
+      "weapon": "eyes",
+      "cartoon": "on",
+      "id": 5
     }
   ]
 }

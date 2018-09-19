@@ -34,14 +34,14 @@ class APIHandler {
     .catch(e => console.log(e))
   }
 
-  updateOneRegister () {
+  updateOneRegister (id, nameUpate, occupationUpdate, weaponUpdate, cartoonUpate) {
     let characterUpdate = {
       name: nameUpate,
       occupation: occupationUpdate,
       weapon: weaponUpdate,
       cartoon: cartoonUpate
     }
-    axios.patch(`${this.BASE_URL}/characters/${id}}`)
+    axios.patch(`${this.BASE_URL}/characters/${id}}`, characterUpdate)
     .then(res => {
       console.log("Character updated!")
       return res.data
