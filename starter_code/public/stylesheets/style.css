@@ -7,7 +7,8 @@
 body {
   font-family: 'Roboto';
   color: white;
-  background: url("../images/minions.jpg")
+  background: url("../images/minions.jpg");
+  margin-bottom: 80px;
 }
 
 h1, h2 {
@@ -39,6 +40,10 @@ button {
   border-radius: 20px;
   background-color: rgba(88, 98, 123, 0.95);
   text-align: center;
+}
+
+.container.display-response.hidden {
+	display: none;
 }
 
 .characters-container {

@@ -29,7 +29,7 @@
 			</div>
 			<div class="operation">
 				<label for="character-id">Search by ID: </label>
-				<input type="text" name="character-id">
+				<input type="text" name="character-id" id="character-id" placeholder="Indicate an ID">
 				<button id="fetch-one">Fetch one</button>
 			</div>
 			<div class="operation delete">
@@ -89,10 +89,8 @@
 			</form>
 		</section>
 	</section>
-	<section class="container">
-		<section class="display-response" id="display-response">
-			<!-- Display the character cards -->
-		</section>
+	<section class="container display-response hidden" id="display-response">
+
 	</section>
 	<script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
 	<script type="text/javascript" src="./public/javascript/DOMDisplay.js"></script>

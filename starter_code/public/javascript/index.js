@@ -5,19 +5,17 @@ $(document).ready(() => {
 	document.getElementById('fetch-all').onclick = function (e) {
 		e.preventDefault();
 		const data = charactersAPI.getFullList();
-		//$('#show-all').
+
 	}
 
 	document.getElementById('fetch-one').onclick = function (e) {
 		e.preventDefault();
-		const data = charactersAPI.getOneRegister('1')
-			.then(res => charactersDisplay.displayOneRegister(res))
-			
-		
-		//$('#display-characters');
-		//console.log(data);
-		//console.log('stringify', JSON.stringify(data));
-		
+		const id = $('#character-id').val();
+		if (id) {
+			const data = charactersAPI.getOneRegister(id)
+				.then(res => charactersDisplay.displayOneRegister(res))	
+		}
+
 	}
 
 	document.getElementById('new-character-form').onsubmit = function (e) {

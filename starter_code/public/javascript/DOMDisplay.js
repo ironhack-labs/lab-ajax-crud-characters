@@ -1,12 +1,12 @@
 class DOMDisplay {
 	constructor() {	}
 
-
-	
-
 	displayOneRegister(res) {
 		let item;
-		$('#display-response').html($('<div>', {class: 'character-card', id: 'character-card'}));
+		let container = $('#display-response');
+		
+		container.html($('<div>', {class: 'character-card', id: 'character-card'}));
+		container.removeClass('hidden');
 
 		for (let key in res) {
 			if (res.hasOwnProperty(key)) {
