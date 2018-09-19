@@ -55,6 +55,13 @@
       "weapon": "hacha",
       "cartoon": "false",
       "id": 12
+    },
+    {
+      "name": "Juana de Arco",
+      "occupation": "Guerrera",
+      "weapon": "Espada",
+      "cartoon": false,
+      "id": 13
     }
   ]
 }

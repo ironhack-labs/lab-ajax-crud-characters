@@ -105,3 +105,25 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.character-card {
+	display: table;
+	border: 2px solid #fff;
+	border-radius: 30px;
+	padding: 15px;
+}
+
+.character-card .row {
+	display: table-row;
+}
+
+.character-card span {
+	display: table-cell;
+	text-align: left;
+	padding: 2px 10px;
+	font-size: 16px;
+}
+
+.character-card span:nth-child(even) {
+	color: #d8b362;
+}

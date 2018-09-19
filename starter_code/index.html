@@ -35,7 +35,6 @@
         <input type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
-
     </section>
   </section>
   <section class="container">
@@ -86,9 +85,23 @@
         </div>
         <button id="send-data">Update</button>
       </form>
-    </section>
+	</section>
+  </section>
+  <section class="container">
+	<section class="display-response">
+		<div id="display-characters">
+			<div id="character" class="character-card">
+				<div class="row"><span>Id:</span><span>1</span></div>
+				<div class="row"><span>Name:</span><span>Han Solo</span></div>
+				<div class="row"><span>Occupation:</span><span>Smuggler</span></div>
+				<div class="row"><span>Is a Cartoon?:</span><span>true</span></div>
+				<div class="row"><span>Weapon:</span><span>Blaster Pistol</span></div>
+			</div>
+		</div>
+	</section>
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
+  <script type="text/javascript" src="./public/javascript/DOMDisplay.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
 </html>

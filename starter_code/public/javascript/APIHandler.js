@@ -11,9 +11,12 @@ class APIHandler {
 	}
 
 	getOneRegister(id) {
-		axios.get(`${this.BASE_URL}${this.COLLECTION}/${id}`)
-		.then(res => console.log(res.data))
-		.catch(err => console.log(err))
+		const data = axios.get(`${this.BASE_URL}${this.COLLECTION}${id}`)
+			.then(res => {
+				return res.data;
+			})
+			.catch(err => console.log(err))
+		return data;
 	}
 
 	createOneRegister(character) {
