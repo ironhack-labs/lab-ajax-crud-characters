@@ -65,16 +65,14 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 55%;
   margin: 10px;
   padding: 10px;
   text-align: left;
   border: solid white 2px;
   border-radius: 20px;
 }
-.character-info:first-child{
-  display: none;
-} 
+
 
 .character-info div span {
   color: #d8b362;

@@ -7,6 +7,7 @@ class APIHandler {
     return axios
       .get("http://localhost:8000/characters")
       .then(res => {
+        console.log(res.data)
         return res.data;
       })
       .catch(e => console.log(e));
@@ -17,7 +18,7 @@ class APIHandler {
       .get(`http://localhost:8000/characters/${char}`)
       .then(res => {
         console.log(res);
-        return res.data;
+        return res;
       })
       .catch(e => console.log(e));
   }
