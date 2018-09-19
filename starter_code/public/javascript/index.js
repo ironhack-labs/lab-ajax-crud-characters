@@ -53,17 +53,39 @@ $(document).ready(() => {
 
 	document.getElementById('edit-character-form').onsubmit = function (e) {
 		e.preventDefault();
-		const characterToUpdate = {
-			name: "Juana de Arco",
-			occupation: "Luchadora",
-			weapon: "Espada",
-			cartoon: false
+		const inputs = $('#edit-character-form :input');
+		let character = {};
+		let id;
+
+		inputs.each(function() {
+			if (this.type === 'text') {
+				if (this.name !== 'chr-id') {
+					character[this.name] = $(this).val().toLowerCase();
+				} else {
+					id = $(this).val();
+				}
+			} 
+			else if (this.type === 'checkbox') {
+				if ($(this).is(':checked')) {
+					character[this.name] = true;
+				}
+				else {
+					character[this.name] = false;
+				}
+			}
+		});
+
+		if ((character && !$.isEmptyObject(character)) && (id && id !== "")) {
+			charactersAPI.updateOneRegister(id, character);
 		}
-		charactersAPI.updateOneRegister(6,characterToUpdate);
 	}
 
 	document.getElementById('delete-one').onclick = function (e) {
 		e.preventDefault();
-		charactersAPI.deleteOneRegister('6');
+		let id = $('#character-id-delete').val();
+
+		if (id && id !== ""){
+			charactersAPI.deleteOneRegister(id);
+		}
 	}
 })

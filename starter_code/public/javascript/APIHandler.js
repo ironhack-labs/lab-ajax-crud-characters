@@ -29,7 +29,7 @@ class APIHandler {
 	}
 
 	updateOneRegister(id, characterToUpdate) {
-		axios.put(`${this.BASE_URL}${this.COLLECTION}/${id}`, characterToUpdate)
+		axios.put(`${this.BASE_URL}${this.COLLECTION}${id}`, characterToUpdate)
 		.then(res => console.log(res))
 		.catch(err => console.log(err))
 	}

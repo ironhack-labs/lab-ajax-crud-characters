@@ -92,16 +92,9 @@
       "id": 14
     },
     {
-      "name": "popeye",
-      "occupation": "sailor",
-      "weapon": "spinach",
-      "cartoon": true,
-      "id": 15
-    },
-    {
-      "name": "luis piedrahita",
-      "occupation": "humorist",
-      "weapon": "mood",
+      "name": "unamuno",
+      "occupation": "philosopher",
+      "weapon": "writter",
       "cartoon": false,
       "id": 16
     }
