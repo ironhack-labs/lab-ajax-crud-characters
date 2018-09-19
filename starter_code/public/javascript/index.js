@@ -19,7 +19,9 @@ $(document).ready(() => {
   }
 
   document.getElementById('delete-one').onclick = function () {
-
+    let id = document.getElementsByName("character-id-delete")[0].value;
+    charactersAPI.deleteOneRegister(id)
+    .then(() => console.log("Character has been successfully deleted"))
   }
 
   document.getElementById('edit-character-form').onsubmit = function () {
