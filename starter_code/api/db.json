@@ -1,0 +1,44 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Leia Organa",
+      "occupation": "Princess",
+      "weapon": "Laser Gun",
+      "id": 4
+    },
+    {
+      "name": "Marceline",
+      "occupation": "Vampire",
+      "weapon": "Guitar",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Rick Sanchez",
+      "occupation": "Scientist",
+      "weapon": "Portal gun",
+      "id": 6
+    },
+    {
+      "name": "Finn the Human",
+      "occupation": "Hero",
+      "weapon": "Grass Sword",
+      "cartoon": true,
+      "id": 7
+    }
+  ]
+}
