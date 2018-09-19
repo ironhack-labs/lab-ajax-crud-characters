@@ -112,15 +112,19 @@ button {
 }
 
 .display-response {
+	padding: 40px;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .character-card {
 	display: table;
-	border: 2px solid #fff;
-	border-radius: 30px;
-	padding: 15px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 15px;
+    margin: 10px;
+    width: 30%;
 }
 
 .character-card .row {

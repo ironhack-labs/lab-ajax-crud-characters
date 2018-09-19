@@ -4,9 +4,14 @@ const charactersDisplay = new DOMDisplay();
 $(document).ready(() => {
 	document.getElementById('fetch-all').onclick = function (e) {
 		e.preventDefault();
-		const data = charactersAPI.getFullList()
-		.then(res => charactersDisplay.displayRegister(res))
-		//.then(res => charactersDisplay.displayAllRegisters(res));
+		charactersAPI.getFullList()
+			.then(res => {
+				charactersDisplay.clearDisplayContainer();
+				for (let i = 0; i < res.length; i++) {
+					charactersDisplay.displayRegister(res[i]);
+				}
+			})
+
 	}
 
 	document.getElementById('fetch-one').onclick = function (e) {
@@ -15,7 +20,10 @@ $(document).ready(() => {
 		
 		if (id) {
 			charactersAPI.getOneRegister(id)
-				.then(res => charactersDisplay.displayOneRegister(res))
+				.then(res => {
+					charactersDisplay.clearDisplayContainer();
+					charactersDisplay.displayRegister(res);
+				})
 		}
 
 	}
