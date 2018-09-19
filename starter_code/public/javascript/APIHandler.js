@@ -6,28 +6,26 @@ class APIHandler {
 
 	getFullList() {
 		const data = axios.get(`${this.BASE_URL}${this.COLLECTION}`)
-			.then(res => {
-				return res.data;
-			})
-			.catch(err => console.log(err))
+			.then(res => { return res.data })
+			.catch(err => {	return err })
 
 		return data;
 	}
 
 	getOneRegister(id) {
 		const data = axios.get(`${this.BASE_URL}${this.COLLECTION}${id}`)
-			.then(res => {
-				return res.data;
-			})
-			.catch(err => console.log(err))
-			
+			.then(res => { return res.data })
+			.catch(err => { return err })
+
 		return data;
 	}
 
 	createOneRegister(character) {
-		axios.post(`${this.BASE_URL}${this.COLLECTION}`, character)
-		.then(res => console.log(res))
-		.catch(err => console.log(err))
+		const data = axios.post(`${this.BASE_URL}${this.COLLECTION}`, character)
+			.then(res => { return res.data })
+			.catch(err => { return err })
+		
+		return data;
 	}
 
 	updateOneRegister(id, characterToUpdate) {

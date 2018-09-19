@@ -21,8 +21,8 @@ class DOMDisplay {
 		let el = $('<div>').addClass('character-card');
 
 		for (let key in resOrdered) {
-			if (res.hasOwnProperty(key)) {
-			  	item = `<div class="row"><span>${key}</span><span>${res[key]}</span></div>`;
+			if (resOrdered.hasOwnProperty(key)) {
+			  	item = `<div class="row"><span>${key}</span><span>${resOrdered[key]}</span></div>`;
 				el.append(item);
 			}
 		}
