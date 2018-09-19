@@ -4,22 +4,23 @@ class APIHandler {
   }
 
   getFullList () {
+return axios.get("http://localhost:8000/characters")
 
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+return axios.get(`http://localhost:8000/characters/${id}`)
   }
 
-  createOneRegister () {
-
+  createOneRegister (id) {
+return axios.post(`http://localhost:8000/characters/`, id)
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id,object) {
+return axios.post(`http://localhost:8000/characters/${id}`, object)
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+return axios.delete(`http://localhost:8000/characters/${id}`)
   }
 }
