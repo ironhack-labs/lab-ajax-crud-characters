@@ -17,7 +17,7 @@ $(document).ready(() => {
 		e.preventDefault();
 		const id = $('#character-id').val();
 		
-		if (id) {
+		if (id && id !== "") {
 			charactersAPI.getOneRegister(id)
 				.then(res => {
 					charactersDisplay.clearDisplayContainer();

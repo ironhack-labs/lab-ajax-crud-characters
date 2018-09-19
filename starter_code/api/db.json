@@ -94,8 +94,8 @@
     {
       "name": "unamuno",
       "occupation": "philosopher",
-      "weapon": "writter",
-      "cartoon": false,
+      "weapon": "wisdom",
+      "cartoon": true,
       "id": 16
     }
   ]
