@@ -72,6 +72,9 @@ button {
   border: solid white 2px;
   border-radius: 20px;
 }
+.character-info:first-child{
+  display: none;
+} 
 
 .character-info div span {
   color: #d8b362;
