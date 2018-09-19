@@ -27,12 +27,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="id-value" value="">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="delete-id-value">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -56,7 +56,7 @@
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" id="isCartoon">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -66,7 +66,7 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" id="character-id-input">
         </div>
         <div class="field">
           <label for="name">Name: </label>
@@ -82,12 +82,13 @@
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" id="isCartoonEdit">
         </div>
         <button id="send-data">Update</button>
       </form>
     </section>
   </section>
+  <script type="text/javascript" src="./public/javascript/DomStuff.js"></script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
