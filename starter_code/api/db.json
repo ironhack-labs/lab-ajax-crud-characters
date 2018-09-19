@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Place3",
+      "occupation": "Teacher",
+      "weapon": "Hands",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Granier",
+      "occupation": "qw",
+      "weapon": "Pistol",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "Ferràn Adrià",
+      "occupation": "qw",
+      "weapon": "qw",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "Karlos Arguiñano",
+      "occupation": "Cooker",
+      "weapon": "Hands",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "Place2",
+      "occupation": "Cooker",
+      "weapon": "Hands",
+      "cartoon": true,
+      "id": 10
+    }
+  ]
+}
