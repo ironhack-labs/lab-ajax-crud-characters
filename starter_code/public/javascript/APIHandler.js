@@ -7,9 +7,10 @@ class APIHandler {
 	getFullList() {
 		const data = axios.get(`${this.BASE_URL}${this.COLLECTION}`)
 			.then(res => {
-				return res.data
+				return res.data;
 			})
 			.catch(err => console.log(err))
+
 		return data;
 	}
 
@@ -19,6 +20,7 @@ class APIHandler {
 				return res.data;
 			})
 			.catch(err => console.log(err))
+			
 		return data;
 	}
 

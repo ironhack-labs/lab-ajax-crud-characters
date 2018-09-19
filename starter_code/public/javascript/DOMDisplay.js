@@ -1,19 +1,32 @@
 class DOMDisplay {
-	constructor() {	}
+	constructor() {
+		this.displayContainer = $('#display-response');
+	}
+
+
+	displayAllRegisters(res) {
+		console.log(res);
+	}
 
 	displayOneRegister(res) {
 		let item;
-		let container = $('#display-response');
 		
-		container.html($('<div>', {class: 'character-card', id: 'character-card'}));
-		container.removeClass('hidden');
+		const resOrdered = {
+			id: res.id,
+			name: res.name,
+			occupation: res.occupation,
+			weapon: res.weapon,
+			cartoon: res.cartoon
+		}
 
-		for (let key in res) {
+		this.displayContainer.html($('<div>', {class: 'character-card', id: 'character-card'}));
+		this.displayContainer.removeClass('hidden');
+
+		for (let key in resOrdered) {
 			if (res.hasOwnProperty(key)) {
 			  item = `<div class="row"><span>${key}</span><span>${res[key]}</span></div>`
 			  $('#character-card').append(item);
 			}
 		}
 	}
-
 }

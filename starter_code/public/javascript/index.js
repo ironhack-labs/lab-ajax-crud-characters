@@ -4,16 +4,18 @@ const charactersDisplay = new DOMDisplay();
 $(document).ready(() => {
 	document.getElementById('fetch-all').onclick = function (e) {
 		e.preventDefault();
-		const data = charactersAPI.getFullList();
-
+		const data = charactersAPI.getFullList()
+		.then(res => charactersDisplay.displayRegister(res))
+		//.then(res => charactersDisplay.displayAllRegisters(res));
 	}
 
 	document.getElementById('fetch-one').onclick = function (e) {
 		e.preventDefault();
 		const id = $('#character-id').val();
+		
 		if (id) {
-			const data = charactersAPI.getOneRegister(id)
-				.then(res => charactersDisplay.displayOneRegister(res))	
+			charactersAPI.getOneRegister(id)
+				.then(res => charactersDisplay.displayOneRegister(res))
 		}
 
 	}

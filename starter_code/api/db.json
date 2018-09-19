@@ -40,28 +40,28 @@
       "occupation": "Guerrera",
       "weapon": "Espada",
       "cartoon": false,
-      "id": 7
+      "id": 6
     },
     {
       "name": "El loko",
       "occupation": "bandido",
       "weapon": "hacha",
       "cartoon": "false",
-      "id": 11
+      "id": 7
     },
     {
       "name": "Carmen de Mairena",
       "occupation": "bandido",
       "weapon": "hacha",
       "cartoon": "false",
-      "id": 12
+      "id": 8
     },
     {
       "name": "Juana de Arco",
       "occupation": "Guerrera",
       "weapon": "Espada",
       "cartoon": false,
-      "id": 13
+      "id": 9
     }
   ]
 }
