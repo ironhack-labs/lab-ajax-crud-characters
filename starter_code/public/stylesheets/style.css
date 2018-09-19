@@ -111,6 +111,11 @@ button {
   margin: 10px 0 0 120px;
 }
 
+.display-response {
+	display: flex;
+	justify-content: center;
+}
+
 .character-card {
 	display: table;
 	border: 2px solid #fff;
