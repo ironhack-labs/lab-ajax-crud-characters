@@ -11,7 +11,6 @@ $(document).ready(() => {
 					charactersDisplay.displayRegister(res[i]);
 				}
 			})
-
 	}
 
 	document.getElementById('fetch-one').onclick = function (e) {
@@ -25,7 +24,6 @@ $(document).ready(() => {
 					charactersDisplay.displayRegister(res);
 				})
 		}
-
 	}
 
 	document.getElementById('new-character-form').onsubmit = function (e) {

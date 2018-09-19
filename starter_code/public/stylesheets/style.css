@@ -47,12 +47,11 @@ button {
 }
 
 .characters-container {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
   align-items: center;
+  padding: 20px;
+  display: flex;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
 }
 
 .active {
@@ -109,13 +108,6 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
-}
-
-.display-response {
-	padding: 40px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
 }
 
 .character-card {
