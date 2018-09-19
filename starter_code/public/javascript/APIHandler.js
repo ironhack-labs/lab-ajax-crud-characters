@@ -3,21 +3,21 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
   getFullList () {
-    return axios.get(`${this.BASE_URL}`)
+    return axios.get(`${this.BASE_URL}/characters`)
     .then( res => {
       return res.data
    }).catch(e => console.log(e));
 }
   
   getOneRegister (id) {
-    axios.get(`${this.BASE_URL}/${id}`)
+    axios.get(`${this.BASE_URL}/characters/${id}`)
     .then( res => {
       return res.data
    }).catch(e => console.log(e));
 }
 
   createOneRegister (newChar) {
-    axios.post(`${this.BASE_URL}/${id}`, newChar)
+    axios.post(`${this.BASE_URL}/characters/${id}`, newChar)
     .then(res => {
      return res.data;
     }).catch(e => console.log(e));
@@ -25,7 +25,7 @@ class APIHandler {
   
 
   updateOneRegister () {
-     axios.patch(`${this.BASE_URL}/${id}`)
+     axios.patch(`${this.BASE_URL}/characters/${id}`)
     .then(res => {
       return res.data;
     }) 
@@ -33,7 +33,7 @@ class APIHandler {
   }
 
   deleteOneRegister () {
-    axios.delete(`${this.BASE_URL}/${id}`)
+    axios.delete(`${this.BASE_URL}/characters/${id}`)
     .then( () => {
       return "Character has been successfully deleted"
     })
