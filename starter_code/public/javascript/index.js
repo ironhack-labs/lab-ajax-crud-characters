@@ -11,7 +11,7 @@ $(document).ready(() => {
 	document.getElementById('fetch-one').onclick = function (e) {
 		e.preventDefault();
 		const data = charactersAPI.getOneRegister('1')
-			//.then(res => charactersDisplay.displayOneRegister(res))
+			.then(res => charactersDisplay.displayOneRegister(res))
 			
 		
 		//$('#display-characters');
