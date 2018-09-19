@@ -14,19 +14,28 @@ $(document).ready( () => {
     .catch(e => console.log(e));
   }
   
-  document.getElementById('delete-one').onclick = function(){
+  document.getElementById('delete-one').onclick = () => {
     let id = document.getElementsByName('character-id-delete')[0].value;
     charactersAPI.deleteOneRegister(id)
     .then(e => console.log(e, 'muerto'))
     .catch(e => console.log(e));
   }
   
-  document.getElementById('edit-character-form').onsubmit = function(){
+  document.getElementById('edit-character-form').onsubmit = e => {
+    e.preventDefault();
             
   }
   
-  document.getElementById('new-character-form').onsubmit = function(){
-                
+  document.getElementById('new-character-form').onsubmit = e =>{
+    e.preventDefault();
+    let name = document.getElementsByName('name')[0].value;
+    let occupation = document.getElementsByName('occupation')[0].value;
+    let weapon = document.getElementsByName('weapon')[0].value;
+    let cartoon = document.getElementsByName('cartoon')[0].checked;
+    let character = {name, occupation, weapon, cartoon}
+    charactersAPI.createOneRegister(character)
+    .then(() => console.log('hola'))
+    .catch(e => console.log(e));
   }
 });
 

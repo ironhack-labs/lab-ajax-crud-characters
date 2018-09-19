@@ -11,8 +11,8 @@ class APIHandler {
     return axios.get(`http://localhost:8000/characters/${id}`);
   }
 
-  createOneRegister () {
-    return axios.post('http://localhost:8000/characters');
+  createOneRegister (character) {
+    return axios.post('http://localhost:8000/characters', character);
   }
 
   updateOneRegister () {
