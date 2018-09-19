@@ -25,7 +25,7 @@ $(document).ready( () => {
   };
 
   document.getElementById('fetch-one').onclick = function(){
-    let oneData = charactersAPI.getOneRegister($('#character-id').val())
+    let oneData = charactersAPI.getOneRegister($('#character-id-search').val())
     oneData.then(character => {
       let charContainer = $('.characters-container').empty()
       let charInfo = $('<div>').addClass('character-info');
@@ -42,19 +42,51 @@ $(document).ready( () => {
 
       let charWeapon = $('<div>').addClass('weapon').text('weapon: '+character.data.weapon);
       charInfo.append(charWeapon);
-    })
-    .catch((e) => console.log(e))
+    });
   }
   
   document.getElementById('delete-one').onclick = function(){
-        
+    var deleteData = charactersAPI.deleteOneRegister($('#character-id-delete').val())
+    deleteData.then(() => {
+      $('#delete-one').css('background-color', 'green')
+    })
+    .catch(() => $('#delete-one').css('background-color', 'red'))
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-            
+    let editId = $('#edit-id')
+    let editName = $('#edit-name').val();
+    let editOccupation = $('#edit-occupation').val();
+    let editWeapon = $('#edit-weapon').val();
+    let editCartoon = $('#edit-cartoon').prop('checked')
+    let editCharacter = {
+      name: editName,
+      occupation: editOccupation,
+      weapon: editWeapon,
+      cartoon: editCartoon
+    }
+    let data = charactersAPI.updateOneRegister(parseInt(editId), editCharacter)
+    data.then(() => {
+      $('#send-edit-data').css('background-color', 'green')
+    })
+    .catch(() => $('#send-edit-data').css('background-color', 'red'))
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
-                
+    let createName = $('#create-name').val();
+    let createOccupation = $('#create-occupation').val();
+    let createWeapon = $('#create-weapon').val();
+    let createCartoon = $('#create-cartoon').prop('checked')
+    let newCharacter = {
+      name: createName,
+      occupation: createOccupation,
+      weapon: createWeapon,
+      cartoon: createCartoon
+    }
+    let data = charactersAPI.createOneRegister(newCharacter)
+    data.then(() => {
+      $('#send-create-data').css('background-color', 'green')
+    })
+    .catch(() => $('#send-create-data').css('background-color', 'red'))
   }
 })

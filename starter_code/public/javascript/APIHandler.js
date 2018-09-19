@@ -25,7 +25,7 @@ class APIHandler {
   }
 
   updateOneRegister (characterId, update) {
-    return axios.put(`http://localhost:8000/characters/${characterId}`,update)
+    return axios.put(`http://localhost:8000/characters/${characterId}`, update)
     .then(function (response) {
       return response;
     })
