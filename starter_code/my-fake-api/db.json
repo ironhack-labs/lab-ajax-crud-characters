@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke",
+      "occupation": "Jedi",
+      "weapon": "Lightsaber",
+      "cartoon": "on"
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "pikachu",
+      "occupation": "Electricity",
+      "weapon": "Electricity",
+      "cartoon": "on",
+      "id": 4
+    }
+  ]
+}
