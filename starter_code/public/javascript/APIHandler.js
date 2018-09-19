@@ -8,18 +8,22 @@ class APIHandler {
   }
 
   getOneRegister (id) {
+    if(id==""){return new Promise((res,reject)=>reject("Se necesita in ID para Mostrar"))}
     return axios.get(this.BASE_URL+id)
   }
 
-  createOneRegister (id,obj) {
-    return axios.post(this.BASE_URL+id,obj)
+  createOneRegister (obj) {
+    return axios.post(this.BASE_URL,obj)
   }
 
   updateOneRegister (id,obj) {
-    return axios.update(this.BASE_URL+id,obj)
+    console.log(id)
+    if(id==""){return new Promise((res,reject)=>reject("Se necesita in ID para editar"))}
+    return axios.put(this.BASE_URL+id,obj)
   }
 
   deleteOneRegister (id) {
-    return axios.delete(this.axios+id)
+    if(id==""){return new Promise((res,reject)=>reject("Se necesita in ID para borrar"))}
+    return axios.delete(this.BASE_URL+id)
   }
 }
