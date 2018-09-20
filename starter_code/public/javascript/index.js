@@ -18,7 +18,6 @@ $(document).ready(() => {
   document.getElementById('fetch-one').onclick = function (e) {
     charactersAPI.getOneRegister(e.target.previousElementSibling.value)
     .then(character=>{
-      console.log(character)
       $characters.innerHTML=""
       showOneCharacter(character.data)
     })
@@ -28,7 +27,6 @@ $(document).ready(() => {
 
   document.getElementById('delete-one').onclick = function (e) {
     charactersAPI.deleteOneRegister(this.previousElementSibling.value)
-      .then(() => console.log("Se ha borrado "+this.previousElementSibling.value))
       .catch(err => alert(err))
   }
 
@@ -36,7 +34,6 @@ $(document).ready(() => {
     e.preventDefault();
     charactersAPI.updateOneRegister(e.target.querySelector('[name=chr-id]').value,getCharacter(e.target))
     .then(character=>{
-      console.log(character)
       $characters.innerHTML=""
       showOneCharacter(character.data)
     })
@@ -47,14 +44,12 @@ $(document).ready(() => {
    e.preventDefault()
     charactersAPI.createOneRegister(getCharacter(e.target))
     .then(character=>{
-      console.log(character)
       $characters.innerHTML=""
       showOneCharacter(character.data)
     })
     .catch(e=>alert(e))
   }
   const setCharacter = (el, data) => {
-    console.log(el)
     el.getElementsByClassName('id')[0].innerHTML = data.id
     el.getElementsByClassName('name')[0].innerHTML = data.name
     el.getElementsByClassName('occupation')[0].innerHTML = data.occupation
@@ -70,10 +65,10 @@ $(document).ready(() => {
     }
   }
   const showOneCharacter=(character => {
-      console.log(character)
       let $characterNew = $characterInfo.cloneNode(true)
       $characters.append($characterNew)
-      console.log(character.data)
       setCharacter($characterNew, character)
+      $characterNew.scrollIntoView()  
+      $characterNew.focus()
   })
 })

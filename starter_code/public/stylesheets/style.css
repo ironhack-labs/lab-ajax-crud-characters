@@ -71,6 +71,9 @@ button {
   border: solid white 2px;
   border-radius: 20px;
 }
+.character-info:focus{
+  box-shadow: 0 0 8px 0 cyan;
+}
 .character-info li{
   list-style: none;
 }

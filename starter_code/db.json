@@ -181,6 +181,13 @@
       "weapon": "",
       "cartoon": false,
       "id": 26
+    },
+    {
+      "name": "awd",
+      "occupation": "123",
+      "weapon": "daw",
+      "cartoon": false,
+      "id": 27
     }
   ]
 }
