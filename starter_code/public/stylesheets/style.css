@@ -62,7 +62,6 @@ button {
 .operation {
   margin: 20px 0 0;
 }
-
 .character-info {
   position: relative;
   width: 40%;
@@ -72,8 +71,13 @@ button {
   border: solid white 2px;
   border-radius: 20px;
 }
-
-.character-info div span {
+.character-info:focus{
+  box-shadow: 0 0 8px 0 cyan;
+}
+.character-info li{
+  list-style: none;
+}
+.character-info li span {
   color: #d8b362;
   position: absolute;
   left: 50%;

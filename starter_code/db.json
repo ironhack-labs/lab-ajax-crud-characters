@@ -1,0 +1,193 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "awdawd",
+      "occupation": "123",
+      "weapon": "weaprueba",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "awd",
+      "occupation": "awdad",
+      "weapon": "awd",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 14
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 15
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 16
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 17
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 18
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 19
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 20
+    },
+    {
+      "name": "awdawd",
+      "occupation": "qeqwe",
+      "weapon": "qweqe",
+      "cartoon": false,
+      "id": 21
+    },
+    {
+      "name": "",
+      "occupation": "adaw",
+      "weapon": "",
+      "cartoon": false,
+      "id": 22
+    },
+    {
+      "name": "",
+      "occupation": "adaw",
+      "weapon": "",
+      "cartoon": false,
+      "id": 23
+    },
+    {
+      "name": "",
+      "occupation": "adaw",
+      "weapon": "",
+      "cartoon": false,
+      "id": 24
+    },
+    {
+      "name": "",
+      "occupation": "aaa",
+      "weapon": "",
+      "cartoon": false,
+      "id": 25
+    },
+    {
+      "name": "11",
+      "occupation": "aaa",
+      "weapon": "",
+      "cartoon": false,
+      "id": 26
+    },
+    {
+      "name": "awd",
+      "occupation": "123",
+      "weapon": "daw",
+      "cartoon": false,
+      "id": 27
+    }
+  ]
+}
