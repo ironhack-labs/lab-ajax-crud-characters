@@ -39,8 +39,8 @@ class APIHandler {
     .catch (e => console.log(e));
   }
 
-  updateOneRegister (id,) {
-    return axios.patch(`${this.BASE_URL}/characters/${id}`)
+  updateOneRegister (obj,id) {
+    return axios.put(`${this.BASE_URL}/characters/${id}`,obj)
     .then (res => {
       return res.data
     })

@@ -25,10 +25,25 @@ $(document).ready( () => {
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-            
+    event.preventDefault();
+    let iCharact = document.getElementById('icha').value;
+    let name = document.getElementById('iname').value;
+    let occupation = document.getElementById('ioccupation').value;
+    let weapon = document.getElementById('iweapon').value;
+    let cartoon = document.getElementById('icartoon').value;
+    
+    let newCharact = {
+      name: name,
+      occupation: occupation,
+      weapon: weapon,
+      cartoon: cartoon
+    };
+    console.log(newCharact)
+    charactersAPI.updateOneRegister(newCharact, iCharact)        
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
+    event.preventDefault();
     let name = document.getElementById('name').value;
     let occupation = document.getElementById('occupation').value;
     let weapon = document.getElementById('weapon').value;
