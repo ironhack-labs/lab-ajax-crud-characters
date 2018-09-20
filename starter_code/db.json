@@ -1,0 +1,60 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Daniel",
+      "occupation": "Student",
+      "weapon": "mente",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "Perla",
+      "occupation": "Student",
+      "weapon": "tenacidad",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": true,
+      "id": 12
+    },
+    {
+      "name": "Mish",
+      "occupation": "todas",
+      "weapon": "Platicar",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "Adan",
+      "occupation": "Programador",
+      "weapon": "Chelas",
+      "cartoon": true,
+      "id": 14
+    }
+  ]
+}
