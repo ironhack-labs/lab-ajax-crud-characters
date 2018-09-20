@@ -39,7 +39,7 @@ $(document).ready(() => {
 
   document.getElementById('edit-character-form').onsubmit = function (element) {
     element.preventDefault();
-    charactersAPI.updateOneRegister(e.target.querySelector('[name=chr-id]').value,getSingleCharacter(element.target))
+    charactersAPI.updateOneRegister(element.target.querySelector('[name=chr-id]').value,getSingleCharacter(element.target))
     .then(character=>{
       characters.innerHTML=""
       showOneCharacter(character.data)
