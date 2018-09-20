@@ -5,40 +5,32 @@ class APIHandler {
 	}
 
 	getFullList() {
-		const data = axios.get(`${this.BASE_URL}${this.COLLECTION}`)
+		return axios.get(`${this.BASE_URL}${this.COLLECTION}`)
 			.then(res => { return res.data })
-			.catch(err => {	return err })
-
-		return data;
+			.catch(err =>  { throw new Error() })
 	}
 
 	getOneRegister(id) {
-		const data = axios.get(`${this.BASE_URL}${this.COLLECTION}${id}`)
+		return axios.get(`${this.BASE_URL}${this.COLLECTION}${id}`)
 			.then(res => { return res.data })
-			.catch(err => { return err })
-
-		return data;
+			.catch(err => { throw new Error() })
 	}
 
 	createOneRegister(character) {
-		const data = axios.post(`${this.BASE_URL}${this.COLLECTION}`, character)
+		return axios.post(`${this.BASE_URL}${this.COLLECTION}`, character)
 			.then(res => { return res.data })
-			.catch(err => { return err })
-		
-		return data;
+			.catch(err => { throw new Error() })
 	}
 
 	updateOneRegister(id, characterToUpdate) {
-		const data = axios.put(`${this.BASE_URL}${this.COLLECTION}${id}`, characterToUpdate)
+		return axios.put(`${this.BASE_URL}${this.COLLECTION}${id}`, characterToUpdate)
 			.then(res => { return res.data })
-			.catch(err => { return err })
-
-		return data;
+			.catch(err => { throw new Error() })
 	}
 
 	deleteOneRegister(id) {
-		const data = axios.delete(`${this.BASE_URL}${this.COLLECTION}${id}`)		
+		return axios.delete(`${this.BASE_URL}${this.COLLECTION}${id}`)		
 			.then(res => { return res.data })
-			.catch(err => { return err })
+			.catch(err => { throw new Error() })
 	}
 }
