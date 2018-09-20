@@ -13,13 +13,6 @@
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false
-    },
-    {
-      "id": 3,
-      "name": "SpongeBob yellow",
-      "occupation": "Live under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
     }
   ]
 }
