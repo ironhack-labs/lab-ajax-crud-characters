@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": "FRANCIS WARLEE",
+      "occupation": "Opening vscode instances",
+      "weapon": "MULTPLE VSCODE INSTANCES",
+      "cartoon": true,
+      "id": 2
+    },
+    {
+      "name": "SOMERANDOMGUY",
+      "occupation": "NOTHING",
+      "weapon": "BERETA",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "kraken",
+      "occupation": "swimming",
+      "weapon": "tentacles ",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "kasdofk",
+      "occupation": "lksadflk",
+      "weapon": "dflkgjalk",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
