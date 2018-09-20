@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "ruben",
+      "occupation": "Cantante",
+      "weapon": "cuchillo",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "giyg",
+      "occupation": "ugui",
+      "weapon": "gugui",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "as",
+      "occupation": "uguiasas",
+      "weapon": "asasgugui",
+      "cartoon": false,
+      "id": 6
+    }
+  ]
+}
