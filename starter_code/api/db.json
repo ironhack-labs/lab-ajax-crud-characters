@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Perla",
+      "occupation": "Ironhacker",
+      "cartoon": "false",
+      "weapon": "Her brain"
+    },
+    {
+      "name": "Diego",
+      "occupation": "sda",
+      "weapon": "dsa",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "Ilham bebé",
+      "occupation": "conquistarme",
+      "weapon": "mememe",
+      "cartoon": true,
+      "id": 9
+    }
+  ]
+}
