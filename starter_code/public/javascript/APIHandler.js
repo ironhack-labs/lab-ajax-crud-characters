@@ -16,6 +16,7 @@ class APIHandler {
   getOneRegister(charID) {
       axios.get(`${this.BASE_URL}/characters/${charID}`)
       .then(response => {
+        allData(response.data.name, response.data.occupation, response.data.weapon, response.data.cartoon)
         console.log(response.data);
       });
   }
@@ -28,6 +29,9 @@ class APIHandler {
       cartoon: cartoon
     }
     axios.post(`${this.BASE_URL}/characters`, newChar)
+    .then( () => {
+      this.getFullList();
+    })
     console.log(newChar)
   }
 
@@ -39,10 +43,15 @@ class APIHandler {
       cartoon: cartoon
     }
     axios.patch(`${this.BASE_URL}/characters/${ID}`, updateInfo)
-    console.log(updateInfo, "hello!!")
+    .then( () => {
+      this.getFullList();
+    })
   }
 
   deleteOneRegister(ID) {
     axios.delete(`${this.BASE_URL}/characters/${ID}`)
+    .then( () => {
+    this.getFullList();
+  })
   }
 }
