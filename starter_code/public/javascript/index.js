@@ -32,8 +32,7 @@ $(document).ready( () => {
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-    event.preventDefault();
-
+  
     let id = document.getElementById("idUpdate").value;
     let name = document.getElementById("nameUpdate").value;
     let occupation = document.getElementById("occupationUpdate").value;
