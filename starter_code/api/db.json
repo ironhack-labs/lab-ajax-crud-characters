@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Pablo",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Mario",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "bi",
+      "occupation": "hbyj",
+      "weapon": "gjy",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "jose",
+      "occupation": "hbj",
+      "weapon": "gbjyvb",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
