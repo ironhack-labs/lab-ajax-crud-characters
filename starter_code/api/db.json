@@ -1,0 +1,144 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "SpongeBob",
+      "occupation": "Live under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "El loko",
+      "occupation": "bandido",
+      "weapon": "hacha",
+      "cartoon": "false",
+      "id": 4
+    },
+    {
+      "name": "El tio camuñas",
+      "occupation": "Bandolero",
+      "weapon": "Sable",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "El loko",
+      "occupation": "bandido",
+      "weapon": "hacha",
+      "cartoon": "false",
+      "id": 7
+    },
+    {
+      "name": "Carmen de Mairena",
+      "occupation": "bandido",
+      "weapon": "hacha",
+      "cartoon": "false",
+      "id": 8
+    },
+    {
+      "name": "Juana de Arco",
+      "occupation": "Guerrera",
+      "weapon": "Espada",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "Batman",
+      "occupation": "superhero",
+      "weapon": "batarang",
+      "cartoon": true,
+      "id": 10
+    },
+    {
+      "name": "Batman",
+      "occupation": "superhero",
+      "weapon": "batarang",
+      "cartoon": true,
+      "id": 11
+    },
+    {
+      "name": "Superman",
+      "occupation": "superhero",
+      "weapon": "Criptonite",
+      "cartoon": true,
+      "id": 12
+    },
+    {
+      "name": "Batman",
+      "occupation": "superhero",
+      "weapon": "Bataran",
+      "cartoon": true,
+      "id": 13
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 14
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 16
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 17
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 18
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 19
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 20
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 21
+    },
+    {
+      "name": "sailormoon",
+      "occupation": "singer",
+      "weapon": "superpowers",
+      "cartoon": true,
+      "id": 22
+    }
+  ]
+}
