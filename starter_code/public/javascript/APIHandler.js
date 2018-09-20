@@ -7,7 +7,7 @@ class APIHandler {
     return axios
       .get("http://localhost:8000/characters")
       .then(res => {
-        console.log(res.data)
+        console.log(res.data);
         return res.data;
       })
       .catch(e => console.log(e));
@@ -24,19 +24,16 @@ class APIHandler {
   }
 
   createOneRegister(newChar) {
-    axios
-      .post("http://localhost:8000/characters", newChar)
-      .then(res => {
-        console.log("post success");
-        console.log(res);
-      })
-      .catch(error => {
-        console.log("Oh No! Error!");
-        console.log(error);
-      });
+    return axios.post("http://localhost:8000/characters", newChar);
   }
 
   updateOneRegister(edit) {
+    if (edit.id == "") {
+      return new Promise((res, reject) => {
+        reject("Necesitas un ID para modificar tu personaje");
+      });
+    }
+
     axios
       .patch(`http://localhost:8000/characters/${edit.id}`, edit)
       .then(res => {
@@ -50,14 +47,15 @@ class APIHandler {
   }
 
   deleteOneRegister(del) {
-    axios.delete(`http://localhost:8000/characters/${del.id}`)
-    .then(res => {
-      console.log("patch success");
-      console.log(res);
-    })
-    .catch(error => {
-      console.log("Oh No! Error!");
-      console.log(error);
-    });
+    axios
+      .delete(`http://localhost:8000/characters/${del.id}`)
+      .then(res => {
+        console.log("patch success");
+        console.log(res);
+      })
+      .catch(error => {
+        console.log("Oh No! Error!");
+        console.log(error);
+      });
   }
 }

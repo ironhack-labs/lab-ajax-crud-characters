@@ -34,12 +34,14 @@ let showChar = char => {
   weapon.append(spanWeapon);
   $(".characters-container").append(elem);
 };
+
 let emptyAll = () => {
   $(".characters-container").empty();
 };
 
 let printAll = () => {
   charactersAPI.getFullList().then(res => {
+    emptyAll();
     res.forEach(elem => {
       charactersAPI.getOneRegister(elem.id).then(res => showChar(res));
     });
@@ -95,7 +97,17 @@ $(document).ready(() => {
       cartoon: document.getElementById("cartoon").value
     };
 
-    charactersAPI.createOneRegister(newChar);
-    printAll();
+    charactersAPI
+      .createOneRegister(newChar)
+      .then(res => {
+        emptyAll();
+        printAll();
+        console.log("post success");
+        console.log(res);
+      })
+      .catch(error => {
+        console.log("Oh No! Error!");
+        console.log(error);
+      });
   };
 });

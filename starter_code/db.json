@@ -16,10 +16,17 @@
     },
     {
       "id": 3,
-      "name": "SpongeBob",
-      "occupation": "Live under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "BobSponja",
+      "occupation": "Tirarse en la playa",
+      "weapon": "Patricio",
+      "cartoon": "on"
+    },
+    {
+      "id": 6,
+      "name": "mi perro",
+      "occupation": "hace",
+      "weapon": "guau",
+      "cartoon": "on"
     }
   ]
 }
