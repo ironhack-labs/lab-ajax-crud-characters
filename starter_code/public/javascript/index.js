@@ -3,6 +3,7 @@ const charactersAPI = new APIHandler("http://localhost:8000");
 
 $(document).ready(() => {
   document.getElementById("fetch-all").onclick = function() {
+    event.preventDefault();
     charactersAPI.getFullList().then(res => {
       res.forEach(elem => {
         let charToPrint = ` <div class="character-info">
@@ -23,6 +24,7 @@ $(document).ready(() => {
   };
 
   document.getElementById("fetch-one").onclick = function() {
+    event.preventDefault();
     let charNum = document.getElementById("ID-to-fetch").value;
     console.log('el numero ', charNum );
     charactersAPI.getOneRegister(charNum).then(res => {
@@ -44,6 +46,7 @@ $(document).ready(() => {
   };
 
   document.getElementById("delete-one").onclick = function() {
+    event.preventDefault();
     let charNum = document.getElementById("ID-to-delete").value;
     console.log('el numero ', charNum );
     charactersAPI.deleteOneRegister (charNum).then(res => {
@@ -52,29 +55,28 @@ $(document).ready(() => {
 
   };
 
-  document.getElementById("edit-character-form").onsubmit = function() {};
+  document.getElementById("edit-character-form").onsubmit = function() {
+    event.preventDefault();
+    let charNum = document.getElementById("id2").value;
+    let charToEdit = {
+      name: document.getElementById('name2').value,
+      occupation: document.getElementById('occupation2').value,
+      weapon: document.getElementById('weapon2').value,
+      cartoon: document.getElementById('cartoon2').value
+    }
+    charactersAPI.updateOneRegister (charNum, charToEdit);
+
+  };
 
   document.getElementById("new-character-form").onsubmit = function() {
     event.preventDefault();
-    console.log(
-      `ver esto`,
-      document.getElementsByClassName(`character-info`)[0].name
-    );
+    let charToAdd = {
+      name: document.getElementById('name3').value,
+      occupation: document.getElementById('occupation3').value,
+      weapon: document.getElementById('weapon3').value,
+      cartoon: document.getElementById('cartoon3').value
+    }
+    charactersAPI.createOneRegister (charToAdd);
 
-    // const characterInfo = {
-    //   name: document
-    //     .getElementsByClassName(`character-info`)[0]
-    //     .getElementsByTagName("div")[0].value,
-    //   occupation: document
-    //     .getElementsByClassName(`character-info`)[0]
-    //     .getElementsByTagName("div")[1].value,
-    //   weapon: document
-    //     .getElementsByClassName(`character-info`)[0]
-    //     .getElementsByTagName("div")[2].value,
-    //   cartoon: document
-    //     .getElementsByClassName(`character-info`)[0]
-    //     .getElementsByTagName("div")[3].value
-    // };
-    //console.log('mi caractere', characterInfo);
   };
 });

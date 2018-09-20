@@ -1,11 +1,11 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo old",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
+      "name": "pipo",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "on",
+      "id": 1
     },
     {
       "id": 2,
@@ -13,6 +13,20 @@
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false
+    },
+    {
+      "name": "astroboy",
+      "occupation": "child",
+      "weapon": "hand cannon",
+      "cartoon": "on",
+      "id": 3
+    },
+    {
+      "name": "memin",
+      "occupation": "jodedor",
+      "weapon": "jokes",
+      "cartoon": "on",
+      "id": 4
     }
   ]
 }
