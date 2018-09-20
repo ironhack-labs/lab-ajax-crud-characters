@@ -134,3 +134,18 @@ button {
 .character-card span:nth-child(even) {
 	color: #d8b362;
 }
+
+.success-message {
+	color: rgb(50, 150, 100);
+}
+.error-message {
+	color: rgb(225,100,50);
+}	
+.btn-success {
+	border: 2px solid rgb(50, 150, 100);
+    color: rgb(50, 150, 100);
+}
+.btn-error {
+	border: 2px solid rgb(225,100,50);
+    color: rgb(225,100,50);
+}

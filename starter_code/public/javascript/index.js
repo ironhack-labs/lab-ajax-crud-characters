@@ -23,6 +23,9 @@ $(document).ready(() => {
 					charactersDisplay.clearDisplayContainer();
 					charactersDisplay.displayRegister(res);
 				})
+				.catch(err => {
+					console.log('ERROR', err);
+				})
 		}
 	}
 
@@ -47,7 +50,13 @@ $(document).ready(() => {
 		});
 		
 		if (character && !$.isEmptyObject(character)) {
-			charactersAPI.createOneRegister(character);
+			charactersAPI.createOneRegister(character)
+				.then(res => {
+					$('#btn-create').addClass('btn-success');
+				})
+				.catch(err => {
+					$('#btn-create').addClass('btn-error');
+				})
 		}
 	}
 
@@ -76,7 +85,13 @@ $(document).ready(() => {
 		});
 
 		if ((character && !$.isEmptyObject(character)) && (id && id !== "")) {
-			charactersAPI.updateOneRegister(id, character);
+			charactersAPI.updateOneRegister(id, character)
+			.then(res => {
+				$('#btn-edit').addClass('btn-success');
+			})
+			.catch(err => {
+				$('#btn-edit').addClass('btn-error');
+			})
 		}
 	}
 

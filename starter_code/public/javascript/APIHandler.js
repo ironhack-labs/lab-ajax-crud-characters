@@ -31,14 +31,14 @@ class APIHandler {
 	updateOneRegister(id, characterToUpdate) {
 		const data = axios.put(`${this.BASE_URL}${this.COLLECTION}${id}`, characterToUpdate)
 			.then(res => { return res.data })
-			.catch(err => { return 'Character not found' })
+			.catch(err => { return err })
 
 		return data;
 	}
 
 	deleteOneRegister(id) {
 		const data = axios.delete(`${this.BASE_URL}${this.COLLECTION}${id}`)		
-			.then(res => { return 'Character has been successfully deleted' })
-			.catch(err => { return 'Character not found' })
+			.then(res => { return res.data })
+			.catch(err => { return err })
 	}
 }

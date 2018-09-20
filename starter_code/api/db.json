@@ -92,11 +92,53 @@
       "id": 14
     },
     {
-      "name": "unamuno",
-      "occupation": "philosopher",
-      "weapon": "wisdom",
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
       "cartoon": true,
       "id": 16
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 17
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 18
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 19
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 20
+    },
+    {
+      "name": "popeye",
+      "occupation": "sailor",
+      "weapon": "spinach",
+      "cartoon": true,
+      "id": 21
+    },
+    {
+      "name": "sailormoon",
+      "occupation": "singer",
+      "weapon": "superpowers",
+      "cartoon": true,
+      "id": 22
     }
   ]
 }

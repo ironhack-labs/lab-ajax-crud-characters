@@ -31,11 +31,19 @@
 				<label for="character-id">Search by ID: </label>
 				<input type="text" name="character-id" id="character-id" placeholder="Indicate an ID" required>
 				<button id="fetch-one">Fetch one</button>
+				<div id="fetch-one-message">
+					<span class="success-message"></span>
+					<span class="error-message"></span>
+				</div>
 			</div>
 			<div class="operation delete">
 				<label for="character-id-delete">Delete by ID: </label>
 				<input type="text" name="character-id-delete" id="character-id-delete" required>
 				<button id="delete-one">Delete one</button>
+				<div>
+					<span class="success-message"></span>
+					<span class="error-message"></span>
+				</div>
 			</div>
 		</section>
 	</section>
@@ -59,9 +67,14 @@
 					<label for="cartoon">Is a Cartoon: </label>
 					<input name="cartoon" type="checkbox" value="">
 				</div>
-				<button>Create</button>
+				<button id="btn-create">Create</button>
+				<div>
+					<span class="success-message"></span>
+					<span class="error-message"></span>
+				</div>
 			</form>
 		</section>
+
 		<section class="form-container">
 			<h2>Edit Character</h2>
 			<form id="edit-character-form" class="character-form">
@@ -85,7 +98,11 @@
 					<label for="cartoon">Is a Cartoon: </label>
 					<input name="cartoon" type="checkbox">
 				</div>
-				<button>Update</button>
+				<button id="btn-edit">Update</button>
+				<div>
+					<span class="success-message"></span>
+					<span class="error-message"></span>
+				</div>
 			</form>
 		</section>
 	</section>
