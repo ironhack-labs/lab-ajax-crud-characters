@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "pipo",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "on",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker old",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "astroboy",
+      "occupation": "child",
+      "weapon": "hand cannon",
+      "cartoon": "on",
+      "id": 3
+    },
+    {
+      "name": "memin",
+      "occupation": "jodedor",
+      "weapon": "jokes",
+      "cartoon": "on",
+      "id": 4
+    }
+  ]
+}
