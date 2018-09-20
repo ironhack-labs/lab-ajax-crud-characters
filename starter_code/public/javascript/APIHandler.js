@@ -23,3 +23,13 @@ class APIHandler {
 
   }
 }
+
+axios.get("http://localhost:8000/characters")
+.then(response=>{
+    console.log (response.data)
+    
+})
+.catch(error=>{
+    console.log (error)
+})
+
