@@ -15,8 +15,8 @@ class APIHandler {
     return axios.post('http://localhost:8000/characters', character);
   }
 
-  updateOneRegister () {
-    return axios.post('http://localhost:8000/characters/:id');
+  updateOneRegister (id, character) {
+    return axios.post(`http://localhost:8000/characters/${id}`, character);
   }
 
   deleteOneRegister (id) {

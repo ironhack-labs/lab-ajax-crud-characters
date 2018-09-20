@@ -23,8 +23,16 @@ $(document).ready( () => {
   
   document.getElementById('edit-character-form').onsubmit = e => {
     e.preventDefault();
-            
-  }
+    let id = document.getElementsByName('chr-id')[0].value;
+    let name = document.getElementsByName('name')[1].value;
+    let occupation = document.getElementsByName('occupation')[1].value;
+    let weapon = document.getElementsByName('weapon')[1].value;
+    let cartoon = document.getElementsByName('cartoon')[1].checked;
+    let character = {name, occupation, weapon, cartoon};
+    charactersAPI.updateOneRegister(id,character)
+    .then(() => console.log('Updated'))
+    .catch(e => console.log(e));
+  };
   
   document.getElementById('new-character-form').onsubmit = e =>{
     e.preventDefault();
@@ -42,10 +50,14 @@ $(document).ready( () => {
 
 const showCharacters = characters => {
   let container = document.getElementsByClassName('characters-container')[0];
+  //Problema aqui
   const intialInfo = document.getElementsByClassName('character-info');
+  console.log(intialInfo[0]);
+  console.log(intialInfo.length);
   for(let i = 0; i < intialInfo.length; i++){
     container.removeChild(intialInfo[i]);
   }
+  //Hasta aqui
   characters.forEach(e => {
     let characterInfo = document.createElement('div');
     characterInfo.className = 'character-info';
