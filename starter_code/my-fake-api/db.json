@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Francis",
+      "occupation": "Smuggles",
+      "weapon": "Blaster",
+      "cartoon": true
+    },
+    {
+      "name": "Juan",
+      "occupation": "Developer",
+      "weapon": "Big One",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "name": "Carla",
+      "occupation": "TA",
+      "weapon": "Yes",
+      "cartoon": true,
+      "id": 3
+    }
+  ]
+}
