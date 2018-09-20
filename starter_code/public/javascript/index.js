@@ -1,13 +1,15 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready( () => {
-  document.getElementById('fetch-all').onclick = function(){
 
-  }
-  
-  document.getElementById('fetch-one').onclick = function(){
-    
-  }
+  // $('#fetch-all').click(function(){
+  //   getOneRegister($('#foId').val());
+  // })
+
+
+  $('#fetch-one').click(function(){
+    getOneRegister($('#foId').val());
+  })
   
   document.getElementById('delete-one').onclick = function(){
         
@@ -21,3 +23,4 @@ $(document).ready( () => {
                 
   }
 })
+
