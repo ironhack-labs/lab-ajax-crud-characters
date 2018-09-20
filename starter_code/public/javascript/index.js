@@ -4,10 +4,17 @@ $(document).ready( () => {
 
   document.getElementById('fetch-all').onclick = function(){
     charactersAPI.getFullList().then(res => {
-      res.forEach(element => {
-        console.log(element.name);
-        console.log(element.occupation);
-        console.log(element.weapon);        
+      res.forEach(elem => {
+        let charToPrint = ` <div class="character-info">
+        <div id="name1" class="name">Char Name: ${elem.name}</div>
+        <div id="occupation1" class="occupation">Char Occupation: ${elem.occupation}</div>
+        <div id="cartoon1" class="cartoon">Cartoon?: ${elem.cartoon?'Yes':'No'}</div>
+        <div id="weapon1" class="weapon">Char Weapon: ${elem.weapon}</div>
+      </div>`;
+      document.getElementById('character-inDB').insertAdjacentHTML('afterend',charToPrint);
+        // console.log();
+        // console.log();
+        // console.log();        
       });
     });
   }
