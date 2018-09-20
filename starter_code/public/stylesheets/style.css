@@ -7,11 +7,11 @@
 body {
   font-family: 'Roboto';
   color: white;
-  background: url("../images/minions.jpg")
+  background: url("https://images.unsplash.com/photo-1530482817083-29ae4b92ff15?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=44f4aebbd1e1371d5bf7dc22016c5d29&auto=format&fit=crop&w=1051&q=80")
 }
 
 h1, h2 {
-  color: #d8b362;
+  color: #92d7e4;
 }
 
 button {
@@ -37,7 +37,7 @@ button {
   margin: 50px auto 0;
   padding: 10px;
   border-radius: 20px;
-  background-color: rgba(88, 98, 123, 0.95);
+  background-color: rgba(148, 142, 142, 0.95);
   text-align: center;
 }
 
