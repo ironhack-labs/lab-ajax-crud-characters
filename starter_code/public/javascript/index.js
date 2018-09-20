@@ -50,9 +50,11 @@ $(document).ready( () => {
 
 const showCharacters = characters => {
   let container = document.getElementsByClassName('characters-container')[0];
-  //Problema aqui
+  //Problema aqui. La longitud de initialInfo es 1, mientras que initialInfo es un HTMLCollection de 4 elementos. Sin embargo, initialInfo[1] es undefined.
+  //Pienso que este problema está impidiendo que se eliminen los info de los personajes correctamente.
   const intialInfo = document.getElementsByClassName('character-info');
-  console.log(intialInfo[0]);
+  console.log(intialInfo);  
+  console.log(intialInfo[1]);
   console.log(intialInfo.length);
   for(let i = 0; i < intialInfo.length; i++){
     container.removeChild(intialInfo[i]);
