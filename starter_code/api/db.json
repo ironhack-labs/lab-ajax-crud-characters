@@ -22,39 +22,11 @@
       "cartoon": true
     },
     {
-      "name": "Lili",
+      "name": "Lolo",
       "occupation": "Dormir y llorar",
       "cartoon": "on",
       "weapon": "baba",
       "id": 4
-    },
-    {
-      "name": "2",
-      "occupation": "luke",
-      "cartoon": "none",
-      "weapon": "on",
-      "id": 5
-    },
-    {
-      "name": "Cinco",
-      "occupation": "nini",
-      "cartoon": "on",
-      "weapon": "no tiene",
-      "id": 6
-    },
-    {
-      "name": "Seis",
-      "occupation": "ninis",
-      "cartoon": "on",
-      "weapon": "noo",
-      "id": 7
-    },
-    {
-      "name": "siete",
-      "occupation": "no",
-      "cartoon": "on",
-      "weapon": "n",
-      "id": 8
     }
   ]
 }
