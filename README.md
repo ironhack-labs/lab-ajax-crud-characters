@@ -5,14 +5,14 @@
 After this learning unit, you will be able to:
 
 - Create a complete [SPA (Single Page Application)](https://en.wikipedia.org/wiki/Single-page_application)
-- Create, Read, Update, and Delete data from a API
+- Create, Read, Update, and Delete data from an API
 - Use Axios to connect with an external API
 
 ## Introduction
 
 ![image](https://user-images.githubusercontent.com/23629340/36733655-8c9903fa-1bd1-11e8-82f7-d425ab140c09.png)
 
-In this lesson, we will use all what we have learnt about APIs and how to connect an application to them through **Axios**.
+In this lesson, we will use all what we have learned about APIs and how to connect an application to them through **Axios**.
 
 We will first create a fake API using **JSON-Server** to then do an  application to Create, Read, Update, and Delete characters from it. The routes available in this API are the following:
 
@@ -64,7 +64,7 @@ Navigate to your repo and create a Pull Request -from your master branch to the 
 In the Pull request indicate your campus, name, and last name separated by a dash "-".
 
 ## Deliverables
-In your starter code folder you will find every file you need to finish the game. Push every needed file to make your game work properly.
+In your starter code folder you will find every file you need to finish the SPA. Push every needed file to make your SPA work properly.
 
 ## Exercise
 
@@ -72,7 +72,7 @@ In your starter code folder you will find every file you need to finish the game
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_99257e2c4240770e6b4bdd406d943ac8.png)
 
-In the `api` folder, you need to create a `db.json` file. Inside our `db.json` we will specify the first 2 characters of our API, so we can start working with some data. Copy/paste the following characters in the file:
+To begin lets create an `api` folder in `starter_code`, you need to create a `db.json` file. Inside our `db.json` we will specify the first 2 characters of our API, so we can start working with some data. Copy/paste the following characters in the file:
 
 ```javascript
 {
@@ -108,6 +108,12 @@ Then run the following code on the terminal to make our API start working:
 $ json-server --watch db.json --port 8000
 ```
 
+If you receive an error in terminal that says "command not found: json-server", you must first run the following code:
+
+```bash
+$ npm install -g json-server
+```
+
 ### Iteration 2: The `APIHandler.js` file
 
 We have our API running, so now we will construct a class `APIHandler` to deal with the Axios calls. The only responsability of this class is to display the JSON result that comes from the API, or give the needed information to the API via a function argument.
@@ -117,8 +123,8 @@ The funcionalities of the `APIHandler` class are:
 - Get all the characters info from *[http://localhost:8000/characters](http://localhost:8000/characters)*
 - Get a single character info from *[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)*
 - Create a single character posting the data to *[http://localhost:8000/characters](http://localhost:8000/characters)*
-- Delete a single character through his id in *[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)*
-- Edit a single character through his id in *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Delete a single character through the id in *[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)*
+- Edit a single character through the id in *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
 
 You have to create an Axios call for each of these actions. You can create as many functions as you need inside the class, but remember this class should only manage the API request and display the resulting value.
 
@@ -151,17 +157,19 @@ Retrieve all the available characters in the API and show them in the applicatio
 
 Following the same idea as with fetching all, retreive a single character's data we need to:
 
-- Create a button (*Fetch one* in the image above) to, through an input field, get the id of an existing character.
+![image](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_6a8579e87b729602bd2bb499600e187c.png)
+
+- Create a button (*Fetch one* in the image above) to get the id from an input field and search for an existing character.
 - Search that character in the API with *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
 - Get the data and show the character info as a card.
 
 #### Delete one character
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_3d893f20f95e5b13369375cdfd7900a5.png)
-
 To be able to delete a character from the API database, we need to:
 
-- Create a button (*Delete* one in the image above) to get the id of the character we want to delete.
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_3d893f20f95e5b13369375cdfd7900a5.png)
+
+- Create a button (*Delete* one in the image above) to get the id from an input field of the character we want to delete.
 - Delete that character in the API with *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
    <!-- :::danger -->
    **Remember which HTTP verb you need in the request!!**
@@ -190,7 +198,7 @@ We will create a form with 4 inputs, one for each character field: name(text), o
 We will create a form with 4 inputs, one for each field of the characters: name(text), occupation(text), weapon(text) and cartoon(checkbox). Also, we will create a new input to indicate the `id` of the character we want to edit.
 
 - Create a button (*Update* in the image above) to get all the data from the form.
-- Send the data to the `APIHandler` function to save the new character through *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Send the data to the `APIHandler` function to save the updated character through *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
    <!-- :::danger -->
    **Remember which HTTP verb you need in the request!!**
    <!-- ::: -->
@@ -200,4 +208,3 @@ We will create a form with 4 inputs, one for each field of the characters: name(
 That's all what we need to do!
 
 /Happy coding
-
