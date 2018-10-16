@@ -22,11 +22,11 @@
       "cartoon": false
     },
     {
-      "id": 4,
-      "name": "Bird Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
+      "name": "R2D2",
+      "occupation": "ROBOT",
+      "weapon": "METAL",
+      "cartoon": true,
+      "id": 4
     }
   ]
 }
