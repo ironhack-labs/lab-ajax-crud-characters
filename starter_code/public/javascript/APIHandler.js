@@ -1,5 +1,5 @@
 const allData = (name, occupation, weapon, cartoon) => {
-  $( ".characters-container" ).append( `<div class='character-info'><div class='name'><strong>Name:</strong> ${name}</div><div class='occupation'><strong>Occupation:</strong> ${occupation}</div><div class='cartoon'><strong>Is cartoon?</strong> ${cartoon}</div><div class='weapon'><strong>Has weapon?</strong> ${weapon}</div></div>` )
+  $( ".characters-container" ).append( `<div class='character-info'><div class='name'><strong>Name:</strong>${name}</div><div class='occupation'><strong>Occupation:</strong> ${occupation}</div><div class='cartoon'><strong>Is cartoon?</strong> ${cartoon}</div><div class='weapon'><strong>Has weapon?</strong> ${weapon}</div></div>` )
 }
 
 class APIHandler {
@@ -50,6 +50,7 @@ updateOneRegister(ID, name, occupation, weapon, cartoon) {
   .then( () => {
     this.getFullList();
   })
+  console.log("character update");
 }
 
 deleteOneRegister(ID) {
@@ -57,5 +58,6 @@ deleteOneRegister(ID) {
   .then( () => {
   this.getFullList();
 })
+console.log("character delete");
 }
 }
