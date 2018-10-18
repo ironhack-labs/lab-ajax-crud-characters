@@ -35,6 +35,7 @@ button {
 .container {
   width: 70%;
   margin: 50px auto 0;
+  margin: 0px auto 0;
   padding: 10px;
   border-radius: 20px;
   background-color: rgba(88, 98, 123, 0.95);

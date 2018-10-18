@@ -15,26 +15,27 @@
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
       <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="cartoon">Is a Cartoon?</div>
-        <div class="weapon">Character Weapon</div>
+        <div class="id">ID:</div>
+        <div class="name">Name:</div>
+        <div class="occupation">Occupation:</div>
+        <div class="weapon">Weapon:</div>
+        <div class="cartoon">Cartoon:</div>
       </div>
     </div>
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
       </div>
-      <div class="operation">
+      <form id="fetch-one" class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
-        <button id="fetch-one">Fetch one</button>
-      </div>
-      <div class="operation delete">
+        <input type="number" name="character-id" required>
+        <button>Fetch one</button>
+      </form>
+      <form id="delete-one" class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
-        <button id="delete-one">Delete one</button>
-      </div>
+        <input type="text" name="character-id-delete" required>
+        <button id="delete-btn">Delete one</button>
+      </form>
 
     </section>
   </section>
@@ -44,7 +45,7 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" required>
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
@@ -58,7 +59,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button id="create-btn">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -66,7 +67,7 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="id" required>
         </div>
         <div class="field">
           <label for="name">Name: </label>
@@ -84,7 +85,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="update-btn">Update</button>
       </form>
     </section>
   </section>
