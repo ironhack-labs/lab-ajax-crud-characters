@@ -1,12 +1,7 @@
-# DE | Axios CRUD Exercise
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-## Learning Goals
+# Axios CRUD Exercise
 
-After this learning unit, you will be able to:
-
-- Create a complete [SPA (Single Page Application)](https://en.wikipedia.org/wiki/Single-page_application)
-- Create, Read, Update, and Delete data from a API
-- Use Axios to connect with an external API
 
 ## Introduction
 
@@ -44,29 +39,24 @@ We will first create a fake API using **JSON-Server** to then do an  application
   - It returns "Character not found" if there is no character with the indicated id
   - It returns text
 
-### Requirements
+## Requirements
 
-- [Fork this repo](https://guides.github.com/activities/forking/)
-- Clone this repo into your `~/code/labs`
+- Fork this repo
+- Then clone this repo.
+
 
 ## Submission
 
-Upon completion, run the following commands:
-
+- Upon completion, run the following commands
 ```
 $ git add .
 $ git commit -m "done"
 $ git push origin master
 ```
+- Create Pull Request so your TAs can check up your work.
 
-Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.
 
-In the Pull request indicate your campus, name, and last name separated by a dash "-".
-
-## Deliverables
-In your starter code folder you will find every file you need to finish the game. Push every needed file to make your game work properly.
-
-## Exercise
+## Instructions
 
 ### Iteration 1: The Fake API
 
@@ -199,5 +189,4 @@ We will create a form with 4 inputs, one for each field of the characters: name(
 
 That's all what we need to do!
 
-/Happy coding
-
+Happy coding! :heart:
