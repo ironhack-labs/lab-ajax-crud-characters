@@ -1,0 +1,159 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 6
+    },
+    {
+      "name": "dada",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 7
+    },
+    {
+      "name": "qqqq",
+      "occupation": "dasd",
+      "weapon": "wwww",
+      "isCartoon": "on",
+      "id": 8
+    },
+    {
+      "name": "dsssdaad",
+      "occupation": "qqqq",
+      "weapon": "wwww",
+      "isCartoon": "on",
+      "id": 9
+    },
+    {
+      "name": "ada",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 10
+    },
+    {
+      "name": "222",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 11
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 12
+    },
+    {
+      "name": "adad",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 13
+    },
+    {
+      "name": "dadaad",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 14
+    },
+    {
+      "name": "dasdasd",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": "on",
+      "id": 15
+    },
+    {
+      "name": "33223",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 16
+    },
+    {
+      "name": "qqqqq",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 17
+    },
+    {
+      "name": "ddafd",
+      "occupation": "",
+      "id": 18
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "id": 19
+    },
+    {
+      "name": "22",
+      "occupation": "",
+      "id": 20
+    },
+    {
+      "name": "321321",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 21
+    },
+    {
+      "name": "aadas",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 22
+    },
+    {
+      "name": "ddsadas",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 23
+    }
+  ]
+}
