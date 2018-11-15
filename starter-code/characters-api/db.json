@@ -1,18 +1,11 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
       "id": 2,
-      "name": "Luke Skywalker",
+      "name": "Sarah",
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
-      "cartoon": false
+      "cartoon": true
     },
     {
       "id": 3,
@@ -20,6 +13,62 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Minions",
+      "occupation": "Being basic as f***",
+      "weapon": "annoyance",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "Minions",
+      "occupation": "Being basic as f***",
+      "weapon": "annoyance",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "ss",
+      "occupation": "grea gklagnleg",
+      "weapon": "life",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "ss",
+      "occupation": "grea gklagnleg",
+      "weapon": "life",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "ss",
+      "occupation": "grea gklagnleg",
+      "weapon": "life",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "ss",
+      "occupation": "grea gklagnleg",
+      "weapon": "life",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "ss-ppp",
+      "occupation": "nothing",
+      "weapon": "ok",
+      "cartoon": true,
+      "id": 10
+    },
+    {
+      "name": "EU",
+      "occupation": "nothing",
+      "weapon": "ok",
+      "cartoon": true,
+      "id": 11
     }
   ]
 }
