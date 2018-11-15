@@ -63,6 +63,11 @@ button {
   margin: 20px 0 0;
 }
 
+.characters-container {
+  display: flex;
+  box-sizing: content-box;
+}
+
 .character-info {
   position: relative;
   width: 40%;
@@ -104,4 +109,20 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  flex-wrap: nowrap;
 }
