@@ -89,13 +89,15 @@ class APIHandler {
   deleteOneRegister () {
     let inputValue = $('#deletion').val();
     console.log('yooo', inputValue)
-    // axios.delete(`https://ih-crud-api.herokuapp.com/characters/:id`, inputValue)
-    // .then(result => {
-    //   console.log(result)
-    // })
-    // .catch(err => {
-    //   console.log(err)
-    // })
+    axios.delete(`https://ih-crud-api.herokuapp.com/characters/` + inputValue)
+    .then(result => {
+      console.log(result)
+      this.getFullList();
+    })
+    .catch(err => {
+      console.log(err)
+    })
+    
   }
 
 }

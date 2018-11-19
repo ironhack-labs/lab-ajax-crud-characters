@@ -9,6 +9,7 @@ $(document).ready( () => {
   }
   document.getElementById('delete-one').onclick = function(){
       charactersAPI.deleteOneRegister();
+      charactersAPI.getFullList();
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
