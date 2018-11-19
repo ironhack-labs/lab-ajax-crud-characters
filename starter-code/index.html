@@ -35,7 +35,6 @@
         <input type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
-
     </section>
   </section>
   <section class="container">
@@ -44,19 +43,19 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id ="theName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="theOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="theWeapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" id="theCartoon">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -84,9 +83,18 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="send-update">Update</button>
       </form>
     </section>
+  </section>
+
+  <section >
+    <div class ="container">
+      <h3>Characters:</h3>
+      <div id= "list-of-characters" class="container"></div>
+      <div id="singleCharacter" class="characters-container"></div>
+    </div>
+    
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>

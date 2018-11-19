@@ -1,16 +1,14 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
-
 $(document).ready( () => {
-  document.getElementById('fetch-all').onclick = function(){
-
-  }
+  $("#fetch-all").click(charactersAPI.getFullList);
+  
   
   document.getElementById('fetch-one').onclick = function(){
-    
+    //  e.preventDefault();
+      charactersAPI.getOneRegister();
   }
-  
   document.getElementById('delete-one').onclick = function(){
-        
+      charactersAPI.deleteOneRegister();
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
@@ -18,6 +16,6 @@ $(document).ready( () => {
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
-                
+    charactersAPI.createOneRegister()
   }
 })
