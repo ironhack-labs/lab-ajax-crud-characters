@@ -10,7 +10,9 @@
 
   <title>IH Characters</title>
 </head>
+
 <body>
+
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
@@ -22,6 +24,8 @@
         <br>
       </div>
     </div>
+
+
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
@@ -36,59 +40,69 @@
         <input id="deleteInput" type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
-
     </section>
   </section>
+
+
   <section class="container">
     <section class="form-container">
       <h2>New Character</h2>
-      <form id="new-character-form" class="character-form">
+
+      <form id="add-new"> 
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
-        </div>
+          <input id="newName" type="text" name="name">
+        </div><br>
+
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
-        </div>
+          <input id="newOcc" type="text" name="occupation">
+        </div><br>
+
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
-        </div>
+          <input id="newWeapon" type="text" name="weapon">
+        </div><br>
+
         <div class="field">
-          <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
-        </div>
+          <label for="cartoon">Debt? </label>
+          <input id="newDebt" value="true" name="cartoon" type="checkbox">
+        </div><br>
+
         <button id="send-data">Create</button>
       </form>
     </section>
+
+
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input id="updatedId" type="text" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input id="updatedName" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input id="updatedOcc" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input id="updatedWeapon" type="text" name="weapon">
         </div>
         <div class="field">
-          <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <label for="debt">Debt? </label>
+          <input id="updatedDept" name="cartoon" type="checkbox">
         </div>
         <button id="send-data">Update</button>
       </form>
     </section>
   </section>
+
+
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
