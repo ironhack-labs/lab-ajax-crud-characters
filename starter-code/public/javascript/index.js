@@ -19,19 +19,6 @@ $(document).ready( () => {
         response.data.forEach((eachCharacter)=>{
           $("#charactersContainer").append('<div class="character-info"><div class="name">Name: ' + eachCharacter.name + '</div><div class="occupation">Occupation: ' + eachCharacter.occupation + '</div><div class="cartoon">Debt: ' + eachCharacter.debt + '</div><div class="weapon">Weapon: '+ eachCharacter.weapon + '</div><div class="charactersID">ID: '+ eachCharacter.id + '</div></div>');
         })
-
-        
-    //     response.data.forEach((eachCharacter)=>{
-
-    //         $('#list').append(`
-    //         <li>
-    //        name:  ${eachCharacter.name}
-    //        weapon:  ${eachCharacter.weapon}
-    //         </li>
-    //         <br>
-    // //         `)
-    //     })
-
     })
     .catch((err)=>{
         console.log(err)
@@ -80,8 +67,34 @@ $(document).ready( () => {
 
   }
   
-  document.getElementById('edit-character-form').onsubmit = function(){
-            
+  document.getElementById('edit-character-form').onsubmit = function(e){
+
+    e.preventDefault();
+    
+    // $("#charactersContainer").empty();
+
+    let inputForEditing = $('#inputForEditing').val();
+    
+    axios.put('https://ih-crud-api.herokuapp.com/characters/' + inputForEditing, {
+
+      name: $("#nameForEdit").val(),
+      occupation: $('#occforEdit').val(),
+      weapon: $('#weaponForEdit').val(),
+      debt: $('#debtForEdit').val()
+    })
+    .then((response)=>{
+        console.log(response.data);
+        alert('ID ' + inputForEditing + ' was changed');
+        $('#inputForEditing').val('')
+        $("#nameForEdit").val('')
+        $('#occforEdit').val('')
+        $('#weaponForEdit').val('')
+        $('#debtForEdit').val('')
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+
   }
   
   document.getElementById('new-character-form').onsubmit = function(event){
