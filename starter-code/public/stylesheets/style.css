@@ -32,6 +32,10 @@ button {
   overflow: hidden;
 }
 
+li{
+  list-style: none;
+}
+
 .container {
   width: 70%;
   margin: 50px auto 0;
@@ -39,6 +43,7 @@ button {
   border-radius: 20px;
   background-color: rgba(88, 98, 123, 0.95);
   text-align: center;
+  border: 2px solid green;
 }
 
 .characters-container {
