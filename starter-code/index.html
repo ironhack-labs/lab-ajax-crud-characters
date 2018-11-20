@@ -8,6 +8,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+
   <title>IH Characters</title>
 </head>
 <body>
@@ -27,12 +28,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id='oneCharacter'>
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="characterDeleteInput">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -44,50 +45,63 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="theName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="theOccupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id='theWeapon'>
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" id='debt' >
         </div>
         <button id="send-data">Create</button>
       </form>
     </section>
+
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" id="updateId">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="updateName">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id='updateOcc'>
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id='updateWeapon'>
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" id='updateDebt'>
         </div>
         <button id="send-data">Update</button>
       </form>
     </section>
   </section>
+
+
+
+<!-- added section to the end of page (add ID(charactersContainer) to characters-container div)-->
+
+<section class="container">
+  <h1>Ironhack Characters API</h1>
+  <div class="characters-container" id='charactersContainer'>
+    
+  </div>
+
+  
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
