@@ -1,25 +1,60 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
+  getFullList() {
+    axios.get(`${this.BASE_URL}/characters`)
+      .then((characters) => {
+        characters.data.forEach(character => {
+          console.log(character.id)
+          console.log(character.name)
+          console.log(character.occupation)
+          console.log(character.cartoon)
+          console.log(character.weapon)
+          console.log("--------")
+        });
+      })
+      .catch(err => console.log(err))
+  }
+
+  getOneRegister(id) {
+    axios.get(`${this.BASE_URL}/characters/${id}`)
+      .then((character) => {
+        console.log(character.data.id)
+        console.log(character.data.name)
+        console.log(character.data.occupation)
+        console.log(character.data.cartoon)
+        console.log(character.data.weapon)
+      })
+      .catch(err => console.log(err))
 
   }
 
-  getOneRegister () {
-
+  createOneRegister(name, occupation, weapon, cartoon) {
+    axios.post(`${this.BASE_URL}/characters`, { name: name, occupation: occupation, weapon: weapon, cartoon: cartoon })
+      .then((test) => {
+        console.log(test.data)
+      })
   }
 
-  createOneRegister () {
-
+  updateOneRegister(id, name, occupation, weapon, cartoon) {
+    axios.put(`${this.BASE_URL}/characters/${id}`, { name: name, occupation: occupation, weapon: weapon, cartoon: cartoon })
+      .then((character) => {
+        console.log(character.data.id)
+        console.log(character.data.name)
+        console.log(character.data.occupation)
+        console.log(character.data.cartoon)
+        console.log(character.data.weapon)
+      })
+      .catch((err) => console.log("Character not found " + err))
   }
 
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    axios.delete(`${this.BASE_URL}/characters/${id}`)
+      .then(() => {
+        console.log("Character has been succefully deleted")
+      })
+      .catch((err) => console.log("Character not found " + err))
   }
 }
