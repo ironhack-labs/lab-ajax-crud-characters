@@ -25,15 +25,20 @@ class APIHandler {
   }
 
 
-createOneRegister() {
+  createOneRegister() {
 
-}
+  }
 
-updateOneRegister() {
+  updateOneRegister() {
 
-}
+  }
 
-deleteOneRegister() {
+  deleteOneRegister(id) {
 
-}
+    axios.delete(`${this.BASE_URL}/characters/${id}`)
+      .then(elem => {
+        // console.log(elem.data);
+      })
+
+  }
 }

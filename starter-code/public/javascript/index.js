@@ -41,7 +41,7 @@ $(document).ready(() => {
   document.getElementById('fetch-one').onclick = function () {
     
     // console.log(document.getElementById('oneId').value);
-    let id = document.getElementById('oneId').value
+    let id = document.getElementById('findOneId').value
 
     charactersAPI.getOneRegister(id)
     .then(elem => {
@@ -75,6 +75,9 @@ $(document).ready(() => {
   }
 
   document.getElementById('delete-one').onclick = function () {
+    let id = document.getElementById('deleteOneId').value
+    charactersAPI.deleteOneRegister(id);
+
 
   }
 
@@ -85,4 +88,6 @@ $(document).ready(() => {
   document.getElementById('new-character-form').onsubmit = function () {
 
   }
+
+  
 })
