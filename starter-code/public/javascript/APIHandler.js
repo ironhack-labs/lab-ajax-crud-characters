@@ -46,6 +46,7 @@ class APIHandler {
             })
             .catch((error) => {
                 console.log(`get one  character error:${error}`)
+        
             })
     }
 
@@ -58,6 +59,7 @@ class APIHandler {
             })
             .catch((error) => {
                 console.log(`Character not found:${error}`)
+                 throw Error 
             })
     }
 }

@@ -69,25 +69,29 @@ $(document).ready(() => {
         editCharacter.cartoon = document.getElementsByName('cartoon')[1].checked;
         // console.log(editCharacter);
         charactersAPI.updateOneRegister(editCharacter).then((result) => {
+            document.querySelector('#edit-data').style.backgroundColor = "green";
                 console.log(result);
             })
             .catch((err) => {
+                document.querySelector('#edit-data').style.backgroundColor = "red";
                 console.log(error)
             })
     }
 
     document.getElementById('send-data').onclick = function () {
         let newCharacter = {};
-        newCharacter.name = document.getElementsByName('name')[0].value;
-        newCharacter.occupation = document.getElementsByName('occupation')[0].value;
-        newCharacter.weapon = document.getElementsByName('weapon')[0].value;
+        newCharacter.name = document.getElementsByName('name')[0].value
+        newCharacter.occupation = document.getElementsByName('occupation')[0].value
+        newCharacter.weapon = document.getElementsByName('weapon')[0].value
         newCharacter.cartoon = document.getElementsByName('cartoon')[0].checked;
 
         charactersAPI.createOneRegister(newCharacter).then((result) => {
                 console.log(result);
+                document.querySelector('#send-data').style.backgroundColor = "green";
             })
             .catch((err) => {
                 console.log(error)
+                document.querySelector('#send-data').style.backgroundColor = "red";
             })
     }
 })

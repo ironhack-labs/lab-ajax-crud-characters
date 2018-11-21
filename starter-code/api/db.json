@@ -2,10 +2,10 @@
   "characters": [
     {
       "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false
     },
     {
       "id": 2,
@@ -97,6 +97,13 @@
       "occupation": "eqwr",
       "weapon": "qer",
       "cartoon": true
+    },
+    {
+      "id": 18,
+      "name": "sdfgdsf",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false
     }
   ]
 }
