@@ -4,43 +4,58 @@ $(document).ready(() => {
     document.getElementById('fetch-all').onclick = function () {
 
         charactersAPI.getFullList().then((fullList) => {
-            //    return fullList;
-            console.log(fullList)
-            
-            document.querySelector('.character-info .id').innerText = `Id : ${fullList[0].id}`;
-            document.querySelector('.character-info .name').innerText = `Name : ${fullList[0].name}`;
-            document.querySelector('.character-info .occupation').innerText = `Occupation :${fullList[0].occupation}`;
-            document.querySelector('.character-info .cartoon').innerText = `Cartoon : ${fullList[0].cartoon}`;
-            document.querySelector('.character-info .weapon').innerText = `Weapon : ${fullList[0].weapon}`;
-
+            let htmlTemplate = "";
+            for (let i = 0; i < fullList.length; i++) {
+                htmlTemplate+=  ` <div class="character-info">
+                  <div class="id">Id: ${fullList[i].id}</div>
+                  <div class="name">Name: ${fullList[i].name}</div>
+                  <div class="occupation">Occupation: ${fullList[i].occupation}</div>
+                  <div class="cartoon">Cartoon: ${fullList[i].cartoon}</div>
+                  <div class="weapon">Weapon: ${fullList[i].weapon}</div>
+                </div>`
+            }
+           
+          
+            document.querySelector('.characters-container').innerHTML=htmlTemplate
+          
         }).catch((err) => {
-            console.log(error)
+            console.log(err)
         })
 
     }
 
     document.getElementById('fetch-one').onclick = function () {
+        document.querySelector('.characters-container').innerHTML =""
         let characterId = document.querySelector('.operation input').value;
-        charactersAPI.getOneRegister(characterId).then((oneCharacter) => {
-                console.log(oneCharacter);
-                document.querySelector('.character-info .id').innerText = `Id : ${oneCharacter.id}`;
-                document.querySelector('.character-info .name').innerText = `Name : ${oneCharacter.name}`;
-                document.querySelector('.character-info .occupation').innerText = `Occupation :${oneCharacter.occupation}`;
-                document.querySelector('.character-info .cartoon').innerText = `Cartoon : ${oneCharacter.cartoon}`;
-                document.querySelector('.character-info .weapon').innerText = `Weapon : ${oneCharacter.weapon}`;
+        charactersAPI.getOneRegister(characterId).then((oneCharacter) => {    
+               document.querySelector('.characters-container').innerHTML=` <div class="character-info">
+                 <div class="id">Id: ${oneCharacter.id}</div>
+                 <div class="name">Name: ${oneCharacter.name}</div>
+                 <div class="occupation">Occupation: ${oneCharacter.occupation}</div>
+                 <div class="cartoon">Cartoon: ${oneCharacter.cartoon}</div>
+                 <div class="weapon">Weapon: ${oneCharacter.weapon}</div>
+               </div>`
             })
             .catch((err) => {
+                document.querySelector('.characters-container').innerHTML=`<p>
+                The number Element is not in the datbase
+                </p>`
                 console.log(error)
             })
     }
 
     document.getElementById('delete-one').onclick = function () {
         let characterId = document.querySelector('.delete input').value
-        console.log(characterId)
         charactersAPI.deleteOneRegister(characterId).then((deleted) => {
+                if(!deleted){
+                    document.querySelector('.characters-container').innerHTML=`<p>
+                    The number Element is not in the datbase
+                    </p>`
+                }
                 console.log(deleted);
             })
             .catch((err) => {
+                
                 console.log(error)
             })
     }
@@ -51,7 +66,7 @@ $(document).ready(() => {
         editCharacter.name = document.getElementsByName('name')[1].value;
         editCharacter.occupation = document.getElementsByName('occupation')[1].value;
         editCharacter.weapon = document.getElementsByName('weapon')[1].value;
-        editCharacter.cartoon = document.getElementsByName('cartoon')[1].value;
+        editCharacter.cartoon = document.getElementsByName('cartoon')[1].checked;
         // console.log(editCharacter);
         charactersAPI.updateOneRegister(editCharacter).then((result) => {
                 console.log(result);
@@ -63,10 +78,10 @@ $(document).ready(() => {
 
     document.getElementById('send-data').onclick = function () {
         let newCharacter = {};
-        newCharacter.name = document.getElementsByName('name')[0].value
-        newCharacter.occupation = document.getElementsByName('occupation')[0].value
-        newCharacter.weapon = document.getElementsByName('weapon')[0].value
-        newCharacter.cartoon = document.getElementsByName('cartoon')[0].value
+        newCharacter.name = document.getElementsByName('name')[0].value;
+        newCharacter.occupation = document.getElementsByName('occupation')[0].value;
+        newCharacter.weapon = document.getElementsByName('weapon')[0].value;
+        newCharacter.cartoon = document.getElementsByName('cartoon')[0].checked;
 
         charactersAPI.createOneRegister(newCharacter).then((result) => {
                 console.log(result);

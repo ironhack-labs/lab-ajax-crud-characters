@@ -15,25 +15,11 @@
       "cartoon": false
     },
     {
+      "id": 4,
       "name": "David",
       "occupation": "123",
-      "weapon": "123",
-      "cartoon": "on",
-      "id": 4
-    },
-    {
-      "name": "David",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": "on",
-      "id": 5
-    },
-    {
-      "name": "WF",
-      "occupation": "WEF",
-      "weapon": "WQERF",
-      "cartoon": "on",
-      "id": 6
+      "weapon": "456",
+      "cartoon": "on"
     },
     {
       "name": "",
@@ -90,6 +76,27 @@
       "occupation": "WEF",
       "weapon": "WQERF",
       "cartoon": "on"
+    },
+    {
+      "id": 15,
+      "name": " CAFE DEL MAR100",
+      "occupation": "Vodafone",
+      "weapon": "Broma",
+      "cartoon": "on"
+    },
+    {
+      "name": "Vagos",
+      "occupation": "larios",
+      "weapon": "azar",
+      "cartoon": true,
+      "id": 16
+    },
+    {
+      "id": 17,
+      "name": "oñefg",
+      "occupation": "eqwr",
+      "weapon": "qer",
+      "cartoon": true
     }
   ]
 }
