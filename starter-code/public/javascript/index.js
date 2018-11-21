@@ -4,9 +4,21 @@ $(document).ready(() => {
   document.getElementById('fetch-all').onclick = function () {
     charactersAPI.getFullList()
       .then(data => {
+        let container = document.querySelector('.characters-container');
+        console.log(data);
+        console.log(container);
+        container.innerHTML="";
+
+        data.forEach(element => {
+          console.log(element);
+          let z = document.createElement('div');
+          z.innerHTML = createCharacterDiv(element);
+          container.appendChild(z);
+        });
         console.log(data)
       })
   }
+
 
   document.getElementById('fetch-one').onclick = function () {
     charactersAPI.checkId(3);
@@ -24,6 +36,7 @@ $(document).ready(() => {
     if (id === '') return
     charactersAPI.deleteOneRegister(id)
       .then(() => {
+        document.getElementById('fetch-all').onclick ();
         console.log('Successfully deleted')
       })
       .catch(err => console.log(err))
@@ -48,6 +61,7 @@ $(document).ready(() => {
 
     charactersAPI.updateOneRegister(infoCharacter[0].value, aux)
     .then(data => {
+      document.getElementById('fetch-all').onclick ();
       console.log('Successfully modified')
     })
     .catch(err => console.log(err))
@@ -77,6 +91,7 @@ $(document).ready(() => {
 
     charactersAPI.createOneRegister(characterInfo)
       .then((data) => {
+        document.getElementById('fetch-all').onclick ();
         console.log('Successfully created', data)
       })
       .catch(err => console.log(err))
@@ -84,6 +99,12 @@ $(document).ready(() => {
   }
 
   function createCharacterDiv(data){
-    
+    return (`<div class="character-info">
+        <div class="id">Id: ${data.id}</div>
+        <div class="name">Name: ${data.name}</div>
+        <div class="occupation">Occupation ${data.occupation}</div>
+        <div class="cartoon">Is a Cartoon?: ${data.cartoon}</div>
+        <div class="weapon">Weapon: ${data.weapon}</div>
+      </div>`)
   }
 })
