@@ -1,36 +1,25 @@
 {
   "characters": [
     {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "Diego",
+      "occupation": "TA",
+      "weapon": "Hasha",
+      "cartoon": "on",
+      "id": 3
     },
     {
-      "name": "\"Angel\"",
+      "name": "Diego",
+      "occupation": "TA",
+      "weapon": "Hacha",
+      "cartoon": "on",
       "id": 4
     },
     {
-      "name": "\"Angel\"",
+      "name": "Christian",
+      "occupation": "Boss",
+      "weapon": "Hasha",
+      "cartoon": "on",
       "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "name": "Sonia",
-      "occupation": "Developer",
-      "cartoon": true,
-      "weapon": "hacha",
-      "id": 7
-    },
-    {
-      "name": "Sonia",
-      "occupation": "Developer",
-      "cartoon": true,
-      "weapon": "hacha",
-      "id": 8
     }
   ]
 }
