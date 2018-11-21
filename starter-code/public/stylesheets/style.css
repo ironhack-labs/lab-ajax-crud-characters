@@ -42,9 +42,8 @@ button {
 }
 
 .characters-container {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
+  width: 50%;
+  margin: 10px auto;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
@@ -65,8 +64,9 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 100%;
   margin: 10px;
+  margin-right: 20px;
   padding: 10px;
   text-align: left;
   border: solid white 2px;
@@ -104,4 +104,14 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+.greenButton {
+  color: white;
+  background: green;
+}
+
+.redButton {
+  color: white;
+  background: red;
 }

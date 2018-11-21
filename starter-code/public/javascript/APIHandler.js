@@ -1,25 +1,39 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  getFullList() {
+    return axios
+      .get(`${this.BASE_URL}/characters`)
+      .then(characters => characters.data);
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`).then(character => {
+      return character;
+    });
   }
 
-  createOneRegister () {
-
+  createOneRegister(character) {
+    try {
+    if (character.name === '') throw error
+    return axios.post(`${this.BASE_URL}/characters/`, character);
+    } catch (err) {
+      $('#new-character-form button').addClass('redButton');
+    }
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id, character) {
+    
+    try {
+      return axios.patch(`${this.BASE_URL}/characters/${id}`, character);
+    } catch (err) {
+      $('#edit-character-form button').addClass('redButton');
+    }
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    return axios.delete(`${this.BASE_URL}/characters/${id}`);
   }
 }

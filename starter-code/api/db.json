@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Alberto",
+      "occupation": "Ironhacker",
+      "weapon": "Pistola",
+      "cartoon": false
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Alberto",
+      "occupation": "Ironhacker",
+      "weapon": "Pistola",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Starbucks",
+      "occupation": "Técnico de Hacienda",
+      "weapon": "Pistola",
+      "cartoon": false,
+      "id": 5
+    }
+  ]
+}
