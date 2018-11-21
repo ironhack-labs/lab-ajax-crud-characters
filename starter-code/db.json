@@ -27,6 +27,13 @@
       "weapon": "tu",
       "cartoon": false,
       "id": 4
+    },
+    {
+      "name": "Pablo",
+      "occupation": "Flamingo",
+      "weapon": "Pico",
+      "cartoon": false,
+      "id": 5
     }
   ]
 }

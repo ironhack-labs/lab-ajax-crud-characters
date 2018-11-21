@@ -4,28 +4,17 @@ class APIHandler {
   }
 
   getFullList() {
-    axios.get(`${this.BASE_URL}/characters`)
+    return axios.get(`${this.BASE_URL}/characters`)
       .then((characters) => {
-        characters.data.forEach(character => {
-          console.log(character.id)
-          console.log(character.name)
-          console.log(character.occupation)
-          console.log(character.cartoon)
-          console.log(character.weapon)
-          console.log("--------")
-        });
+        return characters.data
       })
       .catch(err => console.log(err))
   }
 
   getOneRegister(id) {
-    axios.get(`${this.BASE_URL}/characters/${id}`)
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
       .then((character) => {
-        console.log(character.data.id)
-        console.log(character.data.name)
-        console.log(character.data.occupation)
-        console.log(character.data.cartoon)
-        console.log(character.data.weapon)
+        return character.data
       })
       .catch(err => console.log(err))
 

@@ -2,12 +2,37 @@ const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready(() => {
   document.getElementById('fetch-all').onclick = function () {
+    const chContainer = document.querySelector('.characters-container')
+    chContainer.innerHTML = ""
     charactersAPI.getFullList()
+      .then(data => {
+        data.forEach(function (character) {
+          chContainer.innerHTML +=
+            `<div class="character-info">
+          <div class="ID">ID: ${character.id}</div>
+          <div class="name">Name: ${character.name}</div>
+          <div class="occupation">Occupation: ${character.occupation}</div>
+          <div class="cartoon">Is a Cartoon?: ${character.cartoon}</div>
+          <div class="weapon">Weapon: ${character.weapon}</div>
+        </div>`
+        })
+      })
+
   }
 
   document.getElementById('fetch-one').onclick = function () {
+    const chContainer = document.querySelector('.characters-container')
     let id = document.querySelector(".operation input").value
     charactersAPI.getOneRegister(id)
+    .then(character => {
+      chContainer.innerHTML = `<div class="character-info">
+      <div class="ID">ID: ${character.id}</div>
+      <div class="name">Name: ${character.name}</div>
+      <div class="occupation">Occupation: ${character.occupation}</div>
+      <div class="cartoon">Is a Cartoon?: ${character.cartoon}</div>
+      <div class="weapon">Weapon: ${character.weapon}</div>
+    </div>`
+    })
   }
 
   document.getElementById('delete-one').onclick = function () {
