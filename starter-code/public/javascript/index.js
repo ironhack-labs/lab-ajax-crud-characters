@@ -81,27 +81,30 @@ $(document).ready(() => {
 
   }
 
-  document.getElementById('edit-character-form').onsubmit = function () {
+  document.getElementById('edit-character-form').onsubmit = function (e) {
+
+    e.preventDefault()
+    let id = document.getElementById('editId').value
+
+    var checkedValue = document.querySelector('#editCartoon').checked;
+    
+    // console.log(checkedValue);
+    characterInfo = {
+      cartoon: checkedValue,
+      // id: 1,
+      name: document.getElementById('editName').value,
+      occupation: document.getElementById('editOccupation').value,
+      weapon: document.getElementById('editWeapon').value
+    }
+
+    charactersAPI.updateOneRegister(id,characterInfo);
 
   }
 
   document.getElementById('new-character-form').onsubmit = function (e) {
-    e.preventDefault()
-
-    // var arrLength = 0;
-
-
-    // charactersAPI.getFullList()
-    //   .then(elem => {
-    //     arrLength = elem.data.length
-    //     // console.log(elem.data.length);
-    //   })
-
-    //   console.log(arrLength);
+    e.preventDefault();
 
     var checkedValue = document.querySelector('#newCartoon').checked;
-    
-
     
     // console.log(checkedValue);
     characterInfo = {

@@ -34,8 +34,12 @@ class APIHandler {
       })
   }
 
-  updateOneRegister() {
+  updateOneRegister(id,characterInfo) {
+    axios.put(`${this.BASE_URL}/characters/${id}`, characterInfo)
+      .then(elem => {
+        console.log(elem.data);
 
+      })
   }
 
   deleteOneRegister(id) {
