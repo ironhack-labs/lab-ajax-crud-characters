@@ -28,8 +28,8 @@ class APIHandler {
   createOneRegister (object) {
 
     return axios.post(`${this.BASE_URL}/characters`,object)
-    .then(()=>{
-     
+    .then(data=>{
+      return data;
     })
     .catch(err=>console.log(err))
   }

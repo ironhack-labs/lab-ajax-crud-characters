@@ -105,3 +105,15 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.hidden-character{
+  visibility: hidden;
+}
+
+.good{
+  background-color: green;
+}
+
+.bad{
+  background-color: red;
+}
