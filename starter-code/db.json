@@ -20,6 +20,41 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": " Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Eduardo ",
+      "occupation": "2",
+      "cartoon": false,
+      "weapon": "2",
+      "id": 6
+    },
+    {
+      "name": "e",
+      "occupation": "d",
+      "cartoon": false,
+      "weapon": "g",
+      "id": 7
+    },
+    {
+      "name": "edu",
+      "occupation": "w",
+      "cartoon": false,
+      "weapon": "sdsd",
+      "id": 8
     }
   ]
 }
