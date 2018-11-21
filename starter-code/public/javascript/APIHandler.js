@@ -8,9 +8,9 @@ class APIHandler {
 
     return axios.get(`${this.BASE_URL}/characters`)
     .then(elem => {
+      // console.log(elem.data);
       return elem;
       
-      // console.log(elem.data[0].name);
     })
 
 

@@ -1,34 +1,56 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
 
-$(document).ready( () => {
-  document.getElementById('fetch-all').onclick = function(){
+$(document).ready(() => {
+  document.getElementById('fetch-all').onclick = function () {
 
     charactersAPI.getFullList()
-    .then(elem => {
-      
-      document.querySelector('.name').innerText = elem.data[0].name;
-      document.querySelector('.occupation').innerText = elem.data[0].occupation;
-      document.querySelector('.cartoon').innerText = elem.data[0].cartoon;
-      document.querySelector('.weapon').innerText = elem.data[0].weapon;
-      
-      
-    })
-    // document.querySelector('.name').innerText = charactersAPI.getFullList()[0].name;
+      .then(elem => {
+        $('.characters-container').empty()
+
+        elem.data.forEach(function (elem, index, arr) {
+
+          // Creación de los div necesarios y asignación de clases y padres/hijos
+
+          let charContCre = document.createElement('div');
+          charContCre.classList.add('character-info');
+          document.querySelector('.characters-container').appendChild(charContCre);
+
+          let nameDiv = document.createElement('div');
+          nameDiv.classList.add('name');
+          charContCre.appendChild(nameDiv);
+          let occupationDiv = document.createElement('div');
+          occupationDiv.classList.add('occupation');
+          charContCre.appendChild(occupationDiv);
+          let cartoonDiv = document.createElement('div');
+          cartoonDiv.classList.add('cartoon');
+          charContCre.appendChild(cartoonDiv);
+          let weaponDiv = document.createElement('div');
+          weaponDiv.classList.add('weapon');
+          charContCre.appendChild(weaponDiv);
+
+          // Relleno de los campos
+          nameDiv.innerText = elem.name;
+          occupationDiv.innerText = elem.occupation;
+          cartoonDiv.innerText = elem.cartoon;
+          weaponDiv.innerText = elem.weapon;
+
+        })
+      })
   }
-  
-  document.getElementById('fetch-one').onclick = function(){
-    
+
+  document.getElementById('fetch-one').onclick = function () {
+
   }
-  
-  document.getElementById('delete-one').onclick = function(){
-        
+
+  document.getElementById('delete-one').onclick = function () {
+
   }
-  
-  document.getElementById('edit-character-form').onsubmit = function(){
-            
+
+  document.getElementById('edit-character-form').onsubmit = function () {
+
   }
-  
-  document.getElementById('new-character-form').onsubmit = function(){
-                
+
+  document.getElementById('new-character-form').onsubmit = function () {
+
   }
 })
