@@ -4,20 +4,22 @@ $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
     charactersAPI.getFullList()
   }
-  
+
   document.getElementById('fetch-one').onclick = function(){
-    
+    var id = document.getElementById("characterId").value;
+    console.log(id)
+    charactersAPI.getOneRegister(id)
   }
   
   document.getElementById('delete-one').onclick = function(){
-        
+    charactersAPI. deleteOneRegister()
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-            
+    charactersAPI.updateOneRegister()   
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
-                
+    charactersAPI.createOneRegister ()      
   }
 })
