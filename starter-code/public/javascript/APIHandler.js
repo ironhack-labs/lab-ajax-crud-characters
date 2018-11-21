@@ -25,25 +25,36 @@ class APIHandler {
   createOneRegister(character) {
     return axios.post(this.BASE_URL + "/characters", character)
       .then(response => {
-        console.log('post successful and the response is: ', response);
+        return response.data
       })
       .catch(error => {
         console.log('Oh No! Error is: ', error);
       })
   }
 
-  updateOneRegister() {
+  updateOneRegister(id, infoCharacter) {
+    console.log(id)
+    console.log(infoCharacter);
+    return axios.put(this.BASE_URL + "/characters/" + id, infoCharacter)
+    .then(response => {
+      return response.data
+    })
+    .catch(error => {
+      console.log('Oh No! Error is: ', error);
+    })
 
   }
 
   //Test later
-  deleteOneRegister() {
-    axios.delete(this.BASE_URL + "/characters/" + id)
+  deleteOneRegister(id) {
+
+    return axios.delete(this.BASE_URL + "/characters/" + id)
       .then(data => {
-        return data.data
+        console.log(data)
       })
       .catch(err => console.log(err))
 
   }
+
 }
 

@@ -9,6 +9,7 @@ $(document).ready(() => {
   }
 
   document.getElementById('fetch-one').onclick = function () {
+    charactersAPI.checkId(3);
     let id = document.getElementsByName("character-id")[0].value;
     if (id === '') return
     charactersAPI.getOneRegister(id)
@@ -28,14 +29,43 @@ $(document).ready(() => {
       .catch(err => console.log(err))
   }
 
-  document.getElementById('edit-character-form').onsubmit = function () {
+  document.getElementById('send-data-edit').onclick = function () {
+    let infoCharacter = document.querySelectorAll("#edit-character-form input");
+    console.log(infoCharacter);
+    if (infoCharacter[0].value === '') return
+
+    const aux = {}
+    const keys=['name','occupation','weapon']
+
+    for (let i=1;i<4;i++){
+      if(infoCharacter[i].value !== '') aux[keys[i-1]] = infoCharacter[i].value;
+    }
+    aux.cartoon = infoCharacter[4].checked;
+    // if(infoCharacter[1].value !== '') aux.name = infoCharacter[1].value;
+
+
+    console.log(aux);
+
+    charactersAPI.updateOneRegister(infoCharacter[0].value, aux)
+    .then(data => {
+      console.log('Successfully modified')
+    })
+    .catch(err => console.log(err))
+
 
   }
 
   document.getElementById('send-data').onclick = function () {
     let character = document.querySelectorAll("#new-character-form input");
+
+    let empty = false;
     for (let i = 0; i < 3; i++) {
-      if (character[i] === '') return
+      if (character[i].value === '') empty = true;
+    }
+
+    if(empty) {
+      console.log('Todos los campos deben estar rellenitos');
+      return
     }
 
     const characterInfo = {
@@ -45,13 +75,15 @@ $(document).ready(() => {
       cartoon: character[3].checked
     };
 
-
     charactersAPI.createOneRegister(characterInfo)
-      .then(() => {
-        console.log('Successfully created')
+      .then((data) => {
+        console.log('Successfully created', data)
       })
       .catch(err => console.log(err))
 
+  }
 
+  function createCharacterDiv(data){
+    
   }
 })

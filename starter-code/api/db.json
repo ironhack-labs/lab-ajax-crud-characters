@@ -25,9 +25,6 @@
       "id": 4
     },
     {
-      "id": 5
-    },
-    {
       "name": "d",
       "occupation": "dwew",
       "weapon": "dw",
@@ -38,18 +35,17 @@
       "id": 7
     },
     {
-      "name": "d",
-      "occupation": "d",
-      "weapon": "d",
-      "cartoon": false,
-      "id": 8
-    },
-    {
       "name": "",
       "occupation": "",
       "weapon": "",
       "cartoon": false,
-      "id": 9
+      "id": 10
+    },
+    {
+      "name": "dsd",
+      "occupation": "daaaaaaaa",
+      "cartoon": false,
+      "id": 11
     }
   ]
 }
