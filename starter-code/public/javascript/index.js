@@ -39,16 +39,16 @@ $(document).ready(() => {
   }
 
   document.getElementById('fetch-one').onclick = function () {
-    
+
     // console.log(document.getElementById('oneId').value);
     let id = document.getElementById('findOneId').value
 
     charactersAPI.getOneRegister(id)
-    .then(elem => {
-        
-      if (id){     
-        $('.characters-container').empty()
-        let charContCre = document.createElement('div');
+      .then(elem => {
+
+        if (id) {
+          $('.characters-container').empty()
+          let charContCre = document.createElement('div');
           charContCre.classList.add('character-info');
           document.querySelector('.characters-container').appendChild(charContCre);
 
@@ -70,8 +70,8 @@ $(document).ready(() => {
           occupationDiv.innerText = elem.data.occupation;
           cartoonDiv.innerText = elem.data.cartoon;
           weaponDiv.innerText = elem.data.weapon;
-      }    
-    })
+        }
+      })
   }
 
   document.getElementById('delete-one').onclick = function () {
@@ -85,9 +85,37 @@ $(document).ready(() => {
 
   }
 
-  document.getElementById('new-character-form').onsubmit = function () {
+  document.getElementById('new-character-form').onsubmit = function (e) {
+    e.preventDefault()
+
+    // var arrLength = 0;
+
+
+    // charactersAPI.getFullList()
+    //   .then(elem => {
+    //     arrLength = elem.data.length
+    //     // console.log(elem.data.length);
+    //   })
+
+    //   console.log(arrLength);
+
+    var checkedValue = document.querySelector('#newCartoon').checked;
+    
+
+    
+    // console.log(checkedValue);
+    characterInfo = {
+      cartoon: checkedValue,
+      // id: 1,
+      name: document.getElementById('newName').value,
+      occupation: document.getElementById('newOccupation').value,
+      weapon: document.getElementById('newWeapon').value
+    }
+
+    charactersAPI.createOneRegister(characterInfo);
+
 
   }
 
-  
+
 })
