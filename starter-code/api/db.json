@@ -20,6 +20,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "chuck norris",
+      "occupation": "beating up the bad guys",
+      "weapon": "his guts",
+      "cartoon": false
     }
   ]
 }

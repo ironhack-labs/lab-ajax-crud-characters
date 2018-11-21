@@ -24,15 +24,17 @@
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
+        <label for="showId">Show Id:</label>
+        <input type="checkbox" name="showId" id="show-id" checked="true">
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -58,7 +60,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox" class="cartoon">
         </div>
-        <button id="send-data">Create</button>
+        <button id="create-entry">Create</button>
       </div>
     </section>
     <section class="form-container">
@@ -66,7 +68,7 @@
       <div id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" class="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
@@ -84,7 +86,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox" class="cartoon">
         </div>
-        <button id="send-data">Update</button>
+        <button id="update-entry">Update</button>
       </div>
     </section>
   </section>
