@@ -29,9 +29,20 @@ class APIHandler {
     });
   }
 
-  createOneRegister() {}
+  createOneRegister(obj) {
+    console.log(obj);
+    axios.post(`${this.BASE_URL}/characters`, obj )
+    
+  }
 
-  updateOneRegister() {}
+  updateOneRegister(obj2) {
+    const idToUpdate = document.getElementById('id').value;
+    axios.put(`${this.BASE_URL}/characters/${idToUpdate}`, obj2 )
+  }
 
-  deleteOneRegister() {}
+  deleteOneRegister(idToDelete) {
+    idToDelete= document.getElementById('idToDelete').value;
+    console.log(idToDelete);
+    axios.delete(`${this.BASE_URL}/characters/${idToDelete}`) ;
+  }
 }
