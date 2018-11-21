@@ -15,6 +15,7 @@
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
       <div class="character-info">
+        <div class="id">Id</div>
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
         <div class="cartoon">Is a Cartoon?</div>
@@ -41,7 +42,7 @@
   <section class="container">
     <section class="form-container">
       <h2>New Character</h2>
-      <form id="new-character-form" class="character-form">
+      <div id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
           <input type="text" name="name">
@@ -58,12 +59,12 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
-      </form>
+        <button id="send-data" type="submit">Create</button>
+      </div>
     </section>
     <section class="form-container">
       <h2>Edit Character</h2>
-      <form id="edit-character-form" class="character-form">
+      <div id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
           <input type="text" name="chr-id">
@@ -82,10 +83,10 @@
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" class="cartoon-edit">
         </div>
-        <button id="send-data">Update</button>
-      </form>
+        <button id="edit-data">Update</button>
+      </div>
     </section>
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
