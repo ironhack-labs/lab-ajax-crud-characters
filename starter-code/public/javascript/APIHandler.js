@@ -65,7 +65,7 @@ class APIHandler {
   }
 
   createOneRegister (name, occupation, weapon, cartoon) {
-console.log(document.getElementsByName("name"))
+
     var name = document.getElementsByName("name")[0].value;
     var occupation = document.getElementsByName("occupation")[0].value;
     var weapon = document.getElementsByName("weapon")[0].value;
@@ -91,8 +91,33 @@ console.log(document.getElementsByName("name"))
   };
   
 
-  updateOneRegister () {
+  updateOneRegister (editId) {
+  
+      let datosDeUnPersonaje = respuestaDelServidor.data;
+    console.log(datosDeUnPersonaje)
 
+    var name = document.getElementById("name1").value;
+    var occupation = document.getElementById("occupation1").value;
+    var weapon = document.getElementById("weapon1").value;
+    var IsAcartoon = document.getElementById("cartoon1").checked;
+
+    const updating = {
+      name: name,
+      occupation: occupation,
+      weapon: weapon,
+      cartoon: IsAcartoon,
+   };
+  
+    axios.patch(this.BASE_URL + `/characters/${editId}`,updating)
+
+    .then(response => {
+        console.log('post successful and the response is: ',response );
+    })
+    .catch(error => {
+        console.log('Oh No! Error is: ', error);  
+    })
+
+    
   }
 
   deleteOneRegister (idDel) {

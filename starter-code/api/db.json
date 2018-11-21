@@ -36,6 +36,13 @@
       "weapon": "xcbz",
       "cartoon": true,
       "id": 11
+    },
+    {
+      "name": "sonia",
+      "occupation": "nos",
+      "weapon": "jayaaa",
+      "cartoon": true,
+      "id": 12
     }
   ]
 }

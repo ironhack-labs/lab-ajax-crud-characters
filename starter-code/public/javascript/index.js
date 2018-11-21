@@ -20,7 +20,9 @@ $(document).ready( () => {
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-    charactersAPI.updateOneRegister()   
+    var editId = document.getElementById("editId").value;
+   
+    charactersAPI.updateOneRegister(editId)   
   }
   
   document.getElementById('new-character-form').onsubmit = function(e){
