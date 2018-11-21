@@ -2,11 +2,15 @@ const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
-
+    charactersAPI.getFullList();
   }
   
   document.getElementById('fetch-one').onclick = function(){
-    
+    let idCharacter = document.getElementById('character-id').value;
+    charactersAPI.getOneRegister(idCharacter)
+    .then(character => {
+      console.log(character.data); return character.data;
+    })
   }
   
   document.getElementById('delete-one').onclick = function(){
@@ -17,7 +21,9 @@ $(document).ready( () => {
             
   }
   
-  document.getElementById('new-character-form').onsubmit = function(){
-                
+  document.getElementById('new-character-form').onsubmit= function(){
+  
+   charactersAPI.createOneRegister()
+ 
   }
 })
