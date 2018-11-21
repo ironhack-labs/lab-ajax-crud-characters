@@ -95,7 +95,11 @@ console.log(document.getElementsByName("name"))
 
   }
 
-  deleteOneRegister () {
-
-  }
-}
+  deleteOneRegister (idDel) {
+      axios.delete(this.BASE_URL + `/characters/${idDel}` )
+      .then((respuestaDelServidor) => {
+        let datosDeUnPersonaje = respuestaDelServidor.data;
+      console.log(datosDeUnPersonaje)
+      })
+     
+      }}

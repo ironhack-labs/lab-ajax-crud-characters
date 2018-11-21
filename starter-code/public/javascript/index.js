@@ -6,13 +6,17 @@ $(document).ready( () => {
   }
 
   document.getElementById('fetch-one').onclick = function(){
+ 
     var id = document.getElementById("characterId").value;
     
     charactersAPI.getOneRegister(id)
   }
   
   document.getElementById('delete-one').onclick = function(){
-    charactersAPI. deleteOneRegister()
+    
+    var idDel = document.getElementById("deleteId").value;
+    
+    charactersAPI. deleteOneRegister(idDel)
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
