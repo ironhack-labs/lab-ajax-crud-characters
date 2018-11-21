@@ -44,11 +44,11 @@ $(document).ready(() => {
    charactersAPI.deleteOneRegister();
  };
 
- document.getElementById("edit-character-form").onsubmit = function() {
+ document.getElementById("edit-character-form").onclick = function() {
    charactersAPI.updateOneRegister();
  };
 
- document.getElementById("new-character-form").onsubmit = function() {
+ document.getElementById("new-character-form").onclick = function() {
 
   let name = document.querySelector('#new-character-form .name').value;
   let occupation = document.querySelector('#new-character-form .occupation').value;
@@ -57,6 +57,8 @@ $(document).ready(() => {
   
 
   let dbCharacter = {name: name, occupation: occupation, weapon: weapon, cartoon: cartoon};
+
+  // console.log(dbCharacter);
 
    charactersAPI.createOneRegister(dbCharacter)
    .then(()=>{
