@@ -15,16 +15,28 @@ class APIHandler {
  
   getOneRegister (id) {
  
-    return axios.get(`${this.BASE_URL}/characters/${id}`)
+    return axios.get(`${this.BASE_URL}/characters/?id=${id}`)
     .then((character)=>{
+      console.log(character.data[0])
       return character.data[0]
-      //console.log(character.data[0])
     })
   }
  
-  createOneRegister (object) {
+  createOneRegister (obj) {
 
-    return axios.post(`${this.BASE_URL}/characters`, object)
+    const {name, occupation, weapon, cartoon} = obj;
+
+    let id = 1;
+
+    for (let i=0; axios.get(`${this.BASE_URL}/characters/${i}`)!==null; i++){
+      id = i;
+    }
+
+    dbObject = {id: id, name: name, occupation: occupation, weapon: weapon, cartoon: cartoon};
+
+    console.log (dbObject);
+
+    return axios.post(`${this.BASE_URL}/characters`, dbObject);
   }
  
   updateOneRegister () {

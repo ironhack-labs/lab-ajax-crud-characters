@@ -21,8 +21,10 @@ $(document).ready(() => {
  };
 
  document.getElementById("fetch-one").onclick = function() {
-  const fetchId = document.querySelector('.operation input').value
-   charactersAPI.getOneRegister(fetchId)
+  
+  const fetchId = document.querySelector('.operation input').value;
+   
+  charactersAPI.getOneRegister(fetchId)
    .then((character)=>{
      let characterInfo = `<div class="character-info">
      <div class="name">${character.name}</div>
@@ -47,6 +49,21 @@ $(document).ready(() => {
  };
 
  document.getElementById("new-character-form").onsubmit = function() {
-   charactersAPI.createOneRegister();
+
+  let name = document.querySelector('#new-character-form .name').value;
+  let occupation = document.querySelector('#new-character-form .occupation').value;
+  let weapon = document.querySelector('#new-character-form .weapon').value;
+  let cartoon = document.querySelector('#new-character-form .cartoon').checked;
+  
+
+  let dbCharacter = {name: name, occupation: occupation, weapon: weapon, cartoon: cartoon};
+
+   charactersAPI.createOneRegister(dbCharacter)
+   .then(()=>{
+     console.log('succesfully created the new entry');
+   })
+   .catch((err)=>{
+     console.log('An error occurred while attempting to create a new entry: ' + err);
+   });
  };
 });
