@@ -7,7 +7,7 @@ $(document).ready( () => {
 
   document.getElementById('fetch-one').onclick = function(){
     var id = document.getElementById("characterId").value;
-    console.log(id)
+    
     charactersAPI.getOneRegister(id)
   }
   
@@ -19,7 +19,8 @@ $(document).ready( () => {
     charactersAPI.updateOneRegister()   
   }
   
-  document.getElementById('new-character-form').onsubmit = function(){
+  document.getElementById('new-character-form').onsubmit = function(e){
+   e.preventDefault()
     charactersAPI.createOneRegister ()      
   }
 })

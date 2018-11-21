@@ -5,6 +5,7 @@ class APIHandler {
   }
 
   getFullList () {
+    $(".characters-container").empty()
     axios.get(this.BASE_URL + '/characters', )
     .then((respuestaDelServidor) => {
       let datosDePersonajes = respuestaDelServidor.data
@@ -60,13 +61,35 @@ class APIHandler {
       </div>
           `;
           document.getElementsByClassName("characters-container")[0].innerHTML += newCharacterHtml;
-     
     })
   }
 
-  createOneRegister () {
+  createOneRegister (name, occupation, weapon, cartoon) {
+console.log(document.getElementsByName("name"))
+    var name = document.getElementsByName("name")[0].value;
+    var occupation = document.getElementsByName("occupation")[0].value;
+    var weapon = document.getElementsByName("weapon")[0].value;
+    var IsAcartoon = document.getElementsByName("cartoon")[0].checked;
 
-  }
+    const creating = {
+      name: name,
+      occupation: occupation,
+      weapon: weapon,
+      cartoon: IsAcartoon,
+   };
+  
+    axios.post(this.BASE_URL + `/characters`,creating)
+
+    .then(response => {
+        console.log('post successful and the response is: ',response );
+    })
+    .catch(error => {
+        console.log('Oh No! Error is: ', error);  
+    })
+
+   
+  };
+  
 
   updateOneRegister () {
 
