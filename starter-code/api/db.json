@@ -25,9 +25,23 @@
       "id": 4
     },
     {
-      "name": "la taberna",
+      "name": "Eduardo",
+      "occupation": "Singer",
+      "weapon": "f",
       "cartoon": false,
       "id": 5
+    },
+    {
+      "name": "Carmen",
+      "occupation": "x",
+      "weapon": "e",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "El Bar",
+      "cartoon": false,
+      "id": 7
     }
   ]
 }
