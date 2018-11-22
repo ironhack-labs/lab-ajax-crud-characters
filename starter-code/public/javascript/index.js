@@ -1,22 +1,20 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
 
+
+
 $(document).ready(() => {
   document.getElementById('fetch-all').onclick = function () {
     charactersAPI.getFullList()
       .then(data => {
         let container = document.querySelector('.characters-container');
-        console.log(data);
-        console.log(container);
         container.innerHTML="";
-
         data.forEach(element => {
-          console.log(element);
           let z = document.createElement('div');
           z.innerHTML = createCharacterDiv(element);
           container.appendChild(z);
         });
-        console.log(data)
       })
+      .catch(err => console.log(err))
   }
 
 
@@ -26,6 +24,7 @@ $(document).ready(() => {
     if (id === '') return
     charactersAPI.getOneRegister(id)
       .then(data => {
+        ////////QUE OASA CON ESTE THEN LO QUITO ENTERO, NO?
         console.log(data)
       })
       .catch(err => console.log(err))
