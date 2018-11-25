@@ -10,8 +10,12 @@ body {
   background: url("../images/minions.jpg")
 }
 
-h1, h2 {
+h1, h2, .color {
   color: #d8b362;
+}
+
+p {
+  margin: .2em;
 }
 
 button {
@@ -29,7 +33,14 @@ button {
   border-radius: 50px;
   border: 2px solid #fff;
   color: #fff;
-  overflow: hidden;
+}
+
+.right {
+  background-color: green;
+}
+
+.wrong {
+  background-color: red;
 }
 
 .container {
