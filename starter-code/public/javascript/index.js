@@ -40,14 +40,30 @@ $(document).ready(() => {
     $('input').val('');
   }
 
+  // const getData = (action) => {
+  //   let data = {
+  //     name: $(`#${action}-character-form input[name="name"]`).val(),
+  //     occupation: $(`#${action}-character-form input[name="occupation"]`).val(),
+  //     weapon: $(`#${action}-character-form input[name="weapon"]`).val(),
+  //     cartoon: $(`#${action}-character-form input[name="cartoon"]`).is(':checked')
+  //     //cartoon: $(`#${action}-character-form input[name="cartoon"]`).is(':checked') ? 'YES' : 'NO'
+  //   };
+  //   return data;
+  // }
+
   const getData = (action) => {
     let data = {
-      name: $(`#${action}-character-form input[name="name"]`).val(),
-      occupation: $(`#${action}-character-form input[name="occupation"]`).val(),
-      weapon: $(`#${action}-character-form input[name="weapon"]`).val(),
       cartoon: $(`#${action}-character-form input[name="cartoon"]`).is(':checked')
-      //cartoon: $(`#${action}-character-form input[name="cartoon"]`).is(':checked') ? 'YES' : 'NO'
     };
+    if ($(`#${action}-character-form input[name="name"]`).val() !== '') {
+      data.name = $(`#${action}-character-form input[name="name"]`).val();
+    }
+    if ($(`#${action}-character-form input[name="occupation"]`).val() !== '') {
+      data.occupation = $(`#${action}-character-form input[name="occupation"]`).val();
+    }
+    if ($(`#${action}-character-form input[name="weapon"]`).val() !== '') {
+      data.weapon = $(`#${action}-character-form input[name="weapon"]`).val();
+    }
     return data;
   }
 
