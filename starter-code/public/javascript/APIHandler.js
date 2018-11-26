@@ -36,11 +36,6 @@ class APIHandler {
   }
 
   createOneRegister(char) {
-    if (char.cartoon == "on") {
-      char.cartoon = true;
-    } else {
-      char.cartoon = false;
-    }
     return axios
       .post(`${this.BASE_URL}/characters`, char)
       .then(() => this.getFullList())
@@ -57,9 +52,10 @@ class APIHandler {
         } else {
           char.cartoon = false;
         }
-        axios
-          .patch(`${this.BASE_URL}/characters/${char.id}`, char)
-          .then(() => this.getFullList());
+        axios.patch(`${this.BASE_URL}/characters/${char.id}`, char).then(() => {
+          
+          this.getFullList();
+        });
       }
     });
   }
@@ -67,7 +63,11 @@ class APIHandler {
   deleteOneRegister(id) {
     return axios
       .delete(`${this.BASE_URL}/characters/${id}`)
-      .then(() => this.getFullList())
-      .catch(() => (container.innerHTML = "<h1>Invalid ID<h1>"));
+      .then(() => {
+        document.getElementById("delete-one").className="ok"
+        this.getFullList()})
+      .catch(() =>{ 
+        document.getElementById("delete-one").className="wrong"
+        container.innerHTML = "<h1>Invalid ID<h1>"});
   }
 }

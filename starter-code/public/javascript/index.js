@@ -27,7 +27,7 @@ $(document).ready(() => {
       name: document.getElementById("chname").value,
       occupation: document.getElementById("choccupation").value,
       weapon: document.getElementById("chweapon").value,
-      cartoon: document.getElementById("chcartoon").value
+      cartoon: document.getElementById("chcartoon").checked
     };
     console.log(char);
     if (
@@ -48,8 +48,9 @@ $(document).ready(() => {
       name: document.getElementById("newname").value,
       occupation: document.getElementById("newoccupation").value,
       weapon: document.getElementById("newweapon").value,
-      cartoon: document.getElementById("newcartoon").value
+      cartoon: document.getElementById("newcartoon").checked
     };
+    console.log(char.cartoon);
     if (char.name == "" || char.occupation == "" || char.weapon == "") {
       return (container.innerHTML = "<h1>All fields must be filled</h1>");
     }
