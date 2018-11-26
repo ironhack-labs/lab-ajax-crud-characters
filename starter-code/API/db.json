@@ -1,0 +1,466 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Aaron Ivan",
+      "occupation": "sufridor",
+      "weapon": "eneryeti",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 6,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 11,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 13,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 14,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 15,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 16,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 17,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 18,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 19,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 20,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 21,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {},
+      "id": 22
+    },
+    {
+      "name": "eqweqwe",
+      "occupation": "asdasd",
+      "weapon": "sdsad",
+      "cartoon": "on",
+      "id": 24
+    },
+    {
+      "name": "HOLA3",
+      "occupation": "namedsd",
+      "weapon": "asdas",
+      "cartoon": "on",
+      "id": 25
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 26
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 27
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 28
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 29
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 31
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 32
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 33
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 34
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 35
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 36
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 37
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 38
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 39
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 40
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 41
+    },
+    {
+      "name": "3234324",
+      "occupation": "asdasd",
+      "weapon": "234234234",
+      "cartoon": true,
+      "id": 42
+    },
+    {
+      "name": "prueba",
+      "occupation": "sd",
+      "weapon": "sa",
+      "cartoon": false,
+      "id": 43
+    },
+    {
+      "name": "prueba2",
+      "occupation": "sd",
+      "weapon": "sa",
+      "cartoon": true,
+      "id": 44
+    },
+    {
+      "name": "FINAL",
+      "occupation": "SD",
+      "weapon": "As",
+      "cartoon": false,
+      "id": 45
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 46
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 47
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 48
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 49
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 50
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 51
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 52
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 53
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 54
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 55
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 56
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 57
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 58
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 59
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 60
+    },
+    {
+      "name": "FINAL2",
+      "occupation": "SDdsad",
+      "weapon": "aSaAs",
+      "cartoon": false,
+      "id": 61
+    },
+    {
+      "name": "HOLA",
+      "occupation": "sd",
+      "weapon": "ass",
+      "cartoon": false,
+      "id": 62
+    },
+    {
+      "name": "HOLA",
+      "occupation": "sd",
+      "weapon": "ass",
+      "cartoon": false,
+      "id": 63
+    },
+    {
+      "name": "HOLA",
+      "occupation": "sd",
+      "weapon": "ass",
+      "cartoon": true,
+      "id": 64
+    },
+    {
+      "name": "HOLA",
+      "occupation": "sd",
+      "weapon": "ass",
+      "cartoon": true,
+      "id": 65
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": true,
+      "id": 66
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": true,
+      "id": 67
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": true,
+      "id": 68
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": true,
+      "id": 69
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": false,
+      "id": 70
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": false,
+      "id": 71
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": false,
+      "id": 72
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": false,
+      "id": 73
+    },
+    {
+      "name": "asda",
+      "occupation": "asdas",
+      "weapon": "fgdfg",
+      "cartoon": false,
+      "id": 74
+    },
+    {
+      "name": "xzczxczxc",
+      "occupation": "asdasd",
+      "weapon": "eneryeti",
+      "cartoon": true,
+      "id": 75
+    }
+  ]
+}
