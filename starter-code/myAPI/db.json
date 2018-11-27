@@ -1,0 +1,74 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "AA",
+      "occupation": "AA",
+      "weapon": "AA",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "333",
+      "occupation": "333",
+      "weapon": "333",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "p",
+      "occupation": "p",
+      "weapon": "p2",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "dede",
+      "occupation": "dede",
+      "weapon": "dede",
+      "cartoon": true,
+      "id": 11
+    }
+  ]
+}

@@ -54,6 +54,15 @@ button {
   background-color: #42f471;
 }
 
+.bred {
+  background-color: red;
+}
+
+.bgreen {
+  background-color: green;
+  margin: 200px 0;
+}
+
 .operations {
   margin: 0 auto;
   padding: 5px;
