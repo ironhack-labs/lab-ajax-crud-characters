@@ -1,4 +1,4 @@
-const charactersAPI = new APIHandler("http://localhost:8000/characters")
+const charactersAPI = new APIHandler("http://localhost:8000/")
 
 $(document).ready(() => {
 

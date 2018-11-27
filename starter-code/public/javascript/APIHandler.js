@@ -1,6 +1,6 @@
 class APIHandler {
   constructor(baseUrl) {
-    this.BASE_URL = baseUrl;
+    this.BASE_URL = `${baseUrl}characters`;
     this.charContainer = $(".characters-container");
   }
 
