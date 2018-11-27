@@ -22,24 +22,17 @@
       "cartoon": true
     },
     {
-      "name": "sonia",
-      "occupation": "Photographer",
-      "weapon": "Pizza",
-      "cartoon": "on",
-      "id": 4
-    },
-    {
       "name": "Robinjud",
       "occupation": "Musician",
       "weapon": "Arrows",
-      "cartoon": "on",
+      "cartoon": false,
       "id": 5
     },
     {
-      "name": "Ant",
+      "name": "sonia",
       "occupation": "Photographer",
-      "weapon": "Gifs",
-      "cartoon": true,
+      "weapon": "Pizza",
+      "cartoon": false,
       "id": 6
     }
   ]
