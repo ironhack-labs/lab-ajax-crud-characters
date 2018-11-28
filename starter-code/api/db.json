@@ -32,11 +32,11 @@
       "name": "Bob",
       "occupation": "Constructor",
       "weapon": "Pala",
-      "cartoon": false,
+      "cartoon": true,
       "id": 7
     },
     {
-      "name": "Irene",
+      "name": "Lola",
       "occupation": "Ironhacker",
       "weapon": "Laptop",
       "cartoon": false,

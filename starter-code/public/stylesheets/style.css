@@ -105,3 +105,14 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+}
+
+.characters-container {
+  width: 400px;
+}
