@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "patricio",
+      "occupation": "efew",
+      "weapon": "estrella",
+      "cartoon": "on"
+    },
+    {
+      "name": "rene",
+      "occupation": "vdfbsdf",
+      "cartoon": "on",
+      "weapon": "fdvsdf",
+      "id": 4
+    },
+    {
+      "name": "Miguelop",
+      "occupation": "Nini",
+      "cartoon": "on",
+      "weapon": "arun",
+      "id": 5
+    }
+  ]
+}
