@@ -1,0 +1,53 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Bart Simpson",
+      "occupation": "Kid",
+      "weapon": "Resortera",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "Homer Simpson",
+      "occupation": "Father",
+      "weapon": "Donut",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "Bob",
+      "occupation": "Constructor",
+      "weapon": "Pala",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "Irene",
+      "occupation": "Ironhacker",
+      "weapon": "Laptop",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "Moe",
+      "occupation": "Barman",
+      "weapon": "Picahielo",
+      "cartoon": true,
+      "id": 9
+    }
+  ]
+}
