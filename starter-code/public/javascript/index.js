@@ -39,27 +39,25 @@ $(document).ready( () => {
   document.getElementById('fetch-one').onclick = function(){
     
     const input = document.querySelector("input[name='character-id']")
-    //console.log(input)
+    console.log(input.value)
     charactersAPI.getOneRegister(input.value)
-    .then(result=>{
-
+     .then(result=>{
+       console.log(result)
       const container = document.querySelector(".otro")
       container.innerHTML = ""
       container.innerHTML = `
         <div class="characters-container">
           <div class="character-info">
-            <div class="charid">ID: ${result.data.id}</div>
-            <div class="name">Name: ${result.data.name}</div>
-            <div class="occupation">Occupation: ${result.data.occupation}</div>
-            <div class="cartoon">Cartoon: ${result.data.cartoon}</div>
-            <div class="weapon">Weapon: ${result.data.weapon}</div>
+            <div class="charid">ID: ${result.id}</div>
+            <div class="name">Name: ${result.name}</div>
+            <div class="occupation">Occupation: ${result.occupation}</div>
+            <div class="cartoon">Cartoon: ${result.cartoon}</div>
+            <div class="weapon">Weapon: ${result.weapon}</div>
           </div>
         </div>
         `
         input.value = ""
     })
-  
-    
   }
   
   document.getElementById('delete-one').onclick = function(){
