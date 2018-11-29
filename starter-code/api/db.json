@@ -25,8 +25,15 @@
       "id": 4,
       "name": "Chuchita",
       "occupation": "jedi",
-      "weapon": "🔫",
+      "weapon": "🔫🔫",
       "cartoon": "true"
+    },
+    {
+      "id": 5,
+      "name": "Tlayudas",
+      "occupation": "chef",
+      "weapon": "🙃",
+      "cartoon": "false"
     }
   ]
 }
