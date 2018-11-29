@@ -20,6 +20,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Miguel",
+      "occupation": "Student",
+      "weapon": "Machete",
+      "cartoon": true,
+      "id": 4
     }
   ]
 }

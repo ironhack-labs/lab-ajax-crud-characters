@@ -50,6 +50,12 @@ button {
   flex-flow: row wrap;
 }
 
+.otro{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
 .active {
   background-color: #42f471;
 }

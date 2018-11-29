@@ -2,50 +2,62 @@ const charactersAPI = new APIHandler("http://localhost:8000")
 
 
 function Push(element){
-  const contenedor = document.getElementsByClassName('characters-container')
-  var info = document.querySelector('.character-info:nth-child('+element.id+')')
+  //const contenedor = document.getElementsByClassName('characters-container')
+  //var info = document.querySelector('.character-info:nth-child('+element.id+')')
 
-  info.style.display = "none"
-  var div = document.createElement("div")
-  div.className ="character-info"
-  div.innerHTML += `
-    <div class="name">id:  ${element.id} </div>
-    <div class="name">Name:  ${element.name} </div>
-    <div class="occupation">Occupation:  ${element.occupation}</div>
-    <div class="cartoon">Is a Cartoon? ${element.cartoon}</div>
-    <div class="weapon">Weapon: ${element.weapon}</div>
-`
-
-if(element.name){
-info.style.display = "initial"
-//contenedor[0](:nth-child:).style.display = "none"
-contenedor[0].append(div)
-}
-}
-
-
-
-$(document).ready( () => {
-  document.getElementById('fetch-all').onclick = function(){
-    charactersAPI.getFullList()
+  //info.style.display = "none"
+  //var div = document.createElement("div")
+  //div.className ="character-info"
+  const container = document.querySelector(".otro")
+  container.innerHTML = ''
+  charactersAPI.getFullList()
     .then(result => { console.log(result)
       result.forEach(element => {
-            Push(element)
-        
+        container.innerHTML += `
+        <div class="characters-container">
+          <div class="character-info">
+            <div class="name">id:  ${element.id} </div>
+            <div class="name">Name:  ${element.name} </div>
+            <div class="occupation">Occupation:  ${element.occupation}</div>
+            <div class="cartoon">Is a Cartoon? ${element.cartoon}</div>
+            <div class="weapon">Weapon: ${element.weapon}
+          </div>
+        </div>
+        `
       });
       
     })
-    .catch(e=>console.log(e))
+    .catch(e=>console.log(e))        
+}
+
+$(document).ready( () => {
+  document.getElementById('fetch-all').onclick = function(){
+    
+    Push()
   }
-  
+   
   document.getElementById('fetch-one').onclick = function(){
     
-    var id = document.querySelector("input[name='character-id']").value
+    const input = document.querySelector("input[name='character-id']")
+    //console.log(input)
+    charactersAPI.getOneRegister(input.value)
+    .then(result=>{
 
-    charactersAPI.getOneRegister(id)
-    .then(result =>{
-        Push(result)
-    }) 
+      const container = document.querySelector(".otro")
+      container.innerHTML = ""
+      container.innerHTML = `
+        <div class="characters-container">
+          <div class="character-info">
+            <div class="charid">ID: ${result.data.id}</div>
+            <div class="name">Name: ${result.data.name}</div>
+            <div class="occupation">Occupation: ${result.data.occupation}</div>
+            <div class="cartoon">Cartoon: ${result.data.cartoon}</div>
+            <div class="weapon">Weapon: ${result.data.weapon}</div>
+          </div>
+        </div>
+        `
+        input.value = ""
+    })
   
     
   }
@@ -61,13 +73,13 @@ $(document).ready( () => {
   document.getElementById('edit-character-form').onsubmit = function(){
 
     const character ={
-      name:"name",
-      occupation:"occupation",
-      weapon:"pon",
+      name:id = document.querySelector("input[name='name']").value,
+      occupation:occupation = document.querySelector("input[name='occupation']").value,
+      weapon:weapon = document.querySelector("input[name='weapon']").value,
       cartoon:true
     }
 
-    charactersAPI.updateOneRegister (4,character)
+    charactersAPI.updateOneRegister (character)
   
             
   }
@@ -75,9 +87,9 @@ $(document).ready( () => {
   document.getElementById('new-character-form').onsubmit = function(){
                 
     const character ={
-      name:"name",
-      occupation:"occupation",
-      weapon:"weapon",
+      name:id = document.querySelector("input[name='name']").value,
+      occupation:occupation = document.querySelector("input[name='occupation']").value,
+      weapon:weapon = document.querySelector("input[name='weapon']").value,
       cartoon:true
     }
 
