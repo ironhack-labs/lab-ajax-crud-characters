@@ -50,7 +50,7 @@ class APIHandler {
     };
     const boton = document.querySelector('#send-data-up')
     const form = document.querySelector('#edit-character-form')
-    const id = document.getElementById("valor-id").value;
+    const id = e.target.charid.value;
     return axios.patch(this.BASE_URL + '/characters/' + id, character)
     .then(result =>{
       form.name.value =result.data.name
