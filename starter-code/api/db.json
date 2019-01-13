@@ -1,0 +1,128 @@
+{
+  "characters": [
+    {
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": "on",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "None",
+      "id": 6,
+      "cartoon": "on"
+    },
+    {
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": "1",
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": "true",
+      "id": 9
+    },
+    {
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": "true",
+      "id": 10
+    },
+    {
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": "true",
+      "id": 11
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "true",
+      "id": 12
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "true",
+      "id": 13
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "true",
+      "id": 15
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "true",
+      "id": 16
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "true",
+      "id": 17
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "id": 18
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "on",
+      "id": 19
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 20
+    }
+  ]
+}
