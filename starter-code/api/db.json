@@ -1,17 +1,10 @@
 {
   "characters": [
     {
-      "name": "test",
-      "occupation": "test",
-      "weapon": "test",
-      "cartoon": "on",
-      "id": 1
-    },
-    {
       "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
+      "name": "",
+      "occupation": "",
+      "weapon": "",
       "cartoon": false
     },
     {
@@ -123,6 +116,20 @@
       "weapon": "",
       "cartoon": false,
       "id": 20
+    },
+    {
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": true,
+      "id": 21
+    },
+    {
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": false,
+      "id": 22
     }
   ]
 }
