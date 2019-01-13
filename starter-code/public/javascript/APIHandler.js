@@ -1,25 +1,30 @@
 class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+  getAllCharacters() {
+    return axios.get("http://localhost:8000/characters");
   }
-
-  getFullList () {
-
+  getSingleCharacter() {
+    const characterID = $("#character-id").val();
+    return axios.get("http://localhost:8000/characters/" + characterID);
   }
-
-  getOneRegister () {
-
+  createCharacter(name, occupation, weapon, cartoon) {
+    return axios.post("http://localhost:8000/characters", {
+      name,
+      occupation,
+      weapon,
+      cartoon
+    });
   }
-
-  createOneRegister () {
-
+  deleteCharacter(name, occupation, weapon, cartoon) {
+    const characterID = $("#character-id-delete").val();
+    return axios.delete("http://localhost:8000/characters/" + characterID);
   }
-
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
+  editCharacter(name, occupation, weapon, cartoon) {
+    const characterID = $("#chr-id").val();
+    return axios.put("http://localhost:8000/characters/" + characterID, {
+      name,
+      occupation,
+      weapon,
+      cartoon
+    });
   }
 }

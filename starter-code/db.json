@@ -1,0 +1,35 @@
+{
+  "characters": [
+    {
+      "name": "gg",
+      "occupation": "ds",
+      "weapon": "ljl",
+      "cartoon": "on",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "jjsj",
+      "occupation": "dsksjd",
+      "weapon": "dflkdlf",
+      "cartoon": "on",
+      "id": 19
+    },
+    {
+      "id": 20
+    },
+    {
+      "name": "akkaka",
+      "occupation": "akakak",
+      "weapon": "dksldjaf",
+      "cartoon": "on",
+      "id": 21
+    }
+  ]
+}
