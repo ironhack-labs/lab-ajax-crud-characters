@@ -27,7 +27,7 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input id="input-fetch" type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
@@ -44,19 +44,19 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input class="the-name" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input class="the-occupation" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input class="the-weapon" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input class="the-cartoon" name="cartoon" type="checkbox">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -88,6 +88,7 @@
       </form>
     </section>
   </section>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
