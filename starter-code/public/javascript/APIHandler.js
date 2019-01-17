@@ -21,7 +21,7 @@ class APIHandler {
   }
 
   updateOneRegister(id, object) {
-    return axios.put(`http://localhost:8000/characters/${id}`);
+    return axios.put(`http://localhost:8000/characters/${id}`, object);
   }
 
   deleteOneRegister(id) {
