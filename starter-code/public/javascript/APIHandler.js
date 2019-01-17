@@ -1,5 +1,5 @@
 
-
+//Fonction pour recuperer les donnees de json et les affichier sur le fichier html
 function renderCharacter(json){
   return `<div class="character-info">
   <div class="name">${json.name}</div>
@@ -18,9 +18,9 @@ class APIHandler {
   getFullList() {
     axios.get('http://localhost:8000/characters')
       .then(response => {
-        console.log (response.data, response.data.length) // [ {}, {},{} ]
-        let str = "";
-        response.data.forEach(character => {
+        console.log (response.data, response.data.length) // renvoie un tableau [ {}, {},{} ]
+        let str = ""; //variable vide a remplir
+        response.data.forEach(character => {  //fonction pour afficher les données json pour chaque objet listé
           str += renderCharacter(character);
         })
         console.log (str);
