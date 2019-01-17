@@ -19,7 +19,20 @@ class APIHandler {
     })
   }
 
-//   createOneRegister() {}
+  createOneRegister(name, occupation, weapon, cartoon) {
+    axios
+    const characterInfo = {
+      name: $("#new-character-form input[name*='name']" ).val(),
+      occupation : $("#new-character-form input[name*='occupation']" ).val(),
+      weapon : $("#new-character-form input[name*='weapon']").val(),
+      cartoon : $("#new-character-form input[name*='cartoon']").is(':checked'),
+    }
+    .post(`${this.BASE_URL}/characters`,characterInfo)
+    .then(response => {
+      const {name,occupation,weapon,cartoon} = response.data;
+      console.log(response.data)  
+    }) 
+  }
 
 //   updateOneRegister() {}
 

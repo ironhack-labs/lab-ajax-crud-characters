@@ -6,7 +6,7 @@ $(document).ready( () => {
   }
   
   document.getElementById('fetch-one').onclick = function(){
-    var id = document.getElementById("searched-id");
+    var id = document.getElementById("searched-id").value;
     charactersAPI.getOneRegister(id);
     
   }
@@ -20,6 +20,6 @@ $(document).ready( () => {
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
-                
-  }
+    charactersAPI.createOneRegister(characterInfo);
+    }
 })
