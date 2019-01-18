@@ -15,13 +15,27 @@ $(document).ready(() => {
     charactersAPI.deleteOneRegister(theId);  
   };
 
-  document.getElementById("edit-character-form").onsubmit = function() {
-    const theId = document.getElementById("theCharId").value;
-    charactersAPI.updateOneRegister(theId);
+  document.getElementById("edit-character-form").onsubmit = function(event) {
+    event.preventDefault();
 
+    const theId = document.getElementById("theCharId").value;
+
+    const theNames = document.getElementsByClassName("edit-name")[1].value;
+    const theOccupations = document.getElementsByClassName("edit-occupation")[1].value;
+    const theWeapons = document.getElementsByClassName("edit-weapon")[1].value;
+    const theCartoons = document.getElementsByClassName("edit-cartoon")[1].value;
+
+    charactersAPI.updateOneRegister(theNames, theOccupations, theWeapons, theCartoons, theId);
   };
 
-  document.getElementById("new-character-form").onsubmit = function() {
-    charactersAPI.createOneRegister()
+  document.getElementById("new-character-form").onsubmit = function(event) {
+    event.preventDefault();
+
+    const theNames = document.getElementsByClassName("the-name")[0].value;
+    const theOccupations = document.getElementsByClassName("the-occupation")[0].value;
+    const theWeapons = document.getElementsByClassName("the-weapon")[0].value;
+    const theCartoons = document.getElementsByClassName("the-cartoon")[0].value;
+      
+    charactersAPI.createOneRegister(theNames, theOccupations, theWeapons, theCartoons)
   };
 });

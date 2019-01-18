@@ -15,18 +15,11 @@
       "cartoon": false
     },
     {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
-    },
-    {
       "name": "Nicole Kidman",
       "occupation": "actress",
       "weapon": "lipstick",
-      "cartoon": false,
-      "id": 4
+      "cartoon": "on",
+      "id": 3
     }
   ]
 }
