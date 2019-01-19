@@ -7,7 +7,7 @@ $(document).ready( () => {
   }
   
   document.getElementById('fetch-one').onclick = function(){
-    
+    getOneRegister (document.getElementById)
   }
   
   document.getElementById('delete-one').onclick = function(){
