@@ -39,7 +39,7 @@ class APIHandler {
       .post("http://localhost:8000/characters", newCharacter)
       .then(response => {
         console.log("You just created this character: ", response.data);
-        getFullList();
+        this.getFullList();
       })
       .catch(error => {
         console.log("Error is: ", error);
@@ -57,8 +57,8 @@ class APIHandler {
     axios
       .patch("http://localhost:8000/characters/" + id, updatedCharacter)
       .then(response => {
-        console.log("update successful: ", response.dataS);
-        getFullList();
+        console.log("update successful: ", response.data);
+        this.getFullList();
         document.getElementById("edit-character-form").reset();
       })
       .catch(error => {

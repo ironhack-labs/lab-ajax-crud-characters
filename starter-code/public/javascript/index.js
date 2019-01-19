@@ -20,10 +20,10 @@ $(document).ready(() => {
 
     const theId = document.getElementById("theCharId").value;
 
-    const theNames = document.getElementsByClassName("edit-name")[1].value;
-    const theOccupations = document.getElementsByClassName("edit-occupation")[1].value;
-    const theWeapons = document.getElementsByClassName("edit-weapon")[1].value;
-    const theCartoons = document.getElementsByClassName("edit-cartoon")[1].value;
+    const theNames = document.querySelector(".edit-name").value;
+    const theOccupations = document.getElementsByClassName("edit-occupation")[0].value;
+    const theWeapons = document.getElementsByClassName("edit-weapon")[0].value;
+    const theCartoons = document.getElementsByClassName("edit-cartoon")[0].value;
 
     charactersAPI.updateOneRegister(theNames, theOccupations, theWeapons, theCartoons, theId);
   };
