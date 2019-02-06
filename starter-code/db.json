@@ -1,0 +1,61 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "min",
+      "occupation": "teacher",
+      "weapon": "macbook pro",
+      "cartoon": false,
+      "cartoon ": "false"
+    },
+    {
+      "id": 3,
+      "name": "spongemin",
+      "occupation": "sponge",
+      "weapon": "min",
+      "cartoon": true
+    },
+    {
+      "name": "maxence",
+      "occupation": "teacher",
+      "weapon": "macbook pro",
+      "cartoon ": "false",
+      "id": 4
+    },
+    {
+      "name": "min ",
+      "occupation": "Singer",
+      "cartoon": "on",
+      "weapon": "pencil",
+      "id": 5
+    },
+    {
+      "name": "min ",
+      "occupation": "Singer",
+      "cartoon": "on",
+      "weapon": "red light saber",
+      "id": 6
+    },
+    {
+      "name": "min ",
+      "occupation": "student",
+      "cartoon": "on",
+      "weapon": "Anakin's dad",
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": "on",
+      "weapon": "",
+      "id": 8
+    },
+    {
+      "name": "alex",
+      "occupation": "student",
+      "cartoon": true,
+      "weapon": "macbook",
+      "id": 9
+    }
+  ]
+}
