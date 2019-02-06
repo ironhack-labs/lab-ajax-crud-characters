@@ -4,22 +4,28 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(`${this.BASE_URL}/characters`)
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
+    .then((character) => {
+      return character.data
+    })
+    .catch(err => {
+      console.log("La cagaste", err)
+    })
   }
 
-  createOneRegister () {
-
+  createOneRegister (obj) {
+    return axios.post(`${this.BASE_URL}/characters`, {obj})
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, obj) {
+    return axios.put(`${this.BASE_URL}/characters/${id}`, {obj})
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return axios.delete(`${this.BASE_URL}/characters/${id}`)
   }
 }
