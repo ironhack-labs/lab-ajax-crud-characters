@@ -17,15 +17,23 @@ $(document).ready( () => {
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-      charactersAPI.updateOneRegister()
+    const mybichito = {
+      name: document.getElementById("editname").value,
+      occupation: document.getElementById('editoccupation').value,
+      weapon: document.getElementById('editweapon').value,
+      cartoon: document.getElementById('editcartoon').value
+    }
+    const selectId = +document.getElementById('editid').value
+
+      charactersAPI.updateOneRegister(selectId,mybichito).then(()=>{})
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
     const mybichito = {
-      name: document.getElementById("name").value,
-      occupation: document.getElementById('occupation').value,
-      weapon: document.getElementById('weapon').value,
-      cartoon: document.getElementById('cartoon').value
+      name: document.getElementById("newname").value,
+      occupation: document.getElementById('newoccupation').value,
+      weapon: document.getElementById('newweapon').value,
+      cartoon: document.getElementById('newcartoon').value
     }
 
     charactersAPI.createOneRegister(mybichito)

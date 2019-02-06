@@ -47,7 +47,10 @@ class APIHandler
     })
   }
 
-  updateOneRegister () {
+  updateOneRegister (param1, param2) {
+    console.log(param1,param2)
+
+     return axios.put(this.BASE_URL + "/" + param1, param2)
     
   }
 
