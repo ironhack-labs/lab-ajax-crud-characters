@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "maxence",
+      "occupation": "ironhack teacher",
+      "weapon": "cuteness",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Amelia",
+      "occupation": "ironhacker",
+      "weapon": "carrot",
+      "cartoon": false,
+      "id": 6
+    }
+  ]
+}
