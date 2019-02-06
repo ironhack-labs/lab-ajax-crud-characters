@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Antonio",
+      "occupation": "Marido",
+      "weapon": "Faca",
+      "cartoon": "on",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Rodrigo",
+      "occupation": "Professor",
+      "weapon": "A Biblia",
+      "cartoon": "on",
+      "id": 4
+    }
+  ]
+}
