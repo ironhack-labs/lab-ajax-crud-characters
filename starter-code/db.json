@@ -2,9 +2,9 @@
   "characters": [
     {
       "id": 2,
-      "name": "test",
-      "occupation": "test",
-      "weapon": "test",
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
       "cartoon": false
     },
     {
@@ -15,11 +15,25 @@
       "cartoon": true
     },
     {
-      "name": "hello",
-      "occupation": "hello",
-      "weapon": "hello",
-      "cartoon": false,
-      "id": 4
+      "id": 4,
+      "name": "Superman",
+      "occupation": "Superhero",
+      "weapon": "Superpower",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "Julia",
+      "occupation": "WebDev",
+      "weapon": "Laptop",
+      "cartoon": false
+    },
+    {
+      "id": 6,
+      "name": "Thor",
+      "occupation": "TA",
+      "weapon": "Brain",
+      "cartoon": false
     }
   ]
 }

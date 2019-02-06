@@ -11,11 +11,11 @@ $(document).ready( () => {
       for (let i = 0; i < characters.length; i++) {
         let html = "";
         html += '<div class="character-info">';
-        html += '<div class="id">'+characters[i].id+'</div>';
-        html += '<div class="name">'+characters[i].name+'</div>';
-        html += '<div class="occupation">'+characters[i].occupation+'</div>';
+        html += '<div class="id">ID: '+characters[i].id+'</div>';
+        html += '<div class="name"> Name: '+characters[i].name+'</div>';
+        html += '<div class="occupation">Occupation '+characters[i].occupation+'</div>';
         html += '<div class="cartoon">Is a Cartoon? '+characters[i].cartoon+'</div>';
-        html += '<div class="weapon">'+characters[i].weapon+'</div>';
+        html += '<div class="weapon">Weapon'+characters[i].weapon+'</div>';
         html += '</div>';
         characterContainer.append(html);
       }
