@@ -1,24 +1,26 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
 
+
+function characterCard(characters) {
+  let characterContainer = $(".characters-container");
+  characterContainer.html("");
+  for (let i = 0; i < characters.length; i++) {
+    let { id, name, occupation, cartoon, weapon } = characters[i]
+    let html = `<div class="character-info">
+      <div class="name"> ${id}: ${name} </div>
+      <div class="occupation"> Occupation: ${occupation} </div>
+      <div class="cartoon"> Cartoon: ${cartoon}</div>
+      <div class="weapon">Weapon: ${weapon}</div>`
+    characterContainer.append(html);
+  }
+}
+
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(e){
     e.preventDefault();
     charactersAPI.getFullList()
     .then (characters => {
-			console.log('TCL: document.getElementById -> characters', characters)
-      let characterContainer = $(".characters-container");
-      characterContainer.html("");   
-      for (let i = 0; i < characters.length; i++) {
-        let html = "";
-        html += '<div class="character-info">';
-        html += '<div class="id">ID: '+characters[i].id+'</div>';
-        html += '<div class="name"> Name: '+characters[i].name+'</div>';
-        html += '<div class="occupation">Occupation '+characters[i].occupation+'</div>';
-        html += '<div class="cartoon">Is a Cartoon? '+characters[i].cartoon+'</div>';
-        html += '<div class="weapon">Weapon'+characters[i].weapon+'</div>';
-        html += '</div>';
-        characterContainer.append(html);
-      }
+      characterCard(characters);
     });
   };
   
@@ -27,14 +29,21 @@ $(document).ready( () => {
     let id = document.getElementsByName('character-id')[0].value;
     charactersAPI.getOneRegister(id)
     .then (character => {
-			console.log('TCL: character', character);
+      characterCard([character]);
     });
   };
   
   document.getElementById('delete-one').onclick = function(e){
     e.preventDefault();
     let id = document.getElementsByName('character-id-delete')[0].value;
-    charactersAPI.deleteOneRegister(id);
+    charactersAPI.deleteOneRegister(id)
+    .then(()=> {
+      $("#delete-one").css("background-color", "green");
+    })
+    .catch((err) => {
+      console.log(err);
+      $("#delete-one").css("background-color", "red");
+    });
   };
   
   document.getElementById('edit-character-form').onsubmit = function(){
@@ -46,7 +55,14 @@ $(document).ready( () => {
     let obj = {
       id, name, occupation, weapon, cartoon
     };
-    charactersAPI.updateOneRegister(obj);
+    charactersAPI.updateOneRegister(obj)
+    .then(()=> {
+      $("#update-data").css("background-color", "green");
+    })
+    .catch((err) => {
+      console.log(err);
+      $("#update-data").css("background-color", "red");
+    });
   };
   
   document.getElementById('new-character-form').onsubmit = function(){
@@ -57,6 +73,13 @@ $(document).ready( () => {
     let obj = {
       name, occupation, weapon, cartoon
     };
-    charactersAPI.createOneRegister(obj); 
+    charactersAPI.createOneRegister(obj)
+    .then(()=> {
+      $("#create-data").css("background-color", "green");
+    })
+    .catch((err) => {
+      console.log(err);
+      $("#create-data").css("background-color", "red");
+    });
   };
 });

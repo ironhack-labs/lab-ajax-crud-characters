@@ -1,24 +1,10 @@
 {
   "characters": [
     {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
-    },
-    {
       "id": 3,
       "name": "Sponge Bob",
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
-      "cartoon": true
-    },
-    {
-      "id": 4,
-      "name": "Superman",
-      "occupation": "Superhero",
-      "weapon": "Superpower",
       "cartoon": true
     },
     {
@@ -34,6 +20,27 @@
       "occupation": "TA",
       "weapon": "Brain",
       "cartoon": false
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 9
     }
   ]
 }
