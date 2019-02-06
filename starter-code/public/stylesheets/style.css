@@ -10,6 +10,14 @@ body {
   background: url("../images/minions.jpg")
 }
 
+.button-success {
+  background-color: green;
+}
+
+.button-failed {
+  background-color: red;
+}
+
 h1, h2 {
   color: #d8b362;
 }
