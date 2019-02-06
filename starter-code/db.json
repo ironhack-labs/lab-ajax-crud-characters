@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Tom Cruiz Credo",
+      "occupation": "Developer",
+      "weapon": "Lightsaber",
+      "cartoon": true,
+      "id": 4
+    }
+  ]
+}
