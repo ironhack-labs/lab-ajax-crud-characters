@@ -7,11 +7,7 @@ class APIHandler {
     axios
       .get(this.BASE_URL + "characters")
       .then(persons => {
-        /*  console.log(persons); */
-        persons.data.forEach(person => {
-          console.log(person.name);
-          /*   document.getElementsByClassName("name").innerHTML = person.name */
-        });
+        console.log(persons.data);
       })
       .catch(error => {
         console.log(error);
@@ -27,10 +23,6 @@ class APIHandler {
         })[0];
 
         console.log(output);
-        /*  person.data.forEach(person => {
-         console.log(person.name)
-       document.getElementsByClassName("name").innerHTML = person.name
-       }) */
       })
       .catch(error => {
         console.log(error);
@@ -38,22 +30,22 @@ class APIHandler {
   }
 
   createOneRegister(newCharacter) {
-    axios.post(this.BASE_URL + "characters", newCharacter).then(argument => {
-      console.log(newCharacter);
+    axios.post(this.BASE_URL + "characters", newCharacter).then(character => {
+      console.log(character.data);
     });
   }
 
   updateOneRegister(controlID, editCharacter) {
-    /* if (persons.data.includes(controlID.id)) */
-      axios.put(this.BASE_URL + "characters/" + controlID.id, editCharacter).then(argument => {
-        console.log(+controlID.id, editCharacter);
-       /*  console.log("ha entrado") */
+    axios
+      .put(this.BASE_URL + "characters/" + controlID, editCharacter)
+      .then(character => {
+        console.log(character.data);
       });
   }
 
   deleteOneRegister(id) {
-    axios.delete(this.BASE_URL + "characters/" + id).then(persons => {
-      console.log(persons);
+    axios.delete(this.BASE_URL + "characters/" + id).then(person => {
+      console.log(person.data);
     });
   }
 }
