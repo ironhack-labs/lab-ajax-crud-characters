@@ -13,40 +13,6 @@
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false
-    },
-    {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
-    },
-    {
-      "name": "Logan",
-      "occupation": "X-Men",
-      "weapon": "Adamantium",
-      "id": 4
-    },
-    {
-      "name": "Diego",
-      "occupation": "Developer",
-      "weapon": "Brain",
-      "cartoon": "on",
-      "id": 5
-    },
-    {
-      "name": "Logan2",
-      "occupation": "Developer",
-      "weapon": "Brain",
-      "cartoon": "on",
-      "id": 6
-    },
-    {
-      "name": "Diego5",
-      "occupation": "X-Men",
-      "weapon": "Brain",
-      "cartoon": "on",
-      "id": 7
     }
   ]
 }
