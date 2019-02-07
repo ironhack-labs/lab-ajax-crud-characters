@@ -4,71 +4,64 @@ class APIHandler {
   }
 
   getFullList () {
-    axios.get("/characters")
+   return axios.get(this.BASE_URL + "/characters")
   .then(data => {
-    console.log(data)
+    return data.data
   }) 
   .catch(err => {
     console.log(err)
   })
-
   }
 
-  getOneRegister () {
-    axios.get("/characters/:id")
+  getOneRegister (culo) {
+    return axios.get(this.BASE_URL + "/characters/" + culo)
     .then(data => {
-      console.log(data)
+      return data.data
     })
     .catch(err => {
       console.log(err)
     })
-
   }
 
-  createOneRegister () {
-  axios.post("/characters", {
-    name: "string",
-    occupation: "string",
-    cartoon: "string",
-    weapon: "string"
+  createOneRegister (new1, new2, new3, new4) {
+    return axios.post(this.BASE_URL  + "/characters", {
+    name: new1,
+    occupation: new2,
+    cartoon: new3,
+    weapon: new4
   })
   .then(data => {
-    console.log(data)
+    return data
   })
   .catch(err => {
     console.log(err)
   })
-
-
   }
 
-  updateOneRegister () {
-    axios.put("/characters/:id", {
-    name: "string",
-    occupation: "string",
-    cartoon: "string",
-    weapon: "string"
-      
+  updateOneRegister (nepe,new1,new2,new3,new4) {
+    return axios.put(this.BASE_URL + "/characters/" + nepe, {
+    name: new1,
+    occupation: new2,
+    cartoon: new3,
+    weapon: new4
     })
     .then(data => {
       console.log(data)
+      return data.data
     })
     .catch(err => {
       console.log(err)
     })
-
-
   }
 
-  deleteOneRegister () {
-    axios.delete("/characters/:id")
+  deleteOneRegister (teta) {
+    return axios.delete(this.BASE_URL + "/characters/" + teta)
     .then(data => {
-      console.log(data)
+      return data.data
     })
     .catch(err => {
       console.log(err)
     })
-
-
   }
 }
+

@@ -1,0 +1,109 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Han Solo1",
+      "occupation": "Smuggler1",
+      "weapon": "Blaster Pistol1",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "hulk",
+      "occupation": "si",
+      "cartoon": true,
+      "weapon": "si",
+      "id": 5
+    },
+    {
+      "name": "hulk2",
+      "occupation": "si",
+      "cartoon": true,
+      "weapon": "si",
+      "id": 6
+    },
+    {
+      "name": "hulk3",
+      "occupation": "si",
+      "cartoon": true,
+      "weapon": "si",
+      "id": 7
+    },
+    {
+      "name": "hulk4",
+      "occupation": "si",
+      "cartoon": true,
+      "weapon": "si",
+      "id": 8
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": true,
+      "weapon": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": true,
+      "weapon": "",
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": true,
+      "weapon": "",
+      "id": 11
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": true,
+      "weapon": "",
+      "id": 12
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": false,
+      "weapon": "",
+      "id": 13
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": false,
+      "weapon": "",
+      "id": 14
+    },
+    {
+      "name": "hulk7",
+      "occupation": "si",
+      "cartoon": true,
+      "weapon": "si",
+      "id": 15
+    }
+  ]
+}
