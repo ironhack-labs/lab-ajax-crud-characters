@@ -1,0 +1,27 @@
+{
+  "characters": [
+    {
+      "id": 34
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": false,
+      "weapon": "",
+      "id": 35
+    },
+    {
+      "id": 36
+    },
+    {
+      "id": 37,
+      "name": "asdf",
+      "occupation": "asdf",
+      "cartoon": false,
+      "weapon": "asdf"
+    },
+    {
+      "id": 38
+    }
+  ]
+}
