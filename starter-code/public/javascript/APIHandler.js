@@ -3,23 +3,25 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
+  //PARA PETICIONES
+
   getFullList () {
-
+    return axios.get(this.BASE_URL)
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return axios.get(this.BASE_URL  + id)
   }
 
-  createOneRegister () {
-
+  createOneRegister (data){
+    return axios.post(this.BASE_URL , data)
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, data) {
+    return axios.put(this.BASE_URL  + id, data)
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return axios.delete(this.BASE_URL  + id)
   }
 }
