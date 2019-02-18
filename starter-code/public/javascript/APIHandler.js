@@ -19,9 +19,9 @@ class APIHandler {
     //}
   }
 
-  getOneRegister(e) {
+  getOneRegister(event) {
    
-    axios.get(`${this.BASE_URL}/characters/`+ e)
+    axios.get(`${this.BASE_URL}/characters/`+ event)
       .then(responseFromAPI => {
           console.log('Response from API is: ', responseFromAPI.data);           
     })
@@ -31,33 +31,30 @@ class APIHandler {
 
   }
 
-  createOneRegister () {
-    axios.post(`${this.BASE_URL}/characters`, characterInfo)
+  createOneRegister (newCharacter) {
+    axios.post(`${this.BASE_URL}/characters`, newCharacter)
       .then(response => {
-          const {id, name, occupation, weapon, cartoon } = response.data;
-          const newCharacterHtml = `
-            <li>
-              <p> Charecter Id: ${id} </p>
-              <p> Character Name: ${name} </p>
-              <p> Character Occupation: ${occupation} </p>
-              <p> Character Weapon: ${weapon} </p>
-              <p> Is a Cartoon?: ${cartoon} </p>
-            </li>
-            `;
-            document.getElementById("edit-character-form").innerHTML += newCharacterHtml;
-            console.log('post successfull and the response is: ',response );
+            console.log('Create successfull and the response is: ',response );
+            document.getElementById("new-character-form").reset();
        })
        .catch(error => {
-        console.log('Oh No! Error is: ', error);  
+        console.log('Oooo! Error is: ', error);  
     })
 }
 
-  updateOneRegister () {
-
+  updateOneRegister (charId, editCharacter) {
+    axios.patch(`${this.BASE_URL}/characters/` + charId , editCharacter)
+    .then(response => {
+      console.log('Update successfull and the response is: ',response );
+      document.getElementById("edit-character-form").reset();
+    })
+    .catch(error => {
+      console.log('Oooo! Error is: ', error);  
+    })
   }
 
   deleteOneRegister (e) {
-    axios.get(`${this.BASE_URL}/characters/`+ e)
+    axios.delete(`${this.BASE_URL}/characters/`+ e)
       .then(responseFromAPI => {
           console.log('Response from API is: ', responseFromAPI.data);           
     })
