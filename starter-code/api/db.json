@@ -20,6 +20,20 @@
       "weapon": "Hooker Heels",
       "cartoon": "on",
       "id": 3
+    },
+    {
+      "name": "Mike",
+      "occupation": "Boxer",
+      "weapon": "Fists",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "Niko",
+      "occupation": "Javascript",
+      "weapon": "Backhand",
+      "cartoon": "on",
+      "id": 5
     }
   ]
 }

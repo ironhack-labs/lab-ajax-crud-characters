@@ -18,15 +18,22 @@ class APIHandler {
           // $('.weapon').text("Character Weapon: " + obj.weapon);
           // $('.id').text("ID: " + obj.id);
           // debugger;
+
+          let is = "";
+          if(obj.cartoon == 'on'){
+            is = true;
+          } else {
+            is = false;
+          }
             let html = `
             <div class="character-info">
             <div class="name">Character Name: ${obj.name}</div>
             <div class="occupation">Character Occupation: ${obj.occupation}</div>
-            <div class="cartoon">Cartoon?: ${obj.cartoon}</div>
+            <div class="cartoon">Cartoon?: ${is}</div>
             <div class="weapon">Character Weapon: ${obj.weapon}</div>
             <div class="id">ID:${obj.id}</div>
-            </div>
-          `
+            </div>`
+            
           $('.characters-container').append(html)
         });
       })
@@ -39,11 +46,17 @@ class APIHandler {
     axios.get(`${this.BASE_URL}/characters/${id}`)
       .then(responseFromAPI => {
         console.log('Response from API is: ', responseFromAPI.data);
+        let is = "";
+          if(responseFromAPI.data.cartoon == 'on'){
+            is = true;
+          } else {
+            is = false;
+          }
         let html = `
             <div class="character-info">
             <div class="name">Character Name: ${responseFromAPI.data.name}</div>
             <div class="occupation">Character Occupation: ${responseFromAPI.data.occupation}</div>
-            <div class="cartoon">Cartoon?: ${responseFromAPI.data.cartoon}</div>
+            <div class="cartoon">Cartoon?: ${is}</div>
             <div class="weapon">Character Weapon: ${responseFromAPI.data.weapon}</div>
             <div class="id">ID:${responseFromAPI.data.id}</div>
             </div>
