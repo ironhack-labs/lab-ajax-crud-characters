@@ -56,7 +56,7 @@ class APIHandler {
   deleteOneRegister (e) {
     axios.delete(`${this.BASE_URL}/characters/`+ e)
       .then(responseFromAPI => {
-          console.log('Response from API is: ', responseFromAPI.data);           
+          console.log('Response from API is: ', responseFromAPI.data);
     })
     .catch(err => {
       console.log('Error is: ', err);
