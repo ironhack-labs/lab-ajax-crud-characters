@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Superman",
+      "occupation": "Saving people",
+      "cartoon": true,
+      "weapon": "Laser eyes",
+      "id": 1
+    },
+    {
+      "name": "Doraemon",
+      "occupation": "Cosmic cat",
+      "cartoon": true,
+      "weapon": "Magic pocket",
+      "id": 9
+    },
+    {
+      "name": "Iron Man",
+      "occupation": "Being awesome",
+      "cartoon": false,
+      "weapon": "Special Suit",
+      "id": 10
+    },
+    {
+      "name": "SuperGabi",
+      "occupation": "Saving ironhackers from hell",
+      "cartoon": false,
+      "weapon": "Wit",
+      "id": 11
+    }
+  ]
+}
