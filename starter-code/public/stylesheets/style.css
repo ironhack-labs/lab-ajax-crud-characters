@@ -42,12 +42,21 @@ button {
 }
 
 .characters-container {
-  width: 80%;
-  margin: 0 auto;
+  width: 350px;
+  margin: 5px; 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
+  border: solid white 2px;
+  border-radius: 20px;
+}
+
+.characters-container-main { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap; 
 }
 
 .active {
@@ -63,14 +72,16 @@ button {
   margin: 20px 0 0;
 }
 
-.character-info {
+.character-info, .character-data {
   position: relative;
-  width: 40%;
-  margin: 10px;
-  padding: 10px;
+  width: 150px;
+  margin: 5px;
+  padding: 5px;
   text-align: left;
-  border: solid white 2px;
-  border-radius: 20px;
+}
+
+.character-data {
+  color: #d8b362;
 }
 
 .character-info div span {
@@ -104,4 +115,12 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+.green-button {
+  background-color: green;
+}
+
+.red-button {
+  background-color: red;
 }
