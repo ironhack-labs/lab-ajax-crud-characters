@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": true,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "andrej1",
+      "occupation": "",
+      "weapon": "smile",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "mama",
+      "occupation": "mama",
+      "weapon": "mama1",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "rarara",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": true,
+      "id": 7
+    }
+  ]
+}
