@@ -1,0 +1,41 @@
+{
+    "characters": [
+        {
+            "id": 1,
+            "name": "Han Solo",
+            "occupation": "Smuggler",
+            "weapon": "Blaster Pistol",
+            "cartoon": true
+        }, {
+            "id": 2,
+            "name": "Luke Skywalker",
+            "occupation": "Jedi Knight",
+            "weapon": "Lightsaber",
+            "cartoon": false
+        }, {
+            "id": 3,
+            "name": "Sponge Bob",
+            "occupation": "Lives under the sea",
+            "weapon": "Crabby Patty",
+            "cartoon": true
+        }, {
+            "id": 4,
+            "name": "Chio",
+            "occupation": "The Leader",
+            "weapon": "Sword of Omens",
+            "cartoon": false
+        }, {
+            "id": 5,
+            "name": "Chuy",
+            "occupation": "The Boy",
+            "weapon": "Utility Belt",
+            "cartoon": true
+        }, {
+          "id": 6,
+          "name": "Los TAS",
+          "occupation": "Duo Fantastic",
+          "weapon": "kame kame ha",
+          "cartoon": true
+      }
+    ]
+}
