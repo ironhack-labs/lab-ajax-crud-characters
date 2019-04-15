@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Duc",
+      "occupation": "Duc",
+      "weapon": "KOKOKO",
+      "cartoon": true
+    },
+    {
+      "name": "Duc",
+      "occupation": "Duc",
+      "weapon": "Gun",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "Duc",
+      "occupation": "KKOOKO",
+      "weapon": "Flowers",
+      "cartoon": true,
+      "id": 4
+    }
+  ]
+}
