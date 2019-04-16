@@ -54,9 +54,9 @@ export default class APIHandler {
       });
   }
 
-  deleteOneRegister() {
+  deleteOneRegister(deleteID) {
     axios
-      .delete(this.BASE_URL + "/characters/" + id)
+      .delete(this.BASE_URL + "/characters/" + `/${deleteID}`)
       .then(response => {
         console.log(response.request.response);
       })

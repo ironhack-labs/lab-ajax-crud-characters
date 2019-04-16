@@ -25,12 +25,9 @@ $(document).ready(() => {
   //---------------------DELETE ONE
   document.getElementById("delete-one").onclick = function() {
     event.preventDefault();
-    charactersAPI.deleteOneRegister();
-    if (response === "deleted") {
-      document.getElementById("delete-one").style.backgroundColor = "green";
-    } else {
-      document.getElementById("delete-one").style.backgroundColor = "red";
-    }
+
+    const deleteID = document.getElementById("deleteID").value;
+    charactersAPI.deleteOneRegister(deleteID);
   };
 
   //-------------------------EDIT
