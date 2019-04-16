@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./stylesheets/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script type="module" src="./javascript/APIHandler.js"></script>
+  <script type="module" src="./javascript/APIHandler.js"></script>//UNUTMA BURDA PUBLIC YAZMIYORSUN!
   <script type="module" src="./javascript/index.js"></script>
   <title>IH Characters</title>
 </head>
@@ -69,23 +69,23 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input id="modifyId" type="text" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input class="newNames" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input class="newOccupations" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input class="newWeapons" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input class="newCartoons" name="cartoon" type="checkbox">
         </div>
         <button id="send-data">Update</button>
       </form>

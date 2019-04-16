@@ -1,5 +1,5 @@
-import APIHandler from "./APIHandler.js";
-const charactersAPI = new APIHandler("http://localhost:8100");
+import APIHandler from "./APIHandler.js"; // module yazınca aslında html'e gerek kalmıyor bunu kullanmana
+const charactersAPI = new APIHandler("http://localhost:8000");
 // charactersAPI.createCharacter("Yaya", "developer", "keyboard", true, 10);
 
 // const names = document.getElementsByClassName("name");
@@ -25,6 +25,7 @@ $(document).ready(() => {
   //---------------------DELETE ONE
   document.getElementById("delete-one").onclick = function() {
     event.preventDefault();
+    // document.querySelector("#send-new").style.backgroundColor = "green"
 
     const deleteID = document.getElementById("deleteID").value;
     charactersAPI.deleteOneRegister(deleteID);
@@ -34,27 +35,21 @@ $(document).ready(() => {
   document.getElementById("edit-character-form").onsubmit = function(event) {
     event.preventDefault(); // <=to stop refreshing the page!
 
-    const allCharacters = {
-      id: id[0].value,
-      name: names[0].value,
-      occupation: occupations[0].value,
-      weapon: weapons[0].value
-    };
-    axios
-      .post("this.BASE_URL", allCharacters)
-      .then(response => {
-        const { name, id } = response.data;
+    const modifyId = document.getElementById("modifyId").value;
+    const newNames = document.getElementsByClassName("newNames");
+    const newOccupations = document.getElementsByClassName("newOccupations");
+    const newWeapons = document.getElementsByClassName("newWeapons");
+    const newCartoons = document.getElementsByClassName("newCartoons");
 
-        document.getElementById(
-          "characters-list"
-        ).innerHTML += newCharacterHtml;
-        // Clear the form after submitting:
-        document.getElementById("new-character-form").reset();
-      })
-      .catch(error => {
-        console.log("Error is: ", error);
-      });
+    const updateCharacters = {
+      name: newNames[0].value,
+      occupation: newOccupations[0].value,
+      weapon: newWeapons[0].value,
+      cartoon: newCartoons[0].value
+    };
+    charactersAPI.updateOneRegister(modifyId, updateCharacters);
   };
+
   //-----------------------NEW CHARACTER
   document.getElementById("new-character-form").onsubmit = function() {
     event.preventDefault();

@@ -1,4 +1,3 @@
-// export
 export default class APIHandler {
   constructor(baseUrl) {
     this.BASE_URL = baseUrl;
@@ -38,20 +37,14 @@ export default class APIHandler {
       });
   }
 
-  updateOneRegister() {
+  updateOneRegister(modifyId, updateCharacters) {
     axios
-      .put(this.BASE_URL + "/characters/" + id, {
-        id: id,
-        name: name,
-        occupation: occupation,
-        cartoon: cartoon,
-        weapon: weapon
-      })
+      .post(this.BASE_URL + "/characters/" + `/${modifyId}`)
       .then(response => {
-        console.log(response.request.response);
+        console.log(response);
       })
       .catch(error => {
-        console.log(error);
+        console.log("Error is: ", error);
       });
   }
 
