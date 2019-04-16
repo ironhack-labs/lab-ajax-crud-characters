@@ -2,10 +2,10 @@ import APIHandler from "./APIHandler.js";
 const charactersAPI = new APIHandler("http://localhost:8100");
 // charactersAPI.createCharacter("Yaya", "developer", "keyboard", true, 10);
 
-const names = document.getElementsByClassName("name");
-const occupations = document.getElementsByClassName("occupation");
-const weapons = document.getElementsByClassName("weapon");
-const cartoons = document.getElementsByClassName("cartoons");
+// const names = document.getElementsByClassName("name");
+// const occupations = document.getElementsByClassName("occupation");
+// const weapons = document.getElementsByClassName("weapon");
+// const cartoons = document.getElementsByClassName("cartoons");
 
 //----------------FETCH ALL
 $(document).ready(() => {
@@ -58,7 +58,12 @@ $(document).ready(() => {
   //-----------------------NEW CHARACTER
   document.getElementById("new-character-form").onsubmit = function() {
     event.preventDefault();
+    const names = document.getElementsByClassName("names");
+    const occupations = document.getElementsByClassName("occupations");
+    const weapons = document.getElementsByClassName("weapons");
+    const cartoons = document.getElementsByClassName("cartoons");
 
+    console.log(names, occupations, weapons, cartoons);
     const characterInfo = {
       name: names[0].value,
       occupation: occupations[0].value,
@@ -66,8 +71,7 @@ $(document).ready(() => {
       cartoon: cartoons[0].value
     };
 
-    console.log(names, occupations, weapons, cartoons);
-    // charactersAPI.createCharacter(characterInfo); // bu apihandlerda ki bölgeden geliyor direk oraya. createcharacterdeki tüm bilgiyi buraya yazabilirdik yani.
+    charactersAPI.createCharacter(characterInfo); // bu apihandlerda ki bölgeden geliyor direk oraya. createcharacterdeki tüm bilgiyi buraya yazabilirdik yani.
   };
 
   //the way on the courses :

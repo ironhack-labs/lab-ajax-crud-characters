@@ -14,12 +14,13 @@ export default class APIHandler {
         console.log(error);
       });
   }
+
   createCharacter(characterInfo) {
     axios
       .post(this.BASE_URL + "/characters", characterInfo)
 
       .then(response => {
-        console.log("post successful and the response is", response.data);
+        console.log("post successful and the response is", response);
       })
       .catch(error => {
         console.log("oh no there is err:", error);
