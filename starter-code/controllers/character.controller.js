@@ -19,9 +19,31 @@ module.exports = {
           errors.push(error[prop])
         }
       }
-      return errors;
+      return {
+        valid: false,
+        errors,
+      };
     }
-    return;
+    return {
+      valid: true,
+    };
+  },
+  manageResponse(res, promise){
+    return promise
+      .then(characters => {
+        return characters ? 
+          res.json(characters) : 
+          res.status(404).json({
+            status: 404,
+            message: 'Not found'
+          });
+      })
+      .catch(err => {
+        res.status(500).json({
+          status: 500,
+          message: err,
+        });
+      });
   },
   getAllCharacters(){
     return Character.find();
@@ -30,9 +52,9 @@ module.exports = {
     return Character.findById(id);
   },
   createCharacter(post){
-    const errors = this.isValidPostForm(post);
-    if(errors){
-      return Promise.reject(errors);
+    const areValid = this.isValidPostForm(post);
+    if(!areValid.valid){
+      return Promise.reject(areValid.errors);
     }
 
     let {name, occupation, cartoon, weapon} = post;
@@ -42,16 +64,17 @@ module.exports = {
     });
   },
   updateCharacter(id, post){
-    const errors = this.isValidPostForm(post);
-    if(errors){
-      return Promise.reject(errors);
+    const areValid = this.isValidPostForm(post);
+    if(!areValid.valid){
+      consol.log(areValid)
+      return Promise.reject(areValid.errors);
     }
 
     let {name, occupation, cartoon, weapon} = post;
 
     return Character.findByIdAndUpdate(id, {
       name, occupation, cartoon, weapon
-    });
+    }, {new: true});
   },
   deleteCharacter(id){
     return Character.findByIdAndDelete(id);
