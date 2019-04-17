@@ -7,10 +7,10 @@ module.exports = {
     
     const error = {};
     
-    if(typeof name !== 'string') error.name = 'The name is not valid or is empty';
-    if(typeof occupation !== 'string') error.occupation = 'The occupation is not valid or is empty';
-    if(typeof cartoon !== 'boolean') error.cartoon = 'The cartoon is not valid or is empty';
-    if(typeof weapon !== 'string') error.weapon = 'The weapon is not valid or is empty';
+    if(typeof name !== 'string' || name === "") error.name = 'The name is not valid or is empty';
+    if(typeof occupation !== 'string' || occupation === "") error.occupation = 'The occupation is not valid or is empty';
+    if(typeof cartoon !== 'boolean') error.cartoon = 'The cartoon is not valid';
+    if(typeof weapon !== 'string' || weapon === "") error.weapon = 'The weapon is not valid or is empty';
     
     if(error.name || error.occupation || error.cartoon || error.weapon){
       let errors = [];
@@ -30,7 +30,12 @@ module.exports = {
     return Character.findById(id);
   },
   createCharacter(post){
-    
+    const errors = this.isValidPostForm(post);
+    if(errors){
+      return Promise.reject(errors);
+    }
+
+    let {name, occupation, cartoon, weapon} = post;
     
     return Character.create({
       name, occupation, cartoon, weapon
@@ -47,5 +52,8 @@ module.exports = {
     return Character.findByIdAndUpdate(id, {
       name, occupation, cartoon, weapon
     });
+  },
+  deleteCharacter(id){
+    return Character.findByIdAndDelete(id);
   }
 };
