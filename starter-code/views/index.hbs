@@ -1,19 +1,32 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div>
+  <div id="characters-list"></div>
 
-<button id="fetch-all">Fetch All</button>
-<button id="fetch-one">Fetch One</button>
-<button id="delete-one">Delete One</button>
-<form id="edit-character-form">
-  <button>Edit</button>
-</form>
-
-<form id="new-character-form">
-  <button>New</button>
-</form>
-
-<div id="characters-list">
+  <button id="fetch-all">Fetch All</button>
+  <form id="search-by-id">
+    <label for="search-input">Search by ID:</label>
+    <input type="text" name="search-input" id="search-input">
+    <button id="fetch-one">Fetch One</button>
+  </form>
+  <form id="delete-by-id">
+    <label for="delete-input">Delete by ID:</label>
+    <input type="text" name="delete-input" id="delete-input">
+    <button id="delete-one">Delete One</button>
+  </form>
 </div>
+
+<div>
+  <form id="edit-character-form">
+    <button>Edit</button>
+  </form>
+</div>
+
+<div>
+  <form id="new-character-form">
+    <button>New</button>
+  </form>
+</div>
+
 
 <template id="character-card-template">
   <div id="character-card">
