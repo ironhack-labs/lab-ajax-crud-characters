@@ -1,2 +1,41 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<button id="fetch-all">Fetch All</button>
+<button id="fetch-one">Fetch One</button>
+<button id="delete-one">Delete One</button>
+<form id="edit-character-form">
+  <button>Edit</button>
+</form>
+
+<form id="new-character-form">
+  <button>New</button>
+</form>
+
+<div id="characters-list">
+</div>
+
+<template id="character-card-template">
+  <div id="character-card">
+    <p>
+      <span class="character-card-label">Id: </span>
+      <span class="character-id"></span>
+    </p>
+    <p>
+      <span class="character-card-label">Name: </span>
+      <span class="character-name"></span>
+    </p>
+    <p>
+      <span class="character-card-label">Occupation: </span>
+      <span class="character-occupation"></span>
+    </p>
+    <p>
+      <span class="character-card-label">Is a Cartoon?: </span>
+      <span class="character-is-cartoon"></span>
+    </p>
+    <p>
+      <span class="character-card-label">Weapon: </span>
+      <span class="character-weapon"></span>
+    </p>
+  </div>
+</template>
