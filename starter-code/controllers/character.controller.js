@@ -46,10 +46,10 @@ module.exports = {
       });
   },
   getAllCharacters(){
-    return Character.find();
+    return Character.find().select({updatedAt:0, createdAt:0, __v:0});
   },
   getCharacterById(id){
-    return Character.findById(id);
+    return Character.findById(id).select({updatedAt:0, createdAt:0, __v:0});
   },
   createCharacter(post){
     const areValid = this.isValidPostForm(post);
