@@ -43,7 +43,14 @@ router.put('/:id', (req, res, next) => {
     });
 });
 router.delete('/:id', (req, res, next) => {
-  
+  characterController.deleteCharacter(req.params.id)
+    .then(response => res.json(response))
+    .catch(err => {
+      res.status(500).json({
+        status: 500,
+        error: err,
+      });
+    });
 });
 
 module.exports = router;
