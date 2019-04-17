@@ -4,10 +4,15 @@ class APIHandler {
   }
 
   getFullList () {
-
+    axios.get(`${this.BASE_URL}/characters`).then(characters=>{
+      res.json(characters)
+    })
   }
 
-  getOneRegister () {
+  getOneRegister (id) {
+    axios.get(`${this.BASE_URL}/characters/${id}`).then(characters=>{
+      res.json(characters)
+    })
 
   }
 
