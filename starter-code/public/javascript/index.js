@@ -11,33 +11,50 @@ $(document).ready( () => {
           console.log(element)
           document.querySelector(".characters-container").innerHTML += 
           `<div class="character-info">
-          <div class="name">${element.name}</div>
-          <div class="occupation">${element.occupation}</div>
-          <div class="cartoon">${element.cartoon}</div>
-          <div class="weapon">${element.weapon}</div>
+          <div class="id">Id: ${element.id}</div>
+          <div class="name">Name: ${element.name}</div>
+          <div class="occupation">Occupation: ${element.occupation}</div>
+          <div class="cartoon">Cartoon: ${element.cartoon}</div>
+          <div class="weapon">Weapon: ${element.weapon}</div>
         </div>`
         })
       })
       .catch(err =>{
         return err;
       })
-
-      
-        
-      
-      
   }
   
   document.getElementById('fetch-one').onclick = function(){
-    var uno=charactersAPI.getFullList()
+    document.querySelector(".characters-container").innerHTML = ""
+    
+    var uno = charactersAPI.getOneRegister()
+    uno
+      .then(uno =>{
+        console.log(uno)
+          document.querySelector(".characters-container").innerHTML = 
+          `<div class="character-info">
+          <div class="id">Id: ${uno.id}</div>
+          <div class="name">Name: ${uno.name}</div>
+          <div class="occupation">Occupation: ${uno.occupation}</div>
+          <div class="cartoon">Cartoon: ${uno.cartoon}</div>
+          <div class="weapon">Weapon: ${uno.weapon}</div>
+        </div>`
+        })
+      .catch(err =>{
+        return err;
+      })
   }
   
-  document.getElementById('delete-one').onclick = function(){
+  document.getElementById('delete-one').onclick = function(){ 
+    var uno = charactersAPI.getOneRegister()
+    uno
+    .findByIdAndRemove(uno)
         
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
-            
+    event.preventDefault();
+     
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
