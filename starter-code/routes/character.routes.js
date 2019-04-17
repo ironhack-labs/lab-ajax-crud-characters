@@ -33,7 +33,14 @@ router.post('/', (req, res, next) => {
     });
 });
 router.put('/:id', (req, res, next) => {
-  
+  characterController.updateCharacter(req.params.id, req.body)
+    .then(response => res.json(response))
+    .catch(err => {
+      res.status(500).json({
+        status: 500,
+        error: err,
+      });
+    });
 });
 router.delete('/:id', (req, res, next) => {
   

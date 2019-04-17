@@ -1,15 +1,10 @@
 const Character = require('../models/Character');
 
 module.exports = {
-  getAllCharacters(){
-    return Character.find();
-  },
-  getCharacterById(id){
-    return Character.findById(id);
-  },
-  createCharacter(post){
+  isValidPostForm(post){
     let {name, occupation, cartoon, weapon} = post;
     cartoon = Boolean(cartoon);
+    
     const error = {};
     
     if(typeof name !== 'string') error.name = 'The name is not valid or is empty';
@@ -24,11 +19,32 @@ module.exports = {
           errors.push(error[prop])
         }
       }
+      return errors;
+    }
+    return;
+  },
+  getAllCharacters(){
+    return Character.find();
+  },
+  getCharacterById(id){
+    return Character.findById(id);
+  },
+  createCharacter(post){
+    
+    
+    return Character.create({
+      name, occupation, cartoon, weapon
+    });
+  },
+  updateCharacter(id, post){
+    const errors = this.isValidPostForm(post);
+    if(errors){
       return Promise.reject(errors);
     }
 
+    let {name, occupation, cartoon, weapon} = post;
 
-    return Character.create({
+    return Character.findByIdAndUpdate(id, {
       name, occupation, cartoon, weapon
     });
   }
