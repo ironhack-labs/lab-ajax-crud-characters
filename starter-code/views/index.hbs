@@ -17,12 +17,21 @@
 
 <div>
   <form id="edit-character-form">
+    <input type="hidden" name="_id">
+    <input type="text" name="name">
+    <input type="text" name="occupation">
+    <input type="text" name="weapon">
+    <input type="checkbox" name="cartoon">
     <button>Edit</button>
   </form>
 </div>
 
 <div>
   <form id="new-character-form">
+    <input type="text" name="name">
+    <input type="text" name="occupation">
+    <input type="text" name="weapon">
+    <input type="checkbox" name="cartoon">
     <button>New</button>
   </form>
 </div>
@@ -50,5 +59,6 @@
       <span class="character-card-label">Weapon: </span>
       <span class="character-weapon"></span>
     </p>
+    <button class="character-edit-btn">Edit</button>
   </div>
 </template>
