@@ -4,22 +4,52 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(this.BASE_URL + '/characters')
+    .then(allCharacters => {
+          return allCharacters.data;
+      })
+    .catch(error => {
+        console.log('Oh No! Error is: ', error);  
+    })
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) { 
+    return axios.get(this.BASE_URL + '/characters/' + id)
+    .then(character => { 
+        return character.data;
+    })
+    .catch(error => {
+      console.log('Oh No! Error is: ', error);  
+    })
   }
 
-  createOneRegister () {
-
+  createOneRegister (model) {
+    return axios.post(this.BASE_URL + '/characters', model)
+    .then(character => {
+        return character.data;
+    })
+    .catch(error => {
+      console.log('Oh No! Error is: ', error);  
+    })
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, model) {
+    return axios.put(this.BASE_URL + '/characters/' + id, model)
+    .then(character => {
+      return character.data;
+    })
+    .catch(() => {
+      return "Character not found"  
+    })
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return axios.delete(this.BASE_URL + '/characters/' + id)
+    .then(() => {
+      return "Character has been successfully deleted";
+    })
+    .catch(() => {
+      return "Character not found"  
+    })
   }
 }
