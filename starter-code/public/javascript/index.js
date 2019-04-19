@@ -1,6 +1,17 @@
 const baseULR = 'http://localhost:3144/characters';
 const charactersAPI = new APIHandler(baseULR);
 
+const htmlGenerator = (id, name, occupation, weapon, cartoon) => {
+  return `
+            <div class="id">ID: ${id}</div>
+            <div class="name">Character Name: ${name}</div>
+            <div class="occupation">Character Occupation: ${occupation}</div>
+            <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
+            <div class="weapon">Character Weapon: ${weapon}</div>
+            <br> 
+          `;
+};
+
 $(document).ready(() => {
   document.getElementById('fetch-all').onclick = function() {
     charactersAPI
@@ -9,14 +20,7 @@ $(document).ready(() => {
         let html = '';
         characters.forEach(character => {
           const { id, name, occupation, weapon, cartoon } = character;
-          html += `
-                <div class="id">ID: ${id}</div>
-            <div class="name">Character Name: ${name}</div>
-            <div class="occupation">Character Occupation: ${occupation}</div>
-            <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
-            <div class="weapon">Character Weapon: ${weapon}</div>
-            <br> 
-          `;
+          html += htmlGenerator(id, name, occupation, weapon, cartoon);
         });
         document.querySelector('.character-info').innerHTML = html;
       })
@@ -27,15 +31,13 @@ $(document).ready(() => {
     const id = document.getElementsByName('character-id')[0].value;
     charactersAPI.getOneRegister(id).then(character => {
       const { id, name, occupation, weapon, cartoon } = character;
-      const html = `
-            <div class="id">ID: ${id}</div>
-            <div class="name">Character Name: ${name}</div>
-            <div class="occupation">Character Occupation: ${occupation}</div>
-            <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
-            <div class="weapon">Character Weapon: ${weapon}</div>
-            <br> 
-          `;
-      document.querySelector('.character-info').innerHTML = html;
+      document.querySelector('.character-info').innerHTML = htmlGenerator(
+        id,
+        name,
+        occupation,
+        weapon,
+        cartoon
+      );
       document.getElementsByName('character-id')[0].value = '';
     });
   };
@@ -61,15 +63,13 @@ $(document).ready(() => {
       .then(character => {
         // display updated character
         const { id, name, occupation, weapon, cartoon } = character;
-        const html = `
-              <div class="id">ID: ${id}</div>
-            <div class="name">Character Name: ${name}</div>
-            <div class="occupation">Character Occupation: ${occupation}</div>
-            <div class="weapon">Character Weapon: ${weapon}</div>
-            <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
-            <br>
-          `;
-        document.querySelector('.character-info').innerHTML = html;
+        document.querySelector('.character-info').innerHTML = htmlGenerator(
+          id,
+          name,
+          occupation,
+          weapon,
+          cartoon
+        );
         document.querySelector('#edit-character-form').reset();
       })
       .catch(err => console.error('ERROR: ', err));
@@ -87,15 +87,13 @@ $(document).ready(() => {
       .then(character => {
         // display new character
         const { id, name, occupation, weapon, cartoon } = character;
-        const html = `
-              <div class="id">ID: ${id}</div>
-            <div class="name">Character Name: ${name}</div>
-            <div class="occupation">Character Occupation: ${occupation}</div>
-            <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
-            <div class="weapon">Character Weapon: ${weapon}</div>
-            <br>
-          `;
-        document.querySelector('.character-info').innerHTML = html;
+        document.querySelector('.character-info').innerHTML = htmlGenerator(
+          id,
+          name,
+          occupation,
+          weapon,
+          cartoon
+        );
         document.querySelector('#new-character-form').reset();
       })
       .catch(err => console.error('ERROR: ', err));
