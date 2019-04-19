@@ -1,6 +1,14 @@
 const baseULR = 'http://localhost:3144/characters';
 const charactersAPI = new APIHandler(baseULR);
 
+/**
+ * Genereate 5 div elements containing id, name, occupation, weapon and cartoon values.
+ * @param {Number} id - ID of the character
+ * @param {String} name - Name of the character
+ * @param {String} occupation - Occupation of the character
+ * @param {String} weapon - Weapon of the character
+ * @param {Boolean} cartoon - Is the character based on cartoon
+ */
 const htmlGenerator = (id, name, occupation, weapon, cartoon) => {
   return `
             <div class="id">ID: ${id}</div>
