@@ -20,6 +20,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "MrBeer",
+      "occupation": "dsdsds",
+      "weapon": "dsdsd",
+      "cartoon": true,
+      "id": 4
     }
   ]
 }

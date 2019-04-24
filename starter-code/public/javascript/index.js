@@ -8,6 +8,8 @@ $(document).ready(() => {
   document.getElementById('fetch-one').onclick = function () {
     let a = document.getElementsByName('character-id')[0].value
     charactersAPI.getOneRegister(a);
+
+
   }
 
   document.getElementById('delete-one').onclick = function () {
@@ -25,6 +27,8 @@ $(document).ready(() => {
 
     let all = { name, occupation, weapon, cartoon }
     charactersAPI.updateOneRegister(id, all);
+
+
   }
 
   document.getElementById('new-character-form').onsubmit = function (e) {
@@ -35,5 +39,9 @@ $(document).ready(() => {
     let cartoon = document.querySelector('#new-character-form > div:nth-child(4) > input[type="checkbox"]').checked
     let all = { name, occupation, weapon, cartoon }
     charactersAPI.createOneRegister(all)
+
+
+
+
   }
 })
