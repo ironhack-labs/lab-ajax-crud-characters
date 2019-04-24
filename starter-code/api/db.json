@@ -1,0 +1,52 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "qwe",
+      "occupation": "lk",
+      "weapon": "lkm",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "qwe",
+      "occupation": "lk",
+      "weapon": "vr",
+      "id": 5
+    },
+    {
+      "name": "Nick",
+      "occupation": "Coder",
+      "weapon": "Coding",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "Ken",
+      "occupation": "asd",
+      "weapon": "asd",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "asd",
+      "occupation": "asd",
+      "weapon": "asd",
+      "cartoon": false,
+      "id": 8
+    }
+  ]
+}
