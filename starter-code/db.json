@@ -1,0 +1,56 @@
+{
+  "characters": [
+    {
+      "id": 4
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "name": "dsad",
+      "occupation": "dsad",
+      "cartoon": "on",
+      "weapon": "dasd",
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "name": "dsad",
+      "occupation": "dsada",
+      "cartoon": "on",
+      "weapon": "dasd",
+      "id": 14
+    },
+    {
+      "name": "Sebastian Stan",
+      "occupation": "Actor",
+      "cartoon": "on",
+      "weapon": "whatever",
+      "id": 15
+    },
+    {
+      "name": "wwww",
+      "occupation": "wwww",
+      "cartoon": "on",
+      "weapon": "wwww",
+      "id": 16
+    }
+  ]
+}
