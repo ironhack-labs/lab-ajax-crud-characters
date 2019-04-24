@@ -71,13 +71,33 @@ class APIHandler {
   )};
   
 
-  createOneRegister () {
+  createOneRegister (editName, editOcc, editWep, editChkBox) {
+    const fetchCharacters = axios.create({
+      baseURL: this.BASE_URL
+    });
+      let editId = Math.floor(Math.random() * 100000000);
+      let characterInfo = {
+        id:editId, name:editName, occupation:editOcc, weapon:editWep, cartoon:editChkBox
+      }
 
+           fetchCharacters.post(`/characters/`, characterInfo);
+
+  
   }
 
-  updateOneRegister () {
+  updateOneRegister (editId, editName, editOcc, editWep, editChkBox) {
+    const fetchCharacters = axios.create({
+      baseURL: this.BASE_URL
+    });
+      let characterInfo = {
+        name:editName, occupation:editOcc, weapon:editWep, cartoon:editChkBox
+      }
 
+           fetchCharacters.patch(`/characters/${editId}`, characterInfo);
+
+    
   }
+  
 
   deleteOneRegister (requestId) {
     const fetchCharacters = axios.create({
