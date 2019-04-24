@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Donald Duck",
+      "occupation": "duck",
+      "weapon": "bills",
+      "cartoon": "on"
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Han Solo",
+      "occupation": "smuggler",
+      "weapon": "pistol",
+      "cartoon": "on",
+      "id": 4
+    }
+  ]
+}
