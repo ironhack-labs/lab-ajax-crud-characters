@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "parker",
+      "occupation": "parker",
+      "weapon": "parker",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "parker",
+      "occupation": "",
+      "cartoon": "",
+      "weapon": false,
+      "id": 4
+    },
+    {
+      "name": "parker",
+      "occupation": "lol",
+      "weapon": "lol",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
