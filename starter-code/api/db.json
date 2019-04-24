@@ -1,0 +1,123 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Wall-ETFHTFTF",
+      "occupation": "Waste Allocation Robot",
+      "weapon": "Head laser",
+      "cartoon": "no",
+      "id": 4
+    },
+    {
+      "name": "Wall-ETFHTFTF",
+      "occupation": "Waste Allocation Robot",
+      "weapon": "Head laser",
+      "cartoon": "no",
+      "id": 5
+    },
+    {
+      "name": "Wall-ETFHTFTF",
+      "occupation": "Waste Allocation Robot",
+      "weapon": "Head laser",
+      "cartoon": "no",
+      "id": 6
+    },
+    {
+      "name": "Wall-ETFHTFTF",
+      "occupation": "Waste Allocation Robot",
+      "weapon": "Head laser",
+      "cartoon": "no",
+      "id": 7
+    },
+    {
+      "name": "Wall-ETFHTFTF",
+      "occupation": "Waste Allocation Robot",
+      "weapon": "Head laser",
+      "cartoon": "no",
+      "id": 8
+    },
+    {
+      "name": "Wall-ETFHTFTF",
+      "occupation": "Waste Allocation Robot",
+      "weapon": "Head laser",
+      "cartoon": "no",
+      "id": 9
+    },
+    {
+      "name": "Wall-ETFHTFTF",
+      "occupation": "Waste Allocation Robot",
+      "weapon": "Head laser",
+      "cartoon": "no",
+      "id": 10
+    },
+    {
+      "name": "Dan",
+      "occupation": "fdgdg",
+      "weapon": "dpgjpfgj",
+      "cartoon": "no",
+      "id": 11
+    },
+    {
+      "name": "Dan",
+      "occupation": "fdgdg",
+      "weapon": "dpgjpfgj",
+      "cartoon": "no",
+      "id": 12
+    },
+    {
+      "name": "Dan",
+      "occupation": "fdgdg",
+      "weapon": "dpgjpfgj",
+      "cartoon": "no",
+      "id": 13
+    },
+    {
+      "name": "Dan",
+      "occupation": "fdgdg",
+      "weapon": "dpgjpfgj",
+      "cartoon": "no",
+      "id": 14
+    },
+    {
+      "name": "Dan",
+      "occupation": "fdgdg",
+      "weapon": "dpgjpfgj",
+      "cartoon": "no",
+      "id": 15
+    },
+    {
+      "name": "Dan",
+      "occupation": "fdgdg",
+      "weapon": "dpgjpfgj",
+      "cartoon": "no",
+      "id": 16
+    },
+    {
+      "name": "Dan",
+      "occupation": "fdgdg",
+      "weapon": "dpgjpfgj",
+      "cartoon": "no",
+      "id": 17
+    }
+  ]
+}
