@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Ahui",
+      "occupation": "Ironhacker",
+      "cartoon": false,
+      "weapon": "Su tristeza",
+      "id": 4
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "cartoon": false,
+      "weapon": "",
+      "id": 5
+    },
+    {
+      "name": "Regina",
+      "occupation": "Ironhacker",
+      "cartoon": false,
+      "weapon": "her voice",
+      "id": 7
+    }
+  ]
+}

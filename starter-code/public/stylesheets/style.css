@@ -105,3 +105,9 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+.display{
+display: inherit;
+}
+.display-none{
+  display: none;
+}
