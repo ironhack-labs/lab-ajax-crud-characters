@@ -41,7 +41,7 @@ button {
   text-align: center;
 }
 
-.characters-container {
+#characters-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -104,4 +104,15 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+.eachGuyFromStarwars {
+  box-sizing: border-box;
+  position: relative;
+  width: 40%;
+  margin:10px;
+  padding: 10px;
+  text-align: left;
+  border: solid white;
+  border-radius: 20px;
+  
 }

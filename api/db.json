@@ -1,0 +1,67 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": "BigFoot",
+      "occupation": "Dinasour",
+      "weapon": "Neck",
+      "cartoon": true,
+      "id": 10
+    },
+    {
+      "name": "Howl",
+      "occupation": "Wizard",
+      "weapon": "Spell",
+      "cartoon": true,
+      "id": 11
+    },
+    {
+      "name": "Mufasa",
+      "occupation": "Lion",
+      "weapon": "Growl",
+      "cartoon": true,
+      "id": 12
+    },
+    {
+      "name": "Scar",
+      "occupation": "Brother",
+      "weapon": "Hyaena",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "Simba",
+      "occupation": "Cub",
+      "weapon": "Youth",
+      "cartoon": true,
+      "id": 14
+    },
+    {
+      "name": "Mumble",
+      "occupation": "Penguin",
+      "weapon": "HappyFeet",
+      "cartoon": true,
+      "id": 15
+    },
+    {
+      "name": "R2-D2",
+      "occupation": "Dustbin on legs",
+      "weapon": "Saving",
+      "cartoon": false,
+      "id": 16
+    },
+    {
+      "name": "Niko",
+      "occupation": "Yoda",
+      "weapon": "Knowledge",
+      "cartoon": false,
+      "id": 17
+    }
+  ]
+}
