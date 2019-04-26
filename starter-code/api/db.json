@@ -1,0 +1,51 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "cartoon": "on",
+      "id": 4,
+      "name": "Theo",
+      "occupation": "Good Boy",
+      "weapon": "Bone"
+    },
+    {
+      "name": "Allison",
+      "occupation": "student",
+      "weapon": "whatever",
+      "cartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "Olive",
+      "occupation": "Demon Cat",
+      "weapon": "Claws",
+      "cartoon": "on",
+      "id": 7
+    },
+    {
+      "name": "weew",
+      "cartoon": "on",
+      "id": 9
+    },
+    {
+      "name": "Allison",
+      "occupation": "Student",
+      "weapon": "idk",
+      "cartoon": "on",
+      "id": 10
+    },
+    {
+      "name": "Allison",
+      "occupation": "Student",
+      "weapon": "idk",
+      "cartoon": "on",
+      "id": 11
+    }
+  ]
+}
