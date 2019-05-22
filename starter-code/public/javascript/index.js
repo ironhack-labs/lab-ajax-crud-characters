@@ -14,6 +14,7 @@ $(document).ready(() => {
   document.getElementById('delete-one').onclick = () => {
     const id = document.getElementById('character-id-delete').value
     console.log(id)
+
     charactersAPI.deleteOneRegister(id)
   }
 
