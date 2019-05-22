@@ -4,42 +4,33 @@ class APIHandler {
   }
 
   getFullList () {
-     axios.get(`${this.BASE_URL}/characters`)
-       .then(response => {
-        const container =  document.querySelector(".characters-container")
-        container.innerHTML = "";
-         response.data.forEach(elm => {
-         const createElement = document.createElement("div")
-         createElement.setAttribute("class", "character-info")
-          for (let key in elm) {
-            if(key == "_id" || key == "__v")continue
-          let pequenin = document.createElement("div")
-          pequenin.setAttribute("class", key);
-          pequenin.innerHTML = `<h2> ${key}</h2><p>${elm[key]} `;
-          createElement.appendChild(pequenin)
-          }
-           container.appendChild(createElement)  
-              
-   
+     return axios
+       .get(`${this.BASE_URL}/characters`)
+       
+  }
+  getOneRegister (id) {
+     return axios.get(`${this.BASE_URL}/characters/${id}`)
+       
+
+
+
+
+  
         
-           
-         });
+  }
 
-        
-       })
-       .catch(error => console.log("¡ops! error:", error));
+  createOneRegister (newInfo) {
+    return  axios.post(`${this.BASE_URL}/characters`, newInfo)
+      
 
   }
 
-  getOneRegister () {
+  updateOneRegister (info) {
+      return axios.put(
+        `https://minions-api.herokuapp.com/characters/${info.id}`,
+        info
+      );
 
-  }
-
-  createOneRegister () {
-
-  }
-
-  updateOneRegister () {
 
   }
 
