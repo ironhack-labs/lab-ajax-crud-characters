@@ -17,8 +17,8 @@ class APIHandler {
     })
   }
 
-  createOneRegister () {
-
+  createOneRegister (character) {
+    return axios.post(`${this.BASE_URL}/characters`, character)
   }
 
   updateOneRegister () {
