@@ -34,7 +34,8 @@ class APIHandler {
 
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {
+    return axios.delete(`https://minions-api.herokuapp.com/characters/${id}`, id);
 
   }
 }

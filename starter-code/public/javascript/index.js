@@ -65,6 +65,14 @@ $(document).ready( () => {
   
   
   document.getElementById('delete-one').onclick = function(){
+    console.log("algo ocurre")
+
+    const idDel = document.querySelector(".operation-delete input").value;
+    console.log(idDel)
+    charactersAPI.deleteOneRegister(idDel)
+   .then()
+
+
         
   }
   
