@@ -28,7 +28,28 @@ $(document).ready(() => {
 
   document.getElementById("fetch-one").onclick = function() {
     const id = document.getElementById("fetch-one-input").value;
-    charactersAPI.getOneRegister(id).then(response => {});
+    charactersAPI.getOneRegister(id).then(response => {
+      // if (response.data[i].id == id) {
+      document.getElementById(
+        "allContainer"
+      ).innerHTML += ` <div class="characters-container">
+           <div class="character-info">
+             <div class="name">${response.data.name}</div>
+             <div class="occupation">${response.data.occupation}</div>
+             <div class="cartoon">${response.data.cartoon}</div>
+             <div class="weapon">${response.data.weapon}</div>
+           </div>
+         </div>`;
+      // } else {
+      //   document.getElementById(
+      //     "allContainer"
+      //   ).innerHTML += ` <div class="characters-container">
+      //    <div class="character-info">
+      //    <p>this id does not exist</p>
+      //    </div>
+      //    </div>`;
+      // }
+    });
   };
 
   document.getElementById("delete-one").onclick = function() {};
