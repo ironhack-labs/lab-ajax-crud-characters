@@ -8,14 +8,17 @@ const updateCharacterInputs = document.querySelectorAll('#edit-character-form in
 const createContainer = (arg)=>{
   const charactersContainer = document.getElementsByClassName('characters-container')[0]
   charactersContainer.innerHTML= ``
+      const BigChild = document.createElement("div")
+      charactersContainer.appendChild(BigChild)
+
       const ChildCharactersContainer1 = document.createElement("div")
-      charactersContainer.appendChild(ChildCharactersContainer1).innerHTML = `Name:${arg.name}`
+      BigChild.appendChild(ChildCharactersContainer1).innerHTML = `Name:${arg.name}`
       
       const ChildCharactersContainer2 = document.createElement("div")
-      charactersContainer.appendChild(ChildCharactersContainer2).innerHTML = `Occupation:${arg.occupation}`
+      BigChild.appendChild(ChildCharactersContainer2).innerHTML = `Occupation:${arg.occupation}`
       
       const ChildCharactersContainer3 = document.createElement("div")
-      charactersContainer.appendChild(ChildCharactersContainer3).innerHTML = `Weapon:${arg.weapon}`
+      BigChild.appendChild(ChildCharactersContainer3).innerHTML = `Weapon:${arg.weapon}`
 }
 $(document).ready( () => {
   //DELETE CHARACTER FORM
@@ -25,14 +28,17 @@ $(document).ready( () => {
       const charactersContainer = document.getElementsByClassName('characters-container')[0]
       charactersContainer.innerHTML= ``
       allCharacters.forEach(elm => {
-        const ChildCharactersContainer1 = document.createElement("div")
-      charactersContainer.appendChild(ChildCharactersContainer1).innerHTML = `Name:${elm.name}`
+      const BigChild = document.createElement("div")
+      charactersContainer.appendChild(BigChild)
+
+      const ChildCharactersContainer1 = document.createElement("div")
+      BigChild.appendChild(ChildCharactersContainer1).innerHTML = `Name:${elm.name}`
       
       const ChildCharactersContainer2 = document.createElement("div")
-      charactersContainer.appendChild(ChildCharactersContainer2).innerHTML = `Occupation:${elm.occupation}`
+      BigChild.appendChild(ChildCharactersContainer2).innerHTML = `Occupation:${elm.occupation}`
       
       const ChildCharactersContainer3 = document.createElement("div")
-      charactersContainer.appendChild(ChildCharactersContainer3).innerHTML = `Weapon:${elm.weapon}`
+      BigChild.appendChild(ChildCharactersContainer3).innerHTML = `Weapon:${elm.weapon}`
       
       })
     })

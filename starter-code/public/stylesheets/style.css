@@ -39,6 +39,12 @@ button {
   border-radius: 20px;
   background-color: rgba(88, 98, 123, 0.95);
   text-align: center;
+  
+}
+.container div {
+  display:block;
+  margin: 0 auto;
+  padding:10px;
 }
 
 .characters-container {
