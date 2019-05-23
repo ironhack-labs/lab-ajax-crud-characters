@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Axios - POST, PATCH &amp; PUT </title>
+</head>
+
+<body>
+    <h1> Axios AJAX - POST, PATCH &amp; PUT </h1>
+
+
+    <h3> Crear un nuevo personaje </h3>
+    <form id="character-form">
+        <div>
+            <label for="the-name-input"> Nombre: </label>
+            <input type="text" name="name" class="the-name">
+        </div>
+
+        <div>
+            <label for="the-occupation-input"> Ocupación: </label>
+            <input type="text" name="occupation" class="the-occupation">
+        </div>
+
+        <div>
+            <label for="the-weapon-input"> Arma: </label>
+            <input type="text" name="weapon" class="the-weapon">
+        </div>
+
+        <button> Guardar personaje en la API </button>
+    </form>
+
+    <ul id="characters-list"></ul>
+
+
+    <hr>
+
+
+    <h3> Actualizar un personaje existente</h3>
+
+    <p>Introduce el ID del personaje a actualizar:
+        <input type="text" name="" id="theCharId">
+        <button type="submit" id="getButton">Obtener datos</button>
+    </p>
+    <div id="updateForm">
+
+        <form id="update-form">
+            <div>
+                <label for="update-name-input"> Nombre: </label>
+                <input type="text" name="name" class="the-name">
+            </div>
+
+            <div>
+                <label for="update-occupation-input"> Ocupación: </label>
+                <input type="text" name="occupation" class="the-occupation">
+            </div>
+
+            <div>
+                <label for="update-weapon-input"> Arma: </label>
+                <input type="text" name="weapon" class="the-weapon">
+            </div>
+
+            <div>
+                <label for="character-id-input"> ID Personaje: </label>
+                <input type="text" name="characterId" id="character-id-input">
+            </div>
+
+            <button> Actualizar </button>
+        </form>
+
+        <p id="update-result"></p>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
