@@ -32,16 +32,12 @@ $(document).ready( () => {
   document.getElementById('delete-one').onclick = function(){
     const id = document.getElementsByName("character-id-delete")[0]
     
-    setInterval( () => {
-      let nuevoID = 300
-      charactersAPI.deleteOneRegister(nuevoID)
+      
+      charactersAPI.deleteOneRegister(id.value)
       .then(elm => {
         container.innerHTML = ""
         replaceContainer("Deleted Minion",elm.name, elm.occupation, elm.cartoon, elm.weapon)})
       
-      nuevoID++
-      
-      }, 10)
   }
   
   document.getElementById('edit-character-form').onsubmit = function(event){
