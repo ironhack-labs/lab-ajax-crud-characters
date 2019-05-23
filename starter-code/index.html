@@ -15,24 +15,26 @@
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
       <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="cartoon">Is a Cartoon?</div>
-        <div class="weapon">Character Weapon</div>
+        <div class="name" id="name">Character Name</div>
+        <div class="occupation" id="occupation">Character Occupation</div>
+        <div class="cartoon" id="cartoon">Is a Cartoon?</div>
+        <div class="weapon" id="weapon">Character Weapon</div>
+        <div id="characters"></div>
       </div>
     </div>
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
+        <button id="clear">Clear</button>
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="search-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="delete-id">
         <button id="delete-one">Delete one</button>
       </div>
 
