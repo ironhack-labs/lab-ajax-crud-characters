@@ -1,5 +1,6 @@
 // import APIHandler from ".APIHandler.js";
 const charactersAPI = new APIHandler("http://localhost:8000");
+// const productAPI = new APIHandler("http://localhost:8001");
 
 $(document).ready(() => {
   document.getElementById("fetch-all").onclick = function() {
@@ -50,11 +51,13 @@ $(document).ready(() => {
       .catch(apiErr => console.log(apiErr));
   };
 
-  document.getElementById("new-character-form").onsubmit = function() {
+  document.getElementById("new-character-form").onsubmit = function(evt) {
+    evt.preventDefault();
     const userNameInput = document.querySelector(`[name=name]`);
     const userOccupationInput = document.querySelector(`[name=occupation]`);
     const userWeaponInput = document.querySelector(`[name=weapon]`);
     const userCartoonInput = document.querySelector(`[name=cartoon]`);
+    let characContainer = document.querySelector(".characters-container");
     charactersAPI
       .createOneRegister({
         name: userNameInput.value,
@@ -62,9 +65,31 @@ $(document).ready(() => {
         weapon: userWeaponInput.value,
         cartoon: userCartoonInput.checked
       })
-      .then(apiRes => {
+      .then(apiCharac => {
+        userNameInput.value = "";
+        userOccupationInput.value = "";
+        userWeaponInput.value = "";
+        userCartoonInput.checked = false;
+
         document.getElementById("send-data").style.backgroundColor = "green";
-        console.log(apiRes.data);
+        setTimeout(() => {
+          document.getElementById("send-data").style.backgroundColor =
+            "initial";
+        }, 1100);
+        characContainer.innerHTML = "";
+        characContainer.innerHTML += `<div class="character-info">
+        <div class="id">Id: <span>${apiCharac.data.id}</span></div>
+        <div class="name">Name: <span>${apiCharac.data.name}</span></div>
+        <div class="occupation">Occupation: <span>${
+          apiCharac.data.occupation
+        }</span></div>
+        <div class="cartoon">Is a cartoon? <span>${
+          apiCharac.data.cartoon
+        }</span></div>
+        <div class="weapon">Weapon: <span>${
+          apiCharac.data.weapon
+        }</span></div></div>`;
+        console.log(apiCharac.data);
       })
       .catch(apiErr => {
         document.getElementById("send-data").style.backgroundColor = "red";
@@ -81,7 +106,12 @@ $(document).ready(() => {
       .deleteOneRegister(userInput.value)
       .then(apiRes => {
         document.getElementById("delete-one").style.backgroundColor = "green";
-        console.log(apiRes.data);
+        setTimeout(() => {
+          document.getElementById("delete-one").style.backgroundColor =
+            "initial";
+        }, 1100);
+
+        console.log("Character has been successfully deleted", apiRes.data);
       })
       .catch(apiErr => {
         document.getElementById("delete-one").style.backgroundColor = "red";
@@ -93,7 +123,8 @@ $(document).ready(() => {
       });
   };
 
-  document.getElementById("edit-character-form").onsubmit = function() {
+  document.getElementById("edit-character-form").onsubmit = function(evt) {
+    evt.preventDefault();
     const updateId = document.querySelector(`[name=chr-id]`);
     const updateName = document.querySelector(
       "#edit-character-form > div:nth-child(2) > input[type=text]"
@@ -118,7 +149,16 @@ $(document).ready(() => {
         cartoon: updateCartoon.checked
       })
       .then(apiRes => {
+        updateId.value = "";
+        updateName.value = "";
+        updateOccupation.value = "";
+        updateWeapon.value = "";
+        updateCartoon.checked = "";
         document.getElementById("update-data").style.backgroundColor = "green";
+        setTimeout(() => {
+          document.getElementById("update-data").style.backgroundColor =
+            "initial";
+        }, 1100);
         console.log(apiRes.data);
       })
       .catch(apiErr => {
@@ -127,7 +167,7 @@ $(document).ready(() => {
           document.getElementById("update-data").style.backgroundColor =
             "initial";
         }, 1100);
-        console.log(apiErr);
+        console.log("Character not found", apiErr);
       });
   };
 });
