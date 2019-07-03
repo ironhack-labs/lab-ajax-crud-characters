@@ -61,20 +61,6 @@ $(document).ready( () => {
   }
   
 
-  
-  document.getElementById('edit-character-form').onsubmit = function(){
-            
-  }
-  
-  document.getElementById('new-character-form').onsubmit = function(e){
-     
-         
-  }
-
-
-    document.getElementById("delete-one").onclick = function() {
-     
-    };
 })
 
 
