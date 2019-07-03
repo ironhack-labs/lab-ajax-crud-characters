@@ -4,7 +4,11 @@ class APIHandler {
     }
 
     getFullList() {
-        return axios.get(this.BASE_URL)
+        return axios
+            .get(this.BASE_URL)
+            .then(allcharacters => {
+                return allcharacters
+            })
     }
 
     getOneRegister(id) {
@@ -22,4 +26,6 @@ class APIHandler {
     deleteOneRegister(id) {
         return axios.delete(`${this.BASE_URL}/${id}`)
     }
+
+
 }
