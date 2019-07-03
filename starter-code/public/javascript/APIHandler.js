@@ -24,15 +24,33 @@ class APIHandler {
     }
 
     createOneRegister(character) {
-        return axios.post(this.BASE_URL, character)
+        return axios
+            .post(this.BASE_URL, character)
+            .then(onecharacter => {
+                return onecharacter
+            }).catch((err) => {
+                console.log(err)
+            })
     }
 
     updateOneRegister(id, object) {
-        return axios.put(`${this.BASE_URL}/${id}`, object)
+        return axios
+            .put(`${this.BASE_URL}/${id}`, object)
+            .then(onecharacter => {
+                return onecharacter
+            }).catch((err) => {
+                console.log(err)
+            })
     }
 
     deleteOneRegister(id) {
-        return axios.delete(`${this.BASE_URL}/${id}`)
+        return axios
+            .delete(`${this.BASE_URL}/${id}`)
+            .then(onecharacter => {
+                return onecharacter
+            }).catch((err) => {
+                console.log(err)
+            })
     }
 
 
