@@ -7,11 +7,21 @@ $(document).ready(() => {
         charactersAPI.getFullList()
             .then(allcharacters => {
                 updateCharacters(allcharacters)
+            }).catch((err) => {
+                console.log(err)
             })
     }
 
     document.getElementById('fetch-one').onclick = function() {
+        let characterId = +document.querySelector("input[name='character-id']").value
 
+        charactersAPI.getOneRegister(characterId)
+            .then(onecharacter => {
+                console.log("onecharacter=" + onecharacter)
+                updateCharacters(onecharacter)
+            }).catch((err) => {
+                console.log(err)
+            })
     }
 
     document.getElementById('delete-one').onclick = function() {

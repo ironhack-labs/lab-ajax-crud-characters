@@ -8,11 +8,19 @@ class APIHandler {
             .get(this.BASE_URL)
             .then(allcharacters => {
                 return allcharacters
+            }).catch((err) => {
+                console.log(err)
             })
     }
 
     getOneRegister(id) {
-        return axios.get(`${this.BASE_URL}/?id=${{id}}`)
+        return axios
+            .get(`${this.BASE_URL}/?id=${id}`)
+            .then(onecharacter => {
+                return onecharacter
+            }).catch((err) => {
+                console.log(err)
+            })
     }
 
     createOneRegister(character) {
