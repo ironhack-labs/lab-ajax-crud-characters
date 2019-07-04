@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Actor444",
+      "occupation": "Occ444",
+      "weapon": "Weapon444",
+      "isCartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Tom Cruise",
+      "occupation": "Comedian 1",
+      "weapon": "Smile",
+      "isCartoon": false,
+      "id": 7
+    }
+  ]
+}
