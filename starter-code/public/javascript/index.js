@@ -5,19 +5,7 @@ const editForm = document.getElementById("edit-character-form");
 
 $(document).ready(() => {
   document.getElementById("fetch-all").onclick = function() {
-    let chars = charactersAPI.getFullList();
-    let parent = document.getElementById("chars-container");
-    chars.foreach(char => {
-      let div = document.createElement("div");
-      div.innerHTML = `
-        <div class="character-info">
-          <div class="name">${char.name}</div>
-          <div class="occupation">${char.occupation}</div>
-          <div class="cartoon">${char.cartoon}</div>
-          <div class="weapon">${char.weapon}</div>
-        </div>`;
-      parent.appendChild(div);
-    });
+    charactersAPI.getFullList();
   };
 
   document.getElementById("fetch-one").onclick = function() {
