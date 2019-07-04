@@ -1,0 +1,67 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke",
+      "occupation": "Whipping",
+      "weapon": "The Force",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Joss",
+      "occupation": "Teacher",
+      "weapon": "Gatsby",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 11
+    }
+  ]
+}
