@@ -14,7 +14,10 @@ $(document).ready(() => {
     console.log(charactersAPI.getOneRegister(id));
   };
 
-  document.getElementById("delete-one").onclick = function() {};
+  document.getElementById("delete-one").onclick = function() {
+    let id = document.getElementById("delete-by-id").value;
+    charactersAPI.deleteOneRegister(id);
+  };
 
   document.getElementById("edit-character-form").onsubmit = function() {
     let name = editForm.elements["name"].value;
