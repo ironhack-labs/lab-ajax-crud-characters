@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Jorge",
+      "occupation": "Ser el mejor",
+      "weapon": "pegale a daniel",
+      "checkbox": "on",
+      "id": 4
+    },
+    {
+      "name": "Daniel",
+      "occupation": "Ironhacker",
+      "weapon": "hacer enojar a jorge",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
