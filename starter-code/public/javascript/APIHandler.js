@@ -15,9 +15,15 @@ class APIHandler {
           div.innerHTML = `
             <div class="id">Id: <span>${response.data[i].id}</span></div>
             <div class="name">Name: <span>${response.data[i].name}</span></div>
-            <div class="occupation">Occupation: <span>${response.data[i].occupation}</span></div>
-            <div class="cartoon">Is a cartoon? <span>${response.data[i].cartoon}</span></div>
-            <div class="weapon">Weapon: <span>${response.data[i].weapon}</span></div>`;
+            <div class="occupation">Occupation: <span>${
+              response.data[i].occupation
+            }</span></div>
+            <div class="cartoon">Is a cartoon? <span>${
+              response.data[i].cartoon
+            }</span></div>
+            <div class="weapon">Weapon: <span>${
+              response.data[i].weapon
+            }</span></div>`;
           div.classList.add("character-info");
           parent.appendChild(div);
         }
@@ -38,9 +44,15 @@ class APIHandler {
         div.innerHTML = `
           <div class="id">Id: <span>${character.data.id}<span></div>
           <div class="name">Name: <span>${character.data.name}<span></div>
-          <div class="occupation">Occupation: <span>${character.data.occupation}<span></div>
-          <div class="cartoon">Is a cartoon? <span>${character.data.cartoon}<span></div>
-          <div class="weapon">Weapon: <span>${character.data.weapon}<span></div>`;
+          <div class="occupation">Occupation: <span>${
+            character.data.occupation
+          }<span></div>
+          <div class="cartoon">Is a cartoon? <span>${
+            character.data.cartoon
+          }<span></div>
+          <div class="weapon">Weapon: <span>${
+            character.data.weapon
+          }<span></div>`;
         div.classList.add("character-info");
         parent.appendChild(div);
       })
@@ -65,10 +77,12 @@ class APIHandler {
     axios
       .put(this.BASE_URL + `/characters/${id}`, character)
       .then(response => {
-        this.getOneRegister(response.data.id)
+        document.getElementById("send-update").classList.add("active");
+        this.getOneRegister(response.data.id);
         console.log(response);
       })
       .catch(err => {
+        document.getElementById("send-update").classList.add("error");
         console.log(err);
       });
   }
@@ -77,9 +91,10 @@ class APIHandler {
     axios
       .delete(this.BASE_URL + `/characters/${id}`)
       .then(response => {
-        this.getFullList();
+        document.getElementById("delete-one").classList.add("active");
       })
       .catch(err => {
+        document.getElementById("delete-one").classList.add("error");
         console.log(err);
       });
   }

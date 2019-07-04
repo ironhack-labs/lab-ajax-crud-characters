@@ -15,10 +15,10 @@
       "cartoon": true
     },
     {
-      "name": "adri",
-      "occupation": "lal",
-      "weapon": "weapon",
-      "cartoon": false,
+      "name": "ADRI",
+      "occupation": "coder",
+      "weapon": "LOGIC",
+      "cartoon": true,
       "id": 4
     },
     {
@@ -41,20 +41,6 @@
       "weapon": "skldjf",
       "cartoon": true,
       "id": 7
-    },
-    {
-      "name": "devan",
-      "occupation": "klaösdf",
-      "weapon": "sdklfj",
-      "cartoon": false,
-      "id": 8
-    },
-    {
-      "name": "asjkdlf",
-      "occupation": "kljsdfkl",
-      "weapon": "ksldjf",
-      "cartoon": false,
-      "id": 9
     }
   ]
 }

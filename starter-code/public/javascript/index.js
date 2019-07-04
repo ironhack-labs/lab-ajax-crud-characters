@@ -1,4 +1,4 @@
-const charactersAPI = new APIHandler("http://localhost:8000");
+const charactersAPI = new APIHandler("http://127.0.0.1:8000");
 
 const newForm = document.getElementById("new-character-form");
 const editForm = document.getElementById("edit-character-form");
