@@ -7,7 +7,6 @@ class APIHandler {
     axios
       .get(this.BASE_URL + "/characters")
       .then(response => {
-        console.log(response.data);
         let parent = document.getElementById("chars-container");
         parent.innerHTML = "";
         for (var i = 0; i < response.data.length; i++) {
@@ -37,7 +36,6 @@ class APIHandler {
     axios
       .get(this.BASE_URL + `/characters/${id}`)
       .then(character => {
-        console.log(character);
         let parent = document.getElementById("chars-container");
         parent.innerHTML = "";
         let div = document.createElement("div");
@@ -65,10 +63,10 @@ class APIHandler {
     axios
       .post(this.BASE_URL + "/characters", character)
       .then(response => {
-        this.getOneRegister(response.data.id);
-        console.log(response);
+        document.getElementById("send-data").classList.add("active");
       })
       .catch(err => {
+        document.getElementById("send-data").classList.add("error");
         console.log(err);
       });
   }
@@ -78,8 +76,6 @@ class APIHandler {
       .put(this.BASE_URL + `/characters/${id}`, character)
       .then(response => {
         document.getElementById("send-update").classList.add("active");
-        this.getOneRegister(response.data.id);
-        console.log(response);
       })
       .catch(err => {
         document.getElementById("send-update").classList.add("error");

@@ -10,8 +10,7 @@ $(document).ready(() => {
 
   document.getElementById("fetch-one").onclick = function() {
     let id = document.getElementById("find-by-id").value;
-    console.log(id);
-    console.log(charactersAPI.getOneRegister(id));
+    charactersAPI.getOneRegister(id);
   };
 
   document.getElementById("delete-one").onclick = function() {
@@ -19,7 +18,8 @@ $(document).ready(() => {
     charactersAPI.deleteOneRegister(id);
   };
 
-  document.getElementById("edit-character-form").onsubmit = function() {
+  document.getElementById("edit-character-form").onsubmit = function(e) {
+    e.preventDefault();
     let name = editForm.elements["name"].value;
     let occupation = editForm.elements["occupation"].value;
     let weapon = editForm.elements["weapon"].value;
@@ -28,7 +28,8 @@ $(document).ready(() => {
     charactersAPI.updateOneRegister(id, { name, occupation, weapon, cartoon });
   };
 
-  document.getElementById("new-character-form").onsubmit = function() {
+  document.getElementById("new-character-form").onsubmit = function(e) {
+    e.preventDefault();
     let name = newForm.elements["name"].value;
     let occupation = newForm.elements["occupation"].value;
     let weapon = newForm.elements["weapon"].value;

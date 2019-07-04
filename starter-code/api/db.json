@@ -22,25 +22,32 @@
       "id": 4
     },
     {
-      "name": "Anna",
-      "occupation": "Developer",
+      "name": "anna",
+      "occupation": "dev",
       "weapon": "KEYBOARD",
-      "cartoon": "on",
+      "cartoon": true,
       "id": 5
     },
     {
-      "name": "Alex",
-      "occupation": "Programmer",
-      "weapon": "computer",
-      "cartoon": "on",
+      "name": "Adri",
+      "occupation": "is sleepy",
+      "weapon": "zzzzs",
+      "cartoon": false,
       "id": 6
     },
     {
-      "name": "kdjslf",
-      "occupation": "klsdjf",
-      "weapon": "skldjf",
-      "cartoon": true,
+      "name": "I'm Confused",
+      "occupation": "sleeping",
+      "weapon": "pills",
+      "cartoon": false,
       "id": 7
+    },
+    {
+      "name": "kljök",
+      "occupation": "trsgfdgd",
+      "weapon": "ghdztrfh",
+      "cartoon": true,
+      "id": 9
     }
   ]
 }
