@@ -27,15 +27,14 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="character-id-input">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
-
     </section>
   </section>
   <section class="container">
@@ -65,24 +64,24 @@
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
-          <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <label for="id" id="character-id-edit">ID: </label>
+          <input type="text" name="chr-id" id="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" id="cartoon">
         </div>
         <button id="send-data">Update</button>
       </form>
