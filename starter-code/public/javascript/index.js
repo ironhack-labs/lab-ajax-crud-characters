@@ -8,10 +8,10 @@ $(document).ready( () => {
     .then((response) => {
       response.data.forEach((char) => {
         html += `<div class="character-info">
-        <div class="name">Character Name: ${char.name}</div>
-        <div class="occupation">Character Occupation: ${char.occupation}</div>
-        <div class="cartoon">Is a Cartoon? ${char.cartoon}</div>
-        <div class="weapon">Character Weapon: ${char.weapon}</div>
+        <div class="name">Name: <span>${char.name}</span></div>
+        <div class="occupation">Occupation: <span>${char.occupation}</span></div>
+        <div class="cartoon">Is a Cartoon? <span>${char.cartoon}</span></div>
+        <div class="weapon">Weapon: <span>${char.weapon}</span></div>
         </div>`
         bigDiv.innerHTML = html;
       }
@@ -29,10 +29,10 @@ $(document).ready( () => {
     .then((char) => {
       const {name, occupation, cartoon, weapon} = char.data;
       html += `<div class="character-info">
-      <div class="name">Character Name: ${name}</div>
-      <div class="occupation">Character Occupation: ${occupation}</div>
-      <div class="cartoon">Is a Cartoon? ${cartoon}</div>
-      <div class="weapon">Character Weapon: ${weapon}</div>
+      <div class="name">Name: <span>${name}</span></div>
+      <div class="occupation">Occupation: <span>${occupation}</span></div>
+      <div class="cartoon">Is a Cartoon? <span>${cartoon}</span></div>
+      <div class="weapon">Weapon: <span>${weapon}</span></div>
       </div>`
       bigDiv.innerHTML = html;
     })
