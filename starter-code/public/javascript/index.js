@@ -122,7 +122,34 @@ $(document).ready( () => {
   
     }
   
-  document.getElementById('new-character-form').onsubmit = function(){
-                
-  }
+    document.getElementById('new-character-form').onsubmit = function(e){
+
+      e.preventDefault();
+      
+      let newName = document.getElementById('new-name').value;
+      let newOccupation = document.getElementById('new-occupation').value;
+      let newWeapon = document.getElementById('new-weapon').value;
+      let newDebt = document.getElementById('new-debt').checked;
+  
+      let newCharacter = {
+        name: newName,
+        occupation: newOccupation,
+        weapon: newWeapon,
+        debt: newDebt
+      };
+  
+      // Make a POST request for one
+      axios.post(`https://ih-crud-api.herokuapp.com/characters`, newCharacter)
+        .then(response => {
+          document.getElementById('new-name').value = '';
+          document.getElementById('new-occupation').value = '';
+          document.getElementById('new-weapon').value = '';
+          document.getElementById('new-debt').checked = '';
+          console.log('get successful and the response is: ',response );
+        })
+        .catch(error => {
+            console.log('Oh No! Error is: ', error);  
+        })
+  
+    }
 })
