@@ -48,6 +48,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
+  
 }
 
 .active {
@@ -75,7 +76,7 @@ button {
 
 .character-info div span {
   color: #d8b362;
-  position: absolute;
+ 
   left: 50%;
 }
 
@@ -104,4 +105,7 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+.highlighted {
+  position: static !important;
 }

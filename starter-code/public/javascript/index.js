@@ -19,25 +19,29 @@ $(document).ready( () => {
 
         let newNameDiv = document.createElement('div');
         newNameDiv.classList.add('name');
-        newNameDiv.innerHTML =`Character Name: ${eachOne.name}`
+        newNameDiv.innerHTML =`Character Name: <span class="highlighted">${eachOne.name}</span>`
 
         let newWeaponDiv = document.createElement('div');
         newWeaponDiv.classList.add('weapon');
-        newWeaponDiv.innerHTML =`Weapon: ${eachOne.weapon}`
+        newWeaponDiv.innerHTML =`Weapon: <span class="highlighted">${eachOne.weapon}</span>`
 
         let newOccupationDiv = document.createElement('div');
         newOccupationDiv.classList.add('occupation');
-        newOccupationDiv.innerHTML =`Occupation: ${eachOne.occupation}`
+        newOccupationDiv.innerHTML =`Occupation: <span class="highlighted">${eachOne.occupation}</span>`
 
         let newCartoonDiv = document.createElement('div');
         newCartoonDiv.classList.add('cartoon');
-        newCartoonDiv.innerHTML =`Is a Cartoon? ${eachOne.debt ? "Yes" : "No"}`
+        newCartoonDiv.innerHTML =`Is a Cartoon? <span class="highlighted">${eachOne.debt ? "Yes" : "No"}</span>`
 
         newCharDiv.appendChild(newNameDiv);
         newCharDiv.appendChild(newOccupationDiv);
         newCharDiv.appendChild(newCartoonDiv);
         newCharDiv.appendChild(newWeaponDiv);
         parentDiv.appendChild(newCharDiv);
+
+        if(parentDiv.clientHeight > 500) {
+          parentDiv.setAttribute("style", "overflow-y:scroll; height:500px;");
+        }
       });
 
 
@@ -57,10 +61,10 @@ $(document).ready( () => {
       let newCharDiv = document.createElement("div");
       newCharDiv.classList.add('character-info');
       newCharDiv.innerHTML = `
-      <div  class="name"> Character Name: ${result.data.name} </div>
-      <div  class="occupation"> Occupation: ${result.data.occupation}</div>
-      <div  class="cartoon">Is a Cartoon? ${result.data.debt ? "Yes" : "No"}</div>
-      <div  class="weapon"> Weapon: ${result.data.weapon}</div>
+      <div  class="name"> Character Name: <span class="highlighted">${result.data.name}</span> </div>
+      <div  class="occupation"> Occupation: <span class="highlighted">${result.data.occupation}</span></div>
+      <div  class="cartoon">Is a Cartoon? <span class="highlighted">${result.data.debt ? "Yes" : "No"}</span></div>
+      <div  class="weapon"> Weapon: <span class="highlighted">${result.data.weapon}</span></div>
       `
 
       parentDiv.appendChild(newCharDiv);
@@ -89,6 +93,19 @@ $(document).ready( () => {
       })
       .then(() => {
         console.log("yey");
+        let parentDiv = document.getElementsByClassName('characters-container')[0];
+        parentDiv.innerHTML = '';
+
+        let newCharDiv = document.createElement("div");
+        newCharDiv.classList.add('character-info');
+        newCharDiv.innerHTML = `
+        <div  class="name"> Character Name: <span class="highlighted">${name.value}</span> </div>
+        <div  class="occupation"> Occupation: <span class="highlighted">${occupation.value}</span></div>
+        <div  class="cartoon">Is a Cartoon? <span class="highlighted">${debt.checked ? "Yes" : "No"}</span></div>
+        <div  class="weapon"> Weapon: <span class="highlighted">${weapon.value}</span></div>
+        `
+  
+        parentDiv.appendChild(newCharDiv);
 
         name.value = '';
         occupation.value = '';
