@@ -3,23 +3,28 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  getFullList() {
+    return axios.get(this.BASE_URL);
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return axios.get(this.BASE_URL + '/' + id);
   }
 
-  createOneRegister () {
-
+  createOneRegister(name, occupation, weapon, cartoon) {
+    return axios.post(this.BASE_URL, {
+      'name': name, 
+      'occupation': occupation, 
+      'weapon': weapon, 
+      'cartoon': cartoon
+    });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id, name, occupation, weapon, cartoon) {
+    return axios.put(this.BASE_URL + '/' + id, {name, occupation, weapon, cartoon});
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    return axios.delete(this.BASE_URL + '/' + id);
   }
 }
