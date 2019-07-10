@@ -63,7 +63,7 @@ $(document).ready(() => {
     })
     .then(()=>{
         console.log('yay')
-        
+        document.getElementById('edit-id').value = "";
         document.getElementById('edit-name').value = "";
         document.getElementById('edit-occupation').value = "";
         document.getElementById('edit-weapon').value = "";
