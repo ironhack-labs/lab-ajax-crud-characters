@@ -1,13 +1,14 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
 
 $(document).ready( () => {
+  var classname ="";
   document.getElementById('fetch-all').onclick = function(){
     
     let list = document.getElementById('characters-container');
     list.innerHTML = "";
     axios.get('https://ih-crud-api.herokuapp.com/characters')
     .then((result)=>{
-      result.data.forEach((e)=>{
+      result.data.forEach((e,i)=>{
         let newItem = document.createElement('div');
         newItem.className = "character-info";
         newItem.innerHTML =  `
@@ -15,15 +16,42 @@ $(document).ready( () => {
         <div class="occupation">Occupation: ${e.occupation}</div>
         <div class="debt">Debt: ${e.debt}</div>
         <div class="weapon">Weapon: ${e.weapon}</div>
+        <button class="editThisChar" id=${i+2}>Edit</button>
         `
         list.appendChild(newItem);
       })
+    classname = document.getElementsByClassName("editThisChar");
+    for (var i = 0; i < classname.length+1; i++) {
+    classname[i].addEventListener('click', populateEdit, false);
+}
     })
     .catch((err)=>{
       console.log(err);
     })
 
   }
+  
+  function populateEdit(){
+    id = Number(this.id);
+    console.log(id)
+    axios.get('https://ih-crud-api.herokuapp.com/characters/'+id)
+    .then((result)=>{
+        document.getElementById('chr-id').value = result.data.id;
+        document.getElementById('name').value = result.data.name;
+        document.getElementById('occupation').value = result.data.occupation;
+        document.getElementById('weapon').value = result.data.weapon;
+        document.getElementById('debt').checked = result.data.debt.checked;
+      })
+  
+    .catch((err)=>{
+      console.log(err);
+    })
+      
+}
+
+   
+    // console.log(id);
+  
   
   document.getElementById('fetch-one').onclick = function(){
     let list = document.getElementById('characters-container');
