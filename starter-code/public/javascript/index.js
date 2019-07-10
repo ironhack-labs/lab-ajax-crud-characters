@@ -53,7 +53,6 @@ $(document).ready( () => {
     
     axios.get('https://ih-crud-api.herokuapp.com/characters/'+theId)
     .then(result => {
-      console.log(result.data);
       parentDiv.innerHTML = '';
       let newCharDiv = document.createElement("div");
       newCharDiv.classList.add('character-info');
@@ -69,21 +68,72 @@ $(document).ready( () => {
     .catch(err => {
       console.log(err);
     })
+  }
+  
+  document.getElementById('delete-one').onclick = function(){    
+  }
+  
+  document.getElementById('send-data').onclick = function(e){
+    e.preventDefault();
+    let name = document.getElementById("new-char-name");
+    let weapon = document.getElementById("new-char-weapon");
+    let occupation = document.getElementById("new-char-occupation");
+    let debt = document.getElementById("new-char-cartoon");
 
+    axios
+      .post("https://ih-crud-api.herokuapp.com/characters", {
+        name: name.value,
+        occupation: occupation.value,
+        weapon: weapon.value,
+        debt: debt.checked
+      })
+      .then(() => {
+        console.log("yey");
 
-
+        name.value = '';
+        occupation.value = '';
+        weapon.value = '';
+        debt.checked = false;
+      })
+      .catch(err => {
+        console.log(err);
+      });
 
   }
   
-  document.getElementById('delete-one').onclick = function(){
-        
-  }
-  
-  document.getElementById('edit-character-form').onsubmit = function(){
-            
-  }
-  
-  document.getElementById('new-character-form').onsubmit = function(){
+  document.getElementById('send-data-edit').onclick = function(e){
                 
+    e.preventDefault();
+    let name = document.getElementById("edit-name");
+    let weapon = document.getElementById("edit-weapon");
+    let occupation = document.getElementById("edit-occupation");
+    let debt = document.getElementById("edit-cartoon");
+    let theId = document.getElementById("edit-id").value;
+
+    axios
+      .put("https://ih-crud-api.herokuapp.com/characters/"+theId, {
+        name: name.value,
+        occupation: occupation.value,
+        weapon: weapon.value,
+        debt: debt.checked
+      })
+      .then(() => {
+        console.log("yey");
+
+        name.value = '';
+        occupation.value = '';
+        weapon.value = '';
+        debt.checked = false;
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+
+
+
+
+
+
   }
 })
