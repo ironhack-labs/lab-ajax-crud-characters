@@ -16,7 +16,13 @@ class APIHandler {
   }
 
   createOneRegister() {
-    return axios.post(`${this.BASE_URL}/characters`)
+    const char = {
+      name: document.querySelector('#new-character-form #new-name').value,
+      occupation: document.querySelector('#new-character-form #new-occupation').value,
+      weapon: document.querySelector('#new-character-form #new-weapon').value,
+      cartoon: document.querySelector('#new-character-form #new-cartoon').checked,
+    };
+    return axios.post(`${this.BASE_URL}/characters`, char)
       .then(res => res)
       .catch(err => console.log(err));
   }
@@ -29,8 +35,7 @@ class APIHandler {
       weapon: document.querySelector('#edit-character-form #weapon').value,
       cartoon: document.querySelector('#edit-character-form #cartoon').checked,
     };
-    console.log(char);
-    const charId = document.querySelector('#character-id-edit').value;
+
     return axios.put(`${this.BASE_URL}/characters/${id}`, char)
       .then(res => res)
       .catch(err => console.log(err));

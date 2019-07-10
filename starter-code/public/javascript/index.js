@@ -60,12 +60,15 @@ $(document).ready(() => {
   document.getElementById('edit-character-form').onsubmit = (e) => {
     e.preventDefault();
     const id = document.querySelector('#chr-id').value;
-    charactersAPI.updateOneRegister(id);
+    charactersAPI.updateOneRegister(id)
+      .then(populateCharacters())
+      .catch(err => console.log(err));
   };
 
-  document.getElementById('new-character-form').onsubmit = function () {
-
+  document.getElementById('new-character-form').onsubmit = (e) => {
+    e.preventDefault();
+    charactersAPI.createOneRegister()
+      .then(res => populateCharacters())
+      .catch(err => console.log(err));
   };
 });
-
-

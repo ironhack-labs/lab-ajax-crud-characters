@@ -13,6 +13,27 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Catioro 2",
+      "occupation": "Fofo",
+      "weapon": "Lindo",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "asdasd",
+      "occupation": "dasdasd",
+      "weapon": "asdasdad",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "lalala",
+      "occupation": "lolol",
+      "weapon": "popopo",
+      "cartoon": false,
+      "id": 6
     }
   ]
 }
