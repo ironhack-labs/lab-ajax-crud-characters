@@ -76,24 +76,26 @@ $(document).ready( () => {
 
     e.preventDefault();
 
-    let name = document.getElementById('new-name').value;
-    let occupation = document.getElementById('new-occupation').value;
-    let weapon = document.getElementById('new-weapon').value;
-    let debt = document.getElementById('new-debt').checked;
+    let id = Number(document.getElementById('the-id').value);
+    let name = document.getElementById('edit-name').value;
+    let occupation = document.getElementById('edit-occupation').value;
+    let weapon = document.getElementById('edit-weapon').value;
+    let debt = document.getElementById('edit-debt').checked;
     console.log(name, occupation, weapon, debt)
 
-    axios.put('https://ih-crud-api.herokuapp.com/characters',  {
+    axios.put('https://ih-crud-api.herokuapp.com/characters/' + id , {
       name: name,
       occupation: occupation,
       weapon: weapon,
       debt: debt
   })
-    .then(()=>{
+
+    
+    .then((theCharacter)=>{
       
-      document.getElementById('new-name').value = "";
-      document.getElementById('new-occupation').value = "";
-      document.getElementById('new-weapon').value = "";
-      document.getElementById('new-debt').checked = false;
+      // console.log(theCharacter.data)
+      
+     
 
     })
     .catch((err)=>{
