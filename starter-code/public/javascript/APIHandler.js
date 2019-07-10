@@ -4,22 +4,56 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(this.BASE_URL + '/characters')
+    .then(response => {
+      return response
+    })
+    .catch(error => {
+      console.log("The error is: ", error);
+    })
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return axios.get(this.BASE_URL + `/characters/${id}`)
+    .then(response => {
+      console.log(response)
+      return response;
+    })
+    .catch(error => {
+      console.log("The error is: ", error);
+    })
   }
 
-  createOneRegister () {
+  createOneRegister (name, occupation, weapon, cartoon) {
+   
+    const characterInfo = {
+      name,
+      occupation,
+      weapon,
+      cartoon,
+   };
+
+    axios.post('http://localhost:8000/characters', characterInfo)
+    .then(response => {
+      return response;
+    })
+    .catch(error => {
+        console.log("Error is: ", error);
+    })
 
   }
 
   updateOneRegister () {
-
+    
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    return axios.delete(`http://localhost:8000/characters/${id}`)
+    .then(response => {
+      return response;
+    })
+    .catch(error => {
+      console.log("The error is: ", error);
+    })
   }
 }
