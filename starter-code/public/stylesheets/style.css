@@ -41,13 +41,15 @@ button {
   text-align: center;
 }
 
-.characters-container {
+#characters-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
+  height: 200px;
+  overflow-y:auto;
 }
 
 .active {
