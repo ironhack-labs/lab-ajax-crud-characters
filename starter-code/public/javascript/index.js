@@ -14,7 +14,7 @@ $(document).ready(() => {
           <div class="name"> Name : ${character.name}</div>
           <div class="occupation"> Occupation : ${character.occupation}</div>
           <div class="weapon"> Weapon : ${character.weapon}</div>
-          <div class="cartoon">Debt : ${character.debt}</div>
+          <div class="cartoon">Is a Cartoon? : ${character.debt}</div>
         </div>`;
 
           $('.characters-container').html(charList);
@@ -63,15 +63,27 @@ $(document).ready(() => {
       debt: $('#edit-character-form [name="cartoon"]').prop("checked"),
       weapon: $('#edit-character-form [name="weapon"]').val(),
     }
+
+    let oneChar = `<div class="character-info">
+      <div class="name"> ID : ${charID}</div>
+      <div class="name"> Name : ${updatedcharacterInfo.name}</div>
+      <div class="occupation"> Occupation : ${updatedcharacterInfo.occupation}</div>
+      <div class="weapon"> Weapon : ${updatedcharacterInfo.weapon}</div>
+      <div class="cartoon">Debt : ${updatedcharacterInfo.debt}</div>
+    </div>`;
+
+        $('.characters-container').html(oneChar);
     
     console.log(updatedcharacterInfo);
     
     axios.patch(`https://ih-crud-api.herokuapp.com/characters/${charID}`, updatedcharacterInfo)
     .then(response => {
+          $('#edit-character-form #send-data').css("background-color", "rgba(0, 128, 0, 0.5)");
           console.log('update successful: ', response);
           document.getElementById("update-form").reset();
     })
     .catch(error => {
+      $('#edit-character-form #send-data').css("background-color", "rgba(255, 0, 0, 0.5)");
         console.log(error);
     })
 
@@ -93,7 +105,7 @@ $(document).ready(() => {
       debt: cartoon
     })
       .then(() => {
-        console.log('Hola Hovito');
+        $('#new-character-form #send-data').css("background-color", "rgba(0, 128, 0, 0.5)");
 
         $('[name="name"]').val("");
         $('[name="occupation"]').val("");
@@ -101,6 +113,7 @@ $(document).ready(() => {
         $('[name="cartoon"]').prop("checked", false);
       })
       .catch((err) => {
+        $('#new-character-form #send-data').css("background-color", "rgba(255, 0, 0, 0.5)");
         console.log(err);
       })
 
