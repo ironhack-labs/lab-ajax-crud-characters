@@ -13,7 +13,7 @@
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
+    <div id="charBox" class="characters-container">
       <div class="character-info">
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
@@ -27,7 +27,7 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input id="idSearch" type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
@@ -44,21 +44,21 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input id="new-name" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input id="new-occupation" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input id="new-weapon" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input id="new-debt" name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button id="send-data1">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -84,7 +84,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="send-data2">Update</button>
       </form>
     </section>
   </section>
