@@ -37,7 +37,7 @@ class APIHandler {
       weapon,
       cartoon,
     }
-    axios.put(`${this.BASE_URL}/characters/${id}`, updateCharacter)
+    return axios.put(`${this.BASE_URL}/characters/${id}`, updateCharacter)
       .then(answer => `${answer} updated`)
       .catch(((err) => { `Blasting! ${err}` }));
   }

@@ -4,7 +4,7 @@ const charactersAPI = new APIHandler("http://localhost:8000")
 $(document).ready(() => {
   document.getElementById('fetch-all').onclick = (event) => {
     event.preventDefault()
-    const cards = document.getElementById('cards');
+    const cards = document.getElementById('characters-container');
     cards.innerHTML = '';
     charactersAPI.getFullList()
       .then((answer) => {
@@ -22,7 +22,7 @@ $(document).ready(() => {
 
   document.getElementById('fetch-one').onclick = (event) => {
     event.preventDefault();
-    const cards = document.getElementById('cards');
+    const cards = document.getElementById('characters-container');
     cards.innerHTML = '';
     const search = document.getElementById('search').value;
     if (search === '') return;
@@ -45,6 +45,9 @@ $(document).ready(() => {
     const deleteID = document.getElementById('delete-char').value;
     if (deleteID === '') return;
     charactersAPI.deleteOneRegister(deleteID);
+
+
+
   };
 
   document.getElementById('edit-character-form').onsubmit = () => {
