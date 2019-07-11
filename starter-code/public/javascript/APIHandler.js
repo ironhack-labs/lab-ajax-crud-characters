@@ -18,14 +18,26 @@ class APIHandler {
 
     return axios.post(`${this.BASE_URL}/characters`, newCharacter)
       .then((response) => {
-        const okCreate = document.getElementById('delete-one');
+        const card = document.querySelector('.characters-container');
+        card.innerHTML = '';
+
+        card.innerHTML += `
+          <div class="character-info">
+            <div class="name">Id: <span>${response.data.id}</span></div>
+            <div class="name">Name: <span>${response.data.name}</span></div>
+            <div class="occupation">Occupation: <span>${response.data.occupation}</span></div>
+            <div class="cartoon">Is a Cartoon?: <span>${response.data.cartoon}</span></div>
+            <div class="weapon">Weapon: <span>${response.data.weapon}</span></div>
+          </div>
+        `;
+
+        const okCreate = document.getElementById('create-data');
         okCreate.style.backgroundColor = 'green';
-        console.log(response.data);
       })
-      .catch(err => {
-        const failCreate = document.getElementById('delete-one');
+      .catch((err) => {
+        const failCreate = document.getElementById('create-data');
         failCreate.style.backgroundColor = 'red';
-        console.log(err)
+        console.log(err);
       });
   }
 
@@ -138,13 +150,13 @@ class APIHandler {
 
     return axios.post(`${this.BASE_URL}/characters/${id}`, editCharacter)
       .then((response) => {
-        const okUpdate = document.getElementById('delete-one');
+        const okUpdate = document.getElementById('update-data');
         okUpdate.style.backgroundColor = 'green';
       })
-      .catch(err => {
-        const failUpdate = document.getElementById('delete-one');
+      .catch((err) => {
+        const failUpdate = document.getElementById('update-data');
         failUpdate.style.backgroundColor = 'red';
-        console.log(err)
+        console.log(err);
       });
   }
 
@@ -154,13 +166,31 @@ class APIHandler {
       .then((response) => {
         const deleteOne = document.getElementById('delete-one-input').value;
         if (deleteOne === '') return;
+
+        const card = document.querySelector('.characters-container');
+        card.innerHTML = '';
+
+        card.innerHTML += `
+          <div class="character-info">
+            <div>Character has been successfully deleted.</div>
+          </div>
+        `;
+
         const okDelete = document.getElementById('delete-one');
         okDelete.style.backgroundColor = 'green';
       })
-      .catch(err => {
+      .catch((err) => {
+        const card = document.querySelector('.characters-container');
+        card.innerHTML = '';
+
+        card.innerHTML += `
+          <div class="character-info">
+            <div>Character not found.</div>
+          </div>
+        `;
         const failDelete = document.getElementById('delete-one');
         failDelete.style.backgroundColor = 'red';
-        console.log(err)
+        console.log(err);
       });
   }
 }

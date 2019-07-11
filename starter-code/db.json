@@ -34,6 +34,20 @@
       "weapon": "Weapon",
       "cartoon": false,
       "id": 5
+    },
+    {
+      "name": "Teste",
+      "occupation": "teste",
+      "weapon": "teste",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Starbucks",
+      "occupation": "Smuggler",
+      "weapon": "Arma",
+      "cartoon": false,
+      "id": 7
     }
   ]
 }
