@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Darth Vader",
+      "occupation": "Sith",
+      "cartoon": true,
+      "weapon": "Red Lightsaber",
+      "id": 2
+    },
+    {
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "Han Solo",
+      "occupation": "Rogue",
+      "cartoon": "Pistol Bastler",
+      "weapon": true,
+      "id": 4
+    }
+  ]
+}
