@@ -48,27 +48,44 @@ $(document).ready(() => {
       .catch(err => console.log(err));
   };
 
-  document.getElementById('delete-one').onclick = () => {
+  document.getElementById('delete-one').onclick = (e) => {
+    e.preventDefault();
     const id = document.querySelector('#character-id-delete').value;
     charactersAPI.deleteOneRegister(id)
       .then((res) => {
+        document.querySelector('#delete-one').style.backgroundColor = 'green';
         populateCharacters();
       })
-      .catch(err => console.log(err));
+      .catch((err) => {
+        document.querySelector('#delete-one').style.backgroundColor = 'red';
+        console.log(err);
+      });
   };
 
   document.getElementById('edit-character-form').onsubmit = (e) => {
     e.preventDefault();
     const id = document.querySelector('#chr-id').value;
     charactersAPI.updateOneRegister(id)
-      .then(populateCharacters())
-      .catch(err => console.log(err));
+      .then((res) => {
+        populateCharacters();
+        document.querySelector('#edit-character-form #send-data').style.backgroundColor = 'green';
+      })
+      .catch((err) => {
+        document.querySelector('#edit-character-form #send-data').style.backgroundColor = 'red';
+        console.log(err);
+      });
   };
 
   document.getElementById('new-character-form').onsubmit = (e) => {
     e.preventDefault();
     charactersAPI.createOneRegister()
-      .then(res => populateCharacters())
-      .catch(err => console.log(err));
+      .then((res) => {
+        populateCharacters();
+        document.querySelector('#new-character-form #send-data').style.backgroundColor = 'green';
+      })
+      .catch((err) => {
+        document.querySelector('#new-character-form #send-data').style.backgroundColor = 'red';
+        console.log(err);
+      });
   };
 });
