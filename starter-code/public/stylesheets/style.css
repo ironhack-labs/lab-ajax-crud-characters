@@ -50,6 +50,10 @@ button {
   flex-flow: row wrap;
 }
 
+.characters-container p{
+  color: yellow
+}
+
 .active {
   background-color: #42f471;
 }
