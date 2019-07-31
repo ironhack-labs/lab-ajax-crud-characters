@@ -1,4 +1,6 @@
-const charactersAPI = new APIHandler("http://localhost:8000")
+const charactersAPI = new APIHandler("https://minions-api.herokuapp.com/characters")
+
+
 
 $(document).ready( () => {
   document.getElementById('fetch-all').onclick = function(){
