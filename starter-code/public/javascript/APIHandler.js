@@ -12,6 +12,8 @@ class APIHandler {
     // const theOccupation = document.getElementsByClassName("the-occupation")
     // const theWeapon = document.getElementsByClassName("the-weapon")
 
+    // const editCharId = document.getElementById('edit-char-id').value
+
   }
 
   getFullList() {
@@ -58,6 +60,21 @@ class APIHandler {
   }
 
   updateOneRegister() {
+    const editCharId = document.getElementById('edit-char-id').value
+
+    const theNameEdit = document.getElementsByClassName("the-name")[1].value
+    const theOccupationEdit = document.getElementsByClassName("the-occupation")[1].value
+    const theCartoonEdit = document.getElementById('is-cartoon').checked
+    const theWeaponEdit = document.getElementsByClassName("the-weapon")[1].value
+
+    const charsEditModel = {
+      name: theNameEdit,
+      occupation: theOccupationEdit,
+      weapon: theWeaponEdit,
+      cartoon: theCartoonEdit
+    }
+    console.log(charsEditModel)
+    this.minions.put(`characters/${editCharId}`, charsEditModel)
 
   }
 

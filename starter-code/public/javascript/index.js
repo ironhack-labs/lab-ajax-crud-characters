@@ -21,7 +21,8 @@ $(document).ready(() => {
   }
 
   document.getElementById('edit-character-form').onsubmit = function (event) {
-
+    event.preventDefault()
+    charactersAPI.updateOneRegister()
   }
 
   document.getElementById('new-character-form').onsubmit = function (event) {
