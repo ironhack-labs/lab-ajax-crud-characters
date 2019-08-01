@@ -17,7 +17,8 @@ $(document).ready(() => {
   }
 
   document.getElementById('delete-one').onclick = function (event) {
-
+    event.preventDefault()
+    charactersAPI.deleteOneRegister()
   }
 
   document.getElementById('edit-character-form').onsubmit = function (event) {

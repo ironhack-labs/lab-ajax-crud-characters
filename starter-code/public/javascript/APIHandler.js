@@ -73,12 +73,13 @@ class APIHandler {
       weapon: theWeaponEdit,
       cartoon: theCartoonEdit
     }
-    console.log(charsEditModel)
+
     this.minions.put(`characters/${editCharId}`, charsEditModel)
 
   }
 
   deleteOneRegister() {
-
+    const deleteCharId = document.getElementById("char-delete-id").value
+    this.minions.delete(`characters/${deleteCharId}`)
   }
 }
