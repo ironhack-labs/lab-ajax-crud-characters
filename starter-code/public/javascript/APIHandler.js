@@ -2,7 +2,7 @@ class APIHandler {
   constructor (baseUrl) {
     this.BASE_URL = "https://minions-api.herokuapp.com/"
     this.minions = axios.create({
-      baseUrl: this.BASE_URL
+      BASE_URL: this.BASE_URL   // si no lo pones en mayúsculas no lo coge
     })
 
     const theName = document.getElementsByClassName("name")
@@ -18,10 +18,10 @@ class APIHandler {
 
           response.data.forEach(elm => {
             console.log(`${elm.name}`)
-          document.getElementsByClassName("name")[0].innerHTML += `- ${elm.name}`
+          document.getElementsByClassName("name")[0].innerHTML += ` ${elm.name}`
           document.getElementsByClassName("occupation")[0].innerHTML += ` ${elm.occupation}`
           document.getElementsByClassName("cartoon")[0].innerHTML += ` ${elm.cartoon}`
-          document.getElementsByClassName("weapon")[0].innerHTML += ` ${elm.weapon}-`})
+          document.getElementsByClassName("weapon")[0].innerHTML += ` ${elm.weapon}`})
       })
       .catch(err => console.log("Hubo un error: ",err ))
   }
@@ -51,7 +51,7 @@ class APIHandler {
     axios.post(`${this.BASE_URL}characters`, characterToCreate)
       .then(
         (response) => {
-        const {name, occupation, weapon,cartoon} = response.data
+        //const {name, occupation, weapon,cartoon} = response.data
         console.log("Personje", characterToCreate)
       })
       .catch(err => console.log("Hubo un error: ",err ))
