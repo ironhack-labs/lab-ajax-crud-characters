@@ -42,7 +42,7 @@ class APIHandler {
   createOneRegister() {
     const theName = document.getElementsByClassName("the-name")[0].value
     const theOccupation = document.getElementsByClassName("the-occupation")[0].value
-    const theCartoon = document.getElementById('is-cartoon').value
+    const theCartoon = document.getElementById('is-cartoon').checked
     const theWeapon = document.getElementsByClassName("the-weapon")[0].value
 
 
@@ -52,30 +52,8 @@ class APIHandler {
       weapon: theWeapon,
       cartoon: theCartoon
     }
-    console.log(charsModel)
+
     this.minions.post("characters", charsModel)
-
-
-
-
-
-    //   const characterToCreate = {
-    //     name: theName[0].value,
-    //     occupation: theOccupation[0].value,
-    //     weapon: theWeapon[0].value
-    // }
-
-    // charactersApp.post('/', characterToCreate)
-    //     .then(response => {
-    //         const { id, name, occupation } = response.data
-    //         const characterLi = `<li><strong>Personaje creado</strong><br>Nombre: ${name} (id ${id}), ocupación: ${occupation}`
-    //         document.getElementById('characters-list').innerHTML += characterLi
-
-    //         document.getElementById("character-form").reset()
-    //         updateAllCharacters()
-    //     })
-    //     .catch(err => console.log(err))
-
 
   }
 

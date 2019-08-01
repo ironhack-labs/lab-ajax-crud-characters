@@ -11,6 +11,7 @@ $(document).ready(() => {
   }
 
   document.getElementById('fetch-one').onclick = function (event) {
+    event.preventDefault()
     charactersAPI.getOneRegister()
 
   }
@@ -24,6 +25,7 @@ $(document).ready(() => {
   }
 
   document.getElementById('new-character-form').onsubmit = function (event) {
+    event.preventDefault()
     charactersAPI.createOneRegister()
   }
 })
