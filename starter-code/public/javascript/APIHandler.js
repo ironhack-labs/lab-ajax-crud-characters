@@ -19,6 +19,10 @@ class APIHandler {
        </div> `
        })
     })
+    .then(()=> document.getElementById('fetch-all-button').innerHTML = `#fetch-all{color:green; border-color:green`)
+    setTimeout(() =>
+    document.getElementById('fetch-all-button').innerHTML = `#fetch-all{color:white; border-color:white}`, 500)
+
   }
 
   getOneRegister () {
@@ -29,8 +33,10 @@ class APIHandler {
         document.getElementsByClassName("occupation")[0].innerHTML += ': ' +response.data.occupation
         document.getElementsByClassName("weapon")[0].innerHTML += ': ' +response.data.weapon
         document.getElementsByClassName("cartoon")[0].innerHTML += ': ' +response.data.cartoon
-
       })
+      .then(()=> document.getElementById('fetch-one-button').innerHTML = `#fetch-one{color:green; border-color:green`)
+      setTimeout(() =>
+      document.getElementById('fetch-one-button').innerHTML = `#fetch-one{color:white; border-color:white}`, 500)
   }
 
   createOneRegister () {
@@ -41,6 +47,9 @@ class APIHandler {
         cartoon: document.getElementsByName("cartoon")[0].checked
     }
     this.axios.post('/', characterToCreate)
+    .then(()=> document.getElementById('send-button').innerHTML = `.send-button{color:green; border-color:green`)
+    setTimeout(() =>
+    document.getElementById('send-button').innerHTML = `.send-button{color:white; border-color:white}`, 500)
   }
 
   updateOneRegister () {
@@ -52,14 +61,20 @@ class APIHandler {
         cartoon: document.getElementsByName("cartoon")[1].checked
     }
     this.axios.put(`/${charId}`, updatedCharacter)
-    .then(()=> document.getElementsByClassName('update-data')[0].innerHTML += `<style>.update-data{color:green; border-color:green}</style>`)
+    .then(()=> document.getElementById('update-data').innerHTML = `.update-data{color:green; border-color:green`)
+    setTimeout(() =>
+    document.getElementById('update-data').innerHTML = `.update-data{color:white; border-color:white}`, 500)
 
   }
 
   deleteOneRegister () {
     const charId = document.getElementsByName('character-id-delete')[0].value
     this.axios.delete(`/${charId}`)
-      .then(()=> document.getElementsByName('character-id-delete')[0].innerHTML += `<style>#delete-one{color:green; border-color:green}</style>`)
-      .catch(err =>  document.getElementsByName('character-id-delete')[0].innerHTML += `<style>#delete-one{color:red; border-color:red}</style>`)
+      .then(()=> {
+        document.getElementById('delete').innerHTML = `#delete-one{color:green; border-color:green}`
+        setTimeout(() =>
+        document.getElementById('delete').innerHTML = `#delete-one{color:white; border-color:white}`, 500)
+      })
+      // .catch(err =>  document.getElementsByName('character-id-delete')[0].innerHTML += `<style>#delete-one{color:red; border-color:red}</style>`)
   }
 }

@@ -23,5 +23,7 @@ $(document).ready( () => {
     e.preventDefault()
     charactersAPI.createOneRegister()
     document.getElementById("new-character-form").reset()
+    document.getElementsByClassName('update-data')[0].innerHTML = `<style>.update-data{color:white; border-color:white}</style>`
+
   }
 })
