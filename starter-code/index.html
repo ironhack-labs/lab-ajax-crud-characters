@@ -55,20 +55,22 @@
     </section>
   </section>
   <section class="container">
+
     <section class="form-container">
       <h2>New Character</h2>
+
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input id="new-char-name" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input id="new-char-occ" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input id="new-char-weapon" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
@@ -76,13 +78,14 @@
         </div>
         <button id="send-data">Create</button>
       </form>
+
     </section>
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" id="edit-id" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>

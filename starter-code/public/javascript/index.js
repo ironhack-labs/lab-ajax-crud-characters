@@ -1,12 +1,13 @@
 const charactersAPI = new APIHandler("https://ih-crud-api.herokuapp.com/characters")
 
 $(document).ready(() => {
+
   document.getElementById('fetch-all').onclick = function () {
 
     axios.get('https://ih-crud-api.herokuapp.com/characters')
       .then((result) => {
 
-        //we make an axios request to the url + the searchterm
+        //we make an axios request to the url the geet an instance of the data
 
         let characterList = result.data;
 
@@ -55,7 +56,7 @@ $(document).ready(() => {
 
         // TODO Why the .data? To get back what kind of useable object?
         let character = result.data;
-        
+
         // create new box and give it proper css class then append it too container
         let newBox = $('<div></div>');
         newBox.addClass('character-info');
@@ -71,7 +72,7 @@ $(document).ready(() => {
 
       })
       .catch((err) => {
-        console.log(`Error pulling single character`,err);
+        console.log(`Error pulling single character`, err);
       })
 
 
@@ -83,9 +84,77 @@ $(document).ready(() => {
 
   document.getElementById('edit-character-form').onsubmit = function () {
 
+    let theForm = $('#edit-character-form');
+
+    theForm.submit(function (e) {
+      // TODO Not sure what this does?
+      e.preventDefault();
+
+      let searchID = $('#edit-id').val()
+      // grab the value of the id from the input box
+
+      axios.get(`https://ih-crud-api.herokuapp.com/characters/${searchID}`)
+        .then((result) => {
+
+          let foundCharacter = result.data;
+          console.log(foundCharacter);
+
+          //we make an axios request to the url + the searchID
+
+          let name = foundCharacter.name;
+          let occupation = foundCharacter.occupation;
+          let weapon = foundCharacter.weapon;
+
+          // we grab a bunch of values from the thing we get back from the axios call
+
+          //then append a bunch of stuff to the div
+          theDiv.append(`<h2> Name: ${theName} </h2>`);
+          theDiv.append(`<br>`)
+          theDiv.append(`<h5>Capital: ${capital} </h5> `)
+          theDiv.append(`<p>Language: ${language} </p> `)
+          theDiv.append('<h3>Borders</h3>')
+          border.forEach((eachBorder) => {
+            console.log(eachBorder)
+            theDiv.append(`<li> ${eachBorder} </li>`)
+          })
+
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+
+    })
+
   }
 
   document.getElementById('new-character-form').onsubmit = function () {
 
+    event.preventDefault();
+
+    // get values from fields
+    let name = $(`#new-char-name`).val();
+    let occ = $(`#new-char-occ`).val();
+    let weapon = $(`#new-char-weapon`).val();
+
+    // create new object using the values
+    const characterInfo = {
+      name: name,
+      occupation: occ,
+      weapon: weapon
+    };
+
+    // pass object to api through post request
+    axios.post('https://ih-crud-api.herokuapp.com/characters', characterInfo)
+      .then(response => {
+
+        console.log("You just created this character: ", response.data);
+
+      })
+      .catch(error => {
+        console.log("Error is: ", error);
+      })
+
+
   }
+
 })
