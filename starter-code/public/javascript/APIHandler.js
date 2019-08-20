@@ -10,6 +10,7 @@ class APIHandler {
     axios.get('https://ih-crud-api.herokuapp.com/characters')
       .then(result => {
         let container = $(".characters-container")
+        container.html("")
         result.data.map(char => {
           let list = ` <div class="character-info">
         <div class="name">${char.name}</div>
@@ -59,8 +60,17 @@ class APIHandler {
       .catch(err => console.log('error creating character'))
   }
 
-  updateOneRegister() {
-
+  updateOneRegister(id) {
+    const updatedCharInfo = {
+      name: $('#updateName').val(),
+      occupation: $('#updatedOccupation').val(),
+      weapon: $('#updatedWeapon').val()
+    }
+    axios.put(`https://ih-crud-api.herokuapp.com/characters/${id}`, updatedCharInfo)
+      .then(response => {
+        console.log(response)
+      })
+      .catch(err => console.log(err))
   }
 
   deleteOneRegister(id) {

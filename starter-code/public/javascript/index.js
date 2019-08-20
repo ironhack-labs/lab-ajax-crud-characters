@@ -15,12 +15,17 @@ $(document).ready(() => {
     charactersAPI.deleteOneRegister(id)
   }
 
-  document.getElementById('edit-character-form').onsubmit = function () {
+  document.getElementById('edit-character-form').onsubmit = function (e) {
+
+    const id = $('[name= "chr-id"] ').val()
+    e.preventDefault()
+    charactersAPI.updateOneRegister(id)
 
   }
 
   document.getElementById('new-character-form').onsubmit = function (e) {
     e.preventDefault()
     charactersAPI.createOneRegister()
+
   }
 })
