@@ -19,7 +19,8 @@ $(document).ready(() => {
 
   }
 
-  document.getElementById('new-character-form').onsubmit = function () {
-
+  document.getElementById('new-character-form').onsubmit = function (e) {
+    e.preventDefault()
+    charactersAPI.createOneRegister()
   }
 })

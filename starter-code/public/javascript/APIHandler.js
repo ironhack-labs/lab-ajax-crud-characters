@@ -41,19 +41,22 @@ class APIHandler {
       .catch(err => console.log(err))
   }
 
+
+
   createOneRegister() {
-    const name = $('#createName').val()
-    const occupation = $('#createOccupation').val()
-    const weapon = $('createWeapon').val()
+
+
     const charInfo = {
-      name: name,
-      occupation: occupation,
-      weapon: weapon
+      name: $('#createName').val(),
+      occupation: $('#createOccupation').val(),
+      weapon: $('#createWeapon').val()
     }
 
-
-
-
+    axios.post('https://ih-crud-api.herokuapp.com/characters', charInfo)
+      .then(data => {
+        console.log(charInfo)
+      })
+      .catch(err => console.log('error creating character'))
   }
 
   updateOneRegister() {
