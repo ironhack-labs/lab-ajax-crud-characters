@@ -84,46 +84,39 @@ $(document).ready(() => {
 
   document.getElementById('edit-character-form').onsubmit = function () {
 
-    let theForm = $('#edit-character-form');
+    // Prevents unwanted refreshing from form submission
+    event.preventDefault();
 
-    theForm.submit(function (e) {
-      // TODO Not sure what this does?
-      e.preventDefault();
+    // First get id from input
+    const theId = document.getElementById("edit-id").value;
 
-      let searchID = $('#edit-id').val()
-      // grab the value of the id from the input box
+    // get values from fields
+    let name = $(`#edit-name`).val();
+    let occ = $(`#edit-occupation`).val();
+    let weapon = $(`#edit-weapon`).val();
 
-      axios.get(`https://ih-crud-api.herokuapp.com/characters/${searchID}`)
-        .then((result) => {
+    // create new info to place into exsisting character
+    const updatedcharacterInfo = {
 
-          let foundCharacter = result.data;
-          console.log(foundCharacter);
+      name: name,
+      occupation: occ,
+      weapon: weapon
 
-          //we make an axios request to the url + the searchID
+    };
 
-          let name = foundCharacter.name;
-          let occupation = foundCharacter.occupation;
-          let weapon = foundCharacter.weapon;
+    // Patch requests allow us to modify details in exsisting
+    axios.patch(`https://ih-crud-api.herokuapp.com/characters/${theId}`, updatedcharacterInfo)
+      .then(response => {
 
-          // we grab a bunch of values from the thing we get back from the axios call
+        console.log('update successful: ', response);
 
-          //then append a bunch of stuff to the div
-          theDiv.append(`<h2> Name: ${theName} </h2>`);
-          theDiv.append(`<br>`)
-          theDiv.append(`<h5>Capital: ${capital} </h5> `)
-          theDiv.append(`<p>Language: ${language} </p> `)
-          theDiv.append('<h3>Borders</h3>')
-          border.forEach((eachBorder) => {
-            console.log(eachBorder)
-            theDiv.append(`<li> ${eachBorder} </li>`)
-          })
+        // TODO What is this doing?
+        document.getElementById("edit-character-form").reset();
 
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-
-    })
+      })
+      .catch(error => {
+        console.log(error);
+      })
 
   }
 

@@ -82,22 +82,23 @@
     </section>
     <section class="form-container">
       <h2>Edit Character</h2>
+
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" id="edit-id" name="chr-id">
+          <input id="edit-id" type="text" id="edit-id" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input id="edit-name" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input id="edit-occupation" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input id="edit-weapon" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
@@ -105,6 +106,7 @@
         </div>
         <button id="send-data">Update</button>
       </form>
+
     </section>
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
