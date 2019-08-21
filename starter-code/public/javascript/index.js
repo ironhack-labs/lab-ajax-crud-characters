@@ -80,6 +80,18 @@ $(document).ready(() => {
 
   document.getElementById('delete-one').onclick = function () {
 
+    // Get value inside the textbox we want to get value from 
+    let characterID = $(`#delete-id`).val();
+
+    axios.delete(`https://ih-crud-api.herokuapp.com/characters/${characterID}`)
+      .then(() => {
+        console.log("Succcessfully deleted")
+      })
+      .catch((err) => {
+        console.log(characterID);
+        console.log("ERROR DELETING CHARACTER", err);
+      })
+
   }
 
   document.getElementById('edit-character-form').onsubmit = function () {
