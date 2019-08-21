@@ -1,5 +1,3 @@
-const charactersAPI = new APIHandler("https://ih-crud-api.herokuapp.com/characters")
-
 $(document).ready(() => {
 
   document.getElementById('fetch-all').onclick = function () {
@@ -83,6 +81,7 @@ $(document).ready(() => {
     // Get value inside the textbox we want to get value from 
     let characterID = $(`#delete-id`).val();
 
+    // Delete request that takes id we provide it
     axios.delete(`https://ih-crud-api.herokuapp.com/characters/${characterID}`)
       .then(() => {
         console.log("Succcessfully deleted")
