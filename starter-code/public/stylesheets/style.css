@@ -79,6 +79,10 @@ button {
   left: 50%;
 }
 
+.character-info span{
+  padding-left: 50px;
+}
+
 .form-container {
   display: inline-block;
   width: 49%;
