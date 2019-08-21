@@ -124,6 +124,9 @@ $(document).ready(() => {
 
     event.preventDefault();
 
+    // create button
+    let theButton = $(`#send-data`);
+
     // get values from fields
     let name = $(`#new-char-name`).val();
     let occ = $(`#new-char-occ`).val();
@@ -141,10 +144,12 @@ $(document).ready(() => {
       .then(response => {
 
         console.log("You just created this character: ", response.data);
+        theButton.css("background-color", "green");
 
       })
       .catch(error => {
         console.log("Error is: ", error);
+        theButton.css("background-color", "red");
       })
 
 
