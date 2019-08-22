@@ -68,7 +68,7 @@ button {
   width: 40%;
   margin: 10px;
   padding: 10px;
-  text-align: left;
+  text-align: justify;
   border: solid white 2px;
   border-radius: 20px;
 }
