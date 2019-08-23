@@ -75,6 +75,30 @@
       "weapon": "",
       "cartoon": false,
       "id": 11
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "Adrian",
+      "occupation": "Coder",
+      "weapon": "Asus",
+      "cartoon": true,
+      "id": 14
+    },
+    {
+      "id": 15
     }
   ]
 }
