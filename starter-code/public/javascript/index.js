@@ -19,6 +19,19 @@ $(document).ready( () => {
   }
   
   document.getElementById('new-character-form').onsubmit = function(){
-                
+    //let name = document.querySelector('#new-character-form input[name="name"]').value
+    //let occupation = document.querySelector('#new-character-form input[name="occupation"]').value
+    //let weapon = document.querySelector('#new-character-form input[name="weapon"]').value
+    //let cartoon = document.querySelector('#new-character-form input[name="cartoon"]').value
+    
+
+    const character = {
+      name: document.querySelector('#new-character-form input[name="name"]').value,
+      occupation: document.querySelector('#new-character-form input[name="occupation"]').value,
+      weapon: document.querySelector('#new-character-form input[name="weapon"]').value,
+      cartoon: document.querySelector('#new-character-form input[name="cartoon"]').checked
+    }
+    console.log(character.cartoon)
+    charactersAPI.createOneRegister(character);
   }
 })

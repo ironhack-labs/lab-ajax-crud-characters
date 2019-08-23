@@ -35,9 +35,13 @@ class APIHandler {
     })
   }
   //Create a single character posting the data to http://localhost:8000/characters
-  createOneRegister () {
-    axios.post(`${baseUrl}/characters`).then(() => {
-
+  createOneRegister (character) {
+    console.log("starting")
+    axios.post(`${this.BASE_URL}/characters`, character).then(response => {
+      console.log('success')
+      console.log(response)
+    }).catch(error => {
+      console.log(error)
     })
 
   }
