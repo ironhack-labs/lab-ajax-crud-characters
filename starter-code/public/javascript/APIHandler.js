@@ -4,10 +4,20 @@ class APIHandler {
   }
   //Get all the characters info from http://localhost:8000/characters
   getFullList () {
-    axios.get(`${BASE_URL}/characters`).then(() => {
-      //array
-      
+    axios.get(`${this.BASE_URL}/characters`).then((data) => {
+      //array = data
 
+      data.data.forEach(char => {
+        let html = `<div class="characters-container">
+        <div class="character-info">
+          <div class="name">${char.name}</div>
+          <div class="occupation">${char.occupation}</div>
+          <div class="cartoon">${char.cartoon}</div>
+          <div class="weapon">${char.weapon}</div>
+        </div>`
+  
+        document.querySelector(".characters-container").innerHTML += html
+      })
     })
   }
   //Get a single character info from http://localhost:8000/characters/:id
@@ -21,7 +31,7 @@ class APIHandler {
         <div class="weapon">${data.data.weapon}</div>
       </div>`
 
-      document.body.innerHTML += html
+      document.querySelector(".characters-container").innerHTML += html
     })
   }
   //Create a single character posting the data to http://localhost:8000/characters
