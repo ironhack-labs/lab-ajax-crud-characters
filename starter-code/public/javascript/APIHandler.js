@@ -10,10 +10,10 @@ class APIHandler {
       data.data.forEach(char => {
         let html = `<div class="characters-container">
         <div class="character-info">
-          <div class="name">${char.name}</div>
-          <div class="occupation">${char.occupation}</div>
-          <div class="cartoon">${char.cartoon}</div>
-          <div class="weapon">${char.weapon}</div>
+          <div class="name">Name: <span>${char.name}</span></div>
+          <div class="occupation">Occupation: <span>${char.occupation}</span></div>
+          <div class="cartoon">Cartoon? <span>${char.cartoon}</span></div>
+          <div class="weapon">Weapon? <span>${char.weapon}</span></div>
         </div>`
   
         document.querySelector(".characters-container").innerHTML += html
@@ -36,12 +36,11 @@ class APIHandler {
   }
   //Create a single character posting the data to http://localhost:8000/characters
   createOneRegister (character) {
-    console.log("starting")
+    let button = document.querySelector('#new-character-form > button')
     axios.post(`${this.BASE_URL}/characters`, character).then(response => {
-      console.log('success')
-      console.log(response)
+      button.style.backgroundColor = "green";
     }).catch(error => {
-      console.log(error)
+      button.style.backgroundColor = "red";
     })
 
   }
@@ -52,9 +51,9 @@ class APIHandler {
     })
   }
   //Delete a single character through his id in http://localhost:8000/characters/:id
-  deleteOneRegister () {
-    axios.delete(`${baseUrl}/characters/:id`).then(() => {
-      
+  deleteOneRegister (id) {
+    axios.delete(`${this.BASE_URL}/characters/${id}`).then(data => {
+      console.log(data);
     })
   }
 }

@@ -1,13 +1,6 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
       "id": 2,
       "name": "Luke Skywalker",
       "occupation": "Jedi Knight",
@@ -218,6 +211,48 @@
       "weapon": "isnt",
       "cartoon": false,
       "id": 32
+    },
+    {
+      "name": "hello",
+      "occupation": "this",
+      "weapon": "is",
+      "cartoon": true,
+      "id": 33
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 34
+    },
+    {
+      "name": "hello",
+      "occupation": "this",
+      "weapon": "is ",
+      "cartoon": true,
+      "id": 35
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 36
+    },
+    {
+      "name": "hello",
+      "occupation": "ho",
+      "weapon": "no",
+      "cartoon": false,
+      "id": 37
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 38
     }
   ]
 }

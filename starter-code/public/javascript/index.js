@@ -11,7 +11,8 @@ $(document).ready( () => {
   }
   
   document.getElementById('delete-one').onclick = function(){
-        
+    let id = document.querySelector('.delete input[name="character-id-delete"]').value
+    charactersAPI.deleteOneRegister(id);
   }
   
   document.getElementById('edit-character-form').onsubmit = function(){
