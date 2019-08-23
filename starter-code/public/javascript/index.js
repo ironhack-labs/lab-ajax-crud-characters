@@ -1,5 +1,12 @@
 const charactersAPI = new APIHandler("http://localhost:8000")
 var characters = {}
+var offBackground = "#629e34"
+var onBackground = "#57627a"
+
+function toggleBackground(color) {
+  let container = document.querySelector("body > section:nth-child(1)")
+  container.style.backgroundColor = color
+}
 
 function clearCharacters() {
   for (key of Object.keys(characters)) {
@@ -69,6 +76,7 @@ class CharacterView {
 $(document).ready(() => {
   document.getElementById('fetch-all').onclick = async function () {
     showAll()
+    toggleBackground(onBackground)
   }
 
   document.getElementById('fetch-one').onclick = async function () {
@@ -76,11 +84,13 @@ $(document).ready(() => {
     let charData = await charactersAPI.getOneRegister(id)
     clearCharacters()
     characters[id] = charViewFromData(charData)
+    toggleBackground(onBackground)
   }
 
   document.getElementById('delete-one').onclick = async function () {
     let id = Number(document.querySelector("body > section:nth-child(1) > section > div.operation.delete > input[type=text]").value)
     await charactersAPI.deleteOneRegister(id)
+    toggleBackground(onBackground)
   }
 
   document.getElementById('edit-character-form').onsubmit = async function (e) {
@@ -92,6 +102,7 @@ $(document).ready(() => {
     }
     let id = Number(document.querySelector("#edit-character-form > div:nth-child(1) > input[type=text]").value)
     await charactersAPI.updateOneRegister(id, processCharData(characterData))
+    toggleBackground(offBackground)
     clearFields()
     showAll()
   }
@@ -104,6 +115,7 @@ $(document).ready(() => {
       cartoon: document.querySelector("#new-character-form > div:nth-child(4) > input[type=checkbox]").checked
     }
     await charactersAPI.createOneRegister(processCharData(characterData))
+    toggleBackground(offBackground)
     clearFields()
     showAll()
   }

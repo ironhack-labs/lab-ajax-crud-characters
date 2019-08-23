@@ -55,6 +55,13 @@
       "weapon": "a",
       "cartoon": false,
       "id": 11
+    },
+    {
+      "name": "John",
+      "occupation": "asfe",
+      "weapon": "sword",
+      "cartoon": true,
+      "id": 12
     }
   ]
 }
