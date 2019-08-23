@@ -32,7 +32,6 @@ $(document).ready( () => {
       weapon: document.querySelector('#new-character-form input[name="weapon"]').value,
       cartoon: document.querySelector('#new-character-form input[name="cartoon"]').checked
     }
-    console.log(character.cartoon)
     charactersAPI.createOneRegister(character);
   }
 })

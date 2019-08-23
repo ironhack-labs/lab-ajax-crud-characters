@@ -1,13 +1,6 @@
 {
   "characters": [
     {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
-    },
-    {
       "id": 3,
       "name": "Sponge Bob",
       "occupation": "Lives under the sea",
@@ -253,6 +246,13 @@
       "weapon": "",
       "cartoon": false,
       "id": 38
+    },
+    {
+      "name": "h3lel",
+      "occupation": "ojkldjals",
+      "weapon": "alsdjlaksjd",
+      "cartoon": false,
+      "id": 39
     }
   ]
 }

@@ -6,18 +6,15 @@ class APIHandler {
   getFullList () {
     axios.get(`${this.BASE_URL}/characters`).then((data) => {
       //array = data
-
+      let html = "" 
       data.data.forEach(char => {
-        let html = `<div class="characters-container">
-        <div class="character-info">
+        html += `<div class="character-info">
           <div class="name">Name: <span>${char.name}</span></div>
           <div class="occupation">Occupation: <span>${char.occupation}</span></div>
           <div class="cartoon">Cartoon? <span>${char.cartoon}</span></div>
-          <div class="weapon">Weapon? <span>${char.weapon}</span></div>
-        </div>`
-  
-        document.querySelector(".characters-container").innerHTML += html
+          <div class="weapon">Weapon? <span>${char.weapon}</span></div></div>`
       })
+    document.querySelector(".characters-container").innerHTML = html
     })
   }
   //Get a single character info from http://localhost:8000/characters/:id
@@ -53,7 +50,9 @@ class APIHandler {
   //Delete a single character through his id in http://localhost:8000/characters/:id
   deleteOneRegister (id) {
     axios.delete(`${this.BASE_URL}/characters/${id}`).then(data => {
-      console.log(data);
+      console.log(data)
+    }).catch(e => {
+      alert(e)
     })
   }
 }
