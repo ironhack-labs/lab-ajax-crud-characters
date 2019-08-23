@@ -1,0 +1,144 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Kaneda",
+      "occupation": "Street Urchin",
+      "weapon": "Sick Ride",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Ashitaka",
+      "occupation": "Chosen Hero",
+      "weapon": "Bow",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Link",
+      "occupation": "Hero of Time",
+      "weapon": "Master Sword",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "Neo",
+      "occupation": "Chosen One",
+      "weapon": "Spatial Awareness",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "Urbosa",
+      "occupation": "Gerudo Warrior",
+      "weapon": "Gerudo Scimitar",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "Samus Aran",
+      "occupation": "Bounty Hunter",
+      "weapon": "Arm Cannon",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "Samus Aran",
+      "occupation": "Bounty Hunter",
+      "weapon": "Arm Cannon",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "Ike",
+      "occupation": "Hero",
+      "weapon": "Sword",
+      "cartoon": false,
+      "id": 20
+    },
+    {
+      "name": "Marth",
+      "occupation": "Hero",
+      "weapon": "Sword",
+      "cartoon": false,
+      "id": 21
+    },
+    {
+      "name": "Roy",
+      "occupation": "Hero",
+      "weapon": "Sword",
+      "cartoon": false,
+      "id": 22
+    },
+    {
+      "name": "Robin",
+      "occupation": "Hero",
+      "weapon": "Magic",
+      "cartoon": false,
+      "id": 23
+    },
+    {
+      "name": "Edelgard",
+      "occupation": "Empress",
+      "weapon": "Spear",
+      "cartoon": false,
+      "id": 24
+    },
+    {
+      "name": "Claude",
+      "occupation": "Leader of the Leicester Alliance",
+      "weapon": "Bow",
+      "cartoon": true,
+      "id": 25
+    },
+    {
+      "name": "Dimitri",
+      "occupation": "King of Faerghus",
+      "weapon": "Sword",
+      "cartoon": true,
+      "id": 26
+    },
+    {
+      "name": "Spider-Man",
+      "occupation": "Hometown Hero",
+      "weapon": "web",
+      "cartoon": true,
+      "id": 27
+    },
+    {
+      "name": "Clark Kent",
+      "occupation": "Journalist",
+      "weapon": "secret identity",
+      "cartoon": true,
+      "id": 28
+    },
+    {
+      "name": "Mary Poppins",
+      "occupation": "Lich",
+      "weapon": "time manipulation",
+      "cartoon": false,
+      "id": 29
+    }
+  ]
+}

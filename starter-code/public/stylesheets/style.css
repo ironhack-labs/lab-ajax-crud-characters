@@ -1,17 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway:900|Roboto&display=swap');
 
 * {
   box-sizing: border-box;
 }
-
+ 
 body {
   font-family: 'Roboto';
   color: white;
-  background: url("../images/minions.jpg")
+  background: url("../images/akira.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
-
+ 
 h1, h2 {
-  color: #d8b362;
+  font-family: 'Raleway';
+  color: #D43C20;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3px;
 }
 
 button {
@@ -37,12 +43,12 @@ button {
   margin: 50px auto 0;
   padding: 10px;
   border-radius: 20px;
-  background-color: rgba(88, 98, 123, 0.95);
+  background-color: rgba(56, 57, 59, 0.76);
   text-align: center;
 }
 
 .characters-container {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -52,6 +58,10 @@ button {
 
 .active {
   background-color: #42f471;
+}
+
+.failed {
+  background-color: #D43C20;
 }
 
 .operations {
@@ -65,11 +75,12 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 100%;
   margin: 10px;
   padding: 10px;
   text-align: left;
   border: solid white 2px;
+  background-color: rgba(46, 46, 46, 0.815);
   border-radius: 20px;
 }
 

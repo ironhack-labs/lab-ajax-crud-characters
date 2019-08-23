@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+ 
   <title>IH Characters</title>
 </head>
 <body>
@@ -24,10 +24,11 @@
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
+        <button id="reset">Reset</button>
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="number" min="1" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
@@ -44,21 +45,21 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" required>
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" required>
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" required>
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button class="send-data">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -66,25 +67,25 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="number" min="1" name="chr-id" required>
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" required>
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" required>
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" required>
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button class="send-data">Update</button>
       </form>
     </section>
   </section>
