@@ -15,10 +15,10 @@
       "id": 4
     },
     {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": "on",
+      "name": "5",
+      "occupation": "5",
+      "weapon": "5",
+      "cartoon": false,
       "id": 5
     },
     {
@@ -253,6 +253,20 @@
       "weapon": "alsdjlaksjd",
       "cartoon": false,
       "id": 39
+    },
+    {
+      "name": "test1",
+      "occupation": "test1",
+      "weapon": "test1",
+      "cartoon": false,
+      "id": 40
+    },
+    {
+      "name": "test2",
+      "occupation": "test2",
+      "weapon": "test2",
+      "cartoon": false,
+      "id": 41
     }
   ]
 }

@@ -15,17 +15,22 @@ $(document).ready( () => {
     charactersAPI.deleteOneRegister(id);
   }
   
-  document.getElementById('edit-character-form').onsubmit = function(){
-            
+  document.getElementById('edit-character-form').onsubmit = function(e){
+    e.preventDefault();
+
+    let char = {
+      id: document.querySelector("#edit-character-form input[name='chr-id']").value,
+      name: document.querySelector("#edit-character-form > div:nth-child(2) > input[type=text]").value,
+      occupation: document.querySelector("#edit-character-form > div:nth-child(3) > input[type=text]").value,
+      weapon: document.querySelector("#edit-character-form > div:nth-child(4) > input[type=text]").value,
+      cartoon: document.querySelector("#edit-character-form > div:nth-child(5) > input[type=checkbox]").checked
+    }
+
+    charactersAPI.updateOneRegister(char);
   }
   
-  document.getElementById('new-character-form').onsubmit = function(){
-    //let name = document.querySelector('#new-character-form input[name="name"]').value
-    //let occupation = document.querySelector('#new-character-form input[name="occupation"]').value
-    //let weapon = document.querySelector('#new-character-form input[name="weapon"]').value
-    //let cartoon = document.querySelector('#new-character-form input[name="cartoon"]').value
-    
-
+  document.getElementById('new-character-form').onsubmit = function(e){
+    e.preventDefault();
     const character = {
       name: document.querySelector('#new-character-form input[name="name"]').value,
       occupation: document.querySelector('#new-character-form input[name="occupation"]').value,

@@ -31,6 +31,7 @@ class APIHandler {
       document.querySelector(".characters-container").innerHTML += html
     })
   }
+
   //Create a single character posting the data to http://localhost:8000/characters
   createOneRegister (character) {
     let button = document.querySelector('#new-character-form > button')
@@ -42,9 +43,11 @@ class APIHandler {
 
   }
   //Edit a single character through his id in http://localhost:8000/characters/:id
-  updateOneRegister () {
-    axios.patch(`${baseUrl}/characters/:id`).then(() => {
-
+  updateOneRegister (char) {
+    axios.patch(`${this.BASE_URL}/characters/${char.id}`, char).then(response => {
+      console.log(response)
+    }).catch(e => {
+      console.log(e);
     })
   }
   //Delete a single character through his id in http://localhost:8000/characters/:id
