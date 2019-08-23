@@ -6,11 +6,6 @@ class APIHandler {
   getFullList () {
 
 
-
-
-
-   
-  
   }
 
   getOneRegister () {

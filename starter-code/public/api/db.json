@@ -40,6 +40,41 @@
       "weapon": "laslskk",
       "cartoon": true,
       "id": 6
+    },
+    {
+      "name": "sdfasdfasdf",
+      "occupation": "asdasdfasdf",
+      "weapon": "asdfasdfasdf",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "asdasd",
+      "occupation": "asdasd",
+      "weapon": "asdasd",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "bbbbb",
+      "occupation": "bbbb",
+      "weapon": "bbbb",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "Jake",
+      "occupation": "Statefarm",
+      "weapon": "Computer",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 11
     }
   ]
 }

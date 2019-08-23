@@ -34,7 +34,7 @@ axios.get(`http://localhost:9000/characters`).then(fullList => {
 
       // Remove function
       document.querySelector("body > section:nth-child(1) > div > div").remove();
-     
+
       let selection = document.querySelector("body > section:nth-child(1) > section > div:nth-child(2) > input[type=text]").value;
 
       selection = parseInt(selection, 10);
@@ -54,14 +54,14 @@ axios.get(`http://localhost:9000/characters`).then(fullList => {
     </div>`
 
       document.querySelector("body > section:nth-child(1) > div").innerHTML += newHTML;
-      
+
     }
 
     document.getElementById('delete-one').onclick = function () {
 
       // Remove function
       document.querySelector("body > section:nth-child(1) > div > div").remove();
-     
+
       let selection = document.querySelector("body > section:nth-child(1) > section > div:nth-child(2) > input[type=text]").value;
 
       selection = parseInt(selection, 10);
@@ -80,10 +80,33 @@ axios.get(`http://localhost:9000/characters`).then(fullList => {
       </div>
     </div>`
 
-    document.querySelector("body > section:nth-child(1) > div").innerHTML - newHTML;
+      document.querySelector("body > section:nth-child(1) > div").innerHTML - newHTML;
     }
-
+    //Edit character button
     document.getElementById('edit-character-form').onsubmit = function () {
+
+      let userChoice = document.querySelector("#edit-character-form > div:nth-child(1) > input[type=text]").value;
+
+      let newUserName = document.querySelector("#edit-character-form > div:nth-child(2) > input[type=text]").value;
+      let newUserOccupation = document.querySelector("#edit-character-form > div:nth-child(3) > input[type=text]").value;
+      let newUserWeapon = document.querySelector("#edit-character-form > div:nth-child(4) > input[type=text]").value;
+      let newUserIsCartoon = document.querySelector("#edit-character-form > div:nth-child(5) > input[type=checkbox]").checked;
+
+      userChoice = parseInt(userChoice, 10)
+      console.log(fullList.data[userChoice])
+      console.log(newUserName, newUserOccupation, newUserWeapon, newUserIsCartoon)
+      fullList.data[userChoice].name = newUserName;
+      fullList.data[userChoice].occupation = newUserOccupation;
+      fullList.data[userChoice].userWeapon = newUserWeapon;
+      fullList.data[userChoice].cartoon = newUserIsCartoon;
+
+
+
+      
+      // //testing
+      // const fs = require('fs');
+      // let data = JSON.stringify('TESTING');
+      // fs.writeFileSync('../api/db.json', data)
 
     }
 
@@ -97,19 +120,19 @@ axios.get(`http://localhost:9000/characters`).then(fullList => {
       let userCartoon = document.querySelector("#new-character-form > div:nth-child(4) > input[type=checkbox]").checked;
 
       const characterInfo = {
-        name:       userName,
+        name: userName,
         occupation: userOccupation,
-        weapon:     userWeapon,
+        weapon: userWeapon,
         cartoon: userCartoon
-    }
-      axios.post('http://localhost:9000/characters',characterInfo)
-      .then(response => {
+      }
+      axios.post('http://localhost:9000/characters', characterInfo)
+        .then(response => {
           console.log('post successful and the response is: ', );
-      })
+        })
 
-      .catch(error => {
-        console.log('Oh No! Error is: ', error);  
-    })
+        .catch(error => {
+          console.log('Oh No! Error is: ', error);
+        })
     }
   })
 
