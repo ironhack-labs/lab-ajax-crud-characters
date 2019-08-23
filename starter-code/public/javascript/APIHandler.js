@@ -5,9 +5,16 @@ class APIHandler {
 
   getFullList () {
 
+
+
+
+
+   
+  
   }
 
   getOneRegister () {
+
 
   }
 
@@ -23,3 +30,6 @@ class APIHandler {
 
   }
 }
+
+
+
