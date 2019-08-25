@@ -59,25 +59,40 @@ axios.get(`http://localhost:9000/characters`).then(fullList => {
 
     document.getElementById('delete-one').onclick = function () {
 
-      // Remove function
-      document.querySelector("body > section:nth-child(1) > div > div").remove();
+      //New Delete Function
+
+
+      let id = document.querySelector("body > section:nth-child(1) > section > div.operation.delete > input[type=text]").value
+
+      axios.delete(`http://localhost:9000/characters/${id}`).then(res )
 
 
 
-      let selection = document.querySelector("body > section:nth-child(1) > section > div:nth-child(2) > input[type=text]").value;
-
-      selection = parseInt(selection, 10);
 
 
-      const deleteCharacter = fullList[selection]
 
-      axios.patch(`http://localhost:9000/characters`, deleteCharacter).then(response => {
-        console.log('post deleted and the response is: ', );
-      })
 
-      .catch(error => {
-        console.log('Oh No! Error is: ', error);
-      })
+
+
+      // // Remove function
+      // document.querySelector("body > section:nth-child(1) > div > div").remove();
+
+
+
+      // let selection = document.querySelector("body > section:nth-child(1) > section > div:nth-child(2) > input[type=text]").value;
+
+      // selection = parseInt(selection, 10);
+
+
+      // const deleteCharacter = fullList[selection]
+
+      // axios.patch(`http://localhost:9000/characters`, deleteCharacter).then(response => {
+      //   console.log('post deleted and the response is: ', );
+      // })
+
+      // .catch(error => {
+      //   console.log('Oh No! Error is: ', error);
+      // })
 
      
 
