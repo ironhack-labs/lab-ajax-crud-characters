@@ -105,3 +105,28 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+
+.flexcol{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.flexrow{
+display:flex;
+flex-direction:row;
+justify-content: center;
+
+}
+
+.right{
+	width:100%;
+	margin-left:200px;
+
+}
+.left{
+	width:100%;
+	margin-right:200px;
+	
+}
