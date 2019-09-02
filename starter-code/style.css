@@ -1,0 +1,19 @@
+.character_list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.character-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.character-info {
+  width: 33%;
+  padding: 3%;
+  border: 2px solid white;
+  border-radius: 12px;
+}
