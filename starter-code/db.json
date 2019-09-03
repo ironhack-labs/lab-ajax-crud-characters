@@ -1,25 +1,18 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
-    },
-    {
-      "name": "String",
-      "occupation": "String",
-      "weapon": "String",
-      "cartoon": "Boolean",
+      "name": "Luca",
+      "occupation": "palap",
+      "weapon": "fezf",
+      "cartoon": true,
       "id": 4
+    },
+    {
+      "name": "mamam",
+      "occupation": "npnaz",
+      "weapon": "rzza",
+      "cartoon": true,
+      "id": 5
     }
   ]
 }

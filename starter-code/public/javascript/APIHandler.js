@@ -2,41 +2,27 @@ export class APIHandler {
   constructor(baseUrl) {
     this.BASE_URL = baseUrl;
     this.handler = axios.create({
-      BASE_URL: this.BASE_URL
+      baseURL: this.BASE_URL
     });
   }
 
   getFullList() {
     return this.handler.get();
-    // .then(APIres => console.log(APIres))
-    // .catch(err => console.log(err));
   }
 
   getOneRegister(id) {
-    this.handler
-      .get(id)
-      .then(APIres => console.log(APIres))
-      .catch(err => console.log(err));
+    return this.handler.get("/" + id);
   }
 
-  createOneRegister(id) {
-    this.handler
-      .post(id)
-      .then(APIres => console.log(APIres))
-      .catch(err => console.log(err));
+  createOneRegister(model) {
+    return this.handler.post("/", model);
   }
 
   updateOneRegister(id, modification) {
-    this.handler
-      .patch(id, modification)
-      .then(APIres => console.log(APIres))
-      .catch(err => console.log(err));
+    return this.handler.patch("/" + id, modification);
   }
 
   deleteOneRegister(id) {
-    this.handler
-      .delete(id)
-      .then(APIres => console.log(APIres))
-      .catch(err => console.log(err));
+    return this.handler.delete(id);
   }
 }

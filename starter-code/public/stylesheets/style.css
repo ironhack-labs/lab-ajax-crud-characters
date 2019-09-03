@@ -64,7 +64,8 @@ button {
   margin: 20px 0 0;
 }
 
-.character-info {
+.character-info,
+.character-real-info {
   position: relative;
   width: 40%;
   margin: 10px;
