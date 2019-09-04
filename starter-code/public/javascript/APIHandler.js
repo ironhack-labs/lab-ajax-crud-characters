@@ -2,31 +2,52 @@
 
 export default class APIHandler {
   constructor(baseUrl) {
-    this.BASE_URL = baseUrl;
+    // this.BASE_URL = baseUrl; // base plan : use axios.GET(BASE_URL/characters)
     this.handler = axios.create({
-      baseURL: this.BASE_URL
+      baseURL: baseUrl
     });
   }
 
-  getFullList(url, clbk) {
-    console.log("bordel");
+  getFullList(url) {
+    console.log("fck callback");
     return this.handler.get(url);
-    // this.handler
-    //   .get(`${url}`)
-    //   .then(APIRes => {
-    //     console.log(APIRes);
-    //     clbk("2");
-    //   })
-    //   .catch(err => console.log(err));
+    this.handler
+      .get(`${url}`)
+      .then(APIRes => {
+        console.log(APIRes);
+        clbk("2");
+      })
+      .catch(err => console.log(err));
   }
 
-  getOneRegister() {}
+  // getFullList(url, clbk) {
+  //   console.log("callback method");
+  //   this.handler
+  //     .get(`${url}`)
+  //     .then(APIRes => {
+  //       console.log(APIRes);
+  //       clbk(clbk);
+  //     })
+  //     .catch(err => console.log(err));
+  // }
 
-  createOneRegister() {}
+  getOneRegister(id) {
+    // this.handler.get(`${url}/${id}`);
+    console.log("fetch one");
+    return this.handler.get(`/characters/${id}`);
+  }
 
-  updateOneRegister() {}
+  createOneRegister(char) {
+    return this.handler.post("/characters", char); //char has to be an object, always, because it's axios
+  }
 
-  deleteOneRegister() {}
+  updateOneRegister(id, data) {
+    return this.handler.patch(`/characters/${id}`, data);
+  }
+
+  deleteOneRegister(id) {
+    return this.handler.delete(`/characters/${id}`);
+  }
 }
 
 // module.exports = APIHandler;

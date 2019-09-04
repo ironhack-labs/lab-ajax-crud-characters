@@ -1,25 +1,30 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
+      "name": "Toto Han Solo",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
+      "name": "Toto Sponge Bob",
+      "cartoon": true,
+      "id": 3
     },
     {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "id": 4
+    },
+    {
+      "name": "Toto Le Héros Marxiste",
+      "occupation": "Marxiste",
+      "weapon": "Marteau",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "TOTO",
+      "occupation": "Marxiste",
+      "weapon": "Marteau",
+      "cartoon": false,
+      "id": 6
     }
   ]
 }
