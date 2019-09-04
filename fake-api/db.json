@@ -1,0 +1,78 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "foo",
+      "occupation": "bar",
+      "weapon": "bay",
+      "cartoon": false
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Someone Something",
+      "occupation": "not understand what to do",
+      "weapon": "no weapon",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "dwq",
+      "occupation": "dwq",
+      "cartoon": false,
+      "weapon": "dwq",
+      "id": 5
+    },
+    {
+      "name": "john",
+      "occupation": "mccain",
+      "cartoon": false,
+      "weapon": "fries",
+      "id": 6
+    },
+    {
+      "name": "Harry Potter",
+      "occupation": "Magier",
+      "cartoon": false,
+      "weapon": "stick",
+      "id": 7
+    },
+    {
+      "name": "someone",
+      "occupation": "jhoewbkj",
+      "cartoon": true,
+      "weapon": ",knjn",
+      "id": 8
+    },
+    {
+      "name": {
+        "id": "8",
+        "name": "Someone some",
+        "occupation": "kinlhonl",
+        "weapon": "no weapon",
+        "cartoon": false
+      },
+      "id": 9
+    },
+    {
+      "8": "",
+      "id": 10
+    },
+    {
+      "8": "",
+      "id": 11
+    }
+  ]
+}
