@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "niraja",
+      "occupation": "very nice",
+      "weapon": "brain",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "alexandre",
+      "occupation": "student not well",
+      "weapon": "catapulte",
+      "cartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "alexandre",
+      "occupation": "student not well",
+      "weapon": "catapulte",
+      "cartoon": "on",
+      "id": 6
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 7
+    }
+  ]
+}
