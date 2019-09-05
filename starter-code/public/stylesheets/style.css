@@ -32,6 +32,13 @@ button {
   overflow: hidden;
 }
 
+.btn-green{
+  background-color: #42f471;
+}
+
+.btn-red{
+  background-color: red;
+}
 .container {
   width: 70%;
   margin: 50px auto 0;
