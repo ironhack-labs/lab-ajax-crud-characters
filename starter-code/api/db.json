@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Guillaume",
+      "occupation": "comedian",
+      "cartoon": false,
+      "weapon": "ninja",
+      "id": 4
+    },
+    {
+      "name": "Amir",
+      "occupation": "Baby",
+      "weapon": "Nappies",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Aida",
+      "occupation": "Mom",
+      "weapon": "Coffee",
+      "cartoon": true,
+      "id": 8
+    }
+  ]
+}
