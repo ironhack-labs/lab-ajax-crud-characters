@@ -1,0 +1,38 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Walter White",
+      "occupation": "cooker",
+      "cartoon": true,
+      "weapon": "metanfetamina",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 9,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Alan",
+      "occupation": "DEV",
+      "weapon": "Espada",
+      "id": 10
+    }
+  ]
+}
