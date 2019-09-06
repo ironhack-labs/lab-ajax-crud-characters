@@ -10,8 +10,14 @@ class APIHandler {
   }
 
   async getOneRegister (id) {
-    const register = await axios.get(`${this.BASE_URL}/characters/${id}`);
-    return register.data;
+    try{
+      const register = await axios.get(`${this.BASE_URL}/characters/${id}`);
+      document.getElementById('fetch-one').classList.add('active');
+      return register.data;
+    }
+    catch(e) {
+      document.getElementById('fetch-one').classList.add('disable')
+    }
   }
 
   async createOneRegister (body) {
@@ -19,14 +25,23 @@ class APIHandler {
     return create.data;
   }
 
-  deleteOneRegister (id) {
-    // const deleteC = await axios.delete(`${this.BASE_URL}/characters/${id}`);
-    // return deleteC.data;
+  async deleteOneRegister (id) {
+    try{
+    const deleteC = await axios.delete(`${this.BASE_URL}/characters/${id}`);
+    document.getElementById('delete-one').classList.add('active');
+    return deleteC.data;
+    }
+    catch(e) {
+      document.getElementById('delete-one').classList.add('disable')
+    }
   }
 
-  updateOneRegister () {
-
+  async updateOneRegister (id, body) {
+    try{
+      await axios.patch(`${this.BASE_URL}/characters/${id}`, body);
+    }
+    catch(e) {
+      document.getElementById('delete-one').classList.add('disable')
+    }
   }
-
-
 }
