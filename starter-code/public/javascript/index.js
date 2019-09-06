@@ -57,7 +57,8 @@ $(document).ready(() => {
     }
   };
 
-  document.getElementById('edit-character-form').onsubmit = async () => {
+  document.getElementById('edit-character-form').onsubmit = async (event) => {
+    event.preventDefault();
     const editId = document.getElementById('edit-id').value;
     const editName = document.getElementById('edit-name').value;
     const editOccupation = document.getElementById('edit-occupation').value;
@@ -78,7 +79,8 @@ $(document).ready(() => {
     }
   };
 
-  document.getElementById('new-character-form').onsubmit = async () => {
+  document.getElementById('new-character-form').onsubmit = async (event) => {
+    event.preventDefault();
     const newName = document.getElementById('new-name').value;
     const newOccupation = document.getElementById('new-occupation').value;
     const newWeapon = document.getElementById('new-weapon').value;
