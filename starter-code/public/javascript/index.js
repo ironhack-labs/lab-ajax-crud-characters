@@ -26,7 +26,7 @@ characterInfo.style.display = 'none'
 //$(document).ready(() => {
 document.getElementById('fetch-all').onclick = async function (e) {
   e.preventDefault()
-  console.log('pto')
+ 
   const {
     data
   } = await charactersAPI.getFullList()
@@ -49,7 +49,7 @@ const showAll = (data) => {
       characterContainer.appendChild(cloneCharacter)
     }
   } else {
-    console.log('objetos putos')
+   
     const cloneCharacter = characterInfo.cloneNode(true)
     cloneCharacter.children[0].innerHTML = `Name: ${data.name}`
     cloneCharacter.children[1].innerHTML = `Occupation: ${data.occupation}`
@@ -70,7 +70,7 @@ document.getElementById('fetch-one').onclick = async function (e) {
   if (!data){
     fetchOne.style.backgroundColor = 'red'
   } else {
-  console.log("un resultado pto" + data.name)
+ 
   await showAll(data)
   fetchOne.style.backgroundColor = 'green'
   }
@@ -127,7 +127,7 @@ document.getElementById('edit-character-form').onsubmit = async function (e) {
 
 document.getElementById('new-character-form').onsubmit = async function (e) {
   e.preventDefault()
-  console.log('pend')
+  
   const newCharacter = {
     name: newName.value,
     occupation: newOccupation.value,
