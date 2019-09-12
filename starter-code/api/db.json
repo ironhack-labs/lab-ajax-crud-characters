@@ -1,0 +1,54 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "QEFEAF",
+      "occupation": "ERQWFWA",
+      "weapon": "DAFADFAS",
+      "id": 4
+    },
+    {
+      "name": "QEFEAF",
+      "occupation": "ERQWFWA",
+      "weapon": "DAFADFAS",
+      "id": 5
+    },
+    {
+      "name": "efwf",
+      "occupation": "fwefwe",
+      "weapon": "fwefef",
+      "id": 6
+    },
+    {
+      "name": "QEFEAF",
+      "occupation": "ERQWFWA",
+      "weapon": "DAFADFAS",
+      "id": 7
+    },
+    {
+      "name": "QEFEAF",
+      "occupation": "ERQWFWA",
+      "weapon": "DAFADFAS",
+      "id": 8
+    },
+    {
+      "name": "QEFEAF",
+      "occupation": "ERQWFWA",
+      "weapon": "DAFADFAS",
+      "id": 9
+    }
+  ]
+}
