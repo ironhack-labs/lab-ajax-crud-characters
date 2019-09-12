@@ -1,0 +1,74 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "hola",
+      "occupation": "y asi",
+      "weapon": "tambien",
+      "cartoon": "on"
+    },
+    {
+      "name": "llll",
+      "occupation": "ppp",
+      "weapon": "iii",
+      "cartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "Mike",
+      "occupation": "monster",
+      "weapon": "shoe",
+      "cartoon": "on",
+      "id": 6
+    },
+    {
+      "name": "Mike",
+      "occupation": "monster",
+      "weapon": "shoe",
+      "cartoon": "on",
+      "id": 7
+    },
+    {
+      "name": "Mike",
+      "occupation": "monster",
+      "weapon": "shoe",
+      "cartoon": "on",
+      "id": 8
+    },
+    {
+      "name": "Mike",
+      "occupation": "monster",
+      "weapon": "shoe",
+      "cartoon": "on",
+      "id": 9
+    },
+    {
+      "name": "Nuevo",
+      "occupation": "hola",
+      "weapon": "bye",
+      "cartoon": "on",
+      "id": 10
+    },
+    {
+      "name": "Juan",
+      "occupation": "hipster",
+      "weapon": "Arcade fire",
+      "cartoon": "on",
+      "id": 11
+    }
+  ]
+}
