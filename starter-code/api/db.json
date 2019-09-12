@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "name": "Joss",
+      "occupation": "Teacher",
+      "cartoon": false,
+      "weapon": "Yes",
+      "id": 5
+    },
+    {
+      "name": "Alan Touring",
+      "occupation": "Scientist",
+      "weapon": "Machines",
+      "cartoon": false,
+      "id": 7
+    }
+  ]
+}
