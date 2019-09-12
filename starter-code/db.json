@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "werwer",
+      "occupation": "wer",
+      "weapon": "werewr",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "ef",
+      "occupation": "werwewdfwr",
+      "weapon": "werwer",
+      "cartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "q2",
+      "occupation": "qweqwe",
+      "weapon": "qwe",
+      "cartoon": true,
+      "id": 6
+    }
+  ]
+}
