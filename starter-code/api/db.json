@@ -1,0 +1,54 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Juanelo",
+      "id": 5
+    },
+    {
+      "name": "Juanelo",
+      "id": 6
+    },
+    {
+      "name": "Juanelo",
+      "id": 7,
+      "occupation": "undefined",
+      "weapon": "undefined",
+      "cartoon": false
+    },
+    {
+      "name": "Daniel Satoshi",
+      "occupation": "ss",
+      "weapon": "ss",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "Daniel Satoshi",
+      "occupation": "ddddnn",
+      "weapon": "ss",
+      "cartoon": false,
+      "id": 9
+    }
+  ]
+}
