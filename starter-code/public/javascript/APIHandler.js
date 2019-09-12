@@ -4,22 +4,32 @@ class APIHandler {
   }
 
   getFullList () {
-
+    const data = axios.get(`${this.BASE_URL}/characters`)
+    return data
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    const data = axios.get(`${this.BASE_URL}/characters/${id}`)
+    .catch(err => {
+      document.getElementById("msg-fetch").innerHTML = 'Character not found';
+    })
+    return data
   }
 
-  createOneRegister () {
-
+  createOneRegister (character) {
+    const newChar = axios.post(`${this.BASE_URL}/characters`, character);
+    return newChar
   }
 
-  updateOneRegister () {
+  updateOneRegister (id, character) {
+    const data = axios.patch(`${this.BASE_URL}/characters/${id}`, character)
+    return data
+  } 
 
-  }
-
-  deleteOneRegister () {
-
+  async deleteOneRegister (id) {
+    const data = await axios.delete(`${this.BASE_URL}/characters/${id}`)
+    .catch(err => {
+      document.getElementById("msg-delete").innerHTML = 'Character not found';
+    })
   }
 }
