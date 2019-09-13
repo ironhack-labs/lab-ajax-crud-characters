@@ -4,22 +4,22 @@ class APIHandler {
   }
 
   getFullList () {
-    axios.get(`${this.BASE_URL}/characters`)
+    return axios.get(`${this.BASE_URL}/characters`)
       .then(response => {
-        console.log(response.data)
+        return Promise.resolve(response.data);
       })
       .catch(error => {
-        console.log(error);
+        return Promise.reject(error);
       })
   }
 
   getOneRegister (id) {
-    axios.get(`${this.BASE_URL}/characters/${id}`)
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
       .then(response => {
-        console.log(response.data);
+        return Promise.resolve(response.data)
       })
       .catch(error => {
-        console.log(error);
+        return Promise.reject(error)
       })
   }
 
