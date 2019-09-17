@@ -1,0 +1,81 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": "Vanilla the Killa",
+      "occupation": "Actor",
+      "weapon": "Body",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "Queen",
+      "occupation": "singer",
+      "weapon": "Body",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "Queen",
+      "occupation": "singer",
+      "weapon": "Body",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "9",
+      "occupation": "Franz Rogowski",
+      "weapon": "",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "9",
+      "occupation": "Franz Rogowski",
+      "weapon": "",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "Chanty",
+      "occupation": "Singer",
+      "weapon": "Hand",
+      "cartoon": false,
+      "id": 13
+    }
+  ]
+}
