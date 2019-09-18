@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "fd",
+      "occupation": "gfd",
+      "weapon": "fd",
+      "cartoon": "on",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "blabla",
+      "occupation": "blabla",
+      "weapon": "blabla",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "dfg",
+      "occupation": "dfgv",
+      "weapon": "dfg",
+      "cartoon": "on",
+      "id": 5
+    }
+  ]
+}
