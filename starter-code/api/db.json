@@ -1,0 +1,53 @@
+{
+  "characters": [
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 1
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Carlos",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "herminone 2",
+      "occupation": "bruja 2",
+      "weapon": "alohomora 2",
+      "cartoon": false,
+      "id": 7
+    }
+  ]
+}
