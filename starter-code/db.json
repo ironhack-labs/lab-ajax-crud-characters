@@ -1,0 +1,95 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 6,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Peter PArker",
+      "occupation": "journalist",
+      "weapon": "feather",
+      "cartoon": "on",
+      "id": 7
+    },
+    {
+      "name": "pepito",
+      "occupation": "journalist",
+      "weapon": "nets",
+      "cartoon": "on",
+      "id": 8
+    },
+    {
+      "name": "eusebio",
+      "occupation": "journalist",
+      "weapon": "feather",
+      "cartoon": "on",
+      "id": 9
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "on",
+      "id": 15
+    },
+    {
+      "name": "232e",
+      "occupation": "efwef",
+      "weapon": "dcdvrv",
+      "cartoon": "on",
+      "id": 18
+    },
+    {
+      "name": "",
+      "occupation": "qq",
+      "weapon": "q",
+      "cartoon": "on",
+      "id": 19
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "on",
+      "id": 20
+    },
+    {
+      "name": "Luca",
+      "occupation": "Ta",
+      "weapon": "chesesehseh",
+      "cartoon": "on",
+      "id": 21
+    }
+  ]
+}

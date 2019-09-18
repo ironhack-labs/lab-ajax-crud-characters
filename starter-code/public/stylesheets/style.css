@@ -53,6 +53,9 @@ button {
 .active {
   background-color: #42f471;
 }
+.error {
+  background-color:rgb(209, 62, 62);
+}
 
 .operations {
   margin: 0 auto;
