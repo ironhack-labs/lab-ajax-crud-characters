@@ -1,0 +1,17 @@
+{
+  "name": "starter-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "json-server --watch ./api/db.json --port 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
