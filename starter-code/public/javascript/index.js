@@ -66,6 +66,8 @@ window.addEventListener("load", () => {
   document
     .getElementById("edit-character-form")
     .addEventListener("submit", function(event) {
+      event.preventDefault();
+      event.stopPropagation();
       const id = document.querySelector("#id-update").value;
       const name = document.querySelector("#name-update").value;
       const occupation = document.querySelector("#occupation-update").value;
@@ -84,6 +86,8 @@ window.addEventListener("load", () => {
   document
     .getElementById("new-character-form")
     .addEventListener("submit", function(event) {
+      event.preventDefault();
+      event.stopPropagation();
       const name = document.querySelector("#name-create").value;
       const occupation = document.querySelector("#occupation-create").value;
       const weapon = document.querySelector("#weapon-create").value;
@@ -92,9 +96,7 @@ window.addEventListener("load", () => {
       charactersAPI
         .createOneRegister({ name, occupation, weapon, cartoon })
         .then(() => {
-          // event.preventDefault();
           document.querySelector("#send-data").setAttribute(`class`, `active`);
-          // return false
         })
         .catch(() => {
           document.querySelector("#send-data").setAttribute(`class`, `error`);
