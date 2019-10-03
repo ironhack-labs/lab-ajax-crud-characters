@@ -31,9 +31,11 @@ window.addEventListener('load', () => {
     const oneCharacter = charactersAPI.deleteOneRegister(id)
       .then(responseFromAPI => {
         console.log("Response from API is: ", responseFromAPI.data)
-        return responseFromAPI.data;
+        document.getElementById('delete-one').classList.add("bg-green");
       })
-      .catch(err => console.log("Error is: ", err));;
+      .catch(err => {console.log("Error is: ", err));
+      document.getElementById('delete-one').classList.add("bg-red");
+    }
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
@@ -49,9 +51,12 @@ window.addEventListener('load', () => {
     charactersAPI.updateOneRegister(id, newChar)
       .then(responseFromAPI => {
         console.log("Response from API is: ", responseFromAPI.data)
-        return responseFromAPI.data;
+        document.getElementById('send-data-update').classList.add("bg-green");
       })
-      .catch(err => console.log("Error is: ", err));;
+      .catch(err => {
+        console.log("Error is: ", err));
+        document.getElementById('send-data-update').classList.add("bg-red");
+      }
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
@@ -65,8 +70,11 @@ window.addEventListener('load', () => {
     charactersAPI.createOneRegister(newChar)
       .then(responseFromAPI => {
         console.log("Response from API is: ", responseFromAPI.data);
-        return responseFromAPI.data;
+        document.getElementById('send-data').classList.add("bg-green");
       })
-      .catch(err => console.log("Error is: ", err));;
+      .catch(err => {
+        console.log("Error is: ", err));
+        document.getElementById('send-data').classList.add("bg-green");
+      }
   });
 });
