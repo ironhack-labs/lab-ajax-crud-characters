@@ -10,28 +10,24 @@ class APIHandler {
     this.client
       .get('characters')
       .then(responseFromAPI => {
-          console.log("Response from API is: ", responseFromAPI.data));
+        console.log("Response from API is: ", responseFromAPI.data);
         return responseFromAPI.data;
-      }
+      })
       .catch(err => console.log("Error is: ", err));
   }
 
   getOneRegister(id) {
-    this.client
-      .get(`characters/${id}`)
-      .then(responseFromAPI => {
-          console.log("Response from API is: ", responseFromAPI.data));
-        return responseFromAPI.data;
-      }
-      .catch(err => console.log("Error is: ", err));
+     return this.client.get(`characters/${id}`);
+      
   }
 
-  createOneRegister() {
+  createOneRegister(obj) {
     this.client
-      .post(`characters/${id}`)
+      .post(`characters`, obj)
       .then(responseFromAPI => {
-          console.log("Response from API is: ", responseFromAPI.data)) return responseFromAPI.data;
-      }
+          console.log("Response from API is: ", responseFromAPI.data);
+          return responseFromAPI.data;
+      })
       .catch(err => console.log("Error is: ", err));
   }
 
@@ -39,8 +35,9 @@ class APIHandler {
     this.client
       .put(`characters/${id}`, obj)
       .then(responseFromAPI => {
-          console.log("Response from API is: ", responseFromAPI.data)) return responseFromAPI.data;
-      }
+          console.log("Response from API is: ", responseFromAPI.data)
+          return responseFromAPI.data;
+      })
       .catch(err => console.log("Error is: ", err));
   }
 
@@ -48,8 +45,9 @@ class APIHandler {
     this.client
       .delete(`characters/${id}`)
       .then(responseFromAPI => {
-          console.log("Response from API is: ", responseFromAPI.data)) return responseFromAPI.data;
-      }
+          console.log("Response from API is: ", responseFromAPI.data)
+          return responseFromAPI.data;
+      })
       .catch(err => console.log("Error is: ", err));
   }
 }
