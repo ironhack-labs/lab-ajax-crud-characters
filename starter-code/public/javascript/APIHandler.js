@@ -1,25 +1,55 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
+    this.client = axios.create({
+      baseURL: this.BASE_URL
+    });
   }
 
-  getFullList () {
-
+  getFullList() {
+    this.client
+      .get('characters')
+      .then(responseFromAPI => {
+          console.log("Response from API is: ", responseFromAPI.data));
+        return responseFromAPI.data;
+      }
+      .catch(err => console.log("Error is: ", err));
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    this.client
+      .get(`characters/${id}`)
+      .then(responseFromAPI => {
+          console.log("Response from API is: ", responseFromAPI.data));
+        return responseFromAPI.data;
+      }
+      .catch(err => console.log("Error is: ", err));
   }
 
-  createOneRegister () {
-
+  createOneRegister() {
+    this.client
+      .post(`characters/${id}`)
+      .then(responseFromAPI => {
+          console.log("Response from API is: ", responseFromAPI.data)) return responseFromAPI.data;
+      }
+      .catch(err => console.log("Error is: ", err));
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id, obj) {
+    this.client
+      .put(`characters/${id}`, obj)
+      .then(responseFromAPI => {
+          console.log("Response from API is: ", responseFromAPI.data)) return responseFromAPI.data;
+      }
+      .catch(err => console.log("Error is: ", err));
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    this.client
+      .delete(`characters/${id}`)
+      .then(responseFromAPI => {
+          console.log("Response from API is: ", responseFromAPI.data)) return responseFromAPI.data;
+      }
+      .catch(err => console.log("Error is: ", err));
   }
 }
