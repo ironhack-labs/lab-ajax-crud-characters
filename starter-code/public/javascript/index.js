@@ -30,12 +30,13 @@ window.addEventListener('load', () => {
     const id = document.getElementsByName("character-id-delete")[0].value;
     const oneCharacter = charactersAPI.deleteOneRegister(id)
       .then(responseFromAPI => {
-        console.log("Response from API is: ", responseFromAPI.data)
+        console.log("Response from API is: ", responseFromAPI.data);
         document.getElementById('delete-one').classList.add("bg-green");
       })
-      .catch(err => {console.log("Error is: ", err));
-      document.getElementById('delete-one').classList.add("bg-red");
-    }
+      .catch(err => {
+        console.log("Error is: ", err);
+        document.getElementById('delete-one').classList.add("bg-red");
+    })
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
@@ -54,9 +55,9 @@ window.addEventListener('load', () => {
         document.getElementById('send-data-update').classList.add("bg-green");
       })
       .catch(err => {
-        console.log("Error is: ", err));
+        console.log("Error is: ", err);
         document.getElementById('send-data-update').classList.add("bg-red");
-      }
+      })
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
@@ -73,8 +74,8 @@ window.addEventListener('load', () => {
         document.getElementById('send-data').classList.add("bg-green");
       })
       .catch(err => {
-        console.log("Error is: ", err));
+        console.log("Error is: ", err);
         document.getElementById('send-data').classList.add("bg-green");
-      }
+      })
   });
 });
