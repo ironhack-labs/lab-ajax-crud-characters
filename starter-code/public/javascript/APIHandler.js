@@ -34,7 +34,7 @@ class APIHandler {
       })
       .catch(() => "Character not found");
   }
-  }
+  
 
   deleteOneRegister (id) {
     this.apiClient.delete(`/character/${id}`)
