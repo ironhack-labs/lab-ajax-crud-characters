@@ -7,47 +7,22 @@ class APIHandler {
   }
 
   getFullList() {
-    this.client
-      .get('characters')
-      .then(responseFromAPI => {
-        console.log("Response from API is: ", responseFromAPI.data);
-        return responseFromAPI.data;
-      })
-      .catch(err => console.log("Error is: ", err));
+    return this.client.get('characters');
   }
 
   getOneRegister(id) {
-     return this.client.get(`characters/${id}`);
-      
+     return this.client.get(`characters/${id}`); 
   }
 
   createOneRegister(obj) {
-    this.client
-      .post(`characters`, obj)
-      .then(responseFromAPI => {
-          console.log("Response from API is: ", responseFromAPI.data);
-          return responseFromAPI.data;
-      })
-      .catch(err => console.log("Error is: ", err));
+    return this.client.post(`characters`, obj);
   }
 
   updateOneRegister(id, obj) {
-    this.client
-      .put(`characters/${id}`, obj)
-      .then(responseFromAPI => {
-          console.log("Response from API is: ", responseFromAPI.data)
-          return responseFromAPI.data;
-      })
-      .catch(err => console.log("Error is: ", err));
+    return this.client.put(`characters/${id}`, obj);
   }
 
   deleteOneRegister(id) {
-    this.client
-      .delete(`characters/${id}`)
-      .then(responseFromAPI => {
-          console.log("Response from API is: ", responseFromAPI.data)
-          return responseFromAPI.data;
-      })
-      .catch(err => console.log("Error is: ", err));
+    return this.client.delete(`characters/${id}`);
   }
 }
