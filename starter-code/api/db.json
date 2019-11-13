@@ -1,0 +1,38 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Laurie",
+      "occupation": "Jedi",
+      "weapon": "sabre",
+      "cartoon": true
+    },
+    {
+      "name": "gergj",
+      "occupation": "pje",
+      "cartoon": "on",
+      "weapon": "legk,",
+      "id": 2
+    },
+    {
+      "name": "erger",
+      "occupation": "ger",
+      "cartoon": "on",
+      "weapon": "gerg",
+      "id": 3
+    },
+    {
+      "name": "Pierre",
+      "occupation": "authorlala",
+      "weapon": "egoir",
+      "id": 4,
+      "cartoon": "on"
+    },
+    {
+      "name": "Pierre",
+      "occupation": "conteur",
+      "weapon": "book",
+      "id": 5
+    }
+  ]
+}
