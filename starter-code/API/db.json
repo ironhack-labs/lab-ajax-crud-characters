@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "name": "dora2",
+      "occupation": "manger2",
+      "weapon": "épée2",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "lolo",
+      "occupation": "momo",
+      "weapon": "toto",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "lolo",
+      "occupation": "lolo",
+      "weapon": "olo",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "lolo",
+      "occupation": "lolo",
+      "weapon": "",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "123",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "123",
+      "cartoon": false,
+      "id": 8
+    }
+  ]
+}
