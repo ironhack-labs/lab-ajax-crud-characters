@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Hello",
+      "occupation": "Hello",
+      "weapon": "WUAHAHAHA",
+      "cartoon": "on"
+    },
+    {
+      "id": 2,
+      "name": "Burk",
+      "occupation": "Makeit",
+      "weapon": "Makeit",
+      "cartoon": false
+    },
+    {
+      "name": "Pierre",
+      "occupation": "Couturier",
+      "weapon": "Arme",
+      "cartoon": "on",
+      "id": 3
+    }
+  ]
+}
