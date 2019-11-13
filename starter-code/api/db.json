@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "noemie",
+      "occupation": "student",
+      "weapon": "macintosh",
+      "cartoon": "on"
+    },
+    {
+      "name": "Hanna",
+      "occupation": "student",
+      "weapon": "macintosh",
+      "cartoon": "on",
+      "id": 4
+    }
+  ]
+}

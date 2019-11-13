@@ -10,7 +10,8 @@ body {
   background: url("../images/minions.jpg")
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d8b362;
 }
 
@@ -52,6 +53,10 @@ button {
 
 .active {
   background-color: #42f471;
+}
+
+.inactive {
+  background-color: red;
 }
 
 .operations {
