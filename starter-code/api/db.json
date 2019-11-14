@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "qwsswqw",
+      "occupation": "cfffc",
+      "weapon": "qszagg",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "ewrererfr",
+      "occupation": "jjjjjjjjjjjKKKK",
+      "weapon": "KKKKKKKK",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "wedwe",
+      "occupation": "weweeed",
+      "weapon": "dedede",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false
+    }
+  ]
+}
