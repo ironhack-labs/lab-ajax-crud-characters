@@ -21,3 +21,19 @@ window.addEventListener('load', () => {
 
   });
 });
+
+charactersAPI.getFullList().then(data => {
+  console.log(data);
+})
+
+let newCharacter= {
+    "id": 4,
+    "name": "pedro",
+    "occupation": "Lives under the sea",
+    "weapon": "Crabby Patty",
+    "cartoon": true
+}
+
+charactersAPI.updateOneRegister(newCharacter);
+
+
