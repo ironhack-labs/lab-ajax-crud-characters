@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Mic Json",
+      "occupation": "Dancer",
+      "weapon": "Manzana",
+      "cartoon": "on",
+      "id": 1
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "prueba2",
+      "occupation": "prueba",
+      "weapon": "lol",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "prueba3",
+      "occupation": "Actor",
+      "weapon": "ada",
+      "cartoon": "on",
+      "id": 5
+    }
+  ]
+}
