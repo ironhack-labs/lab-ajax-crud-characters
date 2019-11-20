@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Sito",
+      "occupation": "Perro flauta",
+      "weapon": "Dibusitos",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Sito",
+      "occupation": "Perro flauta",
+      "weapon": "Dibusitos",
+      "cartoon": true
+    }
+  ]
+}
