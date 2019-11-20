@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src = 'https://unpkg.com/axios/dist/axios.min.js'></script>
   <title>IH Characters</title>
 </head>
 <body>
@@ -22,10 +22,11 @@
     <section class="operations">
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
+        <ul id = 'characters-fetch'></ul>
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id = "fetch-one-input">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
