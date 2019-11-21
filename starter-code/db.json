@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Under the sea",
+      "weapon": "Pineapple",
+      "cartoon": "on"
+    },
+    {
+      "name": "Zana Horia",
+      "occupation": "Leguminosa",
+      "weapon": "Deiliciosas",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "Patricio",
+      "occupation": "Estrella",
+      "weapon": "crustaceo cascarudo",
+      "cartoon": "on",
+      "id": 5
+    }
+  ]
+}
