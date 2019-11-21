@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,21 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>IH Characters</title>
 </head>
+
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
       <div class="character-info">
         <div class="name">Character Name</div>
+        <input type="text" name="name" id="name">
         <div class="occupation">Character Occupation</div>
+        <input type="text" name="occupation" id="occupation">
         <div class="cartoon">Is a Cartoon?</div>
+        <input type="text" name="cartoon" id="cartoon">
         <div class="weapon">Character Weapon</div>
+        <input type="text" name="weapon" id="weapon">
+
       </div>
     </div>
     <section class="operations">
@@ -25,7 +32,7 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="idOne">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
@@ -87,6 +94,7 @@
     </section>
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
+  <script src="./public/javascript/index.js"></script>
 </body>
+
 </html>
