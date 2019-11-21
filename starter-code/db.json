@@ -1,13 +1,6 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
       "id": 2,
       "name": "Luke Skywalker",
       "occupation": "Jedi Knight",
@@ -27,6 +20,26 @@
       "occupation": "Topo",
       "weapon": "Baston",
       "cartoon": true
+    },
+    {
+      "name": "Lalo Landa",
+      "occupation": "Student",
+      "weapon": "Guitarra",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Pepe Pecas",
+      "occupation": "Student",
+      "weapon": "Papas",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "Ralph",
+      "occupation": "Wiggum",
+      "weapon": "crayon",
+      "id": 9
     }
   ]
 }

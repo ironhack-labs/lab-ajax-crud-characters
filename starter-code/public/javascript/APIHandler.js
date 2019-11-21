@@ -1,83 +1,68 @@
-
-
 class APIHandler {
   constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList = (req, res) => {
-    Character.find()
-      .then(characters => res.json({
-        characters
-      }))
-      .catch(err => console.error(err));
-  };
-
-  getOneRegister = (req, res) => {
-    const {
-      characterId
-    } = req.params;
-    Character.findById(characterId).then(character =>
-      res.status(200).json(character)
-    );
-
-  };
-
-  createOneRegister = (req, res) => {
-    const {
-      name,
-      occupation,
-      cartoon,
-      weapon,
-    } = req.body;
-
-    Character.create({
-        name,
-        occupation,
-        cartoon,
-        weapon
+  getFullList() {
+    const container = $(".characters-container")
+    axios.get("http://localhost:8000/characters")
+      .then((res) => {
+        container.html("");
+        res.data.map((element) => {
+          let theList = `<div class="character-info">
+          <div class="name">Id: <span>${element.id}</span></div>
+          <div class="name">Character Name: <span>${element.name}</span></div>
+          <div class="occupation">Character Occupation: <span>${element.occupation}</span></div>
+          <div class="cartoon">Is a Cartoon?</div>
+          <div class="weapon">Character Weapon:  <span>${element.weapon}</span></div>
+          </div>`
+          container.append(theList)
+        })
       })
-      .then(() => res.status(201).json({
-        message: "Character created"
-      }))
-      .catch(err => console.error(err));
+      .catch((err) => {
+        console.log("An error has happened, please take a look at the console", err)
+      })
+  };
+
+  createOneRegister() {
+    let charName = $(".newName").val()
+    let charOccupation = $(".newOccupation").val()
+    let charWeapon = $(".newWeapon").val()
+
+    const charData = {
+      name: charName,
+      occupation: charOccupation,
+      weapon: charWeapon
+
+    }
+
+    axios.post("http://localhost:8000/characters", charData)
+      .then((newChar) => {
+        document.getElementById("new-character-form").reset()
+        console.log("New character has been created", newChar)
+      })
+      .catch((err) => {
+        console.log("An error has happened, take a look at the console", err)
+      })
+  };
+
+  updateOneRegister() {
+    //Aqui vamoa tomar los insputs de edit-character-form
+
+    //axios.patch("http://localhost:8000/characters/${_id} ,") Aqui vamoa hacer harta promesa
 
   };
 
-  updateOneRegister = (req, res) => {
+  deleteOneRegister() {
 
-    const {
-      characterId
-    } = req.params;
-    const {
-      name,
-      occupation,
-      cartoon,
-      weapon
-    } = req.body;
-    console.log(name, occupation, cartoon, weapon);
-    //Character.findOneAndUpdate({_id: id}) ===
-    Character.findByIdAndUpdate(characterId, {
-        name,
-        occupation,
-        cartoon,
-        weapon
-      })
-      .then(() => res.status(200).json({
-        message: "Yastubo"
-      }))
-      .catch(err => console.error(err));
-  }
+    const idToDelete = $(".deleteOne").val();
 
-  deleteOneRegister = (req, res) => {
-    const {
-      characterId
-    } = req.params;
-    Character.findByIdAndDelete(characterId)
-      .then(() => res.status(200).json({
-        message: "Objetivo eliminado"
-      }))
-      .catch(err => console.error(err));
 
-  }
+    axios.delete(`http://localhost:8000/characters/${idToDelete}`).then((deleted) => {
+      $("#deleteOne").val("");
+      console.log("Farewell my friend");
+    }).catch((err) => {
+      console.log(" OMG an error has happened")
+    })
+  };
 }
