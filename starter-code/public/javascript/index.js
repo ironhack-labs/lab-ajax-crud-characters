@@ -3,6 +3,7 @@ const charactersAPI = new APIHandler(`https://minions-api.herokuapp.com/characte
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
     charactersAPI.getFullList()
+
       .then(response => {
         console.log("Response API: ", response.data);
       })
@@ -13,7 +14,21 @@ window.addEventListener('load', () => {
 document.getElementById('fetch-one').addEventListener('click', function (event) {
 
   document.getElementById("character-id").value
+
   charactersAPI.getOneRegister()
+    .then(response => {
+      const {
+        name,
+        occupation,
+        cartoon,
+        weapon
+      } = response.data
+      inputs[4].value = id
+      inputs[0].value = name
+      inputs[1].value = occupation
+      inputs[2].value = cartoon ? "true" : "false"
+      inputs[3].value = weapon
+    })
 });
 
 document.getElementById('delete-one').addEventListener('click', function (event) {

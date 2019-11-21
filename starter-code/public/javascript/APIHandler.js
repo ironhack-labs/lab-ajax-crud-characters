@@ -13,6 +13,7 @@ class APIHandler {
   }
 
   getOneRegister(id) {
+    const id = inputs[4].value
     this.CharactersURL.get(`/characters/${id}`)
       .then(response => {
         console.log(response.data)
