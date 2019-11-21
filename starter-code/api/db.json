@@ -1,0 +1,24 @@
+{
+  "characters": [{
+      "id": 1,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "lilo",
+      "occupation": "baby",
+      "weapon": "stich",
+      "checkBox": true,
+      "id": 2
+    },
+    {
+      "name": "diurix",
+      "occupation": "dev",
+      "weapon": "esa",
+      "checkBox": false,
+      "id": 3
+    }
+  ]
+}
