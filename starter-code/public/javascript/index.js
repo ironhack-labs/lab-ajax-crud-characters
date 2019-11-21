@@ -1,5 +1,7 @@
 const charactersAPI = new APIHandler(`https://minions-api.herokuapp.com/characters`);
 
+const inputs = document.querySelectorAll('input')
+
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
     charactersAPI.getFullList()
@@ -33,19 +35,20 @@ document.getElementById('fetch-one').addEventListener('click', function (event) 
 
 document.getElementById('delete-one').addEventListener('click', function (event) {
 
-  document.getElementById("character-id-delete").value
-  charactersAPI.getOneRegister()
-});
+      document.getElementById("character-id-delete").value
+      charactersAPI.getOneRegister()
+        .then(response => {});
 
-document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-  const id = document.getElementById("editId").value;
-  const name = document.getElementById("editName").value;
-  const occupation = document.getElementById("editOcc").value;
-  const weapon = document.getElementById("editWeapon").value;
-  const cartoon = document.getElementById("editCartoon").checked
+      document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+      
+      });
 
-});
-
-document.getElementById('new-character-form').addEventListener('submit', function (event) {
-
-});
+      document.getElementById('new-character-form').addEventListener('submit', function (event) {
+        const charInfo = {
+          id: inputs[10].value
+          name: inputs[11].value,
+          occupation: inputs[12].value,
+          weapon: inputs[13].value,
+          cartoon: inputs[14].checked
+        }
+      })
