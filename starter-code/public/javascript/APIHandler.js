@@ -11,18 +11,19 @@ class APIHandler {
   }
 
   getOneRegister (id) {
-    return this.charactersService.get(`${this.BASE_URL}/characters/${id}`);
+    return axios.get(`${this.BASE_URL}/characters/${id}`) //this.charactersService.get(`${this.BASE_URL}/characters/${id}`);
   }
 
-  createOneRegister (name, occupation, weapon, cartoon) {
-    this.charactersService.post('/characters', { name, occupation, weapon, cartoon})
+  createOneRegister (name, occupation , weapon, cartoon) {
+    // const {name, occupation, weapon, cartoon} = character;
+    axios.post(`${this.BASE_URL}/characters`, {name, occupation , weapon, cartoon })
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, name, occupation , weapon, cartoon) {
+    return axios.patch(`${this.BASE_URL}/characters/${id}`, {name, occupation , weapon, cartoon })
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    axios.delete(`${this.BASE_URL}/characters/${id}`)
   }
 }
