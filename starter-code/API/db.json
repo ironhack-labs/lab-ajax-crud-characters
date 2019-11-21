@@ -1,0 +1,55 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "sddsf",
+      "occupation": "sdfdsf",
+      "weapon": "asdasd",
+      "cartoon": "on",
+      "chr-id": "1",
+      "": ""
+    },
+    {
+      "name": "chucho el roto",
+      "occupation": "torero",
+      "weapon": "laser",
+      "cartoon": "on",
+      "": "",
+      "id": 4,
+      "chr-id": "4"
+    },
+    {
+      "name": "asdasdasd",
+      "occupation": "asdsad",
+      "weapon": "asdsad",
+      "cartoon": "on",
+      "": "",
+      "id": 5
+    },
+    {
+      "name": "asdsad",
+      "occupation": "asdasd",
+      "weapon": "asdsad",
+      "cartoon": "on",
+      "": "",
+      "id": 6
+    },
+    {
+      "name": "sadlkashd",
+      "occupation": "actriz",
+      "weapon": "asasdasd",
+      "cartoon": "on",
+      "": "",
+      "id": 8
+    },
+    {
+      "name": "asdasdasd",
+      "occupation": "asdasdasdasdasd",
+      "weapon": "asdasdsad",
+      "cartoon": "on",
+      "": "",
+      "id": 9,
+      "chr-id": "9"
+    }
+  ]
+}
