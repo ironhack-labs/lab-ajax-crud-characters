@@ -6,6 +6,15 @@ class APIHandler {
 		});
 	}
 
+	emptyContainer() {
+		let container = document.querySelector('.characters-container');
+		if (container.childNodes.length > 0) {
+			for (let i = 0; i < container.length; i++) {
+				container.removeChild(container.childNodes[i]);
+			}
+		}
+	}
+
 	getFullList() {
 		return this.charactersService.get('/characters');
 	}
@@ -23,6 +32,6 @@ class APIHandler {
 	}
 
 	deleteOneRegister(id) {
-		return this.charactersService.delete(`/characters/${id}`, { name, occupation, weapon, cartoon });
+		return this.charactersService.delete(`/characters/${id}`);
 	}
 }
