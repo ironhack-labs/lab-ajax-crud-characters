@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 	charactersAPI.charactersService;
 	document.getElementById('fetch-all').addEventListener('click', async function(event) {
 		const { data } = await charactersAPI.getFullList();
-		charactersAPI.emptyContainer();
+		document.querySelector('.characters-container').innerHTML = '';
 		data.forEach((character) => {
 			const card = `<div class="character-info">
       <div class="name">Name: ${character.name}</div>
@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
 	document.getElementById('fetch-one').addEventListener('click', async function(event) {
 		const characterId = document.querySelector('[name = character-id]').value;
 		const { data } = await charactersAPI.getOneRegister(characterId);
-		charactersAPI.emptyContainer();
+		document.querySelector('.characters-container').innerHTML = '';
 		const card = `<div class="character-info">
       <div class="name">Name: ${data.name}</div>
       <div class="occupation">Ocupation: ${data.occupation}</div>
@@ -37,21 +37,22 @@ window.addEventListener('load', () => {
 	});
 
 	document.getElementById('edit-character-form').addEventListener('submit', async function(event) {
-		const id = document.querySelector('[name = cartoonUpdate]').value;
-		const name = document.querySelector('[name = name]').value;
-		const occupation = document.querySelector('[name = occupation]').value;
-		const weapon = document.querySelector('[name = weapon]').value;
-		const cartoon = document.querySelector('[name = cartoonCreate]').value;
-
-		const update = charactersAPI.updateOneRegister(id, name, occupation, weapon, cartoon);
+		event.preventDefault();
+		const id = document.querySelector('[name = chr-id]').value;
+		const name = document.querySelector('[name = nameEdit]').value;
+		const occupation = document.querySelector('[name = occupationEdit]').value;
+		const weapon = document.querySelector('[name = weaponEdit]').value;
+		const cartoon = document.querySelector('[name = cartoonUpdate]').checked;
+		const update = await charactersAPI.updateOneRegister(id, name, occupation, weapon, cartoon);
 	});
 
 	document.getElementById('new-character-form').addEventListener('submit', function(event) {
+		event.preventDefault();
 		const name = document.querySelector('[name = name]').value;
 		const occupation = document.querySelector('[name = occupation]').value;
 		const weapon = document.querySelector('[name = weapon]').value;
-		const cartoon = document.querySelector('[name = cartoonCreate]').value;
-
+		const cartoon = document.querySelector('[name = cartoonCreate]').checked;
+		console.log(cartoon);
 		charactersAPI
 			.createOneRegister(name, occupation, weapon, cartoon)
 			.then((res) => console.log(res))
