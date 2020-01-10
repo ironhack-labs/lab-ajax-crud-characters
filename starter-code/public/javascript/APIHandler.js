@@ -1,25 +1,34 @@
 class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+  constructor(url) {
+    this.BASE_URL = url;
+    this.ENDPOINT = url + "/characters/";
   }
 
-  getFullList () {
-
+  getAll() {
+    return axios.get(this.ENDPOINT).then(response => response.data);
   }
 
-  getOneRegister () {
-
+  getOne(id) {
+    return axios.get(this.ENDPOINT + id).then(response => response.data);
   }
 
-  createOneRegister () {
-
+  createOne(body) {
+    return axios.post(this.ENDPOINT, body).then(response => {
+      console.log("post successfull and the response is: ", response.data);
+      showCharacter(response.data);
+    });
   }
 
-  updateOneRegister () {
-
+  deleteOne(id) {
+    return axios.delete(this.ENDPOINT + id).then(response => {
+      console.log("delete successfull", response.data);
+    });
   }
 
-  deleteOneRegister () {
-
+  editOne(id, body) {
+    return axios.patch(this.ENDPOINT + id, updatedData).then(response => {
+        console.log("update successfull", response.data);
+        showCharacter(response.data);
+    });
   }
 }
