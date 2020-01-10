@@ -48,16 +48,23 @@ window.addEventListener('load', () => {
 
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-
-
-
-
+    
   });
 
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+     let bodyId={
+       name: document.getElementById("nameChar").value,
+       occupation: document.getElementById("createOccu").value,
+       weapon: document.getElementById("weapon").value,
+       cartoon: document.getElementById("checkbox").value
+  }
 
+   charactersAPI.createOneRegister(bodyId)
+   .then(responseData=>console.log(responseData)  )
+   
+ // console.log(bodyId)
 
-    
   });
 });
