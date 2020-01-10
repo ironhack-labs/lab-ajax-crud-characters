@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Dirk",
+      "occupation": "Actor",
+      "weapon": "Hats",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Susanne",
+      "occupation": "Actress",
+      "weapon": "Shoes",
+      "cartoon": false,
+      "id": 4
+    }
+  ]
+}
