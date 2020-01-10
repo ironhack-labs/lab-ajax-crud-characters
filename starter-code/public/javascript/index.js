@@ -54,11 +54,19 @@ window.addEventListener('load', () => {
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
     event.preventDefault();
+   let name=document.getElementById("nameChar");
+   name=name.value
+   let occupation=document.getElementById("createOccu");
+   occupation=occupation.value
+   let weapon=document.getElementById("weapon");
+   weapon=weapon.value
+   let cartoon=document.getElementById("checkbox")
+   cartoon=cartoon.value
      let bodyId={
-       name: document.getElementById("nameChar").value,
-       occupation: document.getElementById("createOccu").value,
-       weapon: document.getElementById("weapon").value,
-       cartoon: document.getElementById("checkbox").value
+       name: name,
+       occupation: occupation,
+       weapon: weapon,
+       cartoon: cartoon
   }
 
    charactersAPI.createOneRegister(bodyId)
