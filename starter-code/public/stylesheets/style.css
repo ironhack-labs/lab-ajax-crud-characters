@@ -71,6 +71,7 @@ button {
   text-align: left;
   border: solid white 2px;
   border-radius: 20px;
+  box-sizing: content-box;
 }
 
 .character-info div span {
@@ -105,3 +106,12 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.c-info-name, .c-info-data { 
+  width: 48%;
+  margin: 0 1%;
+  display: inline-block;
+}  
+
+.c-info-name { font-weight: bold; }
+.c-info-data { color: #d8b362; }
