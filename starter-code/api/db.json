@@ -22,11 +22,18 @@
       "cartoon": true
     },
     {
-      "name": "TestName",
-      "occupation": "TestOccu",
-      "weapon": "TestWeapon",
-      "cartoon": "on",
+      "name": "Garfield",
+      "occupation": "Evil Cat",
+      "weapon": "Claw",
+      "cartoon": true,
       "id": 4
+    },
+    {
+      "name": "NameOneEdit",
+      "occupation": "OccuOne",
+      "weapon": "WeapOne",
+      "cartoon": false,
+      "id": 5
     }
   ]
 }
