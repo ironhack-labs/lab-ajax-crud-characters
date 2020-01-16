@@ -1,24 +1,61 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
-const inputSearchID = document.querySelector("input[name=character-id]");
+
 
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
-    charactersAPI.getFullList();
+    charactersAPI.getFullList()
+    .then(characters =>{
+      console.log(characters);
+    })
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
-    charactersAPI.getOneRegister(inputSearchID.value );
+    let val = document.getElementsByName("character-id")[0].value;
+     charactersAPI.getOneRegister(val)
+     .then(characters =>{
+      console.log(characters);
+    })
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
-
+    let val = document.getElementsByName("character-id-delete")[0].value;
+    charactersAPI.deleteOneRegister(val)
+    .then(characters =>{
+     console.log(characters);
+    })
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+     let val = document.getElementById("chr-id").value;
 
+     const updatedcharacterInfo = {
+       name: document.getElementById("name").value,
+       occupation: document.getElementById("occupation").value,
+       weapon: document.getElementById("weapon").value,
+       cartoon: document.getElementById("cartoon").checked
+     };
+     console.log("Data before update "+ JSON.stringify(updatedcharacterInfo));
+
+     charactersAPI.updateOneRegister(val, updatedcharacterInfo)
+     .then(characters =>{
+      console.log(characters);
+    })
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+     event.preventDefault()
+     let newCharacter =
+     {
+       name: newName.value,
+       occupation: newOcupation.value,
+       cartoon: newCartoon.checked,
+       weapon: newWeapon.value
+     }
+     charactersAPI.createOneRegister(newCharacter)
+     .then(newChar => {
+       console.log(newChar.data);
+     })
 
   });
 });
