@@ -1,0 +1,43 @@
+{
+    "characters": [
+      {
+        "id": 1,
+        "name": "rodrigues",
+        "occupation": "bueno",
+        "weapon": "bueno",
+        "cartoon": "on",
+        "editName": "Teste",
+        "editOccupation": "teste",
+        "editWeapon": "teste",
+        "editCheckbox": "on"
+      },
+      {
+        "id": 2,
+        "name": "Luke Skywalker",
+        "occupation": "Jedi Knight",
+        "weapon": "Lightsaber",
+        "cartoon": false
+      },
+      {
+        "id": 3,
+        "name": "Sponge Bob",
+        "occupation": "Lives under the sea",
+        "weapon": "Crabby Patty",
+        "cartoon": true
+      },
+      {
+        "id": 4,
+        "name": "Tony",
+        "occupation": "Genius",
+        "weapon": "Ironman",
+        "cartoon": "on"
+      },
+      {
+        "name": "Benner",
+        "occupation": "Hulk",
+        "weapon": "Marvel",
+        "cartoon": "on",
+        "id": 5
+      }
+    ]
+  }
