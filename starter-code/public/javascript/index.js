@@ -20,8 +20,22 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('fetch-one').addEventListener('click', async function (event) {
-    const oneElement = await charactersAPI.updateOneRegister(1);
-    console.log(oneElement);
+    const theId = document.querySelector('.operation input[name="character-id"]').value;
+
+    if (theId){
+      const character = await charactersAPI.updateOneRegister(theId);
+      // console.log(character);
+      let container = document.querySelector('.characters-container');
+      container.innerHTML = `
+      <div class="character-info">
+        <div class="name">Id: ${character.id}</div>
+        <div class="name">Name: ${character.name}</div>
+        <div class="occupation">Occupation: ${character.occupation}</div>
+        <div class="cartoon">Is a Cartoon? ${character.cartoon}</div>
+        <div class="weapon">Weapon: ${character.weapon}</div>
+      </div>
+      `;
+    }
   });
 
   document.getElementById('delete-one').addEventListener('click', async function (event) {
