@@ -55,13 +55,65 @@ window.addEventListener('load', () => {
 
   });
 
-  document.getElementById('edit-character-form').addEventListener('submit', async function (event) {
-
-  });
-
   document.getElementById('new-character-form').addEventListener('submit', async function (event) {
     // { name: 'Batman', occupation: 'hero', cartoon: true, weapon: 'A lot' }
     // { name: 'Robin', occupation: 'hero', cartoon: true, weapon: 'some' }
+    event.preventDefault();
 
+    const name = document.querySelector('#new-character-form input[name="name"]').value;
+    const occupation = document.querySelector('#new-character-form input[name="occupation"]').value;
+    const weapon = document.querySelector('#new-character-form input[name="weapon"]').value;
+    const cartoon = document.querySelector('#new-character-form input[name="cartoon"]').checked;
+    
+    if (name && occupation && weapon){
+
+      const characterInfo = {
+        name,
+        occupation,
+        weapon,
+        cartoon
+      };
+
+      // console.log(characterInfo);
+      let button = document.querySelector('#new-character-form #send-data');
+      const newChar = await charactersAPI.createOneRegister(characterInfo);
+      if (newChar) {
+        button.setAttribute("style", "background: green;");
+      } else {
+        button.setAttribute("style", "background: red;");
+      }
+      document.querySelector("#new-character-form").reset();
+    }
+
+  });
+
+  document.getElementById('edit-character-form').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const theId = document.querySelector('#edit-character-form input[name="chr-id"]').value;
+    const name = document.querySelector('#edit-character-form input[name="name"]').value;
+    const occupation = document.querySelector('#edit-character-form input[name="occupation"]').value;
+    const weapon = document.querySelector('#edit-character-form input[name="weapon"]').value;
+    const cartoon = document.querySelector('#edit-character-form input[name="cartoon"]').checked;
+    
+    if (theId && name && occupation && weapon){
+
+      const characterInfo = {
+        name,
+        occupation,
+        weapon,
+        cartoon
+      };
+
+      // console.log(characterInfo);
+      let button = document.querySelector('#edit-character-form #send-data');
+      const response = await charactersAPI.updateOneRegister(theId, characterInfo);
+      if (response) {
+        button.setAttribute("style", "background: green;");
+      } else {
+        button.setAttribute("style", "background: red;");
+      }
+      document.querySelector("#edit-character-form").reset();
+    }
   });
 });
