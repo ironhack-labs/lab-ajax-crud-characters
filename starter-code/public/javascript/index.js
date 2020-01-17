@@ -39,6 +39,20 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('delete-one').addEventListener('click', async function (event) {
+    const theInput = document.querySelector('.operation input[name="character-id-delete"]');
+    const theId = theInput.value;
+
+    if (theId){
+      const isDeleted = await charactersAPI.deleteOneRegister(theId);
+      // console.log(isDeleted);
+      let button = document.querySelector('#delete-one');
+      theInput.setAttribute('value','');
+      if (isDeleted) {
+        button.setAttribute("style", "background: green;");
+      } else {
+        button.setAttribute("style", "background: red;");
+      }
+    }
 
   });
 
