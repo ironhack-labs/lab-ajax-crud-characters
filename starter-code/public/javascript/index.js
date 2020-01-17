@@ -46,7 +46,6 @@ window.addEventListener('load', () => {
       const isDeleted = await charactersAPI.deleteOneRegister(theId);
       // console.log(isDeleted);
       let button = document.querySelector('#delete-one');
-      theInput.setAttribute('value','');
       if (isDeleted) {
         button.setAttribute("style", "background: green;");
       } else {
