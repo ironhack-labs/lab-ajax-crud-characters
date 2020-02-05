@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "PATRICK",
+      "occupation": "Stupid",
+      "weapon": "head",
+      "cartoon": true
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "a",
+      "occupation": "a",
+      "weapon": "a",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "a",
+      "occupation": "a",
+      "weapon": "a",
+      "cartoon": true,
+      "id": 8
+    }
+  ]
+}

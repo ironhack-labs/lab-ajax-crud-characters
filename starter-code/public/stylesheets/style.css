@@ -10,7 +10,8 @@ body {
   background: url("../images/minions.jpg")
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d8b362;
 }
 
@@ -104,4 +105,16 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+.err {
+  color: red;
+}
+
+.red_bg {
+  background-color: red;
+}
+
+.green_bg {
+  background-color: green;
 }
