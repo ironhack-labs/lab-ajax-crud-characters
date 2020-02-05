@@ -97,51 +97,49 @@ btnDeleteOne.addEventListener('click', function (event) {
     })
 });
 
-createForm.addEventListener('submit', async function (event) {
-  event.preventDefault();
-  const formData = new FormData(createForm);
-  const newId    = await generateId();
+async function handleForms(e) {
+  e.preventDefault();
+  const operation = e.target.id == 'new-character-form' ? 'new' : 'edit';
+  const formData = new FormData(operation == 'new' ? createForm : editForm);
 
-  const newChar = {
-    id         : newId,
+  const values = {
     name       : formData.get('name'),
     occupation : formData.get('occupation'),
     weapon     : formData.get('weapon'),
     cartoon    : !!formData.get('cartoon') ? true : false
   }
 
-  console.log("New character : ", newChar)
+  // CREATE
+  if (operation == 'new') {
 
-  charactersAPI.createOne(newChar)
-    .then(response => {
-      console.log("Successfuly created character");
-      setButtonState(btnCreateOne, true);
-    }).catch(err => {
-      console.log(err);
-      setButtonState(btnCreateOne, false);
-    })
+    // Generate id for the new character
+    values.id   = await generateId();
 
-});
+    charactersAPI.createOne(values)
+      .then(response => {
+        console.log("Successfuly created character");
+        setButtonState(btnCreateOne, true);
+      }).catch(err => {
+        console.log(err);
+        setButtonState(btnCreateOne, false);
+      })
 
-editForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  const formData = new FormData(editForm);
-  const charId   = formData.get('charId');
+  // EDIT
+  } else {
 
-  const updateValues = {
-    name       : formData.get('name'),
-    occupation : formData.get('occupation'),
-    weapon     : formData.get('weapon'),
-    cartoon    : !!formData.get('cartoon') ? true : false
+    const charId = formData.get('charId');
+    charactersAPI.updateOne(charId, values)
+      .then(response => {
+        console.log("Successfuly updated character");
+        setButtonState(btnEditOne, true);
+      }).catch(err => {
+        console.log(err);
+        setButtonState(btnEditOne, false);
+      })
+
   }
 
-  charactersAPI.updateOne(charId, updateValues)
-    .then(response => {
-      console.log("Successfuly updated character");
-      setButtonState(btnEditOne, true);
-    }).catch(err => {
-      console.log(err);
-      setButtonState(btnEditOne, false);
-    })
+}
 
-});
+createForm.addEventListener('submit', (e) => { handleForms(e) })
+editForm.addEventListener('submit', (e) => { handleForms(e) })
