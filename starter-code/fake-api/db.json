@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "name": "mochon",
+      "occupation": "nada",
+      "weapon": "totis",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "l",
+      "occupation": "l",
+      "weapon": "l",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "lol",
+      "occupation": "lol",
+      "weapon": "lol",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "masino",
+      "occupation": "mochona",
+      "weapon": "señora",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "asd",
+      "occupation": "asdf",
+      "weapon": "asdf",
+      "cartoon": false,
+      "id": 7
+    }
+  ]
+}

@@ -105,3 +105,29 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+#show-container{
+  width: 100%;
+  padding-top: 3%;
+}
+
+#show-container div{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+#show-container div p{
+  color: white;
+  width: 200%;
+}
+
+.card{
+  width: 15%;
+  background:  #385476;
+  border: 2px solid white;
+  border-radius: 3%;
+  text-align: center;
+}
