@@ -32,9 +32,10 @@
     </section>
   </section>
   <section class="container">
+
     <section class="form-container">
       <h2>New Character</h2>
-      <form id="new-character-form" class="character-form">
+      <form id="new-character-form" class="character-form" metho="POST">
         <div class="field">
           <label for="name">Name: </label>
           <input type="text" name="name">
@@ -51,15 +52,16 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button id="new-character-btn">Create</button>
       </form>
     </section>
+
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="charId">
         </div>
         <div class="field">
           <label for="name">Name: </label>
@@ -77,7 +79,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="edit-character-btn">Update</button>
       </form>
     </section>
   </section>

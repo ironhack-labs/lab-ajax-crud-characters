@@ -32,6 +32,10 @@ button {
   overflow: hidden;
 }
 
+button.success {
+  border-color:green;
+}
+
 button.error {
   border-color:red;
 }
