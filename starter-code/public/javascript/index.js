@@ -1,5 +1,5 @@
 import APIHandler from './APIHandler.js'
-const charactersAPI = new APIHandler('http://localhost:8000');
+const charactersAPI = new APIHandler('http://localhost:8000', 'characters');
 
 const charactersContainer = document.body.querySelector(".characters-container");
 
