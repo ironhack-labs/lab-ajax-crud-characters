@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Yan Yolo",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false
+    },
+    {
+      "name": "EEE",
+      "occupation": "cc",
+      "cartoon": false,
+      "weapon": "a",
+      "id": 2
+    }
+  ]
+}
