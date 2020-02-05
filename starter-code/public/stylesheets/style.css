@@ -65,6 +65,8 @@ button {
 
 .character-info {
   position: relative;
+  display:flex;
+  flex-direction: column;
   width: 40%;
   margin: 10px;
   padding: 10px;
@@ -75,8 +77,7 @@ button {
 
 .character-info div span {
   color: #d8b362;
-  position: absolute;
-  left: 50%;
+
 }
 
 .form-container {
