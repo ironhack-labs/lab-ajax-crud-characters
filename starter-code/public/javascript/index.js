@@ -1,12 +1,16 @@
 import APIHandler from './APIHandler.js'
 const charactersAPI = new APIHandler('http://localhost:8000');
 const charactersContainer = document.body.querySelector(".characters-container");
+const btnFetchAll = document.getElementById('fetch-all');
+const btnFetchOne = document.getElementById('fetch-one');
+const btnDeleteOne = document.getElementById('delete-one');
 
 function clearCharactersContainer() {
   charactersContainer.innerHTML = '';
 }
 
 function generateCharacter(character) {
+
   const template = `
   <div class="character-info">
     <div class="id"><span>ID : </span>${character.id}</div>
@@ -15,29 +19,48 @@ function generateCharacter(character) {
     <div class="cartoon"><span>Is a Cartoon ? : </span>${character.cartoon}</div>
     <div class="weapon"><span>Weapon : </span>${character.weapon}</div>
   </div>`;
+
   charactersContainer.innerHTML += template;
+
 }
 
-document.getElementById('fetch-all').addEventListener('click', function (event) {
+btnFetchAll.addEventListener('click', function (event) {
+
   charactersAPI.getAll()
     .then(response => {
       response.data.forEach(character => {
         generateCharacter(character)
       })
     })
+
 });
 
-document.getElementById('fetch-one').addEventListener('click', function (event) {
+btnFetchOne.addEventListener('click', function (event) {
+
   const charId = parseInt(document.getElementById('fetch-one-input').value, 10);
+
   charactersAPI.getOne(charId)
     .then(response => {
+      btnFetchOne.classList.remove('error');
       clearCharactersContainer();
       generateCharacter(response.data)
-    }).catch(err => console.log(err))
+    }).catch(err => {
+      console.log(err);
+      btnFetchOne.classList.add('error');
+    })
+
 });
 
-document.getElementById('delete-one').addEventListener('click', function (event) {
-
+btnDeleteOne.addEventListener('click', function (event) {
+  const charId = parseInt(document.getElementById('delete-one-input').value, 10);
+  charactersAPI.deleteOne(charId)
+    .then(response => {
+      console.log("Successfuly deleted char id : ", charId);
+      btnDeleteOne.classList.remove('error');
+    }).catch(err => {
+      console.log(err);
+      btnDeleteOne.classList.add('error');
+    })
 });
 
 document.getElementById('edit-character-form').addEventListener('submit', function (event) {
