@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "BoJack Horseman",
+      "occupation": "Actor",
+      "weapon": "Self-destruction",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Michael Scott",
+      "occupation": "World's Best Boss",
+      "weapon": "Terrible jokes",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Daria",
+      "occupation": "Student",
+      "weapon": "Cynism",
+      "cartoon": true
+    },
+    {
+      "name": "Lucien",
+      "occupation": "Cellist",
+      "weapon": "Cuteness",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Nina",
+      "occupation": "Web Dev",
+      "weapon": "Fork",
+      "cartoon": false,
+      "id": 5
+    }
+  ]
+}
