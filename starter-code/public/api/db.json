@@ -1,0 +1,74 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "aaaaaaaaaaaaaaaaa",
+      "occupation": "qrgqerq",
+      "weapon": "rtaerfef fffff",
+      "cartoon": "on"
+    },
+    {
+      "id": 6,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Sponge Bob  ddddddd",
+      "occupation": "Lives under the seadddd",
+      "weapon": "Crabby Patty dddd",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "franck_treboitXXX",
+      "occupation": "qrgqerq",
+      "weapon": "rtaerfef",
+      "cartoon": "on",
+      "id": 8
+    },
+    {
+      "name": "qrtzertzetztzertzertzert",
+      "occupation": "qrgqerq",
+      "weapon": "rtaerfef",
+      "cartoon": "on",
+      "id": 9
+    },
+    {
+      "name": "aaaaa",
+      "occupation": "toto",
+      "weapon": "toto",
+      "cartoon": "on",
+      "id": 10
+    },
+    {
+      "name": "aaaaa",
+      "occupation": "toto",
+      "weapon": "rtaerfef fffff",
+      "cartoon": "on",
+      "id": 11
+    }
+  ]
+}
