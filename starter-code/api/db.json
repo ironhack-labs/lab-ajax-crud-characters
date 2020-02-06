@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Sponge",
+      "weapon": "none",
+      "cartoon": false
+    },
+    {
+      "name": "Harry Potter",
+      "occupation": "magician",
+      "weapon": "wand",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "Ron Weasley",
+      "occupation": "magician",
+      "weapon": "wand",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Elsa",
+      "occupation": "dev",
+      "weapon": "knife",
+      "cartoon": true,
+      "id": 7
+    }
+  ]
+}
