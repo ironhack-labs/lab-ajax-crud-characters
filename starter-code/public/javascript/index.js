@@ -41,15 +41,21 @@ window.addEventListener('load', () => {
           </div>`
     
       document.getElementById('characters-container').innerHTML = html; 
+
   }
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
       
        let cid =  document.getElementById('character-id-delete').value;
        charactersAPI.deleteOneRegister(cid)
-        .then(apiRes => console.log(apiRes.data, "deleted" ))
+        .then(apiRes => deleteme())
         .catch(apiErr => console.log("error") );
   });
+
+
+    function deleteme() {
+        document.getElementById('delete-one').classList.add('green');
+    }
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
         event.preventDefault();
