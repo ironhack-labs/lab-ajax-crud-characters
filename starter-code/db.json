@@ -1,0 +1,88 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "tata",
+      "occupation": "tata",
+      "weapon": "tata",
+      "cartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "lala",
+      "occupation": "lala",
+      "weapon": "lala",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "aze",
+      "occupation": "aze",
+      "weapon": "aze",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "lj",
+      "occupation": "lj",
+      "weapon": "lj",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "nene",
+      "occupation": "nene",
+      "weapon": "nene",
+      "cartoon": true,
+      "id": 9
+    },
+    {
+      "name": "vuvu",
+      "occupation": "vuvu",
+      "weapon": "vuvu",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "az",
+      "occupation": "az",
+      "weapon": "az",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "io",
+      "occupation": "io",
+      "weapon": "io",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "fsf",
+      "occupation": "fs",
+      "weapon": "fq",
+      "cartoon": false,
+      "id": 14
+    }
+  ]
+}
