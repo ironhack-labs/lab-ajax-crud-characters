@@ -1,25 +1,60 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  getFullList() {
+    return axios
+      .get(this.BASE_URL + '/characters')
+      .then((response) => {
+        // console.log(response);
+        return response.data;
+      })
+      .catch((err) => console.log(err));
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return axios
+      .get(this.BASE_URL + '/characters/' + id)
+      .then((response) => {
+        return response.data;
+      })
+      .catch((err) => console.log(err));
   }
 
-  createOneRegister () {
-
+  createOneRegister(data) {
+    console.log(this.BASE_URL + '/characters');
+    axios
+      .post(this.BASE_URL + '/characters', {
+        name: data.name,
+        occupation: data.occupation,
+        weapon: data.weapon,
+        cartoon: data.cartoon,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id, data) {
+    axios
+      .put(this.BASE_URL + '/characters/' + id, {
+        name: data.name,
+        occupation: data.occupation,
+        weapon: data.weapon,
+        cartoon: data.cartoon,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    axios
+      .delete(this.BASE_URL + '/characters/' + id)
+      .then((response) => {})
+      .catch((err) => console.log(err));
   }
 }
