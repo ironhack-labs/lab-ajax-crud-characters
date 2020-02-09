@@ -15,13 +15,19 @@ window.addEventListener('load', () => {
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
 
+    charactersAPI.deleteOneRegister(event)
+
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
 
+    charactersAPI.updateOneRegister(event)
+
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+
+    charactersAPI.registerOne(event)
 
   });
 });
