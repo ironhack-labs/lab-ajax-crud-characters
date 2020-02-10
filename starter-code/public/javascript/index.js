@@ -45,8 +45,7 @@ window.addEventListener('load', () => {
     document.getElementById('send-data2').style='background:red'
     document.getElementById('send-data').style='background:none'
     const res=await charactersAPI.updateOneRegister(character)
-    console.log(res)
-    if (!res) {
+    if (res.statusText='Created') {
       const characters=await charactersAPI.getFullList()
       $boton=document.getElementById('send-data2')
       $boton.style='background:green'
@@ -71,7 +70,6 @@ window.addEventListener('load', () => {
     document.getElementById('delete-one').style='background:none'
     document.getElementById('send-data2').style='background:none'
     const res=await charactersAPI.createOneRegister(character)
-    console.log(res)
     if (res.statusText='Created') {
       const characters=await charactersAPI.getFullList()
       $boton=document.getElementById('send-data')

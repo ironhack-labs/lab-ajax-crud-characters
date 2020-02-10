@@ -21,6 +21,7 @@ class APIHandler {
   updateOneRegister= async (character)=>{
     const {id,name,occupation,weapon,cartoon}=character
     const data=await axios.patch(this.BASE_URL+"/"+id,{name,occupation,weapon,cartoon})
+    return data
   }
 
   deleteOneRegister= async (id)=>{
