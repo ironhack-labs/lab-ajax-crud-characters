@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Kevin",
+      "occupation": "Minnion",
+      "weapon": "umbrella",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "Stuart",
+      "occupation": "Minnion",
+      "weapon": "Torpeedos",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Bob",
+      "occupation": "Minnion",
+      "weapon": "teddy bear",
+      "cartoon": true,
+      "id": 6
+    }
+  ]
+}
