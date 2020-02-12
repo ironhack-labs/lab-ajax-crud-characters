@@ -51,15 +51,23 @@ window.addEventListener('load', () => {
     let id = document.querySelector('#one-delete').value
     charactersAPI.deleteOneRegister(id)
       .then(() => {
-        document.querySelector('#one-delete').value = 'Elemento borrado'
+        document.querySelector('#delete-one').style.backgroundColor = 'green'
+      })
+      .catch(error => {
+        document.querySelector('#delete-one').style.background = 'red'
+        console.log(error)
       })
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    event.preventDefault()
+    charactersAPI.updateOneRegister()
 
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+    event.preventDefault()
+    charactersAPI.createOneRegister()
 
   });
 });
