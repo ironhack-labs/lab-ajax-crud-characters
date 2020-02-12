@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "name": "adfas",
+      "occupation": "adsfa",
+      "cartoon": false,
+      "weapon": "adsfa",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "2Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "3Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "4Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "5spongbebob",
+      "occupation": "adfa",
+      "cartoon": false,
+      "weapon": "asdfadsfa",
+      "id": 5
+    }
+  ]
+}
