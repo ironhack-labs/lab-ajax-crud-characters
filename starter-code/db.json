@@ -1,0 +1,51 @@
+{
+  "characters": [
+    {
+      "name": "as",
+      "occupation": "as",
+      "weapon": "as",
+      "cartoon": true,
+      "id": 1
+    },
+    {
+      "name": "as",
+      "occupation": "as",
+      "weapon": "as",
+      "cartoon": true,
+      "id": 2
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "name": "WALL-E",
+      "occupation": "Waste Allocation Robot",
+      "weapon": "Head laser",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "vivafro",
+      "occupation": "GOAT",
+      "weapon": "edr",
+      "cartoon": true,
+      "id": 9
+    },
+    {
+      "name": "vivafro",
+      "occupation": "GOAT",
+      "weapon": "edr",
+      "cartoon": true,
+      "id": 10
+    }
+  ]
+}
