@@ -11,7 +11,8 @@ class APIHandler {
 
   }
 
-  getOneRegister() {
+  getOneRegister(id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
 
   }
 
@@ -23,7 +24,8 @@ class APIHandler {
 
   }
 
-  deleteOneRegister() {
+  deleteOneRegister(id) {
+    return axios.delete(`${this.BASE_URL}/characters/${id}`)
 
   }
 }

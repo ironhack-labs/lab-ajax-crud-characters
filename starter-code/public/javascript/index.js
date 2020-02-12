@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
             <div class="cartoon">${element.cartoon}</div>
             <div class="weapon">${element.weapon}</div>`
 
-          console.log(card)
+          // console.log(card)
           // characterInfoDOM.appendChild(card);
 
           document.querySelector('.characters-container').innerHTML += card
@@ -36,11 +36,23 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
+    let id = document.querySelector('#one-character').value
+    charactersAPI.getOneRegister(id)
+      .then(elm => {
+        document.querySelector('.name').innerHTML = elm.data.name
+        document.querySelector('.occupation').innerHTML = elm.data.occupation
+        document.querySelector('.cartoon').innerHTML = elm.data.cartoon
+        document.querySelector('.weapon').innerHTML = elm.data.weapon
+      })
 
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
-
+    let id = document.querySelector('#one-delete').value
+    charactersAPI.deleteOneRegister(id)
+      .then(() => {
+        document.querySelector('#one-delete').value = 'Elemento borrado'
+      })
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
