@@ -6,6 +6,15 @@ function reset() {
   document.querySelector('#character-id').value = ''
   document.querySelector('#character-id-delete').value = ''
   document.querySelector('.characters-container').innerHTML = ''
+  document.querySelector('#newName').value = ''
+  document.querySelector('#newOccupation').value = ''
+  document.querySelector('#newWeapon').value = ''
+  document.querySelector('#newCartoon').checked = ''
+  document.querySelector('#updId').value = ''
+  document.querySelector('#updName').value = ''
+  document.querySelector('#updOccupation').value = ''
+  document.querySelector('#updWeapon').value = ''
+  document.querySelector('#updCartoon').checked = ''
 }
 
 window.addEventListener('load', () => {
