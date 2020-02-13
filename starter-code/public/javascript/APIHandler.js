@@ -69,11 +69,8 @@ class APIHandler {
 
     this.axiosApp.put(`/${newMinion.id}`, newMinion)
       .then(created => console.log(created))
-      .catch(err => next(err)
+      .catch(err => next(err))
 
-
-
-  
   }
 
   deleteOneRegister() {
