@@ -1,25 +1,47 @@
 class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
-  }
-
-  getFullList () {
-
-  }
-
-  getOneRegister () {
+  constructor(baseUrl) {
+    this.axiosApp = axios.create({
+      baseURL: baseUrl
+    })
 
   }
 
-  createOneRegister () {
+
+
+
+  getFullList() {
+
+    return this.axiosApp.get()
+      .then(response => response.data)
+      .catch(error => console.log('Oh No! Error is: ', error))
 
   }
 
-  updateOneRegister () {
+  getOneRegister(id) {
+
+    return this.axiosApp.get(id)
+      .then(response => response.data)
+      .catch(error => console.log('Oh No! Error is: ', error))
+  }
+
+  createOneRegister(newMinion) {
+
+
+    return this.axiosApp.post("/", newMinion)
+      .then(response => response)
+      .catch(error => console.log('Oh No! Error is: ', error))
+
 
   }
 
-  deleteOneRegister () {
+  updateOneRegister() {
 
+  }
+
+  deleteOneRegister(id) {
+
+    return this.axiosApp.delete(id)
+      .then(response => response.data)
+      .catch(error => console.log('Oh No! Error is: ', error))
   }
 }
