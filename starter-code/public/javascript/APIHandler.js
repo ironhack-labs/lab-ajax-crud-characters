@@ -14,15 +14,15 @@ class APIHandler {
     return axios.get(`${this.BASE_URL}/characters/${characterId}`)
   }
 
-  createOneRegister() {
-
+  createOneRegister(characterInfo) {
+    return axios.post(`${this.BASE_URL}/characters`, characterInfo)
   }
 
   updateOneRegister() {
 
   }
 
-  deleteOneRegister() {
-
+  deleteOneRegister(characterId) {
+    return axios.delete(`${this.BASE_URL}/characters/${characterId}`)
   }
 }
