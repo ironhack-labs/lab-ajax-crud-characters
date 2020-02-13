@@ -7,7 +7,10 @@ window.addEventListener('load', () => {
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
 
+    charactersAPI.getOneRegister()
+    reset()
   });
+
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
 
