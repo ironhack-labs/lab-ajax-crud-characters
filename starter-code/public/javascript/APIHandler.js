@@ -1,7 +1,7 @@
 export default class APIHandler {
-  constructor (baseUrl) {
+  constructor (baseURL) {
     this.api = axios.create({
-      baseUrl
+      baseURL
     });
   }
 
