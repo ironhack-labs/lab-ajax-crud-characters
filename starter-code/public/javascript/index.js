@@ -1,18 +1,11 @@
-// import APIHandler from "./APIHandler.js"
-// const charactersAPI = new APIHandler('http://localhost:8000');
+// import APIHandler from "./APIHandler.js";
 
-// function fetchAll() {
-//   charactersAPI
-//   .getFullList()
-//   .then(res => {
-//     console.log(res)
-//   })
-// }
+// const charactersAPI = new APIHandler('http://localhost:8000');
 
 // window.addEventListener('load', () => {
 //   document.getElementById('fetch-all').addEventListener('click', function (event) {
-//     fetchAll();
 //   });
+
 
 //   document.getElementById('fetch-one').addEventListener('click', function (event) {
 
@@ -31,97 +24,79 @@
 //   });
 // });
 
+import APIHandler from "./APIHandler.js";
 
-import APIHandler from './APIHandler.js';
-const charactersAPI = new APIHandler('http://localhost:8000');
-const target = document.querySelector('.characters-container')
-const inputFetchOne = document.querySelector(`input[name="character-id"]`);
-const deleteBtn = document.getElementById('delete-one');
-const newCharBtn = document.querySelector('#new-character-form #send-data')
-const editCharBtn = document.querySelector('#edit-character-form #send-data')
+// APIHandler class instanciation
+const api = new APIHandler("http://localhost:8000");
 
-function charTpl(obj) {
-  return `<div class="character-info">
-        <div class="id">id: ${obj.id}</div>
-        <div class="name">name: ${obj.name}</div>
-        <div class="occupation">occupation: ${obj.occupation}</div>
-        <div class="weapon">weapon: ${obj.weapon}</div>
-        <div class="cartoon">is a cartoon: ${obj.cartoon}</div>
-      </div>`
-}
+// DOM
+const container = document.querySelector(".characters-container");
+const btnGetAll = document.getElementById("fetch-all");
+const btnGetOne = document.getElementById("fetch-one");
+const btnDeleteOne = document.getElementById("delete-one");
+const btnEditChar = document.getElementById("edit-character-form");
+const btnNewChar = document.getElementById("new-character-form");
+const inputIdGetOne = document.querySelector("[name=character-id]");
+const inputIdDelete = document.querySelector("[name=character-id-delete]");
 
-function errTpl(err) {
-  return `<div class="character-info"><div class="err">Err : ${err}</div></div>`
-}
+// FUNCTIONS
 
-async function fetchAll(event) {
-  let characters = await charactersAPI.getFullList();
-  target.innerHTML = ``;
-  characters.data.forEach(character => target.innerHTML += charTpl(character))
-}
-fetchAll();
-
-async function fetchOne(event) {
-  try {
-    let characters = await charactersAPI.getOneRegister(inputFetchOne.value);
-    target.innerHTML = ``;
-    target.innerHTML += charTpl(characters.data)
-  } catch (e) {
-    target.innerHTML = errTpl('Character not found');
-  }
-}
-window.addEventListener('load', () => {
-  document.getElementById('fetch-all').addEventListener('click', fetchAll);
-
-  document.getElementById('fetch-one').addEventListener('click', fetchOne);
-
-  document.getElementById('new-character-form').addEventListener('submit', async function (event) {
-    event.preventDefault();
-    const character = {
-      name: document.querySelector(`#new-character-form input[name="name"]`).value,
-      occupation: document.querySelector(`#new-character-form input[name="occupation"]`).value,
-      weapon: document.querySelector(`#new-character-form input[name="weapon"]`).value,
-      cartoon: document.querySelector(`#new-character-form input[name="cartoon"]`).checked
-    };
-    //return console.log(character)
-    try {
-      await charactersAPI.createOneRegister(character);
-      newCharBtn.classList.add('green_bg')
-      fetchAll()
-    } catch (e) {
-      newCharBtn.classList.add('red_bg')
-    }
+function renderCharacters(arr) {
+  container.innerHTML = ""; // reset chars list html content
+  arr.forEach(char => {
+    const str = `<div class="character-info">
+      <div class="name">${char.name} (id: ${char.id})</div>
+      <div class="occupation">${char.occupation}</div>
+      <div class="cartoon">${char.cartoon ? "is" : "is not"} a cartoon</div>
+      <div class="weapon">${char.weapon}</div>
+    </div>`;
+    container.innerHTML += str; // assign the generated string to char container
   });
+}
 
-  deleteBtn.addEventListener('click', async function (event) {
-    const inputDeleteOne = document.querySelector(`input[name="character-id-delete"]`);
-    deleteBtn.classList = ''
-    try {
-      await charactersAPI.deleteOneRegister(inputDeleteOne.value)
-      deleteBtn.classList.add('green_bg')
-    } catch (e) {
-      deleteBtn.classList.add('red_bg')
-    }
-    inputDeleteOne.value = '';
-    fetchAll()
-  });
+function getData(formId) {
+  const inputs = document.querySelectorAll(`#${formId} [name]`);
+  // Array.from(inputs) === [...inputs]
+  return [...inputs].reduce((a, inpt) => {
+    a[inpt.name === "chr-id" ? "id" : inpt.name] =
+      inpt.type !== "checkbox" ? inpt.value : inpt.checked;
+    return a;
+  }, {}); // reduce to a single object literal : for create/update tasks
+}
 
-  document.getElementById('edit-character-form').addEventListener('submit', async function (event) {
-    event.preventDefault();
-    const character = {
-      id: document.querySelector(`#edit-character-form input[name="chr-id"]`).value,
-      name: document.querySelector(`#edit-character-form input[name="name"]`).value,
-      occupation: document.querySelector(`#edit-character-form input[name="occupation"]`).value,
-      weapon: document.querySelector(`#edit-character-form input[name="weapon"]`).value,
-      cartoon: document.querySelector(`#edit-character-form input[name="cartoon"]`).checked
-    };
-    try {
-      await charactersAPI.updateOneRegister(character)
-      editCharBtn.classList.add('green_bg')
-      fetchAll()
-    } catch (e) {
-      editCharBtn.classList.add('red_bg')
-    }
-  });
+function wrap(myPromise) {
+  myPromise
+    .then(APIRes => ({ error: null, data: APIRes.data }))
+    .catch(APIError => {
+      console.error(APIError);
+      return { error: APIError, data: null };
+    });
+}
 
-});
+// event listening/handling
+btnGetAll.onclick = async () => {
+  const { error, data } = await wrap(api.getAll());
+  if (!error) return renderCharacters(data);
+};
+
+btnGetOne.onclick = async () => {
+  const { error, data } = await wrap(api.get(inputIdGetOne.value));
+  if (!error) return renderCharacters([data]);
+};
+
+btnDeleteOne.onclick = async () => {
+  const { error } = await wrap(api.get(inputIdDelete.value));
+  if (!error) return btnGetAll.click(); // reinit the view by fetching all characters
+};
+
+window.onsubmit = e => e.preventDefault(); // prevents page reload for all form on this document
+
+btnEditChar.onsubmit = async () => {
+  const { error } = await wrap(api.update(getData("edit-character-form")));
+  if (!error) return btnGetAll.click(); // reinit the view by fetching all characters
+};
+
+btnNewChar.onsubmit = async () => {
+  const { error } = await wrap(api.create(getData("new-character-form")));
+  if (!error) return btnGetAll.click(); // reinit the view by fetching all characters
+};
