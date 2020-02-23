@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "stich",
+      "occupation": "alien",
+      "weapon": "hands",
+      "cartoon": true,
+    },
+    {
+      "id": 4,
+      "name": "minion",
+      "occupation": "minion",
+      "weapon": "minion",
+      "cartoon": true
+    }
+  ]
+}
