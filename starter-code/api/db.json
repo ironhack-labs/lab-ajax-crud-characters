@@ -1,0 +1,25 @@
+{
+    " caracteres " : [
+     {
+       " id " :  1 ,
+        " nombre " :  " Han Solo " ,
+        " ocupación " :  " Contrabandista " ,
+        " arma " :  " Pistola Blaster " ,
+        " caricatura " :  true
+     },
+     {
+       " id " :  2 ,
+        " nombre " :  " Luke Skywalker " ,
+        " ocupación " :  " Caballero Jedi " ,
+        " arma " :  " Sable de luz " ,
+        " caricatura " :  false
+     },
+     {
+       " ID " :  3 ,
+        " nombre " :  " Bob Esponja " ,
+        " ocupación " :  " vive bajo el mar " ,
+        " arma " :  " Crabby Patty " ,
+        " dibujos animados " :  true
+     }
+   ]
+ }
