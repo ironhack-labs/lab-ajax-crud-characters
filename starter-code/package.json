@@ -1,0 +1,16 @@
+{
+  "name": "starter-code",
+  "version": "1.0.0",
+  "description": "Ironhack lab",
+  "repository": "https://github.com/michaelsmueller/lab-ajax-crud-characters.git",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ironhack",
+  "license": "ISC"
+}
