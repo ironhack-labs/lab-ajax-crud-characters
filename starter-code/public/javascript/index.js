@@ -1,5 +1,6 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
 const $characters = document.querySelector('.characters-container');
+const $deleteButton = document.getElementById("delete-one");
 
 function cleanCharacters() {
   while ($characters.lastElementChild) {
@@ -10,11 +11,12 @@ function cleanCharacters() {
 function createCharacterCard(character) {
   let newCharacter = document.createElement('div');
   newCharacter.className += "character-info";
-  newCharacter.innerHTML = `<div class="id">ID: ${character.id}</div>
-  <div class="name">Name: ${character.name}</div>
-  <div class="occupation">Occupation: ${character.occupation}</div>
-  <div class="weapon">Weapon: ${character.weapon}</div>
-  <div class="cartoon">Cartoon? ${character.cartoon}</div>`;
+  newCharacter.id = character.id;
+  newCharacter.innerHTML = `<div class="id">ID: <span>${character.id}</span></div>
+  <div class="name">Name: <span>${character.name}</span></div>
+  <div class="occupation">Occupation: <span>${character.occupation}</span></div>
+  <div class="weapon">Weapon: <span>${character.weapon}</span></div>
+  <div class="cartoon">Cartoon? <span>${character.cartoon}</span></div>`;
   return newCharacter;
 }
 
@@ -23,6 +25,11 @@ function renderNewCharacters(characters) {
     let newCharacter = createCharacterCard(character);
     $characters.appendChild(newCharacter);
   })
+}
+
+function removeCharacter(id) {
+  const characterToDelete = document.getElementById(id);
+  $characters.removeChild(characterToDelete);
 }
 
 window.addEventListener('load', () => {
@@ -61,9 +68,12 @@ window.addEventListener('load', () => {
       .deleteOneRegister(id)
       .then(() => {
         console.log(`Deleted character id ${id}`);
+        removeCharacter(id);
+        $deleteButton.style.backgroundColor = "green";
       })
       .catch(error => {
         console.log('Error deleting one character', error);
+        $deleteButton.style.backgroundColor = "red";
       });
   });
 
