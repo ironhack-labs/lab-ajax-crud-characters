@@ -1,11 +1,39 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
+const $characters = document.querySelector('.characters-container');
+
+function cleanCharacters() {
+  while ($characters.lastElementChild) {
+    $characters.removeChild($characters.lastElementChild);
+  }
+}
+
+function createCharacterCard(character) {
+  let newCharacter = document.createElement('div');
+  newCharacter.className += "character-info";
+  newCharacter.innerHTML = `<div class="id">ID: ${character.id}</div>
+  <div class="name">Name: ${character.name}</div>
+  <div class="occupation">Occupation: ${character.occupation}</div>
+  <div class="weapon">Weapon: ${character.weapon}</div>
+  <div class="cartoon">Cartoon? ${character.cartoon}</div>`;
+  return newCharacter;
+}
+
+function renderNewCharacters(characters) {
+  characters.forEach(character => {
+    let newCharacter = createCharacterCard(character);
+    $characters.appendChild(newCharacter);
+  })
+}
 
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function(event) {
     charactersAPI
       .getFullList()
-      .then(res => {
-        console.log('Fetched all', res.data);
+      .then(results => {
+        const characters = results.data;
+        console.log('Fetched all', characters);
+        cleanCharacters();
+        renderNewCharacters(characters);
       })
       .catch(error => {
         console.log('Error fetching all', error);
@@ -16,8 +44,11 @@ window.addEventListener('load', () => {
     const id = document.getElementsByName('character-id')[0].value;
     charactersAPI
       .getOneRegister(id)
-      .then(res => {
-        console.log('Fetched one', res.data);
+      .then(result => {
+        const character = result.data;
+        console.log('Fetched one', result.data);
+        cleanCharacters();
+        renderNewCharacters([character]);
       })
       .catch(error => {
         console.log('Error fetching one character', error);
