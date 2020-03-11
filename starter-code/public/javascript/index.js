@@ -116,10 +116,8 @@ window.addEventListener('load', () => {
       .then(result => {
         const character = result.data;
         console.log('Edited character ', character);
-
         cleanCharacters();
         renderCharacters([character]);
-        
         clearButtons()
         $updateButton.style.backgroundColor = "green";
       })
@@ -144,10 +142,8 @@ window.addEventListener('load', () => {
       .then(result => {
         const character = result.data;
         console.log('Created character ', character);
-
         cleanCharacters();
         renderCharacters([character]);
-
         clearButtons()
         $createButton.style.backgroundColor = "green";
       })
