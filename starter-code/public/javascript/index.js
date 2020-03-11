@@ -36,22 +36,44 @@ window.addEventListener('load', () => {
       });
   });
 
-  document.getElementById('edit-character-form').addEventListener('submit', function(event) {});
+  document.getElementById('edit-character-form').addEventListener('submit', function(event) {
+    event.preventDefault();    
+
+    const q = document.querySelector.bind(document);
+    const id = q("#edit-character-form input[name='chr-id']").value;
+    const name = q("#edit-character-form input[name='name']").value;
+    const occupation = q("#edit-character-form input[name='occupation']").value;
+    const weapon = q("#edit-character-form input[name='weapon']").value;
+    const cartoon = q("#edit-character-form input[name='cartoon']").checked;
+    const character = { name, occupation, weapon, cartoon };
+
+    charactersAPI
+      .updateOneRegister(id, character)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(error => {
+        console.log('Error updating a character', error);
+      });
+  });
 
   document.getElementById('new-character-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
     const q = document.querySelector.bind(document);
     const name = q("#new-character-form input[name='name']").value;
     const occupation = q("#new-character-form input[name='occupation']").value;
     const weapon = q("#new-character-form input[name='weapon']").value;
     const cartoon = q("#new-character-form input[name='cartoon']").checked;
     const character = { name, occupation, weapon, cartoon };
+    
     charactersAPI
       .createOneRegister(character)
       .then(res => {
         console.log(res.data);
       })
       .catch(error => {
-        console.log('Error fetching one character', error);
+        console.log('Error fetching a character', error);
       });
   });
 });

@@ -16,7 +16,9 @@ class APIHandler {
     return axios.post(this.BASE_URL + '/characters', character);
   }
 
-  updateOneRegister() {}
+  updateOneRegister(id, character) {
+    return axios.patch(this.BASE_URL + '/characters/' + id, character);
+  }
 
   deleteOneRegister(id) {
     return axios.delete(this.BASE_URL + '/characters/' + id);
