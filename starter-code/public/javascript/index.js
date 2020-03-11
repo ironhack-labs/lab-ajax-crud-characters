@@ -24,7 +24,17 @@ window.addEventListener('load', () => {
       });
   });
 
-  document.getElementById('delete-one').addEventListener('click', function(event) {});
+  document.getElementById('delete-one').addEventListener('click', function(event) {
+    const id = document.getElementsByName('character-id-delete')[0].value;
+    charactersAPI
+      .deleteOneRegister(id)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(error => {
+        console.log('Error deleting one character', error);
+      });
+  });
 
   document.getElementById('edit-character-form').addEventListener('submit', function(event) {});
 
