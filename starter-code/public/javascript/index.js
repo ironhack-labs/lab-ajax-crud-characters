@@ -4,6 +4,8 @@ const $characters = document.querySelector('.characters-container');
 const $fetchAllButton = document.getElementById("fetch-all");
 const $fetchOneButton = document.getElementById("fetch-one");
 const $deleteButton = document.getElementById("delete-one");
+const $createButton = document.getElementById("create-one");
+const $updateButton = document.getElementById("update-one");
 
 function cleanCharacters() {
   while ($characters.lastElementChild) {
@@ -23,7 +25,7 @@ function createCharacterCard(character) {
   return newCharacter;
 }
 
-function renderNewCharacters(characters) {
+function renderCharacters(characters) {
   characters.forEach(character => {
     let newCharacter = createCharacterCard(character);
     $characters.appendChild(newCharacter);
@@ -39,6 +41,8 @@ function clearButtons() {
   $fetchAllButton.style.backgroundColor = null;
   $fetchOneButton.style.backgroundColor = null;
   $deleteButton.style.backgroundColor = null;
+  $createButton.style.backgroundColor = null;
+  $updateButton.style.backgroundColor = null;
 }
 
 window.addEventListener('load', () => {
@@ -49,7 +53,7 @@ window.addEventListener('load', () => {
         const characters = results.data;
         console.log('Fetched all', characters);
         cleanCharacters();
-        renderNewCharacters(characters);
+        renderCharacters(characters);
         clearButtons()
         $fetchAllButton.style.backgroundColor = "green";
       })
@@ -66,9 +70,9 @@ window.addEventListener('load', () => {
       .getOneRegister(id)
       .then(result => {
         const character = result.data;
-        console.log('Fetched one', result.data);
+        console.log('Fetched one', character);
         cleanCharacters();
-        renderNewCharacters([character]);
+        renderCharacters([character]);
         clearButtons()
         $fetchOneButton.style.backgroundColor = "green";
       })
@@ -109,11 +113,19 @@ window.addEventListener('load', () => {
 
     charactersAPI
       .updateOneRegister(id, character)
-      .then(res => {
-        console.log('Edited character', res.data);
+      .then(result => {
+        const character = result.data;
+        console.log('Edited character ', character);
+
+        cleanCharacters();
+        renderCharacters([character]);
+        
+        clearButtons()
+        $updateButton.style.backgroundColor = "green";
       })
       .catch(error => {
         console.log('Error updating a character', error);
+        $updateButton.style.backgroundColor = "red";
       });
   });
 
@@ -129,11 +141,19 @@ window.addEventListener('load', () => {
 
     charactersAPI
       .createOneRegister(character)
-      .then(res => {
-        console.log('Added character', res.data);
+      .then(result => {
+        const character = result.data;
+        console.log('Created character ', character);
+
+        cleanCharacters();
+        renderCharacters([character]);
+
+        clearButtons()
+        $createButton.style.backgroundColor = "green";
       })
       .catch(error => {
         console.log('Error fetching a character', error);
+        $createButton.style.backgroundColor = "red";
       });
   });
 });
