@@ -4,7 +4,6 @@ class APIHandler {
   }
 
   getFullList() {
-    console.log('getFullList');
     return axios.get(this.BASE_URL + '/characters');
   }
 

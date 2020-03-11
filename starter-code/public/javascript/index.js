@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     charactersAPI
       .getFullList()
       .then(res => {
-        console.log(res.data);
+        console.log('Fetched all', res.data);
       })
       .catch(error => {
         console.log('Error fetching all', error);
@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
     charactersAPI
       .getOneRegister(id)
       .then(res => {
-        console.log(res.data);
+        console.log('Fetched one', res.data);
       })
       .catch(error => {
         console.log('Error fetching one character', error);
@@ -28,8 +28,8 @@ window.addEventListener('load', () => {
     const id = document.getElementsByName('character-id-delete')[0].value;
     charactersAPI
       .deleteOneRegister(id)
-      .then(res => {
-        console.log(res.data);
+      .then(() => {
+        console.log(`Deleted character id ${id}`);
       })
       .catch(error => {
         console.log('Error deleting one character', error);
@@ -37,7 +37,7 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function(event) {
-    event.preventDefault();    
+    event.preventDefault();
 
     const q = document.querySelector.bind(document);
     const id = q("#edit-character-form input[name='chr-id']").value;
@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
     charactersAPI
       .updateOneRegister(id, character)
       .then(res => {
-        console.log(res.data);
+        console.log('Edited character', res.data);
       })
       .catch(error => {
         console.log('Error updating a character', error);
@@ -66,11 +66,11 @@ window.addEventListener('load', () => {
     const weapon = q("#new-character-form input[name='weapon']").value;
     const cartoon = q("#new-character-form input[name='cartoon']").checked;
     const character = { name, occupation, weapon, cartoon };
-    
+
     charactersAPI
       .createOneRegister(character)
       .then(res => {
-        console.log(res.data);
+        console.log('Added character', res.data);
       })
       .catch(error => {
         console.log('Error fetching a character', error);
