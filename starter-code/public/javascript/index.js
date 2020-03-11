@@ -1,5 +1,8 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
+
 const $characters = document.querySelector('.characters-container');
+const $fetchAllButton = document.getElementById("fetch-all");
+const $fetchOneButton = document.getElementById("fetch-one");
 const $deleteButton = document.getElementById("delete-one");
 
 function cleanCharacters() {
@@ -32,6 +35,12 @@ function removeCharacter(id) {
   $characters.removeChild(characterToDelete);
 }
 
+function clearButtons() {
+  $fetchAllButton.style.backgroundColor = null;
+  $fetchOneButton.style.backgroundColor = null;
+  $deleteButton.style.backgroundColor = null;
+}
+
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function(event) {
     charactersAPI
@@ -41,9 +50,13 @@ window.addEventListener('load', () => {
         console.log('Fetched all', characters);
         cleanCharacters();
         renderNewCharacters(characters);
+        clearButtons()
+        $fetchAllButton.style.backgroundColor = "green";
       })
       .catch(error => {
         console.log('Error fetching all', error);
+        clearButtons()
+        $fetchAllButton.style.backgroundColor = "red";
       });
   });
 
@@ -56,9 +69,13 @@ window.addEventListener('load', () => {
         console.log('Fetched one', result.data);
         cleanCharacters();
         renderNewCharacters([character]);
+        clearButtons()
+        $fetchOneButton.style.backgroundColor = "green";
       })
       .catch(error => {
         console.log('Error fetching one character', error);
+        clearButtons()
+        $fetchOneButton.style.backgroundColor = "red";
       });
   });
 
@@ -69,10 +86,12 @@ window.addEventListener('load', () => {
       .then(() => {
         console.log(`Deleted character id ${id}`);
         removeCharacter(id);
+        clearButtons()
         $deleteButton.style.backgroundColor = "green";
       })
       .catch(error => {
         console.log('Error deleting one character', error);
+        clearButtons()
         $deleteButton.style.backgroundColor = "red";
       });
   });
