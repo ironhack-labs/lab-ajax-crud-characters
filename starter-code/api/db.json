@@ -20,6 +20,34 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "asdf",
+      "occupation": "sdf",
+      "cartoon": false,
+      "weapon": "sdf",
+      "id": 4
+    },
+    {
+      "name": "asdf",
+      "occupation": "sdf",
+      "cartoon": false,
+      "weapon": "sdf",
+      "id": 5
+    },
+    {
+      "name": "michael",
+      "occupation": "yo",
+      "cartoon": false,
+      "weapon": "yo",
+      "id": 6
+    },
+    {
+      "name": "Tho",
+      "occupation": "teacher",
+      "weapon": "hammer",
+      "cartoon": true,
+      "id": 7
     }
   ]
 }
