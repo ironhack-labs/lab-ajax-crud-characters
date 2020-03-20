@@ -1,7 +1,6 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# Axios CRUD Exercise
-
+# LAB | Axios CRUD exercise
 
 ## Introduction
 
@@ -14,17 +13,17 @@ In this exercise, we will use all what we have learned about APIs and how to con
 - Fork this repo
 - Then clone this repo
 
-
 ## Submission
 
 - Upon completion, run the following commands:
+
 ```
 $ git add .
 $ git commit -m "done"
 $ git push origin master
 ```
-- Create Pull Request so your TAs can check up your work.
 
+- Create Pull Request so your TAs can check up your work.
 
 ## Instructions
 
@@ -57,7 +56,6 @@ We will first create a fake API using **JSON-Server** to then do an application 
   - It returns "Character has been successfully deleted" if there are no errors
   - It returns "Character not found" if there is no character with the indicated id
   - It returns text
-
 
 ### Iteration 1: The Fake API
 
@@ -105,18 +103,20 @@ We have our API running, so now we will construct a class `APIHandler` to deal w
 
 The functionalities of the `APIHandler` class are:
 
-- Get all the characters info from *[http://localhost:8000/characters](http://localhost:8000/characters)*
-- Get a single character info from *[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)*
-- Create a single character posting the data to *[http://localhost:8000/characters](http://localhost:8000/characters)*
-- Delete a single character through his id in *[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)*
-- Edit a single character through his id in *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Get all the characters info from _[http://localhost:8000/characters](http://localhost:8000/characters)_
+- Get a single character info from _[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)_
+- Create a single character posting the data to _[http://localhost:8000/characters](http://localhost:8000/characters)_
+- Delete a single character through his id in _[http://localhost:8000/characters/:id](http://localhost:8000/characters/:id)_
+- Edit a single character through his id in _[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)_
 
 You have to create an Axios call for each of these actions. You can create as many functions as you need inside the class, but remember this class should only manage the API request and display the resulting value.
 
 <!-- :::success -->
+
 **Micro-advice**
 
 To make sure everything is working, use [POSTMAN](https://www.getpostman.com/).
+
 <!-- ::: -->
 
 In this iteration, it's enough to show results in the console.
@@ -131,7 +131,7 @@ Once we have the results served by the API in the application, we will create th
 
 Retrieve all the available characters in the API and show them in the application. In order to do that, we need to:
 
-- Create a button (*Fetch all* in the image above) that calls a function in the `APIHandler`.
+- Create a button (_Fetch all_ in the image above) that calls a function in the `APIHandler`.
 - The function will return a JSON object with all the characters.
 - Get the data and show the characters. Finally, with JavaScript, we will create a structure similar to a card (image above) to show detailed info about each character.
 
@@ -139,11 +139,10 @@ Retrieve all the available characters in the API and show them in the applicatio
 
 ![image](https://user-images.githubusercontent.com/23629340/36733678-97ecd42a-1bd1-11e8-8e60-6aab38d632a0.png)
 
-
 Following the same idea as with fetching all, to retrieve a single character's data we need to:
 
-- Create a button (*Fetch one* in the image above) to, through an input field, get the `id` of an existing character.
-- Search that character in the API with *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Create a button (_Fetch one_ in the image above) to, through an input field, get the `id` of an existing character.
+- Search that character in the API with _[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)_
 - Get the data and show the character info as a card.
 
 #### Delete one character
@@ -152,10 +151,10 @@ Following the same idea as with fetching all, to retrieve a single character's d
 
 To be able to delete a character from the API database, we need to:
 
-- Create a button (*Delete* one in the image above) to get the `id` of the character we want to delete.
-- Delete that character in the API with *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Create a button (_Delete_ one in the image above) to get the `id` of the character we want to delete.
+- Delete that character in the API with _[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)_
    <!-- :::danger -->
-   **Remember which HTTP verb you need in the request!!**
+  **Remember which HTTP verb you need in the request!!**
    <!-- ::: -->
 - If the character is successfully removed, change the background color of the button to green.
 - If something went wrong, change the background color of the button to red.
@@ -166,10 +165,10 @@ To be able to delete a character from the API database, we need to:
 
 We will create a form with 4 inputs: name(text), occupation(text), weapon(text) and cartoon(checkbox).
 
-- Create a button (*Create* in the image above) to get all the data from the form.
-- Send the data to the `APIHandler` function to save the new character through *[http://localhost:8000/characters](http://ih-crud-api.herokuapp.com/characters)*
+- Create a button (_Create_ in the image above) to get all the data from the form.
+- Send the data to the `APIHandler` function to save the new character through _[http://localhost:8000/characters](http://ih-crud-api.herokuapp.com/characters)_
    <!-- :::danger -->
-   **Remember which HTTP verb you need in the request!!**
+  **Remember which HTTP verb you need in the request!!**
    <!-- ::: -->
 - If the character was successfully created, set the background color of the button to green.
 - If something went wrong, change the background color of the button to red.
@@ -180,10 +179,10 @@ We will create a form with 4 inputs: name(text), occupation(text), weapon(text) 
 
 We will create a form with 4 inputs: name(text), occupation(text), weapon(text) and cartoon(checkbox). Also, we will create a new input to indicate the `id` of the character we want to edit.
 
-- Create a button (*Update* in the image above) to get all the data from the form.
-- Send the data to the `APIHandler` function to save the new character through *[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)*
+- Create a button (_Update_ in the image above) to get all the data from the form.
+- Send the data to the `APIHandler` function to save the new character through _[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)_
    <!-- :::danger -->
-   **Remember which HTTP verb you need in the request!!**
+  **Remember which HTTP verb you need in the request!!**
    <!-- ::: -->
 - If the character was successfully updated, set the background color of the button to green.
 - If something went wrong, change the background color of the button to red.
