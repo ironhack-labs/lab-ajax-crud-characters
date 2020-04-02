@@ -1,0 +1,81 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "FlappyJack",
+      "occupation": "Marine",
+      "weapon": "Love",
+      "carton": "on",
+      "id": 4
+    },
+    {
+      "name": "Alohdsadas",
+      "occupation": "LoveUhuuuu",
+      "weapon": "None!!!",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Aaaa",
+      "occupation": "Uhhhuuuu",
+      "weapon": "asada",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "adsada",
+      "occupation": "asdsda",
+      "weapon": "dfdfdf",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Adsadsa",
+      "occupation": "Adsadsadas",
+      "weapon": "Adsadas",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "gfdgfdg",
+      "occupation": "gfdgdfgd",
+      "weapon": "gfdgdgdf",
+      "cartoon": true,
+      "id": 9
+    },
+    {
+      "name": "asdaf",
+      "occupation": "fdgghgf",
+      "weapon": "fwefw",
+      "cartoon": true,
+      "id": 10
+    },
+    {
+      "name": "dfsfsdfsd",
+      "occupation": "ghfhgfh",
+      "weapon": "fsdfds",
+      "cartoon": true,
+      "id": 11
+    },
+    {
+      "name": "fdsfdsfs",
+      "occupation": "gfdgfdgd",
+      "weapon": "gdfgdfgfd",
+      "cartoon": true,
+      "id": 12
+    }
+  ]
+}
