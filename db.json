@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "ddddd",
+      "occupation": "Busy on the dark side",
+      "weapon": "Guns",
+      "cartoon": "on",
+      "id": 1
+    },
+    {
+      "name": "Ricky",
+      "occupation": "Student",
+      "weapon": "Guns",
+      "cartoon": "on",
+      "id": 2
+    },
+    {
+      "name": "pedro siqueira",
+      "occupation": "arma",
+      "weapon": "arma",
+      "cartoon": "on",
+      "id": 4
+    }
+  ]
+}
