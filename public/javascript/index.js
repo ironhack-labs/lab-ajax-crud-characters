@@ -166,7 +166,7 @@ window.addEventListener('load', () => {
     charactersAPI
       .createOneRegister(character)
       .then(res => {
-        console.log('foi! create one')
+        console.log('ok! create one')
         console.log(res)
       })
       .catch(error => console.log(error))
