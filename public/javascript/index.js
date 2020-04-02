@@ -1,24 +1,43 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
+const charactersDiv = document.querySelector('.characters-container')
 
 //
 window.addEventListener('load', () => {
   // const charactersCard = document.querySelector('characters-container')
   document.getElementById('fetch-all').addEventListener('click', function (event) {
     charactersAPI
-    .getFullList()
-    .then(res => {
-        // let characterArr = res.data;
-        // characterArr.forEach(item => {
-        //   let newCard = `<div class="character-info">
-        //   <div class="name">Character Name ${item.name}</div>
-        //   <div class="occupation">Character Occupation ${item.occupation}</div>
-        //   <div class="cartoon">Is a Cartoon? ${item.cartoon}</div>
-        //   <div class="weapon">Character Weapon ${item.weapon}</div>
-        // </div>`;
-        // let card.innerHTML = newCard
-        // charactersCard.innerHTML = ""
-          // charactersCard.innerHTML += newCard
-          // charactersCard.appendChild(card)
+      .getFullList()
+      .then(res => {
+        let characterArr = res.data;
+        charactersDiv.innerHTML = '';
+        characterArr.forEach(item => {
+          
+          const divCharacterInfo = document.createElement('div')
+          const name = document.createElement('div')
+          const occupation = document.createElement('div')
+          const weapon = document.createElement('div')
+          const id = document.createElement('div')
+          const cartoon = document.createElement('div')
+
+          divCharacterInfo.setAttribute('class', 'character-info')
+          name.setAttribute('class', 'name')
+          occupation.setAttribute('class', 'occupation')
+          weapon.setAttribute('class', 'weapon')
+          id.setAttribute('class', 'id')
+          cartoon.setAttribute('class', 'cartoon')
+
+          name.innerHTML = `Name: <span>${item.name}</span>`
+          occupation.innerHTML = `Occupation: <span>${item.occupation}</span>`
+          weapon.innerHTML = `Weapon: <span>${item.weapon}</span>`
+          id.innerHTML = `ID: <span>${item.id}</span>`
+          cartoon.innerHTML = `Cartoon: <span>${item.cartoon}</span>`
+          divCharacterInfo.appendChild(name)
+          divCharacterInfo.appendChild(occupation)
+          divCharacterInfo.appendChild(weapon)
+          divCharacterInfo.appendChild(id)
+          divCharacterInfo.appendChild(cartoon)
+          charactersDiv.appendChild(divCharacterInfo)
+
         })
         console.log('foi! getall')
         console.log(res.data)
@@ -37,6 +56,37 @@ window.addEventListener('load', () => {
     charactersAPI
       .getOneRegister(id)
       .then(res => {
+        let characterArr = res.data;
+        charactersDiv.innerHTML = '';
+        // characterArr.forEach(item => {
+          
+          const divCharacterInfo = document.createElement('div')
+          const name = document.createElement('div')
+          const occupation = document.createElement('div')
+          const weapon = document.createElement('div')
+          const id = document.createElement('div')
+          const cartoon = document.createElement('div')
+
+          divCharacterInfo.setAttribute('class', 'character-info')
+          name.setAttribute('class', 'name')
+          occupation.setAttribute('class', 'occupation')
+          weapon.setAttribute('class', 'weapon')
+          id.setAttribute('class', 'id')
+          cartoon.setAttribute('class', 'cartoon')
+
+          name.innerHTML = `Name: <span>${characterArr.name}</span>`
+          occupation.innerHTML = `Occupation: <span>${characterArr.occupation}</span>`
+          weapon.innerHTML = `Weapon: <span>${characterArr.weapon}</span>`
+          id.innerHTML = `ID: <span>${characterArr.id}</span>`
+          cartoon.innerHTML = `Cartoon: <span>${characterArr.id}</span>`
+          divCharacterInfo.appendChild(name)
+          divCharacterInfo.appendChild(occupation)
+          divCharacterInfo.appendChild(weapon)
+          divCharacterInfo.appendChild(id)
+          divCharacterInfo.appendChild(cartoon)
+          charactersDiv.appendChild(divCharacterInfo)
+
+        // })
         console.log('foi! getone')
         console.log(res.data)
       })
@@ -91,7 +141,7 @@ window.addEventListener('load', () => {
 
   });
 
-  
+
   //Adicionar
   document.getElementById('new-character-form').onsubmit = (event) => {
     event.preventDefault()
