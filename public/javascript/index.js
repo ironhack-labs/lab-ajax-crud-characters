@@ -78,10 +78,19 @@ window.addEventListener('load', () => {
     let id = document.querySelector('input[name="character-id-delete"]').value;
     charactersAPI.deleteOneRegister(id)
       .then(response =>{
+        let deleteBtn = document.querySelector('#delete-one');
          console.log(response)
+         if(response.status == 200 ){
+           deleteBtn.classList.add('active');
+          } else {
+            deleteBtn.classList.remove('active');
+         }
          renderElements();
         })
-      .catch(error => console.log(error));
+      .catch(error => {
+        deleteBtn.classList.remove('active');
+        console.log(error)
+      });
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
@@ -89,6 +98,28 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    let name = document.querySelector('#new-character-form input[name="name"]');
+    let occupation = document.querySelector('#new-character-form input[name="occupation"]');
+    let weapon = document.querySelector('#new-character-form input[name="weapon"]');
+    let cartoon = document.querySelector('#new-character-form input[name="cartoon"]');
+    let send_data_btn = document.querySelector('#send-data');
+
+    charactersAPI.createOneRegister(name.value, occupation.value, weapon.value, cartoon.checked)
+      .then(response => {
+        if(response.status == 304 ){
+          send_data_btn.classList.add('active');
+        }
+        name.value = "";
+        weapon.value = "";
+        cartoon.checked = false;
+        occupation.value = "";
+      })
+      .catch(error => {
+        console.log(error);
+        send_data_btn.classList.remove('active');        
+      })
 
   });
 });
