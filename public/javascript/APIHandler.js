@@ -7,8 +7,8 @@ class APIHandler {
     return axios.get(`${this.BASE_URL}/characters`);
   }
 
-  getOneRegister (id) {
-    return axios.get(`${this.BASE_URL}/characters/${id}`);
+  getOneRegister(id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
   }
 
   createOneRegister (name, occupation, weapon, cartoon) {
