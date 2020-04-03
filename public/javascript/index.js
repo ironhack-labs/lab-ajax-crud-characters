@@ -32,7 +32,7 @@ const renderElements = () => {
         container.innerHTML = content;
       }) 
       .catch(error => console.log(error))
-}
+}//renderElements()
 
 window.addEventListener('load', () => {
   
@@ -69,14 +69,15 @@ window.addEventListener('load', () => {
             <span class="field_title">${cartoon}</span>
           </div>
         </div>`
-
+        input.value = "";
       })
       .catch(error => console.log(error));
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
-    let id = document.querySelector('input[name="character-id-delete"]').value;
-    charactersAPI.deleteOneRegister(id)
+    let id = document.querySelector('input[name="character-id-delete"]');
+    let value = id.value;
+    charactersAPI.deleteOneRegister(value)
       .then(response =>{
         let deleteBtn = document.querySelector('#delete-one');
          console.log(response)
@@ -85,6 +86,10 @@ window.addEventListener('load', () => {
           } else {
             deleteBtn.classList.remove('active');
          }
+         setTimeout(() => {
+          deleteBtn.classList.remove('active');
+         }, 1000);
+         id.value = "";
          renderElements();
         })
       .catch(error => {
@@ -94,7 +99,30 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    event.preventDefault(event);
+    let id = document.querySelector('#edit-character-form input[name="chr-id"]');
+    let name = document.querySelector('#edit-character-form input[name="name"]');
+    let occupation = document.querySelector('#edit-character-form input[name="occupation"]');
+    let weapon = document.querySelector('#edit-character-form input[name="weapon"]');
+    let cartoon = document.querySelector('#edit-character-form input[name="cartoon"]');
 
+    charactersAPI.updateOneRegister(
+      id.value, 
+      name.value, 
+      occupation.value, 
+      weapon.value, 
+      cartoon.value
+      )
+      .then( response => {
+        name.value = "";
+        occupation.value = "";
+        weapon.value = "";
+        cartoon.value = "";
+        id.value = "";
+        
+        renderElements();
+      })
+      .catch(error => console.log(error))
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
