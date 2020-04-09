@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Zelda",
+      "occupation": "Princess",
+      "weapon": "None",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "name": "Captain America",
+      "occupation": "Avengers Member",
+      "weapon": "Shield",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "5",
+      "occupation": "Hulk",
+      "weapon": "Strength",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
