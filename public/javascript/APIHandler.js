@@ -1,25 +1,71 @@
+const baseUrl = 'http://localhost:8000/characters';
+
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  getFullList() {
+    axios
+      .get(this.BASE_URL)
+      .then((res) => {
+        console.log(res);
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+        return err;
+      });
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    axios
+      .get(this.BASE_URL + `/${id}`)
+      .then((res) => {
+        console.log(res);
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+        return err;
+      });
   }
 
-  createOneRegister () {
-
+  createOneRegister(character) {
+    axios
+      .post(this.BASE_URL, character)
+      .then((res) => {
+        console.log(res);
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+        return err;
+      });
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id,character) {
+    axios
+      .patch(this.BASE_URL + `/${id}`,character)
+      .then((res) => {
+        console.log(res);
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+        return err;
+      });
   }
-
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    axios
+      .get(this.BASE_URL + `/${id}`)
+      .then((res) => {
+        console.log(res);
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+        return err;
+      });
   }
 }
