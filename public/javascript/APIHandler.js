@@ -1,5 +1,3 @@
-const baseUrl = 'http://localhost:8000/characters';
-
 class APIHandler {
   constructor(baseUrl) {
     this.BASE_URL = baseUrl;
@@ -9,11 +7,9 @@ class APIHandler {
     axios
       .get(this.BASE_URL)
       .then((res) => {
-        console.log(res);
-        return res;
+        return res.data;
       })
       .catch((err) => {
-        console.log(err);
         return err;
       });
   }
@@ -22,46 +18,39 @@ class APIHandler {
     axios
       .get(this.BASE_URL + `/${id}`)
       .then((res) => {
-        console.log(res);
-        return res;
+        return res.data;
       })
       .catch((err) => {
-        console.log(err);
         return err;
       });
   }
 
-  createOneRegister(character) {
-    axios
+  async createOneRegister(character) {
+    await axios
       .post(this.BASE_URL, character)
       .then((res) => {
-        console.log(res);
-        return res;
+        return res.data;
       })
       .catch((err) => {
-        console.log(err);
         return err;
       });
   }
 
-  updateOneRegister(id,character) {
+  updateOneRegister(id, character) {
     axios
-      .patch(this.BASE_URL + `/${id}`,character)
+      .patch(this.BASE_URL + `/${id}`, character)
       .then((res) => {
-        console.log(res);
-        return res;
+        return res.data;
       })
       .catch((err) => {
-        console.log(err);
         return err;
       });
   }
   deleteOneRegister(id) {
     axios
-      .get(this.BASE_URL + `/${id}`)
+      .delete(this.BASE_URL + `/${id}`)
       .then((res) => {
-        console.log(res);
-        return res;
+        return res.data;
       })
       .catch((err) => {
         console.log(err);
