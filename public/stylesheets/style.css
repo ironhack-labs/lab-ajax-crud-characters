@@ -7,11 +7,13 @@
 body {
   font-family: 'Roboto';
   color: white;
-  background: url("../images/minions.jpg")
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(64, 29, 253, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
-h1, h2 {
-  color: #d8b362;
+h1,
+h2 {
+  color: white;
 }
 
 button {
@@ -37,7 +39,7 @@ button {
   margin: 50px auto 0;
   padding: 10px;
   border-radius: 20px;
-  background-color: rgba(88, 98, 123, 0.95);
+  background-color: black;
   text-align: center;
 }
 
@@ -66,8 +68,8 @@ button {
 .character-info {
   position: relative;
   width: 40%;
-  margin: 10px;
-  padding: 10px;
+  margin: 20px;
+  padding: 20px;
   text-align: left;
   border: solid white 2px;
   border-radius: 20px;
@@ -104,4 +106,16 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+#cards-container {
+  height: auto;
+  width: 70%;
+  margin: 50px auto 0;
+  border-radius: 20px;
+  background-color: black;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
