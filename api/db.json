@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Blah",
+      "occupation": "Janitor",
+      "weapon": "Broom",
+      "cartoon": false
+    },
+    {
+      "name": "Shooby",
+      "occupation": "Governor",
+      "weapon": "Social Media",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "Dog",
+      "occupation": "Pet",
+      "weapon": "Teeth",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "John",
+      "occupation": "Accountant",
+      "weapon": "Pen",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "John",
+      "occupation": "Accountant",
+      "weapon": "Pen",
+      "cartoon": true,
+      "id": 10
+    },
+    {
+      "name": "Bill",
+      "occupation": "Accountant",
+      "weapon": "Pen",
+      "cartoon": false,
+      "id": 11
+    }
+  ]
+}
