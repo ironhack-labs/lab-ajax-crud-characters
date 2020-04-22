@@ -108,3 +108,11 @@ button {
 .submit-button {
 	margin: 10px 0 0 120px;
 }
+
+.all-green {
+	background-color: #00a86b;
+}
+
+.oops-i-did-it-again {
+	background-color: #b80f0a;
+}
