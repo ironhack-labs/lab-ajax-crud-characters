@@ -7,10 +7,11 @@
 body {
   font-family: 'Roboto';
   color: white;
-  background: url("../images/minions.jpg")
+  background-color: lightcyan;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d8b362;
 }
 
@@ -77,6 +78,7 @@ button {
   color: #d8b362;
   position: absolute;
   left: 50%;
+  font-weight: bold;
 }
 
 .form-container {
