@@ -4,7 +4,7 @@ class APIHandler {
   }
 
   getFullList() {
-    axios
+    return axios
       .get(this.BASE_URL)
       .then((res) => {
         return res.data;
@@ -15,18 +15,18 @@ class APIHandler {
   }
 
   getOneRegister(id) {
-    axios
+    return axios
       .get(this.BASE_URL + `/${id}`)
       .then((res) => {
         return res.data;
       })
       .catch((err) => {
-        return err;
+        return { cartoon: 'Empty ID', name: 'Empty ID', occupation: 'Empty ID', weapon: 'Empty ID', err};
       });
   }
 
   async createOneRegister(character) {
-    await axios
+    return await axios
       .post(this.BASE_URL, character)
       .then((res) => {
         return res.data;
@@ -37,7 +37,7 @@ class APIHandler {
   }
 
   updateOneRegister(id, character) {
-    axios
+    return axios
       .patch(this.BASE_URL + `/${id}`, character)
       .then((res) => {
         return res.data;
@@ -46,8 +46,9 @@ class APIHandler {
         return err;
       });
   }
+
   deleteOneRegister(id) {
-    axios
+    return axios
       .delete(this.BASE_URL + `/${id}`)
       .then((res) => {
         return res.data;

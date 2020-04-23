@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Roboto';
-  color: o#ffffff;
-  backgrund: url("../images/minions.jpg")
+  color: white;
+  background: url("../images/minions.jpg")
 }
 
 h1, h2 {
@@ -104,4 +104,9 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+
+.center-text{
+  text-align: center;
 }

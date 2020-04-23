@@ -20,41 +20,6 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
-    },
-    {
-      "id": 555,
-      "name": "diego",
-      "occupation": "teacher",
-      "weapon": "erasing stuff too quickly",
-      "cartoon": true
-    },
-    {
-      "name": "diego",
-      "occupation": "teacher",
-      "weapon": "erasing stuff too quickly",
-      "cartoon": true,
-      "id": 557
-    },
-    {
-      "name": "diego",
-      "occupation": "teacher",
-      "weapon": "erasing stuff too quickly",
-      "cartoon": true,
-      "id": 558
-    },
-    {
-      "name": "diego",
-      "occupation": "teacher",
-      "weapon": "erasing stuff too quickly",
-      "cartoon": true,
-      "id": 559
-    },
-    {
-      "name": "diego",
-      "occupation": "teacher",
-      "weapon": "erasing stuff too quickly",
-      "cartoon": true,
-      "id": 560
     }
   ]
 }
