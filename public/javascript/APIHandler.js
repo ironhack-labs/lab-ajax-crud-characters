@@ -21,7 +21,13 @@ class APIHandler {
         return res.data;
       })
       .catch((err) => {
-        return { cartoon: 'Empty ID', name: 'Empty ID', occupation: 'Empty ID', weapon: 'Empty ID', err};
+        return {
+          cartoon: 'Empty ID',
+          name: 'Empty ID',
+          occupation: 'Empty ID',
+          weapon: 'Empty ID',
+          err,
+        };
       });
   }
 
@@ -36,9 +42,10 @@ class APIHandler {
       });
   }
 
-  updateOneRegister(id, character) {
-    return axios
-      .patch(this.BASE_URL + `/${id}`, character)
+  async updateOneRegister(character) {
+    let { id } = character;
+    return await axios
+      .put(this.BASE_URL + `/${id}`, character)
       .then((res) => {
         return res.data;
       })
@@ -48,7 +55,7 @@ class APIHandler {
   }
 
   deleteOneRegister(id) {
-    return axios
+    axios
       .delete(this.BASE_URL + `/${id}`)
       .then((res) => {
         return res.data;

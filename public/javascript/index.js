@@ -42,6 +42,7 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('delete-one').addEventListener('click', async () => {
+    event.preventDefault();
     // Get data
     const id = document.querySelector('#character-id-delete').value;
     const char = await charactersAPI.getOneRegister(id);
@@ -49,27 +50,42 @@ window.addEventListener('load', () => {
     const { err } = char;
     const cContainer = document.querySelector('.characters-container');
     cContainer.innerHTML = '';
-    if (!err) {
+    if (!err && id) {
       createCharForm(char, cContainer, true);
       document.getElementById('delete-one');
+      await charactersAPI.deleteOneRegister(id);
+      document.getElementById('delete-one').classList.add('green-bkg');
+      document.getElementById('delete-one').classList.remove('red-bkg');
     } else {
       createCharForm(char, cContainer);
+      document.getElementById('delete-one').classList.add('red-bkg');
+      document.getElementById('delete-one').classList.remove('green-bkg');
     }
   });
 
-  document.getElementById('edit-character-form').addEventListener('submit', async (event) => {
+  document.getElementById('edit-character-form').onsubmit = async (event) => {
     event.preventDefault();
     const [id, name, occupation, weapon, cartoon] = event.srcElement;
     let char = {
-      id:id.value,
+      id: id.value,
       name: name.value,
       occupation: occupation.value,
       weapon: weapon.value,
       cartoon: cartoon.checked,
     };
-    console.log(char)
-    //await charactersAPI.updateOneRegister(id, char);
-  });
+   await charactersAPI.updateOneRegister(char);
+  };
 
-  document.getElementById('new-character-form').addEventListener('submit', function (event) {});
+  document.getElementById('new-character-form').onsubmit = async function (event) {
+    event.preventDefault();
+    const [name, occupation, weapon, cartoon] = event.srcElement;
+    let char = {
+      name: name.value,
+      occupation: occupation.value,
+      weapon: weapon.value,
+      cartoon: cartoon.checked,
+    };
+    console.log(char);
+    await charactersAPI.createOneRegister(char);
+  };
 });
