@@ -1,0 +1,109 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Toto",
+      "occupation": "Mr Blague",
+      "weapon": "Humour",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Toto",
+      "occupation": "Mr Blague",
+      "weapon": "Humour",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "Toto",
+      "occupation": "Mr Blague",
+      "weapon": "Humour",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "Toto",
+      "occupation": "Mr Blague",
+      "weapon": "Humour",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "Toto",
+      "occupation": "Mr Blague",
+      "weapon": "Humour",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "Toto",
+      "occupation": "Mr Blague",
+      "weapon": "Humour",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "Toto",
+      "occupation": "Mr Blague",
+      "weapon": "Humour",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "Tiger",
+      "occupation": "golf",
+      "weapon": "sandwedge",
+      "cartoon": "on",
+      "id": 14
+    },
+    {
+      "name": "lolo",
+      "occupation": "tourist",
+      "weapon": "sandalle",
+      "cartoon": "on",
+      "id": 15
+    },
+    {
+      "name": "chuck norris",
+      "occupation": "joker",
+      "weapon": "humour",
+      "cartoon": "on",
+      "id": 16
+    },
+    {
+      "name": "oyhsg",
+      "occupation": "fretvsvu",
+      "weapon": "lxbajWLN",
+      "cartoon": "on",
+      "id": 17
+    },
+    {
+      "name": "dcgfvhbjnk",
+      "occupation": "cfgvbjhnk,",
+      "weapon": "jjjjjjjj",
+      "cartoon": "on",
+      "id": 18
+    }
+  ]
+}
