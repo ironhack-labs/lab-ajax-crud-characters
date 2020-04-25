@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han soloooooo",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "frhdshdg",
+      "occupation": "blabla",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "llf",
+      "occupation": "kfkfk",
+      "weapon": "klfkkf",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "kkfkkf",
+      "occupation": "lglgl",
+      "weapon": "kkgg",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "kekke",
+      "occupation": "fkkf",
+      "weapon": "lfllf",
+      "cartoon": false,
+      "id": 7
+    }
+  ]
+}

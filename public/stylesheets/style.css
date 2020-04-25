@@ -105,3 +105,11 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+#send-data:valid .button {
+  background-color : green;
+}
+
+#send-data:invalid .button {
+  background-color: red;
+}
