@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "bidule",
+      "occupation": "truc",
+      "weapon": "sabre",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "George Abitbol",
+      "occupation": "Homme le plus classe",
+      "weapon": "Pins",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Jojo",
+      "occupation": "karate",
+      "weapon": "fists",
+      "cartoon": false,
+      "id": 5
+    }
+  ]
+}
