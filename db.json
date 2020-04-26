@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": "RoboDog",
+      "occupation": "Police dog",
+      "weapon": "His nose",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Donald Duck",
+      "occupation": "Works in a gift wrapping factory",
+      "weapon": "His mouth",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Mickey Mouse",
+      "occupation": "Magician",
+      "weapon": "Magic wand",
+      "cartoon": true,
+      "id": 8
+    }
+  ]
+}
