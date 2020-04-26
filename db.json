@@ -1,0 +1,67 @@
+{
+  "characters": [
+    {
+      "name": "Perdican le Pélican",
+      "occupation": "Chercheur à l'Université des Oiseaux",
+      "weapon": "Connaissance",
+      "cartoon": "on",
+      "id": 9
+    },
+    {
+      "name": "Scarecrow",
+      "occupation": "Dorothy's best friend",
+      "weapon": "Friendship",
+      "cartoon": "on",
+      "id": 10
+    },
+    {
+      "name": "Bruno le Pruneau",
+      "occupation": "Gastrologue",
+      "weapon": "Himself",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "Albert le Dromadaire",
+      "occupation": "Surfeur du désert",
+      "weapon": "Surf",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "Achille le Crocodile",
+      "occupation": "Casse-Noix",
+      "weapon": "Dents",
+      "cartoon": false,
+      "id": 14
+    },
+    {
+      "name": "Dorothy",
+      "occupation": "Going back to home",
+      "weapon": "Toto",
+      "cartoon": false,
+      "id": 15
+    },
+    {
+      "name": "Tinman",
+      "occupation": "Dorothy's friend",
+      "weapon": "Axe",
+      "cartoon": false,
+      "id": 16
+    },
+    {
+      "name": "Lion",
+      "occupation": "Dorothy's friend",
+      "weapon": "paws",
+      "cartoon": false,
+      "id": 17
+    },
+    {
+      "name": "Trevor Belmont",
+      "occupation": "Saving the world",
+      "weapon": "whip",
+      "cartoon": false,
+      "id": 18
+    }
+  ]
+}
