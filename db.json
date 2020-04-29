@@ -36,31 +36,31 @@
       "id": 5
     },
     {
-      "name": "Ahhhhh",
-      "occupation": "123",
-      "weapon": "1",
-      "cartoon": "false",
+      "name": "newCharacter",
+      "occupation": "Tester",
+      "weapon": "Code",
+      "cartoon": "true",
       "id": 6
     },
     {
-      "name": "Ahhhhh",
-      "occupation": "123",
-      "weapon": "1",
-      "cartoon": "false",
+      "name": "Update",
+      "occupation": "Success",
+      "weapon": "Hands",
+      "cartoon": "true",
       "id": 7
     },
     {
-      "name": "Ahhhhh",
-      "occupation": "123",
-      "weapon": "1",
+      "name": "This is new",
+      "occupation": "Musician",
+      "weapon": "Guitar",
       "cartoon": "false",
       "id": 8
     },
     {
-      "name": "Ahhhhh",
-      "occupation": "123",
-      "weapon": "1",
-      "cartoon": "false",
+      "name": "Chuck Norris",
+      "occupation": "Actor",
+      "weapon": "Jokes",
+      "cartoon": "true",
       "id": 9
     }
   ]
