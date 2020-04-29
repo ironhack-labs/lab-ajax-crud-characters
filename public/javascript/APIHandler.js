@@ -6,16 +6,36 @@ class APIHandler {
   getFullList () {
     axios.get(this.BASE_URL+"/characters")
     .then(characters =>{
+      console.log(characters)
+      let myCharacter = document.getElementsByClassName("character-info")[0]
+      console.log(myCharacter)
+      console.log("Here1")
       console.log(characters.data)
+      document.getElementsByClassName("characters-container")[0].innerHTML=""
+      characters.data.forEach(character => {
+        console.log(character)
+        console.log(myCharacter)
+        console.log("Here2.5")
+        myCharacter.getElementsByClassName("name")[0].innerText = `Character Name: ${character.name}`
+        console.log("Here3")
+        console.log(myCharacter)
+        console.log(character.name)
+        myCharacter.getElementsByClassName("occupation")[0].innerText = `Character Occupation is: ${character.occupation}`
+        myCharacter.getElementsByClassName("cartoon")[0].innerText = ` a Cartoon : ${character.cartoon}`
+        myCharacter.getElementsByClassName("weapon")[0].innerText = `Character Weapon : ${character.weapon}`
+        console.log("Here4")
+        document.getElementsByClassName("characters-container")[0].appendChild(myCharacter)
+        console.log("Here5")
+        console.log(myCharacter)
+      })
+      /*console.log(characters.data)
       characters.data.forEach(character => {
       console.log(character.name)    
       const nameHTML=document.createElement("H1")
       const text =document.createTextNode(`${character.name}`)
       nameHTML.appendChild(text)
-      console.log("nice until here")
-      document.getElementsByClassName("name")[0].appendChild(nameHTML)
+      document.getElementsByClassName("name")[0].appendChild(nameHTML)*/
       })
-    })
     .catch(err =>{
       console.log("Something went wrong when getting the characters")
     })
