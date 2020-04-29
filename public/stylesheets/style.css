@@ -79,6 +79,16 @@ button {
   left: 50%;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.detail {
+  color: #d8b362;
+}
+
 .form-container {
   display: inline-block;
   width: 49%;

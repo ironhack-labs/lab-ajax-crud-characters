@@ -22,14 +22,46 @@
       "cartoon": true
     },
     {
-      "name": 4,
-      "occupation": "unknown",
+      "name": "Testing",
+      "occupation": "123",
+      "weapon": "1",
       "cartoon": "true",
-      "weapon": "knife",
       "id": 4
     },
     {
+      "name": "Ahhhhh",
+      "occupation": "123",
+      "weapon": "1",
+      "cartoon": "false",
       "id": 5
+    },
+    {
+      "name": "Ahhhhh",
+      "occupation": "123",
+      "weapon": "1",
+      "cartoon": "false",
+      "id": 6
+    },
+    {
+      "name": "Ahhhhh",
+      "occupation": "123",
+      "weapon": "1",
+      "cartoon": "false",
+      "id": 7
+    },
+    {
+      "name": "Ahhhhh",
+      "occupation": "123",
+      "weapon": "1",
+      "cartoon": "false",
+      "id": 8
+    },
+    {
+      "name": "Ahhhhh",
+      "occupation": "123",
+      "weapon": "1",
+      "cartoon": "false",
+      "id": 9
     }
   ]
 }
