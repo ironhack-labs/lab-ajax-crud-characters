@@ -62,6 +62,27 @@
       "weapon": "Jokes",
       "cartoon": "true",
       "id": 9
+    },
+    {
+      "name": "New update",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "false",
+      "id": 10
+    },
+    {
+      "name": "dsglih",
+      "occupation": "ajiio",
+      "weapon": "",
+      "cartoon": "false",
+      "id": 11
+    },
+    {
+      "name": "NEW",
+      "occupation": "ks",
+      "weapon": "9",
+      "cartoon": "true",
+      "id": 12
     }
   ]
 }

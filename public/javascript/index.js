@@ -3,15 +3,14 @@ const charactersAPI = new APIHandler('http://localhost:8000');
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
     charactersAPI.getFullList()
-      .then(response => {
-        const fullListFromAPI = response.data;
-        console.log('getFullList() > response from API: ', fullListFromAPI);
+      .then(data => {
+        console.log('getFullList() > response from API: ', data);
 
         //delete everything inside characters container
         document.querySelector('.characters-container').innerHTML = '';
 
         //create new card for every character on the list
-        fullListFromAPI.forEach(character => {
+        data.forEach(character => {
           const characterInfo = document.createElement('div');
 
           characterInfo.setAttribute("class", "character-info flex");
@@ -43,8 +42,7 @@ window.addEventListener('load', () => {
     const characterId = document.getElementById('character-id').value;
 
     charactersAPI.getOneRegister(characterId)
-      .then(response => {
-        const characterData = response.data;
+      .then(characterData => {
         console.log('getOneRegister() > response from API: ', characterData);
 
         //delete everything inside characters container
@@ -155,11 +153,8 @@ window.addEventListener('load', () => {
     };
 
     charactersAPI.updateOneRegister(characterId, updatedCharacter)
-      .then(response => {
+      .then(characterData => {
         console.log('Character has been successfully updated.');
-        
-        //get updated character's info
-        const characterData = response.data;
 
         //delete everything inside characters container
         document.querySelector('.characters-container').innerHTML = '';
@@ -237,10 +232,7 @@ window.addEventListener('load', () => {
     };
 
     charactersAPI.createOneRegister(newCharacter)
-      .then(response => {
-        //get new character's info
-        const characterData = response.data;
-
+      .then(characterData => {
         //delete everything inside characters container
         document.querySelector('.characters-container').innerHTML = '';
 
