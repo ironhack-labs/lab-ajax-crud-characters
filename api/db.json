@@ -2,17 +2,17 @@
   "characters": [
     {
       "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
+      "name": "LUKI",
+      "occupation": "eqqew",
+      "weapon": "adadsa",
+      "cartoon": "on"
     },
     {
       "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "Rebecca Norén",
+      "occupation": "sdadas",
+      "weapon": "adadsa",
+      "cartoon": "on"
     },
     {
       "id": 4,
@@ -20,6 +20,44 @@
       "occupation": "Corredor",
       "weapon": "Katchau",
       "cartoon": true
+    },
+    {
+      "id": 5
+    },
+    {
+      "name": "Rebecca Norén",
+      "occupation": "sdadas",
+      "weapon": "2",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Rebecca Norén",
+      "occupation": "utveck",
+      "weapon": "adadsa",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Rebecca Norén",
+      "occupation": "utveck",
+      "weapon": "2",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "Winberg",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": true,
+      "id": 9
+    },
+    {
+      "name": "FIL",
+      "occupation": "QWEEQWEQW",
+      "weapon": "2",
+      "cartoon": true,
+      "id": 10
     }
   ]
 }

@@ -12,19 +12,20 @@ function addCharInfo(data) {
 `
 }
 
-function addEditId(add) {
+function addEditId() {
   let id = document.querySelector('#edit-id').value;
   let name = document.querySelector('#edit-name').value;
   let occupation = document.querySelector('#edit-occupation').value;
   let weapon = document.querySelector('#edit-weapon').value;
   let cartoon = document.querySelector('#edit-cartoon').value;
-  console.log({
+  cartoon.checked ? (cartoon = true) : (cartoon = false);
+  return {
     id,
     name,
     occupation,
     weapon,
     cartoon
-  })
+  }
 }
 
 window.addEventListener('load', () => {
@@ -47,7 +48,6 @@ window.addEventListener('load', () => {
       })
   });
 
-  // document.querySelector(".characters-container").innerHTML = ""
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
     event.preventDefault();
@@ -65,20 +65,47 @@ window.addEventListener('load', () => {
     charactersAPI.deleteOneRegister(inputId)
   });
 
-  document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    addEditId()
-
-  });
+  document
+    .getElementById("edit-character-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      let id = document.querySelector("#edit-id").value;
+      let editedCharacter = addEditId();
+      console.log(editedCharacter)
+      debugger;
+      charactersAPI
+        .updateOneRegister(id, editedCharacter)
+        .then((axiosResult) => {
+          document.getElementById('edited-data-edit').style.backgroundColor =
+            'green';
+          console.log(axiosResult)
+        })
+        .catch((err) => {
+          console.log(error)
+          document.getElementById('edited-data-edit').style.backgroundColor = 'red';
+        });
+    });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
-
+    event.preventDefault();
+    const name = document.getElementById('new-name').value;
+    const occupation = document.getElementById('new-occupation').value;
+    const weapon = document.getElementById('new-weapon').value;
+    let cartoon = document.getElementById('new-cartoon');
+    cartoon.checked ? (cartoon = true) : (cartoon = false);
+    const character = {
+      name,
+      occupation,
+      weapon,
+      cartoon
+    };
+    charactersAPI
+      .createOneRegister(character)
+      .then((axiosResult) => {
+        document.getElementById('send-data').style.backgroundColor = 'green';
+        console.log(axiosResult)
+      })
+      .catch((err) => console.log(error));
+    document.getElementById('send-data').style.backgroundColor = 'red';
   });
 });
-
-
-// let id = document.querySelector('#change-id').value;
-// let name = document.querySelector('#change-name').value;
-// let occupation = document.querySelector('#change-occupation').value;
-// let weapon = document.querySelector('#change-weapon').value;
-// let cartoon = document.querySelector('#isCartoon').value;

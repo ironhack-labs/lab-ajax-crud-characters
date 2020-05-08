@@ -12,7 +12,7 @@ class APIHandler {
     return axios.get(`${this.BASE_URL}/characters/${id}`)
   }
 
-  createOneRegister() {
+  createOneRegister(character) {
     return axios.post(`${this.BASE_URL}/characters`, character)
   }
 
