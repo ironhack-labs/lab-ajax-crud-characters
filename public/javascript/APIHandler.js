@@ -6,7 +6,7 @@ class APIHandler {
   getFullList () {
     axios.get(`${this.BASE_URL}/characters`)
     .then(res => {
-      console.log(`Data response: ${res.data}`);
+      res.data.forEach(character => console.log(character))
     })
     .catch(e => console.log(`There was an error when retrieving the full list: ${e}`));
   }
