@@ -20,6 +20,20 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "fd",
+      "occupation": "dfs",
+      "weapon": "dfs",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "",
+      "occupation": "ds",
+      "weapon": "",
+      "cartoon": false,
+      "id": 7
     }
   ]
 }
