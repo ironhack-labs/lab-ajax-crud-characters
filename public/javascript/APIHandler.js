@@ -17,19 +17,28 @@ class APIHandler {
 
   createOneRegister (obj) {
     return axios.post(`${this.BASE_URL}/characters`, obj)
-    .then()
-    .catch(error => console.log(error))
+    .then(() => document.getElementById("create-data").style.backgroundColor = "green")
+    .catch(error => {
+      document.getElementById("create-data").style.backgroundColor = "red"
+      console.log(error)
+    })
   }
 
   updateOneRegister (id, obj) {
     return axios.put(`${this.BASE_URL}/characters/${id}`, obj)
-    .then(character => character)
-    .catch(error => console.log(error))
+    .then(() => document.getElementById("update-data").style.backgroundColor = "green")
+    .catch(error => {
+      document.getElementById("update-data").style.backgroundColor = "red"
+      console.log(error)
+    })
   }
 
   deleteOneRegister (id) {
     return axios.delete(`${this.BASE_URL}/characters/${id}`)
-    .then(character => character)
-    .catch(error => console.log(error))
+    .then(() => document.getElementById("delete-one").style.backgroundColor = "green")
+    .catch(error => {
+      document.getElementById("delete-one").style.backgroundColor = "red"
+      console.log(error)
+    })
   }
 }

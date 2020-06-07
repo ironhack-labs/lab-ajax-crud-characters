@@ -1,11 +1,11 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
+      "name": "Han Solito",
       "occupation": "Smuggler",
       "weapon": "Blaster Pistol",
-      "cartoon": true
+      "cartoon": true,
+      "id": 1
     },
     {
       "id": 2,
@@ -20,6 +20,20 @@
       "weapon": "Pistol",
       "cartoon": false,
       "id": 3
+    },
+    {
+      "name": "Antoine",
+      "occupation": "Genius",
+      "weapon": "Snickers",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Bobby",
+      "occupation": "Teacher",
+      "weapon": "Book",
+      "cartoon": false,
+      "id": 6
     }
   ]
 }

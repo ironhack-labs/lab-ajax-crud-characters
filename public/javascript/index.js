@@ -48,11 +48,8 @@ window.addEventListener('load', () => {
   document.getElementById('delete-one').addEventListener('click', function (event) {
     const id = document.getElementById("delete-on-input").value
     charactersAPI.deleteOneRegister(id)
-    .then(thisCharacter => {
-      document.getElementById("delete-one").style.backgroundColor = "green"
-    })
+    .then()
     .catch(err => {
-      document.getElementById("delete-one").style.backgroundColor = "red"
       alert("This character doesn't exist")
       console.log(err)
     })
@@ -72,14 +69,8 @@ window.addEventListener('load', () => {
       cartoon: cartoon
     }
     charactersAPI.updateOneRegister(id,obj)
-    .then(updatedChar => {
-      document.getElementById("update-data").style.backgroundColor = "green"
-      console.log("Updated !", updatedChar)
-    })
-    .catch(err => {
-      document.getElementById("update-data").style.backgroundColor = "red"
-      console.log(err)
-    })
+    .then(updatedChar =>console.log("Updated !", updatedChar))
+    .catch(err => console.log(err))
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
@@ -95,13 +86,7 @@ window.addEventListener('load', () => {
       cartoon: cartoon
     }
     charactersAPI.createOneRegister(obj)
-    .then(newChar => {
-      document.getElementById("create-data").style.backgroundColor = "green"
-      console.log("Created !", newChar)
-    })
-    .catch(err => {
-      document.getElementById("create-data").style.backgroundColor = "red"
-      console.log(err)
-    })
+    .then(newChar => console.log("Created !", newChar))
+    .catch(err => console.log(err))
   });
 });
