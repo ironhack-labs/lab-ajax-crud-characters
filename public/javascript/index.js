@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
       weapon: document.getElementById('updateWeapon').value,
       cartoon: document.getElementById('updateCartoon').checked
     }; 
-    charactersAPI.updateOneRegister(updateChar);
+    charactersAPI.updateOneRegister(updateChar.id, updateChar);
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {

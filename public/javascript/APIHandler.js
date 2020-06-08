@@ -32,22 +32,13 @@ class APIHandler {
     .catch(err => console.log(err));
   }
 
-  updateOneRegister (updateChar) {
-    axios
-    .get(`${this.BASE_URL}/characters/${id}`)
-    .then(response => {
-      const {id, name, occupation, weapon, cartoon} = response.data;
-      console.log('Character to update: ', updateChar)
-    })
-    .catch(err =>console.log(err));
-
+  updateOneRegister (id, updateChar) {
     axios
     .put(`${this.BASE_URL}/characters/${id}`, updateChar)
     .then(response => {
       console.log(response)
     })
-
-
+    .catch(err => console.log(err));
   }
 
   deleteOneRegister (id) {
