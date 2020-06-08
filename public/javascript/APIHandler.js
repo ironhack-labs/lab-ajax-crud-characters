@@ -3,48 +3,41 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-    axios.get(`${this.BASE_URL}/characters`)
+  getFullList() {
+    return axios.get(`${this.BASE_URL}/characters`)
     .then(res => {
       res.data.forEach(character => console.log(character))
+      return res.data;
     })
     .catch(e => console.log(`There was an error when retrieving the full list: ${e}`));
   }
 
-  getOneRegister (id) {
-    axios.get(`${this.BASE_URL}/characters/${id}`)
+  getOneRegister(id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
     .then(res => {
       console.log(`Data response: ${res.data}`);
+      return res.data;
     })
     .catch(e => console.log(`There was an error when retrieving one character: ${e}`))
   }
 
-  createOneRegister (newChar) {
-    axios.post(`${this.BASE_URL}/characters`, newChar)
-    .then( res => {
-      console.log(`New character created: ${res.data}`)
-      this.getFullList()
-    })
+  createOneRegister(newChar) {
+    return axios.post(`${this.BASE_URL}/characters`, newChar)
+    .then()
     .catch(e => console.log(`There was an error when creating one character: ${e}`));
   }
 
-  updateOneRegister (id, newInfo) {
-    axios
+  updateOneRegister(id, newInfo) {
+    return axios
     .put(`${this.BASE_URL}/characters/${id}`, newInfo)
-    .then(res => {
-      console.log(`Updated character: ${res.data}`);
-      this.getFullList();
-    })
+    .then()
     .catch(e => console.log(`There was an error when updating one character: ${e}`));
   }
 
-  deleteOneRegister (id) {
-    axios
+  deleteOneRegister(id) {
+    return axios
     .delete(`${this.BASE_URL}/characters/${id}`)
-    .then(res => {
-      console.log(`Deleted character: ${res.data}`);
-      this.getFullList();
-    })
+    .then()
     .catch(e => console.log(`There was an error when deleting one character: ${e}`));
   }
 }
