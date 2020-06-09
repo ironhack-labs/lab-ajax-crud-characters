@@ -105,3 +105,7 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+#character-info1{
+  display:none;
+}
