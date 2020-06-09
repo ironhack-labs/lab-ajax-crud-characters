@@ -2,17 +2,75 @@ const charactersAPI = new APIHandler('http://localhost:8000');
 
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
-    charactersAPI.getFullList();
+    charactersAPI.getFullList()
+    .then(allCharacters => {
+      const data = allCharacters.data;
+
+      let html = "";
+
+      data.forEach(character => {
+        html = html + `
+        <div class="character-info columns-2">
+          <div>
+            <div>Id:</div>
+            <div>Name:</div>
+            <div>Occupation:</div>
+            <div>Is a Cartoon?:</div>
+            <div>Weapon:</div>
+          </div>
+          <div class="col-2">
+            <div>${character.id}</div>
+            <div>${character.name}</div>
+            <div>${character.occupation}</div>
+            <div>${character.cartoon}</div>
+            <div>${character.weapon}</div>
+          </div>
+        </div>
+        `;
+      });
+
+      document.getElementById('fetch-all-container').innerHTML = html;
+    })
+    .catch(err => console.log('Error while getting the data: ', err));
+
+    
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
     const id = document.getElementById('search-id').value;
-    charactersAPI.getOneRegister(id);
+    charactersAPI.getOneRegister(id)
+    .then(oneCharacter => {
+      const character = oneCharacter.data;
+
+      let html =  `
+        <div class="character-info columns-2">
+          <div>
+            <div>Id:</div>
+            <div>Name:</div>
+            <div>Occupation:</div>
+            <div>Is a Cartoon?:</div>
+            <div>Weapon:</div>
+          </div>
+          <div class="col-2">
+            <div>${character.id}</div>
+            <div>${character.name}</div>
+            <div>${character.occupation}</div>
+            <div>${character.cartoon}</div>
+            <div>${character.weapon}</div>
+          </div>
+        </div>
+        `;
+
+
+      document.getElementById('fetch-all-container').innerHTML = html;
+    })
+    .catch(err => console.log('Error while getting the data: ', err));
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
     const id = document.getElementById('delete-id').value;
     charactersAPI.deleteOneRegister(id);
+    
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
@@ -25,7 +83,11 @@ window.addEventListener('load', () => {
 
     const obj = {name, occupation, cartoon, weapon};
 
-    charactersAPI.updateOneRegister(id, obj);
+    charactersAPI.updateOneRegister(id, obj)
+    .then(responseFromAPI => {
+      console.log("Personaje editado", responseFromAPI); 
+    })
+    .catch(err => console.log('Error while getting the data: ', err));
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {

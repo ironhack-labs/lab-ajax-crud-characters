@@ -105,3 +105,12 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.col-2 {
+  color: #d8b362;
+  padding-left: 10px;
+}
+
+.columns-2 {
+  display: flex;
+}

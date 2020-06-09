@@ -4,21 +4,11 @@ class APIHandler {
   }
 
   getFullList () {
-    axios
-      .get(`${this.BASE_URL}/characters`)
-      .then(responseFromAPI => {
-        console.log(responseFromAPI.data); 
-      })
-      .catch(err => console.log('Error while getting the data: ', err));
+    return axios.get(`${this.BASE_URL}/characters`);
   }
 
   getOneRegister (id) {
-    axios
-      .get(`${this.BASE_URL}/characters/${id}`)
-      .then(responseFromAPI => {
-        console.log(responseFromAPI.data); 
-      })
-      .catch(err => console.log('Error while getting the data: ', err));
+    return axios.get(`${this.BASE_URL}/characters/${id}`);
   }
 
   createOneRegister (obj) {
@@ -31,12 +21,7 @@ class APIHandler {
   }
 
   updateOneRegister (id, obj) {
-    axios
-      .put(`${this.BASE_URL}/characters/${id}`, obj)
-      .then(responseFromAPI => {
-        console.log("Personaje editado", responseFromAPI); 
-      })
-      .catch(err => console.log('Error while getting the data: ', err));
+    return axios.put(`${this.BASE_URL}/characters/${id}`, obj);
   }
 
   deleteOneRegister (id) {
