@@ -69,7 +69,11 @@ window.addEventListener('load', () => {
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
     const id = document.getElementById('delete-id').value;
-    charactersAPI.deleteOneRegister(id);
+    charactersAPI.deleteOneRegister(id)
+      .then(responseFromAPI => {
+        console.log("Personaje eliminado", responseFromAPI); 
+      })
+      .catch(err => console.log('Error while getting the data: ', err));
     
   });
 
@@ -98,7 +102,11 @@ window.addEventListener('load', () => {
 
     const obj = {name, occupation, cartoon, weapon};
 
-    charactersAPI.createOneRegister(obj);
+    charactersAPI.createOneRegister(obj)
+      .then(responseFromAPI => {
+        console.log("Personaje creado", responseFromAPI); 
+      })
+      .catch(err => console.log('Error while getting the data: ', err));
 
   });
 });

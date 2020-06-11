@@ -12,12 +12,7 @@ class APIHandler {
   }
 
   createOneRegister (obj) {
-    axios
-      .post(`${this.BASE_URL}/characters`, obj)
-      .then(responseFromAPI => {
-        console.log("Personaje creado", responseFromAPI); 
-      })
-      .catch(err => console.log('Error while getting the data: ', err));
+    return axios.post(`${this.BASE_URL}/characters`, obj);
   }
 
   updateOneRegister (id, obj) {
@@ -25,11 +20,6 @@ class APIHandler {
   }
 
   deleteOneRegister (id) {
-    axios
-      .delete(`${this.BASE_URL}/characters/${id}`)
-      .then(responseFromAPI => {
-        console.log("Personaje eliminado", responseFromAPI); 
-      })
-      .catch(err => console.log('Error while getting the data: ', err));
+    return axios.delete(`${this.BASE_URL}/characters/${id}`);
   }
 }
