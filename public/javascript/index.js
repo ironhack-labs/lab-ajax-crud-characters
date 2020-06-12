@@ -4,24 +4,24 @@ window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
     charactersAPI.getFullList()
       .then(res => {
+        console.log(res.data)
+        let hmtlAll = '';
+        res.data.forEach((elem) => {
 
-        // let hmtlAll = '';
-        // res.forEach(elem => {
+          hmtlAll += `
+          <div class="characters-container">
+            <div class="character-info">
+              <div class="name">${elem.name}</div>
+              <div class="occupation">${elem.occupation}</div>
+              <div class="cartoon">${elem.cartoon}</div>
+              <div class="weapon">${elem.weapon}</div>
+            </div>
+          </div>
+          `
 
-        //   hmtlAll += `
-        //   <div class="characters-container">
-        //     <div class="character-info">
-        //       <div class="name">${elem.name}</div>
-        //       <div class="occupation">${elem.occupation}</div>
-        //       <div class="cartoon">${elem.cartoon}</div>
-        //       <div class="weapon">${elem.weapon}</div>
-        //     </div>
-        //   </div>
-        //   `
-
-        // });
-        // document.getElementsByClassName("characters-container")[0].innerHTML = hmtlAll;
-        console.log('RESPUESTA DEL FETCH', res.data)
+        });
+        document.getElementsByClassName("characters-container")[0].innerHTML = hmtlAll;
+        // console.log('RESPUESTA DEL FETCH', res.data)
       })
       .catch(error => console.log('ERROR EN EL FETCH', error))
   });
