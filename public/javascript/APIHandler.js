@@ -6,12 +6,7 @@ class APIHandler {
   }
 
   getFullList() {
-    axios
-      .get(`${this.BASE_URL}/characters`)
-      .then(res => {
-        console.log('RESPUESTA DE API', res)
-      })
-      .catch(error => console.log('ERROR AL CONSULTAR LA DATA', error))
+    return axios.get(`${this.BASE_URL}/characters`)
   }
 
   getOneRegister(id) {
