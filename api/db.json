@@ -1,0 +1,67 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": "on",
+      "id": 1
+    },
+    {
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": "on",
+      "id": 3
+    },
+    {
+      "name": "Aladin",
+      "occupation": "Dancer",
+      "weapon": "Carpet ",
+      "cartoon": "on",
+      "id": 4
+    },
+    {
+      "name": "Aloe Blacc",
+      "occupation": "Singer",
+      "weapon": "Microphone",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Johnny Depp",
+      "occupation": "Actor",
+      "weapon": "Parrot",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "George RR Martin",
+      "occupation": "Writer",
+      "weapon": "books",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "Brad Pitt",
+      "occupation": "Actor",
+      "weapon": "Microphone",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "George RR Martin",
+      "occupation": "Writer",
+      "weapon": "books",
+      "cartoon": false,
+      "id": 14
+    },
+    {
+      "name": "Brad Pitt",
+      "occupation": "Actor",
+      "weapon": "books",
+      "cartoon": false,
+      "id": 15
+    }
+  ]
+}
