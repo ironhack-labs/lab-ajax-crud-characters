@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Paquito",
+      "occupation": "actor",
+      "weapon": "pies",
+      "cartoon": false
+    },
+    {
+      "name": "Juanito",
+      "occupation": "chirigotero",
+      "weapon": "La vida",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "p",
+      "occupation": "Cuenta chistes",
+      "weapon": "La vida",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "Gabriel",
+      "occupation": "chirigotero",
+      "weapon": "La vida",
+      "cartoon": true,
+      "id": 12
+    },
+    {
+      "name": "p",
+      "occupation": "Cuenta chistes",
+      "weapon": "Metralleta",
+      "cartoon": true,
+      "id": 13
+    }
+  ]
+}

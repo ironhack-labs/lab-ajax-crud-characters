@@ -1,25 +1,56 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
+    this.axiosApp = axios.create({ baseURL: baseUrl });
   }
 
-  getFullList () {
-
+  getFullList() {
+    return this.axiosApp
+      .get(`/characters`)
+      .then((response) => { console.log(response.data)
+       
+      })
+      .catch((err) => console.log("Error", err));
   }
 
-  getOneRegister () {
+  getOneRegister(id) {
+    return this.axiosApp
+      .get(`/characters/${id}`)
+      .then((response) => { console.log(response.data)
+        
+      })
 
+      .catch((err) => console.log("Error", err));
   }
 
-  createOneRegister () {
+  createOneRegister(newChar) {
+    return this.axiosApp
+      .post(`/characters`, newChar)
+      .then((response) => { console.log(response.data)
+        
+      })
 
+      .catch((err) => console.log("Error", err));
   }
 
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
-  }
+  updateOneRegister(id,newCharacterData) {
+    return this.axiosApp.get(`/characters/${id}`)
+    .then(() => { this.axiosApp.put(`/characters/${id}`, newCharacterData)
+   
+  })
+  
+    .catch(err => console.log('Error', err))
+    
 }
+
+  deleteOneRegister(id) {
+    return this.axiosApp.delete(`/characters/${id}`)
+  .then((response) => {console.log(response.data)
+   
+  })
+    .catch(err => console.log('Error', err))
+    
+  }
+
+}
+
