@@ -1,0 +1,28 @@
+{
+  "characters": [
+    {
+      "id": 1
+    },
+    {
+      "name": "Hola",
+      "occupation": "Porculero",
+      "weapon": "Majismo",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "Spiderman",
+      "occupation": "Superhero",
+      "weapon": "Strength",
+      "cartoon": "false",
+      "id": 4
+    },
+    {
+      "name": "Elena",
+      "occupation": "Crack",
+      "weapon": "Majismo",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
