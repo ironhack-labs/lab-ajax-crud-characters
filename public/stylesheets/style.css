@@ -64,6 +64,7 @@ button {
 }
 
 .character-info {
+  display: none;
   position: relative;
   width: 40%;
   margin: 10px;
@@ -71,6 +72,10 @@ button {
   text-align: left;
   border: solid white 2px;
   border-radius: 20px;
+}
+
+.char-display {
+  display: block;
 }
 
 .character-info div span {
@@ -104,4 +109,12 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+.btn-green {
+  background-color: green;
+}
+
+.btn-red {
+  background-color: red;
 }
