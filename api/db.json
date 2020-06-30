@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Antonio Ríos",
+      "occupation": "perro",
+      "weapon": "ladrido",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Martin",
+      "occupation": "Marido",
+      "weapon": "Inteligencia",
+      "cartoon": false,
+      "id": 5
+    }
+  ]
+}
