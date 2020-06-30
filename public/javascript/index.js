@@ -2,20 +2,63 @@ const charactersAPI = new APIHandler('http://localhost:8000')
 
 
 window.addEventListener('load', () => {
+
+
+
+
+  // FETCH ALL
   document.getElementById('fetch-all').addEventListener('click', function (event) {
+
     event.preventDefault()
+
     charactersAPI.getFullList()
       .then(res => {
         console.log('Char list', res.data)
+        res.data.forEach(elm => {
+
+          let newChar = document.querySelector('.character-info').cloneNode(true)
+          const charContainer = document.querySelector('.characters-container')
+
+          newChar.querySelector('.id').innerText = `Id: ${elm.id}`
+          newChar.querySelector('.name').innerText = `Name: ${elm.name}`
+          newChar.querySelector('.occupation').innerText = `Occupation: ${elm.occupation}`
+          newChar.querySelector('.cartoon').innerText = `Is a Cartoon?: ${elm.cartoon}`
+          newChar.querySelector('.weapon').innerText = `Weapon: ${elm.weapon}`
+
+          charContainer.appendChild(newChar)
+        })
       })
 
+
+
+
+
+    // GET ELEMENT BY ID
     document.getElementById('fetch-one').addEventListener('click', function (event) {
+
       event.preventDefault()
+
       const id = document.querySelector('.fetchOne').value
       console.log(id)
       charactersAPI.getOneRegister(id)
+        .then(res => {
+          let newChar = document.querySelector('.character-info').cloneNode(true)
+
+          newChar.querySelector('.id').innerText = `Id: ${res.data.id}`
+          newChar.querySelector('.name').innerText = `Name: ${res.data.name}`
+          newChar.querySelector('.occupation').innerText = `Occupation: ${res.data.occupation}`
+          newChar.querySelector('.cartoon').innerText = `Is a Cartoon?: ${res.data.cartoon}`
+          newChar.querySelector('.weapon').innerText = `Weapon: ${res.data.weapon}`
+          const charContainer = document.querySelector('.characters-container')
+          charContainer.appendChild(newChar)
+        })
+        .catch(err => ('error', err))
     })
 
+
+
+
+    // DELETE ONE BY ID
     document.getElementById('delete-one').addEventListener('click', function (event) {
       event.preventDefault()
       const id = document.querySelector('.deleteOne').value
@@ -23,6 +66,10 @@ window.addEventListener('load', () => {
       charactersAPI.deleteOneRegister(id)
     })
 
+
+
+
+    // EDIT ONE BY ID
     document.getElementById('edit-character-form').addEventListener('submit', function (event) {
       event.preventDefault()
 
@@ -35,9 +82,14 @@ window.addEventListener('load', () => {
         cartoon: input[4].checked
       }
       charactersAPI.updateOneRegister(id, newChar)
+        .then(res => document.querySelector('#send-edit').classList.toggle('btn-green'))
+        .catch(err => document.querySelector('#send-edit').classList.toggle('btn-red'))
 
     })
 
+
+
+    // CREATE NEW ONE
     document.getElementById('new-character-form').addEventListener('submit', function (event) {
       event.preventDefault()
 
@@ -49,7 +101,8 @@ window.addEventListener('load', () => {
         cartoon: input[3].checked
       }
       charactersAPI.createOneRegister(newChar)
-
+        .then(res => document.querySelector('#send-data').classList.toggle('btn-green'))
+        .catch(err => document.querySelector('#send-data').classList.toggle('btn-red'))
 
     })
   })

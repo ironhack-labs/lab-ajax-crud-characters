@@ -1,11 +1,11 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
+      "name": "Han acompañado",
       "occupation": "Smuggler",
       "weapon": "Blaster Pistol",
-      "cartoon": true
+      "cartoon": true,
+      "id": 1
     },
     {
       "id": 2,
@@ -27,6 +27,13 @@
       "weapon": "sfgdhfjgk",
       "cartoon": false,
       "id": 4
+    },
+    {
+      "name": "Miriam",
+      "occupation": "nini",
+      "weapon": "bostezo",
+      "cartoon": true,
+      "id": 5
     }
   ]
 }
