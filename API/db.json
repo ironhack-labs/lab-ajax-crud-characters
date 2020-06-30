@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "occupation": "Ocioso de la vida",
+      "name": "Nombresito",
+      "weapon": "Palo",
+      "cartoon": "true",
+      "id": 3
+    },
+    {
+      "name": "ddddd",
+      "occupation": "dd",
+      "weapon": "ds",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "df",
+      "occupation": "dadsa",
+      "weapon": "ffffff",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "fdsfds",
+      "occupation": "fds",
+      "weapon": "fds",
+      "cartoon": true
+    }
+  ]
+}
