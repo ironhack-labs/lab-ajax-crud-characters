@@ -1,0 +1,74 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "xyjyj",
+      "occupation": "klllllllllllllllllll",
+      "cartoon": false,
+      "weapon": "lllllllllllllllllllllllllll",
+      "id": 6
+    },
+    {
+      "name": "popino",
+      "occupation": "perro",
+      "cartoon": true,
+      "weapon": "guau",
+      "id": 7
+    },
+    {
+      "name": "asd",
+      "occupation": "asd",
+      "cartoon": true,
+      "weapon": "asd",
+      "id": 8
+    },
+    {
+      "name": "asd",
+      "occupation": "asd",
+      "cartoon": true,
+      "weapon": "aasd",
+      "id": 9
+    },
+    {
+      "name": "asd",
+      "occupation": "asd",
+      "cartoon": false,
+      "weapon": "sd",
+      "id": 10
+    },
+    {
+      "name": "asd",
+      "occupation": "asd",
+      "cartoon": false,
+      "weapon": "asd",
+      "id": 11
+    },
+    {
+      "name": "asd",
+      "occupation": "sad",
+      "cartoon": false,
+      "weapon": "sad",
+      "id": 12
+    }
+  ]
+}

@@ -5,21 +5,41 @@ class APIHandler {
 
   getFullList () {
 
+    return axios
+          .get(this.BASE_URL + '/characters')
+          .then(list =>  list.data)
+          .catch(error => console.log('Oooooops error: ',error))
   }
 
-  getOneRegister () {
+  getOneRegister (id) {
 
+    return axios
+        .get(this.BASE_URL + `/characters/${id}`)
+        .then(singleCharacter => singleCharacter.data)
+        .catch(error => console.log('Character not found ',error))
   }
 
-  createOneRegister () {
+  createOneRegister (newCharacter) {
 
+    return axios
+      .post(this.BASE_URL + '/characters', newCharacter)
+      .then(() => true)
+      .catch(error => console.log('Oooooops error: ',error))
   }
 
-  updateOneRegister () {
+  updateOneRegister (updatedCharacter, id) {
 
+    return axios
+      .put(this.BASE_URL + `/characters/${id}`, updatedCharacter)
+      .then(() => true)
+      .catch(error => console.log('Character not found ',error))
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {
 
+    return axios
+        .delete(this.BASE_URL + `/characters/${id}`)
+        .then(() => true)
+        .catch(error => console.log('Character not found ',error))
   }
 }
