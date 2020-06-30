@@ -1,0 +1,60 @@
+{
+  "characters": [
+    {
+      "name": "Andrés Barros Rivas",
+      "occupation": "erqw",
+      "weapon": "er",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "name": "sdfasdf",
+      "occupation": "asdfasdf",
+      "weapon": "fgh",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Francisco Herranz",
+      "occupation": "programador de la ostia",
+      "weapon": "dfasdfasdfadsf",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "Andrés Barros Rivas",
+      "occupation": "qwerqwer",
+      "weapon": "qwerqwer",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "Andrés Barros Rivas",
+      "occupation": "qwerqwer",
+      "weapon": "qwerqwer",
+      "cartoon": true,
+      "id": 10
+    }
+  ]
+}
