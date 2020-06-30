@@ -46,7 +46,7 @@ class APIHandler {
 
   }
 
-  //ELIMINAR REGISTRO POR ID
+  //ELIMINAR REGISTRO POR ID ---OK---
 
   deleteOneRegister(id) {
     
