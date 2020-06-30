@@ -1,39 +1,186 @@
 {
   "characters": [
     {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
+      "id": 3,
+      "name": "",
+      "occupation": "",
+      "weapon": "",
       "cartoon": false
     },
     {
-      "occupation": "Ocioso de la vida",
-      "name": "Nombresito",
-      "weapon": "Palo",
-      "cartoon": "true",
-      "id": 3
-    },
-    {
-      "name": "ddddd",
-      "occupation": "dd",
-      "weapon": "ds",
-      "cartoon": true,
+      "name": "dafda",
+      "occupation": "fada",
+      "weapon": "fdasa",
+      "cartoon": false,
       "id": 4
     },
     {
-      "name": "df",
-      "occupation": "dadsa",
-      "weapon": "ffffff",
+      "name": "",
+      "occupation": "",
+      "weapon": "",
       "cartoon": false,
       "id": 5
     },
     {
       "id": 6,
-      "name": "fdsfds",
-      "occupation": "fds",
-      "weapon": "fds",
-      "cartoon": true
+      "name": "545",
+      "occupation": "5454",
+      "weapon": "5454",
+      "cartoon": false
+    },
+    {
+      "name": "fdasa",
+      "occupation": "fdaa",
+      "weapon": "fad",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "fdafa",
+      "occupation": "fdaa",
+      "weapon": "fdasa",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "ddddd",
+      "occupation": "dd",
+      "weapon": "fdasa",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "ddddd",
+      "occupation": "dd",
+      "weapon": "fdasa",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "ddddd",
+      "occupation": "dadsa",
+      "weapon": "fdasa",
+      "cartoon": true,
+      "id": 13
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 14
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 15
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 16
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 17
+    },
+    {
+      "name": "ddddd",
+      "occupation": "dd",
+      "weapon": "fdsa",
+      "cartoon": false,
+      "id": 18
+    },
+    {
+      "name": "ddddd",
+      "occupation": "dd",
+      "weapon": "fdasa",
+      "cartoon": false,
+      "id": 19
+    },
+    {
+      "name": "ddddd",
+      "occupation": "dd",
+      "weapon": "fdasa",
+      "cartoon": false,
+      "id": 20
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 21
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 22
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 23
+    },
+    {
+      "name": "nombre",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 24
+    },
+    {
+      "name": "ddddd",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 25
+    },
+    {
+      "name": "Escarlata",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 26
+    },
+    {
+      "name": "s",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 27
+    },
+    {
+      "name": "s",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 28
     }
   ]
 }

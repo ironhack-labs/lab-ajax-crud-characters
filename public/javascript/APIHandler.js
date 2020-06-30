@@ -1,7 +1,9 @@
-// Axios app
+// Axios app creado en forma de nueva instancia
 const axiosApp = axios.create({
   baseURL: 'http://localhost:8000'
 })
+
+
 
 
 class APIHandler {
@@ -9,46 +11,36 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
+
   getFullList() {
-    axiosApp
+
+    return axiosApp
       .get('/characters')
       .then(response => {
         console.log('Characters:', response.data)
-      })
-      .catch(err => console.log(err))
+        console.log("response desde apihandler", response)
 
-    const cardOriginal = document.getElementById('char-info')
+      })
+
+      .catch(err => console.log(err))
 
   }
 
 
-
-  //     < div class="characters-container" >
-  //       <div id="char-info" class="character-info">
-  //         <div class="name">Character Name</div>
-  //         <div class="occupation">Character Occupation</div>
-  //         <div class="cartoon">Is a Cartoon?</div>
-  //         <div class="weapon">Character Weapon</div>
-  //       </div>
-  // </div >
-
-
-
-
-  getOneRegister() {
-    let id = document.getElementById("character-id").value
-    axiosApp
+  getOneRegister(id) {
+    return axiosApp
       .get('/characters/' + id)
       .then(response => {
+
         console.log('Characters:', response.data)
-        // document.querySelector('#character-id').reset()
+        document.querySelector('#character-id').value = ""
+        //TODO conseguir el .rest()
       })
       .catch(err => console.log(err))
   }
 
-
-  createOneRegister() {
-    const inputNew = document.querySelectorAll("#new-character-form input")
+  createOneRegister(inputNew, btn) {
+    //TODO pregutnar si hacer esto en index.js
     const characterNew = {
       name: inputNew[0].value,
       occupation: inputNew[1].value,
@@ -56,35 +48,114 @@ class APIHandler {
       cartoon: inputNew[3].checked
     }
 
-    axiosApp
+    return axiosApp
       .post('/characters', characterNew)
-      .catch(err => console.log('err', err))
+      .then(response => {
+        alert(response.status)
+        response.status === 201 ? (btn.style.backgroundColor = "green") : (btn.style.backgroundColor = "red")
+      })
+      .catch(err => {
+        btn.style.backgroundColor = "red"
+        console.log(err)
+      })
   }
 
-  updateOneRegister() {
+  updateOneRegister(characterEdit, btn) {
     console.log("entras asquí?")
-    const inputEdit = document.querySelectorAll("#edit-character-form input")
-    const characterEdit = {
-      id: inputEdit[0].value,
-      name: inputEdit[1].value,
-      occupation: inputEdit[2].value,
-      weapon: inputEdit[3].value,
-      cartoon: inputEdit[4].checked
-    }
+
     axiosApp
       .put(`/characters/${characterEdit.id}`, characterEdit)
-      .catch(err => console.log('err', err))
+      .then(response => response.status === 200 ? (btn.style.backgroundColor = "green") : (btn.style.backgroundColor = "red")
+      )
+      .catch(err => {
+        btn.style.backgroundColor = "red"
+        console.log(err)
+      })
   }
 
-  deleteOneRegister() {
-    let id = document.getElementById("character-id-delete").value
-    console.log(id)
+  deleteOneRegister(id, btn) {
     axiosApp
       .delete('/characters/' + id)
       .then(response => {
         console.log('Characters:', response.data)
+        alert("CENTRA TU ATENCIÓN EN EL BOTÓN DEL DELETE PORQUE SERÁ MUY BREVE")
+        //TODO mal, lo suyo sería obtener el response.status fuera?
+        if (response.status === 200) { btn.style.backgroundColor = "green" }
         // document.querySelector('#character-id').reset()
       })
-      .catch(err => console.log(err))
+
+      .catch(err => {
+        btn.style.backgroundColor = "red"
+        console.log(err)
+      })
+
+  }
+
+  printAllCharacters(anclaVital, originalCard, response) {
+
+
+    axiosApp.get('/characters')
+      .then(response => {
+        response.data.forEach(element => {
+          let cln = originalCard.cloneNode(true);
+          document.querySelector(".name").innerHTML = ("Character Name:") + element.name
+          document.querySelector(".occupation").innerHTML = ("Character Occupation:") + element.occupation
+          document.querySelector(".cartoon").innerHTML = ("Is a Cartoon?:") + (element.cartoon ? ("YES") : ("NO"))
+          document.querySelector(".weapon").innerHTML = ("Character Weapon:") + element.weapon
+          anclaVital.appendChild(cln)
+          //TODO cómo esconder div original?
+
+        });
+
+      })
+      // TODO CÓMO RESETEAR PARA QUE NO ME CARGUEN REPES?
+      // .then(response => { anclaVital.innerHTML = "" })
+
+      .catch(err => console.log('err', err))
+  }
+
+  printAllCharacters(anclaVital, originalCard, response) {
+
+
+    axiosApp.get('/characters')
+      .then(response => {
+        response.data.forEach(element => {
+          let cln = originalCard.cloneNode(true);
+          document.querySelector(".name").innerHTML = ("Character Name:") + element.name
+          document.querySelector(".occupation").innerHTML = ("Character Occupation:") + element.occupation
+          document.querySelector(".cartoon").innerHTML = ("Is a Cartoon?:") + (element.cartoon ? ("YES") : ("NO"))
+          document.querySelector(".weapon").innerHTML = ("Character Weapon:") + element.weapon
+          anclaVital.appendChild(cln)
+          //TODO cómo esconder div original?
+
+        });
+
+      })
+      // TODO CÓMO RESETEAR PARA QUE NO ME CARGUEN REPES?
+      // .then(response => { anclaVital.innerHTML = "" })
+
+      .catch(err => console.log('err', err))
+  }
+
+  printAOneSadTinyCharacter(anclaVital, originalCard, id) {
+    axiosApp.get('/characters/' + id)
+
+      .then(element => {
+        console.log("PORQUE NO", element.data)
+        let cln = originalCard.cloneNode(true);
+        document.querySelector(".name").innerHTML = ("Character Name:") + element.data.name
+        document.querySelector(".occupation").innerHTML = ("Character Occupation:") + element.data.occupation
+        document.querySelector(".cartoon").innerHTML = ("Is a Cartoon?:") + (element.data.cartoon ? ("YES") : ("NO"))
+        document.querySelector(".weapon").innerHTML = ("Character Weapon:") + element.data.weapon
+        anclaVital.appendChild(cln)
+        //TODO cómo esconder div original?
+      })
+
+
+      // TODO CÓMO RESETEAR PARA QUE NO ME CARGUEN REPES?
+      // .then(response => { anclaVital.innerHTML = "" })
+
+      .catch(err => console.log('err', err))
   }
 }
+
