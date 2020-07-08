@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
           let newChar = document.querySelector('.character-info').cloneNode(true)
           const charContainer = document.querySelector('.characters-container')
 
-          newChar.querySelector('.id').innerText = `Id: ${elm.id}`
+          //newChar.querySelector('.id').innerText = `Id: ${elm.id}`
           newChar.querySelector('.name').innerText = `Name: ${elm.name}`
           newChar.querySelector('.occupation').innerText = `Occupation: ${elm.occupation}`
           newChar.querySelector('.cartoon').innerText = `Is a Cartoon?: ${elm.cartoon}`
@@ -44,7 +44,7 @@ window.addEventListener('load', () => {
         .then(res => {
           let newChar = document.querySelector('.character-info').cloneNode(true)
 
-          newChar.querySelector('.id').innerText = `Id: ${res.data.id}`
+          //newChar.querySelector('.id').innerText = `Id: ${res.data.id}`
           newChar.querySelector('.name').innerText = `Name: ${res.data.name}`
           newChar.querySelector('.occupation').innerText = `Occupation: ${res.data.occupation}`
           newChar.querySelector('.cartoon').innerText = `Is a Cartoon?: ${res.data.cartoon}`
