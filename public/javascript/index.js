@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
 
     charactersAPI.getFullList()
       .then(res => {
-        console.log('Char list', res.data)
+        console.log('Char list', res)
         res.data.forEach(elm => {
 
           let newChar = document.querySelector('.character-info').cloneNode(true)
