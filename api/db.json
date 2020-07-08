@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Mémé",
+      "occupation": "Couture",
+      "weapon": "Aguille",
+      "cartoon": "false",
+      "id": 2
+    },
+    {
+      "name": "rretret",
+      "occupation": "tretre",
+      "weapon": "ter",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "id": 7,
+      "name": "Yo",
+      "occupation": "Yo",
+      "weapon": "Yo",
+      "cartoon": false
+    },
+    {
+      "name": "kuiuk",
+      "occupation": "iukiuk",
+      "weapon": "iukiuk",
+      "cartoon": true,
+      "id": 8
+    }
+  ]
+}
