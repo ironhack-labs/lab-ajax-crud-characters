@@ -79,7 +79,6 @@ window.addEventListener("load", () => {
     .getElementById("new-character-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-      alert("coucou Tonin");
       const name = document.getElementById("new-name").value;
       const occupation = document.getElementById("new-occupation").value;
       const weapon = document.getElementById("new-weapon").value;
