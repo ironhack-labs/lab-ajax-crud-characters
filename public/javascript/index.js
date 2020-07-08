@@ -59,10 +59,6 @@ document
         });
   });
 
-// document
-//   .getElementById("edit-character-form")
-//   .addEventListener("submit", function (event) {});
-
 document
   .getElementById("new-character-form")
   .addEventListener("submit", function (event) {
@@ -71,7 +67,9 @@ document
     const occupation = document.getElementById("occupation").value;
     const weapon = document.getElementById("weapon").value;
     let cartoon;
-    document.getElementById("cartoon") ? (cartoon = true) : (cartoon = false);
+    document.getElementById("cartoon").checked
+      ? (cartoon = true)
+      : (cartoon = false);
 
     const newCharacter = {
       name,
@@ -90,4 +88,37 @@ document
           document.getElementById("send-create").classList.add("problem");
           console.log(err);
         });
+  });
+
+document
+  .getElementById("edit-character-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const name = document.getElementById("name-ed").value;
+    const occupation = document.getElementById("occupation-ed").value;
+    const weapon = document.getElementById("weapon-ed").value;
+    let cartoon;
+    document.getElementById("cartoon-ed").checked
+      ? (cartoon = true)
+      : (cartoon = false);
+
+    const updatedCharacter = {
+      name,
+      occupation,
+      weapon,
+      cartoon,
+    };
+
+    charactersAPI
+      .updateOneRegister(
+        document.getElementById("chr-id").value,
+        updatedCharacter
+      )
+      .then(() => {
+        document.getElementById("send-update").classList.add("success");
+      })
+      .catch((err) => {
+        document.getElementById("send-update").classList.add("problem");
+        console.log(err);
+      });
   });

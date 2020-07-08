@@ -8,36 +8,25 @@
       "cartoon": true
     },
     {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
+      "name": "yo",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 3
     },
     {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "yo",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 8
     },
     {
-      "character": {
-        "name": "ho",
-        "occupation": "ho",
-        "weapon": "ho",
-        "cartoon": true
-      },
-      "id": 5
-    },
-    {
-      "character": {
-        "name": "toto",
-        "occupation": "toto",
-        "weapon": "toto",
-        "cartoon": true
-      },
-      "id": 6
+      "name": "toto",
+      "occupation": "gagaga",
+      "weapon": "gsdfsdf",
+      "cartoon": true,
+      "id": 9
     }
   ]
 }
