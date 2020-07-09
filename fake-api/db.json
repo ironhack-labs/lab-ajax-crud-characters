@@ -24,8 +24,8 @@
     },
     {
       "name": "Betty Boop",
-      "occupation": "dancer",
-      "weapon": "charm",
+      "occupation": "Singer",
+      "weapon": "Charm",
       "cartoon": true,
       "id": 4
     },
@@ -35,6 +35,20 @@
       "weapon": "katanas",
       "cartoon": false,
       "id": 5
+    },
+    {
+      "name": "Ponyo",
+      "occupation": "fish/human",
+      "weapon": "magic",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Nicky Larson",
+      "occupation": "detective",
+      "weapon": "gun",
+      "cartoon": false,
+      "id": 7
     }
   ]
 }

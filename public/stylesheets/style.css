@@ -105,3 +105,23 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+
+.data {
+  color: goldenrod;
+}
+
+.data_id {
+  position: relative;
+  left : 90%;
+  box-sizing: border-box;
+  color: goldenrod;
+  background: whitesmoke;
+  border-radius: 30px;
+  width: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 1vw;
+
+}
