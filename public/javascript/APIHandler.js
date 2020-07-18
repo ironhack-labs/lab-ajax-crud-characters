@@ -4,7 +4,9 @@ class APIHandler {
   }
 
   getFullList () {
-
+    axios.get('http://localhost:8000/characters')
+      .then(chars => console.log(chars.data))
+      .catch(err => console.log(err))
   }
 
   getOneRegister () {
