@@ -25,28 +25,25 @@ const renderOnDom = (characters) => {
       parentChar.innerHTML += newChild
   }
 }
-const getDataFormNew = (form) => {
+
+const getDataForm = (form) => {
   const allInputs = form.querySelectorAll('input')
-  const newCha = {
-      name: allInputs[0].value,
-      occupation: allInputs[1].value,
-      weapon: allInputs[2].value,
-      cartoon: allInputs[3].checked
+  const character = {}
+  if (allInputs[0].getAttribute('name') === 'chr-id') {
+    character.id = allInputs[0].value
+    character.name = allInputs[1].value
+    character.occupation = allInputs[2].value
+    character.weapon = allInputs[3].value
+    character.cartoon = allInputs[4].checked
+  } else {
+    character.name = allInputs[0].value
+    character.occupation = allInputs[1].value
+    character.weapon = allInputs[2].value
+    character.cartoon = allInputs[3].checked
   }
-  return newCha
+  return character
 }
 
-const getDataFormEdit = (form) => {
-  const allInputs = form.querySelectorAll('input')
-  const editCha = {
-      id: allInputs[0].value,
-      name: allInputs[1].value,
-      occupation: allInputs[2].value,
-      weapon: allInputs[3].value,
-      cartoon: allInputs[4].checked
-  }
-  return editCha
-}
 
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
@@ -69,11 +66,11 @@ window.addEventListener('load', () => {
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
     event.preventDefault()
-    charactersAPI.updateOneRegister(getDataFormEdit(this))
+    charactersAPI.updateOneRegister(getDataForm(this))
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
     event.preventDefault()
-    charactersAPI.createOneRegister(getDataFormNew(this))
+    charactersAPI.createOneRegister(getDataForm(this))
   });
 });
