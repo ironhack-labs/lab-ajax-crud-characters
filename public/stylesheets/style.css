@@ -31,6 +31,12 @@ button {
   color: #fff;
   overflow: hidden;
 }
+button.success {
+  background-color: green;
+}
+button.error {
+  background-color: red;
+}
 
 .container {
   width: 70%;

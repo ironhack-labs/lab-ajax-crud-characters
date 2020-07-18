@@ -4,30 +4,32 @@ class APIHandler {
   }
 
   getFullList () {
-    axios.get(this.BASE_URL + `characters/`)
-      .then(characters => console.log(characters.data))
+    return axios.get(this.BASE_URL + `characters/`)
+      .then(characters => characters.data)
       .catch(err => console.error(err))
   }
 
   getOneRegister (id) {
-    axios.get(this.BASE_URL + `characters/${id}`)
-      .then(character => console.log(character.data))
+    return axios.get(this.BASE_URL + `characters/${id}`)
+      .then(character => character.data)
       .catch(err => console.error(err))
   }
 
-  createOneRegister (form) {
-    axios.post(this.BASE_URL + `characters/`)
+  createOneRegister (newChar) {
+    axios.post(this.BASE_URL + `characters/`, newChar)
       .then(character => console.log(character))
       .catch(err => console.error(err))
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (modChar) {
+    axios.patch(this.BASE_URL + `characters/${modChar.id}`, modChar)
+    .then(character => console.log(character))
+    .catch(err => console.error(err))
   }
 
   deleteOneRegister (id) {
-    axios.delete(this.BASE_URL + `characters/${id}`)
-      .then(() => console.log(id))
-      .catch(err => console.error(err))
+    return axios.delete(this.BASE_URL + `characters/${id}`)
+      .then(success => success)
+      .catch(err => err)
   }
 }
