@@ -15,8 +15,10 @@ class APIHandler {
       .catch(err => console.log(err))
   }
 
-  createOneRegister () {
-    
+  createOneRegister (newCharacter) {
+    axios.post(`http://localhost:8000/characters`, newCharacter) 
+      .then(newChar => console.log(newChar.data))
+      .catch(e => console.error(e));
   }
 
   updateOneRegister () {

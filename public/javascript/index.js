@@ -19,6 +19,14 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const newCharacter = {
+      name: event.target[0].value,
+      occupation: event.target[1].value,
+      weapon: event.target[2].value,
+      cartoon: event.target[3].checked,
+    }
 
+    charactersAPI.createOneRegister(newCharacter);
   });
 });
