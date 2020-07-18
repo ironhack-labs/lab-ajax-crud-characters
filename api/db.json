@@ -13,6 +13,13 @@
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false
+    },
+    {
+      "name": "Rodrigo",
+      "occupation": "Ladilla Mayor",
+      "weapon": "Scroll de la muerte",
+      "cartoon": true,
+      "id": 3
     }
   ]
 }

@@ -59,9 +59,39 @@ class APIHandler {
       .catch((error) => console.log('getFullList error: ', error))
   }
 
-  createOneRegister() {}
+  createOneRegister() {
 
-  updateOneRegister() {}
+    const name = document.querySelector('[name="name"]').value
+    const occupation = document.querySelector('[name="occupation"]').value
+    const weapon = document.querySelector('[name="weapon"]').value
+    const cartoon = document.querySelector('[name="cartoon"]').checked
+
+    const newCharacterInfo = {
+      name,
+      occupation,
+      weapon,
+      cartoon
+    };
+
+    return axios
+      .post(this.BASE_URL + '/characters', newCharacterInfo)
+      .then(() => {
+        this.getFullList();
+
+        // Clear the form after submitting:
+        document.getElementById('new-character-form').reset();
+      })
+      .catch(err => console.log(`Error while saving a new character: ${err}`));
+
+
+
+
+
+
+
+  }
+
+  updateOneRegister() { }
 
   deleteOneRegister() {
     const id = document.querySelector('[name="character-id-delete"]')
