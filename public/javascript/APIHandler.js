@@ -9,12 +9,14 @@ class APIHandler {
       .catch(err => console.log(err))
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    axios.get(`http://localhost:8000/characters/${id}`)
+      .then(oneChar => console.log(oneChar.data))
+      .catch(err => console.log(err))
   }
 
   createOneRegister () {
-
+    
   }
 
   updateOneRegister () {

@@ -6,7 +6,8 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
-
+    const id = document.getElementsByName('character-id')[0];
+    charactersAPI.getOneRegister(id.value)
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
