@@ -5,33 +5,36 @@ class APIHandler {
 
   getFullList () {
     axios.get('http://localhost:8000/characters')
-      .then(chars => console.log(chars.data))
+      .then(chars => displayCharacters(chars.data))
       .catch(err => console.log(err))
   }
 
   getOneRegister (id) {
     axios.get(`http://localhost:8000/characters/${id}`)
-      .then(oneChar => console.log(oneChar.data))
+      .then(oneChar => displayCharacters([oneChar.data]))
       .catch(err => console.log(err))
   }
 
   createOneRegister (newCharacter) {
+    const createButton = document.getElementById('create-data')
     axios.post(`http://localhost:8000/characters`, newCharacter) 
-      .then(newChar => console.log(newChar.data))
-      .catch(e => console.error(e));
+      .then(newChar => changeColor('green', createButton))
+      .catch(e => changeColor('red', createButton));
   }
 
   updateOneRegister (character) {
+    const updateButton = document.getElementById('send-data')
     axios.patch(`http://localhost:8000/characters/${character.id}`, character)
-      .then(updateChar => console.log(updateChar.data))
-      .catch(err => console.log(err))
+      .then(updateChar => changeColor('green', updateButton))
+      .catch(err => changeColor('red', updateButton))
 
   }
 
   deleteOneRegister (id) {
+    const deleteButton = document.getElementById('delete-one')
     axios.delete(`http://localhost:8000/characters/${id}`)
-      .then(() => console.log('Deleted'))
-      .catch(err => console.log(err))
+      .then(() => changeColor('green', deleteButton))
+      .catch(err => changeColor('red', deleteButton))
     
   }
 }

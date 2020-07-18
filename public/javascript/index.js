@@ -1,5 +1,45 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
 
+function displayCharacters(data) {
+  let str = '';
+ 
+      data.forEach(character => {
+        str += `
+          <div class="characters-container">
+            <div class="character-info">
+              <div class="name">Id:<span>${character.id}</span></div>
+              <div class="name">Name:<span>${character.name}</span></div>
+              <div class="occupation">Occupation:<span>${character.occupation}</span></div>
+              <div class="cartoon">Is a Cartoon?<span>${character.cartoon}</span></div>
+              <div class="weapon">Weapon<span>${character.weapon}</span></div>
+            </div>
+          </div>`;
+      });
+
+    document.getElementById('display-data').innerHTML = str
+}
+
+function changeColor (color, button) {
+  
+  if (color === 'green') {
+    button.classList.toggle('green')
+      setTimeout(() => {
+        button.classList.toggle('green')
+      }, 2000); 
+  } else if (color === 'red') {
+    button.classList.toggle('red')
+    setTimeout(() => {
+      button.classList.toggle('red')
+    }, 2000); 
+  }
+
+
+
+}
+
+
+
+
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
     charactersAPI.getFullList()
@@ -43,3 +83,6 @@ window.addEventListener('load', () => {
     charactersAPI.createOneRegister(newCharacter);
   });
 });
+
+
+
