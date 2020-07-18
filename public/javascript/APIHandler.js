@@ -60,38 +60,66 @@ class APIHandler {
   }
 
   createOneRegister() {
-
     const name = document.querySelector('[name="name"]').value
     const occupation = document.querySelector('[name="occupation"]').value
     const weapon = document.querySelector('[name="weapon"]').value
     const cartoon = document.querySelector('[name="cartoon"]').checked
 
-    const newCharacterInfo = {
+    const editCharacterInfo = {
       name,
       occupation,
       weapon,
       cartoon
-    };
+    }
 
     return axios
-      .post(this.BASE_URL + '/characters', newCharacterInfo)
+      .post(this.BASE_URL + '/characters', editCharacterInfo)
       .then(() => {
-        this.getFullList();
+        this.getFullList()
 
         // Clear the form after submitting:
-        document.getElementById('new-character-form').reset();
+        document.getElementById('new-character-form').reset()
       })
-      .catch(err => console.log(`Error while saving a new character: ${err}`));
-
-
-
-
-
-
-
+      .catch((err) => console.log(`Error while saving a new character: ${err}`))
   }
 
-  updateOneRegister() { }
+  updateOneRegister() {
+    const id = document.querySelector('#edit-character-form [name="chr-id"]')
+    const name = document.querySelector('#edit-character-form [name="name"]')
+      .value
+    const occupation = document.querySelector(
+      '#edit-character-form [name="occupation"]'
+    ).value
+    const weapon = document.querySelector(
+      '#edit-character-form [name="weapon"]'
+    ).value
+    const cartoon = document.querySelector(
+      '#edit-character-form [name="cartoon"]'
+    ).checked
+
+    if (!id.value) {
+      alert('Character not found')
+      console.log('Character not found')
+    } else {
+      const editCharacterInfo = {
+        name,
+        occupation,
+        weapon,
+        cartoon
+      }
+
+      return axios
+        .patch(this.BASE_URL + `/characters/${id.value}`, editCharacterInfo)
+        .then(() => {
+          this.getFullList()
+          // Clear the form after submitting:
+          document.getElementById('edit-character-form').reset()
+        })
+        .catch((err) =>
+          console.log(`Error while saving a new character: ${err}`)
+        )
+    }
+  }
 
   deleteOneRegister() {
     const id = document.querySelector('[name="character-id-delete"]')

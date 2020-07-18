@@ -24,13 +24,15 @@ window.addEventListener('load', () => {
 
   document
     .getElementById('edit-character-form')
-    .addEventListener('submit', function (event) { })
+    .addEventListener('submit', function (event) {
+      event.preventDefault()
+      charactersAPI.updateOneRegister()
+    })
 
   document
     .getElementById('new-character-form')
     .addEventListener('submit', function (event) {
       event.preventDefault()
       charactersAPI.createOneRegister()
-      console.log('Crear');
     })
 })
