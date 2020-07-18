@@ -2,7 +2,9 @@ const charactersAPI = new APIHandler('http://localhost:8000');
 
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
+
     charactersAPI.getFullList()
+    
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
@@ -22,7 +24,7 @@ window.addEventListener('load', () => {
     const name = formData[1].value
     const occupation = formData[2].value
     const weapon = formData[3].value
-    const cartoon = formData[4].value
+    const cartoon = formData[4].checked
 
     const objectForm = {
       id: id,
@@ -42,7 +44,7 @@ window.addEventListener('load', () => {
     const name = formData[0].value
     const occupation = formData[1].value
     const weapon = formData[2].value
-    const cartoon = formData[3].value
+    const cartoon = formData[3].checked
 
     const objectForm = {
       name: name,

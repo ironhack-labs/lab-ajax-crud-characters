@@ -9,10 +9,10 @@
     },
     {
       "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
+      "name": "Juan",
+      "occupation": "Administrativo",
+      "weapon": "5",
+      "cartoon": true
     },
     {
       "id": 3,
@@ -22,10 +22,18 @@
       "cartoon": true
     },
     {
-      "id": 4
+      "name": "Nidian",
+      "occupation": "Junior",
+      "weapon": "1",
+      "cartoon": "on",
+      "id": 6
     },
     {
-      "id": 5
+      "name": "Fer",
+      "occupation": "FullStack",
+      "weapon": "7",
+      "cartoon": true,
+      "id": 7
     }
   ]
 }
