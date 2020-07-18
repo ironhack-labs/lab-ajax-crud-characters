@@ -1,5 +1,21 @@
 const charactersAPI = new APIHandler('http://localhost:8000/');
 
+const buttonUX = (button, response) => {
+  if (!response.status) {
+    button.classList.remove('success')
+    button.classList.add('error')
+    setTimeout(() => {
+      button.classList.remove('error')
+    }, 1500);
+    return
+  }
+  button.classList.remove('error')
+  button.classList.add('success')
+  setTimeout(() => {
+    button.classList.remove('success')
+  }, 1500);
+}
+
 const renderOnDom = (characters) => {
   const parentChar = document.getElementById('characters-container')
   parentChar.innerHTML = ''
@@ -48,7 +64,11 @@ const getDataForm = (form) => {
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
     charactersAPI.getFullList()
-      .then(characters => renderOnDom(characters))
+      .then(characters => {
+        if (characters.length !== 0) {
+          renderOnDom(characters)
+        } 
+      })
       .catch(err => console.error(err))
   });
 
@@ -60,17 +80,29 @@ window.addEventListener('load', () => {
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
     charactersAPI.deleteOneRegister(document.getElementById('character-id-delete').value)
-    .then(() => this.classList.add('success'))
-    .catch(() => this.classList.add('error'))
+    .then(response => {
+      buttonUX(this, response)
+    })
+    .catch((err) => console.log(err))
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
     event.preventDefault()
     charactersAPI.updateOneRegister(getDataForm(this))
+      .then(response => {
+        buttonUX(event.submitter, response)
+      })
+      .catch((err) => console.log(err))
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+
+
     event.preventDefault()
     charactersAPI.createOneRegister(getDataForm(this))
+      .then(response => {
+        buttonUX(event.submitter, response)
+      })
+      .catch((err) => console.log(err))
   });
 });

@@ -16,15 +16,15 @@ class APIHandler {
   }
 
   createOneRegister (newChar) {
-    axios.post(this.BASE_URL + `characters/`, newChar)
-      .then(character => console.log(character))
-      .catch(err => console.error(err))
+    return axios.post(this.BASE_URL + `characters/`, newChar)
+      .then(success => success)
+      .catch(err => err)
   }
 
   updateOneRegister (modChar) {
-    axios.patch(this.BASE_URL + `characters/${modChar.id}`, modChar)
-    .then(character => console.log(character))
-    .catch(err => console.error(err))
+    return axios.patch(this.BASE_URL + `characters/${modChar.id}`, modChar)
+    .then(success => success)
+    .catch(err => err)
   }
 
   deleteOneRegister (id) {
