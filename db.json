@@ -1,0 +1,31 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Daniel",
+      "occupation": "Diseñador",
+      "weapon": "5",
+      "cartoon": "on"
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ]
+}
