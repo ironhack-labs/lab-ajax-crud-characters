@@ -7,10 +7,11 @@
 body {
   font-family: 'Roboto';
   color: white;
-  background: url("../images/minions.jpg")
+  background: url('../images/minions.jpg');
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d8b362;
 }
 
@@ -48,6 +49,10 @@ button {
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
+}
+
+.characters-container strong {
+  color: #d8b362;
 }
 
 .active {
