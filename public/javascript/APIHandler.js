@@ -21,11 +21,17 @@ class APIHandler {
       .catch(e => console.error(e));
   }
 
-  updateOneRegister () {
+  updateOneRegister (character) {
+    axios.patch(`http://localhost:8000/characters/${character.id}`, character)
+      .then(updateChar => console.log(updateChar.data))
+      .catch(err => console.log(err))
 
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    axios.delete(`http://localhost:8000/characters/${id}`)
+      .then(() => console.log('Deleted'))
+      .catch(err => console.log(err))
+    
   }
 }

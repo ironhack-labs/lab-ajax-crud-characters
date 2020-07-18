@@ -11,10 +11,23 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
+    event.preventDefault();
+    const deleteId = document.getElementsByName('character-id-delete')[0];
+    charactersAPI.deleteOneRegister(deleteId.value)
 
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const editCharacter = {
+      id: event.target[0].value,
+      name: event.target[1].value,
+      occupation: event.target[2].value,
+      weapon: event.target[3].value,
+      cartoon: event.target[4].checked
+    }
+
+    charactersAPI.updateOneRegister(editCharacter);
 
   });
 
