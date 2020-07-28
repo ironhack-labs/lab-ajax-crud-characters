@@ -10,7 +10,8 @@ body {
   background: url("../images/minions.jpg")
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #d8b362;
 }
 
@@ -65,7 +66,7 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 98%;
   margin: 10px;
   padding: 10px;
   text-align: left;

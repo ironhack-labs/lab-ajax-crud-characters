@@ -1,25 +1,3 @@
 {
-  "characters": [
-    {
-      "id": 1,
-      "name": "Batman",
-      "occupation": "test",
-      "weapon": "test",
-      "cartoon": true
-    },
-    {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
-    },
-    {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
-    }
-  ]
+  "characters": []
 }
