@@ -48,25 +48,43 @@ window.addEventListener('load', () => {
 
   //EDIT ONE CHARACTER
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const idToUpdate = document.getElementsByName('chr-id')[0].value;
+    const nameInput = document.getElementsByName('name')[1].value;
+    const occupationInput = document.getElementsByName('occupation')[1].value;
+    const weaponInput = document.getElementsByName('weapon')[1].value;
+    const cartoonInput = document.getElementsByName('cartoon')[1].checked;
+
     const updatedCharacterInfo = {
-      name: 'Batman',
-      occupation: "Saving the world",
-      weapon: "His brain (and money...)",
-      cartoon: true
+      name: nameInput,
+      occupation: occupationInput,
+      weapon: weaponInput,
+      cartoon: cartoonInput
     };
 
-    charactersAPI.updateOneRegister(1, updatedCharacterInfo)
+    charactersAPI.updateOneRegister(idToUpdate, updatedCharacterInfo)
   });
 
   //CREATE ONE CHARACTER
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const nameInput = document.getElementsByName('name')[0].value;
+    const occupationInput = document.getElementsByName('occupation')[0].value;
+    const weaponInput = document.getElementsByName('weapon')[0].value;
+    const cartoonInput = document.getElementsByName('cartoon')[0].checked;
+
+
+
     const newCharacter = {
-      name: "Spider-man",
-      occupation: "Making webs",
-      weapon: "webs",
-      cartoon: true
+      name: nameInput,
+      occupation: occupationInput,
+      weapon: weaponInput,
+      cartoon: cartoonInput
     };
 
     charactersAPI.createOneRegister(newCharacter);
+
   });
 });

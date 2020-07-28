@@ -1,3 +1,18 @@
 {
-  "characters": []
+  "characters": [
+    {
+      "name": "Jean Baptiste",
+      "occupation": "Student",
+      "weapon": "My computer",
+      "cartoon": true,
+      "id": 1
+    },
+    {
+      "name": "Davido",
+      "occupation": "Al pajo",
+      "weapon": "Nada",
+      "cartoon": true,
+      "id": 2
+    }
+  ]
 }
