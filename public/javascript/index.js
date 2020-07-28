@@ -16,7 +16,10 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-    charactersAPI.updateOneRegister(3)
+    const updateCharacter = {
+      name: "Loles"
+    }
+    charactersAPI.updateOneRegister(1, updateCharacter)
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {

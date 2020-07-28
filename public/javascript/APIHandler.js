@@ -38,9 +38,9 @@ class APIHandler {
 
   }
 
-  updateOneRegister(id) {
+  updateOneRegister(id, updateCharacter) {
     return this.axiosApi
-      .patch(`/characters/${id}`)
+      .patch(`/characters/${id}`, updateCharacter)
       .then(responseFromApi => {
         console.log(`Character ${id} has been edited`, responseFromApi.data)
       })
