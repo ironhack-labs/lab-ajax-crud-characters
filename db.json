@@ -2,10 +2,10 @@
   "characters": [
     {
       "id": 1,
-      "name": "Loles",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
+      "name": "Paco",
+      "occupation": "Leñador",
+      "weapon": "Martillo",
+      "cartoon": false
     },
     {
       "id": 2,
@@ -15,11 +15,11 @@
       "cartoon": false
     },
     {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "Sergio",
+      "occupation": "Student",
+      "weapon": "Mind",
+      "cartoon": false,
+      "id": 3
     }
   ]
 }
