@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "JB",
+      "occupation": "Drink",
+      "weapon": "Alcohol",
+      "cartoon": true
+    },
+    {
+      "name": "sds",
+      "occupation": "dasd",
+      "weapon": "sadasd",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "sds",
+      "occupation": "dasd",
+      "weapon": "sadasd",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "sds",
+      "occupation": "dasd",
+      "weapon": "sadasd",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "sds",
+      "occupation": "dasd",
+      "weapon": "sadasd",
+      "cartoon": true,
+      "id": 7
+    }
+  ]
+}
