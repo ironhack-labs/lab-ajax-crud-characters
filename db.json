@@ -1,0 +1,31 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "San Holo",
+      "occupation": "None",
+      "weapon": "PC",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "King Juan Carlos",
+      "occupation": "Unknown",
+      "weapon": "inviolability",
+      "id": 4
+    },
+    {
+      "name": "Corina",
+      "occupation": "None",
+      "weapon": "Deadly proofs",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
