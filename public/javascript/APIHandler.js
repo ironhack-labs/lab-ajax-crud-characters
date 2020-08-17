@@ -12,24 +12,39 @@ class APIHandler {
       .catch(err => console.log('error while getting the data: ', err));
   }
 
-  getOneRegister() {
+  getOneRegister(characterId) {
     axios
-      .get(`${baseUrl}/:id`)
+      .get(`${baseUrl}/characters/${characterId}`)
       .then(response => {
         console.log('The response from the API is: ', response.data);
       })
       .catch(err => console.log('error while getting the character: ', err));
   }
 
-  createOneRegister() {
-
+  createOneRegister(newCharacter) {
+    axios
+      .post(`${baseUrl}/characters/${newCharacter}`)
+      .then(() => {
+        console.log(`The new character is: ${newCharacter}`)
+      })
+      .catch(err => console.log(`Error while creating a new character: ${err}`));
   }
 
-  updateOneRegister() {
-
+  updateOneRegister(characterId, updatedCharacter) {
+    axios
+      .put(`${baseUrl}/characters/${characterId}`, updatedCharacter)
+      .then(() => {
+        console.log(`Character's new information is: ${updatedCharacter}`)
+      })
+      .catch(err => console.log(`Error updating existing character`, err));
   }
 
-  deleteOneRegister() {
-
+  deleteOneRegister(characterId) {
+    axios
+      .delete(`${baseUrl}/characters/${characterId}`)
+      .then(() => {
+        console.log(`Character has been successfully deleted.`)
+      })
+      .catch(err => console.log(`error deleting character: `, err));
   }
 }
