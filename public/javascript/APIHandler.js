@@ -4,50 +4,15 @@ class APIHandler {
   }
 
   getFullList () {
-    axios.get(this.BASE_URL + "/characters")
-      .then(reponseFromApi => {
-
-        let charactersContainer = document.querySelector(".characters-container");
-        charactersContainer.innerHTML = "";
-
-        reponseFromApi.data.forEach(ele => {
-          const {id, name, occupation, cartoon, weapon} = ele;
-          charactersContainer.innerHTML += `<div class="character-info">
-                                              <div class="id">Id: ${id}</div>
-                                              <div class="name">Name: ${name}</div>
-                                              <div class="occupation">Occupation: ${occupation}</div>
-                                              <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
-                                              <div class="weapon">Weapon: ${weapon}</div>
-                                            </div>`;
-        });
-        // console.log(reponseFromApi.data);
-      })
-      .catch(error => console.log(error));
+    return axios
+            .get(this.BASE_URL + "/characters")
+            .catch(err => console.log(err));
   }
 
   getOneRegister (id) {
-    axios.get(this.BASE_URL + "/characters/" + id)
-      .then(reponseFromApi => {
-
-        // console.log(reponseFromApi.data.name);
-
-        const {id, name, occupation, cartoon, weapon} = reponseFromApi.data;
-
-        let charactersContainer = document.querySelector('.characters-container');
-        charactersContainer.innerHTML = "";
-
-        charactersContainer.innerHTML = `<div class="character-info">
-                                          <div class="id">Id: ${id}</div>
-                                          <div class="name">Name: ${name}</div>
-                                          <div class="occupation">Occupation: ${occupation}</div>
-                                          <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
-                                          <div class="weapon">Weapon: ${weapon}</div>
-                                        </div>`;
-                                
-        console.log(charactersContainer);
-      })
-      .catch(error => console.log(error));
-
+    return axios
+            .get(this.BASE_URL + "/characters/" + id)
+            .catch(error => console.log(error));
   }
 
   createOneRegister (newCharacter) {
@@ -57,11 +22,11 @@ class APIHandler {
       .catch(error => console.log(error));
   }
 
-  updateOneRegister (id, updatedCharacter) {
+  updateOneRegister ( editedCharacter) {
     axios
-      .put(this.BASE_URL + "/characters/" + id, updatedCharacter)
-      .then(() => {
-        this.getOneRegister(id);
+      .put(this.BASE_URL + "/characters/" + editedCharacter.id, editedCharacter)
+      .then(updatedCharacter => {
+        this.getOneRegister(updatedCharacter.id);
       })
       .catch(error => console.log(error));
   }

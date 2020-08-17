@@ -3,20 +3,58 @@ const charactersAPI = new APIHandler('http://localhost:8000');
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', () => {
 
-    charactersAPI.getFullList();
+    charactersAPI
+      .getFullList()
+      .then(reponseFromApi => {
+
+        let charactersContainer = document.querySelector(".characters-container");
+        charactersContainer.innerHTML = "";
+
+        reponseFromApi.data.forEach(ele => {
+          const {id, name, occupation, cartoon, weapon} = ele;
+          charactersContainer.innerHTML += `<div class="character-info">
+                                              <div class="id">Id: ${id}</div>
+                                              <div class="name">Name: ${name}</div>
+                                              <div class="occupation">Occupation: ${occupation}</div>
+                                              <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
+                                              <div class="weapon">Weapon: ${weapon}</div>
+                                            </div>`;
+        });
+        // console.log(reponseFromApi.data);
+      })
+      .catch(error => console.log(error));
 
   });
 
   document.getElementById('fetch-one').addEventListener('click', (event) => {
 
-    const characterId = Number(event.path[1].children[1].value);
-    charactersAPI.getOneRegister(characterId);
+    const characterId = document.querySelector('input[name=character-id]').value;
+    charactersAPI
+      .getOneRegister(characterId)
+      .then(reponseFromApi => {
+
+        const {id, name, occupation, cartoon, weapon} = reponseFromApi.data;
+
+        let charactersContainer = document.querySelector('.characters-container');
+        charactersContainer.innerHTML = "";
+
+        charactersContainer.innerHTML = `<div class="character-info">
+                                          <div class="id">Id: ${id}</div>
+                                          <div class="name">Name: ${name}</div>
+                                          <div class="occupation">Occupation: ${occupation}</div>
+                                          <div class="cartoon">Is a Cartoon?: ${cartoon}</div>
+                                          <div class="weapon">Weapon: ${weapon}</div>
+                                        </div>`;
+                                
+        // console.log(charactersContainer);
+      })
+      .catch(err => console.log(err));
 
   });
 
   document.getElementById('delete-one').addEventListener('click', (event) => {
 
-    const characterId = Number(event.path[1].children[1].value);
+    const characterId = document.querySelector('input[character-id-delete]').value;
     charactersAPI.deleteOneRegister(characterId);
 
   });
@@ -30,7 +68,7 @@ window.addEventListener('load', () => {
     const weapon = document.getElementById('weaponEdit').value;
     const cartoon = document.getElementById('cartoonEdit').value;
 
-    const updatedCharacter = {
+    const editedCharacter = {
       id,
       name,
       occupation,
@@ -38,7 +76,7 @@ window.addEventListener('load', () => {
       cartoon
     };
 
-    charactersAPI.updateOneRegister(id, updatedCharacter);
+    charactersAPI.updateOneRegister(editedCharacter);
 
   });
 
