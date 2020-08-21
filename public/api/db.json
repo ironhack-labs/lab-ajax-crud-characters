@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Ibrahimovic",
+      "occupation": "Footballer",
+      "weapon": "Skills",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Ash Ketchum",
+      "occupation": "Pokemon Trainer",
+      "weapon": "Friendship",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
