@@ -107,3 +107,10 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.btn-del-error {
+  background: rgb(247, 21, 21);
+}
+.btn-del-success {
+  background: hsla(118, 85%, 45%, 0.925);
+}
