@@ -88,7 +88,7 @@ class APIHandler {
     const charOccupation = document.getElementById('update-occupation-input');
     const charWeapon = document.getElementById('update-weapon-input');
     const charId = document.getElementById('update-id-input');
-
+    const cartoon = document.getElementById('update-cartoon-input');
       axios
         .get(`${this.BASE_URL}/characters/${id}`)
         .then(response => {s
@@ -98,6 +98,8 @@ class APIHandler {
           charOccupation.value = occupation;
           charWeapon.value = weapon;
           charId.value = id;
+          cartoon.checked = cartoon
+          
 
         })
         .catch(error => {
@@ -110,7 +112,8 @@ class APIHandler {
       name: charName.value,
       occupation: charOccupation.value,
       weapon: charWeapon.value,
-      id: charId.value
+      id: charId.value,
+      cartoon: cartoon.checked
     };
 
     axios

@@ -58,14 +58,14 @@
       "occupation": "",
       "weapon": "",
       "cartoon": false,
-      "id": 18
+      "id": 19
     },
     {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 19
+      "name": "Matthew",
+      "occupation": "Super Dad",
+      "weapon": "Bottles",
+      "id": 20,
+      "cartoon": true
     }
   ]
 }
