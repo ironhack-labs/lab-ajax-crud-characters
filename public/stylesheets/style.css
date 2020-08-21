@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto';
-  color: white;
+  /* color: white; */
   background: url("../images/minions.jpg")
 }
 
@@ -105,3 +105,20 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.list-group-item{
+  width: 33%;
+  height: auto;
+  border: 1px solid white;
+  display: inline-flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+
+#characters-list{
+  /* border: 3px solid red; */
+  width: 100%;
+}
+

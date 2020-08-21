@@ -1,19 +1,6 @@
 {
   "characters": [
     {
-      "name": "Lou Dog",
-      "occupation": "Dog",
-      "weapon": "Barks",
-      "id": 2
-    },
-    {
-      "name": "Jonah",
-      "occupation": "Baby",
-      "weapon": "Bottles",
-      "cartoon": false,
-      "id": 3
-    },
-    {
       "name": "Maartje",
       "occupation": "Interior Designer",
       "weapon": "Words",
@@ -32,6 +19,53 @@
       "weapon": "Gadgets",
       "cartoon": "true",
       "id": 6
+    },
+    {
+      "name": "Matthew",
+      "occupation": "Unemployed",
+      "weapon": "pen",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Eddie Vedder",
+      "occupation": "Singer",
+      "weapon": "Microphone",
+      "id": 8
+    },
+    {
+      "name": "Lou",
+      "occupation": "Dog",
+      "weapon": "bj",
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 16
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 17
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 18
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 19
     }
   ]
 }

@@ -9,6 +9,23 @@ class APIHandler {
     .then(response => {
       const data = response.data
       console.log(data)
+      let str = '';
+  
+      //iterate over 'data' array
+      data.forEach(character => {
+        //bootstrap classes
+        //add updateCharacter and deleteCharacter functions passing character.id
+        str += `
+            <li class="list-group-item">
+                id: ${character.id} <br>
+                Name: ${character.name} <br>
+                Occupation: ${character.occupation} <br>
+                Cartoon? ${character.cartoon} <br>
+                Weapon: ${character.weapon}
+            </li>`;
+      });
+              // insert characters in the list in the html
+              document.getElementById('characters-list').innerHTML = str;
     })
     .catch(err => console.log(`Error while getting characters data, ${err}`))
   };
@@ -20,6 +37,21 @@ class APIHandler {
     .then(response => {
       const data = response.data
       console.log(data)
+      const newCharacterHtml = `
+                <li class="list-group-item">
+                   id: ${data.id} <br>
+                   Name: ${data.name} <br>
+                   Occupation: ${data.occupation} <br>
+                   Cartoon? ${data.cartoon} <br>
+                   Weapon: ${data.weapon}
+                </li>`;
+
+                    // insert characters in the list in the html
+                    document.getElementById('characters-list').innerHTML += newCharacterHtml;
+                    
+                    //reset form
+                    document.getElementById('character-id').reset();
+
     })
     .catch(err => console.log(`Error while getting single character data, ${err}`))
   }
@@ -42,8 +74,10 @@ class APIHandler {
     .then(response => {
       const { name, occupation, weapon, cartoon } = response.data
       console.log(name,occupation,weapon,cartoon)
+      document.getElementById('send-data').style.backgroundColor = "green";
     })
     .catch(err => console.log(`Error while saving a new character: ${err}`));
+    document.getElementById('send-data').style.backgroundColor = "red";
 
   }
 
@@ -84,12 +118,16 @@ class APIHandler {
       .put(`${this.BASE_URL}/characters/${id}`, updatedCharacter)
       .then(response => {
         // console.log(response);
+        document.getElementById('push-data').style.backgroundColor = "green";
+
 
         // clear the update form
         document.getElementById('edit-character-form').reset();
 
       })
       .catch(error => console.log(`Error while updating a character: ${error}`));
+      document.getElementById('push-data').style.backgroundColor = "red";
+
 }
 
   
@@ -102,11 +140,13 @@ class APIHandler {
     axios
     .delete(`${this.BASE_URL}/characters/${id}`)
     .then(response => {
-      console.log('.then is happening')
-      alert("Item Deleted")
-      // getFullList()
+      document.getElementById('delete-one').style.backgroundColor = "green";
+
+      document.getElementById('form-container').reset();
+
     })
     .catch(err => console.log(`Error while DELETING single character data, ${err}`))
+    document.getElementById('delete-one').style.backgroundColor = "red";
   }
   }
 }
