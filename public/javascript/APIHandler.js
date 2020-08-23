@@ -19,7 +19,7 @@ class APIHandler {
     return axios.put(`${this.BASE_URL}/characters/${id}`, updatedCharInfo);
   }
 
-  deleteOneRegister() {
+  deleteOneRegister(id) {
     return axios.delete(`${this.BASE_URL}/characters/${id}`);
   }
 }
