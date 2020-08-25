@@ -25,15 +25,14 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" id="char-id" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" id="delete-id" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
-
     </section>
   </section>
   <section class="container">
@@ -42,19 +41,19 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" id="name-input" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" id="occupation-input" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" id="weapon-input" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" id="cartoon-input" type="checkbox">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -64,29 +63,29 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" id="chr-id" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" id="update-name-input" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" id="update-occupation-input" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" id="update-weapon-input" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" id="update-cartoon-input" type="checkbox">
         </div>
         <button id="send-data">Update</button>
       </form>
     </section>
   </section>
-  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
+  <script type="text/javascript" src="/public/javascript/APIHandler.js"></script>
+  <script type="text/javascript" src="/public/javascript/index.js"></script>
 </body>
 </html>
