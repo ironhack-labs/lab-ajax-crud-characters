@@ -37,6 +37,7 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
+    charactersAPI.deleteOneRegister(document.querySelector('input[name=character-id-delete]').value)
 
   });
 
