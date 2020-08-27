@@ -42,10 +42,42 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    event.preventDefault() //Prevent refresh
+    const id = document.querySelector('#edit-character-form input[name=chr-id]').value;
+    const name = document.querySelector('#edit-character-form input[name=name]').value;
+    const occupation = document.querySelector('#edit-character-form input[name=occupation]').value;
+    const weapon = document.querySelector('#edit-character-form input[name=weapon]').value;
+    const cartoon = document.querySelector('#edit-character-form input[name=cartoon]').checked;
 
+    const editedCharacterInfo = {
+      id,
+      name,
+      occupation,
+      weapon, 
+      cartoon
+    };
+
+    console.log('Edited character: ', editedCharacterInfo);
+
+    charactersAPI.updateOneRegister(id, editedCharacterInfo)
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+    event.preventDefault()
+    const name = document.querySelector('#new-character-form input[name=name]').value;
+    const occupation = document.querySelector('#new-character-form input[name=occupation]').value;
+    const weapon = document.querySelector('#new-character-form input[name=weapon]').value;
+    const cartoon = document.querySelector('#new-character-form input[name=cartoon]').checked;
 
+    const newCharacterInfo = {
+      name,
+      occupation,
+      weapon, 
+      cartoon
+    };
+
+    console.log('New character: ', newCharacterInfo);
+
+    charactersAPI.createOneRegister(newCharacterInfo)
   });
 });
