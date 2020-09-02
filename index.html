@@ -21,16 +21,16 @@
     </div>
     <section class="operations">
       <div class="operation">
-        <button id="fetch-all">Fetch all</button>
+        <button id="fetch-all" click="APIHandler">Fetch all</button>
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
-        <button id="fetch-one">Fetch one</button>
+        <input type="text" name="character-id" class="character-id">
+        <button id="fetch-one" >Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" class="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -42,19 +42,19 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" class="name-new">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" class="ocupation-new">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" class="weapon-new">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" class="cartoon-new">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -64,19 +64,19 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" class ="character-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" class="edit_name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" class="edit_occu">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" class="edit_weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
