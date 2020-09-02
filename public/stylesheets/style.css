@@ -105,3 +105,17 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.concept{
+  color: white;
+}
+
+.concept-value{
+  color: #d8b362
+}
