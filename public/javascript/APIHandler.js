@@ -3,23 +3,48 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
+  async getFullList () {
 
+    let data;
+    
+    await axios.get(this.BASE_URL)
+    .then(res => {
+      data = res.data;
+    })
+    .catch(error => {
+      console.log(error)
+    })
+
+    return data;
   }
 
-  getOneRegister () {
+  async getOneRegister (id) {
 
+    let data;
+    
+    await axios.get(`${this.BASE_URL}/${id}`)
+    .then(res => {
+      data = res.data;
+    })
+    .catch(error => {
+      console.log(error)
+    })
+
+    return data;
   }
 
-  createOneRegister () {
-
+  async createOneRegister (newChar) {
+      await axios.post(`${this.BASE_URL}`, newChar)
   }
 
-  updateOneRegister () {
-
+  async updateOneRegister (charInfo) {
+    await axios.put(`${this.BASE_URL}/${charInfo.id}`, charInfo)  
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {    
+    axios.delete(`${this.BASE_URL}/${id}`)
+    .then(res => {})
+    .catch(err => {})
 
   }
 }
