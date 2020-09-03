@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "lilo",
+      "occupation": "dancer",
+      "weapon": "flow violento",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Minion2",
+      "occupation": "minion2",
+      "weapon": "none",
+      "cartoon": false
+    },
+    {
+      "id": 4,
+      "name": "stitch",
+      "occupation": "alien",
+      "weapon": "plasma gun",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "mulan",
+      "occupation": "ascient warrior",
+      "weapon": "blade ",
+      "cartoon": true
+    }
+  ]
+}
