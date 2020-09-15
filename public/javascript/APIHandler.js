@@ -10,24 +10,9 @@ class APIHandler {
 
   getOneRegister = charId => this.app.get(`characters/${charId}`)
 
-  createOneRegister(name, occupation, weapon, cartoon){
-      this.app.post(`characters`,{
-          name,
-          occupation,
-          weapon,
-          cartoon
-      })
-  }
-
-  updateOneRegister (id, name, occupation, weapon, cartoon) {
-      this.app.put(`characters/${id}` ,{
-          id,
-          name,
-          occupation,
-          weapon,
-          cartoon
-      })
-    }
+  createOneRegister = registerInfo => this.app.post('characters',registerInfo)
+  
+  updateOneRegister = (charId, charInfo) => this.app.put(`characters/${charId}`, charInfo)
 
   deleteOneRegister = charId => this.app.delete(`characters/${charId}`)
 }
