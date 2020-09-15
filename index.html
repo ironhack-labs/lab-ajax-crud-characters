@@ -56,7 +56,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button id="send-create">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -64,7 +64,7 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input class= 'id-text' type="text" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
@@ -82,10 +82,11 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="send-update">Update</button>
       </form>
     </section>
   </section>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
