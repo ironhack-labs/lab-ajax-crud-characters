@@ -41,7 +41,7 @@ button {
   text-align: center;
 }
 
-.characters-container {
+.characters-container , .characters-container-inicial {
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -104,4 +104,13 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+
+.button-red{
+  background-color: red;
+}
+
+.button-green{
+  background-color: green;
 }
