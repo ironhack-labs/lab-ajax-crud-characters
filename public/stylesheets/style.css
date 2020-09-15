@@ -73,6 +73,10 @@ button {
   border-radius: 20px;
 }
 
+.character-info li {
+  list-style: none;
+}
+
 .character-info div span {
   color: #d8b362;
   position: absolute;
