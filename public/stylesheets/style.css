@@ -54,6 +54,14 @@ button {
   background-color: #42f471;
 }
 
+.error {
+  background-color: red;
+}
+
+.wait {
+  background-color: #ecea6f;
+}
+
 .operations {
   margin: 0 auto;
   padding: 5px;
@@ -75,8 +83,8 @@ button {
 
 .character-info div span {
   color: #d8b362;
-  position: absolute;
-  left: 50%;
+  /* position: absolute;
+  left: 50%; */
 }
 
 .form-container {
