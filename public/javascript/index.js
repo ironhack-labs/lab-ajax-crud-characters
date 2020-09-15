@@ -33,27 +33,30 @@ window.addEventListener('load', () => {  // fetch all characters
         .catch(err => console.log(err))
   });
                 // Edit 1 character
-  document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-    event.preventDefault()
-    //const inputs = document.querySelectorAll('#edit-character-form input')
-
-    const charId = document.querySelector('#edit-character-form input').value
-
-   // console.log(charId)
-
-    charactersAPI.getOneRegister(charId)
-        .then((res) => {
-
-            console.log(res.data)
-            document.querySelectorAll('#edit-character-form input')[1].value = res.data.name
-            document.querySelectorAll('#edit-character-form input')[2].value = res.data.occupation
-            document.querySelectorAll('#edit-character-form input')[3].value = res.data.weapon
-
-           // document.querySelector('#edit-character-form').reset()
+document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    
+    event.preventDefault()         
+    const inputs = document.querySelectorAll('#edit-character-form input')    
+    const myCharacter = {
+        id: inputs[0].value,
+        name: inputs[1].value,
+        occupation: inputs[2].value,
+        weapon: inputs[3].value,
+        cartoon: inputs[4].checked
+    }
+                
+    charactersAPI
+        .updateOneRegister(myCharacter.id, myCharacter)
+        .then((editedCharacter) => {    
+                console.log(editedCharacter.data)
+            })
+        .catch(err => {    
+            console.log('Hubo un error!', err)                
         })
-        .catch(err => console.log(err))
+                
+    });
+                
 
-  });
                 // Create new character
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
 
@@ -67,25 +70,8 @@ window.addEventListener('load', () => {  // fetch all characters
         cartoon: true,
         weapon: inputs[2].value
     }
-
-    console.log(newCharacter)
-
-
     charactersAPI.createOneRegister(newCharacter)
         .then(newCharacter => console.log(`one register created =>> ${newCharacter}`))
         .catch(err => console.log(err))
   });
 });
-
-
-/*function showCurrentCharacters() {
-
-    return charactersAPI.getFullList()
-        .then(allChars => {
-            let text = ''
-            allChars.data.forEach(elm =>  text += `<li>${elm.name} (${elm.occupation})</li>`)
-            document.querySelector('#edit-character-form').innerHTML = text
-        })
-        .catch(err => console.log('Hubo un error!', err))
-    
-}*/
