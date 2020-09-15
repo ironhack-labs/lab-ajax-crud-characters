@@ -14,6 +14,21 @@ h1, h2 {
   color: #d8b362;
 }
 
+/* Personal styles */
+.display-none {
+  display: none;
+}
+
+.btn-success {
+  background-color: green;
+}
+
+.btn-wrong {
+  background-color: red;
+}
+
+/* Personal styles */
+
 button {
   font-family: inherit;
   font-size: 11px;
@@ -76,7 +91,8 @@ button {
 .character-info div span {
   color: #d8b362;
   position: absolute;
-  left: 50%;
+  left: 60%;
+  font-weight: bold;
 }
 
 .form-container {
