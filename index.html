@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,17 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>IH Characters</title>
 </head>
+
 <body>
-  <section class="container">
+  <section class="fetch container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
       <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="cartoon">Is a Cartoon?</div>
-        <div class="weapon">Character Weapon</div>
+        <div class="id">id: </div>
+        <div class="name">Name: </div>
+        <div class="occupation">Occupation: </div>
+        <div class="cartoon">Is a Cartoon?: </div>
+        <div class="weapon">Weapon: </div>
       </div>
     </div>
     <section class="operations">
@@ -31,7 +34,7 @@
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
         <input type="text" name="character-id-delete">
-        <button id="delete-one">Delete one</button>
+        <button class='dinamic-btn' id="delete-one">Delete one</button>
       </div>
 
     </section>
@@ -56,7 +59,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button class='dinamic-btn' id="send-data">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -82,11 +85,12 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button class='dinamic-btn' id="send-data">Update</button>
       </form>
     </section>
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
+
 </html>
