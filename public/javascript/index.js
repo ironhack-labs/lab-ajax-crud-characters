@@ -51,6 +51,8 @@ window.addEventListener('load', () => {
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
 
+    event.preventDefault()
+
     const minionId = document.querySelector('#deleteOne').value
     const button = document.querySelector('#delete-one')
     const input = document.querySelector('#deleteOne')
@@ -70,19 +72,42 @@ window.addEventListener('load', () => {
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
 
+    event.preventDefault()
+
+    const minionId = document.querySelector('#edit-character-form input').value
+    const editInfo = document.querySelectorAll('#edit-character-form input')
+
+    const updateMinion = {
+      name: editInfo[1].value,
+      occupation: editInfo[2].value,
+      weapon: editInfo[3].value,
+      cartoon: editInfo[4].checked
+    }
+
+    MinionsApi
+      .updateMinion(minionId, updateMinion)
+      .then(() => {
+        document.querySelector('#edit-character-form').reset()
+        document.querySelector('#edit-data').style.background = 'green'
+      })
+      .catch(err => {
+        document.querySelector('#edit-data').style.background = 'red'
+        document.querySelector('#edit-character-form input').value = 'Something went wrong!'
+        console.log(err)
+      })
   })
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
 
     event.preventDefault()
 
-    const inputs = document.querySelectorAll('#new-character-form input')
+    const newInfo = document.querySelectorAll('#new-character-form input')
 
     const newMinion = {
-      name: inputs[0].value,
-      occupation: inputs[1].value,
-      weapon: inputs[2].value,
-      cartoon: inputs[3].checked
+      name: newInfo[0].value,
+      occupation: newInfo[1].value,
+      weapon: newInfo[2].value,
+      cartoon: newInfo[3].checked
     }
 
     MinionsApi
