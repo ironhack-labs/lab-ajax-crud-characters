@@ -42,7 +42,7 @@ button {
   text-align: center;
 }
 .container.display {
-  /* display: none; */
+  display: none;
 }
 
 .characters-container {
