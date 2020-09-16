@@ -7,11 +7,13 @@ window.addEventListener('load', () => {
       .then(getData => {
         ID = ''
 
-        getData.data.forEach(elm => ID += `<p>ID:${elm.id}</p>
+        getData.data.forEach(elm => ID += ` <div class="character-info">
+        <p>ID:${elm.id}</p>
         <p>name: ${elm.name}</p>
         <p>occupation:${elm.occupation}</p>
         <p>cartoon:${elm.cartoon}</p>
-        <p>weapon:${elm.weapon}</p>`)
+        <p>weapon:${elm.weapon}</p>
+        </div>`)
 
         document.querySelector('.chartID').innerHTML = ID
         const display = document.querySelector('.display')
