@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": "Yoda",
+      "occupation": "Jedi Master",
+      "weapon": "Lightsaber",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Pikatchu",
+      "occupation": "Pokemon",
+      "weapon": "Lightning",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Spiderman",
+      "occupation": "Superhero",
+      "weapon": "Spiderweb",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Batman",
+      "occupation": "Superhero",
+      "weapon": "Batmobile",
+      "cartoon": true,
+      "id": 7
+    }
+  ]
+}
