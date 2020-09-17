@@ -17,18 +17,18 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
-
+    charactersAPI.getOneRegister(id)
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
-
+    charactersAPI.deleteOneRegister()
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-
+    charactersAPI.updateOneRegister(id)
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
-
+    charactersAPI.createOneRegister()
   });
 });

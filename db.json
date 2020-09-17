@@ -20,6 +20,20 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "dodo1",
+      "occupation": "yo",
+      "weapon": "sup",
+      "cartoon": "azaza",
+      "id": 4
+    },
+    {
+      "name": "dada",
+      "occupation": "1",
+      "weapon": "2",
+      "cartoon": "3",
+      "id": 5
     }
   ]
 }

@@ -1,6 +1,8 @@
 /* const axiosAPI = axios.create({
   baseUrl: 'http://localhost:8000'
 }) */
+const charContainer = document.getElementsByClassName('characters-container')[0]
+const charInfo = document.getElementsByClassName('character-info')[0]
 
 class APIHandler {
   constructor (baseUrl) {
@@ -10,8 +12,21 @@ class APIHandler {
 
   getFullList () {
       axios.get(this.BASE_URL + "/characters")
-        .then(data => {
-          console.log(data.data)
+        .then(response => {
+          console.log(response.data[0].name)
+          charInfo.classList.toggle('hidden')
+/*           for (let i = 0; i <= response.data.length; i++) {
+              const showName = document.createElement('div')
+              showName.innerHTML = response.data.name[i]
+              charContainer.appendChild(showName)
+          } */
+          response.data.forEach((data) => {
+             
+              const showName = document.createElement('div')
+              showName.innerHTML = data.name
+              name.appendChild(showName)
+              }) 
+            
         })
         .catch(err => {
           console.log(err)
@@ -21,7 +36,7 @@ class APIHandler {
   getOneRegister (id) {
      axios.get(this.BASE_URL  + `/characters/${id}`)
     .then(data => {
-      console.log(data)
+      console.log(data.data)
     })
     .catch(err => {
       console.log(err)
@@ -36,24 +51,24 @@ class APIHandler {
       cartoon
     })
     .then(data => {
-      console.log(data)
+      console.log(data.data)
     })
   }
 
-  updateOneRegister () {
+  updateOneRegister (id) {
     axios.patch(this.BASE_URL + `/characters/${id}`)
     .then(data => {
-      console.log(data)
+      console.log(data.data)
     })
     .catch(err => {
       console.log(err)
     })
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {
     axios.delete(this.BASE_URL + `/characters/${id}`)
     .then(data => {
-      console.log(data)
+      console.log(data.data)
     })
     .catch(err => {
       console.log(err)
