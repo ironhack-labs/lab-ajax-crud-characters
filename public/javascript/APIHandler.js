@@ -4,29 +4,24 @@ class APIHandler {
   }
 
   getFullList () {
-    axios
-      .get('http://localhost:8000/characters')
-      .then(response => {
-        console.log('Response form the API: ', response)
-        // const data = response.data
-      })
-      .catch(err => err)
+    return axios
+      .get(`${this.BASE_URL}/characters`)
   }
 
   getOneRegister () {
     axios
-      .get('http://localhost:8000/characters/:id')
-      .then(response = > {
+      .get(`${this.BASE_URL}/characters/${id}`)
+      .then(response => {
         console.log(response)
       })
       .catch(err => err)
   }
 
-  createOneRegister () {
-    const newCharacterInfo = { name, occupation, weapon, cartoon }
+  createOneRegister (newCharacterInfo) {
+    // const newCharacterInfo = { name, occupation, weapon, cartoon }
 
     axios
-      .post('http://localhost:8000/characters', newCharacterInfo)
+      .post(`${this.BASE_URL}/characters`, newCharacterInfo)
       .then(response => {
         console.log(response)
       })
@@ -34,11 +29,19 @@ class APIHandler {
 
   }
 
-  updateOneRegister () {
+  updateOneRegister (updatedCharacter) {
+  
+    axios
+      .patch(`${this.BASE_URL}/characters/${id}`, updatedCharacter)
+      .then(response => {
+        console.log(response)
+      })
+      .catch(err => err)
 
   }
 
   deleteOneRegister () {
-
+    axios
+      .delete(`${this.BASE_URL}/characters/${id}`)
   }
 }
