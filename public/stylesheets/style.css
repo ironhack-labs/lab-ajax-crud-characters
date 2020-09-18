@@ -109,3 +109,11 @@ button {
 .hidden {
   display: none;
 }
+
+.characters-container > ul > li {
+  list-style-type: none;
+}
+
+.red {
+  background-color: red;
+}

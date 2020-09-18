@@ -18,11 +18,13 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
+    let id = document.getElementById('search-id').value
     charactersAPI.getOneRegister(id)
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
-    charactersAPI.deleteOneRegister()
+    let id = document.getElementById('delete-id').value
+    charactersAPI.deleteOneRegister(id)
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
@@ -30,6 +32,11 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
-    charactersAPI.createOneRegister()
+    event.preventDefault();
+    const name = document.getElementById('name').value
+    const occupation = document.getElementById('occupation').value
+    const weapon = document.getElementById('weapon').value
+    const cartoon = document.getElementById('cartoon').value
+    charactersAPI.createOneRegister(name, occupation, weapon, cartoon)
   });
 });
