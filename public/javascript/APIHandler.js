@@ -62,11 +62,17 @@ class APIHandler {
       })
   }
 
-  updateOneRegister(id) {
+  updateOneRegister(id, name, occupation, weapon, cartoon) {
     axios
-      .patch(this.BASE_URL + `/characters/${id}`)
+      .put(this.BASE_URL + `/characters/${id}`, {
+        name,
+        occupation,
+        weapon,
+        cartoon,
+      })
       .then((data) => {
         console.log(data.data);
+
       })
       .catch((err) => {
         console.log(err);

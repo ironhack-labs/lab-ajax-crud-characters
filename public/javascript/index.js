@@ -28,7 +28,13 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-    charactersAPI.updateOneRegister(id)
+    event.preventDefault();
+    const id = document.getElementById('edit-id').value
+    const name = document.getElementById('edit-name').value
+    const occupation = document.getElementById('edit-occupation').value
+    const weapon = document.getElementById('edit-weapon').value
+    const cartoon = document.getElementById('edit-cartoon').value
+    charactersAPI.updateOneRegister(id, name, occupation, weapon, cartoon)
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
