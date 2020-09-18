@@ -20,68 +20,6 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
-    },
-    {
-      "name": "dada",
-      "occupation": "1",
-      "weapon": "2",
-      "cartoon": "3",
-      "id": 4
-    },
-    {
-      "name": "11",
-      "occupation": "22",
-      "weapon": "33",
-      "cartoon": "on",
-      "id": 5
-    },
-    {
-      "name": "aaa",
-      "occupation": "2",
-      "weapon": "3",
-      "cartoon": "on",
-      "id": 6
-    },
-    {
-      "name": "",
-      "occupation": {},
-      "weapon": {},
-      "cartoon": {},
-      "id": 7
-    },
-    {
-      "name": "1",
-      "occupation": "2",
-      "weapon": "3",
-      "cartoon": "on",
-      "id": 8
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": "on",
-      "id": 9
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": "on",
-      "id": 10
-    },
-    {
-      "occupation": "",
-      "weapon": "",
-      "cartoon": "on",
-      "id": 11
-    },
-    {
-      "name": "dada12221",
-      "occupation": "1",
-      "weapon": "2aaaa",
-      "cartoon": "on",
-      "id": 12
     }
   ]
 }
