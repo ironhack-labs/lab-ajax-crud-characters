@@ -63,7 +63,8 @@ button {
   margin: 20px 0 0;
 }
 
-.character-info {
+.character-info,
+#info-character {
   position: relative;
   width: 40%;
   margin: 10px;
@@ -73,7 +74,8 @@ button {
   border-radius: 20px;
 }
 
-.character-info div span {
+.character-info div span,
+#info-character div span {
   color: #d8b362;
   position: absolute;
   left: 50%;

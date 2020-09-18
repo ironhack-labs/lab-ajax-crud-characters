@@ -8,25 +8,28 @@ window.addEventListener('load', () => {
     charactersAPI.getFullList()
       .then(response => {
         const data = response.data
+        
+        const characterContainerDiv = document.getElementsByClassName('characters-container')[0]
+        const displayCharacter = document.getElementsByClassName('character-info')[0]
+
+        characterContainerDiv.removeChild(displayCharacter)
    
-        data.forEach((element) => {
-          console.log(element.name)
-          const characterContainerDiv = document.getElementsByClassName('characters-container')
-          const displayCharacter = document.getElementsByClassName('character-info')
-          const nameCharacter = document.getElementsByClassName('name')
-          const occupationCharacter = document.getElementsByClassName('occupation')
-          const cartoonCharacter = document.getElementsByClassName('cartoon')
-          const weaponCharacter = document.getElementsByClassName('weapon')
-    
-          console.log(nameCharacter)
+        data.forEach((element, index) => {
+         
+          const nameCharacter  = document.createElement('div')
+          const occupationCharacter = document.createElement('div')
+          const cartoonCharacter = document.createElement('div')
+          const weaponCharacter = document.createElement('div')
        
-          nameCharacter.innerHTML = element.name
-          occupationCharacter.innerHTML = element.occupation
-          cartoonCharacter.innerHTML = element.cartoon
-          weaponCharacter.innerHTML = element.weapon
+          nameCharacter.innerHTML = `Name: <span>${element.name}</span>`
+          occupationCharacter.innerHTML = `Occupation: <span>${element.occupation}</span>`
+          cartoonCharacter.innerHTML = `Is a Cartoon? <span>${element.cartoon}</span>`
+          weaponCharacter.innerHTML = `Weapon: <span>${element.weapon}</span>`
     
-          characterContainerDiv.append(nameCharacter)
-    
+          const characterInfoDiv = document.createElement('div')
+          characterInfoDiv.setAttribute('id', 'info-character')
+          characterInfoDiv.append(nameCharacter, occupationCharacter, cartoonCharacter, weaponCharacter)
+          characterContainerDiv.append(characterInfoDiv)
         });
     
       })
