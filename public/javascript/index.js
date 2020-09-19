@@ -26,61 +26,96 @@ window.addEventListener('load', () => {
 })
 
 
-
   document.getElementById('fetch-one').addEventListener('click', function (event) {
- /*    .then(res => {
+    event.preventDefault()
+    const getCharacter = document.getElementById('character-id').value
+    
+    charactersAPI.getOneRegister(getCharacter)
+    .then(res => {
       console.log(res)
-      
+      const data = res.data
+      let str = ''
+      str+= `
+      <div class = "character-info">
+            <div class = "name">Character Name: ${data.name}</div>
+            <div class = "occupation">Character Occupation: ${data.occupation}</div> 
+            <div class = "cartoon">Is a Cartoon ? ${data.cartoon}</div>
+            <div class = "weapon">Character Weapon: ${data.weapon}</div>
+            </div>
+      `
+      document.getElementById('characters-container').innerHTML= str
     })
     .catch(error => {
       console.log(error)
-    }) */
-
+    }) 
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
-    /* .then(res => {
-      console.log(`delete ${id}`)
+    event.preventDefault()
+    const deleteCharacter = document.getElementById('character-id-delete').value
+    charactersAPI.deleteOneRegister(deleteCharacter)
+    .then(response => {
+      console.log(response)
     })
-  
     .catch(error => {
       console.log(error)
-    }) */
+    }) 
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-    /* const newCharater = {
-      name, 
-      occupation, 
+    event.preventDefault()
+    const getById = document.getElementById('chr-id').value
+    const name = document.getElementById('name').value
+    const occupation = document.getElementById('occupation').value
+    const weapon = document.getElementById('weapon').value
+    const cartoon = document.getElementById('cartoon').checked ? true : false
+
+   /*  if (document.getElementById('cartoon').checked == false){
+      cartoon = false
+    } else {
+      cartoon = true
+    }  */
+
+    const upCharacterInfo = {
+      name,
+      occupation,
       weapon, 
       cartoon
     }
 
-    .then(update => {
-      console.log(udpate)
+    charactersAPI.updateOneRegister(getById,upCharacterInfo)
+    .then(res => {
+      console.log(res)
+
     })
 
     .catch(error => {
       console.log(error)
     })
- */
+ 
 
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
-    /* const newCharacter = {
+    event.preventDefault()
+    const name = document.getElementById('new-name').value
+    const occupation = document.getElementById('new-occupation').value
+    const weapon = document.getElementById('new-weapon').value
+    const cartoon = document.getElementById('new-cartoon').checked ? true : false
+    const newCharacter = {
       name, 
       occupation, 
       weapon, 
       cartoon
     }
 
-    .then(update => {
-      console.log(update)
-    })
-
+    charactersAPI.createOneRegister(newCharacter)
+      .then(update => {
+        console.log(update)
+      })
+  
     .catch(error => {
       console.log(error)
-    }) */
-
-  });
+    }) 
+  }
+  );

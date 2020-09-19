@@ -1,11 +1,11 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
+      "name": "Han Solo ",
+      "occupation": "Intergalactic Hunter",
+      "weapon": "Gun",
+      "cartoon": false,
+      "id": 1
     },
     {
       "id": 2,
@@ -22,11 +22,11 @@
       "cartoon": true
     },
     {
-      "id": 4,
-      "name": "Bubblegum",
-      "occupation": "Powerpuff Girls",
-      "weapon": "Cuteness",
-      "cartoon": true
+      "name": "Minion",
+      "occupation": "Minions",
+      "weapon": "Jokes",
+      "cartoon": true,
+      "id": 4
     }
   ]
 }
