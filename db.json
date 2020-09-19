@@ -1,0 +1,43 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "zugurt",
+      "occupation": "artist",
+      "weapon": "blaster",
+      "id": 3
+    },
+    {
+      "name": "idil",
+      "occupation": "football player",
+      "weapon": "blaster",
+      "id": 4
+    },
+    {
+      "name": "Sener Sen",
+      "occupation": "football player",
+      "weapon": "blaster",
+      "id": 5
+    },
+    {
+      "name": "Kemal Sunal",
+      "occupation": "Artist",
+      "weapon": "blaster",
+      "cartoon": true,
+      "id": 6
+    }
+  ]
+}
