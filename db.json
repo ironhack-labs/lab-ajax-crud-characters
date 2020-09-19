@@ -1,9 +1,9 @@
 {
   "characters": [
     {
-      "name": "Han Solo ",
-      "occupation": "Intergalactic Hunter",
-      "weapon": "Gun",
+      "name": "Han Solo",
+      "occupation": "Bounty Hunter",
+      "weapon": "Gun ",
       "cartoon": false,
       "id": 1
     },
@@ -22,9 +22,9 @@
       "cartoon": true
     },
     {
-      "name": "Minion",
-      "occupation": "Minions",
-      "weapon": "Jokes",
+      "name": "Donald Duck",
+      "occupation": "Uncle",
+      "weapon": "Grumps",
       "cartoon": true,
       "id": 4
     }

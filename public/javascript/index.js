@@ -56,9 +56,11 @@ window.addEventListener('load', () => {
     charactersAPI.deleteOneRegister(deleteCharacter)
     .then(response => {
       console.log(response)
+      document.getElementById('delete-one').style.backgroundColor = 'green'
     })
     .catch(error => {
       console.log(error)
+      document.getElementById('delete-one').style.backgroundColor = 'red'
     }) 
   });
 
@@ -86,11 +88,13 @@ window.addEventListener('load', () => {
     charactersAPI.updateOneRegister(getById,upCharacterInfo)
     .then(res => {
       console.log(res)
+      document.getElementById('update-data').style.backgroundColor = 'green'
 
     })
 
     .catch(error => {
       console.log(error)
+      document.getElementById('update-data').style.backgroundColor = 'green'
     })
  
 
@@ -112,10 +116,12 @@ window.addEventListener('load', () => {
     charactersAPI.createOneRegister(newCharacter)
       .then(update => {
         console.log(update)
+        document.getElementById('send-data').style.backgroundColor = 'green'
       })
   
     .catch(error => {
       console.log(error)
+      document.getElementById('send-data').style.backgroundColor = 'red'
     }) 
   }
   );
