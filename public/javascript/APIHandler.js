@@ -39,7 +39,7 @@ class APIHandler {
         if (confirmation) {
             axios
                 .delete(`http://localhost:8000/characters/${id}`)
-                .then(() => alert(`SUA ALMA VAI PARA O INFERNO`))
+                .then(() => alert(`Deleted ${charToDelete.name}.`))
                 .catch((err) => { console.log(err); this.buttonFlag(false); });
             this.buttonFlag(true);
         }
