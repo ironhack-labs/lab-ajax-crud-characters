@@ -41,8 +41,14 @@ button {
   text-align: center;
 }
 
+.list-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .characters-container {
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
   display: flex;
   align-items: center;
