@@ -31,7 +31,7 @@
     {
       "name": "IronMan",
       "occupation": "hero",
-      "weapon": "armor",
+      "weapon": "Armor",
       "cartoon": false,
       "id": 5
     },
@@ -39,8 +39,15 @@
       "name": "Leila Organa",
       "occupation": "Princess",
       "weapon": "Sexyness",
-      "cartoon": false,
+      "cartoon": true,
       "id": 6
+    },
+    {
+      "name": "Dark Vador",
+      "occupation": "Bad boy",
+      "weapon": "Big red laser saber",
+      "cartoon": false,
+      "id": 7
     }
   ]
 }
