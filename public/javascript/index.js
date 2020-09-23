@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     .then(response => {    
       parentDiv.innerHTML = "";
       response.data.forEach(element => {
-        createChar(element);
+        lib.createChar(element);
       });
     })
   });
@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
     let idInput = document.getElementById("character-id").value;
      charactersAPI.getOneRegister(idInput)
       .then(response => {  
-        createChar(response.data);
+        lib.createChar(response.data);
        });
   });
 
@@ -36,9 +36,9 @@ window.addEventListener('load', () => {
     event.preventDefault();
     let colorBtnValid = document.getElementById("edit-data");
     let objName = "edit";
-    let objEditInput = createObjFromInput(objName);
+    let objEditInput = lib.createObjFromInput(objName);
 
-    let objLen = objSize(objEditInput);
+    let objLen = lib.objSize(objEditInput);
     if (objLen > 0) {
       charactersAPI.updateOneRegister(objEditInput.id, objEditInput)
       .then(response => {
@@ -47,19 +47,18 @@ window.addEventListener('load', () => {
       .catch((error)=> {
          colorBtnValid.style.background = "red";
        });
-       getListChar();
+       lib.getListChar();
     }else {
       colorBtnValid.style.background = "red";
     }
-
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
     event.preventDefault();
     let colorBtnValid = document.getElementById("send-data");
     let objName = "create";
-    let objCreateInput = createObjFromInput(objName);
-    let objLen = objSize(objCreateInput);
+    let objCreateInput = lib.createObjFromInput(objName);
+    let objLen = lib.objSize(objCreateInput);
 
     if (objLen > 0) {
       charactersAPI.createOneRegister(objCreateInput)
@@ -69,7 +68,7 @@ window.addEventListener('load', () => {
       .catch((error)=> {
          colorBtnValid.style.background = "red";
        });
-       getListChar();
+       lib.getListChar();
     } else {
       colorBtnValid.style.background = "red";
     }
