@@ -1,6 +1,6 @@
 class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+  constructor (baseURL) {
+    this.baseURL = baseURL;
   }
 
   getFullList () {
@@ -12,7 +12,7 @@ class APIHandler {
   }
 
   createOneRegister (data) {
-    return axios.post(data);
+    return axios.post(this.baseURL + "/characters", data);
   }
 
   updateOneRegister (id, data) {
@@ -20,6 +20,9 @@ class APIHandler {
   }
 
   deleteOneRegister (id) {
-    return axios.delete(this.baseURL + "/characters" +`/${ID}`)
+    return axios.delete(this.baseURL + "/characters" +`/${id}`)
   }
+
 }
+
+export default APIHandler;

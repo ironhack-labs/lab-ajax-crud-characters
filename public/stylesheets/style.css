@@ -105,3 +105,29 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.red-button {
+  animation-name: animationName2;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;    
+  animation-play-state: running;
+}
+
+@keyframes animationName2 {
+  0%  {background-color:none;}
+  100%  {background-color:red;}
+}
+
+.green-button {
+  animation-name: animationName;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;    
+  animation-play-state: running;
+}
+
+@keyframes animationName {
+  0%  {background-color:none;}
+  100%  {background-color:green;}
+}

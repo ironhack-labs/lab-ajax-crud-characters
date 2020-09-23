@@ -9,9 +9,9 @@
     },
     {
       "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
+      "name": "Patrick",
+      "occupation": "Connard",
+      "weapon": "Sa bite",
       "cartoon": false
     },
     {
@@ -20,6 +20,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Jean",
+      "occupation": "Jardinier",
+      "weapon": "Pelle",
+      "cartoon": false,
+      "id": 5
     }
   ]
 }
