@@ -1,0 +1,246 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Chuck Norris",
+      "occupation": "",
+      "weapon": "dynamic",
+      "cartoon": false,
+      "chr-id": "3"
+    },
+    {
+      "name": "hey ",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": true,
+      "id": 4,
+      "chr-id": "4"
+    },
+    {
+      "name": "df",
+      "occupation": "dfg",
+      "weapon": "dfg",
+      "cartoon": false,
+      "id": 6,
+      "chr-id": "6"
+    },
+    {
+      "name": "test",
+      "occupation": "tralaal",
+      "weapon": "lool",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "Maxime",
+      "occupation": "totot",
+      "weapon": "guitar",
+      "cartoon": true,
+      "id": 8,
+      "chr-id": "8"
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 13
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 14
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 15
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 16
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 17
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 18
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 19
+    },
+    {
+      "name": "buritos",
+      "occupation": "poppo",
+      "weapon": "Giant",
+      "cartoon": false,
+      "id": 20
+    },
+    {
+      "name": "buritos",
+      "occupation": "poppo",
+      "weapon": "Giant",
+      "cartoon": false,
+      "id": 21
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 22
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 23
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 24
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 25
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 26
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 27
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 28
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 29
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 30
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 31
+    },
+    {
+      "name": "sdf",
+      "occupation": "df",
+      "weapon": "dgdfg",
+      "cartoon": true,
+      "id": 32
+    },
+    {
+      "name": "sdf",
+      "occupation": "df",
+      "weapon": "dgdfg",
+      "cartoon": true,
+      "id": 33
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 34
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 35
+    },
+    {
+      "name": "",
+      "occupation": "v",
+      "weapon": "",
+      "cartoon": false,
+      "id": 36
+    },
+    {
+      "name": "",
+      "occupation": "v",
+      "weapon": "",
+      "cartoon": false,
+      "id": 37
+    }
+  ]
+}
