@@ -22,8 +22,25 @@
       "cartoon": true
     },
     {
-      "name": "titi",
+      "name": "Mickey",
+      "occupation": "mouse",
+      "weapon": "cheese",
+      "cartoon": true,
       "id": 4
+    },
+    {
+      "name": "IronMan",
+      "occupation": "hero",
+      "weapon": "armor",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "Leila Organa",
+      "occupation": "Princess",
+      "weapon": "Sexyness",
+      "cartoon": false,
+      "id": 6
     }
   ]
 }

@@ -11,18 +11,18 @@ class APIHandler {
   }
 
   getOneRegister (id) {
-    return this.service.get(`/${id}`);
+    return this.service.get(`/characters/${id}`);
   }
 
   createOneRegister (data) {
-    return this.service.post("/create/", data);
+    return this.service.post("/characters/", data);
   }
 
   updateOneRegister (id, data){
-    return this.service.patch(`/${id}`, data);
+    return this.service.patch(`/characters/${id}`, data);
   }
 
   deleteOneRegister (id) {
-    return this.service.delete(`/${id}`);
+    return this.service.delete(`/characters/${id}`);
   }
 }
