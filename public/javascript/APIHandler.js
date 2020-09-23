@@ -1,6 +1,8 @@
 class APIHandler {
-  constructor (baseUrl) {
-    this.service = axios.create({baseurl})
+  constructor (baseURL) {
+    this.service = axios.create({
+      baseURL
+    })
     //this.BASE_URL = baseUrl;
   }
 

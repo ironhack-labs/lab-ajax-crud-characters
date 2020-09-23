@@ -105,3 +105,11 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.success {
+  background-color: #42f471;
+}
+
+.failure {
+  background-color: rgb(218, 58, 58);
+}
