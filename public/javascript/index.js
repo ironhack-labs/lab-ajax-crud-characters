@@ -68,7 +68,33 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("edit-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const id = document.getElementById("update-id-input").value;
+      const name = document.getElementById("update-name-input").value;
+      const occupation = document.getElementById("update-occupation-input")
+        .value;
+      const weapon = document.getElementById("update-weapon-input").value;
+      const cartoon = document.getElementById("update-cartoon-input").value;
+
+      const updateChar = {
+        name,
+        occupation,
+        weapon,
+        cartoon,
+      };
+
+      charactersAPI
+        .updateOneRegister(id, updateChar)
+        .then((apiResponse) => {
+          console.log(apiResponse);
+          document.getElementById("send-data").style.backgroundColor = "green";
+        })
+        .catch((error) => {
+          console.log(error);
+          document.getElementById("send-data").style.backgroundColor = "red";
+        });
+    });
 
   document
     .getElementById("new-character-form")
@@ -89,9 +115,11 @@ window.addEventListener("load", () => {
         .createOneRegister(newChar)
         .then(() => {
           getFullList();
+          document.getElementById("send-data").style.backgroundColor = "green";
         })
         .catch((error) => {
           console.log(error);
+          document.getElementById("send-data").style.backgroundColor = "red";
         });
     });
 });
