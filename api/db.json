@@ -2,9 +2,9 @@
   "characters": [
     {
       "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
+      "name": "han coco",
+      "occupation": "chasseur",
+      "weapon": "non",
       "cartoon": true
     },
     {
@@ -20,6 +20,27 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "regerzg",
+      "occupation": "",
+      "cartoon": "on",
+      "weapon": "",
+      "id": 4
+    },
+    {
+      "name": "yooo",
+      "occupation": "",
+      "cartoon": false,
+      "weapon": "",
+      "id": 5
+    },
+    {
+      "name": "yooo",
+      "occupation": "",
+      "cartoon": false,
+      "weapon": "",
+      "id": 6
     }
   ]
 }
