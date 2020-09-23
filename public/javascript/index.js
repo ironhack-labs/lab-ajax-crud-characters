@@ -1,4 +1,4 @@
-const charactersAPI = new APIHandler('http://localhost:8000');
+const charactersAPI = new APIHandler('http://localhost:8000/characters');
 
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function (event) {
