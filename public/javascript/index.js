@@ -6,6 +6,9 @@ let characterIsCartoon = document.getElementById("char-cartoon");
 let characterWeapon = document.getElementById("char-weapon");
 let charactersContainer = document.querySelector(".characters-container");
 
+let deleteBtn = document.getElementById("delete-one");
+// let createBtn = document.ge
+
 window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
@@ -72,9 +75,12 @@ window.addEventListener("load", () => {
         .deleteOneRegister(idToDelete)
         .then((apiResponse) => {
           console.log(apiResponse);
+          deleteBtn.classList.add("green");
+          // setTimeout(3000, (deleteBtn.classList.remove("green")));
         })
         .catch((apiError) => {
           console.log(apiError);
+          deleteBtn.classList.add("red");
         });
     });
 

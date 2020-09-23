@@ -1,18 +1,3 @@
 {
-  "characters": [
-    {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
-      "id": 2,
-      "name": "foo",
-      "occupation": "bar",
-      "weapon": true,
-      "cartoon": false
-    }
-  ]
+  "characters": []
 }
