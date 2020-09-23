@@ -1,17 +1,26 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
 
-let container = document.querySelector(".characters-container");
+const container = document.querySelector(".characters-container");
+const deleteBtn = document.getElementById('delete-one');
+const updateBtn = document.getElementById('update-data');
+const createBtn = document.getElementById('send-data');
+const updateInput = document.getElementById('chr-id');
+const idInput = document.getElementById("character-id-delete");
+
+const editCharForm = document.getElementById("edit-character-form");
+const editInputs = editCharForm.querySelectorAll("input");
+
+const newCharForm = document.getElementById("new-character-form");
+const newInputs = newCharForm.querySelectorAll("input");
 
 window.addEventListener('load', () => {
     document.getElementById('fetch-all').addEventListener('click', async function(event) {
-        console.log("fetch");
         displayChars();
     });
 
     document.getElementById('fetch-one').addEventListener('click', async function(event) {
         try {
             const idInput = document.getElementById("character-id");
-            //console.log(idInput.value);
             const jsonChars = await charactersAPI.getOneRegister(idInput.value);
             console.log(jsonChars);
             container.innerHTML = "";
@@ -22,71 +31,84 @@ window.addEventListener('load', () => {
         }
     });
 
-});
 
-document.getElementById('delete-one').addEventListener('click', async function(event) {
-    try {
-        console.log(event);
-        const idInput = document.getElementById("character-id-delete");
-        //console.log(idInput.value);
-        const jsonChars = await charactersAPI.deleteOneRegister(idInput.value);
-        console.log(jsonChars);
-        displayChars();
-        document.getElementById('delete-one').classList.add("green");
-        // setInterval(() => {
-        //     document.getElementById('delete-one').classList.remove("green");
-        // }, 2000);
-    } catch (error) {
-        console.log(error);
-        document.getElementById('delete-one').classList.add("red");
-        // setInterval(() => {
-        //     document.getElementById('delete-one').classList.remove("red");
-        // }, 2000);
+
+    document.getElementById('delete-one').addEventListener('click', async function(event) {
+        try {
+            await charactersAPI.deleteOneRegister(idInput.value);
+
+            displayChars();
+            deleteBtn.classList.remove("red");
+            deleteBtn.classList.add("green");
+
+        } catch (error) {
+            console.log(error);
+            deleteBtn.classList.remove("green");
+            deleteBtn.classList.add("red");
+
+        }
+    });
+
+    document.getElementById('edit-character-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        try {
+            await charactersAPI.updateOneRegister(editInputs[0].value, {
+                name: editInputs[1].value,
+                occupation: editInputs[2].value,
+                weapon: editInputs[3].value,
+                cartoon: editInputs[4].checked
+            });
+            displayChars();
+            updateBtn.classList.remove("red");
+            updateBtn.classList.add("green");
+        } catch (error) {
+            console.log(error);
+            updateBtn.classList.remove("green");
+            updateBtn.classList.add("red");
+        }
+    });
+
+    document.getElementById('new-character-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        try {
+            await charactersAPI.createOneRegister({
+                name: newInputs[0].value,
+                occupation: newInputs[1].value,
+                weapon: newInputs[2].value,
+                cartoon: newInputs[3].checked
+            });
+
+            displayChars();
+            createBtn.classList.remove("red");
+            createBtn.classList.add("green");
+        } catch (error) {
+            console.log(error);
+            createBtn.classList.remove("green");
+            createBtn.classList.add("red");
+        }
+
+    });
+
+
+    updateInput.oninput = async(event) => {
+        console.log(event.target.value);
+        try {
+            const jsonChars = await charactersAPI.getOneRegister(event.target.value);
+            console.log(jsonChars);
+            editInputs[1].value = jsonChars.data.name;
+            editInputs[2].value = jsonChars.data.occupation;
+            editInputs[3].value = jsonChars.data.weapon;
+            editInputs[4].checked = jsonChars.data.cartoon;
+        } catch (error) {
+            editInputs[1].value = "error id not defined";
+            editInputs[2].value = "error id not defined";
+            editInputs[3].value = "error id not defined";
+            console.log(error);
+        }
+
     }
-});
-
-document.getElementById('edit-character-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
-    try {
-        const newCharForm = document.getElementById("edit-character-form");
-        const inputs = newCharForm.querySelectorAll("input");
-        console.log(inputs);
-        await charactersAPI.updateOneRegister(inputs[0].value, {
-            name: inputs[1].value,
-            occupation: inputs[2].value,
-            weapon: inputs[3].value,
-            cartoon: inputs[4].checked
-        });
-        displayChars();
-        document.getElementById('update-data').classList.add("green");
-    } catch (error) {
-        console.log(error);
-        document.getElementById('update-data').classList.add("red");
-    }
-});
-
-document.getElementById('new-character-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
-    try {
-        const newCharForm = document.getElementById("new-character-form");
-        const inputs = newCharForm.querySelectorAll("input");
-        console.log(inputs);
-        await charactersAPI.createOneRegister({
-            name: inputs[0].value,
-            occupation: inputs[1].value,
-            weapon: inputs[2].value,
-            cartoon: inputs[3].checked
-        });
-
-        displayChars();
-        document.getElementById('send-data').classList.add("green");
-    } catch (error) {
-        console.log(error);
-        document.getElementById('send-data').classList.add("red");
-    }
 
 });
-
 
 //function to create a html div with character info
 function domAddChar(char) {
@@ -120,12 +142,9 @@ function domAddChar(char) {
 //function to display the list of char
 async function displayChars() {
     try {
-        console.log("toto");
         const jsonChars = await charactersAPI.getFullList();
-        console.log(jsonChars);
         container.innerHTML = "";
         jsonChars.data.forEach(char => {
-            //console.log(char);
             domAddChar(char);
         });
     } catch (error) {

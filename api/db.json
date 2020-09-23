@@ -2,10 +2,10 @@
   "characters": [
     {
       "id": 2,
-      "name": "azerty",
-      "occupation": "azerty",
-      "weapon": "azerty",
-      "cartoon": true
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
     },
     {
       "id": 3,
@@ -15,9 +15,9 @@
       "cartoon": true
     },
     {
-      "name": "ygtfds",
-      "occupation": "qsdfghj",
-      "weapon": "hjgfd",
+      "name": "iuytrgef",
+      "occupation": "hytrgedzs",
+      "weapon": "hgtfredzs",
       "cartoon": true,
       "id": 4
     }

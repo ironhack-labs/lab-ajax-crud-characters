@@ -6,7 +6,6 @@ class APIHandler {
     }
 
     getFullList() {
-        console.log("tata")
         return this.service.get("/characters");
     }
 
