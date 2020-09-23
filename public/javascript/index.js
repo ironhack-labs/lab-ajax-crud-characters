@@ -72,5 +72,26 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("new-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", function (event) {
+      const name = document.getElementById("name-input").value;
+      const occupation = document.getElementById("occupation-input").value;
+      const weapon = document.getElementById("weapon-input").value;
+      const cartoon = document.getElementById("cartoon-input").value;
+
+      const newChar = {
+        name,
+        occupation,
+        weapon,
+        cartoon,
+      };
+
+      charactersAPI
+        .createOneRegister(newChar)
+        .then(() => {
+          getFullList();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
 });

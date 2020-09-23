@@ -13,6 +13,20 @@
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false
+    },
+    {
+      "name": "Dio",
+      "occupation": "Vampire",
+      "weapon": "The World",
+      "cartoon": "on",
+      "id": 3
+    },
+    {
+      "name": "Sangoku",
+      "occupation": "Fighter",
+      "weapon": "Hands",
+      "cartoon": "on",
+      "id": 4
     }
   ]
 }
