@@ -1,25 +1,53 @@
 {
-    "characters": [
-      {
-        "id": 1,
-        "name": "Han Solo",
-        "occupation": "Smuggler",
-        "weapon": "Blaster Pistol",
-        "cartoon": true
-      },
-      {
-        "id": 2,
-        "name": "Luke Skywalker",
-        "occupation": "Jedi Knight",
-        "weapon": "Lightsaber",
-        "cartoon": false
-      },
-      {
-        "id": 3,
-        "name": "Sponge Bob",
-        "occupation": "Lives under the sea",
-        "weapon": "Crabby Patty",
-        "cartoon": true
-      }
-    ]
-  }
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Jesus Christ",
+      "occupation": "Son of God",
+      "weapon": "Love",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "William Shatner",
+      "occupation": "Actor",
+      "weapon": "Phaser",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "Xuxa",
+      "occupation": "Presenter",
+      "weapon": "Kids",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "Morty",
+      "occupation": "civil",
+      "weapon": "grandpa Rick",
+      "cartoon": true,
+      "id": 7
+    }
+  ]
+}

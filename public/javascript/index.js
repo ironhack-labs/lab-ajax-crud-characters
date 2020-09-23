@@ -3,18 +3,7 @@ const charactersAPI = new APIHandler('http://localhost:8000');
 window.addEventListener('load', () => {
     document.getElementById('fetch-all').addEventListener('click', async (event) => {
         const data = await charactersAPI.getFullList();
-        const parent = document.getElementById('parent');
-        parent.innerHTML = '';
-        data.forEach((char) => {
-            parent.innerHTML += `
-                <div class="character-info">
-                    <div class="id">ID: ${char.id}</div>
-                    <div class="name">Name: ${char.name}</div>
-                    <div class="occupation">Occupation: ${char.occupation}</div>
-                    <div class="cartoon">Is a Cartoon? ${char.cartoon}</div>
-                    <div class="weapon">Weapon: ${char.weapon}</div>
-                </div>`;
-        });
+        charactersAPI.domLoop(data);
     });
 
     document.getElementById('fetch-one').addEventListener('click', async (event) => {
@@ -34,21 +23,30 @@ window.addEventListener('load', () => {
     document.getElementById('delete-one').addEventListener('click', (event) => {
         const toDelete = document.getElementById('delete').value;
         charactersAPI.deleteOneRegister(toDelete);
+        charactersAPI.refresh();
     });
 
-    document.getElementById('edit-character-form').addEventListener('submit', (event) => {
-
+    document.getElementById('send-data edit').addEventListener('click', (event) => {
+        const charToEdit = {
+            name: document.getElementById('edit-name').value,
+            occupation: document.getElementById('edit-occupation').value,
+            weapon: document.getElementById('edit-weapon').value,
+            cartoon: !!document.getElementById('edit-cartoon').checked,
+        };
+        charactersAPI.updateOneRegister(document.getElementById('edit-id').value, charToEdit);
+        document.getElementById('edit-character-form').reset();
+        charactersAPI.refresh();
     });
 
-    document.getElementById('new-character-form').addEventListener('click', (event) => {
+    document.getElementById('send-data create').addEventListener('click', (event) => {
         const newChar = {
             name: document.getElementById('new-name').value,
             occupation: document.getElementById('new-occupation').value,
             weapon: document.getElementById('new-weapon').value,
-            cartoon: !!(document.getElementById('new-cartoon').value === 'true'),
+            cartoon: !!document.getElementById('new-cartoon').checked,
         };
-        console.log(newChar);
-        /* charactersAPI.createOneRegister(newChar);
-        charactersAPI.getFullList(); */
+        charactersAPI.createOneRegister(newChar);
+        document.getElementById('new-character-form').reset();
+        charactersAPI.refresh();
     });
 });
