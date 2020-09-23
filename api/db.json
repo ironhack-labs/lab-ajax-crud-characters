@@ -15,42 +15,6 @@
       "cartoon": true
     },
     {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
       "id": 16
     },
     {
@@ -61,63 +25,6 @@
     },
     {
       "id": 19
-    },
-    {
-      "id": 20
-    },
-    {
-      "id": 21
-    },
-    {
-      "id": 22
-    },
-    {
-      "id": 23
-    },
-    {
-      "id": 24
-    },
-    {
-      "id": 25
-    },
-    {
-      "id": 26
-    },
-    {
-      "id": 27
-    },
-    {
-      "id": 28
-    },
-    {
-      "id": 29
-    },
-    {
-      "id": 30
-    },
-    {
-      "id": 31
-    },
-    {
-      "id": 32
-    },
-    {
-      "id": 33
-    },
-    {
-      "id": 34
-    },
-    {
-      "id": 35
-    },
-    {
-      "id": 36
-    },
-    {
-      "id": 37
-    },
-    {
-      "id": 38
     },
     {
       "id": 39
@@ -139,9 +46,6 @@
     },
     {
       "id": 45
-    },
-    {
-      "id": 46
     },
     {
       "id": 47
@@ -193,9 +97,6 @@
     },
     {
       "id": 64
-    },
-    {
-      "id": 65
     },
     {
       "id": 66
@@ -296,13 +197,6 @@
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false,
-      "id": 89
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
       "id": 90
     },
     {
@@ -317,49 +211,110 @@
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false,
-      "id": 92
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 93
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 94
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 95
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 96
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 97
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
       "id": 98
+    },
+    {
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {},
+      "id": 99
+    },
+    {
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {},
+      "id": 100
+    },
+    {
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {},
+      "id": 101
+    },
+    {
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {},
+      "id": 102
+    },
+    {
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {},
+      "id": 103
+    },
+    {
+      "newCharacterInfo": {
+        "name": {},
+        "occupation": {},
+        "weapon": {},
+        "cartoon": {}
+      },
+      "id": 104
+    },
+    {
+      "newCharacterInfo": {
+        "name": "some",
+        "occupation": "random",
+        "weapon": "data",
+        "cartoon": true
+      },
+      "id": 106
+    },
+    {
+      "newCharacterInfo": {
+        "name": "some",
+        "occupation": "random",
+        "weapon": "data",
+        "cartoon": false
+      },
+      "id": 107
+    },
+    {
+      "newCharacterInfo": {
+        "name": "one",
+        "occupation": "two",
+        "weapon": "three",
+        "cartoon": "on"
+      },
+      "id": 108
+    },
+    {
+      "newCharacterInfo": {
+        "name": "Simba",
+        "occupation": "Lion King",
+        "weapon": "Teeth",
+        "cartoon": "on"
+      },
+      "id": 109
+    },
+    {
+      "newCharacterInfo": {
+        "name": "Simba",
+        "occupation": "Lion King",
+        "weapon": "Teeth",
+        "cartoon": "on"
+      },
+      "id": 110
+    },
+    {
+      "name": "Simba",
+      "occupation": "Lion King",
+      "weapon": "Teeth",
+      "cartoon": "on",
+      "id": 111
+    },
+    {
+      "name": "Cinderella",
+      "occupation": "Princess",
+      "weapon": "Shoes",
+      "cartoon": true,
+      "id": 112
     }
   ]
 }

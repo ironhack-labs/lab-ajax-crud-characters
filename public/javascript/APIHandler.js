@@ -7,35 +7,18 @@ class APIHandler {
   }
 
   getFullList () {
-      axios
-      .get("http://localhost:8000/characters")
-      .then (apiResponse => {
-        console.log("Full List: ",apiResponse);
-      })
-      .catch(apiError => {
-        console.log(apiError);
-      })
+      return axios
+      .get(`${this.BASE_URL}/characters`);
   }
 
   getOneRegister (id) {
-      axios
-        .get(`http://localhost:8000/characters/${id}`)
-        .then(response => {
-          console.log('One character is: ', response.data);
-          //const countryDetail = response.data[0];
-          //console.log('a single country details: ', countryDetail);
-        })
-        .catch(err => console.log(err));
-      }
+     return axios
+        .get(`${this.BASE_URL}/characters/${id}`);
+  }
   
   createOneRegister (newCharacterInfo) {
-    axios
-    .post("http://localhost:8000/characters", newCharacterInfo)
-    .then(() => {
-        //this.getFullList();
-        console.log("added: ", newCharacterInfo)
-    })
-    .catch(err => console.log(err));
+    return axios
+    .post(`${this.BASE_URL}/characters`, newCharacterInfo)
   }
 
   updateOneRegister (id, updatedCharacter) {
@@ -50,22 +33,16 @@ class APIHandler {
   }
 
   deleteOneRegister (id) {
-    axios
-    .delete(`http://localhost:8000/characters/${id}`)
-    .then(response => {
-      console.log("deleted: ", response.data);
-      this.getFullList();
-    })
-    .catch(err => console.log(err));
-
+   return axios
+    .delete(`${this.BASE_URL}/characters/${id}`);
   }
 }
-
+/*
 const test = new APIHandler;
 test.getFullList();
 test.getOneRegister(2);
 //test.getOneRegister(1);
-/*test.createOneRegister({
+test.createOneRegister({
   "name": "Leia Skywalker",
   "occupation": "Jedi Knight",
   "weapon": "Lightsaber",
