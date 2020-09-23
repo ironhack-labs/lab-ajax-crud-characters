@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
     .addEventListener("click", function (event) {
+      event.preventDefault();
       charactersAPI
         .getFullList()
         .then(function (apiResponse) {
@@ -29,6 +30,7 @@ window.addEventListener("load", () => {
   document
     .getElementById("fetch-one")
     .addEventListener("click", function (event) {
+      event.preventDefault();
       let id = document.getElementById("search-id").value;
       charactersAPI
         .getOneRegister(id)
@@ -53,6 +55,7 @@ window.addEventListener("load", () => {
   document
     .getElementById("delete-one")
     .addEventListener("click", function (event) {
+      event.preventDefault();
       let idDelete = document.getElementById("character-id-delete").value;
       charactersAPI
         .deleteOneRegister(idDelete)
@@ -99,6 +102,7 @@ window.addEventListener("load", () => {
   document
     .getElementById("new-character-form")
     .addEventListener("submit", function (event) {
+      event.preventDefault();
       const name = document.getElementById("name-input").value;
       const occupation = document.getElementById("occupation-input").value;
       const weapon = document.getElementById("weapon-input").value;
