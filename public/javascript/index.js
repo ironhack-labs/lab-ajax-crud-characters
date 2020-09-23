@@ -1,5 +1,10 @@
 const charactersAPI = new APIHandler("http://localhost:8000");
 
+let characterName = document.getElementById("char-name");
+let characterOccupation = document.getElementById("char-occupation");
+let characterIsCartoon = document.getElementById("char-cartoon");
+let characterWeapon = document.getElementById("char-weapon");
+
 window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
@@ -25,6 +30,10 @@ window.addEventListener("load", () => {
         .getOneRegister(idInput)
         .then((apiResponse) => {
           console.log(apiResponse);
+          characterName.innerText = apiResponse.data.name;
+          characterOccupation.innerText = apiResponse.data.occupation;
+          characterIsCartoon.innerText = apiResponse.data.cartoon
+          characterWeapon.innerText = apiResponse.data.weapon
         })
         .catch((apiError) => {
           console.log(apiError);
