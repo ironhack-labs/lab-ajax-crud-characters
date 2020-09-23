@@ -7,7 +7,8 @@ let characterWeapon = document.getElementById("char-weapon");
 let charactersContainer = document.querySelector(".characters-container");
 
 let deleteBtn = document.getElementById("delete-one");
-// let createBtn = document.ge
+let createBtn = document.querySelector(".create-btn");
+let updateBtn = document.querySelector(".update-btn");
 
 window.addEventListener("load", () => {
   document
@@ -101,9 +102,11 @@ window.addEventListener("load", () => {
         .updateOneRegister(id, { name, occupation, weapon })
         .then((apiResponse) => {
           console.log(apiResponse);
+          updateBtn.classList.add("green");
         })
         .catch((apiError) => {
           console.log(apiError);
+          updateBtn.classList.add("red");
         });
     });
 
@@ -135,9 +138,11 @@ window.addEventListener("load", () => {
         .createOneRegister(data)
         .then((apiResponse) => {
           console.log(apiResponse);
+          createBtn.classList.add("green");
         })
         .catch((apiError) => {
           console.log(apiError);
+          createBtn.classList.add("red");
         });
     });
 });

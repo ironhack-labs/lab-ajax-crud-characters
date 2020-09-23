@@ -1,3 +1,25 @@
 {
-  "characters": []
+  "characters": [
+    {
+      "name": "zefez",
+      "occupation": "ezfez",
+      "weapon": "ezfez",
+      "isCartoon": true,
+      "id": 1
+    },
+    {
+      "name": "ezf",
+      "occupation": "ytjht",
+      "weapon": "ytjht",
+      "isCartoon": true,
+      "id": 2
+    },
+    {
+      "name": "egez",
+      "occupation": "zefez",
+      "weapon": "zefez",
+      "isCartoon": false,
+      "id": 3
+    }
+  ]
 }
