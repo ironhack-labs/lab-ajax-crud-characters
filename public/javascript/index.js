@@ -4,6 +4,7 @@ let characterName = document.getElementById("char-name");
 let characterOccupation = document.getElementById("char-occupation");
 let characterIsCartoon = document.getElementById("char-cartoon");
 let characterWeapon = document.getElementById("char-weapon");
+let charactersContainer = document.querySelector(".characters-container");
 
 window.addEventListener("load", () => {
   document
@@ -13,6 +14,26 @@ window.addEventListener("load", () => {
         .getFullList()
         .then((apiResponse) => {
           console.log(apiResponse);
+          charactersContainer.innerHTML = "";
+          apiResponse.data.forEach((character) => {
+            charactersContainer.innerHTML += `<div class="character-info">
+            <div class="name">
+              Name:
+              <span id="char-name">${character.name}</span>
+            </div>
+            <div class="occupation">
+              Occupation: <span id="char-occupation">${character.occupation}</span>
+            </div>
+            <div class="cartoon">
+              Is a Cartoon?:
+              <span id="char-cartoon">${character.cartoon}</span>
+            </div>
+            <div class="weapon">
+              Weapon
+              <span id="char-weapon">${character.weapon}</span>
+            </div>
+          </div>`;
+          });
         })
         .catch((apiError) => {
           console.log(apiError);
@@ -32,8 +53,8 @@ window.addEventListener("load", () => {
           console.log(apiResponse);
           characterName.innerText = apiResponse.data.name;
           characterOccupation.innerText = apiResponse.data.occupation;
-          characterIsCartoon.innerText = apiResponse.data.cartoon
-          characterWeapon.innerText = apiResponse.data.weapon
+          characterIsCartoon.innerText = apiResponse.data.cartoon;
+          characterWeapon.innerText = apiResponse.data.weapon;
         })
         .catch((apiError) => {
           console.log(apiError);
