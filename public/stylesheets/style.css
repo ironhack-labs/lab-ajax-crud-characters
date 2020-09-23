@@ -105,3 +105,12 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+
+.submit-ok {
+  background-color:green;
+}
+
+.submit-error {
+  background-color:red;
+}
