@@ -9,17 +9,18 @@ class APIHandler {
   }
 
   getOneRegister (id) {
-    return axios.get(`this.BASE_URL + "/characters/${id}`)
+    return axios.get(this.BASE_URL + `/characters/${id}`)
 
   }
 
-  createOneRegister () {
-    return axios.get(this.BASE_URL + "/characters")
+  createOneRegister (id) {
+    return axios.get(this.BASE_URL +` "/characters/` + id)
+  
 
   }
 
-  updateOneRegister () {
-    return axios.get(this.BASE_URL + "/characters/:id")
+  updateOneRegister (id) {
+    return axios.get(this.BASE_URL + `/characters/${id}`)
 
   }
 

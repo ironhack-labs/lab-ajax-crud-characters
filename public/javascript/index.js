@@ -1,5 +1,7 @@
-const charactersAPI = new APIHandler("http://localhost:8000");
+const charactersAPI = new APIHandler("http://localhost:3000");
 const charactersDetails = document.querySelector(".characters-container");
+const oneCharacter = document.getElementById("character-id");
+const deleteOne = document.getElementById("character-id-delete");
 
 window.addEventListener("load", () => {
   document
@@ -25,40 +27,35 @@ window.addEventListener("load", () => {
           </div>`;
           });
         })
-        .catch((error) =>
-          console.log(`error while getting the list of characters:' ${err}`)
-        );
+        .catch((error) => {
+          console.log(`error while getting the list of characters`);
+        });
     });
 
   document
     .getElementById("fetch-one")
-    .addEventListener("click", function (event) {
-      charactersAPI.getOneRegister(id).then((oneCharacter) => {
-        let id = document.getElementById("data-id").nodeValue;
-        charactersAPI.getOneRegister(id).then((apiResponse) => {
-          const data = apiResponse.data;
-          let str = "";
-          str += `<div class="characters-container">
+    .addEventListener("click", async function (event) {
+      try {
+        charactersDetails.innerHTML = "";
+        const responseApi = await charactersAPI.getOneRegister(oneCharacter.value);
+
+        charactersDetails.innerHTML += `<div class="characters-container">
             <div class="character-info">
-            <div class="id">Id: <span>${data.id}</span></div>
-              <div class="name">Name: <span>${data.name}</span></div>
-              <div class="occupation">Occupation: <span>${data.occupation}</span></div>
-              <div class="cartoon">Is a Cartoon? <span>${data.cartoon}</span></div>
-              <div class="weapon">Weapon: <span>${data.weapon}</span></div>
+            <div class="id">Id: <span>${responseApi.id}</span></div>
+              <div class="name">Name: <span>${responseApi.name}</span></div>
+              <div class="occupation">Occupation: <span>${responseApi.occupation}</span></div>
+              <div class="cartoon">Is a Cartoon? <span>${responseApi.cartoon}</span></div>
+              <div class="weapon">Weapon: <span>${responseApi.weapon}</span></div>
             </div>
           </div>`;
-          document.getElementById("characters-container").innerHTML= str;
-        })
-        .catch((error)=>
-        console.log(error));
-      });
+      } catch (error) {
+        console.log(error);
+      }
     });
 
   document
     .getElementById("delete-one")
-    .addEventListener("click", function (event) {
-      
-    });
+    .addEventListener("click", function (event) {});
 
   document
     .getElementById("edit-character-form")
