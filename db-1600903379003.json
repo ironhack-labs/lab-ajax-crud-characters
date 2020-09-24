@@ -20,27 +20,6 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
-    },
-    {
-      "name": "Manu",
-      "occupation": "Lawyer",
-      "weapon": "Words",
-      "cartoon": true,
-      "id": 5
-    },
-    {
-      "name": "Clara",
-      "occupation": "Child",
-      "weapon": "Toys",
-      "cartoon": true,
-      "id": 6
-    },
-    {
-      "name": "Leo1",
-      "occupation": "Player1",
-      "weapon": "Ball1",
-      "cartoon": true,
-      "id": 7
     }
   ]
 }
