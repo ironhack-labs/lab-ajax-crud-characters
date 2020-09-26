@@ -15,291 +15,17 @@
       "cartoon": true
     },
     {
-      "id": 16
+      "id": 48,
+      "name": "Super Mario",
+      "occupation": "Plumber",
+      "weapon": "Super Star",
+      "cartoon": true
     },
     {
-      "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "id": 19
-    },
-    {
-      "id": 39
-    },
-    {
-      "id": 40
-    },
-    {
-      "id": 41
-    },
-    {
-      "id": 42
-    },
-    {
-      "id": 43
-    },
-    {
-      "id": 44
-    },
-    {
-      "id": 45
-    },
-    {
-      "id": 47
-    },
-    {
-      "id": 48
-    },
-    {
-      "id": 49
-    },
-    {
-      "id": 50
-    },
-    {
-      "id": 51
-    },
-    {
-      "id": 52
-    },
-    {
-      "id": 53
-    },
-    {
-      "id": 54
-    },
-    {
-      "id": 55
-    },
-    {
-      "id": 56
-    },
-    {
-      "id": 57
-    },
-    {
-      "id": 58
-    },
-    {
-      "id": 59
-    },
-    {
-      "id": 61
-    },
-    {
-      "id": 62
-    },
-    {
-      "id": 63
-    },
-    {
-      "id": 64
-    },
-    {
-      "id": 66
-    },
-    {
-      "id": 67
-    },
-    {
-      "id": 68
-    },
-    {
-      "id": 69
-    },
-    {
-      "id": 70
-    },
-    {
-      "id": 71
-    },
-    {
-      "id": 72
-    },
-    {
-      "id": 73
-    },
-    {
-      "id": 74
-    },
-    {
-      "id": 76
-    },
-    {
-      "id": 77
-    },
-    {
-      "id": 78
-    },
-    {
-      "id": 79
-    },
-    {
-      "id": 80
-    },
-    {
-      "id": 81
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 82
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 83
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 84
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 85
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 86
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 87
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 88
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 90
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 91
-    },
-    {
-      "name": "Leia Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false,
-      "id": 98
-    },
-    {
-      "name": {},
-      "occupation": {},
-      "weapon": {},
-      "cartoon": {},
-      "id": 99
-    },
-    {
-      "name": {},
-      "occupation": {},
-      "weapon": {},
-      "cartoon": {},
-      "id": 100
-    },
-    {
-      "name": {},
-      "occupation": {},
-      "weapon": {},
-      "cartoon": {},
-      "id": 101
-    },
-    {
-      "name": {},
-      "occupation": {},
-      "weapon": {},
-      "cartoon": {},
-      "id": 102
-    },
-    {
-      "name": {},
-      "occupation": {},
-      "weapon": {},
-      "cartoon": {},
-      "id": 103
-    },
-    {
-      "newCharacterInfo": {
-        "name": {},
-        "occupation": {},
-        "weapon": {},
-        "cartoon": {}
-      },
-      "id": 104
-    },
-    {
-      "newCharacterInfo": {
-        "name": "some",
-        "occupation": "random",
-        "weapon": "data",
-        "cartoon": true
-      },
-      "id": 106
-    },
-    {
-      "newCharacterInfo": {
-        "name": "some",
-        "occupation": "random",
-        "weapon": "data",
-        "cartoon": false
-      },
-      "id": 107
-    },
-    {
-      "newCharacterInfo": {
-        "name": "one",
-        "occupation": "two",
-        "weapon": "three",
-        "cartoon": "on"
-      },
-      "id": 108
-    },
-    {
-      "newCharacterInfo": {
-        "name": "Simba",
-        "occupation": "Lion King",
-        "weapon": "Teeth",
-        "cartoon": "on"
-      },
-      "id": 109
-    },
-    {
-      "newCharacterInfo": {
-        "name": "Simba",
-        "occupation": "Lion King",
-        "weapon": "Teeth",
-        "cartoon": "on"
-      },
+      "name": "Test Character",
+      "occupation": "Any job",
+      "weapon": "Any weapon",
+      "cartoon": true,
       "id": 110
     },
     {
@@ -311,10 +37,52 @@
     },
     {
       "name": "Cinderella",
-      "occupation": "Princess",
-      "weapon": "Shoes",
+      "occupation": "Disney Princess",
+      "weapon": "Glass Shoes",
       "cartoon": true,
       "id": 112
+    },
+    {
+      "name": "Voldemort",
+      "occupation": "Evil Wizard",
+      "weapon": "Wand",
+      "cartoon": false,
+      "id": 113
+    },
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 114
+    },
+    {
+      "name": "Merida",
+      "occupation": "Princess",
+      "weapon": "Bow and Arrow",
+      "cartoon": true,
+      "id": 115
+    },
+    {
+      "name": "Robin Hood",
+      "occupation": "Thief",
+      "weapon": "Bow and Arrow",
+      "cartoon": false,
+      "id": 116
+    },
+    {
+      "name": "James Bond",
+      "occupation": "Spy",
+      "weapon": "Gun",
+      "cartoon": false,
+      "id": 117
+    },
+    {
+      "name": "Dr Evil",
+      "occupation": "Super Villain",
+      "weapon": "Laser",
+      "cartoon": false,
+      "id": 118
     }
   ]
 }

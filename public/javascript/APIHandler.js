@@ -1,6 +1,3 @@
-console.log("running");
-
-
 class APIHandler {
   constructor (baseUrl) {
     this.BASE_URL = baseUrl;
@@ -22,14 +19,8 @@ class APIHandler {
   }
 
   updateOneRegister (id, updatedCharacter) {
-
-    axios
-    .put(`http://localhost:8000/characters/${id}`, updatedCharacter)
-    .then(response => {
-      console.log(response);
-      getCharacters();
-    })
-    .catch(err => console.log(err));
+  return axios
+    .patch(`${this.BASE_URL}/characters/${id}`, updatedCharacter)
   }
 
   deleteOneRegister (id) {
@@ -37,6 +28,7 @@ class APIHandler {
     .delete(`${this.BASE_URL}/characters/${id}`);
   }
 }
+
 /*
 const test = new APIHandler;
 test.getFullList();
