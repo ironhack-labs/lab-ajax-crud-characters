@@ -1,0 +1,8 @@
+# Dependency directory
+node_modules
+
+# Debug log from npm
+npm-debug.log
+
+
+package-lock.json
