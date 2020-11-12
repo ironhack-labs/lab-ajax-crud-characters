@@ -40,6 +40,7 @@ class APIHandler {
   }
 
   updateOneRegister() {
+      await axios.patch(`${baseURL}/${id}`, { name, occupation, weapon, cartoon })
 
   }
 
