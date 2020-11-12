@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "isCartoon": false
+    },
+    {
+      "id": 2,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "isCartoon": true
+    },
+    {
+      "name": "asdaasd",
+      "occupation": "asdasd",
+      "weapon": "asdasdad",
+      "isCartoon": false,
+      "id": 5
+    },
+    {
+      "name": "Name1",
+      "occupation": "Occ1",
+      "weapon": "Weapon1",
+      "isCartoon": true,
+      "id": 6
+    }
+  ]
+}
