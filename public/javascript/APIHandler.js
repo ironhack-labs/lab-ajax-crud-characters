@@ -65,22 +65,6 @@ displayCharacters(elements) {
     `
   })
 }
-// displayCharacters(elements) {
-//   const $charactersContainer = document.querySelector('.characters-container')
-//   $charactersContainer.innerHTML = ""
-//   elements.forEach(element => {
-//     console.log(element)
-//     $charactersContainer.innerHTML += `
-//     <div class="characters-container">
-//       <div class="character-info">
-//         <div class="name">${element.name}</div>
-//         <div class="occupation"> ${element.occupation}</div>
-//         <div class="cartoon">${element.isCartoon}</div>
-//         <div class="weapon">${element.weapon}</div>
-//       </div>
-//     </div>
-//     `
-//   })
-// }
+
 
 }
