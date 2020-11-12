@@ -6,15 +6,25 @@ window.addEventListener('load', () => {
       .then(response => {
         document.querySelector('.character-info').remove()
         response.data.forEach(character => {
+
           let divInfo = document.createElement("div")
           divInfo.classList.add("character-info")
+
           let divName = document.createElement("div")
+          divName.innerHTML += `Character Name:${character.name}`;
           divName.classList.add("name")
+
+
           let divOccupation = document.createElement("div")
+          divOccupation.innerHTML += `Character Occupation:${character.occupation}`
           divOccupation.classList.add("occupation")
+
           let divCartoon = document.createElement("div")
+          divCartoon.innerHTML += `Is a Cartoon?:${character.cartoon}`
           divCartoon.classList.add("cartoon")
+
           let divWeapon = document.createElement("div")
+          divWeapon.innerHTML += `Character Carton:${character.weapon}`
           divWeapon.classList.add("weapon")
 
 
