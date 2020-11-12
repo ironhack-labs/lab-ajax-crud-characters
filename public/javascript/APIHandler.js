@@ -1,25 +1,27 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  async getFullList() {
+    const {data} = await axios.get(`${this.BASE_URL}/characters`)
+    return data
   }
 
-  getOneRegister () {
-
+  async getOneRegister(id) {
+    const {data} = await axios.get(`${this.BASE_URL}/characters/${id}`)
+    return data
   }
 
-  createOneRegister () {
-
+  async deleteOneRegister(id) {
+    await axios.delete(`${this.BASE_URL}/characters/${id}`)
   }
 
-  updateOneRegister () {
-
+  async createOneRegister(data) {
+     await axios.post(`${this.BASE_URL}/characters/`, data)
   }
 
-  deleteOneRegister () {
-
+  async updateOneRegister(id, data) {
+    await axios.patch(`${this.BASE_URL}/characters/${id}`, data)
   }
 }
