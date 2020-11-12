@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "name",
+      "occupation": "occ",
+      "weapon": "wea",
+      "cartoon": "on",
+      "id": 1
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "on",
+      "id": 2
+    },
+    {
+      "name": "name",
+      "occupation": "Occ",
+      "weapon": "weapon",
+      "cartoon": "on",
+      "id": 3
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": "",
+      "id": 4
+    }
+  ]
+}

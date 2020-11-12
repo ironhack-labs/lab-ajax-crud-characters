@@ -105,3 +105,11 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.p-card{
+  margin: 0;
+}
+
+.p-details{
+  color: #d8b362;
+}
