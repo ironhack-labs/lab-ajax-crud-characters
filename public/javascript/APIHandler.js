@@ -1,55 +1,49 @@
+//supongoo que debes d requerir axis s
+const axios = require('axios');
+
+
 class APIHandler {
   constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
   getFullList() {
-    axios.get(baseURL).then(({
-      data
+    return axios.get(this.BASE_URL + '/characters').then(({
+      console.log(this);
     }) => {
-      printChars(data)
+      // printChars(data)
     })
   }
 
   getOneRegister() {
-
+    return axios.get(`${this.BASE_URL}/characters/${id}`).then(({
+      console.log(req.params);
+    }) => {
+      // printChars(data)
+    })
   }
 
-  createOneRegister() {
-
+  createOneRegister(name,occupation,weapon,cartoon) {
+    axios.post(`${this.BASE_URL}/characters/`,
+    {
+      name,
+      occupation,
+      weapon,
+      cartoon
+    })
+      .then(response => {
+        console.log(response.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   updateOneRegister() {
 
   }
 
-  deleteOneRegister() {
-
+  deleteOneRegister(id) {
+    return axios.delete (`${this.BASE_URL}/characters/${id}`)
   }
 }
-
-function printChars(arr) {
-  $charList.innerHTML = ""
-  arr.forEach(element => {
-    $charList.innerHTML += `
-      <div class='col-12'>
-        <div class="card text-white bg-success mb-3">
-          <div class="card-body">
-            <h5 class="card-title">${element.name}</h5>
-            <p class="card-text">
-            weapon: ${element.weapon}
-            <br/>
-            occupation: ${element.occupation}
-            </p>
-          </div>
-          <div class="card-body">
-            <button
-              class="card-link btn btn-danger"
-              onclick="deleteElement(${element.id})">
-                Delete
-            </button>
-          </div>
-        </div>
-      </div>
-    `
-  })

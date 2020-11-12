@@ -13,4 +13,3 @@ exports.characterList = (req, res) => {
     res.render("characters", { data })
   })
 }
-eeeeeewqeeq

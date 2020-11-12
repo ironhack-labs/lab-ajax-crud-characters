@@ -1,4 +1,3 @@
-alert()
 const charactersAPI = new APIHandler('http://localhost:8000');
 
 window.addEventListener('load', () => {
