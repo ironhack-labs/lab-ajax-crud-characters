@@ -4,13 +4,15 @@ window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', function(event) {
     charactersAPI.getFullList()
       .then(response => {
-        var div = document.createElement("div")
-        div.classList.add("character-info")
-        // var p = document.createElement("p");
-        // div.append("Some text", p);
+        document.querySelector('.character-info').remove()
         response.data.forEach(character => {
-
-          console.log(document.querySelector('#characters').appendChild(div));
+          let divInfo = document.createElement("div")
+          divInfo.classList.add("character-info")
+          let divName = document.createElement("div")
+          divName.classList.add("name")
+          divInfo.appendChild(divName)
+          document.querySelector('#characters').appendChild(divInfo)
+          // console.log(document.querySelector('#characters').appendChild(div));
         })
       })
       .catch(err => {
