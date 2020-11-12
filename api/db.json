@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "isa",
+      "occupation": "boss",
+      "weapon": "sleep",
+      "cartoon": "on"
+    },
+    {
+      "name": "psd",
+      "occupation": "fase",
+      "cartoon": "on",
+      "weapon": "fds",
+      "id": 4
+    },
+    {
+      "name": "minion",
+      "occupation": "villian",
+      "cartoon": "on",
+      "weapon": "yellow",
+      "id": 5
+    }
+  ]
+}
