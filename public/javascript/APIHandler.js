@@ -4,22 +4,29 @@ class APIHandler {
   }
 
   getFullList () {
+    return axios.get(`${this.BASE_URL}/characters`)
 
   }
 
-  getOneRegister () {
-
+  getOneRegister (ID) {
+return axios.get(`${this.BASE_URL}/characters/${ID}`)
   }
 
-  createOneRegister () {
-
+  createOneRegister (object) {
+    // const {name, occupation,cartoon,weapon} = object
+    axios.post(`${this.BASE_URL}/characters`, object)
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (ID, object) {
+    axios.patch(`${this.BASE_URL}/characters/${ID}`, object)
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (ID) {
+    axios.delete(`${this.BASE_URL}/characters/${ID}`)
+    // .then(err) { 
+    //   return `Character has been successfully deleted ${ID}`
+    // }
   }
+
+
 }
