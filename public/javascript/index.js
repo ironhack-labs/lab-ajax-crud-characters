@@ -10,7 +10,22 @@ window.addEventListener('load', () => {
           divInfo.classList.add("character-info")
           let divName = document.createElement("div")
           divName.classList.add("name")
+          let divOccupation = document.createElement("div")
+          divOccupation.classList.add("occupation")
+          let divCartoon = document.createElement("div")
+          divCartoon.classList.add("cartoon")
+          let divWeapon = document.createElement("div")
+          divWeapon.classList.add("weapon")
+
+
+
           divInfo.appendChild(divName)
+          divInfo.appendChild(divOccupation)
+          divInfo.appendChild(divCartoon)
+          divInfo.appendChild(divWeapon)
+
+
+
           document.querySelector('#characters').appendChild(divInfo)
           // console.log(document.querySelector('#characters').appendChild(div));
         })
