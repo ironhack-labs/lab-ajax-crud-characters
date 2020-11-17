@@ -1,9 +1,28 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
 
 window.addEventListener('load', () => {
-  document.getElementById('fetch-all').addEventListener('click', function (event) { // FETCH ALL (Declarada debajo del todo)
+  document.getElementById('fetch-all').addEventListener('click', function (event) { // FETCH ALL
     
-    updateList()
+    charactersAPI
+        .getFullList()
+        .then(res => {
+          let allInfo = res.data // Se podría recortar el array para hacerlo más manejable
+          let InfoHtml = ''
+
+          allInfo.forEach(elm => {
+            InfoHtml += `<div class=\"character-info\">
+              <div class=\"id\">ID: ${elm.id}</div>
+              <div class=\"name\">Name: ${elm.name}</div>
+              <div class=\"occupation\">Occupation: ${elm.occupation}</div>
+              <div class=\"cartoon\">Is a Cartoon?: ${elm.cartoon}</div>
+              <div class=\"weapon\">Weapon: ${elm.weapon}</div>
+              </div>`
+          });
+
+          document.querySelector('.characters-container').innerHTML = InfoHtml
+
+        })
+        .catch(err => console.log('HUBO UN ERROR!', err))
       
   });
 
@@ -31,6 +50,7 @@ window.addEventListener('load', () => {
         }
         
         document.querySelector('.characters-container').innerHTML = InfoHtml
+        document.querySelector('.operation input').reset()
 
       })
       .catch(err => console.log('HUBO UN ERROR!', err))
@@ -44,8 +64,11 @@ window.addEventListener('load', () => {
 
     charactersAPI
       .deleteOneRegister(registerId)
-      .then(() => updateList()) // Para ver que has cambiado correctamente el registro
-      .catch(err => console.log('HUBO UN ERROR!', err))
+      .then(() => {
+        document.querySelector('#delete-one').style.backgroundColor = 'green'
+        document.querySelector('.delete input').reset()
+      })
+      .catch(document.querySelector('.delete input').style.backgroundColor = 'red')
 
   });
 
@@ -67,8 +90,11 @@ window.addEventListener('load', () => {
 
     charactersAPI
       .updateOneRegister(registerId, registerInfo)
-      .then(() => updateList()) // Para ver que has cambiado correctamente el registro
-      .catch(err => console.log('HUBO UN ERROR!', err))
+      .then(() => {
+        document.querySelector('#update-data').style.backgroundColor = 'green'
+        document.querySelector('#edit-character-form  input').reset()
+      })
+      .catch(document.querySelector('#update-data').style.backgroundColor = 'red')
 
   });
 
@@ -87,33 +113,11 @@ window.addEventListener('load', () => {
 
     charactersAPI
       .createOneRegister(registerInfo)
-      .then(() => updateList()) // Para ver que has creado correctamente el registro
-      .catch(err => console.log('HUBO UN ERROR!', err))
+      .then(() => {
+        document.querySelector('#send-data').style.backgroundColor = 'green'
+        document.querySelector('#new-character-form input').reset()
+      })
+      .catch(document.querySelector('#send-data').style.backgroundColor = 'red')
 
   });
 });
-
-
-// FUNCION DE FETCH ALL
-function updateList() {
-      charactersAPI
-        .getFullList()
-        .then(res => {
-          let allInfo = res.data // Se podría recortar el array para hacerlo más manejable
-          let InfoHtml = ''
-
-          allInfo.forEach(elm => {
-            InfoHtml += `<div class=\"character-info\">
-              <div class=\"id\">ID: ${elm.id}</div>
-              <div class=\"name\">Name: ${elm.name}</div>
-              <div class=\"occupation\">Occupation: ${elm.occupation}</div>
-              <div class=\"cartoon\">Is a Cartoon?: ${elm.cartoon}</div>
-              <div class=\"weapon\">Weapon: ${elm.weapon}</div>
-              </div>`
-          });
-
-          document.querySelector('.characters-container').innerHTML = InfoHtml
-
-        })
-        .catch(err => console.log('HUBO UN ERROR!', err))
-    }
