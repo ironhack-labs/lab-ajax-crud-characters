@@ -24,6 +24,7 @@ window.addEventListener('load', () => {
                                                                     <div class="weapon">Weapon: <span>${res.data.weapon}</span></div>
                                                                   </article>`
       })
+      .then(() => document.querySelector('.operation input').value = '')
       .catch(err => console.log('Error casi fatal!!', err))
   });
 
@@ -36,9 +37,13 @@ window.addEventListener('load', () => {
     charactersAPI
       .deleteOneRegister(characterID)
       .then(() => {
+        updateCharactersList()
         document.querySelector('#selected-character').innerHTML = ''
         document.querySelector('#delete-one').setAttribute('style', 'background-color: green;')
-        updateCharactersList()
+      })
+      .then(() => {
+        document.querySelector('.delete input').value = ''
+        window.setTimeout(() => {document.querySelector('.delete button').setAttribute('style', 'background-color: none;')}, 2000)
       })
       .catch(err => {
         console.log(err)
@@ -69,6 +74,9 @@ window.addEventListener('load', () => {
         document.querySelector('#edit-character-form').reset()
 
       })
+      .then(() => {
+        window.setTimeout(() => {document.querySelector('#edit-character-form button').setAttribute('style', 'background-color: none;')}, 2000)
+      })
       .catch(err => {
         console.log(err)
         document.querySelector('#delete-one').setAttribute('style', 'background-color: red;')
@@ -95,6 +103,9 @@ window.addEventListener('load', () => {
         updateCharactersList()
         document.querySelector('#new-character-form button').setAttribute('style', 'background-color: green;')
         document.querySelector('#new-character-form').reset()
+      })
+      .then(() => {
+        window.setTimeout(() => {document.querySelector('#new-character-form button').setAttribute('style', 'background-color: none;')}, 2000)
       })
       .catch(err => {
         console.log(err)
