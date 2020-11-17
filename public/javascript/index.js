@@ -85,7 +85,7 @@ window.addEventListener('load', () => {
 
     const inputs = document.querySelectorAll('#new-character-form input')
 
-    const charInfo = {
+    const characterInfo = {
       name: inputs[0].value,
       occupation: inputs[1].value,
       weapon: inputs[2].value,
@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
     }
 
     charactersAPI
-      .createOneRegister(charInfo)
+      .createOneRegister(characterInfo)
       .then(() => {
 
         document.querySelector('#send-data').style.backgroundColor = 'green'
