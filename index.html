@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,9 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>IH Characters</title>
 </head>
-<body>
-  <section class="container">
-    <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="cartoon">Is a Cartoon?</div>
-        <div class="weapon">Character Weapon</div>
-      </div>
-    </div>
-    <section class="operations">
-      <div class="operation">
-        <button id="fetch-all">Fetch all</button>
-      </div>
-      <div class="operation">
-        <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
-        <button id="fetch-one">Fetch one</button>
-      </div>
-      <div class="operation delete">
-        <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
-        <button id="delete-one">Delete one</button>
-      </div>
 
-    </section>
+<body>
+
   </section>
   <section class="container">
     <section class="form-container">
@@ -62,7 +39,7 @@
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
-        <div class="field">
+        <div class="field" id='id'>
           <label for="id">ID: </label>
           <input type="text" name="chr-id">
         </div>
@@ -82,11 +59,44 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="send-data" class="edit-btn">Update</button>
       </form>
     </section>
+
   </section>
-  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
+  <section class="container">
+    <h1>Ironhack Characters API</h1>
+    <div class="characters-container">
+      <div class="character-info" id="singleCharacter">
+        <div class="name">Character Name</div>
+        <div class="occupation">Character Occupation</div>
+        <div class="cartoon">Is a Cartoon?</div>
+        <div class="weapon">Character Weapon</div>
+      </div>
+    </div>
+    <section class="operations">
+      <div class="operation">
+        <button id="fetch-all">Fetch all</button>
+      </div>
+      <div class="operation" id="search">
+        <label for="character-id">Search by ID: </label>
+        <input type="text" name="character-id">
+        <button id="fetch-one">Fetch one</button>
+      </div>
+      <div class="operation delete">
+        <label for="character-id-delete">Delete by ID: </label>
+        <input type="text" name="character-id-delete">
+        <button id="delete-one" class="delete-btn">Delete one</button>
+        <div class="characters-container" id="allCharacters">
+
+        </div>
+      </div>
+
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
+    <script type="text/javascript" src="./public/javascript/index.js"></script>
+
 </body>
+
 </html>
