@@ -53,8 +53,12 @@ window.addEventListener('load', () => {
         document.querySelector('.occupation').innerHTML = `Occupation: ${elm.data.occupation}`
         document.querySelector('.cartoon').innerHTML = `Its a cartoon?: ${elm.data.cartoon}`
         document.querySelector('.weapon').innerHTML = `Weapon: ${elm.data.weapon}`
+        document.querySelector('#fetch-one').style.backgroundColor = 'green'
       })
-      .catch(err => console.log('HUBO UN ERROR!', err))
+      .catch(err => {
+        console.log('HUBO UN ERROR!', err)
+        document.querySelector('#fetch-one').style.backgroundColor = 'red'
+      })
 
   });
 
@@ -101,10 +105,10 @@ window.addEventListener('load', () => {
 
       charactersAPI
         .updateOneRegister(characterID, characterInfo)
-        .then(response => console.log(response))
+        .then(document.querySelector('#send-data-edit').style.backgroundColor = 'green')
         .catch(err => {
           console.log('HUBO UN ERROR!', err)
-          document.querySelector('#delete-one').style.backgroundColor = 'red'
+          document.querySelector('#send-data-edit').style.backgroundColor = 'red'
         })
 
     })
@@ -133,9 +137,6 @@ window.addEventListener('load', () => {
     charactersAPI
       .createOneRegister(characterInfo)
       .then(response => console.log(response))
-      .catch(err => {
-        console.log('HUBO UN ERROR!', err)
-        document.querySelector('#delete-one').style.backgroundColor = 'red'
-      })
+      .catch(err => {console.log('HUBO UN ERROR!', err)})
 
   });
