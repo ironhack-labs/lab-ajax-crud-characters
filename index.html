@@ -23,6 +23,7 @@
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
       </div>
+
       <div class="operation">
         <label for="character-id">Search by ID: </label>
         <input type="text" name="character-id">
@@ -33,9 +34,12 @@
         <input type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
-
     </section>
+                <!--  SELECTED CHARACTER -->
+    <div id="selected-character" class="characters-container"></div>
+
   </section>
+  
   <section class="container">
     <section class="form-container">
       <h2>New Character</h2>
@@ -85,7 +89,12 @@
         <button id="send-data">Update</button>
       </form>
     </section>
+
+                <!-- CHARACTERS LIST -->
+    <div id="characters-list" class="characters-container"></div>
   </section>
+
+
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
