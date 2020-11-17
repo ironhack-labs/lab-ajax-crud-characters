@@ -105,3 +105,12 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+.blue{
+      background-color: rgba(88, 98, 123, 0.95);
+}
+.fetch{
+  text-align: center;
+      background-color: rgba(88, 98, 123, 0.95);
+      background-size: 50%;
+
+}
