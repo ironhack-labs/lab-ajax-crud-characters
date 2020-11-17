@@ -24,14 +24,18 @@
         <button id="fetch-all">Fetch all</button>
       </div>
       <div class="operation">
+        <form id="getInfoForm">
         <label for="character-id">Search by ID: </label>
         <input type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
+        </form>
       </div>
       <div class="operation delete">
+        <form id="deleteInfoForm">
         <label for="character-id-delete">Delete by ID: </label>
         <input type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
+        </form>
       </div>
 
     </section>
@@ -82,9 +86,13 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="update-data">Update</button>
       </form>
     </section>
+  </section>
+  <section class='container'>
+    <h2>List of characters</h2>
+        <div id="character-list"></div>
   </section>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
