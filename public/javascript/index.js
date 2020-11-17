@@ -3,6 +3,10 @@ const charactersAPI = new APIHandler
 window.addEventListener('load', () => {
 
 
+
+
+  //MOSTRAR TODOS LOS PERSONAJES
+
   document.getElementById('fetch-all').addEventListener('click', function (event) {
 
     charactersAPI
@@ -34,6 +38,8 @@ window.addEventListener('load', () => {
   });
 
 
+  // BUSCAR UN PERSONAJE
+
   document.getElementById('fetch-one').addEventListener('click', function (event) {
 
     const characterID = document.querySelector('.operation input').value
@@ -54,8 +60,7 @@ window.addEventListener('load', () => {
 
 
 
-
-
+  // BORRAR UN PERSONAJE
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
 
@@ -63,76 +68,74 @@ window.addEventListener('load', () => {
 
     charactersAPI
       .deleteOneRegister(characterID)
-      .then()
-      .catch(err => console.log('HUBO UN ERROR!', err))
+      .then(document.querySelector('#delete-one').style.backgroundColor = 'green')
+      .catch(err => {
+        console.log('HUBO UN ERROR!', err)
+        document.querySelector('#delete-one').style.backgroundColor = 'red'
+      }
+      
+      );
+
+
+  });
+    //EDITAR UN PERSONAJE
+
+
+    document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+
+      event.preventDefault()
+
+      const inputs = document.querySelectorAll('#edit-character-form input')
+
+      const characterInfo = {
+
+        id: inputs[0].value,
+        name: inputs[1].value,
+        occupation: inputs[2].value,
+        weapon: inputs[3].value,
+        cartoon: inputs[4].checked,
+      }
+
+      const characterID = document.querySelector('#id-edit').value
+
+
+      charactersAPI
+        .updateOneRegister(characterID, characterInfo)
+        .then(response => console.log(response))
+        .catch(err => {
+          console.log('HUBO UN ERROR!', err)
+          document.querySelector('#delete-one').style.backgroundColor = 'red'
+        })
+
+    })
 
   });
 
 
 
+  //AÑADIR UN PERSONAJE
 
-
-
-
-
-
-
-  document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-
-
+  document.getElementById('new-character-form').addEventListener('submit', function (event) {
 
     event.preventDefault()
 
-
-    const inputs = document.querySelectorAll('#edit-character-form input')
-
-
+    const inputs = document.querySelectorAll('#new-character-form input')
 
     const characterInfo = {
-
-      id: inputs[0].value,
-      name: inputs[1].value,
-      occupation: inputs[2].value,
-      weapon: inputs[3].value,
-      cartoon: inputs[4].checked,
+      name: inputs[0].value,
+      occupation: inputs[1].value,
+      weapon: inputs[2].value,
+      cartoon: inputs[3].checked,
     }
-
-    const characterID = document.querySelector('#id-edit').value
-
+  
+    console.log(characterInfo)
 
     charactersAPI
-      .updateOneRegister(characterID, characterInfo)
+      .createOneRegister(characterInfo)
       .then(response => console.log(response))
-      .catch(err => console.log('HUBO UN ERROR!', err))
+      .catch(err => {
+        console.log('HUBO UN ERROR!', err)
+        document.querySelector('#delete-one').style.backgroundColor = 'red'
+      })
 
-  })
-
-});
-
-
-
-document.getElementById('new-character-form').addEventListener('submit', function (event) {
-
-
-        event.preventDefault()
-
-        const inputs = document.querySelectorAll('#new-character-form input')
-
-
-        const characterInfo = {
-          name: inputs[0].value,
-          occupation: inputs[1].value,
-          weapon: inputs[2].value,
-          cartoon: inputs[3].checked,
-        }
-  
-        console.log(characterInfo)
-
-        charactersAPI
-          .createOneRegister(characterInfo)
-          .then(response => console.log(response))
-          .catch(err => console.log('HUBO UN ERROR!', err))
-
-});
-
-
+  });
