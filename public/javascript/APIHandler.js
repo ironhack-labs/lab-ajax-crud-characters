@@ -6,6 +6,7 @@ class APIHandler {
     })
   }
 
+
   getFullList = () => this.index.get('/characters')
 
   getOneRegister = characterId => this.index.get(`/characters/:${characterId}`)
@@ -16,6 +17,9 @@ class APIHandler {
 
   deleteOneRegister = characterId => this.index.delete(`/characters/:${characterId}`)
 
+
 }
+
+
 
 
