@@ -107,10 +107,19 @@ window.addEventListener('load', () => {
 
         document.querySelector('.characters-container').innerHTML = htmlCharacter
 
+        //  CAMBIO DE COLOR DE BOTON VERDE
         document.querySelector('#edit-character-form #send-data').classList.add('green')
+        setTimeout(() => document.querySelector('#edit-character-form #send-data').classList.remove('green'), 700)
+        document.querySelector('#edit-character-form').reset()
 
       })
-      .catch(() => document.querySelector('#edit-character-form #send-data').classList.add('red'))
+      .catch(err => {
+        console.log(err)
+        //  COLOR BOTON ROJO
+        document.querySelector('#edit-character-form #send-data').classList.add('red')
+        setTimeout(() => document.querySelector('#edit-character-form #send-data').classList.remove('red'), 700)
+
+      })
 
   });
 
@@ -130,8 +139,19 @@ window.addEventListener('load', () => {
 
     charactersAPI
       .createOneRegister(characterInfo)
-      .then(() => document.querySelector('#new-character-form #send-data').classList.add('green'))
-      .catch(() => document.querySelector('#new-character-form #send-data').classList.add('red'))
+      .then(() => {
 
+        document.querySelector('#new-character-form #send-data').classList.add('green')
+        setTimeout(() => document.querySelector('#new-character-form #send-data').classList.remove('green'), 700)
+        document.querySelector('#new-character-form').reset()
+
+      })
+      .catch(err => {
+        console.log(err)
+        document.querySelector('#new-character-form #send-data').classList.add('red')
+        setTimeout(() => document.querySelector('#new-character-form #send-data').classList.remove('red'), 700)
+
+      })
   });
+
 });
