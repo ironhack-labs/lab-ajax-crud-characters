@@ -13,19 +13,16 @@ window.addEventListener('load', () => {
       .getFullList()
       .then(response => {
 
-        let name = response.data[12].name
-        let character = response.data[12].occupation
-        let cartoon = response.data[12].cartoon
-        let weapon = response.data[12].weapon
-        let id = response.data[12].id
+        let dataHtml = ''
+        let allData = response.data.splice(301, 1)
 
+        
 
-        document.querySelector('.name').innerHTML = `<strong>Name:</strong> ${name}`
-        document.querySelector('.occupation').innerHTML = `<br><strong>Occupation:</strong> ${character}`
-        document.querySelector('.cartoon').innerHTML = `<br><strong>Cartoon:</strong> ${cartoon}`
-        document.querySelector('.weapon').innerHTML = `<br><strong>Weapon:</strong> ${weapon}`
-        document.querySelector('.id').innerHTML = `<br><strong>Id:</strong> ${id}`
+        allData.forEach(elm => {
+          dataHtml += `<strong>Name: </strong>${elm.name}<br><br><strong>Occupation: </strong>${elm.occupation}<br><br><strong>Cartoon: </strong>${elm.cartoon}<br><br><strong>Weapon: </strong>${elm.weapon}<br><br><strong>ID: </strong>${elm.id}`
+        })
 
+        document.querySelector('.character-info').innerHTML = dataHtml
       })
 
       .catch(err => console.log('ERROR', err))
@@ -124,6 +121,3 @@ window.addEventListener('load', () => {
   });
 
 });
-
-        // return document.querySelector('#delete-one').innerHTML = `<button id="delete-one" class="inactive"><p class="inactive" style="color:white">DELETE ONE</p>`
-        // return document.querySelector('.editup').innerHTML = `<button id="send-data" class="active editup"><p style="color:white">UPDATE</p>`
