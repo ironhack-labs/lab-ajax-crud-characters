@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Don Patricio",
+      "occupation": "Live in the sea",
+      "cartoon": true,
+      "weapon": "pineapple"
+    },
+    {
+      "name": "Morty",
+      "occupation": "ricks company",
+      "cartoon": "on",
+      "weapon": "none",
+      "id": 4
+    }
+  ]
+}
