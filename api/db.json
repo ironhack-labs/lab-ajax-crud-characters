@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "asdfa",
+      "occupation": "asdfa",
+      "cartoon": "on",
+      "weapon": "sadf",
+      "id": 4
+    },
+    {
+      "name": "Anakin",
+      "occupation": "Jedi Knight",
+      "weapon": "Light Saber",
+      "cartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "Sith",
+      "weapon": "Light Saber",
+      "cartoon": "on",
+      "id": 6
+    },
+    {
+      "name": "Darth Vader",
+      "occupation": "Sith",
+      "weapon": "Light Saber",
+      "cartoon": "on",
+      "id": 7
+    }
+  ]
+}
