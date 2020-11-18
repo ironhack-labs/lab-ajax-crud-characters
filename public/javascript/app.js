@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
         inputs[1].value = response.data.name
         inputs[2].value = response.data.occupation
         inputs[3].value = response.data.weapon
-        inputs[4].value = response.data.checker
+        inputs[4].value = response.data.checked
 
         document.querySelector('#fetch-character-form').reset()
 
@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
       name: inputs[0].value,
       occupation: inputs[1].value,
       weapon: inputs[2].value,
-      cartoon: inputs[3].checker
+      cartoon: inputs[3].checked
     }
 
     charactersAPI
@@ -94,7 +94,7 @@ window.addEventListener('load', () => {
       name: inputs[1].value,
       occupation: inputs[2].value,
       weapon: inputs[3].value,
-      cartoon: inputs[4].checker
+      cartoon: inputs[4].checked
     }
 
     const characterId = document.querySelector('#edit-character-form input').value
