@@ -32,6 +32,14 @@ button {
   overflow: hidden;
 }
 
+.success{
+  background-color: #42f471;
+}
+
+.error{
+  background-color: red;
+}
+
 .container {
   width: 70%;
   margin: 50px auto 0;
