@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 1
+    },
+    {
+      "name": "Daniel Skywalker ",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": true,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "vvv",
+      "occupation": "vvv occupation",
+      "weapon": "vvv multiple weapons",
+      "cartoon": false,
+      "id": 4
+    }
+  ]
+}
