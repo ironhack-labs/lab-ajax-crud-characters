@@ -64,6 +64,7 @@ class APIHandler {
 
   updateOneRegister () {
     const btn = document.querySelector('#send-data-update');
+    const id = document.querySelector('#id-edit').value;
     const name = document.querySelector('#name-edit').value;
     const occupation = document.querySelector('#occupation-edit').value;
     const cartoon = document.querySelector('#cartoon-edit').value;
@@ -76,6 +77,9 @@ class APIHandler {
   }
 
   deleteOneRegister () {
+    const btn = document.querySelector('#delete-one');
+    const id = document.querySelector('#character-id-delete').value;
 
+    axios.delete(`${this.BASE_URL}/characters/${id}`);
   }
 }

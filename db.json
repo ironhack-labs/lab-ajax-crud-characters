@@ -27,6 +27,13 @@
       "cartoon": "on",
       "weapon": "light-saber",
       "id": 4
+    },
+    {
+      "name": "Leia",
+      "occupation": "Leader",
+      "cartoon": "on",
+      "weapon": "Blaster",
+      "id": 5
     }
   ]
 }
