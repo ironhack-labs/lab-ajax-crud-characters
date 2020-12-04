@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Bob",
+      "id": 3,
+      "occupation": "Songee Man",
+      "weapon": "Water bomb",
+      "cartoon": true
+    },
+    {
+      "name": "Dracula",
+      "occupation": "Vampire",
+      "weapon": "Teeth",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Totoro",
+      "occupation": "Guardian of forest",
+      "weapon": "Magic",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
