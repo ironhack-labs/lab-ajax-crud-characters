@@ -15,18 +15,53 @@
       "cartoon": false
     },
     {
-      "name": "Squidward",
-      "occupation": "Waiter",
-      "weapon": "Clarinet",
-      "cartoon": "on",
-      "id": 3
-    },
-    {
       "id": 4,
       "name": "Chandler Bing",
       "occupation": "Transponster",
       "weapon": "Sarcasm",
       "cartoon": false
+    },
+    {
+      "name": "Harry Potter",
+      "occupation": "Wizard",
+      "weapon": "Wand",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "Spongebob",
+      "occupation": "Cook",
+      "weapon": "Patty",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Daina",
+      "occupation": "Daina",
+      "weapon": "Daina",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Ross Geller",
+      "occupation": "Dinosaur Guy",
+      "weapon": "Break",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": true,
+      "id": 9
+    },
+    {
+      "name": "tes5",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": true,
+      "id": 10
     }
   ]
 }
