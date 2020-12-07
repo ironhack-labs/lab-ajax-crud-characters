@@ -110,10 +110,10 @@ ul {
   list-style-type: none;
 }
 
-.delete-success {
+.modify-success {
   background-color: green;
 }
 
-.delete-fail {
+.modify-fail {
   background-color:red;
 }
