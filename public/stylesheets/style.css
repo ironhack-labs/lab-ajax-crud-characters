@@ -65,7 +65,7 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 75%;
   margin: 10px;
   padding: 10px;
   text-align: left;
@@ -104,4 +104,8 @@ button {
 
 .submit-button {
   margin: 10px 0 0 120px;
+}
+
+ul {
+  list-style-type: none;
 }
