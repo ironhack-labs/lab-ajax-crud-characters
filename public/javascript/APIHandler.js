@@ -82,12 +82,16 @@ class APIHandler {
     })
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (charId) {
     axios
-    .delete(this.BASE_URL + '/characters/:id')
-    .then()
+    .delete(`${this.BASE_URL}/characters/${charId}`)
+    .then( response => {
+     console.log(response.data);
+     document.getElementById('delete-one').setAttribute('class', 'delete-success');
+    })
     .catch(err => {
       console.log(err);
+      document.getElementById('delete-one').setAttribute('class', 'delete-fail');
     })
-  }
+}
 }

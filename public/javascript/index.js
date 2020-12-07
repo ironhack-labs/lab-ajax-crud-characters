@@ -13,6 +13,9 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
+    event.preventDefault();
+    let idToDelete = document.getElementById('character-to-delete').value;
+    charactersAPI.deleteOneRegister(idToDelete);
 
   });
 

@@ -109,3 +109,11 @@ button {
 ul {
   list-style-type: none;
 }
+
+.delete-success {
+  background-color: green;
+}
+
+.delete-fail {
+  background-color:red;
+}
