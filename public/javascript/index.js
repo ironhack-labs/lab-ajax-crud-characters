@@ -6,7 +6,10 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
-
+    
+    let idToSearch = document.getElementById('character-to-fetch').value;
+    console.log(idToSearch)
+    charactersAPI.getOneRegister(idToSearch);
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {

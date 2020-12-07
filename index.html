@@ -25,7 +25,7 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input id='character-to-fetch' type="text" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
@@ -34,14 +34,18 @@
         <button id="delete-one">Delete one</button>
       </div>
     </section>
-    <section >
-      <h1>Ironhack Characters - Full List</h1>
-      <div class="characters-container">
+    <section id='full-list' style="display: none">
+        <h1>Ironhack Characters - Full List</h1>
+        <div class="characters-container">
         <ul id="characters-list"></ul>
       </div>
     </section>
+    <section id='siingle-character' style="display: none">
+      <h1 id='single-chararacter-name'></h1>
+      <div id="single-character-info" class="characters-container">
+      </div>
   </section>
-  
+  </section>
   <section class="container">
     <section class="form-container">
       <h2>New Character</h2>
