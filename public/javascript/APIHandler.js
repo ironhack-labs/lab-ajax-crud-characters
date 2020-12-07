@@ -60,25 +60,33 @@ class APIHandler {
     })
   }
 
-  createOneRegister () {
+  createOneRegister (newCharacter) {
+    
+    const {name, occupation, weapon, cartoon} = newCharacter;
+    
     axios
-    .post(this.BASE_URL + '/characters', {})
+    .post(this.BASE_URL + '/characters', {name, occupation, weapon, cartoon})
     .then( () => {
-      //this should redirect to the list of all the characters.
+      document.getElementById('send-data-create').setAttribute('class', 'modify-success');
     })
     .catch(err => {
       console.log(err);
+      document.getElementById('send-data-create').setAttribute('class', 'modify-fail');
     })
   }
 
-  updateOneRegister () {
+  updateOneRegister (updatedCharacter) {
+    
+    const {id, name, occupation, weapon, cartoon} = updatedCharacter;
+    
     axios
-    .put(this.BASE_URL + '/characters/:id', {})
+    .put(`${this.BASE_URL}/characters/${id}`, {name, occupation, weapon, cartoon})
     .then( () => {
-
+      document.getElementById('send-data-update').setAttribute('class', 'modify-success');
     })
     .catch(err => {
       console.log(err);
+      document.getElementById('send-data-update').setAttribute('class', 'modify-fail');
     })
   }
 
@@ -87,11 +95,11 @@ class APIHandler {
     .delete(`${this.BASE_URL}/characters/${charId}`)
     .then( response => {
      console.log(response.data);
-     document.getElementById('delete-one').setAttribute('class', 'delete-success');
+     document.getElementById('delete-one').setAttribute('class', 'modify-success');
     })
     .catch(err => {
       console.log(err);
-      document.getElementById('delete-one').setAttribute('class', 'delete-fail');
+      document.getElementById('delete-one').setAttribute('class', 'modify-fail');
     })
 }
 }

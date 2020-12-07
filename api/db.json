@@ -1,3 +1,46 @@
 {
-  "characters": []
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "JaggerMan",
+      "occupation": "Making people drunk as heck",
+      "weapon": "Shots glasses",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "Lobster Man",
+      "occupation": "DB manager =) =) ",
+      "weapon": "tweezers",
+      "cartoon": true,
+      "id": 10
+    },
+    {
+      "name": "JaggerMan",
+      "occupation": "Making people drunk as heck",
+      "weapon": "Shots glasses",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "Lobster Man",
+      "occupation": "DB manager =)",
+      "weapon": "tweezers",
+      "cartoon": true,
+      "id": 12
+    }
+  ]
 }
