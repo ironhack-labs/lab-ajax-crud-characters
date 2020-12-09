@@ -1,67 +1,25 @@
 {
   "characters": [
     {
-      "name": "1",
-      "occupation": "2",
-      "weapon": "2",
-      "cartoon": true,
-      "id": 1
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
     },
     {
-      "name": "2",
-      "occupation": "2222",
-      "weapon": "2222",
-      "cartoon": true,
-      "id": 2
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
     },
     {
-      "name": "3",
-      "occupation": "2222",
-      "weapon": "2222",
-      "cartoon": true,
-      "id": 3
-    },
-    {
-      "name": "3",
-      "occupation": "3",
-      "weapon": "3",
-      "cartoon": true,
-      "id": 4
-    },
-    {
-      "name": "3",
-      "occupation": "3",
-      "weapon": "3",
-      "cartoon": true,
-      "id": 5
-    },
-    {
-      "name": "2",
-      "occupation": "33213",
-      "weapon": "3123123",
-      "cartoon": false,
-      "id": 6
-    },
-    {
-      "name": "2",
-      "occupation": "33213",
-      "weapon": "3123123",
-      "cartoon": false,
-      "id": 7
-    },
-    {
-      "name": "aaa",
-      "occupation": "aaaa",
-      "weapon": "aaaa",
-      "cartoon": false,
-      "id": 8
-    },
-    {
-      "name": "aaa",
-      "occupation": "aaaa",
-      "weapon": "aaaa",
-      "cartoon": false,
-      "id": 9
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
     }
   ]
 }
