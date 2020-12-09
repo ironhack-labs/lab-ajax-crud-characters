@@ -7,11 +7,11 @@ function showEachChar(data) {
     const characterInfo = document.createElement("div");
     characterInfo.innerHTML += `
         <div class="character-info"> 
-            <div class="id"><p>Id</p> <p>${data.id}</p></div>
-            <div class="name"><p>Name</p> <p>${data.name}</p></div>
-            <div class="occupation"><p>Occupation</p> <p>${data.occupation}</p></div>
-            <div class="cartoon"><p>Is a Cartoon?</p> <p>${data.cartoon}</p></div>
-            <div class="weapon"><p>Weapon</p> <p>${data.weapon}</div>
+            <div class="id">Id <span>${data.id}</span></div>
+            <div class="name">Name <span>${data.name}</span></div>
+            <div class="occupation">Occupation <span>${data.occupation}</span></div>
+            <div class="cartoon">Is a Cartoon? <span>${data.cartoon}</span></div>
+            <div class="weapon">Weapon <span>${data.weapon}</span></div>
         </div>
   `;
     return charactersContainer.appendChild(characterInfo);
