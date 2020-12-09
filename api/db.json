@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "name": "Link",
+      "occupation": "Warrior",
+      "weapon": "Bow",
+      "cartoon": "on",
+      "id": 1
+    },
+    {
+      "name": "Luigi",
+      "occupation": "Plumber",
+      "weapon": "Carrot",
+      "cartoon": "on",
+      "id": 2
+    }
+  ]
+}
