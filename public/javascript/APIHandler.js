@@ -11,9 +11,10 @@ class APIHandler {
         container.innerHTML = "";
         result.data.forEach((element) => {
           container.innerHTML += `<div class="character-info">
+          <div class="id">${element.id}</div>
           <div class="name">${element.name}</div>
           <div class="occupation">${element.occupation}</div>
-          <div class="cartoon">${element.cartoon}</div>
+          <div class="cartoon">${element.isCartoon}</div>
           <div class="weapon">${element.weapon}</div>
         </div>`;
         });
@@ -30,11 +31,11 @@ class APIHandler {
         container.innerHTML += `<div class="character-info">
           <div class="name">${result.data.name}</div>
           <div class="occupation">${result.data.occupation}</div>
-          <div class="cartoon">${result.data.cartoon}</div>
+          <div class="cartoon">${result.data.isCartoon}</div>
           <div class="weapon">${result.data.weapon}</div>
         </div>`;
       })
-      .catch((error) => console.log(error));
+      .catch(() => console.log(error));
   }
 
   createOneRegister(array) {
@@ -53,8 +54,17 @@ class APIHandler {
   updateOneRegister(array, id) {
     axios
       .patch("http://localhost:8000/characters/" + id, array)
-      .then((reponseFromApi) => console.log(reponseFromApi))
-      .catch((error) => console.log(error));
+      .then(() => {
+        document
+          .querySelector("#edit-character-form button")
+          .classList.toggle("active");
+        document.getElementById("edit-character-form").reset();
+      })
+      .catch(() => {
+        document.querySelector("#edit-character-form button").style.background =
+          "red";
+        document.getElementById("edit-character-form").reset();
+      });
   }
 
   deleteOneRegister(id) {

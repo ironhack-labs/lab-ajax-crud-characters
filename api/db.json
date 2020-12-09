@@ -13,6 +13,48 @@
       "weapon": "",
       "isCartoon": false,
       "id": 6
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 7
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 8
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 9
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 11
+    },
+    {
+      "name": "Rene",
+      "occupation": "galérien",
+      "weapon": "pleunicheur",
+      "isCartoon": true,
+      "id": 12
     }
   ]
 }
