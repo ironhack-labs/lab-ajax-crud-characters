@@ -29,8 +29,8 @@
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
-        <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <label  for="character-id-delete">Delete by ID: </label>
+        <input id="characterDelete" type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -64,23 +64,23 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input id="idElement" type="text" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input id="nameElement" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input id="occupationElement" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input id="weaponElement" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input id="checkElement" name="cartoon" type="checkbox">
         </div>
         <button id="send-data">Update</button>
       </form>

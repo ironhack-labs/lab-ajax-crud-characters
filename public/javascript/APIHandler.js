@@ -15,18 +15,26 @@ class APIHandler {
     console.log(oneCharacter.data);
   }
 
-  createOneRegister() {
-    await axios.post("http://localhost:8000/characters");
-    console.log();
+  async createOneRegister(object) {
+    const createOne = await axios.post(
+      "http://localhost:8000/characters",
+      object
+    );
+    console.log(createOne);
   }
 
-  updateOneRegister() {
-    //axios.something here...
-    // return a promise (don't forget)
+  async updateOneRegister(id, object) {
+    const updateOne = await axios.patch(
+      "http://localhost:8000/characters/" + id,
+      object
+    );
+    console.log(updateOne);
   }
 
-  deleteOneRegister() {
-    //axios.something here...
-    // return a promise (don't forget)
+  async deleteOneRegister(id) {
+    const delCharacter = await axios.delete(
+      "http://localhost:8000/characters/" + id
+    );
+    console.log(delCharacter.data);
   }
 }
