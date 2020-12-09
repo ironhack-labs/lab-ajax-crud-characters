@@ -5,7 +5,7 @@ class APIHandler {
 
   async getFullList() {
     try {
-      const getData = await axios.get("http://localhost:8000/characters");
+      const getData = await axios.get(this.BASE_URL+"/characters");
       return getData.data;
     } catch (err) {
       console.log(err)
@@ -17,7 +17,7 @@ class APIHandler {
       return "id not found";
     } else {
       try {
-        const getOneData = await axios.get("http://localhost:8000/characters/" + id);
+        const getOneData = await axios.get(this.BASE_URL+"/characters/" + id);
         return getOneData.data;
       } catch (err) {
         console.log(err);
@@ -32,13 +32,16 @@ class APIHandler {
     const { name, occupation, cartoon, weapon } = inputObject;
     if (name && occupation && weapon) {
       try {
-        const newObject = await axios.post("http://localhost:8000/characters", inputObject);
+        const newObject = await axios.post(this.BASE_URL+"/characters", inputObject);
+        console.log("check")
         return newObject.data;
+
       } catch (err) {
         console.log(err)
+        return "fill all the fields";
       }
     } else {
-      return "fill all the fields"
+      return "fill all the fields";
     }
 
   }
@@ -50,7 +53,7 @@ class APIHandler {
       return "add id";
     } else {
       try {
-        return await axios.patch("http://localhost:8000/characters/" + id, updateValue);
+        return await axios.patch(this.BASE_URL+"/characters/" + id, updateValue);
 
       } catch (err) {
         console.log(err)
@@ -65,7 +68,7 @@ class APIHandler {
       return "Character not found"
     } else {
       try {
-        await axios.delete("http://localhost:8000/characters/" + id);
+        await axios.delete(this.BASE_URL+"/characters/" + id);
         return "Character has been successfully deleted";
       } catch (err) {
         console.log(err)

@@ -130,6 +130,7 @@ document.getElementById("new-character-form").addEventListener("submit", async f
 
     try {
         const newCharacter = await charactersAPI.createOneRegister(createdObject);
+        console.log({newCharacter})
         if (newCharacter == "fill all the fields") {
             document.getElementById("send-data").style.backgroundColor = "red";
         } else {
