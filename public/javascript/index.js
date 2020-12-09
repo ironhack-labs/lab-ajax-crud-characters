@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
         name: nameUpdate.value,
         occupation: occupationUpdate.value,
         weapon: weaponUpdate.value,
-        cartoon: cartoonUpdate.value,
+        cartoon: cartoonUpdate.checked,
       };
       await charactersAPI.updateOneRegister(id, updatedDatas);
     });
@@ -82,7 +82,7 @@ function prepareData() {
   const name = nameCreate.value;
   const occupation = occupationCreate.value;
   const weapon = weaponCreate.value;
-  const cartoon = cartoonCreate.value;
+  const cartoon = cartoonCreate.checked;
   return name && occupation && weapon && cartoon
     ? {
         name,

@@ -4,15 +4,29 @@
       "name": "Link",
       "occupation": "Warrior",
       "weapon": "Bow",
-      "cartoon": "on",
+      "cartoon": false,
       "id": 1
     },
     {
       "name": "Luigi",
       "occupation": "Plumber",
       "weapon": "Carrot",
-      "cartoon": "on",
+      "cartoon": false,
       "id": 2
+    },
+    {
+      "name": "Zelda",
+      "occupation": "Princess",
+      "weapon": "Magic",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "name": "Loki",
+      "occupation": "Nap",
+      "weapon": "Claws",
+      "cartoon": false,
+      "id": 4
     }
   ]
 }

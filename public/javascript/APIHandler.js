@@ -4,32 +4,52 @@ class APIHandler {
   }
 
   async getFullList() {
-    const getList = await axios.get("http://localhost:8000/characters");
-    console.log(getList.data);
-    return getList.data;
+    try {
+      const getList = await axios.get("http://localhost:8000/characters");
+      console.log(getList.data);
+      return getList.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async getOneRegister(id) {
-    const getOne = await axios.get(`http://localhost:8000/characters/${id}`);
-    console.log(getOne.data);
-    return getOne.data;
+    try {
+      const getOne = await axios.get(`http://localhost:8000/characters/${id}`);
+      console.log(getOne.data);
+      return getOne.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async createOneRegister(datas) {
-    await axios.post("http://localhost:8000/characters", datas);
-    console.log(datas);
+    try {
+      await axios.post("http://localhost:8000/characters", datas);
+      console.log(datas);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async updateOneRegister(id, updatedDatas) {
-    await axios.patch(`http://localhost:8000/characters/${id}`, updatedDatas);
-    console.log(updatedDatas);
+    try {
+      await axios.patch(`http://localhost:8000/characters/${id}`, updatedDatas);
+      console.log(updatedDatas);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async deleteOneRegister(id) {
-    const deleteOne = await axios.delete(
-      `http://localhost:8000/characters/${id}`
-    );
-    console.log(deleteOne.data);
-    return deleteOne.data;
+    try {
+      const deleteOne = await axios.delete(
+        `http://localhost:8000/characters/${id}`
+      );
+      console.log(deleteOne.data);
+      return deleteOne.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
