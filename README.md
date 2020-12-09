@@ -94,7 +94,7 @@ In the `api` folder, create a `db.json` file. Inside our `db.json` we will speci
 Then run the following code in the terminal to make our API start working:
 
 ```bash
-$ json-server --watch db.json --port 8000
+$ json-server --watch ./api/db.json --port 8000
 ```
 
 ### Iteration 2: The `APIHandler.js` file
