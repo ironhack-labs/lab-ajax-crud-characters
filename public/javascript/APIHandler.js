@@ -1,25 +1,30 @@
+//const axios = require("axios").default;
+
 class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+  constructor(baseUrl) {
+    this.service = axios.create({ baseURL: baseUrl });
+    this.baseURL = baseUrl;
   }
 
-  getFullList () {
+  getFullList() {
+    return this.service.get("/characters");
+  } // R
 
-  }
+  getOneRegister(id) {
+    return this.service.get("/characters/" + id);
+  } //R 1
 
-  getOneRegister () {
+  createOneRegister() {
+    return this.service.post("/characters");
+  } // C
 
-  }
+  updateOneRegister(id) {
+    return this.service.patch("/characters/" + id);
+  } // U
 
-  createOneRegister () {
-
-  }
-
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
-  }
+  deleteOneRegister(id) {
+    return this.service.delete("/characters/" + id);
+  } // D
 }
+
+//axios.something to query the database at localhost/8000
