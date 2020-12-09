@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "name": "toty",
+      "occupation": "tutu",
+      "weapon": "lolo",
+      "isCartoon": true,
+      "id": 5
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 6
+    }
+  ]
+}
