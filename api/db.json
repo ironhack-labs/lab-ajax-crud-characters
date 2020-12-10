@@ -1,0 +1,74 @@
+{
+  "characters": [
+    {
+      "name": "zqdqz",
+      "occupation": "dqz",
+      "weapon": "dqzqd",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "fesf",
+      "occupation": "fez",
+      "weapon": "zef",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "fesf",
+      "occupation": "fez",
+      "weapon": "zef",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "fze",
+      "occupation": "fesf",
+      "weapon": "fesf",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "test",
+      "occupation": "barman",
+      "weapon": "fez",
+      "cartoon": true,
+      "id": 11
+    },
+    {
+      "name": "test",
+      "occupation": "barman",
+      "weapon": "fez",
+      "cartoon": true,
+      "id": 12
+    },
+    {
+      "name": "test",
+      "occupation": "fesf",
+      "weapon": "fesf",
+      "cartoon": true,
+      "id": 13
+    },
+    {
+      "name": "test",
+      "occupation": "barman",
+      "weapon": "fez",
+      "cartoon": false,
+      "id": 14
+    },
+    {
+      "name": "test",
+      "occupation": "barman",
+      "weapon": "fez",
+      "cartoon": true,
+      "id": 15
+    },
+    {
+      "name": "test",
+      "occupation": "barman",
+      "weapon": "fez",
+      "cartoon": true,
+      "id": 16
+    }
+  ]
+}
