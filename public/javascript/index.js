@@ -39,11 +39,14 @@ function updateOne() {
   };
 }
 
+//
+const allCharacters = document.querySelector(".characters-container");
+
 window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
     .addEventListener("click", function (event) {
-      charactersAPI.getFullList();
+      const list = charactersAPI.getFullList();
     });
 
   document
