@@ -29,11 +29,6 @@ class APIHandler {
   }
 
   async deleteOneRegister(charID) {
-    try {
-      await axios.delete(`${this.BASE_URL}/characters/` + charID);
-      console.log("Character has been successfully deleted");
-    } catch (err) {
-      console.error("Character not found");
-    }
+    return axios.delete(`${this.BASE_URL}/characters/` + charID);
   }
 }

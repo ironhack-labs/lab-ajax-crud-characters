@@ -62,7 +62,33 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("edit-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const editCharId = document.querySelector(`[name="chr-id"]`).value;
+      const editCharName = document.getElementById("edit-character-form").name
+        .value;
+      const editCharOccupation = document.getElementById("edit-character-form")
+        .occupation.value;
+      const editCharWeapon = document.getElementById("edit-character-form")
+        .weapon.value;
+      const editCharCartoon = document.getElementById("edit-character-form")
+        .cartoon.checked;
+      const charInfo = {
+        name: editCharName,
+        occupation: editCharOccupation,
+        weapon: editCharWeapon,
+        cartoon: editCharCartoon,
+      };
+      console.log(editCharId);
+      charactersAPI
+        .updateOneRegister(editCharId, charInfo)
+        .then(() => {
+          document.getElementById("edit-data").style.backgroundColor = "green";
+        })
+        .catch(() => {
+          document.getElementById("edit-data").style.backgroundColor = "red";
+        });
+    });
 
   document
     .getElementById("new-character-form")

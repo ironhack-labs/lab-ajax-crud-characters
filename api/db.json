@@ -29,25 +29,11 @@
       "weapon": "test"
     },
     {
-      "name": "anojan",
-      "occupation": "superman",
+      "name": "Elisa",
+      "occupation": "",
       "cartoon": false,
-      "weapon": "code",
+      "weapon": "",
       "id": 6
-    },
-    {
-      "name": "anojan",
-      "occupation": "superman",
-      "cartoon": false,
-      "weapon": "code",
-      "id": 7
-    },
-    {
-      "name": "anojan",
-      "occupation": "superman",
-      "cartoon": false,
-      "weapon": "code",
-      "id": 11
     },
     {
       "name": "A-V",
@@ -62,6 +48,13 @@
       "weapon": "sdfsd",
       "cartoon": false,
       "id": 13
+    },
+    {
+      "name": "sdf",
+      "occupation": "sdf",
+      "weapon": "sdf",
+      "cartoon": false,
+      "id": 14
     }
   ]
 }
