@@ -38,11 +38,6 @@ class APIHandler {
   deleteOneRegister(id) {
     try {
       axios.delete(`${this.BASE_URL}/characters/${id}`);
-      // if (this.deleteOneRegister(id)) {
-      //   console.log("Character has been successfully deleted");
-      // } else {
-      //   console.log("Character not found");
-      // }
     } catch (err) {
       console.error(err);
     }
