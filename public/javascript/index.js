@@ -60,6 +60,8 @@ window.addEventListener('load', () => {
         htmlString += `</div>`;
 
         document.querySelector('.characters-container').innerHTML = htmlString;
+        document.getElementById('delete-one').style.backgroundColor = 'green'; 
+        
     })
     .catch((error) => {
       console.log(error)
@@ -70,6 +72,7 @@ window.addEventListener('load', () => {
         htmlString += `</div>`;
 
         document.querySelector('.characters-container').innerHTML = htmlString;
+        document.getElementById('delete-one').style.backgroundColor = 'red'; 
     })
   });
   
