@@ -21,7 +21,16 @@ window.addEventListener('load', () => {
     showSuccessButton(exito, "#delete-one");
   });
 
-  document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+  document.getElementById('edit-character-form').addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const character ={};
+    const id = event.target.chr.value;
+    if (event.target.name.value!="")character.name = event.target.name.value;
+    if (event.target.occupation.value!="")character.occupation = event.target.occupation.value;
+    if (event.target.weapon.value!="")character.weapon = event.target.weapon.value; 
+    character.cartoon = event.target.cartoon.checked;
+    const exito = await charactersAPI.updateOneRegister(character, id);
+    showSuccessButton(exito, "#send-data-update");
 
   });
 

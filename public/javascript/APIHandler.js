@@ -36,7 +36,17 @@ class APIHandler {
     }
   }
 
-  updateOneRegister() {}
+  async updateOneRegister(editCharacter, id) {
+    try {
+      const { data: character } = await this.charactersAPI.patch(`/characters/${id}`,editCharacter);
+      console.log(character)
+      return true;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+
+  }
 
   async deleteOneRegister(id) {
     try {
