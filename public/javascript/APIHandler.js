@@ -18,17 +18,22 @@ class APIHandler {
 
   async getOneRegister(id) {
     try {
-    const { data: character } = await this.charactersAPI.get(`/characters/${id}`);
-    return character;
-  } catch (e) {
-    console.error(e);
-  }
+      const { data: character } = await this.charactersAPI.get(
+        `/characters/${id}`
+      );
+      return character;
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   async createOneRegister(newCharacter) {
     try {
-      const { data: character } = await this.charactersAPI.post(`/characters`,newCharacter);
-      console.log(character)
+      const { data: character } = await this.charactersAPI.post(
+        `/characters`,
+        newCharacter
+      );
+      console.log(character);
       return true;
     } catch (e) {
       console.error(e);
@@ -38,14 +43,16 @@ class APIHandler {
 
   async updateOneRegister(editCharacter, id) {
     try {
-      const { data: character } = await this.charactersAPI.patch(`/characters/${id}`,editCharacter);
-      console.log(character)
+      const { data: character } = await this.charactersAPI.patch(
+        `/characters/${id}`,
+        editCharacter
+      );
+      console.log(character);
       return true;
     } catch (e) {
       console.error(e);
       return false;
     }
-
   }
 
   async deleteOneRegister(id) {
