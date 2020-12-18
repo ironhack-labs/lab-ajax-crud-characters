@@ -16,11 +16,26 @@ class APIHandler {
     }
   }
 
-  getOneRegister() {}
+  async getOneRegister(id) {
+    try {
+    const { data: character } = await this.charactersAPI.get(`/characters/${id}`);
+    return character;
+  } catch (e) {
+    console.error(e);
+  }
+  }
 
   createOneRegister() {}
 
   updateOneRegister() {}
 
-  deleteOneRegister() {}
+  async deleteOneRegister(id) {
+    try {
+      await this.charactersAPI.delete(`/characters/${id}`);
+      return true;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+  }
 }
