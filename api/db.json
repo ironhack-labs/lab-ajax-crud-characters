@@ -6,6 +6,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "mario Bros",
+      "occupation": "fontanero",
+      "weapon": "ninguna",
+      "cartoon": true,
+      "id": 4
     }
   ]
 }

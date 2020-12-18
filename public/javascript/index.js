@@ -4,6 +4,7 @@ const charactersAPI = new APIHandler('http://localhost:8000');
 window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', async function (event) {
     addCharacter(await charactersAPI.getFullList());
+    console.log("prueba")
   });
 
   document.getElementById('fetch-one').addEventListener('click', async function (event) {
@@ -14,17 +15,26 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('delete-one').addEventListener('click', async function (event) {
+    event.preventDefault();
     const {value: id} = document.querySelector(".operation.delete input");
     const exito = await charactersAPI.deleteOneRegister(id);
-    showSuccessButton(exito);
+    showSuccessButton(exito, "#delete-one");
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
 
   });
 
-  document.getElementById('new-character-form').addEventListener('submit', function (event) {
-
+  document.getElementById('new-character-form').addEventListener('submit', async function (event) {
+    event.preventDefault();
+    //console.log(event.target.cartoon.checked)
+    const name = event.target.name.value;
+    const occupation = event.target.occupation.value;
+    const weapon = event.target.weapon.value;
+    const cartoon = event.target.cartoon.checked;
+    console.log({name,occupation,weapon,cartoon})
+    const exito = await charactersAPI.createOneRegister({name,occupation,weapon,cartoon});
+    showSuccessButton(exito, "#send-data-new");
   });
 });
 
@@ -54,8 +64,8 @@ function addCharacter(arrayOrNot){
   }
 }
 
-function showSuccessButton(exito){
-  const button = document.querySelector("#delete-one");
+function showSuccessButton(exito, tipo){
+  const button = document.querySelector(tipo);
   //console.log(exito);
   if(exito){button.classList.add("button-sucess");
   setTimeout(()=>{button.classList.remove("button-sucess");},4000);

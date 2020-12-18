@@ -25,7 +25,16 @@ class APIHandler {
   }
   }
 
-  createOneRegister() {}
+  async createOneRegister(newCharacter) {
+    try {
+      const { data: character } = await this.charactersAPI.post(`/characters`,newCharacter);
+      console.log(character)
+      return true;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+  }
 
   updateOneRegister() {}
 
