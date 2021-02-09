@@ -3,7 +3,7 @@ class APIHandler {
   //   this.BASE_URL = baseUrl;
   constructor() {
     this.app = axios.create({
-      baseUrl: 'https://minions-api.herokuapp.com'
+      baseURL: 'https://minions-api.herokuapp.com/'
     })
   }
 
@@ -12,7 +12,7 @@ class APIHandler {
    return this.app.get('/characters')
   }
 
-  getOneRegister () {
+  getOneRegister (id) {
    return this.app.get(`/characters/${id}`)
   }
 
@@ -24,7 +24,7 @@ class APIHandler {
     return this.app.put(`/characters/${id}`, editCharacter)
   }
 
-  deleteOneRegister (id) {
-    return this.app.post(`/characters/${id}`)
+  deleteOneRegister (id, character) {
+    return this.app.delete(`/characters/${id}`, character)
   }
 }
