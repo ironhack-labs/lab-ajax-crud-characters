@@ -10,24 +10,24 @@ class APIHandler {
       // console.log(response.data)
       const charList = document.querySelector(`.characters-container`);
         characters.forEach(character => {
-          charList.innerHTML += `
+          charList.innerHTML += 
+            `
               <div class="character-info">
                 <div class="name">Name: <strong>${character.name}</strong></div>
                 <div class="occupation">Occupation: <strong>${character.occupation}</strong></div>
                 <div class="cartoon">Is a Cartoon? <strong>${character.cartoon}</strong></div>
                 <div class="weapon">Weapon: <strong>${character.weapon}</strong></div>
               </div>
-          `
-    })
-  })
-    .catch(err => console.log('error getting characters: ', err))
-  }
+            `
+        })
+    }).catch(err => console.log(`error fetching characters: , ${err}`)
+  )}
 
   getOneRegister (id) {
     axios.get(`${this.BASE_URL}/characters/${id}`)
     .then(response => {
-      console.log(response);
-      const character = response.data;
+      console.log(response)
+      const character = response.data
       document.querySelector('.operation').innerHTML =
         `<div class="character-info">
           <div class="id">Id:<strong>${character.id}</strong></div>
@@ -36,7 +36,7 @@ class APIHandler {
           <div class="cartoon">Is a Cartoon? <strong>${character.cartoon}</strong></div>
           <div class="weapon">Weapon: <strong>${character.weapon}</strong></div>
           </div>`
-    })
+      })
     .catch(err => console.log(`error fetching character: , ${err}`))
   }
 
@@ -52,7 +52,7 @@ class APIHandler {
         weapon,
         cartoon
       })
-      .then(response => {
+      .then( => {
         this.getFullList();
       })
       .catch(err => {
@@ -73,11 +73,11 @@ class APIHandler {
           cartoon,
           weapon
         })
-        .then(response => {
+        .then( => {
           this.getFullList();
         })
-        .catch(error => {
-          console.log(`error updating character: ${error}`);
+        .catch(err => {
+          console.log(`error updating character: ${err}`);
         });
   }
 
@@ -85,7 +85,7 @@ class APIHandler {
     const id = document.querySelector('.operation.delete input').value
     axios
       .delete(`${this.BASE_URL}/characters/${id}`)
-      .then((response) => {
+      .then(() => {
         this.getFullList();
       })
       .catch(err => {
