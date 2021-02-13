@@ -20,11 +20,11 @@ class APIHandler {
     } = newCharacter;
 
     if (!name || !occupation || !cartoon || !weapon) {
-      document.getElementById('send-data').style.backgroundColor = 'red';
-      document.getElementById('send-data').innerHTML = 'Error';
+      document.getElementById('create').style.backgroundColor = 'red';
+      document.getElementById('create').innerHTML = 'Error';
       setTimeout(() => {
-        document.getElementById('send-data').style.background = 'none';
-        document.getElementById('send-data').innerHTML = 'Create';
+        document.getElementById('create').style.background = 'none';
+        document.getElementById('create').innerHTML = 'Create';
         document.getElementById('new-character-form').reset();
       }, 1500)
       throw new Error('Please, create a valid character. It must contain name, occupation, cartoon and weapon fields.')

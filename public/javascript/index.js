@@ -11,19 +11,25 @@ const updateCharacter = (id) => {
   console.log(`Character Id: ${id}`);
 
   charactersAPI.getOneRegister(id)
-   .then(response => {
+    .then(response => {
       console.log(response.data)
-      const { id, name, occupation, weapon, isCartoon }  = response.data;
+      const {
+        id,
+        name,
+        occupation,
+        weapon,
+        isCartoon
+      } = response.data;
 
       charName.value = name;
       charOccupation.value = occupation;
       charWeapon.value = weapon;
       charCartoon.value = isCartoon;
       charId.value = id;
-   })
-   .catch(err=> {
-     console.log('The error while getting a single character is: ', err.response);
-   })
+    })
+    .catch(err => {
+      console.log('The error while getting a single character is: ', err.response);
+    })
 }
 // This block of code has to be outside of the window.addEventListener for the 'onclik' attribute to work.
 
@@ -145,6 +151,13 @@ window.addEventListener('load', () => {
         })
         .catch(err => {
           console.log(`Error while deleting the character: ${err}`)
+          document.getElementById('delete-one').style.backgroundColor = 'red';
+          document.getElementById('delete-one').innerHTML = 'Error';
+          setTimeout(() => {
+            document.getElementById('delete-one').style.background = 'none';
+            document.getElementById('delete-one').innerHTML = 'Delete one';
+          }, 1500)
+          //throw new Error('Please, create a valid character. It must contain name, occupation, cartoon and weapon fields.')
         });
     });
 
@@ -155,10 +168,10 @@ window.addEventListener('load', () => {
   });
 
   // UPDATE ONE CHARACTER
-    document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+  document.getElementById('edit-character-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const charId= document.getElementById('char-id').value;
+    const charId = document.getElementById('char-id').value;
     console.log('CharId: ', charId)
 
     const updatedCharacter = {
