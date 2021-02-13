@@ -1,92 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>IH Characters</title>
 </head>
+
 <body>
   <section class="container">
     <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
+    <!-- <div class="characters-container">
       <div class="character-info">
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
         <div class="cartoon">Is a Cartoon?</div>
         <div class="weapon">Character Weapon</div>
       </div>
-    </div>
+    </div> -->
+
     <section class="operations">
+      <!-- GET ALL CHARACTERS -->
       <div class="operation">
-        <button id="fetch-all">Fetch all</button>
+        <button class="mb-3" id="fetch-all">Fetch all characters</button>
       </div>
+      <section class="hidden" id="all-characters">
+        <h1>All Characters</h1>
+        <!-- All characters listed here -->
+      </section>
+
+      <!-- GET ONE CHARACTER -->
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id" id="character-id">
         <button id="fetch-one">Fetch one</button>
+        <h6 class="hidden text-danger" id="id-error">Please, provide a valid ID</h6>
       </div>
-      <div class="operation delete">
+      <section class="hidden" id="get-one-character">
+        <!-- Selected character info shown here -->
+      </section>
+
+      <!-- DELETE ONE CHARACTER -->
+      <div class="operation delete"> <!-- ojo quitado delete de class-->
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="text" name="character-id-delete" id="character-id-delete">
         <button id="delete-one">Delete one</button>
+        <h5 class="hidden text-danger mt-2" id="successfuly-deleted">Successfuly deleted!</h5>
       </div>
+      <!-- Get character info before deletion -->
+      <section class="hidden" id="confirm-deletion">
+        <h3 class="text-danger mt-3">Are you sure you want to delete this character?</h3>
+        <section class="hidden"  id="get-character-to-delete">
+          <!-- Selected character to delete info shown here -->
+        </section>
+        <button class="btn-danger" id="confirm-deletion-btn">Confirm</button>
+        <button class="btn-light" id="cancel-deletion">Cancel</button>
+      </section>
 
     </section>
   </section>
+
   <section class="container">
+    <!-- CREATE ONE CHARACTER -->
     <section class="form-container">
       <h2>New Character</h2>
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="name-input">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="occupation-input">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="weapon-input">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" id="cartoon-input">
         </div>
-        <button id="send-data">Create</button>
+        <button id="create">Create</button>
       </form>
     </section>
+
+     <!-- UPDATE ONE CHARACTER -->
     <section class="form-container">
       <h2>Edit Character</h2>
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input type="text" name="chr-id" id="char-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" name="name" id="update-name-input">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" name="occupation" id="update-occupation-input">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" name="weapon" id="update-weapon-input">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" type="checkbox" id="update-cartoon-input">
         </div>
-        <button id="send-data">Update</button>
+        <button id="update">Update</button>
       </form>
     </section>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
+  </script>
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
+
 </html>

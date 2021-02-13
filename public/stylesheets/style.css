@@ -34,7 +34,7 @@ button {
 
 .container {
   width: 70%;
-  margin: 50px auto 0;
+  margin: 50px auto 50px;
   padding: 10px;
   border-radius: 20px;
   background-color: rgba(88, 98, 123, 0.95);
@@ -65,7 +65,7 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
+  width: 50%;
   margin: 10px;
   padding: 10px;
   text-align: left;
@@ -105,3 +105,11 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.hidden {
+  display: none;
+}
+
+/* .red-alert {
+  color: red;
+} */
