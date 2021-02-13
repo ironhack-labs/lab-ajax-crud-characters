@@ -4,22 +4,50 @@ class APIHandler {
   }
 
   getFullList () {
-
+    axios
+      .get(`${this.BASE_URL} / characters`)
+      .then((response) => {
+      console.log(response.data)
+      })
+      .catch((e) => showPopup(e))
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    axios
+      .get(`${this.BASE_URL} / characters/ ${id}`)
+      .then((response) => {
+      console.log(response.data)
+      })
+      .catch((e) => showPopup(e))
+  }
+  
+  createOneRegister (data) {
+    axios
+      .post(`${this.BASE_URL} / characters`, data)
+      .then((response) => {
+      console.log(response.data)
+      })
+      .catch((e) => showPopup(e))
   }
 
-  createOneRegister () {
-
+  updateOneRegister (data, id) {
+    axios
+      .put(`${this.BASE_URL} / characters/ ${id}`, data)
+      .then((response) => {
+      console.log(response.data)
+      })
+      .catch((e) => showPopup(e))
   }
 
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    axios
+      .delete(`${this.BASE_URL} / characters/ ${id}`)
+      .then((response) => {
+      console.log(response.data)
+      })
+      .catch((e) => showPopup(e))
   }
 }
+
+// const api = new APIHandler(`http: // localhost: 8000`)
+// console.log (api.getOneRegister(1))
