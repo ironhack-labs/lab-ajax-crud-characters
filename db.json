@@ -15,32 +15,11 @@
       "cartoon": false
     },
     {
-      "id": 3,
-      "name": "Sponge Bob",
+      "name": "Sponge ",
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
-      "cartoon": true
-    },
-    {
-      "name": "Javier",
-      "occupation": "Programmer",
-      "weapon": "Laptop",
       "cartoon": "undefined",
-      "id": 4
-    },
-    {
-      "name": "Javito",
-      "occupation": "Gamer",
-      "weapon": "Gamepad",
-      "cartoon": "undefined",
-      "id": 5
-    },
-    {
-      "name": "Javier",
-      "occupation": "Programmer",
-      "weapon": "Lightsaber",
-      "cartoon": "on",
-      "id": 6
+      "id": 3
     }
   ]
 }

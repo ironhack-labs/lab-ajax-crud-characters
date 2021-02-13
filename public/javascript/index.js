@@ -188,7 +188,7 @@ window.addEventListener('load', () => {
         setTimeout(() => {
           document.getElementById('update').style.background = 'none';
           document.getElementById('update').innerHTML = 'Create';
-          document.getElementById('new-character-form').reset();
+          document.getElementById('edit-character-form').reset();
         }, 2000)
       });
   });
