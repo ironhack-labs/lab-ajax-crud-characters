@@ -10,7 +10,6 @@ window.addEventListener('load', () => {
 //SEARCH BY ID
   document.getElementById('fetch-one').addEventListener('click', function (event) {
     const idSearch= document.getElementById('search__id').value
-    //console.log(idSearch)
     charactersAPI.getOneRegister (idSearch)
   });
 //DELETE
@@ -20,6 +19,8 @@ window.addEventListener('load', () => {
 
   //EDIT
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    
+    event.preventDefault()
     const updatedCharacterInfo = {
       name: document.querySelector("input[name=name-edit]").value,
       occupation: document.querySelector("input[name=occupation-edit]").value,
@@ -45,6 +46,8 @@ window.addEventListener('load', () => {
     document.getElementById("new-character-form").reset()
     
   });
+
+ 
 
   });
 

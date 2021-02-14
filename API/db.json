@@ -20,6 +20,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Superman",
+      "occupation": "Super hero",
+      "weapon": "His hands",
+      "cartoon": true,
+      "id": 4
     }
   ]
 }
