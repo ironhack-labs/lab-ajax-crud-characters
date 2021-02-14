@@ -12,16 +12,6 @@
   <section class="container">
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
-      <!-- AQUI METEMOS LAS TARJETITAS
-      
-      <div class="character-info">
-        <div class="name">Character Name</div>
-        <div class="occupation">Character Occupation</div>
-        <div class="cartoon">Is a Cartoon?</div>
-        <div class="weapon">Character Weapon</div>
-      </div>
-    
-    -->
     </div>
     <section class="operations">
       <div class="operation">
@@ -29,12 +19,12 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="number" id="character_id" name="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input type="number" id="character_to_delete" name="character-id-delete">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -46,19 +36,19 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input type="text" id="create_name" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input type="text" id="create_occup" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input type="text" id="create_weapon" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input name="cartoon" id="new_checkbox" type="checkbox">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -90,6 +80,9 @@
       </form>
     </section>
   </section>
+
+  <div class="notificacion"></div>
+
   <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>

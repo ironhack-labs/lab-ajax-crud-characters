@@ -105,3 +105,15 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.notificacion {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 20px 20px 0;
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: none;
+}
