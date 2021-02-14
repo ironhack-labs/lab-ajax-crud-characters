@@ -36,8 +36,20 @@ class APIHandler {
     }
   } 
 
+  reloadExample(){
+    const characterContainer = document.getElementById('characters-container')
+    characterContainer.innerHTML = ''
+    characterContainer.innerHTML += `<div class="character-info">
+    <div class="name">Character Name</div>
+    <div class="occupation">Character Occupation</div>
+    <div class="cartoon">Is a Cartoon?</div>
+    <div class="weapon">Character Weapon</div>
+    </div>`
+  }
+
   recolorButtons(){
-    button.style.background = "transparent"
+    let btns= document.getElementsByTagName('button')
+    for(let i=0;i<btns.length;i++){btns[i].style.background = "transparent"}
   }
   //SHOW ALL CHARACTERS
   getFullList () {
@@ -58,10 +70,11 @@ class APIHandler {
       //Check the id was provided
       if(myData.id != undefined){
         //Remove the example card
-        document.getElementById("fetch-one").style.background = "green"
         document.getElementById('characters-container').innerHTML = ''
         //Add fullfiled new card
         this.drawCard(myData)
+        //Change button color
+        document.getElementById("fetch-one").style.background = "green"
       }else{
         console.log('Id required')
         document.getElementById("fetch-one").style.background = "orange"
@@ -70,7 +83,7 @@ class APIHandler {
     .catch((e) => console.log(e))
   }
 
-  
+  //CREATE ONE CHARACTER AND CHANGE BUTTON COLOR
   createOneRegister (data) {
     axios
     .post(`${this.BASE_URL}/characters`, data)
@@ -84,7 +97,7 @@ class APIHandler {
       document.getElementById("send-data").style.background = "red"
     });
   }
-
+  //UPDATE AND CHANGE BUTTON BACKGROUND COLOR
   updateOneRegister (id,data) {
     axios
     .put(`${this.BASE_URL}/characters/${id}`, data)

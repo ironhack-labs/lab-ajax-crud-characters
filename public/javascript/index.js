@@ -47,8 +47,15 @@ window.addEventListener('load', () => {
     
   });
 
- 
-
+  //CLEAR BUTTON COLORS
+  document.getElementById('clear__btn').addEventListener('click', function (event) {
+    charactersAPI.recolorButtons()
   });
 
-;
+  //RELOAD THE EXAMPLE CARD
+  document.getElementById('reload__btn').addEventListener('click', function (event) {
+    charactersAPI.reloadExample()
+    
+  })
+
+})

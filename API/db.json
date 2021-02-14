@@ -22,11 +22,18 @@
       "cartoon": true
     },
     {
-      "name": "Superman",
-      "occupation": "Super hero",
-      "weapon": "His hands",
+      "name": "Brutus",
+      "occupation": "Fighter",
+      "weapon": "Nails",
       "cartoon": true,
       "id": 4
+    },
+    {
+      "name": "Alice",
+      "occupation": "Web Dev Student",
+      "weapon": "Mental Strenght",
+      "cartoon": false,
+      "id": 5
     }
   ]
 }
