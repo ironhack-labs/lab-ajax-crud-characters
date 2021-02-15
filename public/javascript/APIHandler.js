@@ -12,15 +12,15 @@ class APIHandler {
     return axios.get(`/characters/${id}`)
   }
 
-  createOneRegister () {
-    return axios.post(`/characters/${id}`, body)
+  createOneRegister (data) {
+    return axios.post(`/characters`, data)
   }
 
-  updateOneRegister () {
-    return axios.put(`/characters/${id}`, body)
+  updateOneRegister (data, id) {
+    return axios.put(`/characters/${id}`, data)
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {
     return axios.delete(`/characters/${id}`)
   }
 }
