@@ -15,11 +15,11 @@
       "cartoon": true
     },
     {
-      "name": "Ironhack",
-      "occupation": "actor",
+      "id": 4,
+      "name": "HP",
+      "occupation": "mago",
       "cartoon": true,
-      "weapon": "4",
-      "id": 10
+      "weapon": "varita"
     }
   ]
 }

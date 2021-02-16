@@ -83,13 +83,35 @@ class APIHandler {
       })
   }
 
-  updateOneRegister (data, id) {
+  updateOneRegister(character, id) {
+    id = document.getElementById('idCharacter').value
+    let name = document.getElementById('nameCharacter').value
+    //console.log(name)
+    let occupation = document.getElementById('occupationCharacter').value
+    //console.log(occupation)
+    let cartoon = document.getElementById('cartoonCharacter').checked
+    //console.log(cartoon)
+    let weapon = document.getElementById('weaponCharacter').value
+    //console.log(weapon)
+    character = {
+      id,
+      name,
+      occupation,
+      cartoon,
+      weapon
+    }     
     axios
-      .put(`${this.BASE_URL}/characters/${id}`, data)
+      .put(`${this.BASE_URL}/characters/${id}`, character)
       .then((response) => {
-      console.log(response.data)
+        console.log(response.data)
+        const button = document.getElementById('send-update')
+        button.classList.add('background-Green')
       })
-      .catch((e) => console.log(e))
+      .catch((e) => {
+        console.log(e)
+        const button = document.getElementById('send-update')
+        button.classList.add('background-Green')
+      })
   }
 
   deleteOneRegister () {
