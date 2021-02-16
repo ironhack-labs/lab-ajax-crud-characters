@@ -10,39 +10,32 @@ class APIHandler {
   }
 
   getOneRegister (id) {
-    axios.get(`http://localhost:8000/characters/${id}`)
-    .then((character) => {
-
-    })
-    .catch(err => console.log(err))
+    console.log(typeof id)
+    console.log(id)
+    console.log(`${this.BASE_URL}/characters/${id}`)
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
+   
 
   }
 
   createOneRegister (newCharacter) {
     
-    axios.post('http://localhost:8000/characters',newCharacter)
-    .then((character) => {
-     // console.log(characters)
-
-    })
-    .catch(err => console.log(err))
+    return axios.post(`${this.BASE_URL}/characters/`,newCharacter)
+  
 
   }
 
   
 
   updateOneRegister (character) {
-    axios.put(`http://localhost:8000/characters/${character.id}`,character)
-    .then((character) => {
-      
-    })
+    return axios.put(`${this.BASE_URL}/characters/${character.id}`,character)
+ 
 
   }
 
   deleteOneRegister (id) {
-    axios.delete(`http://localhost:8000/characters/${id}`)
-    .then()
-    .catch(err => console.log(err))
+    return axios.delete(`${this.BASE_URL}/characters/${id}`)
+   
 
 
   }

@@ -10,28 +10,53 @@ window.addEventListener('load', () => {
       .then((characters) => {
         charactersContainer.innerHTML = ""
         //console.log(characters.data);
-    
+
         characters.data.forEach(character => {
-        let  characterInfo = document.createElement('div')
-        characterInfo.className = 'character-info'
+          let characterInfo = document.createElement('div')
+          characterInfo.className = 'character-info'
           characterInfo.innerHTML = `
       <div class="name">Name: ${character.name}</div>
       <div class="occupation">occupation:${character.occupation}</div>
       <div class="cartoon">Cartoon: ${character.cartoon}</div>
       <div class="weapon">weapon: ${character.weapon}</div>
      `
-    
-           charactersContainer.appendChild(characterInfo)
+
+          charactersContainer.appendChild(characterInfo)
 
         })
-        console.log(`al final de getFullList`)
-      
+
       })
       .catch((e) => console.log(e))
 
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
+    event.preventDefault();
+
+
+
+    let input = document.getElementsByName('character-id')[0];
+    console.log(input.value); //=> ""
+
+    charactersAPI.getOneRegister(Number(input.value))
+      .then((character) => {
+       // console.log(character)
+        const charactersContainer = document.querySelector(".characters-container");
+        charactersContainer.innerHTML = ""
+        let characterInfo = document.createElement('div')
+        characterInfo.className = 'character-info'
+        characterInfo.innerHTML = `
+<div class="name">Name: ${character.data.name}</div>
+<div class="occupation">occupation:${character.data.occupation}</div>
+<div class="cartoon">Cartoon: ${character.data.cartoon}</div>
+<div class="weapon">weapon: ${character.data.weapon}</div>
+`
+
+        charactersContainer.appendChild(characterInfo)
+
+      })
+      .catch((e) => console.log(e))
+
 
   });
 
