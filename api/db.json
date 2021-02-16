@@ -27,6 +27,13 @@
       "weapon": "Blaster Pistol",
       "cartoon": true,
       "id": 4
+    },
+    {
+      "name": "luke",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 5
     }
   ]
 }
