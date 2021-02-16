@@ -19,12 +19,6 @@ const drawCards = (items) => {
   });
 }
 
-
-// const charName = document.querySelector('.name')
-// const charOccupation = document.querySelector('.occupation')
-// const charCartoon = document.querySelector('.cartoon')
-// const charWeapon = document.querySelector('.weapon')
-
 class APIHandler {
   constructor (baseUrl) {
     this.BASE_URL = baseUrl;
