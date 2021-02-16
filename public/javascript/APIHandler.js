@@ -54,13 +54,33 @@ class APIHandler {
       .catch((e) => console.log(e))
   }
   
-  createOneRegister (data) {
+  createOneRegister (character) {
+    let name = document.getElementById('nameNewCharacter').value
+    //console.log(name)
+    let occupation = document.getElementById('occupationNewCharacter').value
+    //console.log(occupation)
+    let cartoon = document.getElementById('cartoonNewCharacter').checked
+    //console.log(cartoon)
+    let weapon = document.getElementById('weaponNewCharacter').value
+    //console.log(weapon)
+    character = {
+      name,
+      occupation,
+      cartoon,
+      weapon
+    }     
     axios
-      .post(`${this.BASE_URL}/characters`, data)
+      .post(`${this.BASE_URL}/characters`, character)
       .then((response) => {
-      console.log(response.data)
+        //console.log(response.data)
+        const button = document.getElementById('send-data')
+        button.classList.add('background-Green')
       })
-      .catch((e) => console.log(e))
+      .catch((e) => {
+        console.log(e)
+        const button = document.getElementById('send-data')
+        button.classList.add('background-Red')
+      })
   }
 
   updateOneRegister (data, id) {

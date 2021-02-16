@@ -13,6 +13,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Ironhack",
+      "occupation": "actor",
+      "cartoon": true,
+      "weapon": "4",
+      "id": 10
     }
   ]
 }
