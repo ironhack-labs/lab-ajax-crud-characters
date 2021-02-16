@@ -109,3 +109,11 @@ button {
 .hide {
   display: none;
 }
+
+.background-Green {
+  background-color: green;
+}
+
+.background-Red {
+  background-color: red;
+}

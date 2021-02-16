@@ -19,6 +19,7 @@ const drawCards = (items) => {
   });
 }
 
+
 // const charName = document.querySelector('.name')
 // const charOccupation = document.querySelector('.occupation')
 // const charCartoon = document.querySelector('.cartoon')
@@ -40,42 +41,52 @@ class APIHandler {
       .catch((e) => console.log (e))
   }
 
-  getOneRegister (id) {
+  getOneRegister () {
+    let inputOne = document.getElementById('inputOne').value
+    let id = inputOne
+    //console.log(id)
     axios
-      .get(`${this.BASE_URL} / characters/ ${id}`)
+      .get(`${this.BASE_URL}/characters/${id}`)
       .then((response) => {
-      console.log(response.data)
+        const character = response.data
+        drawCard(character)           
       })
-      .catch((e) => showPopup(e))
+      .catch((e) => console.log(e))
   }
   
   createOneRegister (data) {
     axios
-      .post(`${this.BASE_URL} / characters`, data)
+      .post(`${this.BASE_URL}/characters`, data)
       .then((response) => {
       console.log(response.data)
       })
-      .catch((e) => showPopup(e))
+      .catch((e) => console.log(e))
   }
 
   updateOneRegister (data, id) {
     axios
-      .put(`${this.BASE_URL} / characters/ ${id}`, data)
+      .put(`${this.BASE_URL}/characters/${id}`, data)
       .then((response) => {
       console.log(response.data)
       })
-      .catch((e) => showPopup(e))
+      .catch((e) => console.log(e))
   }
 
-  deleteOneRegister (id) {
+  deleteOneRegister () {
+    let inputDelete = document.getElementById('inputDelete').value
+    let id = inputDelete
     axios
-      .delete(`${this.BASE_URL} / characters/ ${id}`)
-      .then((response) => {
-      console.log(response.data)
+      .delete(`${this.BASE_URL}/characters/${id}`)
+      .then(() => {
+        const button = document.getElementById('delete-one')
+        button.classList.add('background-Green')
       })
-      .catch((e) => showPopup(e))
+      .catch((e) => {
+        console.log(e)
+        const button = document.getElementById('delete-one')
+        button.classList.add('background-Red')
+      })
   }
 }
 
-// const api = new APIHandler(`http: // localhost: 8000`)
-// console.log (api.getOneRegister(1))
+
