@@ -20,7 +20,27 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "MORDOR",
+      "occupation": "BEAST",
+      "weapon": "AXE",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "Superman",
+      "occupation": "Superheroe",
+      "weapon": "Volar",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Superman",
+      "occupation": "Superheroe",
+      "weapon": "Volar",
+      "cartoon": true,
+      "id": 6
     }
- 
   ]
 }
