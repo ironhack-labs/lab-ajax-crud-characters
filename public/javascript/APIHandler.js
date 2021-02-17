@@ -1,7 +1,8 @@
 const drawCard = (character) => {
-  const {id, name, occupation, cartoon, weapon} = character
+  const { id, name, occupation, cartoon, weapon } = character
+  console.log (character)
   const element = document.querySelector(`.characters-container`)
-  element.innerHTML += `<div>
+  element.innerHTML += `<div class="character-list">
   <p><b>Id:</b> ${id}<p>
   <p><b>Name:</b> ${name}<p>
   <p><b>Occupation:</b> ${occupation}<p>
@@ -10,7 +11,9 @@ const drawCard = (character) => {
   </div>
   `
   const elementDelete = document.querySelector(`.character-info`)
-  elementDelete.classList.add("hide")
+  if (elementDelete) {
+    elementDelete.classList.add("hide")
+  } 
 }
 
 const drawCards = (items) => {

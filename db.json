@@ -2,10 +2,10 @@
   "characters": [
     {
       "id": 1,
-      "nombre": "Han Solo",
-      "ocupación": "Contrabandista",
-      "arma": "Pistola bláster",
-      "caricatura": true
+      "name": "Han Solo",
+      "occupation": "Contrabandista",
+      "weapon": "Pistola bláster",
+      "cartoon": true
     },
     {
       "id": 3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 4,
-      "name": "HP",
+      "name": "Harry Potter",
       "occupation": "mago",
-      "cartoon": true,
+      "cartoon": false,
       "weapon": "varita"
     }
   ]

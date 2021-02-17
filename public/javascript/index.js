@@ -5,18 +5,16 @@ window.addEventListener('load', () => {
     event.preventDefault()
     const fetchAllButton = document.getElementById('fetch-all')
     const elementDelete = document.querySelector(`.characters-container`)
+    const characterList = document.getElementsByClassName('character-list')
     fetchAllButton.innerHTML = 'Fetch All'
-    if (event.target.className == 'show') {
-      elementDelete.classList.add('hide')
-      fetchAllButton.classList.remove('show')
+    //console.log(characterList)
+    if (characterList.length) {
+      elementDelete.innerHTML = ''
     } else {
-      elementDelete.classList.remove('hide')
-      fetchAllButton.classList.add('show')
       fetchAllButton.innerHTML = 'Hide All'
       charactersAPI.getFullList()
-    }
-        
-  });
+    }     
+  })
   document.getElementById('fetch-one').addEventListener('click', function (event) {
     event.preventDefault()
     charactersAPI.getOneRegister()
