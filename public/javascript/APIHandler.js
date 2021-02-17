@@ -10,9 +10,7 @@ class APIHandler {
   }
 
   getOneRegister (id) {
-    console.log(typeof id)
-    console.log(id)
-    console.log(`${this.BASE_URL}/characters/${id}`)
+    
     return axios.get(`${this.BASE_URL}/characters/${id}`)
    
 
@@ -28,6 +26,8 @@ class APIHandler {
   
 
   updateOneRegister (character) {
+
+    console.log(character)
     return axios.put(`${this.BASE_URL}/characters/${character.id}`,character)
  
 

@@ -2,10 +2,10 @@
   "characters": [
     {
       "id": 1,
-      "name": "Han Solo",
+      "name": "Antonio Banderas",
       "occupation": "Smuggler",
       "weapon": "Blaster Pistol",
-      "cartoon": true
+      "cartoon": false
     },
     {
       "id": 2,
@@ -31,14 +31,14 @@
     {
       "name": "Superman",
       "occupation": "Superheroe",
-      "weapon": "Volar",
+      "weapon": "Capa",
       "cartoon": true,
       "id": 5
     },
     {
-      "name": "Superman",
-      "occupation": "Superheroe",
-      "weapon": "Volar",
+      "name": "minion",
+      "occupation": "thief",
+      "weapon": "bananna",
       "cartoon": true,
       "id": 6
     }

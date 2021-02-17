@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
 
 
     let input = document.getElementsByName('character-id')[0];
-    console.log(input.value); //=> ""
+    
 
     charactersAPI.getOneRegister(Number(input.value))
       .then((character) => {
@@ -55,16 +55,55 @@ window.addEventListener('load', () => {
         charactersContainer.appendChild(characterInfo)
 
       })
-      .catch((e) => console.log(e))
+      .catch((e) => {
+        const buttonDelete = document.getElementById("fetch-one");
+        buttonDelete.style.background = "Red";
+        console.log(e)
+      })
 
 
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
+    event.preventDefault()
+    let input = document.getElementsByName("character-id-delete")[0]
+    charactersAPI.deleteOneRegister(Number(input.value))
+    .then(() =>{
+      const buttonDelete = document.getElementById("delete-one");
+      buttonDelete.style.background = "Green";
+    })
+    .catch((e) => {
+      const buttonDelete = document.getElementById("delete-one");
+      buttonDelete.style.background = "Red";
+      console.log(e)
+    })
 
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    console.log(event.target)
+    event.preventDefault()
+    const editCharacter = {
+      id: Number(event.target[0].value),
+      name: event.target[1].value,
+      occupation: event.target[2].value,
+      weapon: event.target[3].value,
+      cartoon: event.target[4].checked
+    }
+    console.log(editCharacter.id)
+    console.log(editCharacter.name)
+    console.log(editCharacter.occupation)
+    charactersAPI.updateOneRegister(editCharacter)
+    .then ((character) => {
+      const buttonEdit = document.getElementById("edit-data");
+      buttonEdit.style.background = "Green";
+
+    })
+    .catch((e) => {
+      const buttonEdit = document.getElementById("edit-data");
+      buttonEdit.style.background = "Red";
+      console.log(e)
+    })
 
   });
 
