@@ -1,25 +1,26 @@
+// json-server --watch db.json --port 8000
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
-
-  getFullList () {
-
+  // axios.defaults.baseURL = this.BASE_URL;
+  getFullList() {
+    return axios.get(`${this.BASE_URL}/characters`)
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`)
   }
 
-  createOneRegister () {
-
+  createOneRegister(data) {
+    return axios.post(`${this.BASE_URL}/characters`, data)
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id, data) {
+    return axios.put(`${this.BASE_URL}/characters/${id}`, data)
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    return axios.delete(`${this.BASE_URL}/characters/${id}`)
   }
 }
