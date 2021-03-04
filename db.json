@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Toto",
+      "occupation": "Test",
+      "weapon": "Test",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Test",
+      "occupation": "test2",
+      "weapon": "test3",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Test22",
+      "occupation": "test23",
+      "weapon": "3test3",
+      "cartoon": true,
+      "id": 6
+    }
+  ]
+}
