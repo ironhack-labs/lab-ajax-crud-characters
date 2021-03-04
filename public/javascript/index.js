@@ -30,7 +30,24 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-    
+    event.preventDefault();
+    const id = document.getElementById("id-update").value;
+    console.log(id);
+    const nameUp = document.getElementById("name-update");
+    const occupationUp = document.getElementById("occupation-update");
+    const weaponUp = document.getElementById("weapon-update");
+    const cartoonUp = document.getElementById("cartoon-update")
+    console.log(nameUp.value, occupationUp.value, weaponUp.value, cartoonUp.value)
+    user = {
+      name: nameUp.value,
+      occupation: occupationUp.value,
+      weapon: weaponUp.value,
+      cartoon: cartoonUp.value === 'on',
+    }
+    console.log(user)
+    charactersAPI.updateOneRegister(id, user)
+    .then((char) => console.log(char))
+    .catch(err => console.log(err));
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {

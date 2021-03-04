@@ -1,17 +1,31 @@
 {
   "characters": [
     {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "test",
+      "occupation": "test",
+      "weapon": "test",
+      "cartoon": true,
+      "id": 1
     },
     {
-      "name": "Shumon",
-      "occupation": "home puppy",
+      "name": "shupoo",
+      "occupation": "naughty puppy",
       "weapon": "teeth",
-      "cartoon": false,
+      "cartoon": true,
+      "id": 2
+    },
+    {
+      "name": "dundun",
+      "occupation": "eater",
+      "weapon": "belly",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "shupoo",
+      "occupation": "test",
+      "weapon": "booby",
+      "cartoon": true,
       "id": 4
     },
     {
@@ -20,76 +34,6 @@
       "weapon": "teeth",
       "cartoon": false,
       "id": 5
-    },
-    {
-      "name": "Shumon",
-      "occupation": "home puppy",
-      "weapon": "teeth",
-      "cartoon": false,
-      "id": 6
-    },
-    {
-      "name": "Shumon",
-      "occupation": "home puppy",
-      "weapon": "teeth",
-      "cartoon": false,
-      "id": 7
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": true,
-      "id": 8
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": true,
-      "id": 9
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": true,
-      "id": 10
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": true,
-      "id": 11
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": true,
-      "id": 12
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": true,
-      "id": 13
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": true,
-      "id": 14
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": true,
-      "id": 15
     }
   ]
 }
