@@ -1,23 +1,105 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
 
 window.addEventListener('load', () => {
-  document.getElementById('fetch-all').addEventListener('click', function (event) {
+  document.getElementById('fetch-all')
+  .addEventListener('click', function (event) {
+    charactersAPI.getFullList()
+    .then((apiRes) => {
+      console.log(apiRes.data);
+    })
+    .catch(err => {
+      console.log(err);
+    })
 
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
+    const input = document.querySelector(".operation input");
+    const id = input.value;
 
+    event.preventDefault()
+  
+      charactersAPI.getOneRegister(id)
+        .then((apiRes) => {
+          console.log(apiRes.data);
+        })
+        .catch(err => {
+          console.log(err);
+        })
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
+    const input = document.querySelector(".delete input");
+    const id = input.value;
+    const btn = document.querySelector("#delete-one");
 
+    event.preventDefault()
+
+    charactersAPI.deleteOneRegister(id)
+      .then((apiRes) => {
+        
+        btn.style.backgroundColor = "green";
+        console.log(apiRes.data);
+      })
+      .catch(err => {
+
+        btn.style.backgroundColor = "red";
+        console.log(err);
+      })
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    const inputId = document.querySelector('#edit-character-form input[name="chr-id"]');
+    const inputName = document.querySelector('#edit-character-form input[name="name"]');
+    const inputOccupation = document.querySelector('#edit-character-form input[name="occupation"]');
+    const inputWeapon = document.querySelector('#edit-character-form input[name="weapon"]');
+    const checkboxIsCartoon = document.querySelector('#edit-character-form input[name="cartoon"]');
+    const btnUpdate = document.querySelector('#send-data-update');
+  
+    event.preventDefault()
 
+      charactersAPI.updateOneRegister(inputId.value, {
+        id: inputId.value,
+        name: inputName.value,
+        occupation: inputOccupation.value,
+        weapon: inputWeapon.value,
+        isCartoon: checkboxIsCartoon.checked,
+      })
+        .then((apiRes) => {
+          console.log(apiRes.data);
+          btnUpdate.style.backgroundColor = "green";
+        })
+        .catch(err => {
+          console.log(err);
+          btnUpdate.style.backgroundColor = "red";
+        })
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
+    const inputName = document.querySelector('#name input');
+    const inputOccupation = document.querySelector('#occupation input');
+    const inputWeapon = document.querySelector('#weapon input');
+    const checkboxIsCartoon = document.querySelector('#isCartoon');
+    const btnCreate = document.querySelector('#send-data');
 
+    event.preventDefault()
+
+    charactersAPI.createOneRegister({
+      name: inputName.value,
+      occupation: inputOccupation.value,
+      weapon: inputWeapon.value,
+      isCartoon: checkboxIsCartoon.checked,
+    })
+    .then((apiRes) => {
+        
+      btnCreate.style.backgroundColor = "green";
+      console.log(apiRes.data);
+    })
+    .catch(err => {
+
+      btnCreate.style.backgroundColor = "red";
+      console.log(err);
+    })
   });
+
 });

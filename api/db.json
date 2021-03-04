@@ -1,0 +1,44 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "name": "tyty",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false
+    },
+    {
+      "name": "titi",
+      "occupation": "",
+      "weapon": "",
+      "id": 10
+    },
+    {
+      "name": "coco",
+      "occupation": "",
+      "weapon": "",
+      "id": 11
+    }
+  ]
+}
