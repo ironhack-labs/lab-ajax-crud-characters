@@ -10,6 +10,10 @@ body {
   background: url("../images/minions.jpg")
 }
 
+#characters-container {
+  display: flex;
+}
+
 h1, h2 {
   color: #d8b362;
 }

@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Michka",
+      "occupation": "sleep",
+      "weapon": "blue eyes",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "sacha",
+      "occupation": "ask for food",
+      "weapon": "cute",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "ah bon",
+      "occupation": "oui",
+      "weapon": "non",
+      "cartoon": true,
+      "id": 6
+    }
+  ]
+}
