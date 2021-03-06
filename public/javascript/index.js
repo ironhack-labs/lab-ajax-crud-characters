@@ -1,17 +1,12 @@
 const charactersAPI = new APIHandler('http://localhost:8000');
 
 const fetchAll = document.getElementById('fetch-all');
-
 const fetchOneBtn = document.getElementById('fetch-one');
 const fetchOneInput = document.getElementById('fetch-input');
-
 const deleteOneBtn = document.getElementById('delete-one');
 const deleteOneInput = document.getElementById('delete-one-input');
-
 const createNew = document.getElementById('new-character-form');
-
 const editCharacter = document.getElementById('edit-character-form')
-
 const characterContainer = document.querySelector(".characters-container")
 
 const showCharacters = function(characters) {
@@ -21,21 +16,23 @@ const showCharacters = function(characters) {
       characters.forEach(character => {
         characterContainer.innerHTML += `
             <div class="character-info">
-            <div class="name">${character.name}</div>
-            <div class="occupation">${character.occupation}</div>
-            <div class="cartoon">${character.cartoon}</div>
-            <div class="weapon">${character.weapon}</div>
+            <div class="chr-id">Id: ${character.name}</div>
+            <div class="name">Name: ${character.name}</div>
+            <div class="occupation">Occupation: ${character.occupation}</div>
+            <div class="cartoon">Is a Cartoon?: ${character.cartoon}</div>
+            <div class="weapon">Weapon: ${character.weapon}</div>
             </div>
           `
       })
   } else {
     characterContainer.innerHTML = `
-            <div class="character-info">
-            <div class="name">${characters.name}</div>
-            <div class="occupation">${characters.occupation}</div>
-            <div class="cartoon">${characters.cartoon}</div>
-            <div class="weapon">${characters.weapon}</div>
-            </div>
+          <div class="character-info">
+          <div class="chr-id">Id: ${character.name}</div>
+          <div class="name">Name: ${character.name}</div>
+          <div class="occupation">Occupation: ${character.occupation}</div>
+          <div class="cartoon">Is a Cartoon?: ${character.cartoon}</div>
+          <div class="weapon">Weapon: ${character.weapon}</div>
+          </div>
           `
   }
 
