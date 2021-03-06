@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "oneTime",
+      "occupation": "song writer",
+      "weapon": "r",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Rowan",
+      "occupation": "song writer",
+      "cartoon": true,
+      "weapon": "javelin",
+      "id": 4
+    }
+  ]
+}
