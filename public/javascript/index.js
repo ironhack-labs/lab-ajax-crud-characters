@@ -5,7 +5,8 @@ window.addEventListener('load', () => {
   .addEventListener('click', function (event) {
     charactersAPI.getFullList()
     .then((apiRes) => {
-      console.log(apiRes.data);
+     
+      printCharacter(apiRes.data);
     })
     .catch(err => {
       console.log(err);
@@ -13,15 +14,47 @@ window.addEventListener('load', () => {
 
   });
 
+
+  function printCharacter(characters){
+
+    let containerInfo = document.querySelector('.characters-container');
+    containerInfo.innerHTML = "";
+    characters.forEach(character => {
+
+      console.log(character)
+
+      containerInfo.innerHTML +=  `<div class="character-info">
+      <div class="name">Id
+       <span>${character.id}</span>
+      </div>
+      <div class="name">Name
+        <span>${character.name}</span>
+      </div>
+      <div class="occupation">Occupation
+        <span>${character.occupation}</span>
+      </div>
+      <div class="cartoon">Is a Cartoon?
+       <span>${character.cartoon}</span>
+      </div>
+      <div class="weapon">Weapon
+        <span>${character.weapon}</span>
+      </div>
+    </div>`  
+    });
+  }
+
   document.getElementById('fetch-one').addEventListener('click', function (event) {
     const input = document.querySelector(".operation input");
     const id = input.value;
+  
 
     event.preventDefault()
   
       charactersAPI.getOneRegister(id)
         .then((apiRes) => {
-          console.log(apiRes.data);
+          let allchar = [];
+          allchar.push(apiRes.data)
+          printCharacter(allchar);
         })
         .catch(err => {
           console.log(err);
