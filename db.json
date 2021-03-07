@@ -1,0 +1,66 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Buzz Lightyear",
+      "occupation": "Space Ranger",
+      "weapon": "Space Laser",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Woody",
+      "occupation": "Cowboy",
+      "weapon": "Revolver",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Rex",
+      "occupation": "Dinosaur",
+      "weapon": "Teeth",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Groggu",
+      "occupation": "Being cute and powerful",
+      "weapon": "The Force",
+      "cartoon": false,
+      "id": 8,
+      "updatedCharacter": {
+        "name": "Groggu",
+        "occupation": "Being powerful",
+        "weapon": "The Force",
+        "cartoon": false
+      }
+    },
+    {
+      "name": "Testi-test",
+      "occupation": "Tester",
+      "weapon": "Console dot log",
+      "cartoon": false,
+      "id": 9
+    }
+  ]
+}

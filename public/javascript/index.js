@@ -24,8 +24,14 @@ function resetInputs(input) {
   }
 }
 
+function changeBackground(button, color) {
+  button.style.background = color;
+  setTimeout(() => {
+    button.style.background = "none";
+  }, 500);
+}
+
 function displayResult(characters) {
-  console.log(characters.data);
   divCharacterContainer.innerHTML = "";
   if(characters.length > 1) {
     characters.forEach(character => {
@@ -58,7 +64,6 @@ window.addEventListener('load', () => {
     charactersAPI.getFullList()
     .then(apiRes => {
       displayResult(apiRes.data);
-      console.log(apiRes.data);
     })
     .catch(err => {
       console.log(err);
@@ -68,7 +73,6 @@ window.addEventListener('load', () => {
   document.getElementById('fetch-one').addEventListener('click', function (event) {
     charactersAPI.getOneRegister(inputSearch.value)
     .then(apiRes => {
-      console.log(apiRes);
       displayResult(apiRes.data);
       resetInputs(inputSearch);
     })
@@ -78,29 +82,35 @@ window.addEventListener('load', () => {
   document.getElementById('delete-one').addEventListener('click', function (event) {
     charactersAPI.deleteOneRegister(inputDelete.value)
     .then(apiRes => {
-      console.log(apiRes);
       resetInputs(inputDelete);
-      displayResult(apiRes);
+      changeBackground(document.getElementById("delete-one"), "green");
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+      changeBackground(document.getElementById("delete-one"), "red");
+    });
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
     event.preventDefault();
     charactersAPI.updateOneRegister(inputUpdateId.value, {
+      id: inputUpdateId.value,
       name: inputUpdateName.value,
       occupation: inputUpdateOccupation.value,
       weapon: inputUpdateWeapon.value,
       cartoon: inputUpdateIsCartoon.checked
-    }, {new: true})
+    })
     .then(apiRes => {
-      console.log(apiRes);
-      displayResult(apiRes);
+      changeBackground(document.getElementById("send-update-data"), "green");
+      displayResult(apiRes.data);
       inputsUpdateForm.forEach(input => {
         resetInputs(input);
       })
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+      changeBackground(document.getElementById("send-update-data"), "red");
+    });
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
@@ -110,16 +120,17 @@ window.addEventListener('load', () => {
       occupation: inputCreateOccupation.value,
       weapon: inputCreateWeapon.value,
       cartoon: inputCreateIsCartoon.checked
-    }, {new: true})
+    })
     .then(apiRes => {
-      console.log(apiRes);
+      changeBackground(document.getElementById("send-create-data"), "green");
       inputsCreateForm.forEach(input => {
         resetInputs(input);
       });
-      charactersAPI.getFullList()
-      .then(apiRes => displayResult(apiRes.data))
-      .catch(err => console.log(err));
+      
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+      changeBackground(document.getElementById("send-create-data"), "red");
+    });
   });
 });

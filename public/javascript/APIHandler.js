@@ -16,7 +16,7 @@ class APIHandler {
   }
 
   updateOneRegister (id, updatedCharacter) {
-    return axios.patch(this.BASE_URL + "/characters/" + id, { updatedCharacter });
+    return axios.patch(this.BASE_URL + "/characters/" + id, updatedCharacter);
   }
 
   deleteOneRegister (id) {
