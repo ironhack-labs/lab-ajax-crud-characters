@@ -4,7 +4,8 @@ const charactersAPI = new APIHandler('http://localhost:8000');
 //document.querySelector('')
 
 const charContainer = document.querySelector('.characters-container')
-
+const idDelete = document.getElementById('character-id-delete')
+const deleteBtn = document.getElementById('delete-one')
 
 const characterInfo = (character)=> {
   return `
@@ -57,8 +58,19 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
-
+    charactersAPI.deleteOneRegister(idDelete.value)
+      .then(()=>{
+        deleteBtn.classList.add("active")
+      })
+      .catch(err => {
+        if(err) deleteBtn.classList.add("btnErr") 
+        console.log("The error deleteing character: ", err)
+      })
+     
   });
+
+
+
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
 
