@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
       try {
         const id = document.querySelector("input[name=character-id]").value;
         const searchedCharacter = await charactersAPI.getOneRegister(id);
-        displayCard(searchedCharacter);
+        displayCard([searchedCharacter]);
       } catch (error) {
         console.log(error);
       }
