@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Bob Esponja",
+      "occupation": "Esponja",
+      "weapon": "Calça Quadrada",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "name": "Michelle Mendonça",
+      "occupation": "Dev",
+      "weapon": "Calça Quadrada",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Wildfire",
+      "occupation": "Horse",
+      "weapon": "Fire",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
