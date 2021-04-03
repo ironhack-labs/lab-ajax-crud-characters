@@ -56,7 +56,6 @@ window.addEventListener('load', () => {
     .addEventListener('click', function (event) {
       const characterId = document.querySelector('.operation.delete input')
         .value;
-      console.log(characterId);
       charactersAPI
         .deleteOneRegister(characterId)
         .then(() => {
