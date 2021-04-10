@@ -94,7 +94,7 @@ function insertCharInContainer(char) {
   const container = document.getElementsByClassName('characters-container');
 
   container[0].innerHTML = '';
-
+//
   container[0].innerHTML += `
     <div class='character-info'>
       <div class='name'>Name: ${char.name}</div>
