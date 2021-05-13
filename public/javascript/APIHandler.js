@@ -9,9 +9,7 @@ class APIHandler {
 
   getOneRegister = (id) => this.transportBus.get("/characters/" + id);
 
-  createOneRegister () {
-
-  }
+  createOneRegister = (payload) => this.transportBus.post("/characters", payload);
 
   updateOneRegister () {
 

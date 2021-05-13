@@ -6,6 +6,8 @@ const characterWrapper = document.querySelector(".characters-container");
 const characterId = document.getElementById("character-id");
 const characterToDelete = document.getElementById("character-to-delete");
 const deleteBtn = document.getElementById("delete-one");
+const newCharacterForm = document.getElementById("new-character-form");
+const newCharacterInputs = newCharacterForm.querySelectorAll("input");
 
 window.addEventListener('load', () => {
   document
@@ -57,11 +59,26 @@ window.addEventListener('load', () => {
     }
   });
 
-  document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+  document
+  .getElementById('edit-character-form')
+  .addEventListener('submit', async (event) => {
 
   });
 
-  document.getElementById('new-character-form').addEventListener('submit', function (event) {
+  document
+  .getElementById('new-character-form')
+  .addEventListener('submit', async (event) => {
+    const payload = {};
+    newCharacterInputs.forEach((input) => (payload[input.name] = input.value || false )); // Still need to work on checkbox since this value is always true
+    console.log(payload);
+    if (payload.cartoon === "on") {
+      payload.cartoon = true;
+    } 
+    try {
+      await charactersAPI.createOneRegister(payload);
 
+    } catch (err) {
+      console.error(err);
+    }
   });
 });

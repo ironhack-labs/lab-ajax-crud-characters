@@ -6,6 +6,20 @@
       "occupation": "Smuggler",
       "weapon": "Blaster Pistol",
       "cartoon": true
+    },
+    {
+      "name": "Jordan",
+      "occupation": "Dev",
+      "weapon": "Furious typing",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "Jhon",
+      "occupation": "Linguist",
+      "weapon": "Elan",
+      "cartoon": true,
+      "id": 5
     }
   ]
 }
