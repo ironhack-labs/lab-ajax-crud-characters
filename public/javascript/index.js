@@ -3,21 +3,17 @@ console.log("---starting point");
 console.log(charactersAPI);
 
 const characterWrapper = document.querySelector(".characters-container");
+const characterId = document.getElementById("character-id");
 
 window.addEventListener('load', () => {
   document
   .getElementById('fetch-all')
   .addEventListener('click', async (event) => {
-
     const apiResult = await charactersAPI.getFullList();
-    console.log(apiResult.data[0].name);
     const collection = apiResult.data;
-
     characterWrapper.innerHTML = "";
-
     collection.forEach((item) => {
       characterWrapper.innerHTML +=
-
       `<div class="character-info">
         <div class="name">Character Name: ${item.name}</div>
         <div class="occupation">Character Occupation: ${item.occupation}</div>
@@ -27,8 +23,18 @@ window.addEventListener('load', () => {
     })
   });
 
-  document.getElementById('fetch-one').addEventListener('click', function (event) {
-
+  document
+  .getElementById('fetch-one')
+  .addEventListener('click', async (event) => {
+    const id = characterId.value
+    const apiResult = await charactersAPI.getOneRegister(id);
+    characterWrapper.innerHTML = 
+    `<div class="character-info">
+        <div class="name">Character Name: ${apiResult.data.name}</div>
+        <div class="occupation">Character Occupation: ${apiResult.data.occupation}</div>
+        <div class="cartoon">Is a Cartoon?: ${apiResult.data.cartoon}</div>
+        <div class="weapon">Character Weapon: ${apiResult.data.weapon}</div>
+      </div>`
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {

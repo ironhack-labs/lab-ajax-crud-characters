@@ -7,9 +7,7 @@ class APIHandler {
 
   getFullList = () => this.transportBus.get("/characters");
 
-  getOneRegister () {
-
-  }
+  getOneRegister = (id) => this.transportBus.get("/characters/" + id);
 
   createOneRegister () {
 
