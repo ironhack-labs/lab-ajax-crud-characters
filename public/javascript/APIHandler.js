@@ -11,9 +11,7 @@ class APIHandler {
 
   createOneRegister = (payload) => this.transportBus.post("/characters", payload);
 
-  updateOneRegister () {
-
-  }
+  updateOneRegister = (id) => this.transportBus.patch("/characters/" + id);
 
   deleteOneRegister = (id) => this.transportBus.delete("/characters/" + id);
 

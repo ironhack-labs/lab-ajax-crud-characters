@@ -8,6 +8,8 @@ const characterToDelete = document.getElementById("character-to-delete");
 const deleteBtn = document.getElementById("delete-one");
 const newCharacterForm = document.getElementById("new-character-form");
 const newCharacterInputs = newCharacterForm.querySelectorAll("input");
+const addBtn = document.getElementById("send-data-create");
+const charIdToEdit = document.getElementById("charIdToEdit");
 
 window.addEventListener('load', () => {
   document
@@ -62,7 +64,14 @@ window.addEventListener('load', () => {
   document
   .getElementById('edit-character-form')
   .addEventListener('submit', async (event) => {
+    const id = charIdToEdit.value;
+    console.log(id);
+    try {
+      await charactersAPI.updateOneRegister(id); // Need to finish this!
 
+    } catch (err) {
+      console.error(err);
+    }
   });
 
   document
@@ -70,15 +79,15 @@ window.addEventListener('load', () => {
   .addEventListener('submit', async (event) => {
     const payload = {};
     newCharacterInputs.forEach((input) => (payload[input.name] = input.value || false )); // Still need to work on checkbox since this value is always true
-    console.log(payload);
     if (payload.cartoon === "on") {
       payload.cartoon = true;
     } 
     try {
       await charactersAPI.createOneRegister(payload);
-
+      addBtn.style.backgroundColor = "green";
     } catch (err) {
       console.error(err);
+      addBtn.style.backgroundColor = "red";
     }
   });
 });

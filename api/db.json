@@ -20,6 +20,20 @@
       "weapon": "Elan",
       "cartoon": true,
       "id": 5
+    },
+    {
+      "name": "Testing",
+      "occupation": "Tester",
+      "weapon": "Testinggg",
+      "cartoon": true,
+      "id": 6
+    },
+    {
+      "name": "Testtttt",
+      "occupation": "lasdkjal",
+      "weapon": "aldkjalsk",
+      "cartoon": true,
+      "id": 7
     }
   ]
 }
