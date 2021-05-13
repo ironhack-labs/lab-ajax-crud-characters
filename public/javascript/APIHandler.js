@@ -1,11 +1,11 @@
 class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+  constructor (url) {
+    this.transportBus = axios.create({
+      baseURL: url,
+    });
   }
 
-  getFullList () {
-
-  }
+  getFullList = () => this.transportBus.get("/characters");
 
   getOneRegister () {
 
