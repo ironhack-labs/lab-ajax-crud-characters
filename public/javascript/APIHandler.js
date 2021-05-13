@@ -17,7 +17,6 @@ class APIHandler {
 
   }
 
-  deleteOneRegister () {
+  deleteOneRegister = (id) => this.transportBus.delete("/characters/" + id);
 
-  }
 }
