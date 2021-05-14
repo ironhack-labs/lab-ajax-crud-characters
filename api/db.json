@@ -22,18 +22,12 @@
       "id": 5
     },
     {
-      "name": "Testing",
-      "occupation": "Tester",
-      "weapon": "Testinggg",
+      "name": "Alison",
+      "occupation": "Bad ass",
+      "weapon": "Kindness",
       "cartoon": true,
-      "id": 6
-    },
-    {
-      "name": "Testtttt",
-      "occupation": "lasdkjal",
-      "weapon": "aldkjalsk",
-      "cartoon": true,
-      "id": 7
+      "id": 6,
+      "chr-id": "6"
     }
   ]
 }

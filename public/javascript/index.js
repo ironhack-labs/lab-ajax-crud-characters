@@ -10,6 +10,9 @@ const newCharacterForm = document.getElementById("new-character-form");
 const newCharacterInputs = newCharacterForm.querySelectorAll("input");
 const addBtn = document.getElementById("send-data-create");
 const charIdToEdit = document.getElementById("charIdToEdit");
+const editCharacterForm = document.getElementById("edit-character-form");
+const editCharacterInputs = editCharacterForm.querySelectorAll("input");
+const editBtn = document.getElementById("send-data-edit");
 
 window.addEventListener('load', () => {
   document
@@ -66,11 +69,17 @@ window.addEventListener('load', () => {
   .addEventListener('submit', async (event) => {
     const id = charIdToEdit.value;
     console.log(id);
+    const payload = {};
+    editCharacterInputs.forEach((input) => (payload[input.name] = input.value || false )); // Still need to work on checkbox since this value is always true
+    if (payload.cartoon === "on") {
+      payload.cartoon = true;
+    } 
     try {
-      await charactersAPI.updateOneRegister(id); // Need to finish this!
-
+      await charactersAPI.updateOneRegister(id, payload); 
+      editBtn.style.backgroundColor = "green";
     } catch (err) {
       console.error(err);
+      editBtn.style.backgroundColor = "red";
     }
   });
 
