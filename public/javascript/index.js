@@ -70,10 +70,8 @@ window.addEventListener('load', () => {
     const id = charIdToEdit.value;
     console.log(id);
     const payload = {};
-    editCharacterInputs.forEach((input) => (payload[input.name] = input.value || false )); // Still need to work on checkbox since this value is always true
-    if (payload.cartoon === "on") {
-      payload.cartoon = true;
-    } 
+    editCharacterInputs.forEach((input) => (payload[input.name] = input.value)); 
+    payload.cartoon = payload.cartoon === "on"; // Still need to work on checkbox since this value is always true
     try {
       await charactersAPI.updateOneRegister(id, payload); 
       editBtn.style.backgroundColor = "green";
@@ -87,10 +85,8 @@ window.addEventListener('load', () => {
   .getElementById('new-character-form')
   .addEventListener('submit', async (event) => {
     const payload = {};
-    newCharacterInputs.forEach((input) => (payload[input.name] = input.value || false )); // Still need to work on checkbox since this value is always true
-    if (payload.cartoon === "on") {
-      payload.cartoon = true;
-    } 
+    newCharacterInputs.forEach((input) => (payload[input.name] = input.value));
+    payload.cartoon = payload.cartoon === "on"; // Still need to work on checkbox since this value is always true
     try {
       await charactersAPI.createOneRegister(payload);
       addBtn.style.backgroundColor = "green";
