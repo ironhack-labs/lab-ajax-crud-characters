@@ -1,0 +1,81 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "charlie",
+      "occupation": "baby",
+      "weapon": "burps",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "hatty",
+      "occupation": "baker",
+      "weapon": "bread",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "bubble",
+      "occupation": "hero",
+      "weapon": "blaster",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "muffin",
+      "occupation": "treat",
+      "weapon": "carbs",
+      "cartoon": true,
+      "id": 9
+    },
+    {
+      "name": "kitty",
+      "occupation": "boss",
+      "weapon": "claws",
+      "cartoon": false,
+      "id": 10
+    },
+    {
+      "name": "henru",
+      "occupation": "sdfjlksj",
+      "weapon": "ljlkjl",
+      "cartoon": false,
+      "id": 11
+    },
+    {
+      "name": "henru",
+      "occupation": "sdfjlksj",
+      "weapon": "ljlkjl",
+      "cartoon": false,
+      "id": 12
+    },
+    {
+      "name": "henru",
+      "occupation": "aldkfjl",
+      "weapon": "asd",
+      "cartoon": true,
+      "id": 13
+    }
+  ]
+}
