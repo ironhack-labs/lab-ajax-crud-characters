@@ -17,7 +17,6 @@ window.addEventListener('load', () => {
 
 document.getElementById('fetch-one').addEventListener('click', async function (event) {
   const id = document.querySelector('.operation input').value; 
-  console.log(id)
   try {
     const character = await charactersAPI.getOneRegister(id);
     if (!character) {
@@ -107,8 +106,6 @@ document.getElementById('edit-character-form').addEventListener('submit', async 
   }
 });
 
-    //const character = await charactersAPI.
-
 document.getElementById('new-character-form').addEventListener('submit', async function (event) {
   event.preventDefault();
   try {
@@ -142,8 +139,6 @@ document.getElementById('new-character-form').addEventListener('submit', async f
 
 
 const renderCharacters = (characterInput) => {
-    // if (characterInput.length === 0) return characterNotFound();
-
     const characters = document.querySelector('.characters-container');
     characters.innerHTML = '';
     characterInput.forEach(character => {
@@ -171,14 +166,4 @@ const renderCharacter = (characterInput) => {
       `;
 };
 
-
-// const characterNotFound = (axiosMethod = '') => {
-//     const charactersContainer = document.querySelector('.characters-container');
-//     charactersContainer.innerHTML = '';
-
-//     const notFound = charactersContainer.innerHTML += `<h2>Character not found</h2>`;
-//     const notCreated = charactersContainer.innerHTML += `<h2>Not created</h2>`
-
-//     return axiosMethod === '' ? notFound : notCreated;
-// }
 
