@@ -2,17 +2,10 @@
   "characters": [
     {
       "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
+      "name": "qsd",
+      "occupation": "qsd",
+      "weapon": "qsd",
       "cartoon": true
-    },
-    {
-      "name": "fhgfgf",
-      "occupation": "gfggh",
-      "weapon": "gghgher",
-      "cartoon": true,
-      "id": 4
     },
     {
       "name": "sq",
@@ -20,6 +13,13 @@
       "weapon": "",
       "cartoon": false,
       "id": 5
+    },
+    {
+      "name": "Quentin ",
+      "occupation": "dqqsd",
+      "weapon": "sqsqdsqd",
+      "cartoon": true,
+      "id": 6
     }
   ]
 }

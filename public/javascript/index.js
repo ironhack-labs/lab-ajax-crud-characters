@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
         <div class="name">Character Name: ${d.name}</div>
         <div class="occupation">Character Occupation: ${d.occupation}</div>
         <div class="cartoon">Is a Cartoon?: ${d.cartoon}</div>
-        <div class="weapon">Character Weapon: ${d.weapon}</div>
+        <div class="weapon">Character Weapon: ${d.weapon ? "true" : "false"}</div>
       </div>
       `;
         });
@@ -49,7 +49,7 @@ window.addEventListener("load", () => {
       <div class="name">Character Name: ${dataOne.name}</div>
       <div class="occupation">Character Occupation: ${dataOne.occupation}</div>
       <div class="cartoon">Is a Cartoon?: ${dataOne.cartoon}</div>
-      <div class="weapon">Character Weapon: ${dataOne.weapon}</div>
+      <div class="weapon">Character Weapon: ${dataOne.weapon ? "true" : "false"}</div>
     </div>
     `;
       return fetchOneBtn.classList.add("active");
@@ -94,10 +94,14 @@ window.addEventListener("load", () => {
 
         if (!fetchOurChar) return;
 
-        const name = form.querySelector("input[name='name']").value;
-        const occupation = form.querySelector("input[name='occupation']").value;
-        const weapon = form.querySelector("input[name='weapon']").value;
+        let name = form.querySelector("input[name='name']").value 
+        let occupation = form.querySelector("input[name='occupation']").value;
+        let weapon = form.querySelector("input[name='weapon']").value;
         const cartoon = form.querySelector("input[name='cartoon']").checked;
+
+        if (name === "") name = undefined
+        if (occupation === "") name = undefined
+        if (weapon === "") name = undefined
 
         const updatedChar = await charactersAPI.updateOneRegister(id, {
           name,
@@ -111,13 +115,13 @@ window.addEventListener("load", () => {
         <div class="name">Character Name: ${updatedChar.name}</div>
         <div class="occupation">Character Occupation: ${updatedChar.occupation}</div>
         <div class="cartoon">Is a Cartoon?: ${updatedChar.cartoon}</div>
-        <div class="weapon">Character Weapon: ${updatedChar.weapon}</div>
+        <div class="weapon">Character Weapon: ${updatedChar.weapon ? "true" : "false"}</div>
       </div>
       `;
         editBtn.classList.add("active");
       } catch (err) {
         editBtn.classList.add("failed");
-        console.log("err updating");
+        console.log("err updating", err);
       }
     });
 
@@ -133,7 +137,7 @@ window.addEventListener("load", () => {
       const occupation = form.querySelector("input[name='occupation']").value;
       const weapon = form.querySelector("input[name='weapon']").value;
       const cartoon = form.querySelector("input[name='cartoon']").checked;
-      
+
       if (name === "" && occupation === "" && weapon === "") return 
 
       try {
@@ -149,7 +153,7 @@ window.addEventListener("load", () => {
       <div class="name">Character Name: ${newChar.name}</div>
       <div class="occupation">Character Occupation: ${newChar.occupation}</div>
       <div class="cartoon">Is a Cartoon?: ${newChar.cartoon}</div>
-      <div class="weapon">Character Weapon: ${newChar.weapon}</div>
+      <div class="weapon">Character Weapon: ${newChar.weapon ? "true" : "false"}</div>
     </div>
     `;
 
