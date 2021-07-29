@@ -3,7 +3,7 @@
 
 window.addEventListener('load', () => {
     document.getElementById('fetch-all').addEventListener('click', function (event) {
-    const charactersAPI = new APIHandler('http://localhost:8000/characters');
+   
     charactersAPI.getFullList()
 
       .then((apiRes) => {
@@ -22,8 +22,8 @@ window.addEventListener('load', () => {
       listChars.innerhTML += `<li> ${character.name} <button class="btn-update" data-id=${character.id}> Update</button></li>`
     });
 
-    attachupdateListeners();
-    attachDeleteListeners();
+  //  attachupdateListeners();
+
   };
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
@@ -45,3 +45,5 @@ window.addEventListener('load', () => {
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
 
   });
+
+ //const charactersAPI = new APIHandler('http://localhost:8000');

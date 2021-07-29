@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Character = require("../models/Character");
 
-router.get("/", function (req, res, next) {
+router.get("/characters", function (req, res, next) {
 	Character.find()
 		.then(() => {
 			res.json();

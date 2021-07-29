@@ -10,7 +10,6 @@ class APIHandler {
 
   getFullList () {
       return axios.get(this.BASE_URL + "/characters")
-
       
   }
 
@@ -32,4 +31,5 @@ class APIHandler {
     return axios.delete(this.BASE_URL + `/characters/${id}`);
   }
 }
-  const charactersAPI = new APIHandler("http://localhost:8000/");
+  const charactersAPI = new APIHandler("http://localhost:8000");
+
