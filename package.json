@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/franziskapendzialek/lab-ajax-crud-characters/issues"
   },
-  "homepage": "https://github.com/franziskapendzialek/lab-ajax-crud-characters#readme"
+  "homepage": "https://github.com/franziskapendzialek/lab-ajax-crud-characters#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
 }
