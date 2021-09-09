@@ -8,11 +8,6 @@ class APIHandler {
   It receives NO parameters
   It returns the full characters list
   It returns JSON */
-  return this.api.get('/characters')
-    .then((response) => {
-    const allCharInfo = response.data;
-    return allCharInfo
-    }) 
   }
 
   getOneRegister (id) {
@@ -21,23 +16,18 @@ class APIHandler {
     It returns the character with the indicated id
     It returns JSON  */
     return this.api.get(`/characters/${id}`)
-    .then((response) => {
-    console.log(response);
-    return ("ok")
-    //const oneCharInfo = response.data;
-    //return oneCharInfo
-    }) 
   }
 
-  createOneRegister (character) {
-    character => this.api.post(`/characters`, character)
+  createOneRegister (char) {
+    this.api.post('/characters', char)
   }
 
-  updateOneRegister () {
+  updateOneRegister (id, char) {
+    this.api.put(`/characters/${id}`, char)
 
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    this.api.delete(`/characters/${id}`)
   }
 }
