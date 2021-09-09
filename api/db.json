@@ -1,0 +1,25 @@
+{ 
+    "characters" : [ 
+      { 
+        "id" : 1 , 
+        "name" : "Han Solo" , 
+        "occupation" : "Smuggler" , 
+        "weapon" : "Blaster Pistol" , 
+        "cartoon" : true 
+      } , 
+      { 
+        "id" : 2 , 
+        "nome" : "Luke Skywalker" , 
+        "ocupação" : "Cavaleiro Jedi" , 
+        "arma" : "Sabre de luz" ,
+        "cartoon" : false 
+      } , 
+      {
+        "id" : 3 , 
+        "name" : "Bob Esponja" , 
+        "ocupação" : "Vive no fundo do mar" , 
+        "arma" : "Crabby Patty" , 
+        "cartoon" : true 
+      } 
+    ] 
+  }
