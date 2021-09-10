@@ -1,25 +1,60 @@
 {
-    "characters": [
-      {
-        "id": 1,
-        "name": "Han Solo",
-        "occupation": "Smuggler",
-        "weapon": "Blaster Pistol",
-        "cartoon": true
-      },
-      {
-        "id": 2,
-        "name": "Luke Skywalker",
-        "occupation": "Jedi Knight",
-        "weapon": "Lightsaber",
-        "cartoon": false
-      },
-      {
-        "id": 3,
-        "name": "Sponge Bob",
-        "occupation": "Lives under the sea",
-        "weapon": "Crabby Patty",
-        "cartoon": true
-      }
-    ]
-  }
+  "characters": [
+    {
+      "name": "Brad Pitt",
+      "occupation": "Actor",
+      "weapon": "Blonde",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "name": "menta",
+      "occupation": "testing",
+      "cartoon": "joder",
+      "weapon": "on",
+      "id": 4
+    },
+    {
+      "name": "testingTecno",
+      "occupation": "tecno",
+      "cartoon": false,
+      "weapon": "gun",
+      "id": 5
+    },
+    {
+      "name": "termi",
+      "occupation": "termi",
+      "weapon": "termi",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "Joker",
+      "occupation": "Joker",
+      "weapon": "Joker",
+      "cartoon": false,
+      "id": 7
+    },
+    {
+      "name": "asda",
+      "occupation": "asd",
+      "weapon": "asdas",
+      "cartoon": false,
+      "id": 8
+    },
+    {
+      "name": "mayhem",
+      "occupation": "whoot",
+      "weapon": "ironwhat",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "poppins",
+      "occupation": "popino",
+      "weapon": "poppo",
+      "cartoon": false,
+      "id": 10
+    }
+  ]
+}
