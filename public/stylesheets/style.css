@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 * {
   box-sizing: border-box;
 }
@@ -50,8 +49,12 @@ button {
   flex-flow: row wrap;
 }
 
-.active {
+.success {
   background-color: #42f471;
+}
+
+.fail {
+  background-color: #f45d42;
 }
 
 .operations {
