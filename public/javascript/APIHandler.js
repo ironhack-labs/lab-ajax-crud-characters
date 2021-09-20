@@ -1,4 +1,3 @@
-
 class APIHandler {
   constructor (baseUrl) {
     this.api = axios.create({ baseURL: baseUrl });  }
@@ -8,6 +7,7 @@ class APIHandler {
   It receives NO parameters
   It returns the full characters list
   It returns JSON */
+    return this.api.get('/characters');
   }
 
   getOneRegister (id) {
@@ -19,7 +19,8 @@ class APIHandler {
   }
 
   createOneRegister (char) {
-    this.api.post('/characters', char)
+    debugger
+    this.api.post(`/characters`, char)
   }
 
   updateOneRegister (id, char) {

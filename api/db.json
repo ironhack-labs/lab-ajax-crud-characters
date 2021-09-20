@@ -13,6 +13,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "extremoduro",
+      "occupation": "Whisker",
+      "weapon": "12",
+      "cartoon": false,
+      "id": 4
     }
   ]
 }
