@@ -1,102 +1,18 @@
 {
   "characters": [
     {
-      "name": "Otto",
-      "occupation": "designer",
-      "cartoon": 1,
-      "weapon": "gun",
-      "id": 4
-    },
-    {
-      "id": 13,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
-    },
-    {
-      "id": 10,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
-      "id": 12,
+      "id": 2,
       "name": "Luke Skywalker",
       "occupation": "Jedi Knight",
       "weapon": "Lightsaber",
       "cartoon": false
     },
     {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 15
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 16
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 17
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 18
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 19
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 20
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 21
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 22
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 23
-    },
-    {
-      "name": "",
-      "occupation": "",
-      "weapon": "",
-      "cartoon": false,
-      "id": 24
+      "name": "sda",
+      "occupation": "asd",
+      "weapon": "asdasd",
+      "cartoon": true,
+      "id": 3
     }
   ]
 }
