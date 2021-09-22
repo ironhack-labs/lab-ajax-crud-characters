@@ -1,0 +1,28 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "picture": "https://s2.glbimg.com/iiEq62RWxzT6WCp5bYumtiWedUY=/e.glbimg.com/og/ed/f/original/2019/09/23/rsz_luke-skywalker-jedi-11242015.jpg",
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "picture": "https://roteirinhobrasilia.com.br/wp-content/uploads/2021/07/BB6D779B-3252-423E-A6F8-83380951FBEA.png",
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "picture": "https://img.ibxk.com.br//ms/images/highlights/000/054/335/51019.jpg?w=1200&h=675&mode=crop&scale=both",
+      "name": "Obi Wan",
+      "occupation": "Jedy",
+      "weapon": "Light Sabre",
+      "cartoon": false,
+      "id": 4
+    }
+  ]
+}
