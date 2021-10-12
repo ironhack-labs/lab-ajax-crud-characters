@@ -1,0 +1,43 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true,
+      "picture": "https://s2.glbimg.com/adFNCY28mMYhn6cOebEGMlkE3J0=/620x520/smart/e.glbimg.com/og/ed/f/original/2013/11/09/episode_4_han_solo_2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false,
+      "picture": "https://upload.wikimedia.org/wikipedia/en/9/9b/Luke_Skywalker.png"
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true,
+      "picture": "https://i.pinimg.com/originals/66/c0/f3/66c0f3951cf18634e632c383284ab1f7.png"
+    },
+    {
+      "name": "Master Yoda",
+      "occupation": "Jedi",
+      "weapon": "Lightsaber",
+      "cartoon": false,
+      "picture": "https://upload.wikimedia.org/wikipedia/pt/thumb/4/45/Yoda.jpg/200px-Yoda.jpg",
+      "id": 4
+    },
+    {
+      "name": "New Character",
+      "occupation": "none",
+      "weapon": "none",
+      "picture": "none",
+      "id": 5
+    }
+  ]
+}
