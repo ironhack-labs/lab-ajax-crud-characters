@@ -1,0 +1,28 @@
+<div class="container">
+
+    <h1>Edit {{character.name}}</h1>
+
+    <hr>
+
+    <form action="/characters/edit/{{character.id}}" method="post">
+        <label>
+            Name: <input type="text" name="name" value="{{character.name}}">
+        </label>
+
+        <label>
+            Occupation: <input type="text" name="occupation" value="{{character.occupation}}">
+        </label>
+
+        <label>
+            Cartoon: <input type="text" name="cartoon" value="{{character.cartoon}}">
+        </label>
+
+        <label>
+            Weapon: <input type="text" name="weapon" value="{{character.weapon}}">
+        </label>
+
+        <input type="submit" value="Update character" class="btn-dark btn">
+    </form>
+
+
+</div>

@@ -9,10 +9,13 @@ const app = express();
 require("./config/views.config")(app);
 require("./config/hbs.config");
 
-app.use(express.static(join(__dirname, "..", "public")));
+app.use(express.static(join(__dirname, "public")));
 
-// Routes index
-const routes = require("./routes/index.routes");
-app.use('/', routes);
+// 👇 Start handling routes here
+const index = require('./routes/index');
+app.use('/', index);
+
+const charRoutes = require("./routes/characters")
+app.use('/celebrcharactersities', charRoutes);
 
 module.exports = app;
