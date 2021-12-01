@@ -15,22 +15,112 @@
       "id": 2
     },
     {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
-    },
-    {
-      "name": "Sammy",
+      "name": "Amy",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
       "id": 4
     },
     {
-      "name": "monina",
+      "name": "AMY",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "Loren",
+      "occupation": "Developer",
+      "id": 7
+    },
+    {
+      "name": "Amicita",
       "occupation": "student",
+      "id": 8
+    },
+    {
+      "name": "Miniwinnie",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 9
+    },
+    {
+      "name": "New one",
+      "occupation": "singer",
+      "weapon": "plate",
+      "cartoon": true,
+      "id": 10
+    },
+    {
+      "name": "Sailor",
+      "occupation": "Gardener",
+      "weapon": "flower",
+      "cartoon": true,
+      "id": 11
+    },
+    {
+      "name": "Nana",
+      "occupation": "Designer",
+      "weapon": "Drawing",
+      "cartoon": true,
+      "id": 12
+    },
+    {
+      "name": "Caro",
+      "occupation": "Actress",
+      "weapon": "Wand",
+      "cartoon": true,
+      "id": 13
+    },
+    {
+      "name": "monina2",
+      "occupation": "Singer, Actor",
+      "weapon": "Book",
+      "cartoon": false,
+      "id": 14
+    },
+    {
+      "name": "monina3",
+      "occupation": "singer",
       "weapon": "nothing",
       "cartoon": true,
-      "id": 5
+      "id": 15
+    },
+    {
+      "name": "Dad",
+      "occupation": "Teacher",
+      "weapon": "nothing",
+      "cartoon": true,
+      "id": 16
+    },
+    {
+      "name": "Wes Bos1",
+      "occupation": "Teacher",
+      "weapon": "flower",
+      "cartoon": false,
+      "id": 17
+    },
+    {
+      "name": "karla100",
+      "occupation": "Artist",
+      "weapon": "nothing",
+      "cartoon": true,
+      "id": 18
+    },
+    {
+      "name": "monina22",
+      "occupation": "writer",
+      "weapon": "pen",
+      "cartoon": true,
+      "id": 19
+    },
+    {
+      "name": "loren100",
+      "occupation": "actor",
+      "weapon": "shoe",
+      "cartoon": true,
+      "id": 20
     }
   ]
 }

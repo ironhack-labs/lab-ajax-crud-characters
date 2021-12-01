@@ -1,3 +1,10 @@
+// construct a class to deal with the Axios calls
+// this class will display the JSON result that comes from the API
+// the initial data is in /api/db.json
+// this class only manage the API request and display the resulting value in JSON.
+// run this on Terminal to make API works
+// $ json-server --watch db.json --port 8000
+// index.js --> const charactersAPI = new APIHandler('http://localhost:8000');
 class APIHandler {
   constructor (baseUrl) {
     // this.BASE_URL = baseUrl;
@@ -37,8 +44,9 @@ class APIHandler {
   // It returns the updated character if there are no errors
   // It returns "Character not found" if there is no character with the indicated id
   // It returns JSON / text
-  updateOneRegister = (id, charData) => this.api.put(`/characters/${id}`, charData);
+  updateOneRegister = (id, charData) => {
+    this.api.put(`/characters/${id}`, charData);
+  };
   
   deleteOneRegister = (id) => this.api.delete(`/characters/${id}`);
-
 }
