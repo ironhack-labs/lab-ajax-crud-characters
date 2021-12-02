@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "thrhr",
+      "occupation": "erhrh",
+      "weapon": "hsrhstr",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "Brigitta Horváth",
+      "occupation": "actress",
+      "weapon": "hjkg",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
