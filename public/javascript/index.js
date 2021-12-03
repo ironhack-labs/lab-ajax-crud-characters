@@ -6,8 +6,11 @@ window.addEventListener('load', () => {
     console.log(allChars.data);
   });
 
-  document.getElementById('fetch-one').addEventListener('click', function (event) {
-
+  document.getElementById('fetch-one').addEventListener('click', async function (event) {
+    // get id input from field
+    const charID = document.querySelector(".operation input").value
+    const oneChar = await charactersAPI.getOneRegister(charID)
+    console.log(oneChar.data);
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
