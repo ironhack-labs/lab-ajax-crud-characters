@@ -13,15 +13,16 @@ class APIHandler {
     return data
   }
 
-  createOneRegister () {
+  async createOneRegister () {
 
   }
 
-  updateOneRegister () {
+  async updateOneRegister () {
 
   }
 
-  deleteOneRegister () {
-
+  async deleteOneRegister (id) {
+    const data = await axios.delete(this.BASE_URL+"/characters/"+id)
+    return data
   }
 }

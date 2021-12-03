@@ -13,8 +13,11 @@ window.addEventListener('load', () => {
     console.log(oneChar.data);
   });
 
-  document.getElementById('delete-one').addEventListener('click', function (event) {
-
+  document.getElementById('delete-one').addEventListener('click', async function (event) {
+    // get id input from field
+    const charID = document.querySelector(".operation.delete input").value
+    const deletedChar = await charactersAPI.deleteOneRegister(charID)
+    console.log("Character with ID: " + charID + " was deleted.");
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
