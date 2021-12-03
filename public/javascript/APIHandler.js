@@ -17,8 +17,12 @@ class APIHandler {
 
   }
 
-  async updateOneRegister () {
-
+  async updateOneRegister (id, newDataForCharacter) {
+    try {
+      await axios.patch(this.BASE_URL+"/characters/"+id+"/", newDataForCharacter)
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async deleteOneRegister (id) {
