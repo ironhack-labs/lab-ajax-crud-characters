@@ -3,12 +3,21 @@
 // the initial data is in /api/db.json
 // this class only manage the API request and display the resulting value in JSON.
 // run this on Terminal to make API works
-// $ json-server --watch db.json --port 8000
+// $ json-server --watch api/db.json --port 8000
 // index.js --> const charactersAPI = new APIHandler('http://localhost:8000');
 class APIHandler {
   constructor (baseUrl) {
+    // // option 1
     // this.BASE_URL = baseUrl;
-    this.api = axios.create({ baseURL: baseUrl });  }
+    // //console.log(typeof this.BASE_URL)
+    // this.api = axios.create( { baseURL: this.BASE_URL });
+
+
+    // option 2 
+    this.api = axios.create({ baseURL: baseUrl }); 
+    //this.api = axios.create({baseURL: "http://localhost:8000"})
+  
+  }
   
   //function declaration
   // It receives NO parameters
@@ -50,3 +59,4 @@ class APIHandler {
   
   deleteOneRegister = (id) => this.api.delete(`/characters/${id}`);
 }
+

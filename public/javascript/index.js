@@ -1,5 +1,5 @@
 // run this on Terminal to make API works
-// $ json-server --watch db.json --port 8000
+// $ json-server --watch api/db.json --port 8000
 const charactersAPI = new APIHandler('http://localhost:8000');
 
 window.addEventListener('load', () => {
@@ -7,6 +7,9 @@ window.addEventListener('load', () => {
   document.getElementById('fetch-all').addEventListener('click', async (event) => {
     const allCharacters = await charactersAPI.getFullList();
     // json with all the characters
+    console.log(allCharacters)
+    //{data: Array(18), status: 200, statusText: 'OK', headers: {…}, config: {…}, …}
+    // Axios has the information in --> .data
     const result = allCharacters.data;
     console.log(result);
   
