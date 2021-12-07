@@ -5,7 +5,11 @@
     "scripts": {
         "start": "node --ext js,hbs,css,html ./bin/www",
         "start:dev": "nodemon --ext js,hbs,css,html ./bin/www",
+<<<<<<< HEAD
         "json:server": "json-server --watch ./api/characters.json --port 8000"
+=======
+        "json:server": "json-server --watch db.json --port 8000"
+>>>>>>> 43d8ce54dfb1b5a9085c1f0c13f1321988e8c81d
     },
     "dependencies": {
         "axios": "^0.24.0",
