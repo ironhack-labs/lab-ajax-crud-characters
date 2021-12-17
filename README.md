@@ -166,7 +166,7 @@ To be able to delete a character from the API database, we need to:
 We will create a form with 4 inputs: name(text), occupation(text), weapon(text) and cartoon(checkbox).
 
 - Create a submit button (_Create_ in the image above) to get all the data from the form.
-- Create an event handler function for managing the form submission. To prevent the default form behavour (page reload), use the [`event.preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) method.
+- Create an event handler function for managing the form submission. To prevent the default form behaviour (page reload), use the [`event.preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) method.
 - Send the data to the `APIHandler` function to save the new character through _[http://localhost:8000/characters](http://ih-crud-api.herokuapp.com/characters)_
    <!-- :::danger -->
   **Remember which HTTP verb you need in the request!!**
@@ -181,7 +181,7 @@ We will create a form with 4 inputs: name(text), occupation(text), weapon(text) 
 We will create a form with 4 inputs: name(text), occupation(text), weapon(text) and cartoon(checkbox). Also, we will create a new input to indicate the `id` of the character we want to edit.
 
 - Create a submit button (_Update_ in the image above) to get all the data from the form.
-- Create an event handler function for managing the form submission. To prevent the default form behavour (page reload), use the [`event.preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) method.
+- Create an event handler function for managing the form submission. To prevent the default form behaviour (page reload), use the [`event.preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) method.
 - Send the data to the `APIHandler` function to save the new character through _[http://localhost:8000/characters/:id](http://ih-crud-api.herokuapp.com/characters/:id)_
    <!-- :::danger -->
   **Remember which HTTP verb you need in the request!!**
