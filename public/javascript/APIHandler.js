@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 class APIHandler {
   constructor (baseUrl) {
       this.BASE_URL = baseUrl;
@@ -25,4 +27,4 @@ class APIHandler {
    axios.delete(`${this.baseUrl}/characters/${id}`)     //delete one register, então deletar 1 específico
   }
 
-  
+  module.exports= APIHandler;
