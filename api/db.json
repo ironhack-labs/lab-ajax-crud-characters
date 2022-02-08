@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Han Many",
+      "occupation": "Smudasdasd",
+      "cartoon": "on",
+      "weapon": "asdasdasd",
+      "id": 1
+    },
+    {
+      "name": "Luke nothing",
+      "occupation": "asdasdasd",
+      "cartoon": "on",
+      "weapon": "asdasd",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    }
+  ]
+}
