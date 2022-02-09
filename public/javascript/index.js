@@ -4,7 +4,38 @@ window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
     .addEventListener("click", function (event) {
-      charactersAPI.getFullList();
+      charactersAPI.getFullList().then((allCharacters) => {
+        let fullList = allCharacters.data;
+
+        fullList.forEach((character) => {
+          let characterContainer = document.querySelector(
+            ".characters-container"
+          );
+          let divChar = document.createElement("div");
+          divChar.classList.add("character-info");
+          characterContainer.appendChild(divChar);
+
+          let divName = document.createElement("div");
+          divName.classList.add("name");
+          divName.innerHTML = `Name: ${character.name}`;
+          divChar.appendChild(divName);
+
+          let divOccup = document.createElement("div");
+          divOccup.classList.add("occupation");
+          divOccup.innerHTML = `Occupation: ${character.occupation}`;
+          divChar.appendChild(divOccup);
+
+          let divCartoon = document.createElement("div");
+          divCartoon.classList.add("cartoon");
+          divCartoon.innerHTML = `Is a cartoon: ${character.cartoon}`;
+          divChar.appendChild(divCartoon);
+
+          let divWeapon = document.createElement("div");
+          divWeapon.classList.add("weapon");
+          divWeapon.innerHTML = `Weapon: ${character.weapon}`;
+          divChar.appendChild(divWeapon);
+        });
+      });
     });
 
   document
