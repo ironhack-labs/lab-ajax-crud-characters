@@ -7,19 +7,19 @@ class APIHandler {
     return axios.get(`${this.BASE_URL}/characters`);
   }
 
-  getOneRegister() {
-    return axios.get(`${this.BASE_URL}/characters/:id`);
+  getOneRegister(characterId) {
+    return axios.get(`${this.BASE_URL}/characters/${characterId}`);
   }
 
-  createOneRegister() {
-    return axios.post(`${this.BASE_URL}/characters`);
+  createOneRegister(newCharacter) {
+    return axios.post(`${this.BASE_URL}/characters`, newCharacter);
   }
 
-  updateOneRegister() {
-    return axios.put(`${this.BASE_URL}/characters/:id`);
+  updateOneRegister(characterId) {
+    return axios.put(`${this.BASE_URL}/characters/${characterId}`);
   }
 
-  deleteOneRegister() {
-    return axios.delete(`${this.BASE_URL}/characters/:id`);
+  deleteOneRegister(characterId) {
+    return axios.delete(`${this.BASE_URL}/characters/${characterId}`);
   }
 }

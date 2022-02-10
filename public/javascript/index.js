@@ -41,13 +41,36 @@ window.addEventListener("load", () => {
   document
     .getElementById("fetch-one")
     .addEventListener("click", function (event) {
-      charactersAPI.getOneRegister();
+      let characterId = document.querySelector("#id-input").value;
+
+      charactersAPI.getOneRegister(characterId).then((character) => {
+        let oneCharacter = character.data;
+        let oneCard = `<div class="character-info">
+        <div class="name">${oneCharacter.name}</div>
+        <div class="occupation">${oneCharacter.occupation}</div>
+        <div class="cartoon">${oneCharacter.cartoon}</div>
+        <div class="weapon">${oneCharacter.weapon}</div>
+        </div>`;
+
+        let container = document.querySelector(".characters-container");
+
+        container.innerHTML = oneCard;
+      });
     });
 
   document
     .getElementById("delete-one")
     .addEventListener("click", function (event) {
-      charactersAPI.deleteOneRegister();
+      let characterId = document.querySelector("#delete-input").value;
+
+      charactersAPI
+        .deleteOneRegister(characterId)
+        .then(() => {
+          document.getElementById("delete-one").style.backgroundColor = "green";
+        })
+        .catch(() => {
+          document.getElementById("delete-one").style.backgroundColor = "red";
+        });
     });
 
   document
@@ -59,6 +82,13 @@ window.addEventListener("load", () => {
   document
     .getElementById("new-character-form")
     .addEventListener("submit", function (event) {
-      charactersAPI.createOneRegister();
+      event.preventDefault();
+      let createForm = document.querySelectorAll("#new-character-form");
+
+      console.log(createForm[0][0].name.value);
+      // createForm.forEach((input) => {
+      //   console.log(input);
+      // });
+      // charactersAPI.createOneRegister();
     });
 });
