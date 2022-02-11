@@ -1,18 +1,24 @@
 {
   "characters": [
     {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
+      "name": "Mr Pickles",
+      "occupation": "walks in the park",
+      "weapon": "satanic object/pocket knife",
+      "id": 7
     },
     {
-      "id": 3,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "Sam Smith",
+      "occupation": "CIA employee",
+      "weapon": "Pistol",
+      "cartoon": true,
+      "id": 8
+    },
+    {
+      "name": "Roger Smith",
+      "occupation": "Multiple personas",
+      "weapon": "super stink farts",
+      "cartoon": true,
+      "id": 9
     }
   ]
 }

@@ -15,8 +15,11 @@ class APIHandler {
     return axios.post(`${this.BASE_URL}/characters`, newCharacter);
   }
 
-  updateOneRegister(characterId) {
-    return axios.put(`${this.BASE_URL}/characters/${characterId}`);
+  updateOneRegister(characterId, editedCharacter) {
+    return axios.put(
+      `${this.BASE_URL}/characters/${characterId}`,
+      editedCharacter
+    );
   }
 
   deleteOneRegister(characterId) {

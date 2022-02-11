@@ -76,19 +76,61 @@ window.addEventListener("load", () => {
   document
     .getElementById("edit-character-form")
     .addEventListener("submit", function (event) {
-      charactersAPI.updateOneRegister();
+      event.preventDefault();
+
+      let characterId = document.querySelectorAll(
+        "#edit-character-form input"
+      )[0].value;
+
+      let editedChar = {};
+      new FormData(event.target).forEach((value, key) => {
+        editedChar[key] = value;
+      });
+
+      let { name, occupation, weapon, cartoon } = editedChar;
+
+      charactersAPI
+        .updateOneRegister(characterId, {
+          name,
+          occupation,
+          weapon,
+          cartoon,
+        })
+        .then(() => {
+          document.querySelector(
+            "#edit-character-form button"
+          ).style.backgroundColor = "green";
+        })
+        .catch(() => {
+          document.querySelector(
+            "#edit-character-form button"
+          ).style.backgroundColor = "red";
+        });
     });
 
   document
     .getElementById("new-character-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-      let createForm = document.querySelectorAll("#new-character-form");
 
-      console.log(createForm[0][0].name.value);
-      // createForm.forEach((input) => {
-      //   console.log(input);
-      // });
-      // charactersAPI.createOneRegister();
+      let newCharacter = {};
+      new FormData(event.target).forEach((value, key) => {
+        newCharacter[key] = value;
+      });
+
+      newCharacter.cartoon === undefined
+        ? (newCharacter.cartoon = false)
+        : (newCharacter.cartoon = true);
+
+      let { name, occupation, weapon, cartoon } = newCharacter;
+
+      charactersAPI
+        .createOneRegister({ name, occupation, weapon, cartoon })
+        .then(() => {
+          document.getElementById("send-data").style.backgroundColor = "green";
+        })
+        .catch(() => {
+          document.getElementById("send-data").style.backgroundColor = "red";
+        });
     });
 });
