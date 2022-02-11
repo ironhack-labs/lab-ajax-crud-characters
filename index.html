@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>IH Characters</title>
 </head>
 <body>
   <section class="container">
-    <h1>Ironhack Characters API</h1>
-    <div class="characters-container">
+    <h1 id="main-heading">Ironhack Characters API</h1>
+    <div class="characters-container" id="characters-container">
       <div class="character-info">
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
@@ -24,13 +26,13 @@
         <button id="fetch-all">Fetch all</button>
       </div>
       <div class="operation">
-        <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <label for="fetch-id">Search by ID: </label>
+        <input id="fetch-id" type="text" name="id">
         <button id="fetch-one">Fetch one</button>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
-        <input type="text" name="character-id-delete">
+        <input id="delete-id" type="text" name="id">
         <button id="delete-one">Delete one</button>
       </div>
 
@@ -42,19 +44,19 @@
       <form id="new-character-form" class="character-form">
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input id="create-name" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input id="create-occupation" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input id="create-weapon" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input id="create-cartoon" name="cartoon" type="checkbox">
         </div>
         <button id="send-data">Create</button>
       </form>
@@ -64,29 +66,33 @@
       <form id="edit-character-form" class="character-form">
         <div class="field">
           <label for="id">ID: </label>
-          <input type="text" name="chr-id">
+          <input id="edit-id" type="text" name="chr-id">
         </div>
         <div class="field">
           <label for="name">Name: </label>
-          <input type="text" name="name">
+          <input id="edit-name" type="text" name="name">
         </div>
         <div class="field">
           <label for="occupation">Occupation: </label>
-          <input type="text" name="occupation">
+          <input id="edit-occupation" type="text" name="occupation">
         </div>
         <div class="field">
           <label for="weapon">Weapon: </label>
-          <input type="text" name="weapon">
+          <input id="edit-weapon" type="text" name="weapon">
         </div>
         <div class="field">
           <label for="cartoon">Is a Cartoon: </label>
-          <input name="cartoon" type="checkbox">
+          <input id="edit-cartoon" name="cartoon" type="checkbox">
         </div>
         <button id="send-data">Update</button>
       </form>
     </section>
   </section>
-  <script type="text/javascript" src="./public/javascript/JsonServerApi.js"></script>
-  <script type="text/javascript" src="./public/javascript/index.js"></script>
+  <script type="text/javascript" src="./public/javascript/JsonServerApi.js" type="module"></script>
+  <!-- <script type="text/javascript" src="./public/javascript/renderResponse.js" type="module"></script> -->
+  <script type="module" src="./public/javascript/index.js"></script>
 </body>
 </html>
+
+
+<div>Id: ${character.id}</div>

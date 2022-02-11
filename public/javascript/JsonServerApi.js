@@ -1,6 +1,3 @@
-const axios = require("axios");
-
-
 class JsonServerApi {
 
     constructor(baseURL){
@@ -27,5 +24,3 @@ class JsonServerApi {
         return this.api.delete(`/characters/${id}`);
     }
 }
-
-module.exports = JsonServerApi;

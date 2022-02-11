@@ -22,37 +22,28 @@
       "cartoon": true
     },
     {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "name": "Petpr",
-      "occupation": "enemy",
-      "weapon": "sword",
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
       "name": "mousy",
       "occupation": "cheese thief",
       "weapon": "teeth",
       "id": 12
+    },
+    {
+      "name": "HulkH (N)",
+      "id": 4
+    },
+    {
+      "id": 13,
+      "name": "Marioso",
+      "occupation": "Hunter",
+      "weapon": "Gun",
+      "cartoon": "on"
+    },
+    {
+      "name": "String Fellow",
+      "occupation": "Hero",
+      "weapon": "Airwolf",
+      "cartoon": "on",
+      "id": 14
     }
   ]
 }
