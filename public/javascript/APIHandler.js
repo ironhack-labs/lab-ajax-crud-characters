@@ -3,23 +3,43 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  async getFullList () {
+    try{
+      console.log(await axios.get(`${this.BASE_URL}/characters`));
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  getOneRegister () {
-
+  async getOneRegister (id) {
+    try {
+      console.log(await axios.get(`${this.BASE_URL}/characters/${id}`));
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  createOneRegister () {
-
+  async createOneRegister (register) {
+    try {
+      console.log(await axios.post(`${this.BASE_URL}/characters`, register));
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  updateOneRegister () {
-
+  async updateOneRegister (id, register) {
+    try {
+      console.log(await axios.put(`${this.BASE_URL}/characters/${id}`, register));
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  deleteOneRegister () {
-
+  async deleteOneRegister (id) {
+    try {
+      console.log(await axios.delete(`${this.BASE_URL}/characters/${id}`));
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
