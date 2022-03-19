@@ -69,11 +69,11 @@ window.addEventListener("load", () => {
   document
     .getElementById("edit-character-form")
     .addEventListener("submit", function (event) {
-      let oneRegister = {};
+      let characterObj = {};
       new FormData(event.target).forEach(
-        (value, key) => (oneRegister[key] = value)
+        (value, key) => (characterObj [key] = value)
       );
-      let { chrId, name, occupation, cartoon, weapon } = oneRegister;
+      let { chrId, name, occupation, cartoon, weapon } = characterObj;
       charactersAPI
         .updateOneRegister(chrId, { name, occupation, cartoon, weapon })
         .then((res) => {
@@ -92,11 +92,11 @@ window.addEventListener("load", () => {
   document
     .getElementById("new-character-form")
     .addEventListener("submit", function (event) {
-      let oneRegister = {};
+      let characterObj = {};
       new FormData(event.target).forEach(
-        (value, key) => (oneRegister[key] = value)
+        (value, key) => (characterObj[key] = value)
       );
-      let { name, occupation, cartoon, weapon } = oneRegister;
+      let { name, occupation, cartoon, weapon } = characterObj;
 
       charactersAPI
         .createOneRegister({ name, occupation, cartoon, weapon })

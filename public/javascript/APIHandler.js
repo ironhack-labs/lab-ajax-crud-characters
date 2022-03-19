@@ -13,12 +13,12 @@ class APIHandler {
       return axios.get(`${this.BASE_URL}/${characterId}`);
   }
 
-  createOneRegister (oneRegister) {
-    return axios.post(`${this.BASE_URL}/characters`, oneRegister);
+  createOneRegister (characterObj) {
+    return axios.post(`${this.BASE_URL}/characters`, characterObj);
   }
 
-  updateOneRegister (characterId, oneRegister) {
-    return axios.patch(`${this.BASE_URL}/${characterId}`, oneRegister);
+  updateOneRegister (characterId, characterObj) {
+    return axios.patch(`${this.BASE_URL}/${characterId}`, characterObj);
   }
 
   deleteOneRegister () {
