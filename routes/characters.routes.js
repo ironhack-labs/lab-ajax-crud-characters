@@ -1,12 +1,12 @@
-const router = require("express").Router();
+/* const router = require("express").Router();
 
 // Require and instantiate the API Service
-const ApiService = require('../services/api.service');
-const apiService = new ApiService();
+const APIHandler = require('../api/');
+const APIHandler = new APIHandler();
 
 // List all the characters from the API.
 router.get('/characters/list', (req, res) => {
-    apiService
+  APIHandler
       .getFullList()
       .then((response) => {
         res.json(response.data);
@@ -16,5 +16,5 @@ router.get('/characters/list', (req, res) => {
   });
 
 
-module.exports = router;
+module.exports = router; */
 

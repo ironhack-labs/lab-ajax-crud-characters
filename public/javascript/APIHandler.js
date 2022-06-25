@@ -1,31 +1,26 @@
-const axios = require('axios');
-
-class APIHandler {
-  constructor () {
-    this.api = axios.create({
-      baseURL: 'https://ih-crud-api.herokuapp.com'
-    }); 
-  }
+  class APIHandler {
+   constructor (baseUrl) {
+    this.BASE_URL = baseUrl;
+  } 
 
   getFullList () {
-    return this.api.get('/characters');
+    return this.api.get(`${this.BASE_URL}/characters`);
   }
 
   getOneRegister (characterId) {
-    return this.api.get(`/characters/${characterId}`);
+    return this.api.get(`${this.BASE_URL}/characters/${characterId}`);
   }
 
   createOneRegister (characterInfo) {
-    return this.api.post(`/characters`, characterInfo);
+    return this.api.post(`${this.BASE_URL}/characters`, characterInfo);
   }
 
   updateOneRegister (characterId, characterInfo) {
-    return this.api.put(`/characters/${characterId}`, characterInfo);
+    return this.api.put(`${this.BASE_URL}/characters/${characterId}`, characterInfo);
   }
 
   deleteOneRegister (characterId) {
-    return this.api.delete(`/characters/${characterId}`);
+    return this.api.delete(`${this.BASE_URL}/characters/${characterId}`);
   }
 }
 
-module.exports = APIHandler;
