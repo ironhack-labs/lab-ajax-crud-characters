@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "luuukeee",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false
+    },
+    {
+      "id": 4,
+      "name": "Arturo",
+      "occupation": "Assistan",
+      "weapon": "Pistol",
+      "cartoon": false
+    },
+    {
+      "id": 5,
+      "name": "Summer",
+      "occupation": "Assistan",
+      "weapon": "falso amor",
+      "cartoon": false
+    }
+  ]
+}
