@@ -6,11 +6,13 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
-    charactersAPI.getOneRegister(characterId);
+    let id = document.getElementsByName("character-id");
+    charactersAPI.getOneRegister(id[0].value);
   });
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
-
+    let id = document.getElementsByName("character-id-delete");
+    charactersAPI.deleteOneRegister(id[0].value);
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
