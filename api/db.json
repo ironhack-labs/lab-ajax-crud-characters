@@ -1,0 +1,38 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "MumRaa",
+      "occupation": "Monia",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Munra",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Gun",
+      "cartoon": true
+    },
+    {
+      "id": 6,
+      "name": "Summer",
+      "occupation": "falso amor",
+      "weapon": "Assistant",
+      "cartoon": false
+    }
+  ]
+}
