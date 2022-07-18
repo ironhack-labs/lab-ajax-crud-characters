@@ -1,4 +1,4 @@
 # Dependency directory
 node_modules
-# Debug log from npm
-npm-debug.log
+# ignore ALL .log files
+*.log
