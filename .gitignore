@@ -1,4 +1,1 @@
-# Dependency directory
 node_modules
-# ignore ALL .log files
-*.log
