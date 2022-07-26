@@ -10,7 +10,7 @@ body {
   background: url("../images/minions.jpg")
 }
 
-h1, h2 {
+h1, h2, .amarillo {
   color: #d8b362;
 }
 
