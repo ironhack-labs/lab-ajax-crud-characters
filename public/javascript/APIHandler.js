@@ -1,25 +1,30 @@
+/* const baseModule = require("hbs"); */
+
 class APIHandler {
-  constructor (baseUrl) {
+  constructor (BASE_URL) {
     this.BASE_URL = baseUrl;
+    this.api = axios.create({
+      baseURL: this.BASE_URL
+    })
   }
 
   getFullList () {
-
+    return this.api.get('/characters')
   }
 
-  getOneRegister () {
-
+  getOneRegister (id) {
+    return this.api.get(`/characters/${id}`)
   }
 
-  createOneRegister () {
-
+  createOneRegister (character) {
+    this.api.post(`/characters`, character)
   }
 
-  updateOneRegister () {
-
+  updateOneRegister (id, updateRegister) {
+    this.api.put(`/characters/${id}`, updateRegister)
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister (id) {
+    this.api.delete(`/characters/${id}`)
   }
 }
