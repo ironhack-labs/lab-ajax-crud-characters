@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "name": "majid",
+      "occupation": "software engineer",
+      "cartoon": "on",
+      "weapon": "gun",
+      "id": 1
+    },
+    {
+      "name": "Luke nothing",
+      "occupation": "plumber",
+      "cartoon": "on",
+      "weapon": "bazooka",
+      "id": 2
+    },
+    {
+      "name": "Andrea",
+      "occupation": "masterbrain",
+      "cartoon": "on",
+      "weapon": "javascript",
+      "id": 3
+    },
+    {
+      "name": "Xico",
+      "occupation": "Punishing Majid",
+      "cartoon": "on",
+      "weapon": "master in catching copy paste",
+      "id": 4
+    },
+    {
+      "name": "Matulan",
+      "occupation": "best one in class in database",
+      "cartoon": "on",
+      "weapon": "Strong and determined",
+      "id": 5
+    }
+  ]
+}
