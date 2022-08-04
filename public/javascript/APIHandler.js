@@ -1,25 +1,36 @@
 class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+  constructor(baseUrl) {
+    this.BASE_URL = baseUrl
+    this.api = axios.create({
+      baseURL: this.BASE_URL
+    })
+  }
+  
+  getFullList() {
+    return this.api.get(`/characters`)
   }
 
-  getFullList () {
-
+  getOneRegister(id) {
+    return this.api.get(`/characters/${id}`)
   }
 
-  getOneRegister () {
-
+  createOneRegister(character) {
+    return this.api.post(`/characters`, character)
   }
 
-  createOneRegister () {
-
+  updateOneRegister(id, updatedInfo) {
+    return this.api.put(`/characters/${id}`, updatedInfo)
   }
 
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    return this.api.delete(`/characters/${id}`)
   }
 }
+
+/* 
+Get all the characters info from http://localhost:8000/characters
+Get a single character info from http://localhost:8000/characters/:id
+Create a single character posting the data to http://localhost:8000/characters
+Delete a single character through his id in http://localhost:8000/characters/:id
+Edit a single character through his id in http://localhost:8000/characters/:id 
+*/
