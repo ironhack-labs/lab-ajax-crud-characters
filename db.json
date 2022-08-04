@@ -1,0 +1,24 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": "Brenda",
+      "occupation": "None",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Xuxa",
+      "occupation": "Dona da monange",
+      "weapon": "o cara lá de cima",
+      "cartoon": true,
+      "id": 5
+    }
+  ]
+}
