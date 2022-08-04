@@ -21,3 +21,8 @@ window.addEventListener('load', () => {
 
   });
 });
+
+document.getElementById('get-country-btn').addEventListener('click', () => {
+  const userInput = document.getElementById('country-name-input').value;
+  getCountryInfo(userInput);
+});
