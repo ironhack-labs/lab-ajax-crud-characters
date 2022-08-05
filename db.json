@@ -8,17 +8,25 @@
       "cartoon": true
     },
     {
-      "name": "Brenda",
-      "occupation": "None",
-      "cartoon": false,
-      "id": 4
-    },
-    {
-      "name": "Xuxa",
-      "occupation": "Dona da monange",
+      "name": "Xoxa",
+      "occupation": "Rainha dos baixinhos",
       "weapon": "o cara lá de cima",
       "cartoon": true,
-      "id": 5
+      "id": 6
+    },
+    {
+      "name": "MC Loma",
+      "occupation": "cantora",
+      "weapon": "cebrutius",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "Maísa",
+      "occupation": "jovem adulta",
+      "weapon": "play station",
+      "cartoon": true,
+      "id": 8
     }
   ]
 }

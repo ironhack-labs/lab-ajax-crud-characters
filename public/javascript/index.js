@@ -63,19 +63,47 @@ window.addEventListener('load', () => {
        .then((response) => {
 				console.log(response.data);
 				const character = response.data;
-        
+
      // Finally, we call the deleteOneRegister on the returned object's id.
     charactersAPI.deleteOneRegister(`${character.id}`);
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
 
+    //Getting the value of the input and saving it into a variable
+    const input = document.getElementById("chr-id").value;
+
+    //Running the getOneRegister method on the input value
+			charactersAPI.getOneRegister(input)
+
+    // It will return a promise, which will return a single object (the one we want to delete)
+       .then((response) => {
+				console.log(response.data);
+				const character = response.data;
+    charactersAPI.updateOneRegister(`${character.id}`, input);
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
 
-  });
+ //Getting the value of the input and saving it into a variable
+  const input = document.getElementById("character-form").value; */
 
-})
+ //Running the getOneRegister method on the input value
+    charactersAPI.getOneRegister(input) 
 
-})
+ // It will return a promise, which will return a single object (the one we want to delete)
+     .then((response) => {
+     console.log(response.data); 
+     const character = response.data;
+/* 
+     const { name, occupation, weapon, cartoon } = document.getElementById("new-form-name new-form-occupation new-form-weapon new-form-cartoon").value;
+
+     charactersAPI.createCharacter({ name, occupation, weapon, cartoon })
+     const character = document.getElementById("character-form").value */
+     charactersAPI.createOneRegister(character);
+
+     })
+    })
+   })
+  })
+ })
