@@ -32,6 +32,16 @@ button {
   overflow: hidden;
 }
 
+.btn-green {
+
+  background-color: green;
+}
+
+.btn-red {
+
+  background-color: red;
+}
+
 .container {
   width: 70%;
   margin: 50px auto 0;
@@ -72,6 +82,8 @@ button {
   border: solid white 2px;
   border-radius: 20px;
 }
+
+
 
 .character-info div span {
   color: #d8b362;

@@ -1,0 +1,22 @@
+{
+  "characters": [
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Han Solo",
+      "id": 4
+    },
+    {
+      "name": "Luke Skywalker",
+      "occupation": "jedi",
+      "weapon": "laser",
+      "cartoon": "on",
+      "id": 5
+    }
+  ]
+}
