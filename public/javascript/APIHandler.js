@@ -27,4 +27,3 @@ class APIHandler {
   } //delete the character
 }
 
-module.exports = ApiService;
