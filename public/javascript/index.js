@@ -2,6 +2,8 @@ const charactersAPI = new APIHandler("http://localhost:8000");
 const characterContainer = document.getElementById("character-container");
 const blankContainer = document.getElementById("blank-container");
 const idInput = document.getElementsByName("character-id")[0];
+const idInputDelete = document.getElementsByName("character-id-delete")[0];
+const deleteButton = document.getElementById("delete-one");
 
 window.addEventListener("load", () => {
   document
@@ -29,7 +31,12 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("delete-one")
-    .addEventListener("click", function (event) {});
+    .addEventListener("click", async function (event) {
+      if (idInputDelete.value) {
+        await charactersAPI.deleteOneRegister(idInputDelete.value);        
+        deleteButton.style.backgroundColor = "green";
+      } else deleteButton.style.backgroundColor = "red";
+    });
 
   document
     .getElementById("edit-character-form")
@@ -37,7 +44,9 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("new-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", function (event) {
+      const newCharacter = 
+    });
 });
 
 function addCharacterCard(character) {

@@ -15,15 +15,15 @@ class APIHandler {
     return data;
   }
 
-  createOneRegister () {
-
+  async createOneRegister(characterData) {
+    return this.api.post("/characters", characterData)
   }
 
   updateOneRegister () {
 
   }
 
-  deleteOneRegister () {
-
+  async deleteOneRegister(id) {
+    return await this.api.delete(`/characters/${id}`);
   }
 }
