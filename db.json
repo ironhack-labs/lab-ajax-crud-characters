@@ -1,11 +1,39 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
+      "name": "Arin",
+      "occupation": "Singer",
+      "weapon": "Visuals",
+      "cartoon": false,
+      "id": 1
+    },
+    {
+      "name": "IU",
+      "occupation": "Actress, Singer",
+      "weapon": "Vocals",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "name": "Na PD",
+      "occupation": "PD",
+      "weapon": "Ddaeng!!!",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "name": "Soeun",
+      "occupation": "Singer",
+      "weapon": "Dance",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "MC Boom",
+      "occupation": "MC",
+      "weapon": "",
+      "cartoon": false,
+      "id": 5
     }
   ]
 }

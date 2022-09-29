@@ -1,15 +1,25 @@
 const charactersAPI = new APIHandler("http://localhost:8000");
 const characterContainer = document.getElementById("character-container");
-const blankContainer = document.getElementById("blank-container");
 const idInput = document.getElementsByName("character-id")[0];
 const idInputDelete = document.getElementsByName("character-id-delete")[0];
 const deleteButton = document.getElementById("delete-one");
+const newCharacterName = document.getElementsByName("name")[0];
+const newCharacterOccupation = document.getElementsByName("occupation")[0];
+const newCharacterWeapon = document.getElementsByName("weapon")[0];
+const newCharacterCartoon = document.getElementsByName("cartoon")[0];
+const editCharacterId = document.getElementsByName("chr-id")[0];
+const editCharacterName = document.getElementsByName("name")[1];
+const editCharacterOccupation = document.getElementsByName("occupation")[1];
+const editCharacterWeapon = document.getElementsByName("weapon")[1];
+const editCharacterCartoon = document.getElementsByName("cartoon")[1];
+const editButton = document.getElementById("send-data-edit");
+const newButton = document.getElementById("send-data-new");
 
 window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
     .addEventListener("click", async function (event) {
-      console.log("test2");
+      clearContainer();
       const allCharacters = await charactersAPI.getFullList();
       console.log(allCharacters);
       allCharacters.forEach((elem) => {
@@ -21,6 +31,7 @@ window.addEventListener("load", () => {
     .getElementById("fetch-one")
     .addEventListener("click", async function (event) {
       if (idInput.value) {
+        clearContainer();
         const foundCharacter = await charactersAPI.getOneRegister(
           idInput.value
         );
@@ -32,25 +43,73 @@ window.addEventListener("load", () => {
   document
     .getElementById("delete-one")
     .addEventListener("click", async function (event) {
-      if (idInputDelete.value) {
-        await charactersAPI.deleteOneRegister(idInputDelete.value);        
-        deleteButton.style.backgroundColor = "green";
-      } else deleteButton.style.backgroundColor = "red";
+      try {
+        if (idInputDelete.value) {
+          await charactersAPI.deleteOneRegister(idInputDelete.value);
+          deleteButton.style.backgroundColor = "green";
+        }
+      } catch (err) {
+        console.error(err);
+        deleteButton.style.backgroundColor = "red";
+      }
     });
 
   document
     .getElementById("edit-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", async function (event) {
+      event.preventDefault();
+      try {
+        let editedCharacter = {};
+        if (editCharacterId) {
+          const existingCharacter = await charactersAPI.getOneRegister(
+            editCharacterId.value
+          );
+          console.log(existingCharacter);
+          let editedCharacter = {};
+          editedCharacter.name = editCharacterName.value
+            ? editCharacterName.value
+            : existingCharacter.name;
+          editedCharacter.occupation = editCharacterOccupation.value
+            ? editCharacterOccupation.value
+            : existingCharacter.occupation;
+          editedCharacter.weapon = editCharacterWeapon.value
+            ? editCharacterWeapon.value
+            : existingCharacter.weapon;
+          editedCharacter.cartoon = editCharacterCartoon.checked;
+          console.log(editedCharacter);
+          await charactersAPI.updateOneRegister(
+            editedCharacter,
+            editCharacterId.value
+          );
+        }
+        editButton.style.backgroundColor = "green";
+      } catch (err) {
+        console.error(err);
+        editButton.style.backgroundColor = "red";
+      }
+    });
 
   document
     .getElementById("new-character-form")
-    .addEventListener("submit", function (event) {
-      const newCharacter = 
+    .addEventListener("submit", async function (event) {
+      event.preventDefault();
+      try {
+        const newCharacter = {
+          name: newCharacterName.value,
+          occupation: newCharacterOccupation.value,
+          weapon: newCharacterWeapon.value,
+          cartoon: newCharacterCartoon.checked,
+        };
+        await charactersAPI.createOneRegister(newCharacter);
+        newButton.style.backgroundColor = "green";
+      } catch (err) {
+        console.error(err);
+        newButton.style.backgroundColor = "red";
+      }
     });
 });
 
 function addCharacterCard(character) {
-  blankContainer.classList.add("hidden");
   const characterCard = document.createElement("div");
   characterCard.classList.add("character-info");
   characterCard.classList.add("character-info-filled-out");
@@ -70,4 +129,10 @@ function addCharacterCard(character) {
   const elementWeapon = document.createElement("div");
   elementWeapon.innerHTML = `Weapon: ${character.weapon}`;
   characterCard.appendChild(elementWeapon);
+}
+
+function clearContainer() {
+  while (characterContainer.firstChild) {
+    characterContainer.removeChild(characterContainer.lastChild);
+  }
 }
