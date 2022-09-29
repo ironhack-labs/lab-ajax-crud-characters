@@ -1,4 +1,3 @@
-//const axios = require("axios");
 const baseURL = "http://localhost:8000";
 class APIHandler {
   constructor(baseURL) {
