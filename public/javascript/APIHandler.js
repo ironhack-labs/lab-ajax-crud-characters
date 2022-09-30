@@ -1,25 +1,48 @@
+const baseURL = 'http://localhost:8000';
+
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
+    this.api = axios.create({ baseURL: this.BASE_URL });
   }
 
-  getFullList () {
-
+  async getFullList() {
+    try {
+      return this.api.get('/characters');
+    } catch (err) {
+      console.log(console.log(err));
+    }
   }
 
-  getOneRegister () {
-
+  getOneRegister(id) {
+    try {
+      return this.api.get(`/characters/${id}`);
+    } catch (err) {
+      console.log(console.log(err));
+    }
   }
 
-  createOneRegister () {
-
+  createOneRegister(data) {
+    try {
+      return this.api.post('/characters', data);
+    } catch (err) {
+      console.log(console.log(err));
+    }
   }
 
-  updateOneRegister () {
-
+  updateOneRegister(id, data) {
+    try {
+      this.api.put(`/characters/${id}`, data);
+    } catch (err) {
+      console.log(console.log(err));
+    }
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister(id) {
+    try {
+      return this.api.delete(`/characters/${id}`);
+    } catch (err) {
+      console.log(console.log(err));
+    }
   }
 }
