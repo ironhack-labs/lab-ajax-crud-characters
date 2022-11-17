@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Solo",
+      "occupation": "Warrior",
+      "weapon": "Blaster",
+      "cartoon": true
+    },
+    {
+      "name": "Baba Ganoosh",
+      "occupation": "Food",
+      "weapon": "Spice",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Metaverse",
+      "occupation": "Fulling",
+      "weapon": "Illusion",
+      "cartoon": false,
+      "id": 5
+    }
+  ]
+}
