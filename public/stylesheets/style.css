@@ -105,3 +105,19 @@ button {
 .submit-button {
   margin: 10px 0 0 120px;
 }
+
+.character-card {
+  max-width: 40%;
+  padding: 0 20px;
+  border-radius: 15px;
+  border: 2px solid #FFF;
+  text-align: left;
+}
+.character-card p {
+  display: flex;
+  justify-content: space-between;
+}
+.character-card p span {
+  text-align: left;
+  color: #d8b362;
+}
