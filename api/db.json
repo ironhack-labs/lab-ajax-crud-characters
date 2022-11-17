@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Fan Solo",
+      "occupation": "Vicious smuggler",
+      "weapon": "Pistol",
+      "cartoon": false,
+      "id": 1
+    },
+    {
+      "name": "TestName",
+      "occupation": "TestOcc",
+      "weapon": "TestWeapon",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "name": "New Char",
+      "occupation": "New Occ",
+      "weapon": "New Occ",
+      "cartoon": true,
+      "id": 4
+    }
+  ]
+}
