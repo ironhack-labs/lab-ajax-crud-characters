@@ -35,14 +35,18 @@ window.addEventListener('load', () => {
     .getElementById('delete-one')
     .addEventListener('click', function (event) {
       const id = document.querySelector('.delete-input').value;
+      const deleteBtn = document.getElementById('delete-one');
 
       charactersAPI
         .getOneRegister(id)
         .then((response) => {
-          console.log(response.data);
+          console.log('Deleted item:', response.data.name);
+          deleteBtn.style.backgroundColor = 'green';
         })
-
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+          deleteBtn.style.backgroundColor = 'red';
+        });
     });
 
   document
@@ -50,6 +54,7 @@ window.addEventListener('load', () => {
     .addEventListener('submit', function (event) {
       event.preventDefault();
 
+      const editBtn = document.querySelector('#edit-character-form #send-data');
       const id = document.querySelector('.edit-id-input').value;
       const name = document.querySelector('.edit-name-input').value;
       const occupation = document.querySelector('.edit-occupation-input').value;
@@ -66,8 +71,14 @@ window.addEventListener('load', () => {
 
       charactersAPI
         .updateOneRegister(id, editCharacter)
-        .then((response) => console.log(response.data))
-        .catch((err) => console.log(err));
+        .then((response) => {
+          console.log('Edited item: ', response.data.name);
+          editBtn.style.backgroundColor = 'green';
+        })
+        .catch((err) => {
+          console.log(err);
+          editBtn.style.backgroundColor = 'red';
+        });
     });
 
   document
@@ -75,6 +86,9 @@ window.addEventListener('load', () => {
     .addEventListener('submit', function (event) {
       event.preventDefault();
 
+      const createBtn = document.querySelector(
+        '#new-character-form #send-data'
+      );
       const name = document.getElementById('new-name-input').value;
       const occupation = document.getElementById('new-occupation-input').value;
       const weapon = document.getElementById('new-weapon-input').value;
@@ -89,7 +103,13 @@ window.addEventListener('load', () => {
 
       charactersAPI
         .createOneRegister(newCharacter)
-        .then((response) => console.log(response.data))
-        .catch((err) => console.log(err));
+        .then((response) => {
+          console.log('A new character created: ', response.data.name);
+          createBtn.style.backgroundColor = 'green';
+        })
+        .catch((err) => {
+          console.log(err);
+          createBtn.style.backgroundColor = 'red';
+        });
     });
 });

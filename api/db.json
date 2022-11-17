@@ -36,11 +36,18 @@
       "id": 5
     },
     {
-      "name": "asdfgh",
-      "occupation": "sdfgh",
-      "weapon": "ertyhj",
-      "cartoon": true,
+      "name": "dfghjkjhygfdsdfgtyhuji",
+      "occupation": "ytrdsdfghgfd fghjkjhgfdfghjh",
+      "weapon": "dfggfgh",
+      "cartoon": false,
       "id": 6
+    },
+    {
+      "name": "qewerty ironhack",
+      "occupation": "ironhacker at orinhack",
+      "weapon": "knowledge",
+      "cartoon": true,
+      "id": 7
     }
   ]
 }
