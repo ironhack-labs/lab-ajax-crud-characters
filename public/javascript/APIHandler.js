@@ -1,25 +1,49 @@
-class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+class APIHandler { constructor(baseUrl) {
+  this.BASE_URL = baseUrl;
+  this.api = axios.create({ baseURL: this.BASE_URL });
+}
+
+async getFullList() {
+  try {
+      const fullList = await this.api.get(`/characters`);
+      return fullList;
+  } catch (err) {
+      console.log(err);
   }
-
-  getFullList () {
-
+}
+async getOneRegister(id) {
+  try {
+      const oneRegister = await this.api.get(`/characters/${id}`);
+      return oneRegister;
+  } catch (err) {
+      console.log(err);
   }
+}
 
-  getOneRegister () {
-
+async createOneRegister(obj) {
+  try {
+      const oneRegister = await this.api.post(`/characters`, obj);
+      return oneRegister;
+  } catch (err) {
+      console.log(err);
   }
+}
 
-  createOneRegister () {
-
+async updateOneRegister(id, obj) {
+  try {
+      const oneRegister = await this.api.put(`/characters/${id}`, obj);
+      return oneRegister;
+  } catch (err) {
+      console.log(err);
   }
+}
 
-  updateOneRegister () {
-
+async deleteOneRegister(id) {
+  try {
+      const oneRegister = await this.api.delete(`/characters/${id}`);
+      return oneRegister;
+  } catch (err) {
+      console.log(err);
   }
-
-  deleteOneRegister () {
-
-  }
+}
 }
