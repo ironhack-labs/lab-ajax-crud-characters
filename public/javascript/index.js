@@ -33,9 +33,13 @@ window.addEventListener('load', () => {
     // console.log("id", characterId);
     charactersAPI.deleteOneRegister(characterId)
       .then(response => {
+        document.querySelector('#delete-one').style.backgroundColor = "green";
         console.log(response);
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        document.querySelector('#delete-one').style.backgroundColor = "red";
+        console.log(err)
+      });
   });
   
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
@@ -57,9 +61,13 @@ window.addEventListener('load', () => {
 
     charactersAPI.updateOneRegister(characterId, editObject)
       .then(response => {
+        document.querySelector('#edit-character-form #send-data').style.backgroundColor = "green";
         console.log(response);
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        document.querySelector('#edit-character-form #send-data').style.backgroundColor = "red";
+        console.log(err)
+      });
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
