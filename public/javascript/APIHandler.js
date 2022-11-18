@@ -1,21 +1,15 @@
 
-// const api = axios.create({
-//   baseURL: 'http://localhost:8000'
-// });
-
-
 class APIHandler {
   constructor () {
    this.api = axios.create({
     baseURL: 'http://localhost:8000'
-  });
+    });
   }
-
   getFullList () {
-    this.api
-    .get('/characters')
-    .then(response => console.log(response.data))
-    .catch(error => console.log(error));
+    return this.api.get('/characters')
+    // .get('/characters')
+    // .then(response => console.log(response.data))
+    // .catch(error => console.log(error));
   }
 
   getOneRegister (characterId) {
@@ -35,5 +29,3 @@ class APIHandler {
     return this.api.delete(`/characters/${characterId}`);
   }
 }
-
-//module.exports = APIHandler;

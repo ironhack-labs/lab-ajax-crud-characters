@@ -18,10 +18,10 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    let a =
-    let b = 
-    let c =
+    // event.preventDefault();
+    // let a =
+    // let b = 
+    // let c =
 
   });
 
@@ -40,6 +40,5 @@ window.addEventListener('load', () => {
     console.log(newCar)
     charactersAPI.createOneRegister(newCar)
     .then(res => console.log(res.data))
-
   });
 });
