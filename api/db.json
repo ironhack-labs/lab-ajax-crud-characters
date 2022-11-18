@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "name": "asdf",
+      "occupation": "adf",
+      "weapon": "sf",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "han",
+      "occupation": "pamri",
+      "weapon": "matio",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "sdf",
+      "occupation": "asdf",
+      "weapon": "qwer",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "asdf",
+      "occupation": "adf",
+      "weapon": "asdf",
+      "cartoon": true,
+      "id": 7
+    }
+  ]
+}
