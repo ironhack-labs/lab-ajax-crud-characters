@@ -22,16 +22,11 @@
       "cartoon": true
     },
     {
-      "name": "ee",
-      "occupation": "ee",
-      "weapon": "ee",
+      "name": "Goya",
+      "occupation": "Rattie",
+      "weapon": "teeth",
+      "cartoon": false,
       "id": 4
-    },
-    {
-      "name": "Vika",
-      "occupation": "Vika",
-      "weapon": "Vika",
-      "id": 5
     }
   ]
 }

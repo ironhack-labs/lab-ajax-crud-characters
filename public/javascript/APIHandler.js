@@ -7,9 +7,6 @@ class APIHandler {
   }
   getFullList () {
     return this.api.get('/characters')
-    // .get('/characters')
-    // .then(response => console.log(response.data))
-    // .catch(error => console.log(error));
   }
 
   getOneRegister (characterId) {
