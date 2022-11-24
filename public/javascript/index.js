@@ -6,7 +6,6 @@ window.addEventListener("load", () => {
     .addEventListener("click", function (event) {
       charactersAPI.getFullList().then((response) => {
         response.data.forEach((element) => {
-          console.log("Hello");
           charCard(element);
         });
       });
@@ -15,8 +14,10 @@ window.addEventListener("load", () => {
   document
     .getElementById("fetch-one")
     .addEventListener("click", function (event) {
-      // const id = document.querySelector("[name=character-id]").value;
-      // charactersAPI.getOneRegister(id);
+      const id = document.querySelector("[name=character-id]").value;
+      charactersAPI.getOneRegister(id).then((response) => {
+        charCard(response.data);
+      });
     });
 
   document
