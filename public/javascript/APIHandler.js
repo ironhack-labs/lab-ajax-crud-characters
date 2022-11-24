@@ -20,7 +20,15 @@ class APIHandler {
     });
   }
 
-  updateOneRegister() {}
+  updateOneRegister(id, name, occupation, weapon, isACartoon) {
+    return axios.put(this.BASE_URL + `/characters/${id}`, {
+      id: id,
+      name: name,
+      occupation: occupation,
+      weapon: weapon,
+      isACartoon: isACartoon,
+    });
+  }
 
   deleteOneRegister(id) {
     return axios.delete(this.BASE_URL + `/characters/${id}`);

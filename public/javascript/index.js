@@ -42,28 +42,45 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("edit-character-form")
-    .addEventListener("submit", function (event) {});
-
-  document
-    .getElementById("new-character-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-      const name = document.querySelector("[name=name]").value;
-      const occupation = document.querySelector("[name=occupation]").value;
-      const weapon = document.querySelector("[name=weapon]").value;
-      const isACartoon = document.querySelector("[name=cartoon]").checked;
+      const id = document.querySelector("[name=chr-id]").value;
+      const name = document.querySelector("[name=cname]").value;
+      const occupation = document.querySelector("[name=coccupation]").value;
+      const weapon = document.querySelector("[name=cweapon]").value;
+      const isACartoon = document.querySelector("[name=ccartoon]").checked;
 
       charactersAPI
-        .createOneRegister(name, occupation, weapon, isACartoon)
+        .createOneRegister(id, name, occupation, weapon, isACartoon)
         .then((response) => {
-          document.getElementById("send-data").style.background = "green";
+          document.getElementById("update-data").style.background = "green";
         })
         .catch((err) => {
           console.log(err);
-          document.getElementById("send-data").style.background = "red";
+          document.getElementById("update-data").style.background = "red";
         });
     });
 });
+
+document
+  .getElementById("new-character-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const name = document.querySelector("[name=name]").value;
+    const occupation = document.querySelector("[name=occupation]").value;
+    const weapon = document.querySelector("[name=weapon]").value;
+    const isACartoon = document.querySelector("[name=cartoon]").checked;
+
+    charactersAPI
+      .createOneRegister(name, occupation, weapon, isACartoon)
+      .then((response) => {
+        document.getElementById("send-data").style.background = "green";
+      })
+      .catch((err) => {
+        console.log(err);
+        document.getElementById("send-data").style.background = "red";
+      });
+  });
 
 function charCard(element) {
   const charactersContainer = document.querySelector(".characters-container");

@@ -27,6 +27,20 @@
       "weapon": "Laser",
       "isACartoon": true,
       "id": 4
+    },
+    {
+      "name": "4",
+      "occupation": "",
+      "weapon": "",
+      "isACartoon": "",
+      "id": 5
+    },
+    {
+      "name": "4",
+      "occupation": "Gul",
+      "weapon": "Architect",
+      "isACartoon": "Pen",
+      "id": 6
     }
   ]
 }
