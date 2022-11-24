@@ -46,7 +46,23 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("new-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.querySelector("[name=name]").value;
+      const occupation = document.querySelector("[name=occupation]").value;
+      const weapon = document.querySelector("[name=weapon]").value;
+      const isACartoon = document.querySelector("[name=cartoon]").checked;
+
+      charactersAPI
+        .createOneRegister(name, occupation, weapon, isACartoon)
+        .then((response) => {
+          document.getElementById("send-data").style.background = "green";
+        })
+        .catch((err) => {
+          console.log(err);
+          document.getElementById("send-data").style.background = "red";
+        });
+    });
 });
 
 function charCard(element) {

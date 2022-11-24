@@ -20,6 +20,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Anil Ozsoy",
+      "occupation": "Actor",
+      "weapon": "Laser",
+      "isACartoon": true,
+      "id": 4
     }
   ]
 }
