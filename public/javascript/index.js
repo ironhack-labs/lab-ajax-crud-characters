@@ -15,14 +15,30 @@ window.addEventListener("load", () => {
     .getElementById("fetch-one")
     .addEventListener("click", function (event) {
       const id = document.querySelector("[name=character-id]").value;
-      charactersAPI.getOneRegister(id).then((response) => {
-        charCard(response.data);
-      });
+      charactersAPI
+        .getOneRegister(id)
+        .then((response) => {
+          charCard(response.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     });
 
   document
     .getElementById("delete-one")
-    .addEventListener("click", function (event) {});
+    .addEventListener("click", function (event) {
+      const id = document.querySelector("[name=character-id-delete]").value;
+      charactersAPI
+        .deleteOneRegister(id)
+        .then((response) => {
+          document.getElementById("delete-one").style.background = "green";
+        })
+        .catch((err) => {
+          console.log(err);
+          document.getElementById("delete-one").style.background = "red";
+        });
+    });
 
   document
     .getElementById("edit-character-form")

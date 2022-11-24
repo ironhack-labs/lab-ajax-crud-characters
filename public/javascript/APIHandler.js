@@ -18,6 +18,6 @@ class APIHandler {
   updateOneRegister(id) {}
 
   deleteOneRegister(id) {
-    return axios.get(this.BASE_URL + `/characters/${id}`);
+    return axios.delete(this.BASE_URL + `/characters/${id}`);
   }
 }
