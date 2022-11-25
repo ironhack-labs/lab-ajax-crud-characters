@@ -11,6 +11,13 @@ const newOccupation = document.querySelector("#new-character-form input[name='oc
 const newWeapon = document.querySelector("#new-character-form input[name='weapon']");
 const newCartoon = document.querySelector("#new-character-form input[name='cartoon']");
 
+// Edit Character Form Inputs
+const editID = document.querySelector("#edit-character-form input[name='chr-id']");
+const editName = document.querySelector("#edit-character-form input[name='name']");
+const editOccupation = document.querySelector("#edit-character-form input[name='occupation']");
+const editWeapon = document.querySelector("#edit-character-form input[name='weapon']");
+const editCartoon = document.querySelector("#edit-character-form input[name='cartoon']");
+
 // Delete Button
 const deleteButton = document.querySelector("#delete-one");
 
@@ -66,8 +73,25 @@ window.addEventListener('load', () => {
     }
   });
 
-  document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+  document.getElementById('edit-character-form').addEventListener('submit', async function (event) {
+    event.preventDefault()
+    try {
+      const id = editID.value;
+      const name = editName.value;
+      const occupation = editOccupation.value;
+      const weapon = editWeapon.value;
+      const cartoon = editCartoon.checked;
 
+      const editChar = await charactersAPI.updateOneRegister(id, {
+        "name": name,
+        "occupation": occupation,
+        "weapon": weapon,
+        "cartoon": cartoon
+      });
+    }
+    catch (err) {
+      console.log(err)
+    }
   });
 
   document.getElementById('new-character-form').addEventListener('submit', async function (event) {
@@ -78,14 +102,12 @@ window.addEventListener('load', () => {
       const weapon = newWeapon.value;
       const cartoon = newCartoon.checked;
 
-      const charObj = {
+      const newChar = await charactersAPI.createOneRegister({
         "name": name,
         "occupation": occupation,
         "weapon": weapon,
         "cartoon": cartoon
-      };
-      const newChar = await charactersAPI.createOneRegister(charObj)
-      console.log(newChar);
+      });
     }
     catch (err) {
       console.log(err)
