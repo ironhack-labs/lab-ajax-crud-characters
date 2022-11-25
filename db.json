@@ -1,18 +1,39 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
+      "name": "azg",
+      "occupation": "azeg",
+      "weapon": "zaeg",
+      "cartoon": true,
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Sponge Bob",
-      "occupation": "Lives under the sea",
-      "weapon": "Crabby Patty",
-      "cartoon": true
+      "name": "azg",
+      "occupation": "azeg",
+      "weapon": "zaeg",
+      "cartoon": true,
+      "id": 2
+    },
+    {
+      "name": "Paul",
+      "occupation": "Gamer",
+      "weapon": "Knowledge",
+      "isCartoon": false,
+      "id": 3
+    },
+    {
+      "name": "Paul",
+      "occupation": "Gamer",
+      "weapon": "Knowledge",
+      "isCartoon": false,
+      "id": 4
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "isCartoon": false,
+      "id": 5
     }
   ]
 }

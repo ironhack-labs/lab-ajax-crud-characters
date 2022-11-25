@@ -30,7 +30,9 @@ window.addEventListener('load', () => {
       
           let cartoonElement = document.createElement('div')
           cartoonElement.className = "cartoon"
-          cartoonElement.innerText = `Is a Cartoon? ${APIdata.data[i].cartoon}`
+          APIdata.data[i].cartoon ?
+          cartoonElement.innerHTML = `Is a Cartoon? <input type="checkbox" checked disabled>   (${APIdata.data[i].cartoon})` : 
+          cartoonElement.innerHTML = `Is a Cartoon? <input type="checkbox" unchecked disabled>   (false)`
           newDiv.appendChild(cartoonElement)
       
           let weaponElement = document.createElement('div')
@@ -48,7 +50,6 @@ window.addEventListener('load', () => {
     let characterId = inputElement[0].value
     let parentDiv = document.getElementById('characters-container')
     parentDiv.innerText = ""
-    console.log(characterId)  
     charactersAPI
       .getOneRegister(characterId)
       .then(APIdata=>{
@@ -82,19 +83,63 @@ window.addEventListener('load', () => {
   document.getElementById('delete-one').addEventListener('click', function (event) {
     let inputElement = document.getElementsByName('character-id-delete')
     let characterId = inputElement[0].value
-    console.log(characterId)
     charactersAPI
       .deleteOneRegister(characterId)
       .then(x=>console.log(x.data))
   });
 
   document.getElementById('edit-character-form').addEventListener('submit', function (event) {
+    event.preventDefault()
 
+    let id = event.originalTarget[0].value
+    let name = event.originalTarget[1].value
+    let occupation = event.originalTarget[2].value
+    let weapon = event.originalTarget[3].value
+    let isCartoon = event.originalTarget[4].checked
+
+    let characterInfo = {
+      name: name,
+      occupation:occupation,
+      weapon:weapon,
+      cartoon: isCartoon
+    }
+    charactersAPI
+      .updateOneRegister(id, characterInfo)
+      .then(updatedEntry=>{
+        console.log("user updated")
+        let btn = document.getElementById('send-data-update')
+        btn.style.backgroundColor = 'green'
+        console.log(updatedEntry)
+      })
+      .catch(err=>{
+        let btn = document.getElementById('send-data-update')
+        btn.style.backgroundColor = 'red'
+        console.log(err)
+      })
+    
   });
 
   document.getElementById('new-character-form').addEventListener('submit', function (event) {
-   
-    console.log(event)
+    event.preventDefault()
+    let name = event.originalTarget[0].value
+    let occupation = event.originalTarget[1].value
+    let weapon = event.originalTarget[2].value
+    let isCartoon = event.originalTarget[3].checked
+
+
+    charactersAPI
+      .createOneRegister(name,occupation,weapon,isCartoon)
+      .then(newCharacter=>{
+        let btn = document.getElementById('send-data')
+        btn.style.backgroundColor = 'green'
+      })
+      .catch(err=>{
+        let btn = document.getElementById('send-data')
+        btn.style.backgroundColor = 'red'
+        console.log(err)
+      })
+    
+    
 
     //createOneRegister()
   });

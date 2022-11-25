@@ -14,12 +14,12 @@ class APIHandler {
     return this.api.get(`http://localhost:8000/characters/${characterId}`)
   }
 
-  createOneRegister (characterInfo) {
-    return this.api.post('http://localhost:8000/characters', {characterInfo})
+  createOneRegister (name, occupation, weapon, isCartoon) {
+    return this.api.post('http://localhost:8000/characters', {name, occupation, weapon, isCartoon})
   }
 
   updateOneRegister (characterId, characterInfo) {
-    return this.api.put(`http://localhost:8000/characters/${characterId}`, {characterInfo})
+    return this.api.put(`http://localhost:8000/characters/${characterId}`, characterInfo)
   }
 
   deleteOneRegister (characterId) {
