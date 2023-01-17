@@ -127,7 +127,7 @@ Once we have the results served by the API in the application, we will create th
 
 #### Fetch all characters
 
-![image](https://user-images.githubusercontent.com/23629340/36733634-7b6b6dca-1bd1-11e8-9803-5282681159ba.png)
+![image](https://user-images.github usercontent.com/23629340/36733634-7b6b6dca-1bd1-11e8-9803-5282681159ba.png)
 
 Retrieve all the available characters in the API and show them in the application. In order to do that, we need to:
 
