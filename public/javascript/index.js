@@ -1,5 +1,3 @@
-/* const { default: axios } = require("axios");
- */
 const charactersAPI = new APIHandler("http://localhost:8000");
 const charactersBlock = document.getElementById("allCharacters");
 
@@ -27,23 +25,7 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("fetch-one")
-    .addEventListener("click", function (event) {
-      const characterID = document.getElementById("character-id").value;
-      charactersAPI
-        .getOneCharacter(characterID)
-        .then((result) => {
-          const character = result.data;
-          charactersBlock.innerHTML = "";
-          charactersBlock.innerHTML += `<div class="character-info">
-        <div class="name">Name: ${character.name}</div>
-        <div class="id">id: ${character.id}</div>
-        <div class="occupation">Occupation: ${character.occupation}</div>
-        <div class="cartoon">Cartoon?: ${character.cartoon}</div>
-        <div class="weapon">Weapon: ${character.weapon}</div>
-      </div>`;
-        })
-        .catch((err) => console.log(err));
-    });
+    .addEventListener("click", fetch());
 
   document
     .getElementById("delete-one")
@@ -58,35 +40,78 @@ window.addEventListener("load", () => {
     .getElementById("edit-character-form")
     .addEventListener("submit", function (event) {
       const characterID = document.getElementById("edit-character-id").value;
-      const existingCharacter = {}
-      charactersAPI.getOneCharacter(characterID)  
-        .then(result => {
-          existingCharacter = result.data
-        })
+      const existingCharacter = {};
+      charactersAPI.getOneCharacter(characterID).then((result) => {
+        existingCharacter = result.data;
+      });
+      let cartoonBool = false;
+      if ((document.getElementById("edit-character-cartoon").value = "on")) {
+        cartoonBool = true;
+      } 
+      if ((document.getElementById("edit-character-cartoon").value = "off")) {
+        cartoonBool = false;
+      }
+
+
       const editCharacter = {
         name: document.getElementById("edit-character-name").value,
         occupation: document.getElementById("edit-character-occupation").value,
         weapon: document.getElementById("edit-character-weapon").value,
-        cartoon: document.getElementById("edit-character-cartoon").value
-      }
+        cartoon: cartoonBool,
+      };
       //delete this part
-      if(editCharacter.name === "" || editCharacter.name === null || editCharacter.name === undefined) {
-        editCharacter.name = existingCharacter.name
-      }
-      charactersAPI.editCharacter(characterID, editCharacter)
+
+      charactersAPI.editCharacter(characterID, editCharacter).then(()=> fetch());
     });
 
   document
-    .getElementById("send-data")
+    .getElementById("send-new-data")
     .addEventListener("click", function (event) {
       const newCharacter = {
         name: document.getElementById("new-character-name").value,
         occupation: document.getElementById("new-character-occupation").value,
         weapon: document.getElementById("new-character-weapon").value,
-        cartoon: document.getElementById("new-character-cartoon").value
-      }
-    
-      charactersAPI.createCharacter(newCharacter) 
+        cartoon: document.getElementById("new-character-cartoon").value,
+      };
+
+      charactersAPI.createCharacter(newCharacter);
     });
 });
-// new push
+
+document
+  .getElementById("edit-character-id")
+  .addEventListener("change", function (event) {
+    charactersAPI
+      .getOneCharacter(document.getElementById("edit-character-id").value)
+      .then((result) => {
+        const character = result.data;
+        console.log(character);
+        document.getElementById("edit-character-id").value = character.id;
+        document.getElementById("edit-character-name").value = character.name;
+        document.getElementById("edit-character-occupation").value =
+          character.occupation;
+        document.getElementById("edit-character-weapon").value =
+          character.weapon;
+        document.getElementById("edit-character-cartoon").value =
+          character.cartoon;
+      });
+  });
+
+
+function fetch(event) {
+    const characterID = document.getElementById("character-id").value;
+    charactersAPI
+      .getOneCharacter(characterID)
+      .then((result) => {
+        const character = result.data;
+        charactersBlock.innerHTML = "";
+        charactersBlock.innerHTML += `<div class="character-info">
+      <div class="name">Name: ${character.name}</div>
+      <div class="id">id: ${character.id}</div>
+      <div class="occupation">Occupation: ${character.occupation}</div>
+      <div class="cartoon">Cartoon?: ${character.cartoon}</div>
+      <div class="weapon">Weapon: ${character.weapon}</div>
+    </div>`;
+      })
+      .catch((err) => console.log(err));
+  }

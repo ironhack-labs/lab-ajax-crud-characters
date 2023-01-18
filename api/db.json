@@ -1,21 +1,24 @@
 {
   "characters": [
     {
-      "occupation": "ew",
-      "weapon": "we",
-      "cartoon": "on",
+      "name": "Max",
+      "occupation": "Mr. Q",
+      "weapon": "Dashing good looks",
+      "cartoon": false,
       "id": 2
     },
     {
-      "name": "Patrick the Second",
+      "name": "undefined",
       "occupation": "",
       "weapon": "",
-      "cartoon": "on",
+      "cartoon": true,
       "id": 3
     },
     {
       "name": "Shengwei",
-      "cartoon": "on",
+      "occupation": "Stay at home dad",
+      "weapon": "Joojoo",
+      "cartoon": false,
       "id": 4
     }
   ]
