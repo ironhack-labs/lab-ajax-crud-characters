@@ -21,11 +21,28 @@ window.addEventListener("load", () => {
           }
         })
         .catch((err) => console.log(err));
+      event.preventDefault();
     });
 
-  document
-    .getElementById("fetch-one")
-    .addEventListener("click", fetch());
+  document.getElementById("fetch-one").addEventListener("click", function(event){
+    const characterID = document.getElementById("character-id").value;
+    charactersAPI
+      .getOneCharacter(characterID)
+      .then((result) => {
+        const character = result.data;
+        charactersBlock.innerHTML = "";
+        charactersBlock.innerHTML += `<div class="character-info">
+        <div class="name">Name: ${character.name}</div>
+        <div class="id">id: ${character.id}</div>
+        <div class="occupation">Occupation: ${character.occupation}</div>
+        <div class="cartoon">Cartoon?: ${character.cartoon}</div>
+        <div class="weapon">Weapon: ${character.weapon}</div>
+      </div>`;
+      })
+      .catch((err) => console.log(err));
+  
+    event.preventDefault();
+  });
 
   document
     .getElementById("delete-one")
@@ -34,6 +51,8 @@ window.addEventListener("load", () => {
       charactersAPI
         .deleteCharacter(characterID)
         .catch((err) => console.log(err));
+
+      event.preventDefault();
     });
 
   document
@@ -47,11 +66,10 @@ window.addEventListener("load", () => {
       let cartoonBool = false;
       if ((document.getElementById("edit-character-cartoon").value = "on")) {
         cartoonBool = true;
-      } 
+      }
       if ((document.getElementById("edit-character-cartoon").value = "off")) {
         cartoonBool = false;
       }
-
 
       const editCharacter = {
         name: document.getElementById("edit-character-name").value,
@@ -61,7 +79,10 @@ window.addEventListener("load", () => {
       };
       //delete this part
 
-      charactersAPI.editCharacter(characterID, editCharacter).then(()=> fetch());
+      charactersAPI
+        .editCharacter(characterID, editCharacter)
+
+      event.preventDefault();
     });
 
   document
@@ -75,6 +96,7 @@ window.addEventListener("load", () => {
       };
 
       charactersAPI.createCharacter(newCharacter);
+      event.preventDefault();
     });
 });
 
@@ -95,23 +117,7 @@ document
         document.getElementById("edit-character-cartoon").value =
           character.cartoon;
       });
+    event.preventDefault();
   });
 
 
-function fetch(event) {
-    const characterID = document.getElementById("character-id").value;
-    charactersAPI
-      .getOneCharacter(characterID)
-      .then((result) => {
-        const character = result.data;
-        charactersBlock.innerHTML = "";
-        charactersBlock.innerHTML += `<div class="character-info">
-      <div class="name">Name: ${character.name}</div>
-      <div class="id">id: ${character.id}</div>
-      <div class="occupation">Occupation: ${character.occupation}</div>
-      <div class="cartoon">Cartoon?: ${character.cartoon}</div>
-      <div class="weapon">Weapon: ${character.weapon}</div>
-    </div>`;
-      })
-      .catch((err) => console.log(err));
-  }
