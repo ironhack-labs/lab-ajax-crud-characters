@@ -1,5 +1,3 @@
-const axios = require("axios");
-
 class APIHandler {
   constructor(baseURL) {
     this.api = axios.create({
@@ -25,4 +23,3 @@ class APIHandler {
   };
 }
 
-module.exports = APIHandler;
