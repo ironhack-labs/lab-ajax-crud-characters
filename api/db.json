@@ -1,13 +1,6 @@
 {
   "characters": [
     {
-      "id": 1,
-      "name": "Han Solo",
-      "occupation": "Smuggler",
-      "weapon": "Blaster Pistol",
-      "cartoon": true
-    },
-    {
       "id": 2,
       "name": "Luke Skywalker",
       "occupation": "Jedi Knight",
@@ -22,11 +15,88 @@
       "cartoon": true
     },
     {
-      "name": "Thor",
-      "occupation": "student",
-      "cartoon": "on",
-      "weapon": "thunder",
+      "name": "Spider-man",
+      "occupation": "Photographer / Student",
+      "cartoon": true,
+      "weapon": "Spider web",
       "id": 4
+    },
+    {
+      "name": "Poirot",
+      "occupation": "Detective",
+      "cartoon": true,
+      "weapon": "Hat",
+      "id": 5
+    },
+    {
+      "name": "Bart Simpson",
+      "occupation": "Student",
+      "cartoon": true,
+      "weapon": "Skateboard",
+      "id": 6
+    },
+    {
+      "name": "Rick",
+      "occupation": "Scientist",
+      "cartoon": true,
+      "weapon": "Portal Gun",
+      "id": 7
+    },
+    {
+      "name": "Morty",
+      "occupation": "Student",
+      "cartoon": true,
+      "weapon": "Crying",
+      "id": 8
+    },
+    {
+      "name": "Minion",
+      "occupation": "Mechanic",
+      "cartoon": true,
+      "weapon": "Wrench",
+      "id": 9
+    },
+    {
+      "name": "Gandalf",
+      "occupation": "Wizard",
+      "cartoon": false,
+      "weapon": "Staff",
+      "id": 10
+    },
+    {
+      "name": "Dobbie",
+      "occupation": "House elf",
+      "cartoon": true,
+      "weapon": "Magic",
+      "id": 11
+    },
+    {
+      "name": "Harry",
+      "occupation": "Wizard",
+      "cartoon": false,
+      "weapon": "Wand",
+      "id": 12
+    },
+    {
+      "name": "Frodo",
+      "occupation": "Ring-bearer",
+      "cartoon": false,
+      "weapon": "Sting",
+      "id": 13
+    },
+    {
+      "name": "Luigi",
+      "occupation": "Plumber",
+      "cartoon": false,
+      "weapon": "Jump",
+      "id": 14
+    },
+    {
+      "name": "Darth Vader",
+      "occupation": "Sith",
+      "cartoon": false,
+      "weapon": "Lightsaber",
+      "id": 15
     }
   ]
 }
