@@ -1,3 +1,5 @@
+/* const { default: axios } = require("axios");
+ */
 const charactersAPI = new APIHandler("http://localhost:8000");
 const charactersBlock = document.getElementById("allCharacters");
 
@@ -54,9 +56,37 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("edit-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", function (event) {
+      const characterID = document.getElementById("edit-character-id").value;
+      const existingCharacter = {}
+      charactersAPI.getOneCharacter(characterID)  
+        .then(result => {
+          existingCharacter = result.data
+        })
+      const editCharacter = {
+        name: document.getElementById("edit-character-name").value,
+        occupation: document.getElementById("edit-character-occupation").value,
+        weapon: document.getElementById("edit-character-weapon").value,
+        cartoon: document.getElementById("edit-character-cartoon").value
+      }
+      //delete this part
+      if(editCharacter.name === "" || editCharacter.name === null || editCharacter.name === undefined) {
+        editCharacter.name = existingCharacter.name
+      }
+      charactersAPI.editCharacter(characterID, editCharacter)
+    });
 
   document
-    .getElementById("new-character-form")
-    .addEventListener("submit", function (event) {});
+    .getElementById("send-data")
+    .addEventListener("click", function (event) {
+      const newCharacter = {
+        name: document.getElementById("new-character-name").value,
+        occupation: document.getElementById("new-character-occupation").value,
+        weapon: document.getElementById("new-character-weapon").value,
+        cartoon: document.getElementById("new-character-cartoon").value
+      }
+    
+      charactersAPI.createCharacter(newCharacter) 
+    });
 });
+// new push
