@@ -1,0 +1,25 @@
+{
+    "characters": [
+      {
+        "name": "Max",
+        "occupation": "Mr. Q",
+        "weapon": "Dashing good looks",
+        "cartoon": false,
+        "id": 2
+      },
+      {
+        "name": "undefined",
+        "occupation": "",
+        "weapon": "",
+        "cartoon": true,
+        "id": 3
+      },
+      {
+        "name": "Shengwei",
+        "occupation": "Stay at home dad",
+        "weapon": "Joojoo",
+        "cartoon": false,
+        "id": 4
+      }
+    ]
+  }
