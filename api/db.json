@@ -1,13 +1,6 @@
 {
   "characters": [
     {
-      "id": 2,
-      "name": "Luke Skywalker",
-      "occupation": "Jedi Knight",
-      "weapon": "Lightsaber",
-      "cartoon": false
-    },
-    {
       "id": 3,
       "name": "Sponge Bob",
       "occupation": "Lives under the sea",
@@ -22,39 +15,11 @@
       "id": 4
     },
     {
-      "name": "Poirot",
-      "occupation": "Detective",
-      "cartoon": true,
-      "weapon": "Hat",
-      "id": 5
-    },
-    {
-      "name": "Bart Simpson",
-      "occupation": "Student",
-      "cartoon": true,
-      "weapon": "Skateboard",
-      "id": 6
-    },
-    {
       "name": "Rick",
-      "occupation": "Scientist",
+      "occupation": "Smartest man in the universe",
       "cartoon": true,
-      "weapon": "Portal Gun",
+      "weapon": "Portal gun",
       "id": 7
-    },
-    {
-      "name": "Morty",
-      "occupation": "Student",
-      "cartoon": true,
-      "weapon": "Crying",
-      "id": 8
-    },
-    {
-      "name": "Minion",
-      "occupation": "Mechanic",
-      "cartoon": true,
-      "weapon": "Wrench",
-      "id": 9
     },
     {
       "name": "Gandalf",
@@ -64,39 +29,18 @@
       "id": 10
     },
     {
-      "name": "Dobbie",
-      "occupation": "House elf",
+      "name": "Clark Kent",
+      "occupation": "Journalist",
       "cartoon": true,
-      "weapon": "Magic",
-      "id": 11
-    },
-    {
-      "name": "Harry",
-      "occupation": "Wizard",
-      "cartoon": false,
-      "weapon": "Wand",
-      "id": 12
-    },
-    {
-      "name": "Frodo",
-      "occupation": "Ring-bearer",
-      "cartoon": false,
-      "weapon": "Sting",
-      "id": 13
-    },
-    {
-      "name": "Luigi",
-      "occupation": "Plumber",
-      "cartoon": false,
-      "weapon": "Jump",
+      "weapon": "Being Superman",
       "id": 14
     },
     {
-      "name": "Darth Vader",
-      "occupation": "Sith",
-      "cartoon": false,
-      "weapon": "Lightsaber",
-      "id": 15
+      "name": "Boba Fett",
+      "occupation": "Bounty Hunter",
+      "cartoon": true,
+      "weapon": "Rifle",
+      "id": 16
     }
   ]
 }

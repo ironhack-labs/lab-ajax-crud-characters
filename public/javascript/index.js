@@ -4,11 +4,10 @@ window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
     .addEventListener("click", function (event) {
-      event.preventDefault();
       charactersAPI
         .getFullList()
         .then((result) => {
-          console.log(result);
+          console.log("Result of fetching all characters: ", result.data);
 
           const charData = result.data;
 
@@ -45,7 +44,7 @@ window.addEventListener("load", () => {
       charactersAPI
         .getOneRegister(characterId)
         .then((result) => {
-          console.log(result);
+          console.log("Result of fetching one character: ", result.data);
 
           const character = result.data;
 
@@ -59,28 +58,33 @@ window.addEventListener("load", () => {
 
           document.getElementById("characters-container").innerHTML =
             characterInfo;
+
+          document.getElementById("character-id").value = "";
         })
         .catch((error) => {
           console.log(
             "Something went wrong while fetching one character: ",
             error
           );
+
+          document.getElementById("character-id").value;
         });
     });
 
   document
     .getElementById("delete-one")
     .addEventListener("click", function (event) {
-      event.preventDefault();
       const characterId = document.getElementById("character-id-delete").value;
       charactersAPI
         .deleteOneRegister(characterId)
         .then((result) => {
-          console.log(result);
+          console.log("Character deleted with an ID of: ", characterId);
 
           const deleteBtn = document.getElementById("delete-one");
 
           deleteBtn.style.backgroundColor = "#32CD32";
+
+          document.getElementById("character-id-delete").value = "";
         })
         .catch((error) => {
           console.log(
@@ -90,12 +94,15 @@ window.addEventListener("load", () => {
           const deleteBtn = document.getElementById("delete-one");
 
           deleteBtn.style.backgroundColor = "#FF0000";
+
+          document.getElementById("character-id-delete").value = "";
         });
     });
 
   document
     .getElementById("edit-character-form")
     .addEventListener("submit", function (event) {
+      event.preventDefault();
       const editCharacterId = document.getElementById("edit-char-id").value;
       const editCharacterName = document.getElementById("edit-char-name").value;
       const editCharacterOccupation = document.getElementById(
@@ -104,7 +111,7 @@ window.addEventListener("load", () => {
       const editCharacterWeapon =
         document.getElementById("edit-char-weapon").value;
       const editCharacterCartoon =
-        document.getElementById("edit-char-cartoon").name === "on"
+        document.getElementById("edit-char-cartoon").value === "on"
           ? true
           : false;
 
@@ -122,6 +129,12 @@ window.addEventListener("load", () => {
             const updateBtn = document.getElementById("send-data");
 
             updateBtn.style.backgroundColor = "#32CD32";
+
+            document.getElementById("edit-char-id").value = "";
+            document.getElementById("edit-char-name").value = "";
+            document.getElementById("edit-char-occupation").value = "";
+            document.getElementById("edit-char-weapon").value = "";
+            document.getElementById("edit-char-cartoon").value = "off";
           })
           .catch((error) => {
             console.log(
@@ -145,7 +158,7 @@ window.addEventListener("load", () => {
         document.getElementById("char-occupation").value;
       const newCharacterWeapon = document.getElementById("char-weapon").value;
       const newCharacterCartoon =
-        document.getElementById("char-cartoon").name === "on" ? true : false;
+        document.getElementById("char-cartoon").value === "on" ? true : false;
 
       charactersAPI
         .createOneRegister({
@@ -155,10 +168,16 @@ window.addEventListener("load", () => {
           weapon: newCharacterWeapon,
         })
         .then((result) => {
-          console.log(result);
+          console.log("Result of creating a new character: ", result.data);
+
           const createBtn = document.getElementById("create-one");
 
           createBtn.style.backgroundColor = "#32CD32";
+
+          document.getElementById("char-name").value = "";
+          document.getElementById("char-occupation").value = "";
+          document.getElementById("char-weapon").value = "";
+          document.getElementById("char-cartoon").value = "off";
         })
         .catch((error) => {
           console.log(
