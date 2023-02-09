@@ -4,14 +4,48 @@ window.addEventListener("load", () => {
   document.getElementById("fetch-all").addEventListener("click", (event) => {
     charactersAPI
       .getFullList()
-      .then((response) => console.log(response))
+      .then((response) => {
+        let data = response.data instanceof Array ? response.data : [response.data];
+
+        const charactersContainer = document.querySelector(".characters-container");
+        charactersContainer.innerHTML = "";
+        data.forEach((character) => {
+          const characterDiv = document.createElement("div");
+          characterDiv.classList.add("character-info");
+          characterDiv.innerHTML = `
+            <div class="name">${character.name}</div>
+            <div class="occupation">${character.occupation}</div>
+            <div class="cartoon">${character.cartoon}</div>
+            <div class="weapon">${character.weapon}</div>
+          `;
+          charactersContainer.appendChild(characterDiv);
+        });
+      })
       .catch((err) => console.log(err));
   });
 
   document.getElementById("fetch-one").addEventListener("click", (event) => {
+    const characterId = document.querySelector("input[name='character-id']").value;
+
     charactersAPI
-      .getOneRegister()
-      .then((response) => console.log(response))
+      .getOneRegister(characterId)
+      .then((response) => {
+        let data = response.data instanceof Array ? response.data : [response.data];
+
+        const charactersContainer = document.querySelector(".characters-container");
+        charactersContainer.innerHTML = "";
+        data.forEach((character) => {
+          const characterDiv = document.createElement("div");
+          characterDiv.classList.add("character-info");
+          characterDiv.innerHTML = `
+            <div class="name">${character.name}</div>
+            <div class="occupation">${character.occupation}</div>
+            <div class="cartoon">${character.cartoon}</div>
+            <div class="weapon">${character.weapon}</div>
+          `;
+          charactersContainer.appendChild(characterDiv);
+        });
+      })
       .catch((err) => console.log(err));
   });
 
