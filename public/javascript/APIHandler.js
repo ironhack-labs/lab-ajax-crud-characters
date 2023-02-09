@@ -2,7 +2,7 @@ const axios = require("axios");
 
 class APIHandler {
   constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
+    http://localhost:8000 = baseUrl;
     this.api = axios.create({
     })
   }
