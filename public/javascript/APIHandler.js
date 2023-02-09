@@ -2,29 +2,28 @@ const axios = require("axios");
 
 class APIHandler {
   constructor (baseUrl) {
-    http://localhost:8000 = baseUrl;
-    this.api = axios.create({
-    })
-  }
+    this.BASE_URL = "http://localhost:8000";
+    }
 
-  getFullList = () => {
-    return this.api.get("/characters");
+
+    getFullList() {
+      return axios.get(`${this.BASE_URL}/characters`);
   };
 
-  getOneRegister = (characterId) => {
-    return this.api.get(`/characters/${characterId}`);
+  getOneRegister(id) {
+    return axios.get(`${this.BASE_URL}/characters/${id}`);
   };
 
-  createOneRegister = (characterInfo) => {
-    return this.api.post(`/characters`, characterInfo);
+  createOneRegister(character) {
+    return axios.post(`${this.BASE_URL}/characters`, character);
   };
 
-  updateOneRegister = (characterId, characterInfo) => {
-    return this.api.put(`/characters/${characterId}`, characterInfo);
+  updateOneRegister(id, character) {
+    return axios.patch(`${this.BASE_URL}/characters/${id}`, character);
   };
 
-  deleteOneRegister = (characterId) => {
-    return this.api.delete(`/characters/${characterId}`);
+  deleteOneRegister(id) {
+    return axios.delete(`${this.BASE_URL}/characters/${id}`);
   };
 }
 
