@@ -25,10 +25,10 @@
       </div>
       <div class="operation">
         <label for="character-id">Search by ID: </label>
-        <input type="text" name="character-id">
+        <input type="text" name="character-id"class="character-id">
         <button id="fetch-one">Fetch one</button>
       </div>
-      <div class="operation delete">
+      <div class="operation_delete">
         <label for="character-id-delete">Delete by ID: </label>
         <input type="text" name="character-id-delete">
         <button id="delete-one">Delete one</button>
@@ -82,11 +82,11 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button id="send-data-edit">Update</button>
       </form>
     </section>
   </section>
-  <script type="text/javascript" src="./public/javascript/APIHandler.js"></script>
+  <script type="text/javascript" src="/services/api.service.js"></script>
   <script type="text/javascript" src="./public/javascript/index.js"></script>
 </body>
 </html>

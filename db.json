@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "han sola",
+      "occupation": "assassin",
+      "weapon": "rayo laser",
+      "cartoon": true,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "wolverin",
+      "occupation": "assassin",
+      "weapon": "claws",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "ciclope",
+      "occupation": "xmen",
+      "weapon": "rayo laser",
+      "cartoon": true,
+      "id": 4
+    }
+  ]
+}
