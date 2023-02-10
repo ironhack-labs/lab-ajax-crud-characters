@@ -45,6 +45,7 @@ window.addEventListener("load", () => {
   });
 
   document.getElementById("edit-character-form").addEventListener("submit", (event) => {
+    event.preventDefault();
     const characterId = document.querySelector("#edit-character-form input[name='chr-id']").value;
     const character = {
       name: document.querySelector("#edit-character-form input[name='name']").value,
@@ -60,6 +61,7 @@ window.addEventListener("load", () => {
   });
 
   document.getElementById("new-character-form").addEventListener("submit", (event) => {
+    event.preventDefault();
     const character = {
       name: document.querySelector("#new-character-form input[name='name']").value,
       occupation: document.querySelector("#new-character-form input[name='occupation']").value,
