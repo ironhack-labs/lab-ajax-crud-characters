@@ -1,0 +1,53 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Perro",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Dash",
+      "occupation": "Student and super hero",
+      "weapon": "Speed",
+      "cartoon": "on",
+      "id": 3
+    },
+    {
+      "name": "Harland",
+      "occupation": "LT",
+      "weapon": "Console.log()",
+      "cartoon": null,
+      "id": 4
+    },
+    {
+      "name": "Pepito",
+      "occupation": "Student",
+      "weapon": "Jokes",
+      "cartoon": "on",
+      "id": 5
+    },
+    {
+      "name": "Sandy",
+      "occupation": "TA",
+      "weapon": "Console.log()",
+      "cartoon": null,
+      "id": 6
+    },
+    {
+      "name": "Pepe",
+      "occupation": "Student",
+      "weapon": "Console.log()",
+      "cartoon": "on",
+      "id": 7
+    }
+  ]
+}
