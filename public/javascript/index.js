@@ -23,6 +23,28 @@ document
     }
   });
 
+document
+  .querySelector("#fetch-one")
+  .addEventListener("click", async (req, res) => {
+    try {
+      const charId = document.querySelector('input[name="character-id"]').value;
+      console.log(charId);
+      const response = await charactersAPI.getOneRegister(charId);
+      const char = response.data;
+      let charData = `
+      <div class="character-info">
+          <div class="name">Name: ${char.name}</div>
+          <div class="occupation">Occupation: ${char.occupation}</div>
+          <div class="cartoon">Cartoon: ${char.cartoon ? "Yes" : "No"}</div>
+          <div class="weapon">Weapon: ${char.weapon}</div>
+      </div>
+      `;
+      document.querySelector(".characters-container").innerHTML = charData;
+    } catch (err) {
+      console.log(err);
+    }
+  });
+
 // window.addEventListener('load', () => {
 //   document.getElementById('fetch-all').addEventListener('click', function (event) {
 

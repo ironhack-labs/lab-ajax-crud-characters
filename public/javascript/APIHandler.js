@@ -10,7 +10,9 @@ class APIHandler {
     return this.api.get("/characters");
   };
 
-  getOneRegister() {}
+  getOneRegister = (charId) => {
+    return this.api.get(`/characters/${charId}`);
+  };
 
   createOneRegister() {}
 
