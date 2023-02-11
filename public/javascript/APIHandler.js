@@ -4,7 +4,7 @@ class APIHandler {
   }
 
   getFullList () {
-
+    
   }
 
   getOneRegister () {
