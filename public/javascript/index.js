@@ -45,6 +45,25 @@ document
     }
   });
 
+const form = document
+  .querySelector("#new-character-form")
+  .addEventListener("submit", async (event) => {
+    try {
+      event.preventDefault();
+      const formData = {
+        name: document.querySelector(".char-name").value,
+        occupation: document.querySelector(".char-occupation").value,
+        weapon: document.querySelector(".char-weapon").value,
+        cartoon: document.querySelector(".char-cartoon").checked,
+      };
+      console.log(formData);
+      const response = await charactersAPI.createOneRegister(formData);
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  });
+
 // window.addEventListener('load', () => {
 //   document.getElementById('fetch-all').addEventListener('click', function (event) {
 

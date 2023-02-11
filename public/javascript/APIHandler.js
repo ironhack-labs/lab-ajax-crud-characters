@@ -14,7 +14,9 @@ class APIHandler {
     return this.api.get(`/characters/${charId}`);
   };
 
-  createOneRegister() {}
+  createOneRegister = (newChar) => {
+    return this.api.post(`/characters`, newChar);
+  };
 
   updateOneRegister() {}
 
