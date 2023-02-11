@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "name": "Paco",
+      "occupation": "Godin",
+      "weapon": "Su Silla",
+      "cartoon": false,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Pedro",
+      "occupation": "Ironhacker",
+      "weapon": "Machete",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Juanito",
+      "occupation": "Programador",
+      "weapon": "Motorola Razr",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Sancho",
+      "occupation": "Panza",
+      "weapon": "Su Peso",
+      "cartoon": false,
+      "id": 6
+    }
+  ]
+}
