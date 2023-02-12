@@ -18,9 +18,9 @@ class APIHandler {
     return this.api.post(`/characters`, newChar);
   };
 
-  // updateOneRegister = (charId, editChar) => {
-  //   return this.api.put(`/characters/${charId}`, editChar);
-  // };
+  updateOneRegister = (charId, editChar) => {
+    return this.api.put(`/characters/${charId}`, editChar);
+  };
 
   deleteOneRegister = (charId) => {
     return this.api.delete(`/characters/${charId}`);
