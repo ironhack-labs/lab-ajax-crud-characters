@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "name": "Pedro",
+      "weapon": "",
+      "cartoon": false,
+      "occupation": "",
+      "id": 3
+    },
+    {
+      "name": "Roberto",
+      "weapon": "Knife",
+      "cartoon": false,
+      "occupation": "Cantante",
+      "id": 4
+    },
+    {
+      "name": "Mirtha Legrand",
+      "occupation": "Conductora",
+      "cartoon": true,
+      "weapon": "Lengua",
+      "id": 5
+    }
+  ]
+}
