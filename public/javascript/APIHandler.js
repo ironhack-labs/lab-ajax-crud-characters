@@ -11,7 +11,7 @@ class APIHandler {
 
   }
 
-  getOneRegister () {
+  getOneRegister (id) {
     return this.api.get(`/characters/${id}`);
 
   }

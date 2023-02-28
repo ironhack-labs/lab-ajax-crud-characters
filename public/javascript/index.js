@@ -8,20 +8,40 @@ window.addEventListener('load', () => {
         let html = ''
         characters.forEach(character => {
         html += `<div class="character-info">
-        <div class="name">${character.name}</div>
-        <div class="occupation">${character.occupation}</div>
-        <div class="cartoon">${character.cartoon}</div>
-        <div class="weapon">${character.weapon}</div>
+        <div class="id">Id: ${character.id}</div>
+        <div class="name">Name: ${character.name}</div>
+        <div class="occupation">Occupation: ${character.occupation}</div>
+        <div class="cartoon"> Is a Cartoon? ${character.cartoon}</div>
+        <div class="weapon">Weapon: ${character.weapon}</div>
        </div>`
       })
       document.querySelector('.characters-container').innerHTML = html
     } catch (error) {
-      console.log(err)
+      console.log(error)
     }
 
   });
 
   document.getElementById('fetch-one').addEventListener('click', async function (event) {
+
+    try {
+      const id = document.querySelector(".operation input").value;
+      let response = await charactersAPI.getOneRegister(id)
+      let character = await response.data
+      let html = ''
+       html += `<div class="character-info">
+      <div class="id">Id: ${character.id}</div>
+      <div class="name">Name: ${character.name}</div>
+      <div class="occupation">Occupation: ${character.occupation}</div>
+      <div class="cartoon"> Is a Cartoon? ${character.cartoon}</div>
+      <div class="weapon">Weapon: ${character.weapon}</div>
+     </div>`
+
+    document.querySelector('.characters-container').innerHTML = html
+  } catch (error) {
+    console.log(error)
+  }
+
 
   });
 
