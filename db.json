@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Monkey",
+      "occupation": "Donkey",
+      "weapon": "Monkeying",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 4,
+      "name": "Hello doggy",
+      "occupation": "Woof",
+      "weapon": "Woof woof",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "Woohoo",
+      "occupation": "fsfjsdfjk",
+      "weapon": "sdlkfjslkfj",
+      "cartoon": true
+    },
+    {
+      "id": 6,
+      "name": "Baby",
+      "occupation": "Crying",
+      "weapon": "Emotional blackmail",
+      "cartoon": true
+    }
+  ]
+}
