@@ -16,17 +16,17 @@ class APIHandler {
 
   }
 
-  createOneRegister () {
+  createOneRegister (characterInfo) {
     return this.api.post(`/characters`, characterInfo);
 
   }
 
-  updateOneRegister () {
+  updateOneRegister (id, characterInfo) {
     return this.api.put(`/characters/${id}`, characterInfo);
 
   }
 
-  deleteOneRegister () {
+  deleteOneRegister (id) {
     return this.api.delete(`/characters/${id}`);
 
   }
