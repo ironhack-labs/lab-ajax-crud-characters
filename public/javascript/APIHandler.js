@@ -1,9 +1,7 @@
-const axios = require('axios');
-
 class APIHandler {
-  constructor () {
-    this.baseURL = axios.create({
-      baseURL: 'http://127.0.0.1:8000/'
+  constructor (baseUrl) {
+    this.api = axios.create({
+      baseURL: baseUrl
     });
   }
 
@@ -11,8 +9,8 @@ class APIHandler {
     return this.api.get('/characters');
   };
 
-  getOneCharacter = (characterId) => {
-    return this.api.get(`/characters/${characterId}`);
+  getOneCharacter = (id) => {
+    return this.api.get(`/characters/${id}`);
   }
 
   createCharacter = (characterInfo) => {
@@ -20,13 +18,13 @@ class APIHandler {
     return this.api.post(`/characters`, characterInfo);
   }
 
-  deleteCharacter = (characterId) => {
-    return this.api.delete(`/characters/${characterId}`);
+  deleteCharacter = (id) => {
+    return this.api.delete(`/characters/${id}`);
   }
   
-  editCharacter = (characterId, characterInfo) => {
-    return this.api.put(`/characters/${characterId}`, characterInfo);
+  editCharacter = (id, characterInfo) => {
+    return this.api.put(`/characters/${id}`, characterInfo);
   }
 }
 
-module.exports = APIHandler;
+//module.exports = APIHandler;
