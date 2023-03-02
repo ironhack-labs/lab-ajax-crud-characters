@@ -1,25 +1,32 @@
 {
-    "characters": [
-        {
-        "id": 1,
-        "name": "Han Solo",
-        "occupation": "Smuggler",
-        "weapon": "Blaster Pistol",
-        "cartoon": true
-        },
-        {
-        "id": 2,
-        "name": "Luke Skywalker",
-        "occupation": "Jedi Knight",
-        "weapon": "Lightsaber",
-        "cartoon": false
-        },
-        {
-        "id": 3,
-        "name": "Sponge Bob",
-        "occupation": "Lives under the sea",
-        "weapon": "Crabby Patty",
-        "cartoon": true
-        }
-    ]
+  "characters": [
+    {
+      "name": "Han Solo",
+      "occupation": "Lea's boy",
+      "weapon": "gun",
+      "cartoon": false,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Grogu",
+      "occupation": "Jedi trainee",
+      "weapon": "Cuteness",
+      "cartoon": false,
+      "id": 3
+    },
+    {
+      "name": "Mando",
+      "occupation": "Bounty hunter",
+      "weapon": "Blaster",
+      "cartoon": false,
+      "id": 4
+    }
+  ]
 }
