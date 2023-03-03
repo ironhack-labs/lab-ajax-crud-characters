@@ -1,0 +1,45 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "teub Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "teub bobi",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "name": "thezo",
+      "occupation": "developper",
+      "weapon": "keyboard",
+      "cartoon": true,
+      "id": 8
+    }
+  ]
+}
