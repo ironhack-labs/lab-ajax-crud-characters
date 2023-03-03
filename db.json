@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Souza",
+      "occupation": "Singer",
+      "weapon": "knife",
+      "cartoon": true,
+      "id": 4
+    },
+    {
+      "name": "papaleguas",
+      "occupation": "whatever",
+      "weapon": "knife",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "Souzasouza",
+      "occupation": "Singer",
+      "weapon": "corda",
+      "cartoon": true
+    }
+  ]
+}
