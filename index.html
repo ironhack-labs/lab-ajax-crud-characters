@@ -13,6 +13,7 @@
     <h1>Ironhack Characters API</h1>
     <div class="characters-container">
       <div class="character-info">
+        <div class="id">Id</div>
         <div class="name">Character Name</div>
         <div class="occupation">Character Occupation</div>
         <div class="cartoon">Is a Cartoon?</div>
@@ -31,7 +32,7 @@
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
         <input type="text" name="character-id-delete">
-        <button id="delete-one">Delete one</button>
+        <button id="delete-one" type="button">Delete one</button>
       </div>
 
     </section>
@@ -56,7 +57,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Create</button>
+        <button type="submit" id="send-data">Create</button>
       </form>
     </section>
     <section class="form-container">
@@ -82,7 +83,7 @@
           <label for="cartoon">Is a Cartoon: </label>
           <input name="cartoon" type="checkbox">
         </div>
-        <button id="send-data">Update</button>
+        <button type="submit" id="send-edit-data">Update</button>
       </form>
     </section>
   </section>

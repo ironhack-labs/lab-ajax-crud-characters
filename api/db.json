@@ -1,11 +1,11 @@
 {
   "characters": [
     {
-      "id": 1,
       "name": "Han Solo",
       "occupation": "Smuggler",
       "weapon": "Blaster Pistol",
-      "cartoon": true
+      "cartoon": false,
+      "id": 1
     },
     {
       "id": 2,
@@ -20,6 +20,13 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "name": "Korin",
+      "occupation": "Madman",
+      "weapon": "Mind",
+      "cartoon": false,
+      "id": 4
     }
   ]
 }
