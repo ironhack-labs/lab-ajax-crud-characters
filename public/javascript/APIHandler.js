@@ -1,7 +1,7 @@
 
 
 class APIHandler {
-    constructor (){
+    constructor (baseURL){
       this.api = axios.create ({
       baseURL : "http://localhost:8000"
     })
@@ -10,21 +10,21 @@ class APIHandler {
     return this.api.get("/characters");
   };
 
-  getOneRegister = (registerId) => {
-   return this.api.get('/register/${registerId}');
+  getOneRegister = (characterId) => {
+   return this.api.get('/characters/${characterId}');
   };
 
-  createOneRegister = (registerInfo) => {
-    return this.api.post('/register',registerInfo);
+  createOneRegister = (characterInfo) => {
+    return this.api.post('/characters',characterInfo);
   };
 
-  updateOneRegister = (registerId) => {
-    return this.api.update('/registerId/${registerId}', registerInfo);
+  updateOneRegister = (characterId, characterInfo) => {
+    return this.api.put('/characters/${characterId}', characterInfo);
 
   };
 
-  deleteOneRegister = (registerId) => {
-    return this.api.delete('/registerId/${registerId}', registerInfo)
+  deleteOneRegister = (characterId) => {
+    return this.api.delete('/characterId/${characterId}', characterInfo)
   }
   
 
