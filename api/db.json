@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "name": "lol",
+      "occupation": "lol",
+      "weapon": "lol",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "test2t",
+      "occupation": "test2",
+      "weapon": "test2",
+      "cartoon": true,
+      "id": 6
+    }
+  ]
+}
