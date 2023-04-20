@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "Anakin Skywalker",
+      "occupation": "Shop Lifter",
+      "weapon": "Club Mateeeeee",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Ironman",
+      "occupation": "Superhero",
+      "weapon": "Lightbulb",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "adasd",
+      "occupation": "asdasfsdg",
+      "weapon": "sdfdsfds",
+      "cartoon": false,
+      "id": 5
+    }
+  ]
+}
