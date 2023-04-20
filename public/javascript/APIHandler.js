@@ -1,25 +1,25 @@
 class APIHandler {
-  constructor (baseUrl) {
-    this.BASE_URL = baseUrl;
-  }
+	constructor( baseUrl ) {
+		this.api = axios.create( { baseURL: baseUrl } );
+	}
 
-  getFullList () {
+	getFullList() {
+		return this.api.get( '/characters' );
+	}
 
-  }
+	getOneRegister( characterId ) {
+		return this.api.get( `/characters/${characterId}` );
+	}
 
-  getOneRegister () {
+	createOneRegister( characterData ) {
+		return this.api.post( '/characters', characterData );
+	}
 
-  }
+	updateOneRegister( characterId, characterData ) {
+		return this.api.put( `/characters/${characterId}`, characterData );
+	}
 
-  createOneRegister () {
-
-  }
-
-  updateOneRegister () {
-
-  }
-
-  deleteOneRegister () {
-
-  }
+	deleteOneRegister( characterI ) {
+		return this.api.delete( `/characters/${characterId}` );
+	}
 }
