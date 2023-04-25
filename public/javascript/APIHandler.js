@@ -3,23 +3,26 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  async getFullList () {
+    const fullList = await axios.get(`${this.BASE_URL}/characters`);
+    console.log(`Here's the full list ${fullList}`);
+    return fullList.data;
   }
 
-  getOneRegister () {
+  // async getOneRegister () {
 
-  }
+  // }
 
-  createOneRegister () {
+  // async createOneRegister () {
 
-  }
+  // }
 
-  updateOneRegister () {
+  // async updateOneRegister () {
 
-  }
+  // }
 
-  deleteOneRegister () {
+  // async deleteOneRegister () {
 
-  }
+  // }
 }
+const ApiHandle = new APIHandler('http://localhost:8000');
