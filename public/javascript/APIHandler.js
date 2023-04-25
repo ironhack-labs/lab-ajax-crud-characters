@@ -1,5 +1,3 @@
-const axios = require("axios");
-
 class APIHandler {
   constructor(baseUrl) {
     this.api = axios.create({
@@ -27,5 +25,3 @@ class APIHandler {
     return this.api.delete(`/characters/${characterId}`);
   };
 }
-
-module.exports = APIHandler;
