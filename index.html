@@ -23,15 +23,17 @@
       <div class="operation">
         <button id="fetch-all">Fetch all</button>
       </div>
-      <div class="operation">
+      <div class="operation search">
         <label for="character-id">Search by ID: </label>
         <input type="text" name="character-id" id="character-id-search">
         <button id="fetch-one">Fetch one</button>
+        <p class="error"></p>
       </div>
       <div class="operation delete">
         <label for="character-id-delete">Delete by ID: </label>
         <input type="text" name="character-id-delete" id="character-id-delete">
         <button id="delete-one">Delete one</button>
+        <p class="error"></p>
       </div>
 
     </section>
@@ -57,6 +59,7 @@
           <input name="cartoon" type="checkbox">
         </div>
         <button id="send-data">Create</button>
+        <p class="message-new"></p>
       </form>
     </section>
     <section class="form-container">
@@ -83,6 +86,7 @@
           <input name="cartoon" type="checkbox">
         </div>
         <button id="send-data">Update</button>
+        <p class="message-edit"></p>
       </form>
     </section>
   </section>
