@@ -14,16 +14,18 @@ class APIHandler {
     console.log(`Here's the one item: ${oneItem}`);
     return oneItem.data;
   }
+  
+  async deleteOneRegister (id) {
+    const oneItem = await axios.delete(`${this.BASE_URL}/characters/${id}`);
+    console.log(`Item to delete: ${oneItem}`);
+    return oneItem.data;
+  }
 
   // async createOneRegister () {
 
   // }
 
   // async updateOneRegister () {
-
-  // }
-
-  // async deleteOneRegister () {
 
   // }
 }

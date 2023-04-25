@@ -52,11 +52,11 @@ window.addEventListener('load', () => {
 
   document.getElementById('delete-one').addEventListener('click', async (event) => {
     event.preventDefault();
-    const requestedId = document.getElementById('character-id-delete').value;
+    const idToDelete = document.getElementById('character-id-delete').value;
 
     // display result, display error if empty
-    if (requestedId) {
-      const result = await charactersAPI.getOneRegister(requestedId);
+    if (idToDelete) {
+      const result = await charactersAPI.deleteOneRegister(idToDelete);
       console.log(`ID to delete: ${result.id}`);
     } else {
       const error = document.querySelector('.operation.delete .error');
