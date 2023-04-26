@@ -66,18 +66,20 @@ button {
 
 .character-info {
   position: relative;
-  width: 40%;
   margin: 10px;
   padding: 10px;
   text-align: left;
   border: solid white 2px;
   border-radius: 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .character-info { width: 40%; }
 }
 
 .character-info div span {
   color: #d8b362;
-  position: absolute;
-  left: 50%;
 }
 
 .form-container {
@@ -107,6 +109,6 @@ button {
   margin: 10px 0 0 120px;
 }
 
-.error {
+.error .message {
   color: red;
 }

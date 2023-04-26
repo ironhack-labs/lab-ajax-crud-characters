@@ -20,6 +20,76 @@
       "occupation": "Lives under the sea",
       "weapon": "Crabby Patty",
       "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Wiebke",
+      "occupation": "Awesomesauce Developer",
+      "cartoon": false,
+      "weapon": "on",
+      "id": 5
+    },
+    {
+      "name": "Wiebkes Dopperlgäner",
+      "occupation": "same",
+      "cartoon": false,
+      "weapon": "Brain",
+      "id": 7
+    },
+    {
+      "name": "Test",
+      "occupation": "Testing",
+      "cartoon": false,
+      "weapon": "Tests",
+      "id": 8
+    },
+    {
+      "name": "teet",
+      "occupation": "etetet",
+      "cartoon": true,
+      "weapon": "etett",
+      "id": 9
+    },
+    {
+      "name": "lalala",
+      "occupation": "fofofofoof",
+      "cartoon": false,
+      "weapon": "sword",
+      "id": 10
+    },
+    {
+      "name": "Nosferatu",
+      "occupation": "Vampire",
+      "cartoon": false,
+      "weapon": "Teeth",
+      "id": 11
+    },
+    {
+      "name": "Wonderwoman",
+      "occupation": "being awesome",
+      "cartoon": true,
+      "weapon": "Shield",
+      "id": 12
+    },
+    {
+      "name": "Wonder Woman",
+      "occupation": "",
+      "cartoon": false,
+      "weapon": "",
+      "id": 13
+    },
+    {
+      "name": "Superman",
+      "occupation": "Dude",
+      "cartoon": true,
+      "weapon": "Kryptonite",
+      "id": 14
     }
   ]
 }
