@@ -1,13 +1,13 @@
 class APIHandler {
   constructor(baseUrl) {
     this.api = axios.create({
-      baseUrl: baseUrl,
+      baseURL: baseUrl,
     });
   }
 
-  getFullList = () => {
+  getFullList() {
     return this.api.get("/characters");
-  };
+  }
 
   getOneRegister = (characterId) => {
     return this.api.get(`/characters/${characterId}`);
