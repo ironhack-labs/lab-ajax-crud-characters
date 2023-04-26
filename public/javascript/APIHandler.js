@@ -17,7 +17,9 @@ class APIHandler {
     await axios.post(`${this.BASE_URL}/characters`, data);
   }
 
-  async updateOneRegister() {}
+  async updateOneRegister(id, data) {
+    await axios.patch(`${this.BASE_URL}/characters/${id}`, data);
+  }
 
   async deleteOneRegister(id) {
     await axios.delete(`${this.BASE_URL}/characters/${id}`);

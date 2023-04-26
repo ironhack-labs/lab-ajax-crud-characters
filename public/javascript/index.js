@@ -11,8 +11,12 @@ window.addEventListener("load", () => {
         const divInfo = document.createElement("div");
         divInfo.setAttribute("class", "character-info");
 
+        const divId = document.createElement("div");
+        divId.innerHTML = character.id;
+
         const divName = document.createElement("div");
         divName.innerHTML = character.name;
+
         const divOccupation = document.createElement("div");
         divOccupation.innerHTML = character.occupation;
 
@@ -22,6 +26,7 @@ window.addEventListener("load", () => {
         const divWeapon = document.createElement("div");
         divWeapon.innerHTML = character.weapon;
 
+        divInfo.appendChild(divId);
         divInfo.appendChild(divName);
         divInfo.appendChild(divOccupation);
         divInfo.appendChild(divCartoon);
@@ -60,7 +65,32 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("edit-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const formProps = Object.fromEntries(formData);
+
+      if (formProps.cartoon === "on") {
+        formProps.cartoon = true;
+      } else {
+        delete formProps.cartoon;
+      }
+
+      if (formProps.name === "") {
+        delete formProps.name;
+      }
+      if (formProps.occupation === "") {
+        delete formProps.occupation;
+      }
+      if (formProps.weapon === "") {
+        delete formProps.weapon;
+      }
+
+      const id = formProps.id;
+      delete formProps.id;
+      await charactersAPI.updateOneRegister(id, formProps);
+    });
 
   document
     .getElementById("new-character-form")
