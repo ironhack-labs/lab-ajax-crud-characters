@@ -4,9 +4,31 @@ window.addEventListener("load", () => {
   document
     .querySelector("#fetch-all")
     .addEventListener("click", async (event) => {
-      console.log("fetch all clicked");
-      const allCharaters = await charactersAPI.getFullList();
-      console.log(allCharaters);
+      const allCharacters = await charactersAPI.getFullList();
+      const divContainer = document.querySelector(".characters-container");
+
+      for (const character of allCharacters) {
+        const divInfo = document.createElement("div");
+        divInfo.setAttribute("class", "character-info");
+
+        const divName = document.createElement("div");
+        divName.innerHTML = character.name;
+        const divOccupation = document.createElement("div");
+        divOccupation.innerHTML = character.occupation;
+
+        const divCartoon = document.createElement("div");
+        divCartoon.innerHTML = character.cartoon;
+
+        const divWeapon = document.createElement("div");
+        divWeapon.innerHTML = character.weapon;
+
+        divInfo.appendChild(divName);
+        divInfo.appendChild(divOccupation);
+        divInfo.appendChild(divCartoon);
+        divInfo.appendChild(divWeapon);
+
+        divContainer.appendChild(divInfo);
+      }
     });
 
   document
