@@ -64,5 +64,15 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("new-character-form")
-    .addEventListener("submit", async function () {});
+    .addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const formProps = Object.fromEntries(formData);
+      if (formProps.cartoon === "on") {
+        formProps.cartoon = true;
+      }
+
+      await charactersAPI.createOneRegister(formProps);
+    });
 });
