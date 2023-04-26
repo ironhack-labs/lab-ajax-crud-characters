@@ -14,9 +14,19 @@ window.addEventListener("load", () => {
     .addEventListener("click", async function (event) {
       const id = document.querySelector(".operation input").value;
       const character = await charactersAPI.getOneRegister(id);
+
       document.querySelector(
-        ".characters-container .name"
+        ".character-info .name"
       ).innerHTML = `Character Name: ${character.name}`;
+      document.querySelector(
+        ".character-info .occupation"
+      ).innerHTML = `Character occupation: ${character.occupation}`;
+      document.querySelector(
+        ".character-info .cartoon"
+      ).innerHTML = `Is a cartoon?: ${character.cartoon}`;
+      document.querySelector(
+        ".character-info .weapon"
+      ).innerHTML = `Character weapon: ${character.weapon}`;
     });
 
   document
