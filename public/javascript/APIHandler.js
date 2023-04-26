@@ -8,22 +8,22 @@ class APIHandler {
     return fullList.data;
   }
 
-  getOneRegister (characters, id) {
+  async getOneRegister (characters, id) {
     const oneRegister = await axios.get(`${this.BASE_URL}/${characters}/${id}`);
     return oneRegister.data;
   }
 
-  createOneRegister (characters, newCharacter) {
+  async createOneRegister (characters, newCharacter) {
     const createOneRegister = await axios.post(`${this.BASE_URL}/${characters}`, newCharacter);
     return 
   }
 
-  updateOneRegister (characters, id) {
+  async updateOneRegister (characters, id) {
     const updateOneRegister = await axios.get(`${this.BASE_URL}/${characters}/${id}`);
     return updateOneRegister.data;    
   }
 
-  deleteOneRegister (characters, id) {
+  async deleteOneRegister (characters, id) {
     const deleteOneRegister = await axios.get(`${this.BASE_URL}/${characters}/${id}`);
     return deleteOneRegister.data; 
   }
