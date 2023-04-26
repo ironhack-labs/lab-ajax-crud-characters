@@ -3,7 +3,11 @@ const charactersAPI = new APIHandler("http://localhost:8000");
 window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
-    .addEventListener("click", function (event) {});
+    .addEventListener("click", async (event) => {
+      const response = await charactersAPI.getFullList("characters");
+      console.log(response);
+      return response;
+    });
 
   document
     .getElementById("fetch-one")
