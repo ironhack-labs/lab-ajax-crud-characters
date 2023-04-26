@@ -13,9 +13,17 @@ class APIHandler {
     return response.data;
   }
 
-  createOneRegister() {}
+  async createOneRegister() {
+    const response = await axios.get(`${this.BASE_URL}/characters/${id}`);
+    return response.data;
+  }
 
-  updateOneRegister() {}
+  async updateOneRegister() {
+    const response = await axios.get(`${this.BASE_URL}/characters/${id}`);
+    return response.data;
+  }
 
-  deleteOneRegister() {}
+  async deleteOneRegister(id) {
+    await axios.delete(`${this.BASE_URL}/characters/${id}`);
+  }
 }

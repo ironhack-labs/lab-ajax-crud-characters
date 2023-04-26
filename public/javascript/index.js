@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("fetch-one")
-    .addEventListener("click", async function (event) {
+    .addEventListener("click", async function () {
       const id = document.querySelector(".operation input").value;
       const character = await charactersAPI.getOneRegister(id);
 
@@ -31,7 +31,10 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("delete-one")
-    .addEventListener("click", function (event) {});
+    .addEventListener("click", async function () {
+      const id = document.querySelector(".operation.delete input").value;
+      await charactersAPI.deleteOneRegister(id);
+    });
 
   document
     .getElementById("edit-character-form")
@@ -39,5 +42,5 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("new-character-form")
-    .addEventListener("submit", function (event) {});
+    .addEventListener("submit", async function () {});
 });
