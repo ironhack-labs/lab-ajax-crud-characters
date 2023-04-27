@@ -18,10 +18,10 @@ class APIHandler {
   };
 
   updateOneRegister = (characterId, characterInfo) => {
-    return this.api.put(`/characters/${characterId}`);
+    return this.api.put(`/characters/${characterId}`, characterInfo);
   };
 
-  deleteOneRegister = () => {
+  deleteOneRegister = (characterId) => {
     return this.api.delete(`/characters/${characterId}`);
   };
 }
