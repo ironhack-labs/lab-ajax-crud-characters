@@ -23,6 +23,16 @@ class APIHandler {
     }
   }
 
+  async deleteOneRegister(id) {
+    try {
+      const response = await axios.delete(`${this.BASE_URL}/characters/${id}`);
+      console.log("Deleted character", response.data);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async createOneRegister(data) {
     try {
       const response = await axios.post(`${this.BASE_URL}/characters`, data);
@@ -42,14 +52,4 @@ class APIHandler {
       console.log(error);
     }
   }
-
-  async deleteOneRegister(id) {
-    try {
-      const response = await axios.delete(`${this.BASE_URL}/characters/${id}`);
-      console.log("Deleted character", response.data);
-      return response.data;
-    } catch (error) {
-      console.log(error);
-    }
   }
-}
