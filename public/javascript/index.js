@@ -41,14 +41,23 @@ document
     document.querySelector(".characters-container").innerHTML = characterInfo;
   });
 
-document
-  .getElementById("delete-one")
-  .addEventListener("click", function (event) {});
-
-document
+  document.getElementById("delete-one").addEventListener("click", async (event) => {
+    const characterId = document.querySelector("[name=character-id-delete]").value;
+    try {
+      const response = await charactersAPI.deleteOneRegister("characters", characterId);
+      console.log(response);
+      document.getElementById("delete-one").style.backgroundColor = "green";
+    } catch (error) {
+      console.log(error);
+      document.getElementById("delete-one").style.backgroundColor = "red";
+    }
+  });
+  
+  document
   .getElementById("edit-character-form")
   .addEventListener("submit", function (event) {});
 
-document
+
+  document
   .getElementById("new-character-form")
   .addEventListener("submit", function (event) {});
