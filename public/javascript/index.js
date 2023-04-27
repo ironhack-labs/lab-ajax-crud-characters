@@ -4,9 +4,7 @@ window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
     .addEventListener("click", function (event) {
-      charactersAPI
-      .getFullList()
-      .then((result) => {
+      charactersAPI.getFullList().then((result) => {
         console.log(result.data);
         const charactersData = result.data;
 
@@ -25,13 +23,36 @@ window.addEventListener("load", () => {
           allCharacters += characterInfo;
         }
 
-        document.getElementById("characters-container").innerHTML = allCharacters;
+        document.getElementById("characters-container").innerHTML =
+          allCharacters;
       });
     });
 
   document
     .getElementById("fetch-one")
-    .addEventListener("click", function (event) {});
+    .addEventListener("click", function (event) {
+      const characterId = document.getElementById("character-id").value;
+
+      charactersAPI.getOneRegister(characterId).then((result) => {
+        console.log(result.data);
+        const character = result.data;
+
+        const characterInfo = `<div class="character-info">
+        <div>Id: ${character.id}</div>
+        <div class="name">Name: ${character.name}</div>
+        <div class="occupation">Occupation: ${character.occupation}</div>
+        <div class="cartoon">Is a Cartoon?: ${character.cartoon}</div>
+        <div class="weapon">Character Weapon: ${character.weapon}</div>
+        </div>`;
+
+        document.getElementById("characters-container").innerHTML =
+          characterInfo;
+
+        document.getElementById("character-id").value = "";
+      });
+
+      document.getElementById("character-id").value;
+    });
 
   document
     .getElementById("delete-one")
