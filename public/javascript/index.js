@@ -53,11 +53,22 @@ document
     }
   });
   
-  document
-  .getElementById("edit-character-form")
-  .addEventListener("submit", function (event) {});
 
 
-  document
-  .getElementById("new-character-form")
-  .addEventListener("submit", function (event) {});
+
+  document.getElementById("new-character-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const id = document.querySelector("#newid").value;
+    const name = document.querySelector("#newname").value;
+    const occupation = document.querySelector("#newoccupation").value;
+    const weapon = document.querySelector("#newweapon").value;
+    const cartoon = document.querySelector("#newcartoon").checked;
+
+    const newCharacter = await charactersAPI.createOneRegister("characters",{id, name, occupation, weapon, cartoon});
+  });
+
+  document.getElementById("edit-character-form").addEventListener("submit", async (event) => {
+
+
+
+  });

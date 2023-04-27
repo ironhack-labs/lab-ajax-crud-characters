@@ -21,18 +21,17 @@ class APIHandler {
     return createCharacter;
   }
 
-  async updateOneRegister(characters, id, characterUpdated) {
-    const updateCharacter = await axios.put(
-      `${this.BASE_URL}/${characters}/${id}`,
-      characterUpdated
-    );
-    return updateCharacter;
-  }
-
   async deleteOneRegister(characters, id) {
     const deletedCharacter = await axios.delete(
       `${this.BASE_URL}/${characters}/${id}`
     );
     return deletedCharacter;
   }
+
+  async updateOneRegister(characters, id, characterUpdated) {
+    const updateCharacter = await axios.put(`${this.BASE_URL}/${characters}/${id}`,characterUpdated);
+    return updateCharacter;
+  }
+
 }
+
