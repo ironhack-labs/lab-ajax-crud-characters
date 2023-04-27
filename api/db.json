@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Sponge Bob",
+      "cartoon": false,
+      "occupation": "Lives under the sea",
+      "weapon": "sea whatever",
+      "id": 3
+    },
+    {
+      "name": "jo yia",
+      "cartoon": false,
+      "occupation": "dev ",
+      "weapon": "whatever",
+      "id": 4
+    },
+    {
+      "name": "Mauricio",
+      "cartoon": true,
+      "occupation": "dev",
+      "weapon": "fr3de",
+      "id": 5
+    }
+  ]
+}
