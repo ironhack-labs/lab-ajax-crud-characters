@@ -3,23 +3,40 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  async getFullList () {
+    const allCharacters = await axios(`${this.BASE_URL}/characters`);
+    console.log("All characters:", allCharacters);
+    return allCharacters.data;
   }
 
-  getOneRegister () {
-
+  async getOneRegister (id) {
+    const oneCharacter = await axios(`${this.BASE_URL}/characters/${id}`);
+    return oneCharacter.data;
   }
 
-  createOneRegister () {
+  async createOneRegister (newChar) {
+    const addedChar = await axios.post(`${this.BASE_URL}/characters`, newChar);
 
+    // const response = await fetch(`${this.BASE_URL}/characters`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(newChar),
+    // });
+    // const addedChar = await response.json();
+
+    console.log("New character added:", addedChar);
+    return addedChar.data;
   }
 
-  updateOneRegister () {
-
+  async updateOneRegister (id, charUpdateInfo) {
+    const updatedChar = await axios.patch(`${this.BASE_URL}/characters/${id}`, charUpdateInfo);
+    return updatedChar.data;
   }
 
-  deleteOneRegister () {
-
+  async deleteOneRegister (id) {
+    const deletedChar = await axios.delete(`${this.BASE_URL}/characters/${id}`);
+    return deletedChar.data;
   }
 }
