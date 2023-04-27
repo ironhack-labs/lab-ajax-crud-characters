@@ -10,12 +10,13 @@ window.addEventListener('load', () => {
     console.log("Here are the characters", allCharacters);
    });
 
-  document.getElementById('fetch-one').addEventListener('click',async function (event) {
+   document.getElementById('fetch-one').addEventListener('click', async function (event) {
     console.log("fetch one clicked");
     const idInput = document.querySelector("#onechar").value;
-    const oneCharacter = await charactersAPI.getOneStudent(idInput);
+    const oneCharacter = await charactersAPI.getOneRegister(idInput);
     console.log("One character of given id found", oneCharacter);
-    });
+  });
+  
 
   document.getElementById('delete-one').addEventListener('click', async function (event) {
     console.log("delete one clicked");
@@ -43,12 +44,10 @@ window.addEventListener('load', () => {
     const occupation = document.querySelector("#new-char-occupation").value;
     const weapon = document.querySelector("#new-char-weapon").value;
     const newcartoon = document.querySelector("#new-char-cartoon").checked;
-   
-    const charToEnroll = { newid, name, occupation, weapon ,newcartoon};
-    const newChar = await charactersAPI.addOneStudent(
-      "characters",
-      charToEnroll
-    );
+  
+    const charToEnroll = { id: newid, name, occupation, weapon, cartoon: newcartoon };
+    const newChar = await charactersAPI.addOneRegister("characters", charToEnroll);
     console.log("character successfully added", newChar);
   });
+  
 });
