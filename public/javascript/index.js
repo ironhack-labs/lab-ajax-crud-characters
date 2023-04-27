@@ -61,11 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const nameInput = document.querySelector("#edit-char-name").value;
       const occupationInput = document.querySelector("#edit-char-occupation").value;
       const weaponInput = document.querySelector("#edit-char-weapon").value;
-      const cartoonInput = document.querySelector("#edit-char-cartoon").value;
-      const editChar= await updateOneRegister(idInput, nameInput, occupationInput, weaponInput, cartoonInput);
-      console.log("Edited Characters:", editChar)
-    }catch(error){
+      const cartoonInput = document.querySelector("#edit-char-cartoon").checked;
+      const data = { name: nameInput, occupation: occupationInput, weapon: weaponInput, cartoon: cartoonInput };
+      const editChar = await updateOneRegister(idInput, data);
+      console.log("Edited Characters:", editChar);
+    } catch (error) {
       console.error(error);
     }
   });
+
 });
