@@ -32,6 +32,9 @@ class APIHandler {
     const updateCharacter = await axios.put(`${this.BASE_URL}/${characters}/${id}`,characterUpdated);
     return updateCharacter;
   }
-
+  // async updateOneRegister(id, characterUpdated) {
+  //   const updateCharacter = await axios.put(`${this.BASE_URL}/characters/${id}`,characterUpdated);
+  //   return updateCharacter;
+  // }
 }
 

@@ -53,9 +53,6 @@ document
     }
   });
   
-
-
-
   document.getElementById("new-character-form").addEventListener("submit", async (event) => {
     event.preventDefault();
     const id = document.querySelector("#newid").value;
@@ -68,7 +65,12 @@ document
   });
 
   document.getElementById("edit-character-form").addEventListener("submit", async (event) => {
+    const id = document.querySelector("#editid").value;
+    const name = document.querySelector("#editname").value;
+    const occupation = document.querySelector("#editoccupation").value;
+    const weapon = document.querySelector("#editweapon").value;
+    const cartoon = document.querySelector("#editcartoon").checked;
 
-
-
+    const editCharacter = await charactersAPI.updateOneRegister("characters", id, {name, occupation, weapon, cartoon});
   });
+

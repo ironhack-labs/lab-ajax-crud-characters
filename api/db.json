@@ -15,14 +15,6 @@
       "cartoon": false
     },
     {
-      "newId": "4",
-      "name": "Zuzana Moskvic",
-      "occupation": "Actor",
-      "weapon": "none",
-      "cartoon": false,
-      "id": 3
-    },
-    {
       "newId": "5",
       "name": "Gandalf",
       "occupation": "wizard",
@@ -31,10 +23,17 @@
       "id": 4
     },
     {
-      "id": "5",
-      "name": "Frodo",
-      "occupation": "actress",
+      "name": "Zuzana Moskvic",
+      "occupation": "student",
       "weapon": "none",
+      "cartoon": true,
+      "id": "5"
+    },
+    {
+      "id": "3",
+      "name": "Minion",
+      "occupation": "",
+      "weapon": "",
       "cartoon": false
     }
   ]
