@@ -56,7 +56,22 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("delete-one")
-    .addEventListener("click", function (event) {});
+    .addEventListener("click", function (event) {
+      const characterId = document.getElementById("character-id-delete").value;
+      charactersAPI.deleteOneRegister(characterId).then(() => {
+        console.log(characterId);
+
+        const deleteButton = document.getElementById("delete-one");
+        deleteButton.style.backgroundColor = "#32CD32";
+
+        document.getElementById("character-id-delete").value = "";
+      });
+
+      const deleteButton = document.getElementById("delete-one");
+      deleteButton.style.backgroundColor = "#FF0000";
+
+      document.getElementById("character-id-delete").value = "";
+    });
 
   document
     .getElementById("edit-character-form")
