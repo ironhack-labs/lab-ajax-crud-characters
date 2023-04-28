@@ -48,7 +48,7 @@ window.addEventListener("load", () => {
           characterInfoElement.querySelector(".character-info .weapon-value").innerHTML =
             character.weapon;
 
-          idToSearchElement.innerHTML = "";
+          idToSearchElement.value = "";
           charactersContainerElement.appendChild(characterInfoElement);
         })
         .catch((error) => console.log("error when fetching one element by id", error));
@@ -60,7 +60,10 @@ window.addEventListener("load", () => {
     if (idToDelete && idToDelete.value)
       charactersAPI
         .deleteOneRegister(idToDelete.value)
-        .then(() => console.log("delete success"))
+        .then((response) => {
+          idToDelete.value = "";
+          console.log("delete success");
+        })
         .catch((error) => console.log("error when deleting", error));
   });
 
@@ -80,6 +83,9 @@ window.addEventListener("load", () => {
         .then(() => {
           updateForm.reset();
           updateForm.elements["send-data"].style.backgroundColor = "green";
+          setTimeout(() => {
+            newForm.elements["send-data"].style.backgroundColor = "";
+          }, 2000);
         })
         .catch((error) => {
           updateForm.elements["send-data"].style.backgroundColor = "red";
@@ -99,9 +105,12 @@ window.addEventListener("load", () => {
         weapon: newForm.elements["weapon"].value,
         cartoon: newForm.elements["cartoon"].checked,
       })
-      .then(() => {
+      .then((response) => {
         newForm.reset();
         newForm.elements["send-data"].style.backgroundColor = "green";
+        setTimeout(() => {
+          newForm.elements["send-data"].style.backgroundColor = "";
+        }, 2000);
       })
       .catch((error) => {
         updateForm.elements["send-data"].style.backgroundColor = "red";

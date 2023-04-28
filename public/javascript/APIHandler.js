@@ -1,3 +1,4 @@
+const axios = require("axios");
 class APIHandler {
   constructor(baseUrl) {
     this.BASE_URL = baseUrl;
@@ -26,3 +27,5 @@ class APIHandler {
     return this.api.delete(`/characters/${id}`);
   }
 }
+
+module.exports = APIHandler;

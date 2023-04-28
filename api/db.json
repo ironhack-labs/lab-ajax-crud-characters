@@ -8,9 +8,6 @@
       "cartoon": true
     },
     {
-      "name": "fdsfs",
-      "occupation": "fdsf",
-      "weapon": "fsd",
       "cartoon": true,
       "id": 2
     },
@@ -20,6 +17,27 @@
       "weapon": "Crabby",
       "cartoon": true,
       "id": 3
+    },
+    {
+      "name": "obiwan",
+      "occupation": "jedi",
+      "weapon": "saberlaser",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "obiwan",
+      "occupation": "jedi",
+      "weapon": "saberlaser",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "dark vador",
+      "occupation": "sith",
+      "weapon": "power",
+      "cartoon": false,
+      "id": 6
     }
   ]
 }
