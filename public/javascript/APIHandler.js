@@ -1,25 +1,26 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
+    };
+    
+  getFullList  () {
+    
   }
 
-  getFullList () {
-
-  }
 
   getOneRegister () {
-
+    
   }
 
-  createOneRegister () {
-
+  createOneRegister() {
+    
   }
 
-  updateOneRegister () {
-
+  updateOneRegister() {
+    
   }
 
-  deleteOneRegister () {
-
+  deleteOneRegister() {
+  
   }
 }
