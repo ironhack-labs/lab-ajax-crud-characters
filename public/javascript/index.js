@@ -64,8 +64,16 @@ window.addEventListener('load', () => {
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
-
+    const characterId = document.querySelector('#character-id').value
+    charactersContainer.innerHTML = ""
   });
+
+  charactersAPI.getOneRegister(characterId)
+  .then((response) => {
+    const { id, name, occupation, weapon,cartoon } = response.data
+    appendToCharacterContainer( id,name,occupation,weapon,cartoon )
+  })
+  .catch(err => console.log("Error fetching one register", err))
 
   document.getElementById('delete-one').addEventListener('click', function (event) {
 
