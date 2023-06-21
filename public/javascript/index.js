@@ -67,32 +67,36 @@ window.addEventListener('load', () => {
   document.getElementById('fetch-one')
     .addEventListener('click', function (event) {
       const characterId = document.querySelector('#character-id').value
-      charactersContainer.innerHTML = ""
 
-      charactersAPI.getOneRegister(characterId)
-        .then(response => {
-          const { id, name, occupation, weapon, cartoon } = response.data
-          appendToCharacterContainer(id, name, occupation, weapon, cartoon)
-        })
-        .catch(error => console.log('error while fetching one register', error.message))
+      if (characterId !== '') {
+        charactersContainer.innerHTML = ""
+
+        charactersAPI.getOneRegister(characterId)
+          .then(response => {
+            const { id, name, occupation, weapon, cartoon } = response.data
+            appendToCharacterContainer(id, name, occupation, weapon, cartoon)
+          })
+          .catch(error => console.log('error while fetching one register', error.message))
+      }
     })
 
-  document.getElementById('delete-one').addEventListener('click', function (event) {
-    const characterId = document.querySelector('#character-id-delete').value
+  document.getElementById('delete-one')
+    .addEventListener('click', function (event) {
+      const characterId = document.querySelector('#character-id-delete').value
 
-    charactersAPI.deleteOneRegister(characterId)
-      .then(response => { 
-        document.querySelector('#delete-one').style.backgroundColor = 'green'
-      })
-      .catch(error => {
-        document.querySelector('#delete-one').style.backgroundColor = 'red'
-        console.log('error while deleting', error.message)
-      })
-    
-  });
+      if (characterId !== '') {
+        charactersAPI.deleteOneRegister(characterId)
+          .then(response => {
+            document.querySelector('#delete-one').style.backgroundColor = 'green'
+          })
+          .catch(error => {
+            document.querySelector('#delete-one').style.backgroundColor = 'red'
+            console.log('error while deleting', error.message)
+          })
+      }
+    });
 
-  document
-    .getElementById('new-character-form')
+  document.getElementById('new-character-form')
     .addEventListener('submit', function (event) {
       event.preventDefault()
       const name = document.getElementById("name-new").value
@@ -110,8 +114,7 @@ window.addEventListener('load', () => {
         .catch(() => (document.querySelector("#send-data").style.backgroundColor = "red"))
     });
   
-  document
-    .getElementById("edit-character-form")
+  document.getElementById("edit-character-form")
     .addEventListener("submit", function (event) {
       event.preventDefault()
       const id = document.getElementById("id-edit").value

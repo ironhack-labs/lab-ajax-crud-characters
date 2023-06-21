@@ -17,9 +17,23 @@
     {
       "name": "Spiderman",
       "occupation": "Hero",
-      "weapon": "non",
+      "weapon": "Fists",
       "cartoon": true,
       "id": 4
+    },
+    {
+      "name": "One Punch Man",
+      "occupation": "Half time hero",
+      "weapon": "fists",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Genos",
+      "occupation": "Hero",
+      "weapon": "Fists",
+      "cartoon": true,
+      "id": 6
     }
   ]
 }
