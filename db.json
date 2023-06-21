@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Obi-wan Kenobi",
+      "occupation": "Jedi",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Spiderman",
+      "occupation": "Hero",
+      "weapon": "non",
+      "cartoon": true,
+      "id": 4
+    }
+  ]
+}
