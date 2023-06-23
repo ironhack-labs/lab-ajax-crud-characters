@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": 4,
+      "name": "Mikey Mouse",
+      "occupation": "It's a mouse with white gloves and red shorts",
+      "weapon": "dog named pluto",
+      "cartoon": true
+    },
+    {
+      "id": 5,
+      "name": "Darth Vader",
+      "occupation": "Sith Knight",
+      "weapon": "Red Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "Bugs Bunny",
+      "occupation": "it´s a rabbit",
+      "weapon": "Guitarra",
+      "cartoon": true,
+      "id": 6
+    }
+  ]
+}
