@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "a",
+      "occupation": "b",
+      "weapon": "c",
+      "cartoon": true,
+      "id": 4
+    }
+  ]
+}
