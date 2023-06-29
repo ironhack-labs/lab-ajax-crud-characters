@@ -1,23 +1,41 @@
-const charactersAPI = new APIHandler('http://localhost:8000');
+const APIHandler = require("./APIHandler");
 
-window.addEventListener('load', () => {
-  document.getElementById('fetch-all').addEventListener('click', function (event) {
+const apiHandler = new APIHandler();
 
+// Function to display character information
+function displayCharacter(character) {
+  const characterCard = document.createElement("div");
+  characterCard.classList.add("character-card");
+
+  const characterName = document.createElement("h3");
+  characterName.textContent = character.name;
+
+  const characterInfo = document.createElement("p");
+  characterInfo.textContent = `Age: ${character.age}, Profession: ${character.profession}`;
+
+  characterCard.appendChild(characterName);
+  characterCard.appendChild(characterInfo);
+
+  // Add the character card to the document
+  document.getElementById("character-container").appendChild(characterCard);
+}
+
+// Event handler for fetching all characters
+function fetchAllCharacters() {
+  apiHandler.getAllCharacters();
+}
+
+// Event listener for the fetch all button
+document
+  .getElementById("fetch-all-button")
+  .addEventListener("click", fetchAllCharacters);
+
+// Event handler for displaying all characters
+function displayAllCharacters(characters) {
+  const characterContainer = document.getElementById("character-container");
+  characterContainer.innerHTML = ""; // Clear previous characters
+
+  characters.forEach((character) => {
+    displayCharacter(character);
   });
-
-  document.getElementById('fetch-one').addEventListener('click', function (event) {
-
-  });
-
-  document.getElementById('delete-one').addEventListener('click', function (event) {
-
-  });
-
-  document.getElementById('edit-character-form').addEventListener('submit', function (event) {
-
-  });
-
-  document.getElementById('new-character-form').addEventListener('submit', function (event) {
-
-  });
-});
+}
