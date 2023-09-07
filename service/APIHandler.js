@@ -30,3 +30,5 @@ class APIService {
   return this.api.delete(`/characters/${characterId}`)
     }
   }
+
+  module.exports = APIService;
