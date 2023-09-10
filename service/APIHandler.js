@@ -1,4 +1,5 @@
-const axios = require("axios")
+// const axios = require("axios") 
+// imported in HTML already
 
 class APIService {
     constructor() {
@@ -6,6 +7,13 @@ class APIService {
           baseURL: 'http://localhost:8000'
         });
       }
+
+      // constructor(baseUrl) { 
+      //   this.api = axios.create({
+      //     baseURL: baseUrl
+      //   });
+      // }
+     // -> then in index.js const apiService = new ApiService('http://localhost:8000');
   
     getFullList() {
       return this.api.get("/characters")

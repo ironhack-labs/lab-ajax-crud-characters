@@ -2,6 +2,8 @@
 const ApiService = require("./service/APIHandler");
 const apiService = new ApiService();
 
+//const apiService = new ApiService(http://localhost:8000);
+//class constructor(baseUrl)
 
 
 //All Characters
@@ -16,7 +18,7 @@ fetchAllButton.addEventListener("click", (event)=> {
       console.log(characters); 
     
     const characterContainer = document.querySelector(".characters-container")
-    characterAll.innerHTML = "";
+    characterContainer.innerHTML = "";
     //Clear the previous content
     
     characters.forEach  ((character) => {
@@ -47,6 +49,8 @@ fetchOneButton.addEventListener("click", (event)=> {
 
 
 const characterId = document.querySelector("[name=character-id]").value;
+//(now no value on html) When a user interacts with the HTML page and enters some text into the <input> field, 
+// the user's input becomes the current value of the <input> element.
 console.log(characterId);
 
     apiService
