@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character CRUD</title>
+</head>
+<body>
+    <button id="fetchAllButton">Fetch All Characters</button>
+    <button id="fetchOneButton">Fetch One Character</button>
+    <button id="deleteButton">Delete One Character</button>
+
+    <form id="createForm">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="occupation" placeholder="Occupation">
+        <input type="text" name="weapon" placeholder="Weapon">
+        <input type="checkbox" name="cartoon" id="cartoon">
+        <label for="cartoon">Cartoon</label>
+        <input type="submit" value="Create">
+    </form>
+
+    <form id="editForm">
+        <input type="number" name="id" placeholder="Character ID">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="occupation" placeholder="Occupation">
+        <input type="text" name="weapon" placeholder="Weapon">
+        <input type="checkbox" name="cartoon" id="editCartoon">
+        <label for="editCartoon">Cartoon</label>
+        <input type="submit" value="Update">
+    </form>
+
+    <div id="characterDetails"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
