@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "name": "marvel",
+      "occupation": "avengers",
+      "weapon": "knife",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Batman",
+      "occupation": "Flying",
+      "weapon": "Knife",
+      "cartoon": false,
+      "id": 5
+    },
+    {
+      "name": "Gundi",
+      "occupation": "Koylu",
+      "weapon": "Orak",
+      "cartoon": true,
+      "id": 7
+    },
+    {
+      "name": "ahsoka",
+      "occupation": "star wars",
+      "weapon": "sword",
+      "cartoon": true,
+      "id": 8
+    }
+  ]
+}
