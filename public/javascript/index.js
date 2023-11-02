@@ -31,16 +31,21 @@ window.addEventListener("load", () => {
     .addEventListener("click", function (event) {
       event.preventDefault();
        const characterId = document.getElementById("getOne").value;
-       const characterInfo = document.querySelector(".character-info");
+       const container=document.querySelector(".characters-container");
+       container.innerHTML = "";
        console.log(characterId);
        
        charactersAPI
        .getOneRegister(characterId)
        .then((character) => {
-        characterInfo.innerHTML=` <div class="name">Character Name: ${character.name}</div>
+        container.innerHTML=`
+        <div class="character-info">
+        <div class="name">Character Name: ${character.name}</div>
         <div class="occupation">Character Occupation:${character.occupation}</div>
         <div class="cartoon">Is a Cartoon?${character.cartoon}</div>
-        <div class="weapon">Character Weapon:${character.weapon}</div>`;
+        <div class="weapon">Character Weapon:${character.weapon}</div>
+        </div>`
+        ;
            console.log("One character:", character);
          })
          .catch((error) => {
