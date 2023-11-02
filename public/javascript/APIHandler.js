@@ -13,7 +13,7 @@ class APIHandler {
     }
   }
 
-  async getOneRegister() {
+  async getOneRegister(id) {
     try {
       const response = await axios.get(`${this.BASE_URL}/characters/${id}`);
       console.log(response);

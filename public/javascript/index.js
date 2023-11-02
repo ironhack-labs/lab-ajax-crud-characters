@@ -4,9 +4,21 @@ window.addEventListener("load", () => {
   document
     .getElementById("fetch-all")
     .addEventListener("click", function (event) {
+      event.preventDefault();
+      const container=document.querySelector(".characters-container");
       charactersAPI
         .getFullList()
         .then((characters) => {
+          characters.forEach(element => {
+            container.innerHTML += `
+            <div class="character-info">
+            <div class="name">Character Name: ${element.name}</div>
+            <div class="occupation">Character Occupation:${element.occupation}</div>
+            <div class="cartoon">Is a Cartoon?${element.cartoon}</div>
+            <div class="weapon">Character Weapon:${element.weapon}</div>
+            </div>`;
+            
+          });
           console.log("All characters:", characters);
         })
         .catch((error) => {
@@ -16,11 +28,34 @@ window.addEventListener("load", () => {
 
   document
     .getElementById("fetch-one")
-    .addEventListener("click", function (event) {});
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+       const characterId = document.getElementById("getOne").value;
+       const characterInfo = document.querySelector(".character-info");
+       console.log(characterId);
+       
+       charactersAPI
+       .getOneRegister(characterId)
+       .then((character) => {
+        characterInfo.innerHTML=` <div class="name">Character Name: ${character.name}</div>
+        <div class="occupation">Character Occupation:${character.occupation}</div>
+        <div class="cartoon">Is a Cartoon?${character.cartoon}</div>
+        <div class="weapon">Character Weapon:${character.weapon}</div>`;
+           console.log("One character:", character);
+         })
+         .catch((error) => {
+          characterInfo.innerHTML = `<p>Error: ${error.message}</p>`;
+          console.error("Error fetching one character:", error);
+        });
+
+
+
+    });
 
   document
     .getElementById("delete-one")
     .addEventListener("click", async function (event) {
+      event.preventDefault();
       try {
         const characterId = document.getElementById("character-id").value;
         console.log(characterId);
