@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Jessica",
+      "occupation": "Dentist",
+      "cartoon": true,
+      "weapon": "Sword"
+    },
+    {
+      "id": 2,
+      "name": "James",
+      "occupation": "Warrior",
+      "cartoon": false,
+      "weapon": "Bow"
+    },
+    {
+      "id": 3,
+      "name": "Arthur",
+      "occupation": "Samurai",
+      "cartoon": true,
+      "weapon": "Katana"
+    },
+    {
+      "id": 4,
+      "name": "Eliot",
+      "occupation": "Ninja",
+      "cartoon": false,
+      "weapon": "Sword"
+    }
+  ]
+}
