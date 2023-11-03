@@ -1,25 +1,57 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  async getFullList() {
+    try {
+      const response = await axios.get(`${this.BASE_URL}/characters`);
+      console.log(response);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  getOneRegister () {
-
+  async getOneRegister(id) {
+    try {
+      const response = await axios.get(`${this.BASE_URL}/characters/${id}`);
+      console.log(response);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  createOneRegister () {
-
+  async createOneRegister(data) {
+    try {
+      const response = await axios.post(`${this.BASE_URL}/characters`,data);
+      console.log(response);
+      return response
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  updateOneRegister () {
-
+  async updateOneRegister(id,data) {
+    try {
+      const response = await axios.put(`${this.BASE_URL}/characters/${id}`,data);
+      console.log(response);
+      return response.data;
+    } catch (error) {
+      console.error("Error editing character by ID:", error);
+      throw error;
+    }
   }
 
-  deleteOneRegister () {
-
+  async deleteOneRegister(id) {
+    try {
+      const response = await axios.delete(`${this.BASE_URL}/characters/${id}`);
+      console.log(response);
+      return response.data;
+    } catch (error) {
+      console.error("Error deleting character by ID:", error);
+      throw error;
+    }
   }
 }
