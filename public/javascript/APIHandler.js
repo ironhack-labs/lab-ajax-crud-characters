@@ -1,63 +1,29 @@
-const axios = require('axios');
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
+    this.api = axios.create({
+      baseURL: this.BASE_URL,
+    });
   }
 
-  async getFullList () {
-    try {
-      const response = await axios.get(`${this.BASE_URL}/characters`);
-      console.log('Full list', response.data);
-      return response.data;
-    } catch(error){
-      console.error('Error while fetching full list', error)
-    }
+  getFullList() {
+    return this.api.get('/characters');
   }
 
-  async getOneRegister (id) {
-    try {
-      const response = await axios.get(`${this.BASE_URL}/characters/${id}`);
-      console.log('Single Character', response.data);
-      return response.data;
-    } catch(error) {
-      console.error('Error while fetching single character', error)
-    }
+  getOneRegister(characterId) {
+    return this.api.get(`/characters/${characterId}`);
   }
 
-  async createOneRegister (characterData) {
-    try {
-      const response = await axios.post(`${this.BASE_URL}/characters`, characterData);
-      console.log('Character Created', response.data);
-      return response.data;
-    }catch (error){
-      console.error('Error while creating character', error);
-      return { error: error.response.data}
-    }
-
+  createOneRegister(character) {
+    return this.api.post("/characters", character);
   }
 
-  async updateOneRegister(id, characterData) {
-    try {
-      const response = await axios.patch(`${this.BASE_URL}/characters/${id}`, characterData);
-      console.log('Character Updated:', response.data);
-      return response.data;
-    } catch (error) {
-      console.error('Error while updating character:', error);
-      return { error: error.response ? error.response.data : 'Unknown error' };
-    }
+  updateOneRegister(characterId, character) {
+    return this.api.put(`/characters/${characterId}`, character);
   }
 
-  async deleteOneRegister (id) {
-    try {
-      const response = await axios.delete(`${this.BASE_URL}/characters/${id}`);
-      console.log('Character Deleted:', response.data);
-      return response.data;
-    } 
-    catch (error) {
-      console.error('Error while deleting character:', error);
-      return { error: error.response ? error.response.data : 'Unknown error' };
-    }
+  deleteOneRegister(characterId) {
+    return this.api.delete(`/characters/${characterId}`);
   }
 }
 
-module.exports = APIHandler;
