@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "name": "gizem",
+      "occupation": "student",
+      "weapon": "javascrıpt",
+      "cartoon": true,
+      "id": 1
+    },
+    {
+      "name": "asdada",
+      "occupation": "2",
+      "weapon": "dasasd",
+      "cartoon": true,
+      "id": 2
+    },
+    {
+      "name": "Blabla",
+      "occupation": "blabla2",
+      "weapon": "blabla3",
+      "cartoon": true,
+      "id": 3
+    },
+    {
+      "name": "",
+      "occupation": "",
+      "weapon": "",
+      "cartoon": false,
+      "id": 4
+    }
+  ]
+}
