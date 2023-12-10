@@ -142,6 +142,7 @@ window.addEventListener('load', () => {
     const occupation = document.querySelector('#occupation').value;
     const weapon = document.querySelector('#weapon').value;
     const cartoon = document.querySelector('#cartoon').checked;
+    const submitButton = document.getElementById("edit-data");
 
     const characterToUpdate = {
       name,
@@ -153,8 +154,10 @@ window.addEventListener('load', () => {
     try {
       const updatedCharacter = await charactersAPI.updateOneRegister(id, characterToUpdate);
       console.log('Updated:', updatedCharacter);
+      submitButton.style.backgroundColor = 'green';
     } catch (err) {
       console.error(err);
+      submitButton.style.backgroundColor = 'red';
     }
   });
 
@@ -165,6 +168,7 @@ window.addEventListener('load', () => {
     const occupation = document.querySelector('input[name="occupation"]').value; 
     const weapon = document.querySelector('input[name="weapon"]').value; 
     const cartoon = document.querySelector('input[name="cartoon"]').checked; 
+    const submitButton = document.getElementById("send-data");
 
     const characterInfo = {
       name,
@@ -176,8 +180,10 @@ window.addEventListener('load', () => {
     try {
       const createdChar = await charactersAPI.createOneRegister(characterInfo);
       console.log('Character created:', createdChar);
+      submitButton.style.backgroundColor = 'green';
     } catch (err) {
       console.error(err);
+      submitButton.style.backgroundColor = 'red';
     }
   });
 });

@@ -27,6 +27,27 @@
       "weapon": "Claw",
       "cartoon": true,
       "id": 4
+    },
+    {
+      "name": "Jerry",
+      "occupation": "Survive Tom",
+      "weapon": "Brain",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Chuck Norris",
+      "occupation": "Actor",
+      "weapon": "Knees",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "Bruce Lee",
+      "occupation": "Fighter",
+      "weapon": "Body",
+      "cartoon": false,
+      "id": 7
     }
   ]
 }
