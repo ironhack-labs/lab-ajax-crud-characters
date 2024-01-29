@@ -1,0 +1,53 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Han Solo",
+      "occupation": "Smuggler",
+      "weapon": "Blaster Pistol",
+      "cartoon": true
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": 3,
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "name": "Tom",
+      "occupation": "Catch Jerry the mouse",
+      "weapon": "Claw",
+      "cartoon": false,
+      "id": 4
+    },
+    {
+      "name": "Jerry",
+      "occupation": "Survive Tom",
+      "weapon": "Brain",
+      "cartoon": true,
+      "id": 5
+    },
+    {
+      "name": "Chuck Norris",
+      "occupation": "Warrior",
+      "weapon": "Knees",
+      "cartoon": false,
+      "id": 6
+    },
+    {
+      "name": "Bruce Lee",
+      "occupation": "Fighter",
+      "weapon": "Body",
+      "cartoon": false,
+      "id": 7
+    }
+  ]
+}
