@@ -55,9 +55,9 @@ document.getElementById('new-character-form').addEventListener('submit', functio
     cartoon: document.querySelector('#new-character-form input[name="cartoon"]').checked
   };
   apiHandler.createOneRegister(characterData).then(() => {
-    document.getElementById('send-data').style.backgroundColor = 'green'; // Change button color on success
+    document.getElementById('create-data').style.backgroundColor = 'green'; // Change button color on success
   }).catch(() => {
-    document.getElementById('send-data').style.backgroundColor = 'red'; // Change button color on error
+    document.getElementById('create-data').style.backgroundColor = 'red'; // Change button color on error
   });
 });
 
@@ -77,18 +77,3 @@ document.getElementById('edit-character-form').addEventListener('submit', functi
     document.getElementById('update-data').style.backgroundColor = 'red'; // Change button color on error
   });
 });
-
-// Function to update character list
-function updateCharacterList(characters) {
-  const container = document.querySelector('.characters-container');
-  container.innerHTML = ''; // Clear the container
-  characters.forEach(character => {
-    container.innerHTML += `
-      <div class="character-info">
-        <div class="name">Name: ${character.name}</div>
-        <div class="occupation">Occupation: ${character.occupation}</div>
-        <div class="cartoon">Cartoon: ${character.cartoon ? 'Yes' : 'No'}</div>
-        <div class="weapon">Weapon: ${character.weapon}</div>
-      </div>`;
-  });
-}
