@@ -36,3 +36,6 @@ class APIHandler {
       .catch(error => console.error(error));
   }
 }
+
+// Exporting the class for module usage if needed
+// export default APIHandler;
