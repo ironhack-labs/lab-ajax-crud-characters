@@ -27,6 +27,13 @@
       "occupation": "Lies under the surface",
       "weapon": "Bla Bla Bianco",
       "cartoon": true
+    },
+    {
+      "id": "fe3d",
+      "name": "Pizza Napoli",
+      "occupation": "Pizza",
+      "weapon": "Cheese",
+      "cartoon": true
     }
   ]
 }
