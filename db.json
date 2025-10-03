@@ -1,0 +1,81 @@
+{
+  "characters": [
+    {
+      "name": "Jopen",
+      "occupation": "adsf",
+      "weapon": "affa",
+      "cartoon": "on",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Luke Skywalker",
+      "occupation": "Jedi Knight",
+      "weapon": "Lightsaber",
+      "cartoon": false
+    },
+    {
+      "id": "3",
+      "name": "Sponge Bob",
+      "occupation": "Lives under the sea",
+      "weapon": "Crabby Patty",
+      "cartoon": true
+    },
+    {
+      "id": "3a5e",
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {}
+    },
+    {
+      "id": "a5a5",
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {}
+    },
+    {
+      "id": "30fd",
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {}
+    },
+    {
+      "id": "e2af",
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {}
+    },
+    {
+      "id": "5d55",
+      "name": {},
+      "occupation": {},
+      "weapon": {},
+      "cartoon": {}
+    },
+    {
+      "id": "fdce",
+      "name": "motorola 32",
+      "occupation": "mongo",
+      "weapon": "afsfa",
+      "cartoon": "on"
+    },
+    {
+      "id": "f2f1",
+      "name": "Jopen",
+      "occupation": "lost_item_wallet_purse",
+      "weapon": "asfaf",
+      "cartoon": "on"
+    },
+    {
+      "id": "b8c1",
+      "name": "Apple ",
+      "occupation": "Ocupado",
+      "weapon": "affa",
+      "cartoon": "on"
+    }
+  ]
+}
